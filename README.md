@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ THE BOYS COMIC READER
 
-## Getting Started
+Un lector de cómics web interactivo, dinámico y con estética pop-art/cómic, desarrollado con **Next.js 16** (App Router y Turbopack).
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🎨 Características Visuales y Funcionalidades
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Estética Pop-Art / Cómic Duro**: Bordes gruesos blancos y negros, sombras de bloque desplazadas, efectos halftone (puntos de trama) e identidad urbana.
+- **Roster de Personajes**: Sección interactiva con animaciones de entrada fluidas. Los personajes aún no presentados en la trama física (`matapobre` y `sofi`) se muestran con un filtro de incógnito (desenfoque y escala de grises) y un indicador misterioso.
+- **Hero Banner Dinámico**: Portadas flotantes de los personajes asomándose responsivamente en la pantalla (tanto en Mobile como en Desktop) con animaciones 3D e interacciones `hover` juguetonas.
+- **Lector de Capítulos con Gesto Swipe**:
+  - Zoom dinámico (pinch-to-zoom en móvil y rueda en desktop).
+  - Paneo libre al estar con zoom.
+  - Gesto de **deslizar (swipe/drag) horizontal** para pasar de página de forma fluida.
+  - Atajos de teclado (flechas ⬅️ y ➡️).
+- **Tipografías Temáticas**: Uso estratégico de **Bungee** para el logo, **Bangers** para los títulos cómicos pesados y **Permanent Marker** para textos a mano.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Arquitectura del Proyecto
 
-## Learn More
+El código está modularizado para asegurar escalabilidad y evitar archivos gigantescos:
 
-To learn more about Next.js, take a look at the following resources:
+- `/app`: Rutas del lector, páginas dinámicas de capítulos e inicialización de fuentes.
+- `/components`: Componentes reutilizables separados por contexto (ej: `/home/HeroSection`, `/home/CharacterRoster`, `/home/SagaBlock`).
+- `/lib`: Lógica de análisis de archivos locales para cargar dinámicamente las sagas y capítulos desde `/public/comics/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Desarrollo Local
 
-## Deploy on Vercel
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+2. Correr el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+3. Abrir [http://localhost:3000](http://localhost:3000).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚡ Despliegue
+
+El proyecto está configurado para desplegarse automáticamente en **Vercel** ante cada push en la rama `main`.
