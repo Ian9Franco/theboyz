@@ -129,7 +129,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
 
         {/* ══════════ RIGHT — info ══════════ */}
         <div
-          className={`flex-1 flex flex-col p-4 sm:p-6 lg:p-8 gap-4 sm:gap-6 lg:gap-8 overflow-hidden transition-colors duration-400 ${
+          className={`flex-1 flex flex-col p-4 sm:p-6 lg:p-8 gap-4 sm:gap-6 lg:gap-8 overflow-y-auto transition-colors duration-400 ${
             isPowersMode ? "bg-[#0f172a] text-slate-100" : "bg-white text-[#0a0a0f]"
           }`}
         >
@@ -184,16 +184,16 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
 
               {/* ── crisis ── */}
               <div
-                className={`border-2 border-black p-2 relative overflow-hidden ${
+                className={`border-2 border-black p-3 relative overflow-hidden flex flex-col gap-1.5 ${
                   isPowersMode ? "bg-[#1e293b] border-slate-600 shadow-[3px_3px_0_#e8185a]" : "bg-yellow-50 shadow-[3px_3px_0_#000]"
                 }`}
               >
-                <div className={`absolute top-0 right-0 font-[var(--font-bangers)] text-[9px] tracking-wider px-2 py-0.5 border-b-2 border-l-2 uppercase ${
+                <div className={`self-start font-[var(--font-bangers)] text-[11px] tracking-wider px-2 py-0.5 border-2 uppercase ${
                   isPowersMode ? "bg-[#e8185a] text-white border-slate-600" : "bg-[#e8185a] text-white border-black"
                 }`}>
                   {isPowersMode ? "Sobrecarga" : "En Crisis"}
                 </div>
-                <p className="font-sans text-xs leading-snug pr-16">
+                <p className="font-sans text-xs sm:text-sm leading-snug">
                   {isPowersMode ? char.powers?.crisis : char.crisis}
                 </p>
               </div>
@@ -225,10 +225,10 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
               </div>
 
               {/* ── toggle button ── */}
-              <div className="pt-1 mt-auto">
+              <div className="pt-2 mt-auto pb-2 sm:pb-0">
                 <button
                   onClick={() => setIsPowersMode(!isPowersMode)}
-                  className={`w-full py-2 border-3 border-black font-[var(--font-bangers)] text-sm tracking-wider uppercase shadow-[3px_3px_0_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#000] transition-all ${
+                  className={`w-full py-3 sm:py-2 border-3 border-black font-[var(--font-bangers)] text-sm sm:text-base tracking-wider uppercase shadow-[3px_3px_0_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#000] transition-all ${
                     isPowersMode
                       ? "bg-yellow-400 text-black hover:bg-yellow-300"
                       : "bg-[#e8185a] text-white hover:bg-[#c8134d]"

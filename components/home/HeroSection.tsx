@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { getComputedCharacters } from "@/lib/characterData";
 import { CharacterModal } from "./CharacterModal";
 
@@ -152,6 +152,7 @@ function CharacterMarquee({
   onSelect: (c: any) => void;
 }) {
   const controls = useAnimationControls();
+  const carouselRef = useRef<HTMLDivElement>(null);
   const doubled = [...characters, ...characters];
 
   // Start the marquee once mounted
@@ -174,16 +175,22 @@ function CharacterMarquee({
       initial={{ opacity: 0, y: 48 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.72, duration: 0.55 }}
-      className="relative z-10 w-full overflow-hidden pb-8 pt-4"
+      className="relative z-10 w-full overflow-hidden pb-8 pt-4 cursor-grab active:cursor-grabbing"
       style={{
         maskImage: "linear-gradient(to bottom, transparent 0%, black 25%)",
         WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 25%)",
       }}
+      ref={carouselRef}
     >
       <motion.div
         animate={controls}
-        className="flex gap-3 sm:gap-4"
-        style={{ width: "max-content" }}
+        drag="x"
+        dragConstraints={carouselRef}
+        onHoverStart={pause}
+        onHoverEnd={resume}
+        onPanStart={pause}
+        onPanEnd={resume}
+        className="flex gap-3 sm:gap-4 w-max"
       >
         {doubled.map((char, i) => (
           <CharCard
