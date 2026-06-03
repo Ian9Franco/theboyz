@@ -9,7 +9,15 @@ import { useEffect, useState } from "react";
 import { CHARACTER_DETAILS, getComputedCharacters } from "@/lib/characterData";
 import { CharacterModal } from "./CharacterModal";
 
-
+function getTextColor(hexColor: string) {
+  if (!hexColor) return "white";
+  const color = hexColor.replace("#", "");
+  const r = parseInt(color.substring(0, 2), 16);
+  const g = parseInt(color.substring(2, 4), 16);
+  const b = parseInt(color.substring(4, 6), 16);
+  const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+  return yiq >= 140 ? "#0a0a0f" : "white";
+}
 
 export function CharacterRoster() {
   const [readChapters, setReadChapters] = useState<string[]>([]);
@@ -85,19 +93,42 @@ export function CharacterRoster() {
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.05 }}
-              className="relative group bg-[#13131e] flex flex-col cursor-pointer select-none"
+              className="relative group bg-[#13131e] flex flex-col cursor-pointer select-none border-4 transition-colors duration-300"
               style={{ 
-                border: "4px solid white", 
-                boxShadow: `8px 8px 0 ${char.displayColor}` 
+                borderColor: "white", 
+                boxShadow: char.incognito 
+                  ? "8px 8px 0 #6b7280" 
+                  : `8px 8px 0 ${char.displayColor}, 0 0 15px ${char.displayColor}2b` 
               }}
               whileHover={{ 
                 scale: 1.03, 
                 rotate: i % 2 === 0 ? 1 : -1, 
-                boxShadow: `12px 12px 0 ${char.displayColor}`,
+                borderColor: char.incognito ? "white" : char.displayColor,
+                boxShadow: char.incognito 
+                  ? "12px 12px 0 #6b7280" 
+                  : `12px 12px 0 ${char.displayColor}, 0 0 25px ${char.displayColor}55`,
                 transition: { duration: 0.2 } 
               }}
             >
-              <div className="relative w-full aspect-[4/5] overflow-hidden bg-[#2a2a35] shrink-0">
+              <div 
+                className="relative w-full aspect-[4/5] overflow-hidden shrink-0"
+                style={{
+                  background: char.incognito 
+                    ? "#2a2a35" 
+                    : `radial-gradient(circle at center, ${char.displayColor}33 0%, #13131e 100%)`
+                }}
+              >
+                {!char.incognito && char.powers?.role && (
+                  <div 
+                    className="absolute top-2 left-2 z-20 font-[var(--font-bangers)] text-[9px] tracking-wider px-2 py-0.5 border-2 border-black rotate-[-3deg] shadow-[2px_2px_0_#000] uppercase"
+                    style={{ 
+                      backgroundColor: char.displayColor, 
+                      color: getTextColor(char.displayColor) 
+                    }}
+                  >
+                    {char.powers.role.split(" / ")[0]}
+                  </div>
+                )}
                 {char.incognito ? (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="absolute inset-0 speed-lines opacity-20" />
@@ -134,12 +165,23 @@ export function CharacterRoster() {
               
               <div 
                 className="p-3 sm:p-4 text-center border-t-[4px] border-white relative z-10 flex-1 flex items-center justify-center overflow-hidden" 
-                style={{ background: char.incognito ? "#374151" : char.displayColor }}
+                style={{ 
+                  background: char.incognito 
+                    ? "#374151" 
+                    : (char.id === 'sofi' 
+                       ? "linear-gradient(135deg, #06b6d4, #0891b2)" 
+                       : char.displayColor) 
+                }}
               >
                 <h3 
-                  className="font-[var(--font-bangers)] text-white tracking-widest drop-shadow-md leading-none pt-1 truncate w-full"
+                  className="font-[var(--font-bangers)] tracking-widest drop-shadow-md leading-none pt-1 truncate w-full"
                   style={{ 
-                    textShadow: "2px 2px 0 rgba(0,0,0,0.3)",
+                    color: char.incognito ? "white" : getTextColor(char.displayColor),
+                    textShadow: char.incognito 
+                      ? "2px 2px 0 rgba(0,0,0,0.3)"
+                      : (getTextColor(char.displayColor) === '#0a0a0f' 
+                        ? "1px 1px 0 rgba(255,255,255,0.6)" 
+                        : "2px 2px 0 rgba(0,0,0,0.3)"),
                     fontSize: char.incognito ? "clamp(0.9rem, 2vw, 1.3rem)" : "clamp(1.2rem, 2.5vw, 1.8rem)"
                   }}
                 >
@@ -176,19 +218,38 @@ export function CharacterRoster() {
                 whileInView={{ opacity: 1, y: 0, rotate: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.05 }}
-                className="relative group bg-[#13131e] flex flex-col cursor-pointer select-none"
+                className="relative group bg-[#13131e] flex flex-col cursor-pointer select-none border-4 transition-colors duration-300"
                 style={{ 
-                  border: "4px solid white", 
+                  borderColor: "white", 
                   boxShadow: `8px 8px 0 ${char.displayColor}` 
                 }}
                 whileHover={{ 
                   scale: 1.03, 
                   rotate: i % 2 === 0 ? -1 : 1, 
+                  borderColor: char.incognito ? "white" : char.displayColor,
                   boxShadow: `12px 12px 0 ${char.displayColor}`,
                   transition: { duration: 0.2 } 
                 }}
               >
-                <div className="relative w-full aspect-[4/5] overflow-hidden bg-[#2a2a35] shrink-0 flex items-center justify-center">
+                <div 
+                  className="relative w-full aspect-[4/5] overflow-hidden shrink-0 flex items-center justify-center"
+                  style={{
+                    background: char.incognito 
+                      ? "#2a2a35" 
+                      : `radial-gradient(circle at center, ${char.displayColor}33 0%, #13131e 100%)`
+                  }}
+                >
+                  {!char.incognito && char.powers?.role && (
+                    <div 
+                      className="absolute top-2 left-2 z-20 font-[var(--font-bangers)] text-[9px] tracking-wider px-2 py-0.5 border-2 border-black rotate-[-3deg] shadow-[2px_2px_0_#000] uppercase"
+                      style={{ 
+                        backgroundColor: char.displayColor, 
+                        color: getTextColor(char.displayColor) 
+                      }}
+                    >
+                      {char.powers.role.split(" / ")[0]}
+                    </div>
+                  )}
                   {char.incognito ? (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="absolute inset-0 speed-lines opacity-20" />
@@ -269,9 +330,14 @@ export function CharacterRoster() {
                   style={{ background: char.incognito ? "#374151" : char.displayColor }}
                 >
                   <h3 
-                    className="font-[var(--font-bangers)] text-white tracking-widest drop-shadow-md leading-none pt-1 truncate w-full"
+                    className="font-[var(--font-bangers)] tracking-widest drop-shadow-md leading-none pt-1 truncate w-full"
                     style={{ 
-                      textShadow: "2px 2px 0 rgba(0,0,0,0.3)",
+                      color: char.incognito ? "white" : getTextColor(char.displayColor),
+                      textShadow: char.incognito 
+                        ? "2px 2px 0 rgba(0,0,0,0.3)"
+                        : (getTextColor(char.displayColor) === '#0a0a0f' 
+                          ? "1px 1px 0 rgba(255,255,255,0.6)" 
+                          : "2px 2px 0 rgba(0,0,0,0.3)"),
                       fontSize: char.incognito ? "clamp(0.9rem, 2vw, 1.3rem)" : "clamp(1.1rem, 2vw, 1.6rem)"
                     }}
                   >

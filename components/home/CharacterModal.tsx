@@ -4,6 +4,39 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Zap, ZapOff } from "lucide-react";
 
+function getTextColor(hexColor: string) {
+  if (!hexColor) return "white";
+  const color = hexColor.replace("#", "");
+  const r = parseInt(color.substring(0, 2), 16);
+  const g = parseInt(color.substring(2, 4), 16);
+  const b = parseInt(color.substring(4, 6), 16);
+  const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+  return yiq >= 140 ? "#0a0a0f" : "white";
+}
+
+function getVibrantColor(hexColor: string) {
+  if (!hexColor) return "#f5e642";
+  const c = hexColor.toLowerCase();
+  if (c === '#0d3a2b') return '#10b981'; // Ian: emerald green
+  if (c === '#0a1128') return '#3b82f6'; // Julián: vibrant blue
+  if (c === '#4c1d95') return '#a855f7'; // Mati: vibrant purple
+  if (c === '#b91c1c') return '#ef4444'; // Uandi: vibrant red
+  return hexColor; // Jaz, Volvo, Sofi are already vibrant/light
+}
+
+function getDarkBgColor(hexColor: string) {
+  if (!hexColor) return "#0f172a";
+  const c = hexColor.toLowerCase();
+  if (c === '#0d3a2b') return '#061410'; // very dark green
+  if (c === '#f5e642') return '#121203'; // very dark yellow
+  if (c === '#0a1128') return '#020512'; // very dark blue
+  if (c === '#4c1d95') return '#0d041c'; // very dark purple
+  if (c === '#b91c1c') return '#170303'; // very dark red
+  if (c === '#f95700') return '#170802'; // very dark orange
+  if (c === '#06b6d4') return '#021214'; // very dark cyan
+  return "#0f172a";
+}
+
 export function CharacterModal({ char, onClose }: { char: any; onClose: () => void }) {
   const [showAlt, setShowAlt] = useState(false);
   const [isPowersMode, setIsPowersMode] = useState(false);
@@ -30,6 +63,8 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
   const isLocked = char.incognito && !unlockAll;
   const currentImage = showAlt && char.altImage ? char.altImage : (char.fullBody || char.image);
   const accent = isLocked ? "#6b7280" : char.color;
+  const vibrantAccent = getVibrantColor(accent);
+  const darkBg = getDarkBgColor(accent);
   const stats = isPowersMode ? char.powers?.stats : char.stats;
   const statRows = [
     { name: "Fuerza",   val: stats?.fuerza ?? 0 },
@@ -58,33 +93,32 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
         animate={{ scale: 1, y: 0, opacity: 1 }}
         exit={{ scale: 0.88, y: 28, opacity: 0 }}
         transition={{ type: "spring", stiffness: 320, damping: 26 }}
-        className={`relative w-full z-10 flex flex-col sm:flex-row overflow-hidden transition-colors duration-400 ${
-          isPowersMode ? "bg-[#0f172a]" : "bg-white"
-        }`}
+        className="relative w-full z-10 flex flex-col sm:flex-row overflow-hidden transition-colors duration-400"
         style={{
           maxWidth: 1100,
           border: "4px solid #0a0a0f",
-          boxShadow: `10px 10px 0 ${isPowersMode ? "#f5e642" : accent}`,
+          boxShadow: `10px 10px 0 ${isPowersMode ? vibrantAccent : accent}`,
           height: "auto",
           minHeight: "65vh",
           maxHeight: "90vh",
+          backgroundColor: isPowersMode ? darkBg : "#ffffff",
         }}
       >
         {/* ── Close ── */}
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 z-30 w-9 h-9 flex items-center justify-center font-[var(--font-bangers)] text-lg text-white bg-[#e8185a] hover:bg-[#c8134d] border-2 border-black shadow-[3px_3px_0_#000] transition-all hover:-translate-x-px hover:-translate-y-px active:translate-x-0.5 active:translate-y-0.5"
+          className="absolute top-3 right-3 z-30 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center font-[var(--font-bangers)] text-base sm:text-lg text-white bg-[#e8185a] hover:bg-[#c8134d] border-2 border-black shadow-[3px_3px_0_#000] transition-all hover:-translate-x-px hover:-translate-y-px active:translate-x-0.5 active:translate-y-0.5"
         >
           ✕
         </button>
 
         {/* ══════════ LEFT — image ══════════ */}
         <div
-          className="w-full h-[280px] sm:h-auto sm:w-[460px] sm:min-w-[460px] lg:w-[540px] lg:min-w-[540px] flex-shrink-0 relative border-b-4 sm:border-b-0 sm:border-r-4 border-black transition-colors duration-400"
+          className="w-full h-[200px] sm:h-auto sm:w-[460px] sm:min-w-[460px] lg:w-[540px] lg:min-w-[540px] flex-shrink-0 relative border-b-4 sm:border-b-0 sm:border-r-4 border-black transition-colors duration-400"
           style={{
-            backgroundColor: isPowersMode ? "#0f172a" : "#f1f5f9",
+            backgroundColor: isPowersMode ? darkBg : "#f1f5f9",
             backgroundImage: isPowersMode
-              ? "radial-gradient(circle, rgba(245,230,66,0.07) 1.5px, transparent 1.5px)"
+              ? `radial-gradient(circle, ${vibrantAccent}22 1.5px, transparent 1.5px)`
               : "radial-gradient(circle, #cbd5e1 1.5px, transparent 1.5px)",
             backgroundSize: "20px 20px",
           }}
@@ -112,9 +146,14 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                 alt={isLocked ? "PRÓXIMAMENTE" : char.name}
                 title="Click para ver completo"
                 onClick={() => setImgFullscreen(true)}
-                className={`w-full h-full object-contain object-center sm:object-bottom p-1 sm:p-2 lg:p-4 drop-shadow-[4px_4px_0_rgba(0,0,0,0.2)] transition-all duration-500 cursor-zoom-in ${
-                  isPowersMode ? "brightness-110 drop-shadow-[0_0_18px_rgba(245,230,66,0.5)]" : ""
+                className={`w-full h-full object-contain object-center sm:object-bottom p-1 sm:p-2 lg:p-4 transition-all duration-500 cursor-zoom-in ${
+                  isPowersMode ? "brightness-110" : ""
                 }`}
+                style={{
+                  filter: isPowersMode 
+                    ? `drop-shadow(4px 4px 0 rgba(0,0,0,0.2)) drop-shadow(0 0 18px ${vibrantAccent})`
+                    : `drop-shadow(4px 4px 0 rgba(0,0,0,0.2))`
+                }}
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
@@ -144,13 +183,15 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
 
         {/* ══════════ RIGHT — info ══════════ */}
         <div
-          className={`flex-1 flex flex-col p-4 sm:p-6 lg:p-8 gap-4 sm:gap-6 lg:gap-8 overflow-y-auto transition-colors duration-400 ${
-            isPowersMode ? "bg-[#0f172a] text-slate-100" : "bg-white text-[#0a0a0f]"
-          }`}
+          style={{
+            backgroundColor: isPowersMode ? darkBg : "#ffffff",
+            color: isPowersMode ? "#f8fafc" : "#0a0a0f",
+          }}
+          className="flex-1 flex flex-col p-5 sm:p-8 gap-4 sm:gap-6 overflow-y-auto transition-colors duration-400"
         >
           {isLocked ? (
             /* ── locked ── */
-            <div className="flex-1 flex flex-col items-center justify-center text-center gap-3">
+            <div className="flex-1 flex flex-col items-center justify-center text-center gap-3 flex-shrink-0">
               <div className="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center border-2 border-black">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#374151" strokeWidth="2.5">
                   <rect x="3" y="11" width="18" height="11" rx="2" />
@@ -166,20 +207,26 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
           ) : (
             <>
               {/* ── name + role tag ── */}
-              <div className="flex flex-col gap-1 pr-8">
+              <div className="flex flex-col gap-1 pr-8 flex-shrink-0">
                 <span
                   className="tag text-[10px] font-[var(--font-bangers)] tracking-wider px-2 py-0.5 border-2 border-black self-start"
-                  style={{ background: isPowersMode ? "#e8185a" : accent, color: "white" }}
+                  style={{ 
+                    background: isPowersMode ? vibrantAccent : accent, 
+                    color: getTextColor(isPowersMode ? vibrantAccent : accent) 
+                  }}
                 >
                   {isPowersMode ? char.powers?.role : char.role}
                 </span>
                 <h2
                   className="font-[var(--font-bangers)] text-4xl sm:text-5xl leading-none tracking-widest flex flex-wrap items-baseline gap-x-2"
-                  style={{ textShadow: isPowersMode ? "3px 3px 0 #000" : `2px 2px 0 ${accent}` }}
+                  style={{ textShadow: isPowersMode ? `2px 2px 0 ${darkBg}, 4px 4px 0 ${vibrantAccent}` : `2px 2px 0 ${accent}` }}
                 >
                   <span>{char.name.toUpperCase()}</span>
                   {isPowersMode && char.powers?.role && (
-                    <span className="text-[#f5e642] text-xl sm:text-2xl font-[var(--font-marker)] tracking-normal normal-case block sm:inline">
+                    <span 
+                      style={{ color: vibrantAccent }}
+                      className="text-xl sm:text-2xl font-[var(--font-marker)] tracking-normal normal-case block sm:inline"
+                    >
                       AKA: {char.powers.role.split(" / ")[0].toUpperCase()}
                     </span>
                   )}
@@ -187,7 +234,10 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
               </div>
 
               {/* ── profile / habilidades ── */}
-              <div className={`border-t-2 pt-2 flex flex-col gap-1 ${isPowersMode ? "border-slate-700" : "border-black"}`}>
+              <div 
+                style={{ borderColor: isPowersMode ? `${vibrantAccent}33` : "#0a0a0f" }}
+                className="border-t-2 pt-2 flex flex-col gap-1 flex-shrink-0"
+              >
                 <h4 className="font-[var(--font-bangers)] text-xs tracking-wider">
                   {isPowersMode ? "HABILIDADES:" : "PERFIL:"}
                 </h4>
@@ -203,13 +253,18 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
               {/* ── significa banner ── */}
               {isPowersMode && char.powers?.significa && (
                 <div
-                  className="p-3 border-2 border-[#f5e642] relative bg-[#13131e] mt-2 mb-1"
+                  className="p-3 border-2 relative bg-[#13131e] mt-2 mb-1 flex-shrink-0"
                   style={{
-                    boxShadow: "3px 3px 0 #f5e642",
+                    borderColor: vibrantAccent,
+                    boxShadow: `3px 3px 0 ${vibrantAccent}`,
                   }}
                 >
                   <span
-                    className="font-[var(--font-marker)] text-[10px] uppercase text-[#0a0a0f] bg-[#f5e642] px-2 py-0.5 border border-[#0a0a0f] absolute -top-3 left-3 rotate-[-1deg]"
+                    className="font-[var(--font-marker)] text-[10px] uppercase absolute -top-3 left-3 rotate-[-1deg] border border-[#0a0a0f] px-2 py-0.5"
+                    style={{
+                      backgroundColor: vibrantAccent,
+                      color: getTextColor(vibrantAccent),
+                    }}
                   >
                     SIGNIFICA:
                   </span>
@@ -221,13 +276,21 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
 
               {/* ── crisis ── */}
               <div
-                className={`border-2 border-black p-3 relative overflow-hidden flex flex-col gap-1.5 ${
-                  isPowersMode ? "bg-[#1e293b] border-slate-600 shadow-[3px_3px_0_#e8185a]" : "bg-yellow-50 shadow-[3px_3px_0_#000]"
-                }`}
+                className="border-2 p-3 relative overflow-hidden flex flex-col gap-1.5 flex-shrink-0 transition-all duration-300"
+                style={{
+                  backgroundColor: isPowersMode ? "#111827" : "#fffbeb",
+                  borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
+                  boxShadow: isPowersMode ? `3px 3px 0 ${vibrantAccent}` : "3px 3px 0 #000",
+                }}
               >
-                <div className={`self-start font-[var(--font-bangers)] text-[11px] tracking-wider px-2 py-0.5 border-2 uppercase ${
-                  isPowersMode ? "bg-[#e8185a] text-white border-slate-600" : "bg-[#e8185a] text-white border-black"
-                }`}>
+                <div 
+                  className="self-start font-[var(--font-bangers)] text-[11px] tracking-wider px-2 py-0.5 border-2 uppercase"
+                  style={{
+                    backgroundColor: isPowersMode ? vibrantAccent : "#e8185a",
+                    color: isPowersMode ? getTextColor(vibrantAccent) : "white",
+                    borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
+                  }}
+                >
                   {isPowersMode ? "Sobrecarga" : "En Crisis"}
                 </div>
                 <p className="font-sans text-xs sm:text-sm leading-snug">
@@ -236,7 +299,10 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
               </div>
 
               {/* ── stats — 2-col compact grid ── */}
-              <div className={`border-t pt-2 flex flex-col gap-1.5 ${isPowersMode ? "border-slate-800" : "border-gray-100"}`}>
+              <div 
+                style={{ borderColor: isPowersMode ? `${vibrantAccent}33` : "#f1f5f9" }}
+                className="border-t pt-2 flex flex-col gap-1.5 flex-shrink-0"
+              >
                 <h4 className="font-[var(--font-bangers)] text-xs tracking-wider">
                   {isPowersMode ? "MÉTRICAS:" : "STATS:"}
                 </h4>
@@ -251,7 +317,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                           <div
                             key={idx}
                             className="h-full flex-1 border-r border-black last:border-0 transition-all duration-400"
-                            style={{ backgroundColor: idx < s.val ? (isPowersMode ? "#f5e642" : accent) : "transparent" }}
+                            style={{ backgroundColor: idx < s.val ? (isPowersMode ? vibrantAccent : accent) : "transparent" }}
                           />
                         ))}
                       </div>
@@ -262,14 +328,16 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
               </div>
 
               {/* ── toggle button ── */}
-              <div className="pt-2 mt-auto pb-2 sm:pb-0">
+              <div className="pt-2 mt-auto pb-2 sm:pb-0 flex-shrink-0">
                 <button
                   onClick={() => setIsPowersMode(!isPowersMode)}
-                  className={`w-full py-3 sm:py-2 border-3 border-black font-[var(--font-bangers)] text-sm sm:text-base tracking-wider uppercase shadow-[3px_3px_0_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#000] transition-all flex items-center justify-center gap-2 ${
-                    isPowersMode
-                      ? "bg-yellow-400 text-black hover:bg-yellow-300"
-                      : "bg-[#e8185a] text-white hover:bg-[#c8134d]"
-                  }`}
+                  style={{
+                    backgroundColor: isPowersMode ? darkBg : accent,
+                    color: isPowersMode ? vibrantAccent : getTextColor(accent),
+                    borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
+                    boxShadow: isPowersMode ? `3px 3px 0 ${vibrantAccent}` : "3px 3px 0 #000",
+                  }}
+                  className="w-full py-3 sm:py-2 border-3 font-[var(--font-bangers)] text-sm sm:text-base tracking-wider uppercase active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#000] transition-all flex items-center justify-center gap-2 hover:brightness-105 active:brightness-95"
                 >
                   {isPowersMode ? (
                     <>

@@ -55,14 +55,14 @@ export function HeroSection() {
       />
 
       {/* ── Hero text ── */}
-      <div className="relative z-10 flex-1 flex items-center px-6 sm:px-10 md:px-16 lg:px-24 pt-16 pb-10">
+      <div className="relative z-10 flex-1 flex items-center px-6 sm:px-10 md:px-16 lg:px-24 pt-8 sm:pt-16 pb-6 sm:pb-10">
         <div className="w-full max-w-2xl">
           {/* kicker */}
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
-            className="mb-5"
+            className="mb-3 sm:mb-5"
           >
             <span
               className="font-[var(--font-bangers)] text-xs sm:text-sm tracking-[0.35em] uppercase"
@@ -81,7 +81,7 @@ export function HeroSection() {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", stiffness: 100, damping: 14, delay: 0.12 }}
-            className="font-[var(--font-bangers)] leading-[0.88] text-white mb-6 select-none"
+            className="font-[var(--font-bangers)] leading-[0.88] text-white mb-4 sm:mb-6 select-none"
             style={{
               fontSize: "clamp(5rem, 16vw, 11rem)",
               textShadow: "5px 5px 0 #e8185a, 10px 10px 0 rgba(232,24,90,0.12)",
@@ -97,7 +97,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.38 }}
-            className="font-[var(--font-marker)] text-lg sm:text-xl mb-10"
+            className="font-[var(--font-marker)] text-base sm:text-xl mb-6 sm:mb-10"
             style={{ color: "rgba(255,255,255,0.58)" }}
           >
             una historia basada en hechos reales
@@ -110,12 +110,12 @@ export function HeroSection() {
             transition={{ delay: 0.54 }}
             className="flex flex-row gap-3 flex-wrap"
           >
-            <a href="#sagas" className="btn btn-magenta text-lg sm:text-xl px-7 py-3">
+            <a href="#sagas" className="btn btn-magenta text-base sm:text-lg px-5 py-2.5 sm:px-7 sm:py-3">
               Empezá a leer →
             </a>
             <a
               href="#sagas"
-              className="btn text-lg sm:text-xl px-7 py-3"
+              className="btn text-base sm:text-lg px-5 py-2.5 sm:px-7 sm:py-3"
               style={{
                 background: "transparent",
                 color: "white",
@@ -137,7 +137,7 @@ export function HeroSection() {
 
       {/* ── Fade into paper ── */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none z-20"
+        className="absolute bottom-0 left-0 right-0 h-16 sm:h-28 pointer-events-none z-20"
         style={{ background: "linear-gradient(to bottom, transparent, #f4f0e6)" }}
       />
 

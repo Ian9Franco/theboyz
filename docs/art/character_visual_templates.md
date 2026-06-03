@@ -7,48 +7,51 @@ Usa estas descripciones en inglés para alimentar a los generadores de imágenes
 ## 👥 1. Los Pibes (Diseño Base - CLOSEUP y FULLBODY)
 
 ### Ian
-*   **Cabello:** `neatly styled textured dark brown wavy hair, voluminous top`
-*   **Rostro:** `expressive eyes, light skin tone, no facial hair, wearing round black-rimmed glasses`
-*   **Ropa:** `dark charcoal grey pullover hoodie (drawstrings visible, large front pocket), dark black jeans, brown sneakers with white soles`
-*   **Accesorios:** `holding a modern smartphone or a thin transparent holographic glass tablet`
+*   **Cabello:** `neatly styled rich textured dark brown wavy hair, voluminous top with natural flow, clean-cut sides`
+*   **Rostro:** `expressive light brown eyes, light skin tone, no facial hair, strong jawline with three-quarter facial definition, wearing round black-rimmed glasses with a multi-layered frame`
+*   **Ropa:** `dark charcoal grey pullover hoodie showing detailed fabric texture, or a simple black or brown crewneck t-shirt, tailored black slim-fit jeans, brown sneakers with white soles`
+*   **Accesorios:** `wearing a sleek modern digital smartwatch on his wrist, optionally holding a modern black smartphone`
 
 ### Jaz
-*   **Cabello:** `long straight hair with a sunset-gold ombre gradient (dark brown at the roots, transitioning to warm golden blonde at the tips), flowing naturally`
-*   **Rostro:** `expressive hazel eyes, light skin tone, wearing clear-rimmed cat-eye glasses, subtle dark lipstick`
-*   **Ropa:** `black long-sleeve turtleneck shirt, tight black leggings, black leather military combat boots`
+*   **Cabello:** `long straight hair with a sunset-gold ombre gradient (dark brown at the roots, transitioning to warm golden blonde at the tips), flowing naturally, lit by warm sunset lighting`
+*   **Rostro:** `expressive light brown/hazel eyes with detailed eyelashes, light skin tone, wearing clear-rimmed cat-eye glasses with a golden metal bridge, subtle dark lipstick, clean and defined facial structure`
+*   **Ropa:** `black long-sleeve turtleneck shirt/sweater with ribbed collar detail, tight black leggings, black leather military combat boots with detailed laces`
+*   **Accesorios:** `always wearing a delicate necklace with a small green gemstone pendant`
 
 ### Julián
-*   **Cabello:** `short curly black hair with a clean skin-fade on the sides and back`
-*   **Rostro:** `alert dark eyes, light skin tone, short neat black beard and mustache`
-*   **Ropa:** `dark navy blue long-sleeve crewneck sweater, black slim-fit pants, dark brown leather lace-up combat boots`
+*   **Cabello:** `short curly black hair with voluminous styled curls on top and a clean skin-fade on the sides and back`
+*   **Rostro:** `alert and focused dark brown eyes, light skin tone, neatly trimmed short black beard and mustache (medium stubble)`
+*   **Cuerpo:** `slender and athletic build, 185 cm tall`
+*   **Ropa:** `dark navy blue long-sleeve crewneck sweater showing worn cotton texture and ribbed collar/cuffs, black slim-fit pants, dark brown leather lace-up combat boots`
 
 ### Sofi
-*   **Cabello:** `dark brown curly hair tied back into a high messy bun with loose curls framing her face`
-*   **Rostro:** `natural expressive dark eyes, light skin tone, no glasses`
-*   **Ropa:** `pink and dark maroon color-blocked hooded puffer jacket, cream knit turtleneck sweater underneath, brown plaid scarf around her neck, dark grey cargo pants with side pockets, dark brown leather combat boots`
-*   **Accesorios:** `holding a black digital tablet`
+*   **Cabello:** `dark brown curly hair tied back into a high messy bun with loose wavy curls framing the sides of her face`
+*   **Rostro:** `natural expressive dark brown eyes, thick defined dark eyebrows, light skin tone, a small distinct mole on her left cheek below the eye, friendly natural expression, no glasses`
+*   **Ropa:** `pink and dark maroon/burgundy color-blocked hooded puffer jacket (pink upper body and sleeves, dark maroon lower body, white accent stripe), cream-colored knit turtleneck sweater underneath, brown and red plaid scarf wrapped around her neck, dark grey cargo pants with side cargo pockets, dark brown leather combat boots`
+*   **Accesorios:** `holding a black digital tablet displaying blue graph and data lines in her left hand`
 
 ### Uandi
-*   **Cabello:** `short curly dark brown hair with a clean skin-fade on the sides and back`
-*   **Rostro:** `focused dark eyes, light skin tone, round wire-framed glasses, short neat beard and mustache`
-*   **Cuerpo y Tatuajes:** `highly muscular and athletic build, left arm fully covered in an intricate black ink sleeve tattoo (swords, mandalas, leaves), right arm is clean`
-*   **Ropa:** `tight-fitting dark grey compression short-sleeve t-shirt with a white Kappa logo on the chest, matching dark grey cargo pants, black tactical belt, black combat boots`
+*   **Cabello:** `thick textured curly dark brown hair with high volume on top and a clean skin-fade on the sides and back`
+*   **Rostro:** `intense dark eyes with focused gaze, light skin tone, round black wire-framed glasses, short neat beard and mustache`
+*   **Cuerpo y Tatuajes:** `highly muscular and athletic build, left arm fully covered in a detailed black ink sleeve tattoo (featuring swords, mandalas, leaves, and geometric patterns), right arm is completely clean`
+*   **Ropa:** `tight-fitting dark grey/navy blue compression short-sleeve t-shirt with a small white Kappa logo on the center of the chest, matching dark grey cargo pants, black tactical belt with buckle, black lace-up combat boots`
 
 ### Volvo
-*   **Cabello:** `short spiky dark brown hair styled upwards`
-*   **Rostro:** `piercing light blue eyes, thick dark eyebrows, light skin tone, full short beard and mustache`
-*   **Ropa:** `plain orange crewneck t-shirt, dark charcoal cargo pants, brown tactical utility belt with leather gear pouches on the hips, brown leather combat boots`
+*   **Cabello:** `short spiky dark brown hair styled dynamically upwards and forward`
+*   **Rostro:** `piercing light blue-green eyes, thick expressive dark eyebrows, light skin tone, strong jawline with a full short beard and mustache`
+*   **Ropa:** `plain orange crewneck short-sleeve t-shirt, optional brown tactical utility chest rig/harness, dark green/grey cargo pants with side pockets and knee panels, brown canvas tactical belt with multiple leather gear pouches on the sides and back, brown leather combat boots`
 
 ### Mati (Universo Base)
-*   **Cabello:** `short neat black hair combed back and to the side`
-*   **Rostro:** `warm smile with expressive dimples on his cheeks, warm tan skin tone, dark eyes, no facial hair`
-*   **Ropa:** `dark grey tactical bomber jacket with a sleeve zipper pocket, olive green crewneck shirt underneath, khaki/brown cargo pants, grey sneakers with white soles`
+*   **Cabello:** `short neat black hair combed to the side, cleanly parted and swept to the right`
+*   **Rostro:** `warm friendly smile with expressive dimples on his cheeks, warm tan/medium skin tone, unobstructed brown eyes, no facial hair`
+*   **Ropa:** `dark grey tactical bomber jacket with a stand-up collar, vertical chest zipper pocket, and left sleeve zipper pocket, dark olive green crewneck ribbed sweater underneath, khaki-brown cargo pants with side pockets, grey sneakers with white soles`
 
 ### Matapobres
-*   **Cabello:** `long, straight jet-black hair with a neat middle part`
-*   **Rostro:** `mischievous smile, dark eyes, light skin tone, no glasses`
-*   **Cuerpo y Tatuajes:** `slender build, multiple distinct small tattoos on both arms and neck (including an eye on her left forearm, a heart on her right bicep, and small text/numbers below her throat)`
-*   **Ropa:** `white sleeveless halter tank top, blue denim jeans with integrated grey protective knee pads, brown leather combat boots`
+*   **Cabello:** `long straight jet-black hair with a neat center part, falling naturally down her back and shoulders`
+*   **Rostro:** `confident mischievous smile showing teeth, dark brown eyes, light skin tone, no glasses`
+*   **Cuerpo y Tatuajes:** `slender and fit build; delicate black line-art tattoos including a bat/wings symbol on the left side of her neck, a small script below her throat, a heart outline on her right bicep, a flower on her right forearm, a stylized eye with rays on her left bicep, a leaf design on her left hip, and various small fine-line accents on both arms`
+*   **Ropa:** `white sleeveless halter-neck crop tank top, slim-fit light blue denim jeans with dark grey integrated protective knee pads and side paneling, dark brown leather combat boots`
+
 
 ---
 
@@ -100,6 +103,14 @@ Usa estas descripciones en inglés para alimentar a los generadores de imágenes
 
 ### Mati Pixel
 *   **Estilo Visual:** `retro 8-bit pixel art character, flat 2D look, jagged pixelated edges, limited color palette, casting a flat 2D shadow, posing inside a 3D digital grid.`
+
+### Mati Dealer / "Wildcard"
+*   **Base:** Rostro de **Mati** (sonrisa confiada, hoyuelos).
+*   **Traje:** `wearing a sleek elegant dealer outfit with a purple satin vest, white button-up dress shirt, black bowtie, holding glowing violet holographic playing cards and floating poker chips.`
+
+### Mati Warden / "El Juez"
+*   **Base:** Rostro de **Mati** (expresión seria e implacable, ojos brillando con energía espectral).
+*   **Traje:** `wearing dark judge robes over lightweight metallic battle armor, a glowing violet energy scale floating above his head, background of crackling purple plasma, imposing stature.`
 
 ---
 

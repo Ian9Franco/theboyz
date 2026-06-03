@@ -92,13 +92,26 @@ export default function NavBar() {
           </button>
         </nav>
 
-        {/* Mobile burger */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden font-[var(--font-bangers)] text-2xl text-white border-2 border-white/20 px-3 py-1 hover:border-[#e8185a] hover:text-[#e8185a] transition-colors"
-        >
-          {menuOpen ? "✕" : "☰"}
-        </button>
+        {/* Mobile Actions (Spoiler Toggle + Hamburger) */}
+        <div className="flex md:hidden items-center gap-3">
+          <button
+            onClick={toggleUnlockAll}
+            className={`font-[var(--font-bangers)] text-[11px] tracking-wider px-2.5 py-1 border-2 border-black uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] cursor-pointer ${
+              unlockAll 
+                ? "bg-[#6b7280] text-white" 
+                : "bg-[#f5e642] text-black"
+            }`}
+          >
+            {unlockAll ? "✕ Spoilers" : "🔓 Desbloquear"}
+          </button>
+          
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="font-[var(--font-bangers)] text-2xl text-white border-2 border-white/20 px-3 py-1 hover:border-[#e8185a] hover:text-[#e8185a] transition-colors"
+          >
+            {menuOpen ? "✕" : "☰"}
+          </button>
+        </div>
       </div>
 
       {/* Mobile dropdown */}
