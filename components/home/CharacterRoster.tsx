@@ -141,16 +141,20 @@ export function CharacterRoster() {
                     <img 
                       src={char.image} 
                       alt="Incógnito" 
-                      className="absolute inset-0 w-full h-full object-cover object-[center_20%] opacity-20 grayscale blur-sm"
+                      className="absolute inset-0 w-full h-full object-cover object-center opacity-20 grayscale blur-sm"
                     />
                     <div className="absolute inset-0 bg-black/50" />
+                    <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
                   </div>
                 ) : (
-                  <img 
-                    src={char.image} 
-                    alt={char.displayName} 
-                    className="w-full h-full object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2 grayscale-[0.3] group-hover:grayscale-0"
-                  />
+                  <>
+                    <img 
+                      src={char.image} 
+                      alt={char.displayName} 
+                      className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2 grayscale-[0.3] group-hover:grayscale-0"
+                    />
+                    <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
+                  </>
                 )}
                 
                 {/* Comic style halftone overlay */}
@@ -263,7 +267,7 @@ export function CharacterRoster() {
                         <img 
                           src={char.image} 
                           alt="Incógnito" 
-                          className="absolute inset-0 w-full h-full object-cover object-[center_20%] opacity-20 grayscale blur-sm"
+                          className="absolute inset-0 w-full h-full object-cover object-center opacity-20 grayscale blur-sm"
                         />
                       ) : (
                         <div 
@@ -274,15 +278,19 @@ export function CharacterRoster() {
                         />
                       )}
                       <div className="absolute inset-0 bg-black/50" />
+                      <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
                     </div>
                   ) : (
                     <>
                       {char.image ? (
-                        <img 
-                          src={char.image} 
-                          alt={char.displayName} 
-                          className="w-full h-full object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2 grayscale-[0.3] group-hover:grayscale-0"
-                        />
+                        <>
+                          <img 
+                            src={char.image} 
+                            alt={char.displayName} 
+                            className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2 grayscale-[0.3] group-hover:grayscale-0"
+                          />
+                          <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
+                        </>
                       ) : (
                         /* Premium dynamic typographic fallback avatar for characters without photo */
                         <div 
@@ -310,6 +318,7 @@ export function CharacterRoster() {
                           <span className="font-[var(--font-bangers)] text-xs text-white/50 tracking-widest uppercase mt-4">
                             {char.id === 'supertrucker' ? 'Super Camionero' : char.id === 'comandante' ? 'Comandante Regular' : 'The Tinkerer'}
                           </span>
+                          <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
                         </div>
                       )}
                     </>

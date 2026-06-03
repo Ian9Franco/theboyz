@@ -235,10 +235,10 @@ function CharacterMarquee({
       initial={{ opacity: 0, y: 48 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.72, duration: 0.55 }}
-      className="relative z-10 w-full overflow-hidden pb-8 pt-4 cursor-grab active:cursor-grabbing"
+      className="relative z-10 w-full overflow-hidden pb-8 pt-16 cursor-grab active:cursor-grabbing"
       style={{
-        maskImage: "linear-gradient(to bottom, transparent 0%, black 25%)",
-        WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 25%)",
+        maskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+        WebkitMaskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
       }}
       ref={carouselRef}
     >
@@ -307,7 +307,18 @@ function CharacterMarquee({
 
 /* ─────────────────────────────────────────────────────────────
    Individual card with bob + tilt on hover
+   With dynamic overlapping and push-out animations
 ───────────────────────────────────────────────────────────── */
+function getTextColor(hexColor: string) {
+  if (!hexColor) return "white";
+  const color = hexColor.replace("#", "");
+  const r = parseInt(color.substring(0, 2), 16);
+  const g = parseInt(color.substring(2, 4), 16);
+  const b = parseInt(color.substring(4, 6), 16);
+  const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+  return yiq >= 140 ? "#0a0a0f" : "white";
+}
+
 function CharCard({
   char,
   floatDelay,
@@ -318,10 +329,11 @@ function CharCard({
   onClick: () => void;
 }) {
   const [hasError, setHasError] = useState(false);
+  const isAltVal = Math.floor(floatDelay * 10) % 2 === 0;
 
   return (
+    /* outer: only bobs vertically — no scale, no hover */
     <motion.div
-      /* continuous vertical bob */
       animate={{ y: [0, -8, 0] }}
       transition={{
         repeat: Infinity,
@@ -330,21 +342,28 @@ function CharCard({
         ease: "easeInOut",
         delay: floatDelay,
       }}
-      className="flex-shrink-0 relative cursor-pointer overflow-hidden select-none"
+      className="flex-shrink-0 relative select-none"
       style={{
-        width: "clamp(82px, 13vw, 140px)",
+        width: "clamp(90px, 14vw, 155px)",
         aspectRatio: "3/4",
+        marginLeft: "-12px",
+        marginRight: "-12px",
+      }}
+    >
+    {/* inner: handles ALL hover effects independently from the bob */}
+    <motion.div
+      className="absolute inset-0 cursor-pointer overflow-hidden"
+      style={{
         border: "3px solid white",
         boxShadow: `4px 4px 0 ${char.displayColor}, 6px 12px 22px rgba(0,0,0,0.6)`,
         background: char.incognito ? "#1a1a25" : "#13131e",
       }}
       whileHover={{
-        scale: 1.14,
-        rotate: [-1.5, 1.5][Math.floor(Math.random() * 2)],
-        y: -16,
+        scale: 1.22,
+        rotate: isAltVal ? -2.5 : 2.5,
         zIndex: 50,
-        boxShadow: `6px 6px 0 ${char.displayColor}, 10px 18px 28px rgba(0,0,0,0.75)`,
-        transition: { duration: 0.18 },
+        boxShadow: `8px 8px 0 ${char.displayColor}, 12px 20px 32px rgba(0,0,0,0.8)`,
+        transition: { type: "spring", stiffness: 340, damping: 26 },
       }}
       onClick={onClick}
     >
@@ -356,7 +375,7 @@ function CharCard({
             <img
               src={char.image}
               alt="?"
-              className="absolute inset-0 w-full h-full object-cover object-[center_15%] opacity-15 grayscale blur-[3px]"
+              className="absolute inset-0 w-full h-full object-cover object-center opacity-15 grayscale blur-[3px]"
               onError={() => setHasError(true)}
             />
           )}
@@ -367,6 +386,7 @@ function CharCard({
           >
             ?
           </span>
+          <div className="absolute inset-1.5 border-2 border-black pointer-events-none z-20" />
         </div>
       ) : hasError || !char.image ? (
         <div className="absolute inset-0 flex items-center justify-center">
@@ -376,14 +396,18 @@ function CharCard({
           >
             ?
           </span>
+          <div className="absolute inset-1.5 border-2 border-black pointer-events-none z-20" />
         </div>
       ) : (
-        <img
-          src={char.image}
-          alt={char.displayName}
-          className="w-full h-full object-cover object-[center_15%]"
-          onError={() => setHasError(true)}
-        />
+        <>
+          <img
+            src={char.image}
+            alt={char.displayName}
+            className="w-full h-full object-cover object-center"
+            onError={() => setHasError(true)}
+          />
+          <div className="absolute inset-1.5 border-2 border-black pointer-events-none z-20" />
+        </>
       )}
 
       {/* halftone overlay */}
@@ -399,11 +423,15 @@ function CharCard({
       {!char.incognito && (
         <div
           className="absolute bottom-0 left-0 right-0 py-1 text-center font-[var(--font-bangers)] text-[11px] tracking-wider truncate px-1"
-          style={{ background: char.displayColor, color: "#fff" }}
+          style={{ 
+            background: char.displayColor, 
+            color: getTextColor(char.displayColor) 
+          }}
         >
-          {char.displayName}
+          {char.displayName.toUpperCase()}
         </div>
       )}
+    </motion.div>
     </motion.div>
   );
 }
