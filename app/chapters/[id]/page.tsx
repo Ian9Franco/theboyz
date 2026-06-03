@@ -168,17 +168,17 @@ function Lightbox({
         {hasPrev && (
           <button 
             onClick={(e) => { e.stopPropagation(); onPrev?.(); }}
-            className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 w-14 h-14 items-center justify-center text-white/50 hover:text-white bg-black/20 hover:bg-[#e8185a] rounded-full transition-all z-20"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center text-white/70 hover:text-white bg-[#0a0a0f]/60 hover:bg-[#e8185a] border border-white/20 rounded-full transition-all z-[250] shadow-lg backdrop-blur-sm"
           >
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
           </button>
         )}
         {hasNext && (
           <button 
             onClick={(e) => { e.stopPropagation(); onNext?.(); }}
-            className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 w-14 h-14 items-center justify-center text-white/50 hover:text-white bg-black/20 hover:bg-[#e8185a] rounded-full transition-all z-20"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center text-white/70 hover:text-white bg-[#0a0a0f]/60 hover:bg-[#e8185a] border border-white/20 rounded-full transition-all z-[250] shadow-lg backdrop-blur-sm"
           >
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
         )}
 
@@ -592,14 +592,14 @@ export default function ChapterPage() {
 
         {/* ── Chapter Navigation ── */}
         <div className="mt-20 flex flex-col sm:flex-row gap-4 justify-between">
-          {prevChapter ? (
-            <Link href={`/chapters/${prevChapter.id}`} className="btn btn-dark text-xl flex-1 text-center truncate px-2">
-              ← {prevChapter.title}
-            </Link>
-          ) : <div className="flex-1" />}
           {nextChapter ? (
             <Link href={`/chapters/${nextChapter.id}`} className="btn btn-magenta text-xl flex-1 text-center truncate px-2">
               {nextChapter.title} →
+            </Link>
+          ) : <div className="flex-1" />}
+          {prevChapter ? (
+            <Link href={`/chapters/${prevChapter.id}`} className="btn btn-dark text-xl flex-1 text-center truncate px-2">
+              ← {prevChapter.title}
             </Link>
           ) : <div className="flex-1" />}
         </div>
