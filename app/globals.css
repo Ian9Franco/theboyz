@@ -175,4 +175,8 @@ body {
   .animate-slide-up  { animation: slide-up 0.5s ease both; }
   .animate-fade-in   { animation: fade-in 0.4s ease both; }
   .animate-spin-slow { animation: spin-slow 12s linear infinite; }
+
+  /* ── Hide scrollbar but keep scroll ── */
+  .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
 }

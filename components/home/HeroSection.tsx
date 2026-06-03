@@ -1,8 +1,9 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
 import { useEffect, useState } from "react";
-import { getComputedCharacters, CharacterModal } from "./CharacterRoster";
+import { getComputedCharacters } from "@/lib/characterData";
+import { CharacterModal } from "./CharacterModal";
 
 export function HeroSection() {
   const [readChapters, setReadChapters] = useState<string[]>([]);
@@ -12,384 +13,288 @@ export function HeroSection() {
   useEffect(() => {
     setIsClient(true);
     try {
-      const read = localStorage.getItem("read-chapters");
-      if (read) {
-        setReadChapters(JSON.parse(read));
-      }
-    } catch (e) {
-      console.error(e);
-    }
+      const raw = localStorage.getItem("read-chapters");
+      if (raw) setReadChapters(JSON.parse(raw));
+    } catch {}
   }, []);
 
-  // Compute dynamic characters using the shared helper
-  const computedCharacters = getComputedCharacters(readChapters, isClient);
-  
-  const getChar = (id: string) => {
-    return computedCharacters.find(c => c.id === id) || {
-      id,
-      name: id,
-      displayName: '???',
-      incognito: true,
-      displayColor: '#6b7280',
-      image: `/${id}.png`
-    };
-  };
-
-  const ian = getChar('ian');
-  const jaz = getChar('jaz');
-  const julian = getChar('julian');
-  const matapobre = getChar('matapobre');
-  const mati = getChar('mati');
-  const uandi = getChar('uandi');
-  const volvo = getChar('volvo');
-  const sofi = getChar('sofi');
+  const characters = getComputedCharacters(readChapters, isClient);
 
   return (
     <section
-      className="relative min-h-[88vh] flex items-center justify-center overflow-hidden"
-      style={{ background: "#0a0a0f" }}
+      className="relative flex flex-col overflow-hidden"
+      style={{ background: "#0a0a0f", minHeight: "90vh" }}
     >
-      {/* Speed lines */}
-      <div className="absolute inset-0 speed-lines opacity-30" />
-
-      {/* Magenta radial glow */}
+      {/* ── Background ── */}
+      <div className="absolute inset-0 speed-lines opacity-20 pointer-events-none" />
       <div
-        className="absolute right-0 top-0 w-[700px] h-[700px] pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          background: "radial-gradient(circle at 70% 30%, rgba(232,24,90,0.18) 0%, transparent 65%)",
+          background:
+            "radial-gradient(ellipse 80% 60% at 65% 35%, rgba(232,24,90,0.16) 0%, transparent 70%), " +
+            "radial-gradient(ellipse 45% 45% at 10% 85%, rgba(0,184,212,0.10) 0%, transparent 65%)",
         }}
       />
-      {/* Cyan glow */}
+      {/* dot-grid accent top-right */}
       <div
-        className="absolute left-0 bottom-0 w-[500px] h-[500px] pointer-events-none"
-        style={{
-          background: "radial-gradient(circle at 30% 70%, rgba(0,184,212,0.12) 0%, transparent 65%)",
-        }}
-      />
-
-      {/* Halftone circles (decorative) */}
-      <div
-        className="absolute right-[-60px] top-[-60px] w-[380px] h-[380px] rounded-full pointer-events-none opacity-[0.06]"
+        className="absolute right-0 top-0 w-80 h-80 pointer-events-none opacity-[0.055]"
         style={{
           backgroundImage: "radial-gradient(circle, #e8185a 1.5px, transparent 1.5px)",
           backgroundSize: "10px 10px",
         }}
       />
-      <div
-        className="absolute left-[-40px] bottom-[-40px] w-[260px] h-[260px] rounded-full pointer-events-none opacity-[0.06]"
-        style={{
-          backgroundImage: "radial-gradient(circle, #00b8d4 1.5px, transparent 1.5px)",
-          backgroundSize: "8px 8px",
-        }}
-      />
 
-      {/* Left Stack */}
-      <FloatingHeroCard
-        src={ian.image}
-        alt={ian.displayName}
-        fallbackColor={ian.displayColor}
-        className="left-[-2%] md:left-[1.5%] xl:left-[3.5%] top-[5%] md:top-[10%] xl:top-[12%] z-10"
-        initialX={-120}
-        initialRotate={-30}
-        animateRotate={-15}
-        delay={0.3}
-        incognito={ian.incognito}
-        onClick={() => setSelectedChar(ian)}
-      />
-      <FloatingHeroCard
-        src={jaz.image}
-        alt={jaz.displayName}
-        fallbackColor={jaz.displayColor}
-        className="left-[4%] md:left-[7.5%] xl:left-[9.5%] top-[25%] md:top-[28%] xl:top-[30%] z-20"
-        initialX={-100}
-        initialRotate={-25}
-        animateRotate={-5}
-        delay={0.4}
-        incognito={jaz.incognito}
-        onClick={() => setSelectedChar(jaz)}
-      />
-      <FloatingHeroCard
-        src={julian.image}
-        alt={julian.displayName}
-        fallbackColor={julian.displayColor}
-        className="left-[-4%] md:left-[2.5%] xl:left-[4.5%] top-[45%] md:top-[46%] xl:top-[48%] z-10"
-        initialX={-120}
-        initialRotate={-20}
-        animateRotate={-25}
-        delay={0.5}
-        incognito={julian.incognito}
-        onClick={() => setSelectedChar(julian)}
-      />
-      <FloatingHeroCard
-        src={matapobre.image}
-        alt={matapobre.displayName}
-        fallbackColor={matapobre.displayColor}
-        className="left-[6%] md:left-[8.5%] xl:left-[10.5%] top-[65%] md:top-[64%] xl:top-[66%] z-20"
-        initialX={-100}
-        initialRotate={-15}
-        animateRotate={-8}
-        delay={0.6}
-        incognito={matapobre.incognito}
-        onClick={() => setSelectedChar(matapobre)}
-      />
+      {/* ── Hero text ── */}
+      <div className="relative z-10 flex-1 flex items-center px-6 sm:px-10 md:px-16 lg:px-24 pt-16 pb-10">
+        <div className="w-full max-w-2xl">
+          {/* kicker */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.05 }}
+            className="mb-5"
+          >
+            <span
+              className="font-[var(--font-bangers)] text-xs sm:text-sm tracking-[0.35em] uppercase"
+              style={{
+                color: "#e8185a",
+                border: "1px solid rgba(232,24,90,0.45)",
+                padding: "0.3rem 1rem",
+              }}
+            >
+              Un cómic original
+            </span>
+          </motion.div>
 
-      {/* Right Stack */}
-      <FloatingHeroCard
-        src={mati.image}
-        alt={mati.displayName}
-        fallbackColor={mati.displayColor}
-        className="right-[-2%] md:right-[1.5%] xl:right-[3.5%] top-[5%] md:top-[10%] xl:top-[12%] z-10"
-        initialX={120}
-        initialRotate={30}
-        animateRotate={15}
-        delay={0.35}
-        incognito={mati.incognito}
-        onClick={() => setSelectedChar(mati)}
-      />
-      <FloatingHeroCard
-        src={uandi.image}
-        alt={uandi.displayName}
-        fallbackColor={uandi.displayColor}
-        className="right-[4%] md:right-[7.5%] xl:right-[9.5%] top-[25%] md:top-[28%] xl:top-[30%] z-20"
-        initialX={100}
-        initialRotate={25}
-        animateRotate={5}
-        delay={0.45}
-        incognito={uandi.incognito}
-        onClick={() => setSelectedChar(uandi)}
-      />
-      <FloatingHeroCard
-        src={volvo.image}
-        alt={volvo.displayName}
-        fallbackColor={volvo.displayColor}
-        className="right-[-4%] md:right-[2.5%] xl:right-[4.5%] top-[45%] md:top-[46%] xl:top-[48%] z-10"
-        initialX={120}
-        initialRotate={20}
-        animateRotate={25}
-        delay={0.55}
-        incognito={volvo.incognito}
-        onClick={() => setSelectedChar(volvo)}
-      />
-      <FloatingHeroCard
-        src={sofi.image}
-        alt={sofi.displayName}
-        fallbackColor={sofi.displayColor}
-        className="right-[6%] md:right-[8.5%] xl:right-[10.5%] top-[65%] md:top-[64%] xl:top-[66%] z-20"
-        initialX={100}
-        initialRotate={15}
-        animateRotate={8}
-        delay={0.65}
-        incognito={sofi.incognito}
-        onClick={() => setSelectedChar(sofi)}
-      />
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        {/* Label */}
-        <motion.div
-          initial={{ opacity: 0, y: -16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="mb-8 flex justify-center"
-        >
-          <span
-            className="font-[var(--font-bangers)] text-sm tracking-[0.35em] uppercase"
+          {/* title */}
+          <motion.h1
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ type: "spring", stiffness: 100, damping: 14, delay: 0.12 }}
+            className="font-[var(--font-bangers)] leading-[0.88] text-white mb-6 select-none"
             style={{
-              color: "#e8185a",
-              border: "1px solid rgba(232,24,90,0.4)",
-              padding: "0.35rem 1.2rem",
-              letterSpacing: "0.35em",
+              fontSize: "clamp(5rem, 16vw, 11rem)",
+              textShadow: "5px 5px 0 #e8185a, 10px 10px 0 rgba(232,24,90,0.12)",
             }}
           >
-            Un cómic original
-          </span>
-        </motion.div>
+            THE
+            <br />
+            BOYZ
+          </motion.h1>
 
-        {/* Title */}
-        <motion.h1
-          initial={{ opacity: 0, scale: 0.88 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ type: "spring", stiffness: 130, damping: 15, delay: 0.2 }}
-          className="font-[var(--font-bangers)] leading-[0.85] text-white mb-6 select-none"
-          style={{
-            fontSize: "clamp(5rem,18vw,13rem)",
-            textShadow: "5px 5px 0 #e8185a, 10px 10px 0 rgba(232,24,90,0.18)",
-          }}
-        >
-          THE<br />BOYZ
-        </motion.h1>
-
-        {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45 }}
-          className="font-[var(--font-marker)] text-xl sm:text-2xl mb-8"
-          style={{ color: "rgba(255,255,255,0.45)" }}
-        >
-          una historia basada en hechos reales
-        </motion.p>
-
-        {/* CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
-        >
-          <a href="#sagas" className="btn btn-magenta text-xl sm:text-2xl">
-            Empezá a leer →
-          </a>
-          <a
-            href="#sagas"
-            className="btn text-xl sm:text-2xl"
-            style={{
-              background: "transparent",
-              color: "white",
-              border: "2px solid rgba(255,255,255,0.2)",
-              boxShadow: "none",
-            }}
+          {/* tagline */}
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.38 }}
+            className="font-[var(--font-marker)] text-lg sm:text-xl mb-10"
+            style={{ color: "rgba(255,255,255,0.58)" }}
           >
-            Ver sagas
-          </a>
-        </motion.div>
+            una historia basada en hechos reales
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.54 }}
+            className="flex flex-row gap-3 flex-wrap"
+          >
+            <a href="#sagas" className="btn btn-magenta text-lg sm:text-xl px-7 py-3">
+              Empezá a leer →
+            </a>
+            <a
+              href="#sagas"
+              className="btn text-lg sm:text-xl px-7 py-3"
+              style={{
+                background: "transparent",
+                color: "white",
+                border: "2px solid rgba(255,255,255,0.22)",
+                boxShadow: "none",
+              }}
+            >
+              Ver sagas
+            </a>
+          </motion.div>
+        </div>
       </div>
 
-      {/* Bottom gradient into paper */}
+      {/* ── Infinite character marquee ── */}
+      <CharacterMarquee
+        characters={characters}
+        onSelect={setSelectedChar}
+      />
+
+      {/* ── Fade into paper ── */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-36 pointer-events-none"
+        className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none z-20"
         style={{ background: "linear-gradient(to bottom, transparent, #f4f0e6)" }}
       />
 
-      {/* Pop-up Character Modal */}
+      {/* ── Modal ── */}
       <AnimatePresence>
         {selectedChar && (
-          <CharacterModal 
-            char={selectedChar} 
-            onClose={() => setSelectedChar(null)} 
-          />
+          <CharacterModal char={selectedChar} onClose={() => setSelectedChar(null)} />
         )}
       </AnimatePresence>
     </section>
   );
 }
 
-function FloatingHeroCard({ 
-  src, 
-  alt, 
-  fallbackColor, 
-  className, 
-  initialX, 
-  initialRotate, 
-  animateRotate,
-  delay,
-  incognito,
-  onClick
-}: { 
-  src: string; 
-  alt: string; 
-  fallbackColor: string; 
-  className: string;
-  initialX: number;
-  initialRotate: number;
-  animateRotate: number;
-  delay: number;
-  incognito?: boolean;
-  onClick?: () => void;
+/* ─────────────────────────────────────────────────────────────
+   Infinite marquee strip
+───────────────────────────────────────────────────────────── */
+function CharacterMarquee({
+  characters,
+  onSelect,
+}: {
+  characters: any[];
+  onSelect: (c: any) => void;
 }) {
-  const [hasError, setHasError] = useState(false);
+  const controls = useAnimationControls();
+  const doubled = [...characters, ...characters];
 
-  // Offset float timings randomly
-  const floatDelay = Math.random() * -10;
+  // Start the marquee once mounted
+  useEffect(() => {
+    controls.start({
+      x: ["-0%", "-50%"],
+      transition: { ease: "linear", duration: 28, repeat: Infinity },
+    });
+  }, [controls]);
+
+  const pause  = () => controls.stop();
+  const resume = () =>
+    controls.start({
+      x: ["-0%", "-50%"],
+      transition: { ease: "linear", duration: 28, repeat: Infinity },
+    });
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: initialX, rotate: initialRotate }}
-      animate={{ 
-        opacity: 1, 
-        x: 0, 
-        rotate: [animateRotate - 1.5, animateRotate + 1.5, animateRotate - 1.5],
-        y: [-4, 4, -4]
-      }}
-      transition={{ 
-        opacity: { duration: 0.8, delay },
-        x: { type: "spring", stiffness: 80, damping: 15, delay },
-        rotate: {
-          repeat: Infinity,
-          repeatType: "mirror",
-          duration: 6 + Math.random() * 4,
-          ease: "easeInOut",
-          delay: floatDelay
-        },
-        y: {
-          repeat: Infinity,
-          repeatType: "mirror",
-          duration: 5 + Math.random() * 3,
-          ease: "easeInOut",
-          delay: floatDelay
-        }
-      }}
-      className={`absolute w-[75px] md:w-[120px] lg:w-[140px] xl:w-[170px] aspect-[4/5] overflow-hidden select-none pointer-events-auto cursor-pointer ${className}`}
+      initial={{ opacity: 0, y: 48 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.72, duration: 0.55 }}
+      className="relative z-10 w-full overflow-hidden pb-8 pt-4"
       style={{
-        border: "3px solid white",
-        boxShadow: `${hasError ? '2px 2px' : '4px 4px'} 0 ${fallbackColor}, 8px 8px 15px rgba(0,0,0,0.6)`,
-        background: incognito ? "#2a2a35" : "#13131e"
+        maskImage: "linear-gradient(to bottom, transparent 0%, black 25%)",
+        WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 25%)",
       }}
-      whileHover={{ 
-        scale: 1.1, 
-        rotate: animateRotate + (initialX > 0 ? 5 : -5), 
-        y: -12,
-        zIndex: 40, 
-        transition: { duration: 0.2 } 
+    >
+      <motion.div
+        animate={controls}
+        className="flex gap-3 sm:gap-4"
+        style={{ width: "max-content" }}
+      >
+        {doubled.map((char, i) => (
+          <CharCard
+            key={`${char.id}-${i}`}
+            char={char}
+            floatDelay={((i % characters.length) * 0.6) % 4}
+            onClick={() => onSelect(char)}
+          />
+        ))}
+      </motion.div>
+    </motion.div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Individual card with bob + tilt on hover
+───────────────────────────────────────────────────────────── */
+function CharCard({
+  char,
+  floatDelay,
+  onClick,
+}: {
+  char: any;
+  floatDelay: number;
+  onClick: () => void;
+}) {
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <motion.div
+      /* continuous vertical bob */
+      animate={{ y: [0, -8, 0] }}
+      transition={{
+        repeat: Infinity,
+        repeatType: "loop",
+        duration: 3.8,
+        ease: "easeInOut",
+        delay: floatDelay,
+      }}
+      className="flex-shrink-0 relative cursor-pointer overflow-hidden select-none"
+      style={{
+        width: "clamp(82px, 13vw, 140px)",
+        aspectRatio: "3/4",
+        border: "3px solid white",
+        boxShadow: `4px 4px 0 ${char.displayColor}, 6px 12px 22px rgba(0,0,0,0.6)`,
+        background: char.incognito ? "#1a1a25" : "#13131e",
+      }}
+      whileHover={{
+        scale: 1.14,
+        rotate: [-1.5, 1.5][Math.floor(Math.random() * 2)],
+        y: -16,
+        zIndex: 50,
+        boxShadow: `6px 6px 0 ${char.displayColor}, 10px 18px 28px rgba(0,0,0,0.75)`,
+        transition: { duration: 0.18 },
       }}
       onClick={onClick}
     >
-      {!hasError ? (
-        <>
-          {incognito ? (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="absolute inset-0 speed-lines opacity-20" />
-              <span 
-                className="font-[var(--font-bangers)] text-4xl md:text-8xl text-white opacity-30 select-none z-10"
-                style={{ textShadow: "2px 2px 0 #000" }}
-              >
-                ?
-              </span>
-              <img 
-                src={src} 
-                alt="Incógnito" 
-                className="absolute inset-0 w-full h-full object-cover object-[center_20%] opacity-20 grayscale blur-[4px]"
-                onError={() => setHasError(true)}
-              />
-              <div className="absolute inset-0 bg-black/40" />
-            </div>
-          ) : (
+      {/* image content */}
+      {char.incognito ? (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 speed-lines opacity-20" />
+          {!hasError && !!char.image && (
             <img
-              src={src}
-              alt={alt}
-              className="w-full h-full object-cover object-[center_20%]"
+              src={char.image}
+              alt="?"
+              className="absolute inset-0 w-full h-full object-cover object-[center_15%] opacity-15 grayscale blur-[3px]"
               onError={() => setHasError(true)}
             />
           )}
-          
-          {/* Halftone overlay */}
-          <div 
-            className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-20"
-            style={{
-              backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
-              backgroundSize: "4px 4px",
-            }}
-          />
-        </>
-      ) : (
-        <div className="absolute inset-0 flex flex-col items-center justify-center p-3 text-center">
-          <div className="absolute inset-0 speed-lines opacity-[0.15]" />
-          <span 
-            className="font-[var(--font-bangers)] text-6xl text-white mb-1 leading-none select-none"
-            style={{ textShadow: `3px 3px 0 ${fallbackColor}` }}
+          <div className="absolute inset-0 bg-black/50" />
+          <span
+            className="font-[var(--font-bangers)] text-5xl text-white opacity-25 z-10 select-none"
+            style={{ textShadow: "2px 2px 0 #000" }}
           >
             ?
           </span>
+        </div>
+      ) : hasError || !char.image ? (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span
+            className="font-[var(--font-bangers)] text-5xl text-white opacity-30"
+            style={{ textShadow: `3px 3px 0 ${char.displayColor}` }}
+          >
+            ?
+          </span>
+        </div>
+      ) : (
+        <img
+          src={char.image}
+          alt={char.displayName}
+          className="w-full h-full object-cover object-[center_15%]"
+          onError={() => setHasError(true)}
+        />
+      )}
+
+      {/* halftone overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-15"
+        style={{
+          backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+          backgroundSize: "4px 4px",
+        }}
+      />
+
+      {/* name label */}
+      {!char.incognito && (
+        <div
+          className="absolute bottom-0 left-0 right-0 py-1 text-center font-[var(--font-bangers)] text-[11px] tracking-wider truncate px-1"
+          style={{ background: char.displayColor, color: "#fff" }}
+        >
+          {char.displayName}
         </div>
       )}
     </motion.div>

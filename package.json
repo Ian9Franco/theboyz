@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "compress": "node convert-to-webp.js --delete",
+    "compress:preview": "node convert-to-webp.js --dry-run"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -15,6 +17,7 @@
     "next": "16.2.7",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "sharp": "^0.34.5",
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
