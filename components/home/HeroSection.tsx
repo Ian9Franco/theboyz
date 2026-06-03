@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
+import { motion, AnimatePresence, useMotionValue, useAnimationFrame, useTransform } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import { getComputedCharacters } from "@/lib/characterData";
 import { CharacterModal } from "./CharacterModal";
@@ -151,24 +151,74 @@ function CharacterMarquee({
   characters: any[];
   onSelect: (c: any) => void;
 }) {
-  const controls = useAnimationControls();
   const carouselRef = useRef<HTMLDivElement>(null);
-  const doubled = [...characters, ...characters];
+  const firstHalfRef = useRef<HTMLDivElement>(null);
 
-  // Start the marquee once mounted
+  const dragX = useMotionValue(0);
+  const isInteracting = useRef(false);
+  const isDraggingRef = useRef(false);
+  const timeoutRef = useRef<any>(null);
+  const [halfWidth, setHalfWidth] = useState(0);
+
+  // Measure the width of half of the doubled marquee (using first half + its padding/gap)
   useEffect(() => {
-    controls.start({
-      x: ["-0%", "-50%"],
-      transition: { ease: "linear", duration: 28, repeat: Infinity },
+    if (!firstHalfRef.current) return;
+    const observer = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        setHalfWidth(entry.contentRect.width);
+      }
     });
-  }, [controls]);
+    observer.observe(firstHalfRef.current);
+    return () => observer.disconnect();
+  }, []);
 
-  const pause  = () => controls.stop();
-  const resume = () =>
-    controls.start({
-      x: ["-0%", "-50%"],
-      transition: { ease: "linear", duration: 28, repeat: Infinity },
-    });
+  // Wrap function to wrap the value in [-max, 0] range
+  const wrap = (val: number, max: number) => {
+    if (max === 0) return 0;
+    const remainder = val % max;
+    return remainder > 0 ? remainder - max : remainder;
+  };
+
+  // Transform to compute the offset translation to offset the parent dragX movement
+  const xOffset = useTransform(dragX, (latest) => wrap(latest, halfWidth) - latest);
+
+  // Frame animation loop
+  useAnimationFrame((time, delta) => {
+    if (isInteracting.current || halfWidth === 0) return;
+    // Speed is 0.04 pixels per millisecond (approx 2.4 pixels per frame at 60fps)
+    const speed = 0.04;
+    dragX.set(dragX.get() - speed * delta);
+  });
+
+  // Wheel horizontal scroll support
+  useEffect(() => {
+    const el = carouselRef.current;
+    if (!el) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      // If we are scrolling diagonally/horizontally, or vertically, we convert to horizontal marquee movement
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (delta === 0) return;
+
+      e.preventDefault();
+      isInteracting.current = true;
+
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+      dragX.set(dragX.get() - delta * 0.6); // Adjust wheel scrolling speed
+
+      // Resume auto scroll after 1.5 seconds of no wheel input
+      timeoutRef.current = setTimeout(() => {
+        isInteracting.current = false;
+      }, 1500);
+    };
+
+    el.addEventListener("wheel", handleWheel, { passive: false });
+    return () => {
+      el.removeEventListener("wheel", handleWheel);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [dragX]);
 
   return (
     <motion.div
@@ -183,23 +233,63 @@ function CharacterMarquee({
       ref={carouselRef}
     >
       <motion.div
-        animate={controls}
         drag="x"
-        dragConstraints={carouselRef}
-        onHoverStart={pause}
-        onHoverEnd={resume}
-        onPanStart={pause}
-        onPanEnd={resume}
-        className="flex gap-3 sm:gap-4 w-max"
+        style={{ x: dragX, width: "max-content" }}
+        dragMomentum={true}
+        onDragStart={() => {
+          isInteracting.current = true;
+          isDraggingRef.current = true;
+        }}
+        onDragEnd={() => {
+          isInteracting.current = false;
+          // Short delay to prevent misinterpreting drag release as a click
+          setTimeout(() => {
+            isDraggingRef.current = false;
+          }, 80);
+        }}
+        onHoverStart={() => {
+          isInteracting.current = true;
+        }}
+        onHoverEnd={() => {
+          // Only resume if we are not dragging/scrolling
+          if (!isDraggingRef.current) {
+            isInteracting.current = false;
+          }
+        }}
+        className="flex"
       >
-        {doubled.map((char, i) => (
-          <CharCard
-            key={`${char.id}-${i}`}
-            char={char}
-            floatDelay={((i % characters.length) * 0.6) % 4}
-            onClick={() => onSelect(char)}
-          />
-        ))}
+        <motion.div style={{ x: xOffset }} className="flex">
+          {/* First Half */}
+          <div ref={firstHalfRef} className="flex gap-3 sm:gap-4 pr-3 sm:pr-4">
+            {characters.map((char, i) => (
+              <CharCard
+                key={`${char.id}-0-${i}`}
+                char={char}
+                floatDelay={((i % characters.length) * 0.6) % 4}
+                onClick={() => {
+                  if (!isDraggingRef.current) {
+                    onSelect(char);
+                  }
+                }}
+              />
+            ))}
+          </div>
+          {/* Second Half */}
+          <div className="flex gap-3 sm:gap-4 pr-3 sm:pr-4">
+            {characters.map((char, i) => (
+              <CharCard
+                key={`${char.id}-1-${i}`}
+                char={char}
+                floatDelay={((i % characters.length) * 0.6) % 4}
+                onClick={() => {
+                  if (!isDraggingRef.current) {
+                    onSelect(char);
+                  }
+                }}
+              />
+            ))}
+          </div>
+        </motion.div>
       </motion.div>
     </motion.div>
   );

@@ -3,17 +3,16 @@
 export function NewsTicker({ sagas }: { sagas: any[] }) {
   // Extract all chapter titles to scroll, or generic titles if empty
   const items = sagas.flatMap((saga) =>
-    saga.chapters.map((ch: any) => `${ch.title.toUpperCase()} (#${ch.number})`)
+    saga.chapters.map((ch: any) => `${saga.title.toUpperCase()} - ${ch.title.toUpperCase()} (#${ch.number})`)
   );
 
-  const fallbackItems = [
-    "THE GREEN TRUCK CHRONICLES",
-    "SLEEPING WITH THE FISHES",
-    "NO TURNING BACK",
-    "MATIVERSE — CHAPTER ONE",
+  const loadingItems = [
+    "CARGANDO ÚLTIMAS NOVEDADES...",
+    "PREPARATE PIBE...",
+    "THE BOYZ COMIX...",
   ];
 
-  const scrollItems = items.length > 0 ? items : fallbackItems;
+  const scrollItems = items.length > 0 ? items : loadingItems;
   // Duplicate array to ensure seamless infinite scroll loop
   const list = [...scrollItems, ...scrollItems, ...scrollItems];
 

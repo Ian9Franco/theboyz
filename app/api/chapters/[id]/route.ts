@@ -3,6 +3,8 @@ import { getDynamicSagas, parsePrefix } from "@/lib/serverData";
 import fs from "fs";
 import path from "path";
 
+export const dynamic = "force-dynamic";
+
 const SUPPORTED_FORMATS = [".jpg", ".jpeg", ".png", ".webp", ".gif"];
 
 export async function GET(

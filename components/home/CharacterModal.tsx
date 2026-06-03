@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Zap, ZapOff } from "lucide-react";
 
 export function CharacterModal({ char, onClose }: { char: any; onClose: () => void }) {
   const [showAlt, setShowAlt] = useState(false);
@@ -228,13 +229,23 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
               <div className="pt-2 mt-auto pb-2 sm:pb-0">
                 <button
                   onClick={() => setIsPowersMode(!isPowersMode)}
-                  className={`w-full py-3 sm:py-2 border-3 border-black font-[var(--font-bangers)] text-sm sm:text-base tracking-wider uppercase shadow-[3px_3px_0_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#000] transition-all ${
+                  className={`w-full py-3 sm:py-2 border-3 border-black font-[var(--font-bangers)] text-sm sm:text-base tracking-wider uppercase shadow-[3px_3px_0_#000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#000] transition-all flex items-center justify-center gap-2 ${
                     isPowersMode
                       ? "bg-yellow-400 text-black hover:bg-yellow-300"
                       : "bg-[#e8185a] text-white hover:bg-[#c8134d]"
                   }`}
                 >
-                  {isPowersMode ? "⚡ MODO CÓMIC ACTIVO" : "🔓 VER PODERES"}
+                  {isPowersMode ? (
+                    <>
+                      <ZapOff className="w-5 h-5 shrink-0" />
+                      <span>MODO CÓMIC ACTIVO</span>
+                    </>
+                  ) : (
+                    <>
+                      <Zap className="w-5 h-5 shrink-0 fill-current" />
+                      <span>VER PODERES</span>
+                    </>
+                  )}
                 </button>
               </div>
             </>
