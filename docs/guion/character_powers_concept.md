@@ -6,7 +6,7 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
 
 ## 👥 Fichas de Habilidades por Personaje (Los Pibes - Núcleo)
 
-### 1. Ian — "Vesperwing" (El Analista de Sistemas)
+### 1. Ian — "Vesperwing" 
 *   **Rol en el Roster:** Analista táctico / inventor estratégico.
 *   **Poder Principal:** *Visión de Sistemas.*
     *   Ian percibe patrones, relaciones y puntos críticos con una precisión sobrehumana. Su mente analiza constantemente personas, estructuras y situaciones, permitiéndole visualizar posibles resultados y oportunidades.
@@ -23,6 +23,7 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
     *   Cree que todo problema tiene una solución si se comprende correctamente el sistema detrás de él. Mientras otros observan eventos aislados, él observa conexiones; mientras otros reaccionan, él planifica.
 *   **Potencial de Evolución (Vesper Frame):**
     *   Con el tiempo, Ian integra todas sus herramientas en el *Vesper Frame*, un exotraje modular que le otorga movilidad aérea, planeo asistido y la gestión de drones autónomos de soporte. Su mayor peligro es la posibilidad de convencerse de que él sabe qué es lo mejor para todos.
+*   **Movilidad:** Usa una pistola de ganchos (hooks) y planea con su capa. Si usa el traje completo, es capaz de volar.
 *   **Estética Visual:** Interfaces holográficas verde oscuro, wireframes dinámicos, diagramas flotantes, líneas vectoriales verde oscuro proyectadas sobre el entorno y tecnología modular diseñada por él mismo.
 
 ### 2. Jaz — "Oracle" (El Ancla de la Realidad)
@@ -39,6 +40,7 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
     *   Bajo estrés extremo o al canalizar demasiado poder, puede abrir grietas hacia otras dimensiones. Estas brechas son inestables y peligrosas, incluso para ella.
 *   **Herramientas y Equipo:** *Telequinesis, Proyección Astral y Visiones Dimensionales.*
     *   Canaliza su energía psíquica para manipular objetos a distancia, proyectar su conciencia fuera del cuerpo y predecir distorsiones.
+*   **Movilidad:** Vuelo natural. No vuela a la velocidad del sonido, pero sí a la velocidad de un avión comercial.
 *   **Estética Visual:** Cristales amarillos/dorados flotantes, humo dorado/amarillo luminoso, geometrías sagradas translúcidas y ojos completamente amarillos/dorados cuando usa sus poderes.
 
 ### 3. Julián — "Wildcard" (El Espejismo Táctico)
@@ -47,12 +49,13 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
     *   Genera hasta tres duplicados semisólidos de sí mismo. Los clones pueden correr, hablar e interactuar de forma limitada, pero no pueden causar daño significativo.
 *   **Habilidad Secundaria:** *Punto Ciego.*
     *   Puede hacer que una persona ignore temporalmente su presencia. No es invisibilidad, sino una alteración perceptiva que provoca que el cerebro deje de prestarle atención.
-*   **Limitación:**
-    *   Cuantas más personas lo observen simultáneamente, más difícil resulta mantener el efecto.
+*   **Limitación (Detonación por Verdad):**
+    *   Sus duplicados son inestables ante la verdad. Dado que sus clones pueden hablar, en el momento en que dicen una verdad absoluta, explotan violentamente (lo que sirve como detonador táctico).
 *   **Rasgo Especial:** *Verdad Innegable.*
     *   Cuando Julián habla con absoluta sinceridad, sus palabras adquieren un peso psicológico anormal, pudiendo romper ilusiones, interrumpir manipulaciones mentales y obligar a escuchar.
 *   **Herramientas y Equipo:** *Cartas Ilusorias y Clones.*
     *   Utiliza cartas de baraja cargadas de interferencia y duplicados proyectados para confundir al oponente en combates cercanos.
+*   **Movilidad:** No vuela, pero escala fácilmente cualquier superficie.
 *   **Estética Visual:** Tramas de cómic, estática azul oscuro y efectos halftone que se desintegran en el aire.
 
 ### 4. Uandi — "Aegis" (La Batería Cinética)
@@ -67,6 +70,7 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
     *   No depende de armas complejas, utilizando sus propios puños reforzados cinéticamente y su imponente físico como escudo humano.
 *   **Potencial de Evolución:**
     *   Solidificación de extremidades: Es capaz de solidificar sus brazos transmutándolos temporalmente en un metal extremadamente poderoso e indestructible, lo que le permite desviar proyectiles pesados y golpear con fuerza física colosal de demolición.
+*   **Movilidad:** No vuela, pero realiza súper saltos de gran altura y distancia al estilo de Hulk.
 *   **Estética Visual:** Runas incandescentes de color rojo fuego/brasa recorriendo todo su cuerpo y emisión de vapor caliente cuando su batería cinética está al máximo.
 
 ### 5. Volvo — "Null-Vector" (El Disruptor de Sistemas)
@@ -79,6 +83,7 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
     *   Necesita una ruta física o energética para realizar el desplazamiento.
 *   **Herramientas y Equipo:** *Guantes Eléctricos y Blink Agresivo.*
     *   Usa guantes cargados especialmente diseñados para canalizar cortocircuitos eléctricos directamente al contacto con cables o terminales enemigos.
+*   **Movilidad:** Vuelo natural. Entre más sobrecargado de energía está, más rápido vuela y más destructivo es su paso, por lo que debe tener mucho cuidado.
 *   **Estética Visual:** Arcos eléctricos naranja recorren sus brazos y ojos de brillo naranja intenso.
 
 ### 6. Sofi — "Hush" (La Vanguardia Acústica)
@@ -96,6 +101,7 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
 *   **Estilo de Combate:**
     *   Sofi rara vez bloquea ataques; prefiere anticiparlos y esquivarlos utilizando la información de su Mapa Resonante, haciendo que su forma de pelear parezca casi sobrenatural.
 *   **Herramientas y Equipo:** *Katanas Resonantes y Sensores de Percepción Sónica.*
+*   **Movilidad:** No vuela. Usa una pistola de hooks, propulsores sónicos y también escala fácilmente.
 *   **Estética Visual:** Ondas cian brillante deformando el aire, líneas de vibración cian visibles alrededor de sus armas, ecos luminosos cian que revelan brevemente el entorno y ojos enfocados en cian incluso en completa oscuridad.
 
 ### 7. Mati — "Swapfire" (El Controlador del Tablero)
@@ -108,6 +114,7 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
     *   Extremadamente versátil sin resultar dominante en términos de fuerza bruta.
 *   **Herramientas y Equipo:** *Dagas de Marcado.*
     *   Dagas arrojadizas especiales que sirven como anclajes físicos o marcas visuales para realizar intercambios tácticos instantáneos a distancia.
+*   **Movilidad:** No vuela, pero utiliza su habilidad para aparecer instantáneamente donde le plazca.
 *   **Estética Visual:** Destellos púrpuras y líneas geométricas que conectan ambos puntos antes de realizar el intercambio.
 
 ---

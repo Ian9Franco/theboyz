@@ -61,7 +61,9 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
   }, []);
 
   const isLocked = char.incognito && !unlockAll;
-  const currentImage = showAlt && char.altImage ? char.altImage : (char.fullBody || char.image);
+  const currentImage = isPowersMode && char.overloadImage
+    ? char.overloadImage
+    : (showAlt && char.altImage ? char.altImage : (char.fullBody || char.image));
   const accent = isLocked ? "#6b7280" : char.color;
   const vibrantAccent = getVibrantColor(accent);
   const darkBg = getDarkBgColor(accent);
@@ -243,8 +245,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                 </h4>
                 <ul className="font-sans text-xs leading-relaxed flex flex-col gap-1 pl-3 list-disc list-outside">
                   {(isPowersMode ? char.powers?.habilidades : char.perfil)
-                    ?.slice(0, 3)
-                    .map((item: string, idx: number) => (
+                    ?.map((item: string, idx: number) => (
                       <li key={idx}>{item}</li>
                     ))}
                 </ul>
