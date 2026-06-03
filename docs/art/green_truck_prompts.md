@@ -16,8 +16,8 @@ Esta guía contiene prompts atómicos para cada viñeta, listos para pegar en Mi
 ---
 
 ## 👥 Coherencia de Personajes
-*   **Ian:** `Ian, a 22-year-old young man, round black-rimmed glasses, neatly styled textured dark brown wavy hair, wearing a dark charcoal grey pullover hoodie.`
-*   **Jaz:** `Jaz, a 22-year-old young woman, clear-rimmed cat-eye glasses, long straight sunset-gold ombre hair, wearing a black long-sleeve turtleneck shirt.`
+*   **Ian:** `Ian, a 26-year-old young man, round black-rimmed glasses, neatly styled textured dark brown wavy hair, wearing a dark charcoal grey pullover hoodie.`
+*   **Jaz:** `Jaz, a 25-year-old young woman, clear-rimmed cat-eye glasses, long straight sunset-gold ombre hair, wearing a black long-sleeve turtleneck shirt.`
 *   **Julián:** `Julián, a 26-year-old man, short curly black hair, neat black beard, wearing a dark navy crewneck sweater.`
 *   **Supertrucker:** `Supertrucker, a superhero with a body made of polished reflective chrome metal, wearing a red canvas cape and a chrome trucker cap.`
 *   **Uandi:** `Uandi, a 25-year-old muscular man, round wire-framed glasses, curly dark brown hair, left arm covered in black ink tribal sleeve tattoo, wearing a tight dark grey compression t-shirt.`
@@ -97,14 +97,23 @@ Esta guía contiene prompts atómicos para cada viñeta, listos para pegar en Mi
 ### PÁGINA 3
 > 👥 **Personajes en esta página:** Oficial de Policía, Oficial con Bigote, Ian, Jaz
 
-*   **Viñeta 1 (Panel 1):**
-    `Police office. A female officer sits at a desk talking on a phone, sweating and looking extremely nervous while staring at a computer screen. --ar 3:4`
-*   **Viñeta 2 (Panel 2):**
-    `Exterior, daytime. A yellow flatbed tow truck is towing the green pickup truck. A sleazy police officer with a mustache and sunglasses gives a fake thumbs-up. --ar 9:16`
-*   **Viñeta 3 (Panel 3):**
-    `Interior police patrol car. A mustache officer is driving with a smug smile. Ian sits in the passenger seat with arms crossed, giving a cold glare. --ar 3:4`
-*   **Viñeta 4 (Panel 4):**
-    `Interior of the green pickup truck cabin while being towed. Jaz is holding the steering wheel, looking frustrated and angry. --ar 3:4`
+* **Viñeta 1 (Panel 1):**
+`Police office. The same dark-haired female officer from previous scenes sits at her desk talking nervously on the phone. Sweat runs down her face as she stares at a computer screen displaying reports and vehicle records. She looks panicked because the situation is spiraling out of control. Comic book style, dramatic lighting. --ar 3:4`
+
+* **Viñeta 2 (Panel 2):**
+`Daytime. A heavily damaged green pickup truck is being transported toward town. The truck is missing its battery and several engine components. A corrupt mustached police officer is driving the pickup itself while Jaz sits in the passenger seat, visibly furious and unconvinced. Behind them, a police cruiser follows closely, escorting the vehicle. The officer driving the pickup is smiling and gesturing as if everything is normal. Comic book style. --ar 9:16`
+
+* **Viñeta 3 (Panel 3):**
+`Interior of the police cruiser following behind the damaged pickup truck. Another mustached police officer is driving. Ian sits in the passenger seat with crossed arms and an icy glare. The officer is talking with a fake reassuring smile, trying to convince Ian that everything was just a misunderstanding and a simple mistake. Ian clearly does not believe a single word. Comic book style. --ar 3:4`
+
+* **Viñeta 4 (Panel 4):**
+`Interior of the damaged green pickup truck while moving. Jaz sits in the passenger seat staring angrily at the corrupt officer driving her vehicle. Through the windshield, the truck's condition is obvious: warning lights are on, dashboard panels are missing, and the vehicle looks abused. The officer is smiling awkwardly while attempting to downplay what happened. Jaz is visibly furious. Comic book style. --ar 3:4`
+
+* **Viñeta 5 (Panel 5):**
+`Exterior suburban house. Ian's Mother has already arrived home and stands on the front porch with crossed arms, waiting impatiently. In the distance, the damaged green pickup truck and the police cruiser are approaching together. She already suspects something is very wrong. Comic book style, cinematic framing. --ar 3:4`
+
+* **Viñeta 6 (Panel 6):**
+`Wide shot. The damaged green pickup truck finally arrives in front of the house. Missing battery, missing engine components, open hood, parts absent from the engine bay. The corrupt officer and the patrol officer are both trying to explain the situation with forced smiles and nervous body language. Jaz is yelling angrily. Ian looks furious. Ian's Mother stands on the porch with a deadly glare. The officers are clearly attempting to manipulate the story and claim everything was an innocent mistake, but nobody believes them. Comic book style, strong character acting, dramatic tension. --ar 9:16`
 
 ### PÁGINA 4 (Página Única / Splash Page)
 > 👥 **Personajes en esta página:** Jaz, Oficial de Policía, Ian

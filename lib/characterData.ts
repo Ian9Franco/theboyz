@@ -27,6 +27,7 @@ export const CHARACTER_DETAILS = [
         'Café-Overdrive: Ralentiza el flujo del tiempo al asimilar cafeína pura.',
         'Visión de Código: Percibe el entorno como una rejilla tridimensional con puntos de fallo.',
       ],
+      significa: 'En combate es intocable y sabe exactamente dónde golpear, pero su cerebro procesa tanta información que se funde en segundos.',
       crisis: 'Al terminar la sobrecarga sufre migraña cuántica severa y ceguera de vectores.',
       stats: { fuerza: 5, inteligencia: 10, carisma: 8, suerte: 8, combate: 8, defensa: 7, especialVal: 10 },
     },
@@ -54,6 +55,7 @@ export const CHARACTER_DETAILS = [
         'Anclaje Multiversal: Estabiliza materia y portales que sufren glitches.',
         'Resonancia Emocional: Proyecta impulsos telepáticos de pánico o calma absoluta.',
       ],
+      significa: 'Funciona como el soporte definitivo del equipo, capaz de protegerlos de peligros físicos y anomalías dimensionales.',
       crisis: 'Pérdida temporal de la conciencia tridimensional, quedando suspendida en el vacío.',
       stats: { fuerza: 5, inteligencia: 9, carisma: 9, suerte: 10, combate: 7, defensa: 10, especialVal: 10 },
     },
@@ -83,6 +85,7 @@ export const CHARACTER_DETAILS = [
         'Invisibilidad Cognitiva: Borra su presencia de la atención consciente de los rivales.',
         'Onda del Sinceramiento: Confesar una verdad genuina libera una onda de choque destructiva.',
       ],
+      significa: 'Es el rey de la distracción y el sigilo, ideal para infiltraciones y ataques sorpresa sin ser detectado.',
       crisis: 'Cualquier mentira menor provoca que sus clones exploten en estática amarilla dañina.',
       stats: { fuerza: 7, inteligencia: 8, carisma: 9, suerte: 9, combate: 9, defensa: 7, especialVal: 9 },
     },
@@ -112,6 +115,7 @@ export const CHARACTER_DETAILS = [
         'Control de Nexo: Hackea y redirige flujos de portales usando el núcleo robado.',
         'Repulsión Orbital: Crea una barrera cinética que repele proyectiles pesados.',
       ],
+      significa: 'Controla el campo de batalla a nivel físico y dimensional, pudiendo desviar cualquier ataque y reposicionar aliados o enemigos a voluntad.',
       crisis: 'La corrupción del nexo anula su empatía, volviéndolo tiránico.',
       stats: { fuerza: 9, inteligencia: 10, carisma: 8, suerte: 7, combate: 10, defensa: 9, especialVal: 10 },
     },
@@ -142,6 +146,7 @@ export const CHARACTER_DETAILS = [
         'Liberación Terrestre: Redirige la energía absorbida en pisotones y golpes sísmicos.',
         'Estructura de Cromo: Endurece sus músculos para soportar toneladas de presión directa.',
       ],
+      significa: 'El escudo humano absoluto: acumula el daño de impactos para devolverlo con golpes sísmicos devastadores.',
       crisis: 'Si almacena energía de más, sus tatuajes emiten vapor hirviendo y le queman la piel.',
       stats: { fuerza: 10, inteligencia: 6, carisma: 8, suerte: 7, combate: 9, defensa: 10, especialVal: 10 },
     },
@@ -167,10 +172,11 @@ export const CHARACTER_DETAILS = [
     powers: {
       role: 'Null-Vector / El Disruptor Quántico',
       habilidades: [
-        'Disrupción Tecno-Orgánica: Inhabilita portales, armas y superpoderes en 10 metros.',
+        'Disrupción Tecno-Orgánica: Inhabilita portales, armas and superpoderes en 10 metros.',
         'Blink Eléctrico: Micro-teleportación instantánea usando campos electromagnéticos.',
         'Cortocircuito Dinámico: Provoca sobrecargas masivas en trajes o implantes tácticos.',
       ],
+      significa: 'El desactivador táctico: apaga portales y superpoderes enemigos a su alrededor mientras parpadea por el campo.',
       crisis: 'Libera estallidos de energía cian descontrolada que aturden a sus propios compañeros.',
       stats: { fuerza: 7, inteligencia: 8, carisma: 5, suerte: 9, combate: 8, defensa: 8, especialVal: 9 },
     },
@@ -201,6 +207,7 @@ export const CHARACTER_DETAILS = [
         'Proyección Ultrasónica: Gritos sónicos hiperenfocados capaces de triturar metal.',
         'Burbuja de Vacío: Silencia el entorno por completo en misiones de infiltración extrema.',
       ],
+      significa: 'La vanguardia sónica: detecta enemigos ocultos tras muros y tritura blindajes con gritos acústicos dirigidos.',
       crisis: 'Sufre migrañas acústicas y desorientación si hay ruidos de alta frecuencia.',
       stats: { fuerza: 8, inteligencia: 8, carisma: 8, suerte: 8, combate: 9, defensa: 9, especialVal: 9 },
     },
@@ -231,6 +238,7 @@ export const CHARACTER_DETAILS = [
         'Lazos del Destino: Visualiza y altera hilos de probabilidad para forzar colisiones fortuitas.',
         'Inversión de Causalidad: Cuanto más planeado esté un ataque en su contra, más falla.',
       ],
+      significa: 'La reina del caos fortuito: altera la probabilidad para que los planes enemigos les exploten en la cara.',
       crisis: 'Si intenta alterar algo extremadamente improbable, la mala suerte le rebota directo.',
       stats: { fuerza: 7, inteligencia: 10, carisma: 8, suerte: 10, combate: 8, defensa: 7, especialVal: 10 },
     },
@@ -261,6 +269,7 @@ export const CHARACTER_DETAILS = [
         'Llave de Plasma: Pesada llave cruz de plasma que corta vehículos militares enemigos.',
         'Mega-Transporter: Invoca un gigantesco camión semirremolque con cañones repulsores.',
       ],
+      significa: 'Tanque pesado motorizado: invoca un camión semirremolque con cañones y embiste con fuerza descomunal.',
       crisis: 'La obsesión por el mantenimiento preventivo lo distrae ante tácticas psicológicas.',
       stats: { fuerza: 10, inteligencia: 5, carisma: 8, suerte: 7, combate: 9, defensa: 10, especialVal: 10 },
     },
@@ -291,6 +300,7 @@ export const CHARACTER_DETAILS = [
         'Modificación Cuántica: Transmuta componentes comunes en portales portátiles estables.',
         'Ocular Analítico: Detecta vulnerabilidades y fallas estructurales invisibles al ojo humano.',
       ],
+      significa: 'El armero dimensional: analiza y altera la materia cuántica para crear portales estables sobre la marcha.',
       crisis: 'Su visor sufre interferencia cuántica, dejándolo temporalmente ciego al espectro EM.',
       stats: { fuerza: 4, inteligencia: 10, carisma: 6, suerte: 8, combate: 3, defensa: 6, especialVal: 10 },
     },
@@ -321,6 +331,7 @@ export const CHARACTER_DETAILS = [
         'Escudo Gravedad: Escudo antidisturbios pesado que devuelve los disparos en ondas repulsoras.',
         'Fase Glitch: Su traje le permite atravesar paredes sólidas desmaterializándose temporalmente.',
       ],
+      significa: 'Jefe táctico de control: inmoviliza amenazas con redes de estasis y atraviesa obstáculos desfasando su traje.',
       crisis: 'Cualquier fallo de red satelital o desorden no planificado deshabilita su escudo.',
       stats: { fuerza: 8, inteligencia: 9, carisma: 6, suerte: 5, combate: 10, defensa: 10, especialVal: 9 },
     },
@@ -355,7 +366,7 @@ const UNLOCK_RULES: Record<string, string[]> = {
   matapobre:   ['worlds'],
 };
 
-export function getComputedCharacters(readChapters: string[], isClient: boolean) {
+export function getComputedCharacters(readChapters: string[], isClient: boolean, unlockAll: boolean = false) {
   const normalizedRead = readChapters.map(id => id.toLowerCase().trim());
 
   const hasRead = (chapterId: string) =>
@@ -375,7 +386,7 @@ export function getComputedCharacters(readChapters: string[], isClient: boolean)
 
     const rules = UNLOCK_RULES[char.id];
     const alwaysUnlocked = rules !== undefined && rules.length === 0;
-    const unlocked = alwaysUnlocked || (rules?.some(hasRead) ?? false);
+    const unlocked = unlockAll || alwaysUnlocked || (rules?.some(hasRead) ?? false);
 
     return {
       ...char,

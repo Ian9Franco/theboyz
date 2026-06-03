@@ -8,14 +8,28 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
   const [showAlt, setShowAlt] = useState(false);
   const [isPowersMode, setIsPowersMode] = useState(false);
   const [imgFullscreen, setImgFullscreen] = useState(false);
+  const [unlockAll, setUnlockAll] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = ""; };
+    
+    const val = localStorage.getItem("unlock-all") === "true";
+    setUnlockAll(val);
+
+    const checkUnlock = () => {
+      setUnlockAll(localStorage.getItem("unlock-all") === "true");
+    };
+    window.addEventListener("unlockAllChanged", checkUnlock);
+
+    return () => { 
+      document.body.style.overflow = ""; 
+      window.removeEventListener("unlockAllChanged", checkUnlock);
+    };
   }, []);
 
+  const isLocked = char.incognito && !unlockAll;
   const currentImage = showAlt && char.altImage ? char.altImage : (char.fullBody || char.image);
-  const accent = char.incognito ? "#6b7280" : char.displayColor;
+  const accent = isLocked ? "#6b7280" : char.color;
   const stats = isPowersMode ? char.powers?.stats : char.stats;
   const statRows = [
     { name: "Fuerza",   val: stats?.fuerza ?? 0 },
@@ -82,7 +96,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
             }
           `}</style>
           <div className="modal-img-panel absolute inset-0 flex items-end justify-center overflow-hidden">
-            {char.incognito ? (
+            {isLocked ? (
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="absolute inset-0 speed-lines opacity-20" />
                 <span className="font-[var(--font-bangers)] text-9xl text-white opacity-20 select-none z-10">?</span>
@@ -95,7 +109,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
             ) : currentImage ? (
               <img
                 src={currentImage}
-                alt={char.displayName}
+                alt={isLocked ? "PRÓXIMAMENTE" : char.name}
                 title="Click para ver completo"
                 onClick={() => setImgFullscreen(true)}
                 className={`w-full h-full object-contain object-center sm:object-bottom p-1 sm:p-2 lg:p-4 drop-shadow-[4px_4px_0_rgba(0,0,0,0.2)] transition-all duration-500 cursor-zoom-in ${
@@ -115,7 +129,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
           </div>
 
           {/* alt toggle */}
-          {char.altImage && !char.incognito && (
+          {char.altImage && !isLocked && (
             <button
               onClick={() => setShowAlt(!showAlt)}
               className="absolute bottom-2 left-2 z-20 px-2 py-1 border-2 border-black bg-yellow-400 hover:bg-yellow-300 font-[var(--font-bangers)] text-[10px] tracking-wider uppercase shadow-[2px_2px_0_#000] transition-all"
@@ -134,7 +148,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
             isPowersMode ? "bg-[#0f172a] text-slate-100" : "bg-white text-[#0a0a0f]"
           }`}
         >
-          {char.incognito ? (
+          {isLocked ? (
             /* ── locked ── */
             <div className="flex-1 flex flex-col items-center justify-center text-center gap-3">
               <div className="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center border-2 border-black">
@@ -160,12 +174,15 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                   {isPowersMode ? char.powers?.role : char.role}
                 </span>
                 <h2
-                  className="font-[var(--font-bangers)] text-4xl sm:text-5xl leading-none tracking-widest"
+                  className="font-[var(--font-bangers)] text-4xl sm:text-5xl leading-none tracking-widest flex flex-wrap items-baseline gap-x-2"
                   style={{ textShadow: isPowersMode ? "3px 3px 0 #000" : `2px 2px 0 ${accent}` }}
                 >
-                  {isPowersMode
-                    ? `${char.name.toUpperCase()} (${char.powers?.role?.split(" / ")[0]})`
-                    : char.name.toUpperCase()}
+                  <span>{char.name.toUpperCase()}</span>
+                  {isPowersMode && char.powers?.role && (
+                    <span className="text-[#f5e642] text-xl sm:text-2xl font-[var(--font-marker)] tracking-normal normal-case block sm:inline">
+                      AKA: {char.powers.role.split(" / ")[0].toUpperCase()}
+                    </span>
+                  )}
                 </h2>
               </div>
 
@@ -182,6 +199,25 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                     ))}
                 </ul>
               </div>
+
+              {/* ── significa banner ── */}
+              {isPowersMode && char.powers?.significa && (
+                <div
+                  className="p-3 border-2 border-[#f5e642] relative bg-[#13131e] mt-2 mb-1"
+                  style={{
+                    boxShadow: "3px 3px 0 #f5e642",
+                  }}
+                >
+                  <span
+                    className="font-[var(--font-marker)] text-[10px] uppercase text-[#0a0a0f] bg-[#f5e642] px-2 py-0.5 border border-[#0a0a0f] absolute -top-3 left-3 rotate-[-1deg]"
+                  >
+                    SIGNIFICA:
+                  </span>
+                  <p className="font-sans text-[11px] leading-snug text-white mt-1">
+                    {char.powers.significa}
+                  </p>
+                </div>
+              )}
 
               {/* ── crisis ── */}
               <div
@@ -238,12 +274,12 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                   {isPowersMode ? (
                     <>
                       <ZapOff className="w-5 h-5 shrink-0" />
-                      <span>MODO CÓMIC ACTIVO</span>
+                      <span>EN CRISIS</span>
                     </>
                   ) : (
                     <>
                       <Zap className="w-5 h-5 shrink-0 fill-current" />
-                      <span>VER PODERES</span>
+                      <span>SOBRECARGAR</span>
                     </>
                   )}
                 </button>

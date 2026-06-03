@@ -9,6 +9,7 @@ export function HeroSection() {
   const [readChapters, setReadChapters] = useState<string[]>([]);
   const [isClient, setIsClient] = useState(false);
   const [selectedChar, setSelectedChar] = useState<any | null>(null);
+  const [unlockAll, setUnlockAll] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -16,9 +17,18 @@ export function HeroSection() {
       const raw = localStorage.getItem("read-chapters");
       if (raw) setReadChapters(JSON.parse(raw));
     } catch {}
+
+    const checkUnlock = () => {
+      setUnlockAll(localStorage.getItem("unlock-all") === "true");
+    };
+    checkUnlock();
+    window.addEventListener("unlockAllChanged", checkUnlock);
+    return () => {
+      window.removeEventListener("unlockAllChanged", checkUnlock);
+    };
   }, []);
 
-  const characters = getComputedCharacters(readChapters, isClient);
+  const characters = getComputedCharacters(readChapters, isClient, unlockAll);
 
   return (
     <section

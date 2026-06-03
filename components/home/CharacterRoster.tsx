@@ -15,6 +15,7 @@ export function CharacterRoster() {
   const [readChapters, setReadChapters] = useState<string[]>([]);
   const [isClient, setIsClient] = useState(false);
   const [selectedChar, setSelectedChar] = useState<any | null>(null);
+  const [unlockAll, setUnlockAll] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -26,9 +27,18 @@ export function CharacterRoster() {
     } catch (e) {
       console.error(e);
     }
+
+    const checkUnlock = () => {
+      setUnlockAll(localStorage.getItem("unlock-all") === "true");
+    };
+    checkUnlock();
+    window.addEventListener("unlockAllChanged", checkUnlock);
+    return () => {
+      window.removeEventListener("unlockAllChanged", checkUnlock);
+    };
   }, []);
 
-  const characters = getComputedCharacters(readChapters, isClient);
+  const characters = getComputedCharacters(readChapters, isClient, unlockAll);
   const coreCharacters = characters.filter((c) => !c.isSecondary);
   const secondaryCharacters = characters.filter((c) => c.isSecondary);
 

@@ -8,6 +8,7 @@ export function SagaBlock({ saga, index, prevSaga }: { saga: any; index: number;
   const isEven = index % 2 === 0;
   const [readChapters, setReadChapters] = useState<string[]>([]);
   const [isClient, setIsClient] = useState(false);
+  const [unlockAll, setUnlockAll] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -19,6 +20,15 @@ export function SagaBlock({ saga, index, prevSaga }: { saga: any; index: number;
     } catch (e) {
       console.error(e);
     }
+
+    const checkUnlock = () => {
+      setUnlockAll(localStorage.getItem("unlock-all") === "true");
+    };
+    checkUnlock();
+    window.addEventListener("unlockAllChanged", checkUnlock);
+    return () => {
+      window.removeEventListener("unlockAllChanged", checkUnlock);
+    };
   }, []);
 
   return (
@@ -60,7 +70,7 @@ export function SagaBlock({ saga, index, prevSaga }: { saga: any; index: number;
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
         {saga.chapters.map((chapter: any, ci: number) => {
           let isLocked = false;
-          if (isClient) {
+          if (isClient && !unlockAll) {
             if (ci === 0) {
               if (prevSaga) {
                 isLocked = !prevSaga.chapters.every((ch: any) => readChapters.includes(ch.id));
