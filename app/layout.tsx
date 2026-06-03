@@ -9,7 +9,7 @@ const marker  = Permanent_Marker({ weight: "400", variable: "--font-marker", sub
 const bungee  = Bungee({ weight: "400", variable: "--font-bungee", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "The Boys | Cómic",
+  title: "The Boyz | Cómic",
   description: "Leete la saga del Camión Verde y el Mativerso — un cómic original.",
 };
 
@@ -61,7 +61,7 @@ function Footer() {
           className="font-[var(--font-bangers)] text-sm tracking-[0.2em]"
           style={{ color: "rgba(255,255,255,0.25)" }}
         >
-          © {new Date().getFullYear()} THE BOYS COMICS
+          © {new Date().getFullYear()} THE BOYZ COMICS
         </p>
       </div>
     </footer>

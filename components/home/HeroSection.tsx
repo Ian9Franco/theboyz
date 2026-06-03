@@ -1,9 +1,49 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import { getComputedCharacters, CharacterModal } from "./CharacterRoster";
 
 export function HeroSection() {
+  const [readChapters, setReadChapters] = useState<string[]>([]);
+  const [isClient, setIsClient] = useState(false);
+  const [selectedChar, setSelectedChar] = useState<any | null>(null);
+
+  useEffect(() => {
+    setIsClient(true);
+    try {
+      const read = localStorage.getItem("read-chapters");
+      if (read) {
+        setReadChapters(JSON.parse(read));
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }, []);
+
+  // Compute dynamic characters using the shared helper
+  const computedCharacters = getComputedCharacters(readChapters, isClient);
+  
+  const getChar = (id: string) => {
+    return computedCharacters.find(c => c.id === id) || {
+      id,
+      name: id,
+      displayName: '???',
+      incognito: true,
+      displayColor: '#6b7280',
+      image: `/${id}.png`
+    };
+  };
+
+  const ian = getChar('ian');
+  const jaz = getChar('jaz');
+  const julian = getChar('julian');
+  const matapobre = getChar('matapobre');
+  const mati = getChar('mati');
+  const uandi = getChar('uandi');
+  const volvo = getChar('volvo');
+  const sofi = getChar('sofi');
+
   return (
     <section
       className="relative min-h-[88vh] flex items-center justify-center overflow-hidden"
@@ -45,88 +85,102 @@ export function HeroSection() {
 
       {/* Left Stack */}
       <FloatingHeroCard
-        src="/ian.png"
-        alt="Ian"
-        fallbackColor="#e8185a"
+        src={ian.image}
+        alt={ian.displayName}
+        fallbackColor={ian.displayColor}
         className="left-[-2%] md:left-[1.5%] xl:left-[3.5%] top-[5%] md:top-[10%] xl:top-[12%] z-10"
         initialX={-120}
         initialRotate={-30}
         animateRotate={-15}
         delay={0.3}
+        incognito={ian.incognito}
+        onClick={() => setSelectedChar(ian)}
       />
       <FloatingHeroCard
-        src="/jaz.png"
-        alt="Jaz"
-        fallbackColor="#00b8d4"
+        src={jaz.image}
+        alt={jaz.displayName}
+        fallbackColor={jaz.displayColor}
         className="left-[4%] md:left-[7.5%] xl:left-[9.5%] top-[25%] md:top-[28%] xl:top-[30%] z-20"
         initialX={-100}
         initialRotate={-25}
         animateRotate={-5}
         delay={0.4}
+        incognito={jaz.incognito}
+        onClick={() => setSelectedChar(jaz)}
       />
       <FloatingHeroCard
-        src="/julian.png"
-        alt="Julián"
-        fallbackColor="#f5e642"
+        src={julian.image}
+        alt={julian.displayName}
+        fallbackColor={julian.displayColor}
         className="left-[-4%] md:left-[2.5%] xl:left-[4.5%] top-[45%] md:top-[46%] xl:top-[48%] z-10"
         initialX={-120}
         initialRotate={-20}
         animateRotate={-25}
         delay={0.5}
+        incognito={julian.incognito}
+        onClick={() => setSelectedChar(julian)}
       />
       <FloatingHeroCard
-        src="/matapobre.png"
-        alt="Matapobre"
-        fallbackColor="#6b7280"
+        src={matapobre.image}
+        alt={matapobre.displayName}
+        fallbackColor={matapobre.displayColor}
         className="left-[6%] md:left-[8.5%] xl:left-[10.5%] top-[65%] md:top-[64%] xl:top-[66%] z-20"
         initialX={-100}
         initialRotate={-15}
         animateRotate={-8}
         delay={0.6}
-        incognito={true}
+        incognito={matapobre.incognito}
+        onClick={() => setSelectedChar(matapobre)}
       />
 
       {/* Right Stack */}
       <FloatingHeroCard
-        src="/mati.png"
-        alt="Mati"
-        fallbackColor="#6d28d9"
+        src={mati.image}
+        alt={mati.displayName}
+        fallbackColor={mati.displayColor}
         className="right-[-2%] md:right-[1.5%] xl:right-[3.5%] top-[5%] md:top-[10%] xl:top-[12%] z-10"
         initialX={120}
         initialRotate={30}
         animateRotate={15}
         delay={0.35}
+        incognito={mati.incognito}
+        onClick={() => setSelectedChar(mati)}
       />
       <FloatingHeroCard
-        src="/uandi.png"
-        alt="Uandi"
-        fallbackColor="#f97316"
+        src={uandi.image}
+        alt={uandi.displayName}
+        fallbackColor={uandi.displayColor}
         className="right-[4%] md:right-[7.5%] xl:right-[9.5%] top-[25%] md:top-[28%] xl:top-[30%] z-20"
         initialX={100}
         initialRotate={25}
         animateRotate={5}
         delay={0.45}
+        incognito={uandi.incognito}
+        onClick={() => setSelectedChar(uandi)}
       />
       <FloatingHeroCard
-        src="/volvo.png"
-        alt="Volvo"
-        fallbackColor="#10b981"
+        src={volvo.image}
+        alt={volvo.displayName}
+        fallbackColor={volvo.displayColor}
         className="right-[-4%] md:right-[2.5%] xl:right-[4.5%] top-[45%] md:top-[46%] xl:top-[48%] z-10"
         initialX={120}
         initialRotate={20}
         animateRotate={25}
         delay={0.55}
+        incognito={volvo.incognito}
+        onClick={() => setSelectedChar(volvo)}
       />
       <FloatingHeroCard
-        src="/sofi.png"
-        alt="Sofi"
-        fallbackColor="#6b7280"
+        src={sofi.image}
+        alt={sofi.displayName}
+        fallbackColor={sofi.displayColor}
         className="right-[6%] md:right-[8.5%] xl:right-[10.5%] top-[65%] md:top-[64%] xl:top-[66%] z-20"
         initialX={100}
         initialRotate={15}
         animateRotate={8}
         delay={0.65}
-        incognito={true}
+        incognito={sofi.incognito}
+        onClick={() => setSelectedChar(sofi)}
       />
 
       {/* Content */}
@@ -162,7 +216,7 @@ export function HeroSection() {
             textShadow: "5px 5px 0 #e8185a, 10px 10px 0 rgba(232,24,90,0.18)",
           }}
         >
-          THE<br />BOYS
+          THE<br />BOYZ
         </motion.h1>
 
         {/* Tagline */}
@@ -206,6 +260,16 @@ export function HeroSection() {
         className="absolute bottom-0 left-0 right-0 h-36 pointer-events-none"
         style={{ background: "linear-gradient(to bottom, transparent, #f4f0e6)" }}
       />
+
+      {/* Pop-up Character Modal */}
+      <AnimatePresence>
+        {selectedChar && (
+          <CharacterModal 
+            char={selectedChar} 
+            onClose={() => setSelectedChar(null)} 
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }
@@ -219,7 +283,8 @@ function FloatingHeroCard({
   initialRotate, 
   animateRotate,
   delay,
-  incognito
+  incognito,
+  onClick
 }: { 
   src: string; 
   alt: string; 
@@ -230,21 +295,54 @@ function FloatingHeroCard({
   animateRotate: number;
   delay: number;
   incognito?: boolean;
+  onClick?: () => void;
 }) {
   const [hasError, setHasError] = useState(false);
+
+  // Offset float timings randomly
+  const floatDelay = Math.random() * -10;
 
   return (
     <motion.div
       initial={{ opacity: 0, x: initialX, rotate: initialRotate }}
-      animate={{ opacity: 1, x: 0, rotate: animateRotate }}
-      transition={{ type: "spring", stiffness: 80, damping: 15, delay }}
-      className={`absolute w-[75px] md:w-[120px] lg:w-[140px] xl:w-[170px] aspect-[4/5] overflow-hidden select-none pointer-events-auto ${className}`}
+      animate={{ 
+        opacity: 1, 
+        x: 0, 
+        rotate: [animateRotate - 1.5, animateRotate + 1.5, animateRotate - 1.5],
+        y: [-4, 4, -4]
+      }}
+      transition={{ 
+        opacity: { duration: 0.8, delay },
+        x: { type: "spring", stiffness: 80, damping: 15, delay },
+        rotate: {
+          repeat: Infinity,
+          repeatType: "mirror",
+          duration: 6 + Math.random() * 4,
+          ease: "easeInOut",
+          delay: floatDelay
+        },
+        y: {
+          repeat: Infinity,
+          repeatType: "mirror",
+          duration: 5 + Math.random() * 3,
+          ease: "easeInOut",
+          delay: floatDelay
+        }
+      }}
+      className={`absolute w-[75px] md:w-[120px] lg:w-[140px] xl:w-[170px] aspect-[4/5] overflow-hidden select-none pointer-events-auto cursor-pointer ${className}`}
       style={{
         border: "3px solid white",
         boxShadow: `${hasError ? '2px 2px' : '4px 4px'} 0 ${fallbackColor}, 8px 8px 15px rgba(0,0,0,0.6)`,
         background: incognito ? "#2a2a35" : "#13131e"
       }}
-      whileHover={{ scale: 1.1, rotate: animateRotate + (initialX > 0 ? 4 : -4), zIndex: 40, transition: { duration: 0.2 } }}
+      whileHover={{ 
+        scale: 1.1, 
+        rotate: animateRotate + (initialX > 0 ? 5 : -5), 
+        y: -12,
+        zIndex: 40, 
+        transition: { duration: 0.2 } 
+      }}
+      onClick={onClick}
     >
       {!hasError ? (
         <>

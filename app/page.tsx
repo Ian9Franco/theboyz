@@ -40,7 +40,12 @@ export default function Home() {
             </div>
           ) : (
             sagasList.map((saga, si) => (
-              <SagaBlock key={saga.id} saga={saga} index={si} />
+              <SagaBlock 
+                key={saga.id} 
+                saga={saga} 
+                index={si} 
+                prevSaga={si > 0 ? sagasList[si - 1] : null}
+              />
             ))
           )}
         </div>

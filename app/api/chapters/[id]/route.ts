@@ -84,8 +84,24 @@ export async function GET(
     cover = pages[0];
   }
 
-  const prevChapter = foundSaga.chapters[chapterIndex - 1] || null;
-  const nextChapter = foundSaga.chapters[chapterIndex + 1] || null;
+  let prevChapter = null;
+  let nextChapter = null;
+
+  const sagaIndex = sagas.findIndex((s) => s.id === foundSaga.id);
+
+  if (chapterIndex > 0) {
+    prevChapter = foundSaga.chapters[chapterIndex - 1];
+  } else if (sagaIndex > 0) {
+    const prevSaga = sagas[sagaIndex - 1];
+    prevChapter = prevSaga.chapters[prevSaga.chapters.length - 1];
+  }
+
+  if (chapterIndex < foundSaga.chapters.length - 1) {
+    nextChapter = foundSaga.chapters[chapterIndex + 1];
+  } else if (sagaIndex < sagas.length - 1) {
+    const nextSaga = sagas[sagaIndex + 1];
+    nextChapter = nextSaga.chapters[0];
+  }
 
   return NextResponse.json({
     chapter: foundChapter,

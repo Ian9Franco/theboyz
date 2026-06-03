@@ -20,23 +20,16 @@ export default function NavBar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0 group hover:opacity-90 transition-opacity">
-          <div
-            className="relative px-2 py-1"
-            style={{
-              background: "#e8185a",
-              border: "2px solid #e8185a",
-              clipPath: "polygon(6% 0%, 100% 0%, 94% 100%, 0% 100%)",
-            }}
-          >
-            <span className="font-[var(--font-bungee)] text-2xl text-white tracking-widest leading-none block pt-1">
-              TB
-            </span>
-          </div>
+          <img
+            src="/logo.png"
+            alt="The Boyz Logo"
+            className="h-10 w-auto object-contain block"
+          />
           <span
             className="font-[var(--font-bungee)] text-3xl tracking-widest text-white leading-none hidden sm:block pt-1"
             style={{ textShadow: "3px 3px 0 #e8185a" }}
           >
-            THE BOYS
+            THE BOYZ
           </span>
         </Link>
 

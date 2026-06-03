@@ -3,7 +3,7 @@
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef } from "react";
 
 /* ── Zoom Lightbox ── */
 function Lightbox({ 
@@ -49,7 +49,10 @@ function Lightbox({
   };
   const onMouseMove = (e: React.MouseEvent) => {
     if (!dragging) return;
-    didDrag.current = true;
+    const dist = Math.hypot(e.clientX - dragStart.current.mx, e.clientY - dragStart.current.my);
+    if (dist > 6) {
+      didDrag.current = true;
+    }
     let nextX = dragStart.current.px + e.clientX - dragStart.current.mx;
     let nextY = dragStart.current.py + e.clientY - dragStart.current.my;
     
@@ -100,7 +103,10 @@ function Lightbox({
       lastTouchDist.current = d;
       setScale(prev => Math.min(MAX, Math.max(MIN, prev * (1 + delta * 0.8))));
     } else if (e.touches.length === 1 && dragging) {
-      didDrag.current = true;
+      const dist = Math.hypot(e.touches[0].clientX - dragStart.current.mx, e.touches[0].clientY - dragStart.current.my);
+      if (dist > 6) {
+        didDrag.current = true;
+      }
       let nextX = dragStart.current.px + e.touches[0].clientX - dragStart.current.mx;
       let nextY = dragStart.current.py + e.touches[0].clientY - dragStart.current.my;
       
@@ -136,21 +142,21 @@ function Lightbox({
         >
           <button
             onClick={handleZoomOut}
-            className="w-10 h-10 flex items-center justify-center font-[var(--font-bangers)] text-xl text-white border border-white/20 hover:border-[#e8185a] hover:text-[#e8185a] transition-colors"
+            className="w-10 h-10 flex items-center justify-center font-[var(--font-bangers)] text-xl text-white border border-white/20 hover:border-[#e8185a] hover:text-[#e8185a] transition-colors bg-[#0a0a0f]/40"
           >−</button>
           <button
             onClick={handleReset}
-            className="px-3 h-10 font-[var(--font-bangers)] text-sm text-white/60 border border-white/10 hover:border-white/30 hover:text-white transition-colors"
+            className="px-3 h-10 font-[var(--font-bangers)] text-sm text-white/60 border border-white/10 hover:border-white/30 hover:text-white transition-colors bg-[#0a0a0f]/40"
           >
             {Math.round(scale * 100)}%
           </button>
           <button
             onClick={handleZoomIn}
-            className="w-10 h-10 flex items-center justify-center font-[var(--font-bangers)] text-xl text-white border border-white/20 hover:border-[#e8185a] hover:text-[#e8185a] transition-colors"
+            className="w-10 h-10 flex items-center justify-center font-[var(--font-bangers)] text-xl text-white border border-white/20 hover:border-[#e8185a] hover:text-[#e8185a] transition-colors bg-[#0a0a0f]/40"
           >+</button>
           <button
             onClick={onClose}
-            className="w-10 h-10 flex items-center justify-center text-white/60 hover:text-white border border-white/20 hover:border-white/60 transition-colors ml-2"
+            className="w-10 h-10 flex items-center justify-center text-white/60 hover:text-white border border-white/20 hover:border-white/60 transition-colors ml-2 bg-[#0a0a0f]/40"
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
@@ -177,11 +183,11 @@ function Lightbox({
         )}
 
         {/* Hint */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/25 text-sm font-[var(--font-bangers)] tracking-wider select-none pointer-events-none whitespace-nowrap">
-          Scroll para zoom · Arrastrá para mover · Click afuera o ESC para cerrar
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/25 text-sm font-[var(--font-bangers)] tracking-wider select-none pointer-events-none whitespace-nowrap hidden sm:block">
+          Scroll para zoom · Arrastrá para mover · Click izq/der para navegar · Click afuera para cerrar
         </div>
 
-        {/* Image */}
+        {/* Image Container */}
         <div
           className="absolute inset-0 flex items-center justify-center overflow-hidden"
           onWheel={onWheel}
@@ -192,7 +198,48 @@ function Lightbox({
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
-          onClick={e => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+
+            if (scale > 1) return;
+            if (didDrag.current) return;
+
+            // If click was on the container backdrop itself (the empty area)
+            if (e.target === e.currentTarget) {
+              onClose();
+              return;
+            }
+
+            // Otherwise, they clicked/tapped the image
+            const rect = e.currentTarget.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const clickY = e.clientY - rect.top;
+            const width = rect.width;
+            const height = rect.height;
+
+            // Top/bottom 10% margins close the lightbox
+            if (clickY < height * 0.1 || clickY > height * 0.9) {
+              onClose();
+              return;
+            }
+
+            if (clickX < width * 0.4) {
+              if (hasPrev) {
+                onPrev?.();
+              } else {
+                onClose();
+              }
+            } else if (clickX > width * 0.6) {
+              if (hasNext) {
+                onNext?.();
+              } else {
+                onClose();
+              }
+            } else {
+              // Clicked in the center 20%
+              onClose();
+            }
+          }}
           style={{ cursor: scale > 1 ? (dragging ? "grabbing" : "grab") : "zoom-in" }}
         >
           <img
@@ -203,8 +250,8 @@ function Lightbox({
               transform: `translate(${pos.x}px, ${pos.y}px) scale(${scale})`,
               transformOrigin: "center center",
               transition: dragging ? "none" : "transform 0.15s ease",
-              maxWidth: "90vw",
-              maxHeight: "90vh",
+              maxWidth: "95vw",
+              maxHeight: "95vh",
               objectFit: "contain",
               userSelect: "none",
               pointerEvents: "none",
@@ -227,12 +274,17 @@ export default function ChapterPage() {
   const [error, setError] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [isLocked, setIsLocked] = useState(false);
+  const [visiblePagesCount, setVisiblePagesCount] = useState(3);
 
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     setLoading(true);
     setError(false);
+    setIsLocked(false);
+    setVisiblePagesCount(3);
+
     fetch(`/api/chapters/${id}`)
       .then((r) => {
         if (!r.ok) throw new Error("Not found");
@@ -241,12 +293,46 @@ export default function ChapterPage() {
       .then((data) => {
         setChapterData(data);
         setLoading(false);
+
+        // Lock verification
+        if (data.prevChapter) {
+          try {
+            const read = localStorage.getItem("read-chapters");
+            const readList = read ? JSON.parse(read) : [];
+            if (!readList.includes(data.prevChapter.id)) {
+              setIsLocked(true);
+              return; // Keep locked, do not mark current as read
+            }
+          } catch (e) {
+            console.error(e);
+          }
+        }
+
+        // Mark as read if not locked
+        try {
+          const read = localStorage.getItem("read-chapters");
+          const readList = read ? JSON.parse(read) : [];
+          if (!readList.includes(id)) {
+            readList.push(id);
+            localStorage.setItem("read-chapters", JSON.stringify(readList));
+          }
+        } catch (e) {
+          console.error(e);
+        }
       })
       .catch(() => {
         setError(true);
         setLoading(false);
       });
   }, [id]);
+
+  // Load more pages automatically in Lightbox (vista grande)
+  useEffect(() => {
+    if (lightboxIndex !== null && lightboxIndex >= visiblePagesCount && chapterData?.pages) {
+      const nextBatch = Math.ceil((lightboxIndex + 1) / 3) * 3;
+      setVisiblePagesCount(Math.min(chapterData.pages.length, nextBatch));
+    }
+  }, [lightboxIndex, chapterData?.pages, visiblePagesCount]);
 
   if (!mounted) return null;
 
@@ -265,7 +351,7 @@ export default function ChapterPage() {
           <p className="font-[var(--font-bangers)] text-2xl text-[#0a0a0f] mb-6 tracking-wider">
             Capítulo no encontrado
           </p>
-          <button onClick={() => router.push("/")} className="btn btn-magenta text-2xl">
+          <button onClick={() => router.push("/")} className="btn btn-dark text-2xl">
             ← Volver al inicio
           </button>
         </motion.div>
@@ -276,6 +362,114 @@ export default function ChapterPage() {
   if (loading) return <div className="flex-1" style={{ background: "#f4f0e6" }}><LoadingState /></div>;
 
   const { chapter, saga, pages, prevChapter, nextChapter } = chapterData;
+
+  // Lock UI
+  if (isLocked) {
+    const handleUnlockThis = () => {
+      try {
+        const read = localStorage.getItem("read-chapters");
+        const readList = read ? JSON.parse(read) : [];
+        if (prevChapter && !readList.includes(prevChapter.id)) {
+          readList.push(prevChapter.id);
+        }
+        if (!readList.includes(id)) {
+          readList.push(id);
+        }
+        localStorage.setItem("read-chapters", JSON.stringify(readList));
+      } catch (e) {
+        console.error(e);
+      }
+      setIsLocked(false);
+    };
+
+    const handleUnlockAndNext = () => {
+      try {
+        const read = localStorage.getItem("read-chapters");
+        const readList = read ? JSON.parse(read) : [];
+        if (prevChapter && !readList.includes(prevChapter.id)) {
+          readList.push(prevChapter.id);
+        }
+        if (!readList.includes(id)) {
+          readList.push(id);
+        }
+        localStorage.setItem("read-chapters", JSON.stringify(readList));
+      } catch (e) {
+        console.error(e);
+      }
+      if (nextChapter) {
+        setIsLocked(false);
+        router.push(`/chapters/${nextChapter.id}`);
+      } else {
+        router.push("/");
+      }
+    };
+
+    return (
+      <div className="flex-1 flex items-center justify-center flex-col gap-6 p-8 min-h-[90vh]" style={{ background: "#0a0a0f" }}>
+        <div className="absolute inset-0 speed-lines opacity-10 pointer-events-none" />
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          className="panel panel-lg px-8 py-10 max-w-md w-full text-center relative z-10"
+          style={{ borderColor: "#e8185a", boxShadow: "8px 8px 0 #e8185a", background: "white" }}
+        >
+          {/* Padlock Icon */}
+          <div className="flex justify-center mb-6">
+            <div className="w-16 h-16 rounded-full bg-[#e8185a]/10 flex items-center justify-center text-[#e8185a]">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2.5" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+              </svg>
+            </div>
+          </div>
+          <h1 className="font-[var(--font-bangers)] text-4xl md:text-5xl mb-4 text-[#0a0a0f] tracking-wider leading-none">
+            ¡SPOILER WARNING!
+          </h1>
+          <p className="font-[var(--font-marker)] text-lg text-[#e8185a] mb-6 uppercase tracking-wider">
+            Capítulo Bloqueado
+          </p>
+          <p className="font-[var(--font-sans)] text-base text-[#0a0a0f] mb-8 leading-relaxed">
+            Para leer el <strong>{chapter.title}</strong>, primero tenés que completar el capítulo anterior.
+          </p>
+          <div className="flex flex-col gap-3">
+            {prevChapter && (
+              <>
+                <button
+                  onClick={handleUnlockThis}
+                  className="btn btn-yellow text-xl flex items-center justify-center gap-2"
+                >
+                  ⚡ Marcar leído y desbloquear este
+                </button>
+                {nextChapter && (
+                  <button
+                    onClick={handleUnlockAndNext}
+                    className="btn btn-magenta text-xl flex items-center justify-center gap-2"
+                  >
+                    🚀 Marcar leído y ver el siguiente
+                  </button>
+                )}
+                <button
+                  onClick={() => {
+                    setIsLocked(false);
+                    router.push(`/chapters/${prevChapter.id}`);
+                  }}
+                  className="btn btn-dark text-xl"
+                >
+                  ← Ir a leer {prevChapter.title}
+                </button>
+              </>
+            )}
+            <button
+              onClick={() => router.push("/")}
+              className="btn btn-dark text-xl"
+            >
+              Volver al Inicio
+            </button>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex-1" style={{ background: "#f4f0e6" }}>
@@ -339,7 +533,7 @@ export default function ChapterPage() {
 
         {pages.length > 0 && (
           <div className="flex flex-col gap-1.5 sm:gap-3">
-            {pages.map((src: string, i: number) => (
+            {pages.slice(0, visiblePagesCount).map((src: string, i: number) => (
               <motion.div
                 key={src}
                 initial={{ opacity: 0, y: 20 }}
@@ -378,6 +572,21 @@ export default function ChapterPage() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        )}
+
+        {/* Load More Button */}
+        {pages.length > visiblePagesCount && (
+          <div className="mt-10 flex justify-center">
+            <button
+              onClick={() => setVisiblePagesCount(prev => Math.min(pages.length, prev + 3))}
+              className="btn btn-magenta text-xl flex items-center gap-2"
+            >
+              <span>Cargar más páginas (+3)</span>
+              <span className="opacity-75 text-sm font-sans tracking-normal">
+                ({pages.length - visiblePagesCount} restantes)
+              </span>
+            </button>
           </div>
         )}
 
