@@ -75,18 +75,24 @@ Esta guía contiene prompts atómicos para cada viñeta, listos para pegar en Mi
 ### PÁGINA 2
 > 👥 **Personajes en esta página:** Ian, Jaz, Madre de Ian, Oficial de Policía
 
-*   **Viñeta 1 (Panel 1):**
-    `Interior car dashboard shot. Ian driving with an anxious expression. Ian's Mother in the passenger seat gesturing angrily. Jaz in the back seat looking out the window worriedly. Night. --ar 9:16`
-*   **Viñeta 2 (Panel 2):**
-    `Medium shot. Ian's Mother looking angry walking ahead of Ian and Jaz toward a brick police station entrance labeled 'STATION 4'. Daytime. --ar 3:4`
-*   **Viñeta 3 (Panel 3):**
-    `Police lobby. Ian's Mother leaning over a front desk, pointing angrily at a bored female officer with crossed arms. Ian stands behind looking embarrassed. --ar 3:4`
-*   **Viñeta 4 (Panel 4):**
-    `Medium shot. Jaz sitting at a wooden table in the lobby, reviewing official release forms. A female officer stands nearby, looking away dismissively. --ar 9:16`
-*   **Viñeta 5 (Panel 5):**
-    `Close-up on Jaz's hand signing paper documents on a table with a black pen. Ian and his mother stand behind her, looking highly suspicious. --ar 3:4`
-*   **Viñeta 6 (Panel 6):**
-    `Sunny day. Fenced police impound lot. Green pickup truck with its hood open. Ian leans over the engine looking shocked and angry. Jaz and Ian's Mother stand beside him. --ar 9:16`
+* **Viñeta 1 (Panel 1):**
+  Interior car dashboard shot. Night. Madre de Ian is driving the car with an anxious expression. Jaz sits in the passenger seat, angrily gesturing while talking. Ian sits in the back seat looking worriedly out the window. The mood is tense and stressful. --ar 9:16
+
+* **Viñeta 2 (Panel 2):**
+  Medium shot. Daytime. Ian's Mother walks ahead of Ian and Jaz toward a brick police station entrance labeled "STATION 4". She looks determined and visibly angry, leading the group. Ian follows nervously. Jaz follows behind, concerned. --ar 3:4
+
+* **Viñeta 3 (Panel 3):**
+  Police station lobby. Ian's Mother is leaning over the front desk, arguing angrily with a bored female police officer. The officer has crossed arms and a cold attitude. Ian stands behind his mother looking embarrassed. Jaz watches the confrontation. The female officer has dark hair and a stern expression. --ar 3:4
+
+* **Viñeta 4 (Panel 4):**
+  Medium shot. Police station lobby. Jaz sits at a wooden table reviewing official vehicle release documents. A dismissive female police officer with dark hair stands nearby, avoiding eye contact. The paperwork clearly relates to the release of Jaz's impounded green pickup truck. Ian and his mother wait nearby. --ar 9:16
+
+* **Viñeta 5 (Panel 5):**
+  Close-up. Jaz signs the vehicle release documents with a black pen. The paperwork identifies Jaz as the owner of the impounded green pickup truck. Ian and Ian's Mother stand behind her, looking suspicious and unconvinced about the situation. --ar 3:4
+
+* **Viñeta 6 (Panel 6):**
+  Sunny day. Police impound lot surrounded by chain-link fencing. Jaz stands in front of her recently returned green pickup truck, visibly furious and frustrated. The truck is heavily damaged and partially stripped. The battery is missing, several engine components have been removed, wires are hanging loose, and parts of the interior appear vandalized. An empty space where Ian's beloved pasta machine had been stored is clearly visible, implying it was stolen. Ian and his mother stare at the vehicle in disbelief. In the background, the dark-haired female police officer watches indifferently. Comic-style dramatic reaction, emphasizing outrage and corruption. --ar 3:4
+
 
 ### PÁGINA 3
 > 👥 **Personajes en esta página:** Oficial de Policía, Oficial con Bigote, Ian, Jaz
