@@ -239,7 +239,7 @@ export const CHARACTER_DETAILS = [
   role: 'Tanque y protector',
   visualCode: 'Remera técnica Kappa, lentes redondos, tatuaje manga izquierdo',
   perfil: [
-    'Honestidad brutal e ingenua: Transparente en sus intenciones, actúa bajo un código moral directo y se posiciona como el protector rígido del grupo.',
+    'Honestidad brutal e ingenua: Transparente en sus intenciones, actúa bajo un código moral directo y se posiciona como el protector rígido del grupo. Tiene la costumbre recurrente de referirse a amigos y enemigos por igual con el apelativo "Bub".',
     'Complexión atlética: Porte físico imponente, caracterizado por una intrincada y extensa manga de tatuajes de diseño tribal/geométrico en su brazo izquierdo.',
     'Estilo urbano deportivo: Remera técnica ajustada de Kappa, pantalón cargo gris y lentes redondos que suavizan sutilmente sus facciones de combate.',
   ],

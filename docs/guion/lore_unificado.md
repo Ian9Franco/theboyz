@@ -69,11 +69,19 @@ Luego, criminales planeando algo:
 El nombre evoluciona. Un día Ian le muestra un foro: "La vigilante conocida como Hush vuelve a intervenir." Y Sofi responde: "¿Quién demonios es Hush?"
 
 ### Uandi → Aegis
-Probablemente aparezca después de proteger al grupo, poniéndose delante de todos para recibir un impacto. Alguien comenta: "Ese tipo es un escudo."
-Y más adelante: "No es un escudo. Es una maldita Aegis."
+Probablemente aparezca después de proteger al grupo, poniéndose delante de todos para recibir un impacto. Alguien comenta: "Ese tipo es un escudo." Y más adelante: "No es un escudo. Es una maldita Aegis." 
+Además, Uandi tiene la muletilla rústica y recurrente de llamar a los demás (amigos o enemigos) "Bub" en sus diálogos (ej: *"Move out of the way, Bub"*).
 
 ### Volvo → Null Vector
 Ni siquiera nace de amigos. Nace de expedientes científicos, militares y de agencias. Cada vez que aparece hay sistemas caídos, errores, interferencias y datos corruptos. Alguien termina bautizándolo "Null Vector", el punto donde todo deja de funcionar.
+
+### Mati → Swapfire
+El nombre no lo elige él ni el grupo de la Tierra original; proviene directamente del multiverso. Durante una de las transmisiones interdimensionales, una de sus variantes tácticas avanzadas se refiere a él bajo la designación militar de "Swapfire" por su capacidad de intercambio espacial y la fricción térmica residual que genera al activarse. 
+
+Lo gracioso es que, a pesar de tener eventualmente este nombre oficial en los registros del multiverso y que el grupo empiece a adoptarlo, Julián se niega rotundamente a usarlo. Para Julián, siempre será "el mati" o "mati de mierda".
+
+*   —"Preguntale a el mati."
+*   —"¿En serio hizo eso? Qué mati de mierda."
 
 ### Ian → Vesperwing
 Es el único que elige su propio nombre, lo cual encaja perfecto con su personalidad. Los demás reciben nombres, pero Ian diseña una identidad como diseñaría un traje o un gadget.

@@ -90,7 +90,7 @@ export default function LorePage() {
                 <div className="w-1.5 bg-[#f5e642] shrink-0"></div>
                 <div>
                   <h4 className="font-bold text-2xl text-white">Julián → Wildcard</h4>
-                  <p className="text-white/80 mt-1">No viene de sus poderes, sino de su personalidad. Siempre tiene un plan raro, una salida absurda y comentarios inesperados. En una misión, cuando saca "una carta buena" sin saber bien el plan, Ian lo bautiza como un <em>"wildcard"</em> literal.</p>
+                  <p className="text-white/80 mt-1">No viene de sus poderes, sino de su personalidad. Siempre tiene un plan raro, una salida absurda y comentarios inesperados. En una misión, cuando saca "una carta buena" sin saber bien el plan, Mati lo bautiza como un <em>"wildcard"</em> literal.</p>
                 </div>
               </div>
 
@@ -115,6 +115,9 @@ export default function LorePage() {
                 <div>
                   <h4 className="font-bold text-2xl text-white">Uandi → Aegis</h4>
                   <p className="text-white/80 mt-1">Aparece después de que Uandi se pone delante del grupo para recibir un impacto colosal. Alguien comenta: <em>"Ese tipo es un escudo."</em> A lo que otro responde: <em>"No es un escudo. Es una maldita Aegis."</em></p>
+                  <p className="text-white/60 text-sm mt-1 italic">
+                    Uandi tiene la costumbre rústica y recurrente de dirigirse a otros (amigos o enemigos) usando la muletilla <strong>"Bub"</strong> (ej: <em>"Correte del camino, Bub"</em>).
+                  </p>
                 </div>
               </div>
 
@@ -127,10 +130,21 @@ export default function LorePage() {
               </div>
 
               <div className="flex gap-4">
+                <div className="w-1.5 bg-[#f5e642] shrink-0"></div>
+                <div>
+                  <h4 className="font-bold text-2xl text-white">Mati → Swapfire</h4>
+                  <p className="text-white/80 mt-1">El nombre no proviene de la Tierra original, sino que nace del multiverso. Durante una de las transmisiones interdimensionales, una de sus variantes tácticas avanzadas lo clasifica como <em>"Swapfire"</em> debido a su capacidad de intercambio espacial y la fricción térmica residual que deja al activarse.</p>
+                  <p className="text-white/60 text-sm mt-1 italic">
+                    A pesar de este alias oficial, Julián se niega a usarlo y siempre se refiere a él como "el mati" o "el mati de mierda" (ej: <em>"Preguntale a el mati"</em> o <em>"¿En serio hizo eso? Qué mati de mierda"</em>).
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
                 <div className="w-1.5 bg-[#e8185a] shrink-0"></div>
                 <div>
                   <h4 className="font-bold text-2xl text-white">Ian → Vesperwing</h4>
-                  <p className="text-white/80 mt-1">Es el único que elige su propio nombre. Los demás reciben nombres por sus acciones, pero Ian diseña su propia identidad de la misma forma que diseñaría un traje o un gadget táctico.</p>
+                  <p className="text-white/80 mt-1">Es el único que elige su propio nombre. Los demás reciben nombres por sus acciones o del exterior, pero Ian diseña su propia identidad de la misma forma que diseñaría un traje o un gadget táctico.</p>
                 </div>
               </div>
 
