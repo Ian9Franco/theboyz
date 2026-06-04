@@ -40,6 +40,8 @@ function getDarkBgColor(hexColor: string) {
 export function CharacterModal({ char, onClose }: { char: any; onClose: () => void }) {
   const [showAlt, setShowAlt] = useState(false);
   const [isPowersMode, setIsPowersMode] = useState(false);
+  const [selectedSuitVariant, setSelectedSuitVariant] = useState<string>("default");
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const [imgFullscreen, setImgFullscreen] = useState(false);
   const [unlockAll, setUnlockAll] = useState(false);
 
@@ -61,13 +63,29 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
   }, []);
 
   const isLocked = char.incognito && !unlockAll;
-  const currentImage = isPowersMode && char.overloadImage
-    ? char.overloadImage
+  
+  // Resolve current image based on selected suit variant or standard state
+  const currentImage = isPowersMode
+    ? (char.powers?.suitImages?.[selectedSuitVariant] || char.overloadImage)
     : (showAlt && char.altImage ? char.altImage : (char.fullBody || char.image));
+    
   const accent = isLocked ? "#6b7280" : char.color;
   const vibrantAccent = getVibrantColor(accent);
   const darkBg = getDarkBgColor(accent);
   const stats = isPowersMode ? char.powers?.stats : char.stats;
+
+  // Resolve variant-specific content (habilidades / significa / crisis)
+  // Falls back to base powers data when no variantData entry exists for the selected variant
+  const activeVariantData =
+    isPowersMode && selectedSuitVariant !== 'default'
+      ? char.powers?.variantData?.[selectedSuitVariant]
+      : null;
+  const variantContent = {
+    habilidades: activeVariantData?.habilidades ?? char.powers?.habilidades,
+    significa:   activeVariantData?.significa   ?? char.powers?.significa,
+    crisis:      activeVariantData?.crisis       ?? char.powers?.crisis,
+    variantLabel: activeVariantData?.label       ?? null,
+  };
   const statRows = [
     { name: "Fuerza",   val: stats?.fuerza ?? 0 },
     { name: "Intel.",   val: stats?.inteligencia ?? 0 },
@@ -77,6 +95,70 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     { name: "Defensa",  val: stats?.defensa ?? 0 },
     { name: char.especialLabel || "Especial", val: isPowersMode ? (char.powers?.stats?.especialVal ?? 0) : (char.stats?.especialVal ?? 0) },
   ];
+
+  // Transition handler when switching Overload mode
+  const handlePowersModeToggle = () => {
+    if (!isPowersMode) {
+      // Transitioning ON
+      const targetSrc = char.powers?.suitImages?.default || char.overloadImage;
+      setIsTransitioning(true);
+      
+      const img = new Image();
+      img.src = targetSrc;
+      const startTime = Date.now();
+      
+      img.onload = () => {
+        const elapsed = Date.now() - startTime;
+        const minDuration = 1200; // minimum duration for epic effect (1.2 seconds)
+        const remaining = Math.max(0, minDuration - elapsed);
+        setTimeout(() => {
+          setIsPowersMode(true);
+          setSelectedSuitVariant("default");
+          setIsTransitioning(false);
+        }, remaining);
+      };
+      
+      img.onerror = () => {
+        setIsPowersMode(true);
+        setSelectedSuitVariant("default");
+        setIsTransitioning(false);
+      };
+    } else {
+      // Transitioning OFF (quick power-down)
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setIsPowersMode(false);
+        setIsTransitioning(false);
+      }, 500);
+    }
+  };
+
+  // Preloading transition for suit variant buttons
+  const handleVariantChange = (variant: string) => {
+    if (variant === selectedSuitVariant) return;
+    const targetSrc = char.powers?.suitImages?.[variant];
+    if (!targetSrc) return;
+    
+    setIsTransitioning(true);
+    const img = new Image();
+    img.src = targetSrc;
+    const startTime = Date.now();
+    
+    img.onload = () => {
+      const elapsed = Date.now() - startTime;
+      const minDuration = 800; // slightly shorter transition (0.8s) for sub-variants
+      const remaining = Math.max(0, minDuration - elapsed);
+      setTimeout(() => {
+        setSelectedSuitVariant(variant);
+        setIsTransitioning(false);
+      }, remaining);
+    };
+    
+    img.onerror = () => {
+      setSelectedSuitVariant(variant);
+      setIsTransitioning(false);
+    };
+  };
 
   return (
     <div className="fixed inset-0 z-[200] flex items-center justify-center p-3 sm:p-5">
@@ -106,6 +188,222 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
           backgroundColor: isPowersMode ? darkBg : "#ffffff",
         }}
       >
+        {/* CSS for custom scanlines and animations */}
+        <style>{`
+          @keyframes scanLine {
+            0% { top: -10%; }
+            100% { top: 110%; }
+          }
+          @keyframes scanLineRev {
+            0% { top: 110%; }
+            100% { top: -10%; }
+          }
+          @keyframes flickerIn {
+            0%,18%,22%,25%,53%,57%,100% { opacity: 1; }
+            20%,24%,55%          { opacity: 0; }
+          }
+          @keyframes glitchH {
+            0%,100% { transform: translateX(0) skewX(0); }
+            10%      { transform: translateX(-4px) skewX(-3deg); }
+            20%      { transform: translateX(4px)  skewX(3deg); }
+            30%      { transform: translateX(-2px) skewX(-1deg); }
+            40%      { transform: translateX(0); }
+          }
+          @keyframes powerSurge {
+            0%   { width: 0%; box-shadow: none; }
+            60%  { width: 80%; box-shadow: 0 0 12px var(--surge-color); }
+            100% { width: 100%; box-shadow: 0 0 24px var(--surge-color), 0 0 48px var(--surge-color); }
+          }
+          @keyframes shockwave {
+            0%   { transform: scale(0.2); opacity: 0.9; }
+            100% { transform: scale(4);   opacity: 0; }
+          }
+          @keyframes pulseGlow {
+            0%,100% { opacity: 0.35; }
+            50%     { opacity: 0.75; }
+          }
+          @keyframes rgbSplit {
+            0%   { text-shadow: -3px 0 #ff0000, 3px 0 #00ffff; }
+            25%  { text-shadow:  3px 0 #ff0000,-3px 0 #00ffff; }
+            50%  { text-shadow:  0  3px #ff0000, 0 -3px #00ffff; }
+            75%  { text-shadow: -2px 2px #ff00ff, 2px -2px #00ff00; }
+            100% { text-shadow: -3px 0 #ff0000, 3px 0 #00ffff; }
+          }
+          .speed-lines {
+            background-image: 
+              linear-gradient(45deg, rgba(255,255,255,0.03) 25%, transparent 25%), 
+              linear-gradient(-45deg, rgba(255,255,255,0.03) 25%, transparent 25%);
+            background-size: 60px 60px;
+          }
+          .overload-btn-active {
+            animation: flickerIn 0.15s ease-out;
+          }
+        `}</style>
+
+        {/* ══ Epic Transition Overlay ══ */}
+        <AnimatePresence>
+          {isTransitioning && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.4 } }}
+              className="absolute inset-0 z-50 flex flex-col items-center justify-center overflow-hidden"
+              style={{
+                backgroundColor: "#060608",
+                backgroundImage: `radial-gradient(circle, ${vibrantAccent}18 1.5px, transparent 1.5px)`,
+                backgroundSize: '22px 22px',
+              }}
+            >
+              {/* === Layer 1: ambient energy orb === */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div
+                  className="w-[600px] h-[600px] rounded-full blur-[160px]"
+                  style={{
+                    backgroundColor: vibrantAccent,
+                    animation: 'pulseGlow 0.8s ease-in-out infinite',
+                  }}
+                />
+              </div>
+
+              {/* === Layer 2: shockwave rings === */}
+              {[0, 0.18, 0.36].map((delay, i) => (
+                <div
+                  key={i}
+                  className="absolute rounded-full border-2 pointer-events-none"
+                  style={{
+                    width: 120,
+                    height: 120,
+                    borderColor: vibrantAccent,
+                    animation: `shockwave 1.1s ease-out ${delay}s infinite`,
+                    opacity: 0,
+                  }}
+                />
+              ))}
+
+              {/* === Layer 3: dual scanlines === */}
+              <div
+                className="absolute inset-x-0 h-[3px]"
+                style={{
+                  background: `linear-gradient(90deg, transparent, ${vibrantAccent}, transparent)`,
+                  boxShadow: `0 0 16px ${vibrantAccent}, 0 0 40px ${vibrantAccent}88`,
+                  animation: 'scanLine 1.2s linear infinite',
+                }}
+              />
+              <div
+                className="absolute inset-x-0 h-[1px] bg-white/30"
+                style={{ animation: 'scanLineRev 1.8s linear infinite' }}
+              />
+              {/* red/cyan chromatic aberration line */}
+              <div
+                className="absolute inset-x-0 h-[2px]"
+                style={{
+                  background: 'linear-gradient(90deg, #ff003388, transparent, #00ffff88)',
+                  animation: 'scanLine 0.9s linear infinite',
+                  animationDelay: '0.3s',
+                }}
+              />
+
+              {/* === Layer 4: halftone + speed lines === */}
+              <div
+                className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-25"
+                style={{ backgroundImage: 'radial-gradient(circle,#fff 1px,transparent 1px)', backgroundSize: '4px 4px' }}
+              />
+              <div className="absolute inset-0 opacity-10 pointer-events-none speed-lines" />
+
+              {/* === Layer 5: hero alias ghost watermark === */}
+              {char.powers?.role && (
+                <div
+                  className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
+                >
+                  <span
+                    className="font-[var(--font-bangers)] text-[clamp(5rem,20vw,12rem)] tracking-widest whitespace-nowrap"
+                    style={{
+                      color: `${vibrantAccent}12`,
+                      letterSpacing: '0.2em',
+                      animation: 'glitchH 0.7s ease-in-out infinite',
+                    }}
+                  >
+                    {char.powers.role.split(' / ')[0].toUpperCase()}
+                  </span>
+                </div>
+              )}
+
+              {/* === Layer 6: main title with RGB glitch === */}
+              <motion.div
+                initial={{ scale: 0.6, opacity: 0 }}
+                animate={{ scale: [0.6, 1.08, 0.96, 1.03, 1], opacity: 1 }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
+                className="font-[var(--font-bangers)] text-4xl sm:text-6xl lg:text-7xl tracking-[0.15em] text-center select-none z-10 px-4 relative"
+                style={{
+                  color: '#ffffff',
+                  animation: 'rgbSplit 0.4s linear infinite',
+                }}
+              >
+                {!isPowersMode ? 'SOBRECARGANDO' : 'CALIBRANDO'}
+              </motion.div>
+
+              {/* sub-line */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25, duration: 0.3 }}
+                className="mt-3 font-[var(--font-marker)] text-xs sm:text-sm tracking-[0.3em] uppercase z-10 text-center"
+                style={{ color: vibrantAccent, animation: 'flickerIn 2s ease-in-out infinite' }}
+              >
+                {!isPowersMode ? 'Desatando limitador táctico' : 'Cargando variante de traje'}
+              </motion.div>
+
+              {/* === Layer 7: power surge bar === */}
+              <div className="mt-6 z-10 w-[min(80%,260px)] flex flex-col items-center gap-1.5">
+                <div
+                  className="w-full h-2.5 border border-white/20 overflow-hidden"
+                  style={{ backgroundColor: '#0a0a0f' }}
+                >
+                  <motion.div
+                    initial={{ width: '0%' }}
+                    animate={{ width: '100%' }}
+                    transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+                    className="h-full"
+                    style={{
+                      backgroundColor: vibrantAccent,
+                      boxShadow: `0 0 10px ${vibrantAccent}, 0 0 30px ${vibrantAccent}88`,
+                    }}
+                  />
+                </div>
+                <div className="flex justify-between w-full">
+                  {['SYS', 'PWR', 'TAC', 'ARM', 'NET'].map((label) => (
+                    <span
+                      key={label}
+                      className="font-[var(--font-bangers)] text-[9px] tracking-widest"
+                      style={{ color: `${vibrantAccent}99` }}
+                    >
+                      {label}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* === Corner brackets (HUD) === */}
+              {(['tl','tr','bl','br'] as const).map((pos) => (
+                <div
+                  key={pos}
+                  className="absolute w-6 h-6 pointer-events-none"
+                  style={{
+                    top:    pos.startsWith('t') ? 16 : undefined,
+                    bottom: pos.startsWith('b') ? 16 : undefined,
+                    left:   pos.endsWith('l')   ? 16 : undefined,
+                    right:  pos.endsWith('r')   ? 16 : undefined,
+                    borderTop:    pos.startsWith('t') ? `2px solid ${vibrantAccent}` : undefined,
+                    borderBottom: pos.startsWith('b') ? `2px solid ${vibrantAccent}` : undefined,
+                    borderLeft:   pos.endsWith('l')   ? `2px solid ${vibrantAccent}` : undefined,
+                    borderRight:  pos.endsWith('r')   ? `2px solid ${vibrantAccent}` : undefined,
+                  }}
+                />
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {/* ── Close ── */}
         <button
           onClick={onClose}
@@ -125,7 +423,6 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
             backgroundSize: "20px 20px",
           }}
         >
-          {/* make it taller on sm+ screens using a pseudo-fill trick */}
           <style>{`
             @media (min-width: 640px) {
               .modal-img-panel { height: 100% !important; }
@@ -169,8 +466,8 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
             )}
           </div>
 
-          {/* alt toggle */}
-          {char.altImage && !isLocked && (
+          {/* Alt image toggle for standard mode */}
+          {!isPowersMode && char.altImage && !isLocked && (
             <button
               onClick={() => setShowAlt(!showAlt)}
               className="absolute bottom-2 left-2 z-20 px-2 py-1 border-2 border-black bg-yellow-400 hover:bg-yellow-300 font-[var(--font-bangers)] text-[10px] tracking-wider uppercase shadow-[2px_2px_0_#000] transition-all"
@@ -178,7 +475,80 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
               {showAlt ? "Clásico" : "Alt"}
             </button>
           )}
-          {/* halftone */}
+
+          {/* Suit variants selector for Overload mode */}
+          {isPowersMode && !isLocked && char.powers?.suitImages && (
+            <div className="absolute bottom-2 left-2 z-20 flex flex-wrap gap-1.5 max-w-[90%]">
+              {Object.entries(char.powers.suitImages)
+                .sort(([a], [b]) => {
+                  if (a === 'full') return 1;
+                  if (b === 'full') return -1;
+                  return 0;
+                })
+                .map(([variant, path]) => {
+                // "default" is already showing; skip its own button in some designs,
+                // but keeping it so the user can see all variants clearly.
+                const isActive = selectedSuitVariant === variant;
+                const pathStr = typeof path === "string" ? path.trim() : "";
+                const isEmpty = pathStr === "";
+
+                const labelMap: Record<string, string> = {
+                  default: 'Base',
+                  full: 'Full',
+                  alt: 'Alt',
+                  combat: 'Combat',
+                  action: 'Action',
+                };
+                const label = labelMap[variant] ?? variant.toUpperCase();
+
+                if (isEmpty) {
+                  return (
+                    <button
+                      key={variant}
+                      disabled
+                      title="Próximamente — imagen en producción"
+                      style={{
+                        backgroundColor: '#0f172a',
+                        color: `${vibrantAccent}55`,
+                        borderColor: `${vibrantAccent}33`,
+                        cursor: 'not-allowed',
+                      }}
+                      className="px-2.5 py-1 border-2 font-[var(--font-bangers)] text-[10px] tracking-wider uppercase opacity-60 relative"
+                    >
+                      <span>{label}</span>
+                      <span
+                        className="ml-1 text-[8px] font-[var(--font-marker)] normal-case opacity-70"
+                        style={{ color: `${vibrantAccent}88` }}
+                      >
+                        soon
+                      </span>
+                    </button>
+                  );
+                }
+
+                return (
+                  <button
+                    key={variant}
+                    onClick={() => handleVariantChange(variant)}
+                    style={{
+                      backgroundColor: isActive ? vibrantAccent : '#0a0a0f',
+                      color: isActive ? getTextColor(vibrantAccent) : '#ffffff',
+                      borderColor: isActive ? vibrantAccent : '#0a0a0f',
+                      boxShadow: isActive
+                        ? `0 0 10px ${vibrantAccent}88`
+                        : '2px 2px 0 #000',
+                      transform: isActive ? 'translate(1px, 1px)' : 'none',
+                    }}
+                    className="px-2.5 py-1 border-2 font-[var(--font-bangers)] text-[10px] tracking-wider uppercase transition-all hover:scale-105 active:scale-95"
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          {/* halftone overlay */}
           <div className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-10"
             style={{ backgroundImage: "radial-gradient(circle,#fff 1.5px,transparent 1.5px)", backgroundSize: "6px 6px" }} />
         </div>
@@ -217,7 +587,11 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                     color: getTextColor(isPowersMode ? vibrantAccent : accent) 
                   }}
                 >
-                  {isPowersMode ? char.powers?.role : char.role}
+                  {isPowersMode
+                    ? (variantContent.variantLabel
+                        ? `${char.powers?.role?.split(' / ')[0]} — ${variantContent.variantLabel}`
+                        : char.powers?.role)
+                    : char.role}
                 </span>
                 <h2
                   className="font-[var(--font-bangers)] text-4xl sm:text-5xl leading-none tracking-widest flex flex-wrap items-baseline gap-x-2"
@@ -229,7 +603,9 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                       style={{ color: vibrantAccent }}
                       className="text-xl sm:text-2xl font-[var(--font-marker)] tracking-normal normal-case block sm:inline"
                     >
-                      AKA: {char.powers.role.split(" / ")[0].toUpperCase()}
+                      {variantContent.variantLabel
+                        ? variantContent.variantLabel.toUpperCase()
+                        : `AKA: ${char.powers.role.split(' / ')[0].toUpperCase()}`}
                     </span>
                   )}
                 </h2>
@@ -244,7 +620,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                   {isPowersMode ? "HABILIDADES:" : "PERFIL:"}
                 </h4>
                 <ul className="font-sans text-xs leading-relaxed flex flex-col gap-1 pl-3 list-disc list-outside">
-                  {(isPowersMode ? char.powers?.habilidades : char.perfil)
+                  {(isPowersMode ? variantContent.habilidades : char.perfil)
                     ?.map((item: string, idx: number) => (
                       <li key={idx}>{item}</li>
                     ))}
@@ -252,7 +628,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
               </div>
 
               {/* ── significa banner ── */}
-              {isPowersMode && char.powers?.significa && (
+              {isPowersMode && variantContent.significa && (
                 <div
                   className="p-3 border-2 relative bg-[#13131e] mt-2 mb-1 flex-shrink-0"
                   style={{
@@ -267,10 +643,10 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                       color: getTextColor(vibrantAccent),
                     }}
                   >
-                    SIGNIFICA:
+                    {variantContent.variantLabel ? variantContent.variantLabel.toUpperCase() : 'SIGNIFICA:'}
                   </span>
                   <p className="font-sans text-[11px] leading-snug text-white mt-1">
-                    {char.powers.significa}
+                    {variantContent.significa}
                   </p>
                 </div>
               )}
@@ -295,7 +671,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                   {isPowersMode ? "Sobrecarga" : "En Crisis"}
                 </div>
                 <p className="font-sans text-xs sm:text-sm leading-snug">
-                  {isPowersMode ? char.powers?.crisis : char.crisis}
+                  {isPowersMode ? variantContent.crisis : char.crisis}
                 </p>
               </div>
 
@@ -331,7 +707,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
               {/* ── toggle button ── */}
               <div className="pt-2 mt-auto pb-2 sm:pb-0 flex-shrink-0">
                 <button
-                  onClick={() => setIsPowersMode(!isPowersMode)}
+                  onClick={handlePowersModeToggle}
                   style={{
                     backgroundColor: isPowersMode ? darkBg : accent,
                     color: isPowersMode ? vibrantAccent : getTextColor(accent),
@@ -356,6 +732,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
             </>
           )}
         </div>
+        
         {/* ── Fullscreen image lightbox ── */}
         <AnimatePresence>
           {imgFullscreen && currentImage && (
