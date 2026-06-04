@@ -133,3 +133,7 @@ Usa estas descripciones en inglés para alimentar a los generadores de imágenes
 
 ### El Escriba (El Narrador de Código)
 *   **Aspecto:** `surreal humanoid silhouette composed entirely of sheets of torn comic book script paper, surrounded by empty floating word bubbles, black comic ink dripping from its limbs, standing in a void of ink splatters.`
+
+### Judge Null — The Final Arbiter
+
+* **Aspecto:** `colossal eldritch overlord wearing black cathedral-like obsidian armor covered in spikes and ancient infernal details. Its face is an endless void with only two glowing blood-red eyes visible within the darkness. A shattered crown floats above its head while a cosmic cape woven from dead universes trails behind him. Crimson energy pulses through the cracks of his armor like the universe bleeding from old wounds. Reality fractures, shadows stretch and space itself warps in his presence. Living embodiment of the end, judgment and annihilation
