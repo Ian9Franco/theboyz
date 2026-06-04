@@ -12,7 +12,7 @@ La historia continúa justo después del escape en el búnker de Vietnam (Saga G
 3. **El Casino y la infiltración:** Los tres pibes se dirigen a un casino de lujo en Los Ángeles. Julián (gracias a sus habilidades y su audacia) juega al póker y gana una montaña de fichas mintiendo descaradamente sobre las reglas. Mientras tanto, Uandi coquetea y cuenta historias exageradas en el bar.
 4. **El Encuentro con Sofi:** En el lounge del casino, Ian conoce a **Sofi** (quien en esta saga es dibujada con pelo corto rizado y suéter de cuello alto). Ella revela que también vio anomalías en las pantallas del casino. El grupo se reúne y se retira a un hotel, donde Julián relata cómo fue interrogado por la policía sobre el "camión verde" antes de aparecer misteriosamente en los Backrooms. Sofi comprende que están diciendo la verdad y que el "hombre de ojos azules" (Mati Prime) que hackea las pantallas es una amenaza real.
 5. **La Aventura de Volvo en el Cyberpunk:** Paralelamente, tras saltar por el portal al final de Green Truck, Volvo despierta en una ciudad lluviosa y futurista. Visita una tienda de reparación interdimensional y cambia su pistola eléctrica averiada por un cañón de portales alimentado con líquido verde. 
-6. **El Giro de Ianlander y Volvo Butcher:** Volvo salta con su nueva arma y llega a un universo alterno soleado. En las pantallas de Times Square, descubre anuncios de Vought International promocionando a **"Ianlander"** (un clon/variante de Ian convertido en el superhéroe tiránico Homelander). Antes de que Volvo entre en pánico, es abordado en un callejón por **VOVLO Butcher** (de *The Boys*), quien le dice: *"Vení conmigo antes de que Ian te vea"*, preparando el terreno para la Guerra Mativersal.
+6. **El Giro de Julander y Volvo Butcher:** Volvo salta con su nueva arma y llega a un universo alterno soleado. En las pantallas de Times Square, descubre anuncios de Vought International promocionando a **"Julander"** (un clon/variante de Julián convertido en el superhéroe tiránico Homelander). Antes de que Volvo entre en pánico, es abordado en un callejón por **VOVLO Butcher** (de *The Boys*), quien le dice: *"Vení conmigo antes de que Julián te vea"*, preparando el terreno para la Guerra Mativersal.
 
 ---
 
@@ -286,27 +286,27 @@ La historia continúa justo después del escape en el búnker de Vietnam (Saga G
 * **Viñeta 1 (Arriba Izquierda):** Volvo se encuentra en Times Square, frente a un edificio con el logo gigante de "VOUGHT".
 * **Viñeta 2 (Arriba Derecha):** Ve un noticiero que anuncia una entrevista exclusiva con The Seven.
 * **Viñeta 3 (Centro Izquierda):** Mira un cartel de publicidad de The Seven y se asombra al ver al líder.
-* **Viñeta 4 (Centro Derecha):** El líder de The Seven tiene exactamente el rostro de Ian, vestido con el traje de Homelander.
-* **Viñeta 5 (Abajo Izquierda):** Volvo entra en shock absoluto y susurra: *"...¿Ian?"*.
-* **Viñeta 6 (Abajo Derecha):** En la pantalla gigante, el clon de Ian sonríe de forma maquiavélica diciendo: *"Todo está bajo control"*.
+* **Viñeta 4 (Centro Derecha):** El líder de The Seven tiene exactamente el rostro de Julián, vestido con el traje de Homelander.
+* **Viñeta 5 (Abajo Izquierda):** Volvo entra en shock absoluto y susurra: *"...¿Julián?"*.
+* **Viñeta 6 (Abajo Derecha):** En la pantalla gigante, el clon de Julián sonríe de forma maquiavélica diciendo: *"Todo está bajo control"*.
 
 #### Página 9 (9.webp - Labeled "Viñeta 6 y 8 (rehacida)")
-* **Viñeta 1 (Izquierda):** El cartel publicitario de Vought en primer plano mostrando a Ian con el traje de Homelander, lentes y ojos celestes brillantes. Abajo en letras gigantes dice **"IANLANDER - America's Greatest Hero"**.
-* **Viñeta 2 (Derecha):** Volvo (remera naranja) observa la entrevista televisiva de Ianlander.
+* **Viñeta 1 (Izquierda):** El cartel publicitario de Vought en primer plano mostrando a Julián con el traje de Homelander, barba corta y ojos celestes brillantes (sin lentes). Abajo en letras gigantes dice **"JULANDER - America's Greatest Hero"**.
+* **Viñeta 2 (Derecha):** Volvo (remera naranja) observa la entrevista televisiva de Julander.
 
 #### Página 10 (10.webp - Labeled "Página 1")
-* **Viñeta 1 (Arriba Izquierda):** Volvo camina cabizbajo intentando procesar que Ian es Homelander. Banner en español con errores (*"cartel Ian-Homelander"*, traducción literal de billboard).
-* **Viñeta 2 y 3 (Arriba Derecha):** Volvo mira una pantalla de Ianlander y comenta que todo se está volviendo muy raro. Una voz detrás le dice que eso no es lo más raro que verá hoy.
+* **Viñeta 1 (Arriba Izquierda):** Volvo camina cabizbajo intentando procesar que Julián es Homelander. Banner en español con errores (*"cartel Julián-Homelander"*, traducción literal de billboard).
+* **Viñeta 2 y 3 (Arriba Derecha):** Volvo mira una pantalla de Julander y comenta que todo se está volviendo muy raro. Una voz detrás le dice que eso no es lo más raro que verá hoy.
 * **Viñeta 4 (Centro):** Volvo se da la vuelta en el callejón y se encuentra cara a cara con **Billy Butcher** (de gabardina marrón y camisa a cuadros).
 * **Viñeta 5 y 6 (Abajo Izquierda/Centro):** Volvo se queda mudo de la sorpresa. Butcher sonríe y le dice que tuvo la misma reacción.
-* **Viñeta 7 (Abajo Derecha):** Butcher señala el horizonte urbano (el edificio de Vought) y le dice: *"Vamos. Antes de que Ian te vea"*, cerrando el capítulo.
+* **Viñeta 7 (Abajo Derecha):** Butcher señala el horizonte urbano (el edificio de Vought) y le dice: *"Vamos. Antes de que Julián te vea"*, cerrando el capítulo.
 
 ---
 
 ## 4. Recomendaciones para el Rediseño de Viñetas y Guion
 
 1. **Unificar Diseños y Ropa en el Rediseño:**
-   * **Ian:** Mantener siempre su remera marrón y lentes. En el Capítulo 3 (con el cartel de Ianlander), debe quedar claro que Ianlander es una versión alternativa (sin lentes en la publicidad clásica pero con lentes y ojos brillantes de poder en la versión "rehacida").
+   * **Ian:** Mantener siempre su remera marrón y lentes. (El líder de Vought en el cartel del Capítulo 3 ya no es Ian, sino Julander/Julián sin lentes).
    * **Sofi:** Rediseñar por completo sus apariciones en el casino para que coincida con su diseño del Roster (cabello rubio en coleta, anteojos). Esto es crucial para la continuidad de la web.
    * **Volvo:** Mantener su remera naranja característica y pantalones oscuros. Si lleva campera al inicio de Ch 3 (por el frío/lluvia), que se la quite o la mantenga de forma lógica, evitando que su camiseta cambie de color a azul de una viñeta a otra.
    * **Uandi:** Fijar el logotipo de su camiseta para que sea siempre la marca Kappa real u otra marca ficticia unificada (ej. "The Boyz" logo), eliminando las mutaciones de IA ("Roppa", "Keppia").

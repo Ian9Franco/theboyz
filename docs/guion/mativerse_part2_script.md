@@ -20,14 +20,14 @@ Este guion continúa de forma inmediata tras el final de *Mativerse Part 1*, lle
     *   **Volvo:** "Oye, tengo sentimientos. Y un bláster de portales que probablemente vale más que tu traje."
 
 *   **Viñeta 2:** *(Medio plano de A-Uandi. Está sentado en una camilla militar, con el traje deportivo azul y blanco de A-Train rasgado en la pierna izquierda, la cual está vendada. Sostiene un suero azul brillante).*
-    *   **A-Uandi:** "Olvídate del bláster. Si no tiene velocidad de escape, Ianlander lo va a convertir en puré antes de que pueda pestañear."
+    *   **A-Uandi:** "Olvídate del bláster. Si no tiene velocidad de escape, Julander lo va a convertir en puré antes de que pueda pestañear."
 
 *   **Viñeta 3:** *(Plano americano. Queen Sofi entra en escena desde un pasillo lateral. Lleva una armadura pesada de guerrera color acero con detalles rojos y una tiara plateada sobre su cabello corto con rulos. Sostiene una espada de hoja ancha sobre sus hombros, mirándolos con desdén).*
     *   **Queen Sofi:** "Cállate la boca, velocista inútil. Al menos este chico tuvo el valor de romper la barrera dimensional sin doparse."
 
-*   **Viñeta 4:** *(Plano de detalle. En una esquina oscura, The Juli-Noir (Julián con traje de ninja negro y parches amarillos) permanece completamente inmóvil. Sostiene un cartel de cartón escrito a mano).*
-    *   **Cartel de The Juli-Noir:** "YO SÓLO ESTOY AQUÍ POR LA PAGA. Y SOY EL MÁS FUERTE."
-    *   **Volvo:** *(Mirando el cartel)* "Sí... veo que en todos los universos Julián sigue siendo un mentiroso compulsivo."
+*   **Viñeta 4:** *(Plano de detalle. En una esquina oscura, Ian Boy (Ian con uniforme militar retro verde oliva, casco retro de acero templado y su escudo triangular tipo cometa con un águila grabada) se encuentra limpiando su escudo de forma obsesiva. Lleva sus lentes redondos negros debajo del casco, mostrando su corte militar crew cut despeinado).*
+    *   **Ian Boy:** "Esta porquería de escudo triangular está llena de polvo dimensional. En mis tiempos, el metal templado no se ensuciaba así."
+    *   **Volvo:** *(Mirando a Ian Boy)* "Increíble... Un Ian militar de la vieja escuela que en vez de inventar cosas, se queja como un abuelo cascarrabias."
 
 ---
 

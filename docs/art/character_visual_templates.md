@@ -57,8 +57,8 @@ Usa estas descripciones en inglés para alimentar a los generadores de imágenes
 
 ## 🎭 2. Variantes de "The Boys" (Vought Crossover)
 
-### Ianlander (Clon de Ian / Homelander)
-*   **Base:** Rostro y cabello de **Ian** (lentes redondos negros, pelo ondulado).
+### Julander (Clon de Julián / Homelander)
+*   **Base:** Rostro y cabello de **Julián** (pelo corto enrulado, barba corta, sin lentes).
 *   **Traje:** `arrogant smile, glowing light-blue eyes, wearing a glossy blue and red spandex superhero suit with gold eagle pauldrons on shoulders, a large red flag-like cape, and red leather gloves.`
 
 ### Volvo Butcher (Variante de Volvo / Billy Butcher)
@@ -73,9 +73,9 @@ Usa estas descripciones en inglés para alimentar a los generadores de imágenes
 *   **Base:** Cuerpo y rostro de **Uandi** (muscular, barba corta, lentes redondos, tatuaje en brazo izquierdo).
 *   **Traje:** `blue and white aerodynamic athletic superhero runner suit, wearing blue-tinted speed goggles, running at supersonic speed leaving a trail of blue motion lines.`
 
-### The Juli-Noir (Variante de Julián / Black Noir)
-*   **Base:** Cuerpo de **Julián** (185 cm, contextura media).
-*   **Traje:** `ninja dressed in solid black tactical stealth suit with yellow square shoulder patches, a completely smooth black helmet mask with no facial features, holding up a cardboard sign with handwritten black text.`
+### Ian Boy (Variante de Ian / Soldier Boy)
+*   **Base:** Rostro de **Ian** (lentes redondos con marco negro), con corte de cabello militar texturizado de la vieja escuela (crew cut, corto a los lados).
+*   **Traje:** `cynical grumpy expression, wearing dark olive green scale-pattern tactical military armor suit with a heavy leather chest harness, bronze buckles, and reinforced metal pauldrons. Retro World War II steel combat helmet with black-rimmed glasses fitted underneath. Carrying a battle-worn triangular medieval-style kite shield forged from dark matte metal with a stylized bronze eagle embossed in the center. Shield has scratches and battle dents.`
 
 ### Queen Sofi (Variante de Sofi / Queen Maeve)
 *   **Base:** Rostro y cabello de **Sofi** (rulos atados en rodete, ojos oscuros, sin lentes).
@@ -104,9 +104,6 @@ Usa estas descripciones en inglés para alimentar a los generadores de imágenes
 ### Mati Pixel
 *   **Estilo Visual:** `retro 8-bit pixel art character, flat 2D look, jagged pixelated edges, limited color palette, casting a flat 2D shadow, posing inside a 3D digital grid.`
 
-### Mati Dealer / "Wildcard"
-*   **Base:** Rostro de **Mati** (sonrisa confiada, hoyuelos).
-*   **Traje:** `wearing a sleek elegant dealer outfit with a purple satin vest, white button-up dress shirt, black bowtie, holding glowing violet holographic playing cards and floating poker chips.`
 
 ### Mati Warden / "El Juez"
 *   **Base:** Rostro de **Mati** (expresión seria e implacable, ojos brillando con energía espectral).

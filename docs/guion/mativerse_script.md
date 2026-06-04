@@ -418,24 +418,24 @@ Este documento contiene los diálogos y textos de narración (en español) organ
     *   Reportera: "...y no se pierdan esta noche la entrevista exclusiva con Vought."
 *   **Viñeta 3 y 4:** *(Volvo se acerca al cartel).*
 *   **Viñeta 5:**
-    *   Volvo: "...¿Ian?"
+    *   Volvo: "...¿Julián?"
 *   **Viñeta 6:**
-    *   Ianlander: "Todo está bajo control."
+    *   Julander: "Todo está bajo control."
 
 ### PÁGINA 40
-*   **Viñeta 1:** *(Cartel publicitario de Ianlander).*
+*   **Viñeta 1:** *(Cartel publicitario de Julander).*
 *   **Viñeta 2:**
-    *   Ianlander (en TV): "Vought protege a la nación. No hay nada de qué preocuparse."
+    *   Julander (en TV): "Vought protege a la nación. No hay nada de qué preocuparse."
 
 ### PÁGINA 41
 *   **Viñeta 1:**
-    *   Volvo: "Esto es una locura. Ian... ¿un superhéroe fascista?"
+    *   Volvo: "Esto es una locura. Julián... ¿un superhéroe fascista?"
 *   **Viñeta 2 y 3:**
     *   Volvo: "Cada vez entiendo menos..."
     *   Voz Detrás: "Si crees que eso es raro, muchacho..."
 *   **Viñeta 4:** *(Butcher aparece ante él).*
 *   **Viñeta 5 y 6:**
     *   Volvo: "¿Y tú quién demonios eres?"
-    *   Butcher: "Digamos que tengo el mismo problema que tú con ese tal Ian."
+    *   Butcher: "Digamos que tengo el mismo problema que tú con ese tal Julián."
 *   **Viñeta 7:**
-    *   Butcher: "Vente conmigo, chaval. Antes de que Ianlander nos vea."
+    *   Butcher: "Vente conmigo, chaval. Antes de que Julander nos vea."

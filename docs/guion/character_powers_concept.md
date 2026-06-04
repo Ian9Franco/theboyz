@@ -209,10 +209,10 @@ Al ser la saga el "Mativerse", existe una regla fundamental en el nexo: **Todo M
 
 En dimensiones dominadas por el corporativismo y la corrupción de "Vought", Los Pibes existen como versiones de los héroes y vigilantes de la serie original:
 
-### 1. Ianlander — El Homelander Inseguro
+### 1. Julander — El Homelander Inseguro (Julián Variant)
 *   **Rol:** El "Súper" más poderoso y falso.
 *   **Habilidades:** Vuelo supersónico, fuerza física colosal, invulnerabilidad e implacables láseres oculares de color azul celeste.
-*   **Estética Visual:** Traje de spandex azul brillante, capa estrellada con barras rojas y blancas, y una sonrisa congelada de modelo publicitario.
+*   **Estética Visual:** Traje de spandex azul brillante, capa estrellada con barras rojas y blancas, y una sonrisa congelada de modelo publicitario. (Usa el rostro y cabello de Julián, con su barba corta, pero sin lentes).
 
 ### 2. Volvo Butcher — "El Carnicero" (Billy Butcher Variant)
 *   **Rol:** Líder del grupo clandestino de resistencia contra los Súper.
@@ -229,10 +229,13 @@ En dimensiones dominadas por el corporativismo y la corrupción de "Vought", Los
 *   **Habilidades:** Supervelocidad a nivel mach que, combinada con su masa muscular masiva, lo convierte en una bola de demolición humana.
 *   **Estética Visual:** Traje deportivo azul y blanco con gafas aerodinámicas y tatuajes que destellan en luz azul.
 
-### 5. The Juli-Noir — El Black Noir Mentiroso (Julián Variant)
-*   **Rol:** El asesino ninja silencioso.
-*   **Habilidades:** Sigilo absoluto, regeneración celular acelerada y dominio letal de armas blancas. Es mudo y se comunica escribiendo tarjetas donde sigue escribiendo mentiras ridículas.
-*   **Estética Visual:** Traje táctico de ninja negro opaco blindado, con una máscara lisa y parches amarillos.
+### 5. Ian Boy — El Soldier Boy de la Vieja Escuela (Ian Variant)
+*   **Rol:** El súper veterano armado y estratega de la vieja escuela.
+*   **Habilidades:** Fuerza sobrehumana y durabilidad extrema (casi invulnerable). Utiliza un letal escudo táctico para desviar impactos pesados o como arma cortante/de impacto. Es capaz de canalizar y disparar un pulso de energía electromagnética desestabilizadora desde su pecho (un reactor/emisor EM bajo placas de blindaje pectoral).
+*   **Estética Visual (El Traje):** Uniforme de combate retro fabricado en tejido balístico verde oliva con patrón de escamas sutiles, arnés pectoral de cuero pesado con hebillas de bronce desgastado y hombreras metálicas reforzadas. Guantes tácticos de cuero grueso y botas militares robustas. Sus lentes redondos negros están perfectamente integrados bajo un casco de combate retro de acero templado de estilo Segunda Guerra Mundial.
+*   **El Escudo:** Escudo triangular clásico (tipo cometa o bajomedieval) con bordes angulares y afilados en la punta inferior. Forjado en metal templado oscuro y mate, con un águila estilizada de bronce con las alas desplegadas en relieve en el centro, mostrando abolladuras y marcas de metralla funcionales.
+*   **El Cabello y Peinado:** Corte militar clásico de la vieja escuela (*crew cut* o *high and tight* texturizado), corto a los lados y denso en la parte superior, con un aspecto rudo y despeinado de forma descuidada por el casco.
+*   **Actitud:** Un veterano cínico y arrogante de otra época. Habla con tono grave, pausado y cortante; tiene un pragmatismo brutal de humor negro y una masculinidad ruda, imperturbable y letal en combate.
 
 ### 6. Queen Sofi — La Guerrera Desencantada (Queen Maeve Variant)
 *   **Rol:** La segunda supe más fuerte de Vought, hastiada de la falsedad corporativa.

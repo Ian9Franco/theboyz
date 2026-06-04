@@ -23,14 +23,14 @@ Prompts atómicos por viñeta. Cada panel contiene solo la **escena** y el **--a
 *   **Sofi:** `Sofi, a 22-year-old young woman, long straight blonde hair tied in a neat ponytail, black-rimmed glasses, wearing a dark blue jacket over a white top.`
 *   **Volvo:** `Volvo, a 27-year-old rugged man, spiky dark hair, neat beard, wearing a plain orange t-shirt.`
 *   **Billy Butcher:** `Billy Butcher, a rugged bearded man, dark messy hair, wearing a dark grey plaid button-up shirt under a long brown trenchcoat.`
-*   **Ianlander:** `Ianlander, a clone of Ian with curly dark hair, black-rimmed glasses, wearing a blue and red spandex superhero suit with gold eagle pauldrons and a red cape.`
+*   **Julander:** `Julander, a clone of Julián with short curly black hair, neat short black beard and mustache, dark brown eyes (or glowing light-blue eyes), wearing a blue and red spandex superhero suit with gold eagle pauldrons and a red cape. No glasses.`
 
 ---
 
 ## 📔 PORTADAS (COVERS)
 
 ### Portada de la Saga: Mativerse Part 1 (Mativersal War)
-`A premium textless comic book cover design. In the foreground, Billy Butcher and Volvo stand side-by-side looking determined. Above them, a giant vertical split screen: on the left, Ianlander with glowing blue eyes, on the right, Mati Prime smiling coldly. Green and blue energy sparks crackling in the air. --ar 9:16`
+`A premium textless comic book cover design. In the foreground, Billy Butcher and Volvo stand side-by-side looking determined. Above them, a giant vertical split screen: on the left, Julander with glowing blue eyes, on the right, Mati Prime smiling coldly. Green and blue energy sparks crackling in the air. --ar 9:16`
 
 ### Portada - Capítulo 1: The First Incursion
 `A premium textless comic book cover design. A swirling blue dimensional portal opens in the sky above Hollywood Boulevard. Ian, Julián, and Uandi are falling through the portal. The iconic 'HOLLYWOOD' sign is visible on the hills in the background. --ar 9:16`
@@ -39,7 +39,7 @@ Prompts atómicos por viñeta. Cada panel contiene solo la **escena** y el **--a
 `A premium textless comic book cover design. Julián sitting at a high-stakes poker table inside a luxurious casino, holding a massive stack of chips and giving a smug smile. In the background, Ian is talking to Sofi (ponytail, glasses) at a lounge table while a TV screen glitches behind them. --ar 9:16`
 
 ### Portada - Capítulo 3: Worlds
-`A premium textless comic book cover design. Volvo holding a heavy bronze portal gun with swirling green liquid, stepping through a green portal into a bright Times Square. Looming in the background is a giant vertical poster of Ianlander and the Vought International skyscraper. --ar 9:16`
+`A premium textless comic book cover design. Volvo holding a heavy bronze portal gun with swirling green liquid, stepping through a green portal into a bright Times Square. Looming in the background is a giant vertical poster of Julander and the Vought International skyscraper. --ar 9:16`
 
 ---
 
@@ -500,7 +500,7 @@ Prompts atómicos por viñeta. Cada panel contiene solo la **escena** y el **--a
     `Close-up of Volvo running onto the sidewalk, looking relieved under the sun. --ar 3:4`
 
 ### PÁGINA 38
-> 👥 **Personajes en esta página:** Volvo, Ianlander (en Cartelera)
+> 👥 **Personajes en esta página:** Volvo, Julander (en Cartelera)
 
 *   **Viñeta 1 and 2 (Panel 1):**
     `Volvo (wearing his dark grey jacket over his orange t-shirt) feels a chill, walking away to find answers. --ar 3:4`
@@ -510,32 +510,32 @@ Prompts atómicos por viñeta. Cada panel contiene solo la **escena** y el **--a
     `Close-up of Volvo looking up at the billboard with a deeply worried, confused expression. --ar 3:4`
 
 ### PÁGINA 39
-> 👥 **Personajes en esta página:** Volvo, Ianlander (en Cartelera / TV)
+> 👥 **Personajes en esta página:** Volvo, Julander (en Cartelera / TV)
 
 *   **Viñeta 1 (Panel 1):**
     `Volvo stands in a crowded city square (Times Square). A massive skyscraper has a giant vertical logo that says 'VOUGHT' with the V7 logo. --ar 2:3`
 *   **Viñeta 2 (Panel 2):**
     `Volvo watches a TV screen in a shop window where a news anchor is talking. --ar 3:4`
 *   **Viñeta 3 and 4 (Panel 3):**
-    `Volvo looks closer at the billboard. The leader of the superheroes on the billboard has curly dark hair, black-rimmed glasses, and Ian's exact face, smiling smugly in the Homelander suit (Ianlander). --ar 2:3`
+    `Volvo looks closer at the billboard. The leader of the superheroes on the billboard has short curly black hair, a neat stubble beard, and Julián's exact face, smiling smugly in the Homelander suit (Julander). --ar 2:3`
 *   **Viñeta 5 (Panel 4):**
     `Extreme close-up of Volvo's face in absolute shock, mouth slightly open. --ar 3:4`
 *   **Viñeta 6 (Panel 5):**
-    `On the TV screen, the Ian clone (Ianlander) points at the camera with his red-gloved finger, smiling arrogantly. --ar 3:4`
+    `On the TV screen, the Julián clone (Julander) points at the camera with his red-gloved finger, smiling arrogantly. --ar 3:4`
 
 ### PÁGINA 40
-> 👥 **Personajes en esta página:** Ianlander (en Cartelera / TV), Volvo
+> 👥 **Personajes en esta página:** Julander (en Cartelera / TV), Volvo
 
 *   **Viñeta 1 (Panel 1):**
-    `A giant Vought billboard displaying Ianlander (Ian with glasses, Homelander suit, red cape, gold eagles) smiling smugly with glowing blue eyes. Giant text on the billboard says 'IANLANDER - America's Greatest Hero'. Full-page vertical splash panel, aspect ratio 9:16. --ar 9:16.`
+    `A giant Vought billboard displaying Julander (Julián with curly black hair, neat beard, Homelander suit, red cape, gold eagles) smiling smugly with glowing blue eyes. Giant text on the billboard says 'JULANDER - America's Greatest Hero'. Full-page vertical splash panel, aspect ratio 9:16. --ar 9:16.`
 *   **Viñeta 2 (Panel 2):**
-    `Volvo (orange t-shirt, spiky hair, beard) is watching the live TV broadcast of Ianlander being interviewed by reporters with microphones. --ar 2:3`
+    `Volvo (orange t-shirt, spiky hair, beard) is watching the live TV broadcast of Julander being interviewed by reporters with microphones. --ar 2:3`
 
 ### PÁGINA 41
 > 👥 **Personajes en esta página:** Volvo, Billy Butcher
 
 *   **Viñeta 1 (Panel 1):**
-    `Volvo walks down a side street, head down, trying to process what he just saw. A large poster of Ianlander is visible on the wall. --ar 2:3`
+    `Volvo walks down a side street, head down, trying to process what he just saw. A large poster of Julander is visible on the wall. --ar 2:3`
 *   **Viñeta 2 and 3 (Panel 2):**
     `Volvo stops in a dark alley, looking at a screen. A rugged man in a trenchcoat approaches him from behind, speaking. --ar 3:4`
 *   **Viñeta 4 (Panel 3):**

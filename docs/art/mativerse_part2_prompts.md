@@ -27,7 +27,7 @@ Prompts atómicos por viñeta. Cada panel contiene solo la **escena** y el **--a
 *   **Jazlight (Jaz Variant):** `Jazlight, a young woman with sunset-gold hair, clear-rimmed glasses, wearing a corporate white and gold superhero suit with star motifs.`
 *   **A-Uandi (Uandi Variant):** `A-Uandi, a muscular man with curly hair, short beard, wire glasses, wearing a blue and white athletic superhero runner suit, left leg bandaged.`
 *   **Queen Sofi (Sofi Variant):** `Queen Sofi, a young woman with dark curly hair bun, wearing steel battle armor with dark red trim and a silver tiara.`
-*   **Juli-Noir (Julián Variant):** `Juli-Noir, a ninja in a solid black stealth suit and smooth mask.`
+*   **Ian Boy (Ian Variant):** `Ian Boy, a battle-worn soldier with a crew cut military haircut, round black-rimmed glasses, wearing a dark olive green scale-pattern tactical military armor suit with a heavy leather chest harness and a retro steel combat helmet. Holding a battle-worn triangular kite shield with an embossed bronze eagle.`
 *   **Supertrucker:** `Supertrucker, a superhero with a body made of polished reflective chrome metal, wearing a red canvas cape and a chrome trucker cap.`
 
 ---
@@ -62,7 +62,7 @@ Prompts atómicos por viñeta. Cada panel contiene solo la **escena** y el **--a
     `Medium shot. Volvo Butcher is lighting a cigarette with a Zippo, the orange flame illuminating his rugged face and cynical smirk. In the background shadows, three figures step forward. --ar 3:4`
 
 ### PÁGINA 2
-> 👥 **Personajes en esta página:** Jazlight, A-Uandi, Queen Sofi, Juli-Noir, Volvo
+> 👥 **Personajes en esta página:** Jazlight, A-Uandi, Queen Sofi, Ian Boy, Volvo
 
 *   **Viñeta 1 (Panel 1):**
     `Close-up on Jazlight (Jaz variant: long straight sunset-gold ombre hair, clear-rimmed cat-eye glasses, wearing a white and gold corporate superhero suit with star motifs). Her hands are glowing with bright white energy. Suspicious and defensive expression. --ar 3:4`
@@ -71,7 +71,7 @@ Prompts atómicos por viñeta. Cada panel contiene solo la **escena** y el **--a
 *   **Viñeta 3 (Panel 3):**
     `Medium full shot of Queen Sofi (Sofi variant: athletic woman, dark brown curly hair in a messy bun, light skin, no glasses, wearing steel battle armor with dark red trim and a silver tiara). She rests a massive broadsword on her shoulders, looking with absolute boredom and authority. --ar 3:4`
 *   **Viñeta 4 (Panel 4):**
-    `In a dark corner. The Juli-Noir (Julián variant: ninja in solid black stealth suit, smooth mask) stands completely still, holding a cardboard sign: "I'M INDESTRUCTIBLE AND TOTALLY RIPPED". --ar 3:4`
+    `In a dark corner. Ian Boy (Ian variant: battle-worn soldier, green scale-pattern tactical armor, heavy leather chest harness, crew cut hair) is sitting on a crate, meticulously polishing his triangular bronze-eagle kite shield. He wears his round black-rimmed glasses under his retro steel combat helmet's visor. --ar 3:4`
 
 ---
 
