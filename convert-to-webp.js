@@ -4,14 +4,11 @@ const sharp = require('sharp');
 
 // --- CONFIGURACIÓN ---
 const args = process.argv.slice(2);
-const deleteOriginals = args.includes('--delete');
-const allPublic = args.includes('--all');
+const deleteOriginals = true; // Por defecto siempre eliminar originales
 const dryRun = args.includes('--dry-run');
 const quality = 80;
 
-const targetDir = allPublic
-  ? path.join(__dirname, 'public')
-  : path.join(__dirname, 'public', 'comics');
+const targetDir = path.join(__dirname, 'public'); // Por defecto toda la carpeta public
 
 const PROTECTED_ASSETS = ['logo.png', 'ian.png', 'jaz.png', 'julian.png', 'mati.png', 'uandi.png', 'volvo.png', 'matapobre.png', 'sofi.png'];
 

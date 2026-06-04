@@ -191,11 +191,11 @@ Al ser la saga el "Mativerse", existe una regla fundamental en el nexo: **Todo M
     *   Intercambia elementos entre distintos planos visuales de la realidad: puede convertir una sombra de fondo en una pared sólida de primer plano, o intercambiar la posición de la perspectiva visual para moverse entre las capas dimensionales.
 *   **Estética Visual:** Aspecto retro pixelado de 8 bits con bordes dentados y paleta de colores limitada (256 colores), moviéndose con animaciones de pocos fotogramas dentro de un entorno tridimensional.
 
-### 6. Mati Dealer — "Wildcard" (El Crupier del Destino)
-*   **Perfil:** Una variante elegante y calculadora de un universo de casinos y apuestas, obsesionada con la probabilidad y el equilibrio de las rachas de suerte.
-*   **Poder Principal:** *Intercambio de Suerte.*
-    *   Transfiere la fortuna y la desgracia entre personas. No crea suerte de la nada; si un enemigo tiene una suerte extraordinaria (esquiva balas o acierta disparos imposibles), Mati Dealer absorbe esa racha y la intercambia con otro objetivo en forma de mala suerte catastrófica.
-*   **Estética Visual:** Traje de crupier elegante con chaleco de satén morado, barajando cartas y fichas holográficas violetas que destellan con partículas doradas.
+### 6. Mati Dweller — "El Morador" (Bestia del Abismo)
+*   **Perfil:** Una variante corrompida y espeluznante que quedó atrapada demasiado tiempo en los rincones más profundos y oscuros del multiverso. Ha perdido casi toda su humanidad, mutando en un depredador implacable y de pesadilla que es uno con la oscuridad pura.
+*   **Poder Principal:** *Intercambio de Percepción (o Intercambio de Terror).*
+    *   Transfiere su propia conexión con el abismo a la mente de sus víctimas, intercambiando la cordura y tranquilidad del objetivo por un terror absoluto y alucinaciones paralizantes. En combate, puede intercambiar su masa física con cualquier sombra del entorno, permitiéndole "nadar" en la oscuridad y emerger de cualquier rincón sin ser visto.
+*   **Estética Visual:** Una figura monstruosa, encorvada y gigantesca. Sus extremidades son desproporcionadamente largas, terminadas en garras de obsidiana. Su rostro está envuelto en un manto de sombras densas y vivientes que rezuman como humo negro, de donde solo brillan unos pequeños ojos blancos, vacíos y depredadores en la oscuridad.
 
 ### 7. Mati Warden — "El Juez" (The Judge)
 *   **Perfil:** Un Mati severo e inflexible obsesionado con la ley de la equivalencia y el equilibrio en el multiverso.
@@ -277,3 +277,5 @@ En dimensiones dominadas por el corporativismo y la corrupción de "Vought", Los
     *   *Rewriting (Reescritura en Tiempo Real):* Puede materializar "bocadillos de diálogo" físicos del aire para silenciar a los personajes, cambiar el texto de sus burbujas de diálogo para alterar sus intenciones o manipular las viñetas físicas del cómic (desplazar los bordes para aplastar a un personaje).
     *   *Generador de Clichés:* Fuerza a los personajes a realizar acciones absurdas (como tropezarse o comer hamburguesas gigantes en momentos inapropiados) alterando las leyes físicas de la escena.
 *   **Estética Visual:** Una silueta humanoide hecha completamente de hojas de guiones de cómic arrugadas que flotan en el aire, rodeada de letras, bocadillos de diálogo vacíos y tinta negra que gotea en el suelo.
+
+
