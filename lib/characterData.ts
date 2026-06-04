@@ -20,7 +20,7 @@ export const CHARACTER_DETAILS = [
       stats: { fuerza: 4, inteligencia: 6, carisma: 6, suerte: 5, combate: 3, defensa: 3, especialVal: 1 },
       especialLabel: 'Sistemas',
       powers: {
-        role: 'Vesperwing',
+        role: '???',
         habilidades: [
           'Visión de Sistemas: Capacidad cognitiva para escanear flujos de información, dinámicas de terreno y posicionamiento enemigo en tiempo real.',
           'Herramientas Ghost: Interfaz GhostLens de reconocimiento activo y Ghostwatch para coordinar drones de soporte que expanden su control de mapa.',
@@ -79,7 +79,7 @@ export const CHARACTER_DETAILS = [
       stats: { fuerza: 1, intelligence: 6, carisma: 5, suerte: 6, combate: 2, defensa: 2, especialVal: 2 },
       especialLabel: 'Aura-Anclaje',
       powers: {
-        role: 'Oracle',
+        role: '???',
         habilidades: [
           'Geometría de Anclaje: Manifiesta estructuras cristalinas de energía psíquica pura en el plano físico, utilizándolas como escudos, plataformas flotantes o jaulas de contención.',
           'Resonancia Emocional: Lee las frecuencias vibracionales de los estados de ánimo circundantes, permitiéndole calmar el pánico o disipar la hostilidad sin necesidad de invadir pensamientos.',
@@ -128,7 +128,7 @@ export const CHARACTER_DETAILS = [
       // Unlocked after: Green Truck Ch.1
       hint: 'Terminá el Capítulo 1 de Green Truck para desbloquear.',
       powers: {
-        role: 'Wildcard',
+        role: '???',
         habilidades: [
           'Ecos de Presencia: Manifiesta hasta tres duplicados semisólidos de sí mismo. Estas copias pueden correr, hablar e interactuar de forma limitada con el entorno para desviar la atención.',
           'Punto Ciego Cognitivo: Altera sutilmente la percepción del objetivo, hackeando su cerebro para que deje de registrar su presencia física directa (es una ilusión cognitiva, no invisibilidad real).',
@@ -188,7 +188,7 @@ export const CHARACTER_DETAILS = [
   // Unlocked after: Mativerse Ch.3 Worlds
   hint: 'Terminá el Capítulo 3 (Worlds) de Mativerse Part 1.',
   powers: {
-    role: 'Swapfire',
+    role: '???',
     habilidades: [
       'Intercambio Táctico: Transpone instantáneamente las posiciones físicas de dos objetos, individuos o elementos del entorno, enviando aliados a cubierto y enemigos a trampas preexistentes.',
       'Dagas de Marcado: Armas arrojadizas de su invención que actúan como balizas cuánticas, permitiéndole teleportarse de forma inmediata hacia la ubicación exacta del impacto.',
@@ -249,7 +249,7 @@ export const CHARACTER_DETAILS = [
   // Unlocked after: Green Truck Ch.4 No Turning Back
   hint: 'Terminá el Capítulo 4 (No Turning Back) de Green Truck.',
   powers: {
-    role: 'Aegis',
+    role: '???',
     habilidades: [
       'Acumulación Cinética: La tinta de sus tatuajes actúa como un receptor cuántico que absorbe la energía de los impactos físicos recibidos. No lo hace inmune al dolor, pero canaliza la fuerza del golpe.',
       'Descarga de Fuerza Vectorial: Libera la energía acumulada para ejecutar súper saltos de gran distancia, impactos devastadores a corta distancia u ondas de choque de rango corto.',
@@ -298,7 +298,7 @@ export const CHARACTER_DETAILS = [
   // Unlocked after: Mativerse Ch.3 Worlds
   hint: 'Terminá el Capítulo 3 (Worlds) de Mativerse Part 1.',
   powers: {
-    role: 'Null-Vector',
+    role: '???',
     habilidades: [
       'Interferencia de Espectro: Altera la electrónica, redes de datos y frecuencias de sensores enemigos; en lugar de apagarlos, induce un comportamiento caótico e impredecible.',
       'Blink de Cortocircuito: Micro-teleportación cuántica (rango de 5 a 8 metros) utilizando líneas de tensión o flujos de conductividad cercanos como vectores de tránsito.',
@@ -348,15 +348,15 @@ export const CHARACTER_DETAILS = [
   // Unlocked after: Mativerse Ch.2 Casino
   hint: 'Terminá el Capítulo 2 (Casino) de Mativerse Part 1.',
   powers: {
-    role: 'Hush',
+    role: '???',
     habilidades: [
-      'Mapa Resonante: Construye una topografía tridimensional perfecta del entorno mediante la lectura de micro-vibraciones ambientales, detectando amenazas a través de estructuras sólidas.',
-      'Burbuja Silente: Despliega una zona de supresión acústica controlada, ideal para filtraciones quirúrgicas, extracción de aliados o la ejecución de emboscadas en absoluto silencio.',
-      'Pulsos Sónicos Directos: Cananaliza ráfagas de presión acústica focalizada para desestabilizar enemigos, generar aturdimiento masivo o fracturar materiales de alta densidad.',
-      'Movilidad Asistida: Uso combinado de una pistola de hooks táctica y propulsores sónicos auxiliares en las botas para escalar superficies y reposicionarse velozmente.',
+      'Radar Acústico: Percibe su entorno en un radio de 360 grados procesando el rebote del sonido, ignorando paredes y barreras visuales.',
+      'Audición Hiperfocalizada: Puede aislar latidos cardíacos, respiraciones y fricción muscular para detectar mentiras o intenciones ocultas.',
+      'Precisión Anatómica: Sus golpes no dependen de fuerza bruta, sino de golpear exactamente en nervios y puntos estructurales débiles guiada por sus sentidos.',
+      'Movilidad Acrobática: Se desplaza por la ciudad en absoluto silencio, combinando parkour extremo con una pistola de ganchos táctica.',
     ],
-    significa: 'La vanguardia acústica. Su Mapa Resonante provee una lectura del escenario tan quirúrgica y orgánica que anula la efectividad de cualquier contramedida o sensor tecnológico enemigo.',
-    crisis: 'Privación ecoica: Los entornos con ausencia total de vibraciones, vacío o tecnología de amortiguación acústica absoluta anulan su percepción principal, obligándola a depender de sus sentidos estándar.',
+    significa: 'Ve el mundo con más claridad que cualquiera con los ojos abiertos. Nada se le oculta en la oscuridad.',
+    crisis: 'Sobrecarga Sensorial: Ruidos repentinos de extrema decibelia (explosiones cercanas, alarmas estridentes) la desorientan e incapacitan de dolor físico severo.',
     stats: { fuerza: 8, inteligencia: 8, carisma: 8, suerte: 8, combate: 9, defensa: 9, especialVal: 9 },
     suitImages: {
       default: '/personajes/FULLBODY SUIT/Hush.webp',
@@ -364,15 +364,16 @@ export const CHARACTER_DETAILS = [
     },
     variantData: {
       combat: {
-        label: 'Modo Duelista Resonante',
+        label: 'Modo Duelista Ciega',
         habilidades: [
-          'Katanas Vibratorias Activas: Hojas gemelas que canalizan frecuencias oscilatorias continuas, amplificando pulsos sónicos lacerantes en cada trayectoria de corte.',
-          'Fluidez Evasiva: Prescinde de las posturas rígidas de bloqueo; anticipa y esquiva la ofensiva rival milisegundos antes de que se ejecute gracias al mapa predictivo de sus sentidos.',
-          'Ondas de Impacto Cortas: Sus ataques encadenados generan ondas de choque cinético-acústicas a corta distancia, desarmando o desestabilizando la guardia del oponente.',
-          'Sintonización de Grieta: Al golpear estructuras o blindajes pesados, acumula vibración residual en el objetivo hasta alcanzar su frecuencia de ruptura, destruyéndolo limpiamente.',
+          'Traje de Combate Vesperwing: Armadura táctica ligera diseñada específicamente por Ian para suprimir el ruido de su propia fricción y potenciar su movilidad.',
+          'Katanas Gemelas: En combate cerrado despliega sus katanas, confiando puramente en su instinto y entrenamiento marcial.',
+          'Esquiva Predictiva: Al escuchar la contracción muscular de su oponente, comienza a esquivar el golpe antes de que sea lanzado.',
+          'Intercepción Perfecta: Desarma o desvía armas interceptando en el ángulo exacto de menor resistencia.',
+          'Combate a Oscuras: Su mayor ventaja es destruir las luces del entorno; en la ceguera total, sus enemigos no son nada, y ella es letal.',
         ],
-        significa: 'La transición a la ofensiva absoluta. En modo duelista, Sofi repliega el análisis pasivo para transformarse en un torbellino de esgrima táctica: no esquiva para cubrirse, esquiva para ejecutar.',
-        crisis: 'Focalización restrictiva: Al concentrar su procesamiento cerebral en el combate cerrado y el flujo de los cortes, la precisión global de su Mapa Resonante disminuye de escala, reduciendo su alerta ante amenazas distantes.',
+        significa: 'Cierra los ojos para alcanzar su máximo potencial. Ya no solo rastrea, ahora ejecuta con una fluidez aterradora.',
+        crisis: 'Al depender de micro-sonidos, oponentes que logran moverse sin fricción o seres no-biológicos (sin latido ni respiración) son casi imposibles de anticipar.',
       },
     },
   },

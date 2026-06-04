@@ -21,8 +21,9 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
     *   *Ghostwatch:* Centro de control tecnológico de muñeca para comunicaciones seguras, escaneo y gestión de drones aliados.
 *   **Filosofía:**
     *   Cree que todo problema tiene una solución si se comprende correctamente el sistema detrás de él. Mientras otros observan eventos aislados, él observa conexiones; mientras otros reaccionan, él planifica.
-*   **Potencial de Evolución (Vesper Frame):**
-    *   Con el tiempo, Ian integra todas sus herramientas en el *Vesper Frame*, un exotraje modular que le otorga movilidad aérea, planeo asistido y la gestión de drones autónomos de soporte. Su mayor peligro es la posibilidad de convencerse de que él sabe qué es lo mejor para todos.
+*   **Potencial de Evolución (Vesper Frame y Modo Infiltración):**
+    *   *Vesper Frame (Modo Completo):* Un exotraje modular que le otorga movilidad aérea, planeo asistido, blindaje, predicción de trayectorias en HUD y la gestión de drones autónomos de soporte.
+    *   *Modo Infiltración (Variante Alt):* Supresión de firma electromagnética para sigilo absoluto, recon invisible y capa con absorción de luz activa.
 *   **Movilidad:** Usa una pistola de ganchos (hooks) y planea con su capa. Si usa el traje completo, es capaz de volar.
 *   **Estética Visual:** Interfaces holográficas verde oscuro, wireframes dinámicos, diagramas flotantes, líneas vectoriales verde oscuro proyectadas sobre el entorno y tecnología modular diseñada por él mismo.
 
@@ -36,8 +37,8 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
     *   Puede conectar mentalmente a sus aliados para compartir información y guiarlos durante el combate. También puede observar temporalmente a través de los sentidos de una persona conectada.
 *   **Habilidad Especial:** *Mirada Entre Velos.*
     *   Mediante meditación o concentración profunda, Jaz puede percibir ecos de otras realidades, anomalías dimensionales y posibles futuros. Sus visiones son fragmentarias y no siempre exactas.
-*   **Sobrecarga (Ruptura del Velo):**
-    *   Bajo estrés extremo o al canalizar demasiado poder, puede abrir grietas hacia otras dimensiones. Estas brechas son inestables y peligrosas, incluso para ella.
+*   **Sobrecarga / Variante (Modo Ruptura):**
+    *   Al canalizar demasiado poder, alcanza el Modo Ruptura. Las estructuras psíquicas alcanzan escala arquitectónica y el vínculo astral se extiende. Con concentración extrema puede abrir grietas hacia otras dimensiones de forma deliberada, aunque el riesgo de perder el control es constante.
 *   **Herramientas y Equipo:** *Telequinesis, Proyección Astral y Visiones Dimensionales.*
     *   Canaliza su energía psíquica para manipular objetos a distancia, proyectar su conciencia fuera del cuerpo y predecir distorsiones.
 *   **Movilidad:** Vuelo natural. No vuela a la velocidad del sonido, pero sí a la velocidad de un avión comercial.
@@ -50,9 +51,10 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
 *   **Habilidad Secundaria:** *Punto Ciego.*
     *   Puede hacer que una persona ignore temporalmente su presencia. No es invisibilidad, sino una alteración perceptiva que provoca que el cerebro deje de prestarle atención.
 *   **Limitación (Detonación por Verdad):**
-    *   Sus duplicados son inestables ante la verdad. Dado que sus clones pueden hablar, en el momento en que dicen una verdad absoluta, explotan violentamente (lo que sirve como detonador táctico).
-*   **Rasgo Especial:** *Verdad Innegable.*
-    *   Cuando Julián habla con absoluta sinceridad, sus palabras adquieren un peso psicológico anormal, pudiendo romper ilusiones, interrumpir manipulaciones mentales y obligar a escuchar.
+    *   Sus duplicados son inestables ante la verdad. En el momento en que dicen una verdad absoluta, explotan violentamente.
+*   **Modos de Combate / Variantes:**
+    *   *Modo Acción:* Combate ilusorio veloz. Julián despliega clones explosivos en combate cerrado y ataca desde puntos ciegos instantáneos, convirtiendo el engaño en una coreografía letal.
+    *   *Verdad Innegable (Variante Alt):* Cuando decide ser honesto, todos sus clones se saturan al máximo y detonan simultáneamente con una declaración honesta, adquiriendo un peso psicológico anormal capaz de romper ilusiones y manipulaciones.
 *   **Herramientas y Equipo:** *Cartas Ilusorias y Clones.*
     *   Utiliza cartas de baraja cargadas de interferencia y duplicados proyectados para confundir al oponente en combates cercanos.
 *   **Movilidad:** No vuela, pero escala fácilmente cualquier superficie.
@@ -68,8 +70,8 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
     *   Su capacidad de almacenamiento es limitada. Si se sobrecarga, los tatuajes comienzan a agrietarse y debe liberar la energía acumulada de inmediato.
 *   **Herramientas y Equipo:** *Combate Cuerpo a Cuerpo Puro.*
     *   No depende de armas complejas, utilizando sus propios puños reforzados cinéticamente y su imponente físico como escudo humano.
-*   **Potencial de Evolución:**
-    *   Solidificación de extremidades: Es capaz de solidificar sus brazos transmutándolos temporalmente en un metal extremadamente poderoso e indestructible, lo que le permite desviar proyectiles pesados y golpear con fuerza física colosal de demolición.
+*   **Potencial de Evolución / Variante (Solidificación Total):**
+    *   En su Modo Completo, transmuta sus extremidades temporalmente en un metal indestructible. Esto le permite desviar proyectiles pesados sin daño y devolver golpes con una fuerza colosal de demolición. Los tatuajes brillan al rojo vivo indicando la saturación total.
 *   **Movilidad:** No vuela, pero realiza súper saltos de gran altura y distancia al estilo de Hulk.
 *   **Estética Visual:** Runas incandescentes de color rojo fuego/brasa recorriendo todo su cuerpo y emisión de vapor caliente cuando su batería cinética está al máximo.
 
@@ -81,37 +83,35 @@ Este documento establece las bases para futuras sagas, universos alternativos (M
     *   Puede desplazarse entre puntos conectados por energía o conductividad, con un rango de 5 a 8 metros.
 *   **Limitación:**
     *   Necesita una ruta física o energética para realizar el desplazamiento.
+*   **Modo de Combate / Variante (Sobrecarga Máxima):**
+    *   El modo de acción sobrecargado vuelve continuos los arcos eléctricos. Vuela rápido generando una onda EM disruptiva, el blink se vuelve agresivo (puede usarlo en movimiento) y ataca directamente con guantes de plasma activos.
 *   **Herramientas y Equipo:** *Guantes Eléctricos y Blink Agresivo.*
     *   Usa guantes cargados especialmente diseñados para canalizar cortocircuitos eléctricos directamente al contacto con cables o terminales enemigos.
 *   **Movilidad:** Vuelo natural. Entre más sobrecargado de energía está, más rápido vuela y más destructivo es su paso, por lo que debe tener mucho cuidado.
 *   **Estética Visual:** Arcos eléctricos naranja recorren sus brazos y ojos de brillo naranja intenso.
 
-### 6. Sofi — "Hush" (La Vanguardia Acústica)
+### 6. Sofi — "Hush" (Vigilante Sensorial)
 *   **Rol en el Roster:** Reconocimiento avanzado / duelista táctica.
-*   **Poder Principal:** *Mapa Resonante.*
-    *   Sofi percibe el mundo mediante sonido, vibraciones y cambios de presión en el aire. Su mente construye un mapa tridimensional extremadamente preciso de todo lo que la rodea, permitiéndole detectar enemigos detrás de paredes, encontrar espacios ocultos, localizar movimientos invisibles, identificar personas por su respiración o ritmo cardíaco, y percibir ataques antes de que se completen.
+*   **Poder Principal:** *Radar Acústico y Audición Hiperfocalizada.*
+    *   Percibe su entorno en 360 grados procesando el rebote del sonido y aislando micro-ruidos. Puede aislar latidos cardíacos, respiraciones y fricción muscular para detectar amenazas a través de paredes sólidas y detectar mentiras o intenciones ocultas sin necesidad de ver.
 *   **Limitación:**
-    *   Ambientes con interferencias extremas o ausencia total de vibraciones reducen significativamente su precisión.
-*   **Arma Principal:** *Katanas Resonantes.*
-    *   Combate utilizando un par de katanas especialmente adaptadas para canalizar vibraciones. Sus ataques pueden amplificar pulsos sónicos, desestabilizar armas enemigas, generar ondas de impacto de corto alcance y cortar materiales debilitados por resonancia.
-*   **Habilidad Secundaria:** *Pulsos Sónicos.*
-    *   Puede liberar ráfagas concentradas de presión acústica para empuje, desorientación, aturdimiento o ruptura de materiales frágiles, creando aperturas en combate.
-*   **Habilidad de Equipo:** *Burbuja Silente.*
-    *   Genera una zona de silencio controlado que reduce drásticamente el ruido producido por el equipo, ideal para infiltración, reconocimiento y emboscadas.
-*   **Estilo de Combate:**
-    *   Sofi rara vez bloquea ataques; prefiere anticiparlos y esquivarlos utilizando la información de su Mapa Resonante, haciendo que su forma de pelear parezca casi sobrenatural.
-*   **Herramientas y Equipo:** *Katanas Resonantes y Sensores de Percepción Sónica.*
-*   **Movilidad:** No vuela. Usa una pistola de hooks, propulsores sónicos y también escala fácilmente.
-*   **Estética Visual:** Ondas cian brillante deformando el aire, líneas de vibración cian visibles alrededor de sus armas, ecos luminosos cian que revelan brevemente el entorno y ojos enfocados en cian incluso en completa oscuridad.
+    *   Sobrecarga Sensorial: Ruidos repentinos de extrema decibelia la desorientan e incapacitan de dolor físico severo. Oponentes que se mueven sin fricción biológica son casi imposibles de anticipar.
+*   **Modo de Combate / Variante (Duelista Ciega):**
+    *   Viste un traje de combate diseñado exclusivamente por Vesperwing (Ian) para anular el ruido de su propia fricción. Despliega sus *Katanas Gemelas* y cierra los ojos, confiando puramente en su instinto marcial. Ejecuta *Esquiva Predictiva* (reaccionando a la contracción muscular enemiga antes de que el golpe se lance) e *Intercepción Perfecta* para desarmar atacantes en el ángulo de menor resistencia.
+*   **Herramientas y Equipo:** *Traje Táctico Vesperwing, Katanas Gemelas y Pistola de Ganchos.*
+    *   Sus golpes en cuerpo a cuerpo golpean exactamente en los nervios y puntos estructurales débiles guiada por sus sentidos.
+*   **Movilidad:** *Movilidad Acrobática.* Combina parkour extremo con una pistola de ganchos táctica para desplazarse en absoluto silencio.
+*   **Estética Visual:** Se mueve como una sombra, confiando en la ceguera. Su mayor ventaja es destruir las luces del entorno para pelear a oscuras, donde sus enemigos no son nada y ella es letal.
 
 ### 7. Mati — "Swapfire" (El Controlador del Tablero)
 *   **Rol en el Roster:** Controlador táctico / reposicionamiento.
 *   **Poder Principal:** *Intercambio.*
     *   Puede intercambiar instantáneamente la posición de dos objetos o personas dentro de un rango determinado (cambiarse con un aliado, salvar a alguien de un peligro, arrojar enemigos a trampas o reorganizar el campo).
 *   **Limitación:**
-    *   Alcance limitado, restricción de tamaño y masa, y requiere que ambos objetivos estén dentro de su rango de acción.
-*   **Ventaja:**
-    *   Extremadamente versátil sin resultar dominante en términos de fuerza bruta.
+    *   Alcance limitado, restricción de masa y necesidad de línea de visión. Perder la concentración puede enviar a un aliado al fuego enemigo.
+*   **Modos de Combate / Variantes:**
+    *   *Modo Acción:* Control en movimiento acelerado. Reubica aliados bajo fuego cruzado sin frenar, enviando enemigos directo a emboscadas con dagas de marcado activas preparadas para asaltos simultáneos.
+    *   *Modo Completo:* Intercambio de Momentum. Roba velocidad o energía cinética de un objetivo y la transfiere a otro. Sin restricciones de rango, usa dagas de plasma extendidas y entra al cuerpo a cuerpo directo.
 *   **Herramientas y Equipo:** *Dagas de Marcado.*
     *   Dagas arrojadizas especiales que sirven como anclajes físicos o marcas visuales para realizar intercambios tácticos instantáneos a distancia.
 *   **Movilidad:** No vuela, pero utiliza su habilidad para aparecer instantáneamente donde le plazca.

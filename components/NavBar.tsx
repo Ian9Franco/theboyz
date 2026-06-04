@@ -79,6 +79,29 @@ export default function NavBar() {
             </div>
           ))}
 
+          {/* Lore Dropdown */}
+          <div className="relative group">
+            <button
+              className="font-[var(--font-bangers)] text-xl tracking-wider text-white/80 hover:text-[#f5e642] transition-colors pb-1 border-b-2 border-transparent hover:border-[#f5e642] flex items-center gap-1"
+            >
+              Universo
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className="opacity-60 group-hover:opacity-100 transition-all group-hover:translate-y-0.5">
+                <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+            </button>
+            <div className="absolute top-full right-0 pt-2 hidden group-hover:flex flex-col z-50">
+              <div
+                className="flex flex-col gap-1 p-2 min-w-[260px]"
+                style={{ background: "#13131e", border: "2px solid #e8185a", boxShadow: "6px 6px 0 #e8185a" }}
+              >
+                <Link href="/lore"
+                  className="font-[var(--font-bangers)] text-lg tracking-wider px-3 py-2 text-white hover:text-[#0a0a0f] hover:bg-[#f5e642] transition-all block">
+                  <span className="text-[#e8185a] mr-2">✦</span>Historia y Poderes
+                </Link>
+              </div>
+            </div>
+          </div>
+
           {/* Global Toggle Button */}
           <button
             onClick={toggleUnlockAll}
@@ -146,6 +169,20 @@ export default function NavBar() {
               ))}
             </div>
           ))}
+
+          <div key="lore-mobile">
+            <p
+              className="font-[var(--font-bangers)] text-2xl mb-2 tracking-widest"
+              style={{ color: "#f5e642" }}
+            >
+              Universo
+            </p>
+            <Link href="/lore"
+              onClick={() => setMenuOpen(false)}
+              className="font-[var(--font-bangers)] text-xl tracking-wider pl-4 py-1.5 block text-white/70 hover:text-[#f5e642] hover:pl-6 transition-all border-l-2 border-white/10 hover:border-[#e8185a] mb-1">
+              <span className="text-[#e8185a] mr-2">✦</span>Historia y Poderes
+            </Link>
+          </div>
         </div>
       )}
     </header>
