@@ -1,0 +1,220 @@
+import { CharacterDetail } from "./types";
+
+export const secundarios: CharacterDetail[] = [
+  {
+    id: 'matapobre',
+    name: 'Matapobres',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/SECUNDARIOS/Matapobres/MATAPOBRES.webp',
+    fullBody: '/personajes/SECUNDARIOS/Matapobres/MATAPOBRES.webp',
+    altImage: '/personajes/SECUNDARIOS/Matapobres/Matapobres_ficha.webp',
+    color: '#6b7280',
+    role: 'Antiheroína / Karma',
+    visualCode: 'Traje de piloto espacial, lentes de cazadora',
+    perfil: [
+      'Mercenaria de información: Cínica, sarcástica y con una flexibilidad moral supeditada a las circunstancias y al beneficio propio.',
+      'Estilo de piloto: Traje de cuero sintético con parches militares, botas magnéticas y cigarrillo espacial.',
+      'Lazos de probabilidad: Lentes de cazadora que proyectan hilos de energía gris plateada indicando los puntos de falla mecánica.'
+    ],
+    crisis: 'Prioridad de supervivencia: Ante un colapso, manipula la suerte para asegurar su propia ruta de escape, desentendiéndose del equipo.',
+    stats: { fuerza: 3, inteligencia: 6, carisma: 5, suerte: 6, combate: 3, defensa: 2, especialVal: 2 },
+    especialLabel: 'Efecto Dominó',
+    hint: 'Terminá el Capítulo 3 (Worlds) de Mativerse Part 1.',
+    powers: {
+      role: 'Karma',
+      habilidades: [
+        'Distorsión de Probabilidad Cuántica: Altera la probabilidad local de manera irónica, provocando fallas catastróficas en tecnología enemiga.',
+        'Lazos del Destino: Percibe e interceptar los hilos de la probabilidad, forzando fallas o colisiones.',
+        'Navegación del Caos: Transmuta el momentum de peligro en un escape fortuito.'
+      ],
+      significa: 'La variable del vacío. Domina el caos fortuito y sabotea los sistemas enemigos mediante mala suerte dirigida.',
+      crisis: 'Rebote estocástico: Intentar forzar eventos de probabilidad nula genera un contragolpe de mala suerte sobre ella.',
+      stats: { fuerza: 5, inteligencia: 8, carisma: 7, suerte: 10, combate: 6, defensa: 5, especialVal: 9 }
+    }
+  },
+  {
+    id: 'supertrucker',
+    name: 'Super Camionero',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/SECUNDARIOS/Supercamionero/Supercamionero.webp',
+    fullBody: '/personajes/SECUNDARIOS/Supercamionero/Supercamionero.webp',
+    altImage: '/personajes/SECUNDARIOS/Supercamionero/Supercamionero_alt.webp',
+    fichaImage: '/personajes/SECUNDARIOS/Supercamionero/Supercamionero_ficha.webp',
+    color: '#f97316',
+    role: 'El Centinela del Asfalto',
+    visualCode: 'Gorra cromada, capa de lona roja, faros xenón',
+    perfil: [
+      'Héroe legendario del asfalto: Una fuerza independiente y mítica obsesionada con el dominio, la física y las rutas terrestres.',
+      'Piloto de vanguardia: Conduce un titánico camión de combate semirremolque modificado con ingeniería balística avanzada.',
+      'Estilo de pesada herencia: Capa de lona roja gruesa impermeable, gorra cromada de alta resistencia y faros de luz azul xenón.'
+    ],
+    crisis: 'Fijación de mantenimiento: Ante cualquier daño menor en sus sistemas mecánicos, prioriza la reparación preventiva sobre la amenaza.',
+    stats: { fuerza: 8, inteligencia: 4, carisma: 6, suerte: 5, combate: 7, defensa: 8, especialVal: 8 },
+    especialLabel: 'Embestida',
+    hint: 'Terminá el Capítulo 1 de Green Truck para desbloquear.',
+    powers: {
+      role: 'Supertrucker',
+      habilidades: [
+        'Armadura de Cromo: Cuerpo forjado en una aleación metálica cromada que disipa el calor y repele impactos balísticos pesados.',
+        'Llave de Plasma Cruzada: Pesada herramienta táctica de energía ionizada capaz de cortar blindajes y estructuras vehiculares.',
+        'Mega-Transporter: Invoca un gigantesco camión semirremolque de combate equipado con cañones de repulsión cinética.'
+      ],
+      significa: 'Tanque pesado motorizado. Su propósito es la demolición absoluta y el control de carril mediante embestidas.',
+      crisis: 'Rigidez operativa: Su enfoque lineal lo vuelve vulnerable ante distorsiones cognitivas e ilusiones.',
+      stats: { fuerza: 10, inteligencia: 5, carisma: 8, suerte: 7, combate: 9, defensa: 10, especialVal: 10 }
+    }
+  },
+  {
+    id: 'coleccionista',
+    name: 'El Viejo Coleccionista',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/SECUNDARIOS/Tinkerer/The Tinkerer.webp',
+    fullBody: '/personajes/SECUNDARIOS/Tinkerer/The Tinkerer.webp',
+    color: '#8b5cf6',
+    role: 'Proveedor tecnológico / The Tinkerer',
+    visualCode: 'Overol de mecánico con grasa cuántica, visor ocular multi-lente',
+    perfil: [
+      'Mentor silencioso y huraño: Atiende el taller "Interdimensional Repairs", actuando como el nexo logístico de los pibes en el multiverso.',
+      'Ingeniero de desguace: Un experto absoluto en rediseñar, hibridar y estabilizar tecnologías y componentes cuánticos dañados.',
+      'Estilo de taller cuántico: Overol de mecánico desgastado y visor ocular de cuatro lentes móviles que proyectan planos en azul holográfico.'
+    ],
+    crisis: 'Recelo profesional: Si los pibes tratan con descuido las piezas de su inventario, se rehúsa a cooperar o proveer armamento.',
+    stats: { fuerza: 2, inteligencia: 8, carisma: 4, suerte: 6, combate: 1, defensa: 3, especialVal: 7 },
+    especialLabel: 'Ingeniería',
+    hint: 'Terminá el Capítulo 4 (No Turning Back) de Green Truck.',
+    powers: {
+      role: 'The Tinkerer',
+      habilidades: [
+        'Análisis de Código Físico: Percepción analítica intuitiva que le permite descifrar el funcionamiento y planos de cualquier artefacto.',
+        'Modificación Cuántica: Transmuta componentes comunes y chatarra tecnológica en portales estables o celdas de energía.',
+        'Ocular Multiespectral: Visor que detecta vulnerabilidades atómicas, fugas de energía y fallas estructurales invisibles.'
+      ],
+      significa: 'El armero de las dimensiones. Altera y refina la materia cuántica para generar recursos logísticos e infraestructura.',
+      crisis: 'Saturación del espectro: El uso continuo de su visor lo expone a sufrir interferencias cuánticas severas, bloqueando su lectura.',
+      stats: { fuerza: 4, inteligencia: 10, carisma: 6, suerte: 8, combate: 3, defensa: 6, especialVal: 10 }
+    }
+  },
+  {
+    id: 'rylai',
+    name: 'Crystal Maiden',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/SECUNDARIOS/Rylai/Rylai.webp',
+    fullBody: '/personajes/SECUNDARIOS/Rylai/Rylai.webp',
+    color: '#3b82f6',
+    role: 'La Canalizadora de la Tormenta',
+    visualCode: 'Capa azul ártico con piel blanca, bastón místico con gema de hielo',
+    perfil: [
+      'Control del frío: Joven decidida que canaliza la magia de la escarcha. Sus pasos dejan huellas de hielo sobre el asfalto urbano.',
+      'El ancla del equipo de taberna: Hermana menor para Tusk, a quien tranquiliza mediante brisas heladas cuando se nubla por la adrenalina.',
+      'Estilo invernal: Capa de azul ártico con bordes de piel blanca y detalles de cristales en los hombros.'
+    ],
+    crisis: 'Vulnerabilidad física: Su magia requiere canalización estática, lo que la vuelve un blanco fácil si logran flanquear sus defensas de hielo.',
+    stats: { fuerza: 2, inteligencia: 7, carisma: 8, suerte: 6, combate: 4, defensa: 5, especialVal: 8 },
+    especialLabel: 'Congelación',
+    powers: {
+      role: 'Crystal Maiden',
+      habilidades: [
+        'Frostbite: Encierra a un enemigo en un bloque de hielo sólido, impidiendo su movimiento y causándole daño por frío extremo.',
+        'Crystal Nova: Crea una explosión de escarcha que ralentiza a múltiples enemigos en el área de impacto.',
+        'Freezing Field: Canaliza una masiva tormenta de nieve que congela el panel y ralentiza todo a su alrededor.'
+      ],
+      significa: 'Control de masas y soporte elemental. Congela el terreno de combate para limitar la movilidad de las amenazas.',
+      crisis: 'Interrupción mágica: Cualquier aturdimiento físico o interrupción interrumpe su canalización, disipando la tormenta.',
+      stats: { fuerza: 4, inteligencia: 9, carisma: 9, suerte: 7, combate: 5, defensa: 6, especialVal: 10 }
+    }
+  },
+  {
+    id: 'bristleback',
+    name: 'Bristleback',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/SECUNDARIOS/Bristleback/Bristleback.webp',
+    fullBody: '/personajes/SECUNDARIOS/Bristleback/Bristleback.webp',
+    color: '#15803d',
+    role: 'El Matón de Callejón',
+    visualCode: 'Chaleco vaquero sin mangas, aro en la nariz, lomo de espinas biomecánicas',
+    perfil: [
+      'Matón pendenciero: Puercoespín humanoide inspirado en los hooligans de callejón, con acento británico y cicatrices en el rostro.',
+      'Vínculo de hermandad: Compañero de taberna de Tusk. El primero en romper botellas si amenazan a sus aliados.',
+      'Lomo biomecánico: Espinas que brillan con fluido verde tóxico y vibran al recibir impactos.'
+    ],
+    crisis: 'Furia ciega: Si es insultado o desafiado, pierde el control y ataca de espaldas para forzar su defensa pasiva, ignorando órdenes tácticas.',
+    stats: { fuerza: 7, inteligencia: 3, carisma: 4, suerte: 5, combate: 6, defensa: 7, especialVal: 6 },
+    especialLabel: 'Espinas',
+    powers: {
+      role: 'Rigwarl',
+      habilidades: [
+        'Viscous Nasal Goo: Cubre al enemigo con moco pegajoso y ácido, reduciendo su armadura y velocidad de movimiento.',
+        'Quill Spray: Dispara ráfagas de espinas desde su lomo, infligiendo daño que se acumula con cada golpe sucesivo.',
+        'Bristleback (Lomo de Acero): Reduce pasivamente el daño recibido por la espalda y los costados, disparando Quill Spray de forma automática.'
+      ],
+      significa: 'Tanque dispersor. Se planta en el centro de la pelea atrayendo fuego para saturar el entorno de púas y metralla orgánica.',
+      crisis: 'Ataques directos: Su reducción de daño no aplica a ataques frontales de precisión, quedando expuesto si es inmovilizado de cara al enemigo.',
+      stats: { fuerza: 9, inteligencia: 4, carisma: 5, suerte: 6, combate: 8, defensa: 10, especialVal: 8 }
+    }
+  },
+  {
+    id: 'invoker',
+    name: 'Invoker',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/SECUNDARIOS/Invoker/Invoker.webp',
+    fullBody: '/personajes/SECUNDARIOS/Invoker/Invoker.webp',
+    color: '#d97706',
+    role: 'El Mago del Arsenal',
+    visualCode: 'Cabello blanco ingrávido, capa-gabardina marfil, orbes de energía',
+    perfil: [
+      'Elegancia inmortal: Flota a centímetros del asfalto. Muestra una actitud fría y aristocrática en medio del caos de la metrópoli.',
+      'Mente enciclopédica: Memoriza fórmulas arcanas antiguas y las combina a velocidad luz en orbes de Quas, Wex y Exort.',
+      'Estilo majestuoso: Gabardina de cuello alto color marfil y bordes dorados que levita sola alrededor de su cuerpo.'
+    ],
+    crisis: 'Complejo de superioridad: Considera a los humanos tan inferiores que se niega a usar hechizos defensivos básicos, prefiriendo la espectacularidad.',
+    stats: { fuerza: 3, inteligencia: 10, carisma: 7, suerte: 5, combate: 7, defensa: 4, especialVal: 9 },
+    especialLabel: 'Invocación',
+    powers: {
+      role: 'Kael',
+      habilidades: [
+        'Tornado: Despliega una corriente de viento Wex-Quas que levanta a los enemigos del panel y los suspende en el aire.',
+        'Chaos Meteor: Invoca un meteorito incandescente cargado de Exort que rueda arrasando el campo y quemando a su paso.',
+        'Deafening Blast: Emite una onda sónica de energía combinada que inflige daño, empuja y desarma temporalmente a los oponentes.'
+      ],
+      significa: 'Artillería mágica omnidireccional. Combina orbes elementales para conjurar soluciones destructivas adaptadas a la situación.',
+      crisis: 'Saturación mental: Si el orden de conjuración falla por milisegundos, el hechizo se disipa y bloquea su invocación temporalmente.',
+      stats: { fuerza: 5, inteligencia: 10, carisma: 8, suerte: 6, combate: 9, defensa: 6, especialVal: 10 }
+    }
+  },
+  {
+    id: 'ymir',
+    name: 'Tusk',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/SECUNDARIOS/Ymir/Tusk.webp',
+    fullBody: '/personajes/SECUNDARIOS/Ymir/Tusk.webp',
+    color: '#0284c7',
+    role: 'El Boxeador del Norte',
+    visualCode: 'Morsa robusta, chaleco con piel de oso, guantelete de hielo eterno',
+    perfil: [
+      'Boxeador del norte: Morsa gigante de bigote denso y parche en el ojo, con un entusiasmo contagioso por las peleas de bar.',
+      'Protector de Rylai: Sumamente sobreprotector con Crystal Maiden, a quien trata como su hermana menor y defiende ferozmente.',
+      'Guantelete helado: Mano derecha equipada con un guantelete metálico que acumula escarcha azul y energía cinética.'
+    ],
+    crisis: 'Temeridad de taberna: Su amor por el espectáculo lo empuja a rodar en bolas de nieve directo hacia posiciones enemigas fortificadas.',
+    stats: { fuerza: 8, inteligencia: 4, carisma: 8, suerte: 6, combate: 7, defensa: 6, especialVal: 7 },
+    especialLabel: 'Walrus Punch',
+    powers: {
+      role: 'Ymir',
+      habilidades: [
+        'Walrus PUNCH!: Un golpe devastador cargado de hielo que lanza al enemigo por los aires con onomatopeyas congeladas en escena.',
+        'Snowball: Se envuelve junto a sus aliados cercanos en una gigantesca bola de nieve rodante que atropella todo a su paso.',
+        'Ice Shards: Lanza fragmentos de hielo comprimido que se despliegan en una barrera física semicircular, atrapando al rival.'
+      ],
+      significa: 'Iniciador y luchador cuerpo a cuerpo. Desestabiliza las líneas enemigas mediante embestidas heladas y golpes críticos.',
+      crisis: 'Exposición post-golpe: Tras descargar su Walrus Punch, el guantelete requiere enfriamiento térmico, reduciendo su defensa física.',
+      stats: { fuerza: 10, inteligencia: 5, carisma: 9, suerte: 7, combate: 9, defensa: 8, especialVal: 10 }
+    }
+  }
+];
