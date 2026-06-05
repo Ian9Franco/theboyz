@@ -1,13 +1,10 @@
 "use client";
 
-
-
 import { motion, AnimatePresence } from "framer-motion";
-
 import { useEffect, useState } from "react";
-
-import { CHARACTER_DETAILS, getComputedCharacters } from "@/lib/characterData";
+import { getComputedCharacters } from "@/lib/characterData";
 import { CharacterModal } from "./CharacterModal";
+import { BannerLightbox } from "./HeroSection";
 
 function getTextColor(hexColor: string) {
   if (!hexColor) return "white";
@@ -19,11 +16,57 @@ function getTextColor(hexColor: string) {
   return yiq >= 140 ? "#0a0a0f" : "white";
 }
 
+const CATEGORY_METADATA = {
+  pibes: {
+    title: "LOS PIBES",
+    tagline: "El equipo principal",
+    badgeColor: "#e8185a",
+    shadowColor: "rgba(232,24,90,0.2)",
+    borderColor: "#e8185a",
+  },
+  secundarios: {
+    title: "ALIADOS Y SOPORTE",
+    tagline: "El soporte táctico",
+    badgeColor: "#8b5cf6",
+    shadowColor: "rgba(139,92,246,0.2)",
+    borderColor: "#8b5cf6",
+  },
+  voughtverse: {
+    title: "VOUGHTVERSE",
+    tagline: "Variantes de otra realidad",
+    badgeColor: "#2563eb",
+    shadowColor: "rgba(37,99,235,0.2)",
+    borderColor: "#2563eb",
+  },
+  matis: {
+    title: "CONSEJO DE MATIS",
+    tagline: "Las variantes cuánticas",
+    badgeColor: "#b45309",
+    shadowColor: "rgba(180,83,9,0.2)",
+    borderColor: "#b45309",
+  },
+  antagonistas: {
+    title: "ANTAGONISTAS",
+    tagline: "Las amenazas del orden",
+    badgeColor: "#ef4444",
+    shadowColor: "rgba(239,68,68,0.2)",
+    borderColor: "#ef4444",
+  },
+  entidades: {
+    title: "ENTIDADES",
+    tagline: "Fuerzas primordiales cósmicas",
+    badgeColor: "#1e293b",
+    shadowColor: "rgba(30,41,59,0.2)",
+    borderColor: "#1e293b",
+  },
+};
+
 export function CharacterRoster() {
   const [readChapters, setReadChapters] = useState<string[]>([]);
   const [isClient, setIsClient] = useState(false);
   const [selectedChar, setSelectedChar] = useState<any | null>(null);
   const [unlockAll, setUnlockAll] = useState(false);
+  const [showMatiLightbox, setShowMatiLightbox] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -44,11 +87,19 @@ export function CharacterRoster() {
     return () => {
       window.removeEventListener("unlockAllChanged", checkUnlock);
     };
-  }, []);
+  }, []);  const getCardImage = (char: any) => {
+    const isPibe = char.category === 'pibes' || ['ian', 'jaz', 'julian', 'mati', 'uandi', 'volvo', 'sofi'].includes(char.id);
+    if (!isPibe) {
+      if (char.fichaImage) return char.fichaImage;
+      if (char.id !== 'comandante' && char.altImage) return char.altImage;
+      if (char.powers?.suitImages?.ficha) return char.powers.suitImages.ficha;
+    }
+    return char.image;
+  };
 
-  const characters = getComputedCharacters(readChapters, isClient, unlockAll);
-  const coreCharacters = characters.filter((c) => !c.isSecondary);
-  const secondaryCharacters = characters.filter((c) => c.isSecondary);
+  const characters = getComputedCharacters(readChapters, isClient, unlockAll).filter(
+    (c) => c.image && c.image !== ""
+  );
 
   return (
     <section className="py-24 px-4 sm:px-6 overflow-hidden relative" style={{ background: "#0a0a0f", borderTop: "6px solid white" }}>
@@ -62,309 +113,200 @@ export function CharacterRoster() {
         }}
       />
       
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <span
-              className="font-[var(--font-bangers)] text-sm tracking-[0.3em] uppercase mb-4 inline-block"
-              style={{ background: "#e8185a", color: "white", padding: "0.25rem 1rem", border: "2px solid white" }}
+      <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-24">
+        {Object.entries(CATEGORY_METADATA).map(([key, meta], secIndex) => {
+          const groupChars = characters.filter((c) => {
+            const cat = c.category || (c.isSecondary ? "secundarios" : "pibes");
+            return cat === key;
+          });
+
+          if (groupChars.length === 0) return null;
+
+          return (
+            <div 
+              key={key} 
+              className={`pt-16 ${secIndex > 0 ? "border-t-4 border-dashed border-gray-800" : ""}`}
             >
-              Conocé a
-            </span>
-            <h2
-              className="font-[var(--font-bangers)] text-6xl sm:text-8xl leading-none tracking-wider text-white"
-              style={{ textShadow: "5px 5px 0 #e8185a, 10px 10px 0 rgba(232,24,90,0.2)" }}
-            >
-              LOS PIBES
-            </h2>
-          </motion.div>
-        </div>
-        
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
-          {coreCharacters.map((char, i) => (
-            <motion.div
-              key={char.id}
-              onClick={() => setSelectedChar(char)}
-              initial={{ opacity: 0, y: 40, rotate: i % 2 === 0 ? -2 : 2 }}
-              whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.05 }}
-              className="relative group bg-[#13131e] flex flex-col cursor-pointer select-none border-4 transition-colors duration-300"
-              style={{ 
-                borderColor: "white", 
-                boxShadow: char.incognito 
-                  ? "8px 8px 0 #6b7280" 
-                  : `8px 8px 0 ${char.displayColor}, 0 0 15px ${char.displayColor}2b` 
-              }}
-              whileHover={{ 
-                scale: 1.03, 
-                rotate: i % 2 === 0 ? 1 : -1, 
-                borderColor: char.incognito ? "white" : char.displayColor,
-                boxShadow: char.incognito 
-                  ? "12px 12px 0 #6b7280" 
-                  : `12px 12px 0 ${char.displayColor}, 0 0 25px ${char.displayColor}55`,
-                transition: { duration: 0.2 } 
-              }}
-            >
-              <div 
-                className="relative w-full aspect-[4/5] overflow-hidden shrink-0"
-                style={{
-                  background: char.incognito 
-                    ? "#2a2a35" 
-                    : `radial-gradient(circle at center, ${char.displayColor}33 0%, #13131e 100%)`
-                }}
-              >
-                {!char.incognito && char.powers?.role && (
-                  <div 
-                    className="absolute top-2 left-2 z-20 font-[var(--font-bangers)] text-[9px] tracking-wider px-2 py-0.5 border-2 border-black rotate-[-3deg] shadow-[2px_2px_0_#000] uppercase"
+              {key === 'matis' && (
+                <div 
+                  className="w-full mb-12 border-4 border-white shadow-[8px_8px_0_#b45309] overflow-hidden relative group cursor-zoom-in pointer-events-auto"
+                  onClick={() => setShowMatiLightbox(true)}
+                >
+                  <img 
+                    src="/personajes/Consejo de matis/Mativariantes.webp" 
+                    alt="Consejo de Matis Banner"
+                    className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-2 border-2 border-dashed border-white/40 pointer-events-none" />
+                </div>
+              )}
+
+              <div className="text-center mb-16">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                >
+                  <span
+                    className="font-[var(--font-bangers)] text-sm tracking-[0.3em] uppercase mb-4 inline-block"
                     style={{ 
-                      backgroundColor: char.displayColor, 
-                      color: getTextColor(char.displayColor) 
+                      background: meta.badgeColor, 
+                      color: getTextColor(meta.badgeColor), 
+                      padding: "0.25rem 1rem", 
+                      border: "2px solid white" 
                     }}
                   >
-                    {char.powers.role.split(" / ")[0]}
-                  </div>
-                )}
-                {char.incognito ? (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="absolute inset-0 speed-lines opacity-20" />
-                    <span 
-                      className="font-[var(--font-bangers)] text-9xl text-white opacity-30 select-none z-10"
-                      style={{ textShadow: "4px 4px 0 #000" }}
-                    >
-                      ?
-                    </span>
-                    <img 
-                      src={char.image} 
-                      alt="Incógnito" 
-                      className="absolute inset-0 w-full h-full object-cover object-center opacity-20 grayscale blur-sm"
-                    />
-                    <div className="absolute inset-0 bg-black/50" />
-                    <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
-                  </div>
-                ) : (
-                  <>
-                    <img 
-                      src={char.image} 
-                      alt={char.displayName} 
-                      className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2 grayscale-[0.3] group-hover:grayscale-0"
-                    />
-                    <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
-                  </>
-                )}
-                
-                {/* Comic style halftone overlay */}
-                <div 
-                  className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-[0.15] group-hover:opacity-0 transition-opacity duration-500"
-                  style={{
-                    backgroundImage: "radial-gradient(circle, #fff 1.5px, transparent 1.5px)",
-                    backgroundSize: "6px 6px",
-                  }}
-                />
+                    {meta.tagline}
+                  </span>
+                  <h2
+                    className="font-[var(--font-bangers)] text-5xl sm:text-7xl leading-none tracking-wider text-white"
+                    style={{ textShadow: `4px 4px 0 ${meta.borderColor}, 8px 8px 0 ${meta.shadowColor}` }}
+                  >
+                    {meta.title}
+                  </h2>
+                </motion.div>
               </div>
-              
-              <div 
-                className="p-3 sm:p-4 text-center border-t-[4px] border-white relative z-10 flex-1 flex items-center justify-center overflow-hidden" 
-                style={{ 
-                  background: char.incognito 
-                    ? "#374151" 
-                    : (char.id === 'sofi' 
-                       ? "linear-gradient(135deg, #06b6d4, #0891b2)" 
-                       : char.displayColor) 
-                }}
-              >
-                <h3 
-                  className="font-[var(--font-bangers)] tracking-widest drop-shadow-md leading-none pt-1 truncate w-full"
-                  style={{ 
-                    color: char.incognito ? "white" : getTextColor(char.displayColor),
-                    textShadow: char.incognito 
-                      ? "2px 2px 0 rgba(0,0,0,0.3)"
-                      : (getTextColor(char.displayColor) === '#0a0a0f' 
-                        ? "1px 1px 0 rgba(255,255,255,0.6)" 
-                        : "2px 2px 0 rgba(0,0,0,0.3)"),
-                    fontSize: char.incognito ? "clamp(0.9rem, 2vw, 1.3rem)" : "clamp(1.2rem, 2.5vw, 1.8rem)"
-                  }}
-                >
-                  {char.incognito ? "PRÓXIMAMENTE" : char.displayName.toUpperCase()}
-                </h3>
-              </div>
-            </motion.div>
-          ))}
-        </div>
 
-        {/* Secondary Characters Section */}
-        <div className="mt-24 pt-16 border-t-4 border-dashed border-gray-800">
-          <div className="text-center mb-16">
-            <span
-              className="font-[var(--font-bangers)] text-sm tracking-[0.3em] uppercase mb-4 inline-block"
-              style={{ background: "#8b5cf6", color: "white", padding: "0.25rem 1rem", border: "2px solid white" }}
-            >
-              Aliados y Soporte
-            </span>
-            <h3
-              className="font-[var(--font-bangers)] text-5xl sm:text-7xl leading-none tracking-wider text-white"
-              style={{ textShadow: "4px 4px 0 #8b5cf6, 8px 8px 0 rgba(139,92,246,0.2)" }}
-            >
-              SECUNDARIOS
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {secondaryCharacters.map((char, i) => (
-              <motion.div
-                key={char.id}
-                onClick={() => setSelectedChar(char)}
-                initial={{ opacity: 0, y: 40, rotate: i % 2 === 0 ? 2 : -2 }}
-                whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.05 }}
-                className="relative group bg-[#13131e] flex flex-col cursor-pointer select-none border-4 transition-colors duration-300"
-                style={{ 
-                  borderColor: "white", 
-                  boxShadow: `8px 8px 0 ${char.displayColor}` 
-                }}
-                whileHover={{ 
-                  scale: 1.03, 
-                  rotate: i % 2 === 0 ? -1 : 1, 
-                  borderColor: char.incognito ? "white" : char.displayColor,
-                  boxShadow: `12px 12px 0 ${char.displayColor}`,
-                  transition: { duration: 0.2 } 
-                }}
-              >
-                <div 
-                  className="relative w-full aspect-[4/5] overflow-hidden shrink-0 flex items-center justify-center"
-                  style={{
-                    background: char.incognito 
-                      ? "#2a2a35" 
-                      : `radial-gradient(circle at center, ${char.displayColor}33 0%, #13131e 100%)`
-                  }}
-                >
-                  {!char.incognito && char.powers?.role && (
-                    <div 
-                      className="absolute top-2 left-2 z-20 font-[var(--font-bangers)] text-[9px] tracking-wider px-2 py-0.5 border-2 border-black rotate-[-3deg] shadow-[2px_2px_0_#000] uppercase"
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+                {groupChars.map((char, i) => {
+                  const cardImg = getCardImage(char);
+                  return (
+                    <motion.div
+                      key={char.id}
+                      onClick={() => setSelectedChar(char)}
+                      initial={{ opacity: 0, y: 40, rotate: i % 2 === 0 ? -2 : 2 }}
+                      whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.05 }}
+                      className="relative group bg-[#13131e] flex flex-col cursor-pointer select-none border-4 transition-colors duration-300"
                       style={{ 
-                        backgroundColor: char.displayColor, 
-                        color: getTextColor(char.displayColor) 
+                        borderColor: "white", 
+                        boxShadow: char.incognito 
+                          ? "8px 8px 0 #6b7280" 
+                          : `8px 8px 0 ${char.displayColor}, 0 0 15px ${char.displayColor}2b` 
+                      }}
+                      whileHover={{ 
+                        scale: 1.03, 
+                        rotate: i % 2 === 0 ? 1 : -1, 
+                        borderColor: char.incognito ? "white" : char.displayColor,
+                        boxShadow: char.incognito 
+                          ? "12px 12px 0 #6b7280" 
+                          : `12px 12px 0 ${char.displayColor}, 0 0 25px ${char.displayColor}55`,
+                        transition: { duration: 0.2 } 
                       }}
                     >
-                      {char.powers.role.split(" / ")[0]}
-                    </div>
-                  )}
-                  {char.incognito ? (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="absolute inset-0 speed-lines opacity-20" />
-                      <span 
-                        className="font-[var(--font-bangers)] text-9xl text-white opacity-30 select-none z-10"
-                        style={{ textShadow: "4px 4px 0 #000" }}
+                      <div 
+                        className="relative w-full aspect-[4/5] overflow-hidden shrink-0"
+                        style={{
+                          background: char.incognito 
+                            ? "#2a2a35" 
+                            : `radial-gradient(circle at center, ${char.displayColor}33 0%, #13131e 100%)`
+                        }}
                       >
-                        ?
-                      </span>
-                      {char.image ? (
-                        <img 
-                          src={char.image} 
-                          alt="Incógnito" 
-                          className="absolute inset-0 w-full h-full object-cover object-center opacity-20 grayscale blur-sm"
-                        />
-                      ) : (
-                        <div 
-                          className="absolute inset-0 opacity-10 flex items-center justify-center"
-                          style={{
-                            background: `repeating-linear-gradient(45deg, ${char.color}, ${char.color} 10px, #13131e 10px, #13131e 20px)`
-                          }}
-                        />
-                      )}
-                      <div className="absolute inset-0 bg-black/50" />
-                      <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
-                    </div>
-                  ) : (
-                    <>
-                      {char.image ? (
-                        <>
-                          <img 
-                            src={char.image} 
-                            alt={char.displayName} 
-                            className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2 grayscale-[0.3] group-hover:grayscale-0"
-                          />
-                          <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
-                        </>
-                      ) : (
-                        /* Premium dynamic typographic fallback avatar for characters without photo */
-                        <div 
-                          className="w-full h-full flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-105"
-                          style={{
-                            background: `radial-gradient(circle at center, ${char.color}33 0%, #13131e 100%)`,
-                          }}
-                        >
-                          <div className="absolute inset-0 speed-lines opacity-10" />
+                        {!char.incognito && char.powers?.role && (
                           <div 
-                            className="w-24 h-24 rounded-full border-4 border-white flex items-center justify-center shadow-lg relative overflow-hidden transition-all duration-300 group-hover:rotate-12"
-                            style={{ backgroundColor: char.color }}
+                            className="absolute top-2 left-2 z-20 font-[var(--font-bangers)] text-[9px] tracking-wider px-2 py-0.5 border-2 border-black rotate-[-3deg] shadow-[2px_2px_0_#000] uppercase"
+                            style={{ 
+                              backgroundColor: char.displayColor, 
+                              color: getTextColor(char.displayColor) 
+                            }}
                           >
-                            <div 
-                              className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-[0.2]"
-                              style={{
-                                backgroundImage: "radial-gradient(circle, #fff 1.5px, transparent 1.5px)",
-                                backgroundSize: "4px 4px",
-                              }}
-                            />
-                            <span className="font-[var(--font-bangers)] text-white text-5xl select-none leading-none pt-2">
-                              {char.id === 'supertrucker' ? 'SC' : char.id === 'comandante' ? 'CR' : 'TT'}
-                            </span>
+                            {char.powers.role.split(" / ")[0]}
                           </div>
-                          <span className="font-[var(--font-bangers)] text-xs text-white/50 tracking-widest uppercase mt-4">
-                            {char.id === 'supertrucker' ? 'Super Camionero' : char.id === 'comandante' ? 'Comandante Regular' : 'The Tinkerer'}
-                          </span>
-                          <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
-                        </div>
-                      )}
-                    </>
-                  )}
-                  
-                  {/* Comic style halftone overlay */}
-                  <div 
-                    className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-[0.15] group-hover:opacity-0 transition-opacity duration-500"
-                    style={{
-                      backgroundImage: "radial-gradient(circle, #fff 1.5px, transparent 1.5px)",
-                      backgroundSize: "6px 6px",
-                    }}
-                  />
-                </div>
-                
-                <div 
-                  className="p-3 sm:p-4 text-center border-t-[4px] border-white relative z-10 flex-1 flex items-center justify-center overflow-hidden" 
-                  style={{ background: char.incognito ? "#374151" : char.displayColor }}
-                >
-                  <h3 
-                    className="font-[var(--font-bangers)] tracking-widest drop-shadow-md leading-none pt-1 truncate w-full"
-                    style={{ 
-                      color: char.incognito ? "white" : getTextColor(char.displayColor),
-                      textShadow: char.incognito 
-                        ? "2px 2px 0 rgba(0,0,0,0.3)"
-                        : (getTextColor(char.displayColor) === '#0a0a0f' 
-                          ? "1px 1px 0 rgba(255,255,255,0.6)" 
-                          : "2px 2px 0 rgba(0,0,0,0.3)"),
-                      fontSize: char.incognito ? "clamp(0.9rem, 2vw, 1.3rem)" : "clamp(1.1rem, 2vw, 1.6rem)"
-                    }}
-                  >
-                    {char.incognito ? "PRÓXIMAMENTE" : char.displayName.toUpperCase()}
-                  </h3>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+                        )}
+                        {char.incognito ? (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="absolute inset-0 speed-lines opacity-20" />
+                            <span 
+                              className="font-[var(--font-bangers)] text-9xl text-white opacity-30 select-none z-10"
+                              style={{ textShadow: "4px 4px 0 #000" }}
+                            >
+                              ?
+                            </span>
+                            {cardImg && (
+                              <img 
+                                src={cardImg} 
+                                alt="Incógnito" 
+                                className="absolute inset-0 w-full h-full object-cover object-center opacity-20 grayscale blur-sm"
+                              />
+                            )}
+                            <div className="absolute inset-0 bg-black/50" />
+                            <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
+                          </div>
+                        ) : (
+                          <>
+                            {cardImg && (
+                              <img 
+                                src={cardImg} 
+                                alt={char.displayName} 
+                                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2 grayscale-[0.3] group-hover:grayscale-0"
+                              />
+                            )}
+                            <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
+                          </>
+                        )}
+                        
+                        {/* Comic style halftone overlay */}
+                        <div 
+                          className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-[0.15] group-hover:opacity-0 transition-opacity duration-500"
+                          style={{
+                            backgroundImage: "radial-gradient(circle, #fff 1.5px, transparent 1.5px)",
+                            backgroundSize: "6px 6px",
+                          }}
+                        />
+                      </div>
+                    
+                    <div 
+                      className="p-3 sm:p-4 text-center border-t-[4px] border-white relative z-10 flex-1 flex items-center justify-center overflow-hidden" 
+                      style={{ 
+                        background: char.incognito 
+                          ? "#374151" 
+                          : (char.id === 'sofi' 
+                             ? "linear-gradient(135deg, #06b6d4, #0891b2)" 
+                             : char.displayColor) 
+                      }}
+                    >
+                      <h3 
+                        className="font-[var(--font-bangers)] tracking-widest drop-shadow-md leading-none pt-1 truncate w-full"
+                        style={{ 
+                          color: char.incognito ? "white" : getTextColor(char.displayColor),
+                          textShadow: char.incognito 
+                            ? "2px 2px 0 rgba(0,0,0,0.3)"
+                            : (getTextColor(char.displayColor) === '#0a0a0f' 
+                              ? "1px 1px 0 rgba(255,255,255,0.6)" 
+                              : "2px 2px 0 rgba(0,0,0,0.3)"),
+                          fontSize: char.incognito ? "clamp(0.9rem, 2vw, 1.3rem)" : "clamp(1.2rem, 2.5vw, 1.8rem)"
+                        }}
+                      >
+                        {char.incognito ? "PRÓXIMAMENTE" : char.displayName.toUpperCase()}
+                      </h3>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+            </div>
+          );
+        })}
       </div>
 
-      {/* Pop-up Character Modal */}
+      {/* Pop-up Character Modal & Banner Lightbox */}
       <AnimatePresence>
         {selectedChar && (
           <CharacterModal 
             char={selectedChar} 
             onClose={() => setSelectedChar(null)} 
+          />
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {showMatiLightbox && (
+          <BannerLightbox 
+            src="/personajes/Consejo de matis/Mativariantes.webp" 
+            alt="Consejo de Matis Banner" 
+            onClose={() => setShowMatiLightbox(false)} 
           />
         )}
       </AnimatePresence>

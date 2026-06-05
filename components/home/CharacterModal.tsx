@@ -38,12 +38,71 @@ function getDarkBgColor(hexColor: string) {
 }
 
 export function CharacterModal({ char, onClose }: { char: any; onClose: () => void }) {
-  const [showAlt, setShowAlt] = useState(false);
+  const [selectedImageId, setSelectedImageId] = useState<string>("default");
   const [isPowersMode, setIsPowersMode] = useState(false);
-  const [selectedSuitVariant, setSelectedSuitVariant] = useState<string>("default");
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [imgFullscreen, setImgFullscreen] = useState(false);
   const [unlockAll, setUnlockAll] = useState(false);
+
+  const isPibe = char.category === 'pibes' || ['ian', 'jaz', 'julian', 'mati', 'uandi', 'volvo', 'sofi'].includes(char.id);
+
+  // 1. Gather available images for Standard Mode (or for non-pibe characters)
+  const standardImages: { id: string; label: string; src: string }[] = [];
+  if (char.fullBody || char.image) {
+    standardImages.push({ id: "default", label: "Normal", src: char.fullBody || char.image });
+  }
+  if (char.altImage) {
+    const isRegular = char.id === 'comandante';
+    const label = isRegular ? "Cósmico" : "Alt";
+    standardImages.push({ id: "alt", label, src: char.altImage });
+  }
+  if (!isPibe && char.fichaImage) {
+    standardImages.push({ id: "ficha", label: "Ficha", src: char.fichaImage });
+  }
+  if (!isPibe && char.overloadImage && char.overloadImage !== char.altImage) {
+    standardImages.push({ id: "concept", label: "Concept", src: char.overloadImage });
+  }
+
+  // 2. Gather available images for Detalles Mode (only for pibes)
+  const detallesImages: { id: string; label: string; src: string }[] = [];
+  if (isPibe) {
+    const suitImgObj = char.powers?.suitImages || {};
+    // Prioritize Ficha first!
+    if (suitImgObj.ficha) {
+      detallesImages.push({ id: "ficha", label: "Ficha", src: suitImgObj.ficha });
+    }
+    if (suitImgObj.default || char.overloadImage) {
+      detallesImages.push({ id: "default", label: "Traje", src: suitImgObj.default || char.overloadImage });
+    }
+    // Add other suit images dynamically (excluding default, ficha, etc.)
+    Object.entries(suitImgObj).forEach(([key, val]) => {
+      if (key !== 'default' && key !== 'ficha' && val && typeof val === 'string') {
+        const labelMap: Record<string, string> = {
+          ficha2: 'Ficha 2',
+          fichaAlt: 'Ficha Alt',
+          alt: 'Alt',
+          archor: 'Archor',
+        };
+        const label = labelMap[key] || key.toUpperCase();
+        if (!detallesImages.some(img => img.id === key)) {
+          detallesImages.push({ id: key, label, src: val });
+        }
+      }
+    });
+    // Fallback if empty
+    if (detallesImages.length === 0) {
+      detallesImages.push({ id: "default", label: "Normal", src: char.fullBody || char.image });
+    }
+  }
+
+  // Decide current active images array based on mode
+  const currentImagesList = isPibe
+    ? (isPowersMode ? detallesImages : standardImages)
+    : standardImages;
+
+  // Decide which image to show
+  const currentImageObj = currentImagesList.find(img => img.id === selectedImageId) || currentImagesList[0];
+  const currentImage = currentImageObj?.src;
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -62,30 +121,32 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     };
   }, []);
 
+  // Reset modal state when switching characters
+  useEffect(() => {
+    setSelectedImageId("default");
+    setIsPowersMode(false);
+  }, [char.id]);
+
   const isLocked = char.incognito && !unlockAll;
-  
-  // Resolve current image based on selected suit variant or standard state
-  const currentImage = isPowersMode
-    ? (char.powers?.suitImages?.[selectedSuitVariant] || char.overloadImage)
-    : (showAlt && char.altImage ? char.altImage : (char.fullBody || char.image));
-    
   const accent = isLocked ? "#6b7280" : char.color;
   const vibrantAccent = getVibrantColor(accent);
   const darkBg = getDarkBgColor(accent);
   const stats = isPowersMode ? char.powers?.stats : char.stats;
 
   // Resolve variant-specific content (habilidades / significa / crisis)
-  // Falls back to base powers data when no variantData entry exists for the selected variant
+  // We use the selectedImageId if it corresponds to a variant (e.g. 'alt', 'archor')
   const activeVariantData =
-    isPowersMode && selectedSuitVariant !== 'default'
-      ? char.powers?.variantData?.[selectedSuitVariant]
+    isPowersMode && selectedImageId !== 'default' && selectedImageId !== 'ficha'
+      ? char.powers?.variantData?.[selectedImageId]
       : null;
+
   const variantContent = {
     habilidades: activeVariantData?.habilidades ?? char.powers?.habilidades,
     significa:   activeVariantData?.significa   ?? char.powers?.significa,
     crisis:      activeVariantData?.crisis       ?? char.powers?.crisis,
     variantLabel: activeVariantData?.label       ?? null,
   };
+
   const statRows = [
     { name: "Fuerza",   val: stats?.fuerza ?? 0 },
     { name: "Intel.",   val: stats?.inteligencia ?? 0 },
@@ -96,11 +157,12 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     { name: char.especialLabel || "Especial", val: isPowersMode ? (char.powers?.stats?.especialVal ?? 0) : (char.stats?.especialVal ?? 0) },
   ];
 
-  // Transition handler when switching Overload mode
+  // Transition handler when switching Detalles mode
   const handlePowersModeToggle = () => {
     if (!isPowersMode) {
-      // Transitioning ON
-      const targetSrc = char.powers?.suitImages?.default || char.overloadImage;
+      // Transitioning to Detalles Mode
+      const targetImages = detallesImages;
+      const targetSrc = targetImages[0]?.src || char.image;
       setIsTransitioning(true);
       
       const img = new Image();
@@ -113,51 +175,25 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
         const remaining = Math.max(0, minDuration - elapsed);
         setTimeout(() => {
           setIsPowersMode(true);
-          setSelectedSuitVariant("default");
+          setSelectedImageId(targetImages[0]?.id || "default");
           setIsTransitioning(false);
         }, remaining);
       };
       
       img.onerror = () => {
         setIsPowersMode(true);
-        setSelectedSuitVariant("default");
+        setSelectedImageId(targetImages[0]?.id || "default");
         setIsTransitioning(false);
       };
     } else {
-      // Transitioning OFF (quick power-down)
+      // Transitioning back to Standard Mode
       setIsTransitioning(true);
       setTimeout(() => {
         setIsPowersMode(false);
+        setSelectedImageId("default");
         setIsTransitioning(false);
       }, 500);
     }
-  };
-
-  // Preloading transition for suit variant buttons
-  const handleVariantChange = (variant: string) => {
-    if (variant === selectedSuitVariant) return;
-    const targetSrc = char.powers?.suitImages?.[variant];
-    if (!targetSrc) return;
-    
-    setIsTransitioning(true);
-    const img = new Image();
-    img.src = targetSrc;
-    const startTime = Date.now();
-    
-    img.onload = () => {
-      const elapsed = Date.now() - startTime;
-      const minDuration = 800; // slightly shorter transition (0.8s) for sub-variants
-      const remaining = Math.max(0, minDuration - elapsed);
-      setTimeout(() => {
-        setSelectedSuitVariant(variant);
-        setIsTransitioning(false);
-      }, remaining);
-    };
-    
-    img.onerror = () => {
-      setSelectedSuitVariant(variant);
-      setIsTransitioning(false);
-    };
   };
 
   return (
@@ -339,7 +375,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                   animation: 'rgbSplit 0.4s linear infinite',
                 }}
               >
-                {!isPowersMode ? 'SOBRECARGANDO' : 'CALIBRANDO'}
+                {!isPowersMode ? 'CARGANDO DETALLES' : 'RESTABLECIENDO'}
               </motion.div>
 
               {/* sub-line */}
@@ -350,7 +386,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                 className="mt-3 font-[var(--font-marker)] text-xs sm:text-sm tracking-[0.3em] uppercase z-10 text-center"
                 style={{ color: vibrantAccent, animation: 'flickerIn 2s ease-in-out infinite' }}
               >
-                {!isPowersMode ? 'Desatando limitador táctico' : 'Cargando variante de traje'}
+                {!isPowersMode ? 'Accediendo a la ficha técnica' : 'Volviendo a vista general'}
               </motion.div>
 
               {/* === Layer 7: power surge bar === */}
@@ -466,82 +502,40 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
             )}
           </div>
 
-          {/* Alt image toggle for standard mode */}
-          {!isPowersMode && char.altImage && !isLocked && (
-            <button
-              onClick={() => setShowAlt(!showAlt)}
-              className="absolute bottom-2 left-2 z-20 px-2 py-1 border-2 border-black bg-yellow-400 hover:bg-yellow-300 font-[var(--font-bangers)] text-[10px] tracking-wider uppercase shadow-[2px_2px_0_#000] transition-all"
-            >
-              {showAlt ? "Clásico" : "Alt"}
-            </button>
-          )}
-
-          {/* Suit variants selector for Overload mode */}
-          {isPowersMode && !isLocked && char.powers?.suitImages && (
+          {/* Image selection buttons for all modes / categories */}
+          {!isLocked && currentImagesList.length > 1 && (
             <div className="absolute bottom-2 left-2 z-20 flex flex-wrap gap-1.5 max-w-[90%]">
-              {Object.entries(char.powers.suitImages)
-                .sort(([a], [b]) => {
-                  if (a === 'full') return 1;
-                  if (b === 'full') return -1;
-                  return 0;
-                })
-                .map(([variant, path]) => {
-                // "default" is already showing; skip its own button in some designs,
-                // but keeping it so the user can see all variants clearly.
-                const isActive = selectedSuitVariant === variant;
-                const pathStr = typeof path === "string" ? path.trim() : "";
-                const isEmpty = pathStr === "";
-
-                const labelMap: Record<string, string> = {
-                  default: 'Base',
-                  full: 'Full',
-                  alt: 'Alt',
-                  combat: 'Combat',
-                  action: 'Action',
-                };
-                const label = labelMap[variant] ?? variant.toUpperCase();
-
-                if (isEmpty) {
-                  return (
-                    <button
-                      key={variant}
-                      disabled
-                      title="Próximamente — imagen en producción"
-                      style={{
-                        backgroundColor: '#0f172a',
-                        color: `${vibrantAccent}55`,
-                        borderColor: `${vibrantAccent}33`,
-                        cursor: 'not-allowed',
-                      }}
-                      className="px-2.5 py-1 border-2 font-[var(--font-bangers)] text-[10px] tracking-wider uppercase opacity-60 relative"
-                    >
-                      <span>{label}</span>
-                      <span
-                        className="ml-1 text-[8px] font-[var(--font-marker)] normal-case opacity-70"
-                        style={{ color: `${vibrantAccent}88` }}
-                      >
-                        soon
-                      </span>
-                    </button>
-                  );
-                }
-
+              {currentImagesList.map((imgOpt) => {
+                const isActive = selectedImageId === imgOpt.id;
                 return (
                   <button
-                    key={variant}
-                    onClick={() => handleVariantChange(variant)}
+                    key={imgOpt.id}
+                    onClick={() => {
+                      if (isActive) return;
+                      setIsTransitioning(true);
+                      const tempImg = new Image();
+                      tempImg.src = imgOpt.src;
+                      tempImg.onload = () => {
+                        setSelectedImageId(imgOpt.id);
+                        setIsTransitioning(false);
+                      };
+                      tempImg.onerror = () => {
+                        setSelectedImageId(imgOpt.id);
+                        setIsTransitioning(false);
+                      };
+                    }}
                     style={{
-                      backgroundColor: isActive ? vibrantAccent : '#0a0a0f',
-                      color: isActive ? getTextColor(vibrantAccent) : '#ffffff',
-                      borderColor: isActive ? vibrantAccent : '#0a0a0f',
+                      backgroundColor: isActive ? (isPowersMode ? vibrantAccent : accent) : '#0a0a0f',
+                      color: isActive ? getTextColor(isPowersMode ? vibrantAccent : accent) : '#ffffff',
+                      borderColor: isActive ? (isPowersMode ? vibrantAccent : accent) : '#0a0a0f',
                       boxShadow: isActive
-                        ? `0 0 10px ${vibrantAccent}88`
+                        ? `0 0 10px ${isPowersMode ? vibrantAccent : accent}88`
                         : '2px 2px 0 #000',
                       transform: isActive ? 'translate(1px, 1px)' : 'none',
                     }}
                     className="px-2.5 py-1 border-2 font-[var(--font-bangers)] text-[10px] tracking-wider uppercase transition-all hover:scale-105 active:scale-95"
                   >
-                    {label}
+                    {imgOpt.label}
                   </button>
                 );
               })}
@@ -587,10 +581,12 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                     color: getTextColor(isPowersMode ? vibrantAccent : accent) 
                   }}
                 >
-                  {isPowersMode
-                    ? (variantContent.variantLabel
-                        ? `${char.powers?.role?.split(' / ')[0]} — ${variantContent.variantLabel}`
-                        : char.powers?.role)
+                  {isPibe
+                    ? (isPowersMode
+                        ? (variantContent.variantLabel
+                            ? `${char.powers?.role?.split(' / ')[0]} — ${variantContent.variantLabel}`
+                            : char.powers?.role)
+                        : char.role)
                     : char.role}
                 </span>
                 <h2
@@ -598,7 +594,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                   style={{ textShadow: isPowersMode ? `2px 2px 0 ${darkBg}, 4px 4px 0 ${vibrantAccent}` : `2px 2px 0 ${accent}` }}
                 >
                   <span>{char.name.toUpperCase()}</span>
-                  {isPowersMode && char.powers?.role && (
+                  {isPibe && isPowersMode && char.powers?.role && (
                     <span 
                       style={{ color: vibrantAccent }}
                       className="text-xl sm:text-2xl font-[var(--font-marker)] tracking-normal normal-case block sm:inline"
@@ -627,26 +623,41 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                 </ul>
               </div>
 
-              {/* ── significa banner ── */}
-              {isPowersMode && variantContent.significa && (
+              {/* ── abilities / habilidades (for non-pibes we display their powers' skills directly) ── */}
+              {!isPibe && char.powers?.habilidades && (
+                <div 
+                  className="border-t-2 pt-2 flex flex-col gap-1 flex-shrink-0"
+                  style={{ borderColor: "#0a0a0f" }}
+                >
+                  <h4 className="font-[var(--font-bangers)] text-xs tracking-wider">HABILIDADES ESPECIALES:</h4>
+                  <ul className="font-sans text-xs leading-relaxed flex flex-col gap-1 pl-3 list-disc list-outside">
+                    {char.powers.habilidades.map((item: string, idx: number) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* ── significa banner (for non-pibes or pibes in detalles mode) ── */}
+              {((isPowersMode && variantContent.significa) || (!isPibe && char.powers?.significa)) && (
                 <div
                   className="p-3 border-2 relative bg-[#13131e] mt-2 mb-1 flex-shrink-0"
                   style={{
-                    borderColor: vibrantAccent,
-                    boxShadow: `3px 3px 0 ${vibrantAccent}`,
+                    borderColor: isPowersMode ? vibrantAccent : accent,
+                    boxShadow: isPowersMode ? `3px 3px 0 ${vibrantAccent}` : `3px 3px 0 ${accent}`,
                   }}
                 >
                   <span
                     className="font-[var(--font-marker)] text-[10px] uppercase absolute -top-3 left-3 rotate-[-1deg] border border-[#0a0a0f] px-2 py-0.5"
                     style={{
-                      backgroundColor: vibrantAccent,
-                      color: getTextColor(vibrantAccent),
+                      backgroundColor: isPowersMode ? vibrantAccent : accent,
+                      color: getTextColor(isPowersMode ? vibrantAccent : accent),
                     }}
                   >
-                    {variantContent.variantLabel ? variantContent.variantLabel.toUpperCase() : 'SIGNIFICA:'}
+                    {isPowersMode && variantContent.variantLabel ? variantContent.variantLabel.toUpperCase() : 'SIGNIFICA:'}
                   </span>
                   <p className="font-sans text-[11px] leading-snug text-white mt-1">
-                    {variantContent.significa}
+                    {isPowersMode ? variantContent.significa : char.powers?.significa}
                   </p>
                 </div>
               )}
@@ -668,10 +679,10 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                     borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
                   }}
                 >
-                  {isPowersMode ? "Sobrecarga" : "En Crisis"}
+                  {isPowersMode ? "Ficha Táctica" : "En Crisis"}
                 </div>
                 <p className="font-sans text-xs sm:text-sm leading-snug">
-                  {isPowersMode ? variantContent.crisis : char.crisis}
+                  {isPowersMode ? variantContent.crisis : (char.powers?.crisis || char.crisis)}
                 </p>
               </div>
 
@@ -704,31 +715,33 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                 </div>
               </div>
 
-              {/* ── toggle button ── */}
-              <div className="pt-2 mt-auto pb-2 sm:pb-0 flex-shrink-0">
-                <button
-                  onClick={handlePowersModeToggle}
-                  style={{
-                    backgroundColor: isPowersMode ? darkBg : accent,
-                    color: isPowersMode ? vibrantAccent : getTextColor(accent),
-                    borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
-                    boxShadow: isPowersMode ? `3px 3px 0 ${vibrantAccent}` : "3px 3px 0 #000",
-                  }}
-                  className="w-full py-3 sm:py-2 border-3 font-[var(--font-bangers)] text-sm sm:text-base tracking-wider uppercase active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#000] transition-all flex items-center justify-center gap-2 hover:brightness-105 active:brightness-95"
-                >
-                  {isPowersMode ? (
-                    <>
-                      <ZapOff className="w-5 h-5 shrink-0" />
-                      <span>EN CRISIS</span>
-                    </>
-                  ) : (
-                    <>
-                      <Zap className="w-5 h-5 shrink-0 fill-current" />
-                      <span>SOBRECARGAR</span>
-                    </>
-                  )}
-                </button>
-              </div>
+              {/* ── Detalles toggle button (only for Pibes) ── */}
+              {isPibe && (
+                <div className="pt-2 mt-auto pb-2 sm:pb-0 flex-shrink-0">
+                  <button
+                    onClick={handlePowersModeToggle}
+                    style={{
+                      backgroundColor: isPowersMode ? darkBg : accent,
+                      color: isPowersMode ? vibrantAccent : getTextColor(accent),
+                      borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
+                      boxShadow: isPowersMode ? `3px 3px 0 ${vibrantAccent}` : "3px 3px 0 #000",
+                    }}
+                    className="w-full py-3 sm:py-2 border-3 font-[var(--font-bangers)] text-sm sm:text-base tracking-wider uppercase active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#000] transition-all flex items-center justify-center gap-2 hover:brightness-105 active:brightness-95"
+                  >
+                    {isPowersMode ? (
+                      <>
+                        <ZapOff className="w-5 h-5 shrink-0" />
+                        <span>VISTA GENERAL</span>
+                      </>
+                    ) : (
+                      <>
+                        <Zap className="w-5 h-5 shrink-0 fill-current" />
+                        <span>DETALLES</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              )}
             </>
           )}
         </div>

@@ -102,6 +102,14 @@ export default function NavBar() {
             </div>
           </div>
 
+          {/* Leer Cómic Button */}
+          <Link
+            href="/#sagas"
+            className="font-[var(--font-bangers)] text-sm tracking-wider px-3.5 py-1.5 border-2 border-white bg-[#e8185a] hover:bg-[#c8134d] text-white uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] shrink-0"
+          >
+            Leer Cómic →
+          </Link>
+
           {/* Global Toggle Button */}
           <button
             onClick={toggleUnlockAll}
@@ -115,8 +123,15 @@ export default function NavBar() {
           </button>
         </nav>
 
-        {/* Mobile Actions (Spoiler Toggle + Hamburger) */}
+        {/* Mobile Actions (Spoiler Toggle + Leer + Hamburger) */}
         <div className="flex md:hidden items-center gap-3">
+          <Link
+            href="/#sagas"
+            className="font-[var(--font-bangers)] text-[11px] tracking-wider px-2.5 py-1 border-2 border-white bg-[#e8185a] text-white uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] shrink-0"
+          >
+            Leer
+          </Link>
+
           <button
             onClick={toggleUnlockAll}
             className={`font-[var(--font-bangers)] text-[11px] tracking-wider px-2.5 py-1 border-2 border-black uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] cursor-pointer ${
@@ -140,6 +155,15 @@ export default function NavBar() {
       {/* Mobile dropdown */}
       {menuOpen && (
         <div style={{ background: "#13131e", borderTop: "2px solid #e8185a" }} className="md:hidden px-5 py-6 flex flex-col gap-5">
+          {/* Leer Cómic Button on Mobile Dropdown */}
+          <Link
+            href="/#sagas"
+            onClick={() => setMenuOpen(false)}
+            className="w-full font-[var(--font-bangers)] text-lg text-center tracking-wider py-2.5 border-2 border-white bg-[#e8185a] hover:bg-[#c8134d] text-white uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] block"
+          >
+            Leer Cómic →
+          </Link>
+
           {/* Button at the top of mobile menu */}
           <button
             onClick={toggleUnlockAll}
