@@ -39,7 +39,7 @@ export const entidades: CharacterDetail[] = [
     isSecondary: true,
     image: '/personajes/Entidades/Judge Null/Judge Null.webp',
     fullBody: '/personajes/Entidades/Judge Null/Judge Null.webp',
-    fichaImage: '/personajes/Entidades/Judge Null/Null.webp',
+    fichaImage: '/personajes/Entidades/Judge Null/Judge Null.webp',
     color: '#450a0a',
     role: 'El Árbitro Final',
     visualCode: 'Armadura de obsidiana tipo catedral, corona rota flotante, capa de universos muertos',

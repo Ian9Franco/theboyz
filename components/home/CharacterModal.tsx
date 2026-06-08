@@ -72,16 +72,20 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
       detallesImages.push({ id: "ficha", label: "Ficha", src: suitImgObj.ficha });
     }
     if (suitImgObj.default || char.overloadImage) {
-      detallesImages.push({ id: "default", label: "Traje", src: suitImgObj.default || char.overloadImage });
+      detallesImages.push({ id: "default", label: "Portada #1", src: suitImgObj.default || char.overloadImage });
     }
-    // Add other suit images dynamically (excluding default, ficha, etc.)
+    // Add other suit images dynamically (excluding default, ficha, combat, etc.)
     Object.entries(suitImgObj).forEach(([key, val]) => {
-      if (key !== 'default' && key !== 'ficha' && val && typeof val === 'string') {
+      if (key !== 'default' && key !== 'ficha' && key !== 'combat' && val && typeof val === 'string') {
         const labelMap: Record<string, string> = {
           ficha2: 'Ficha 2',
           fichaAlt: 'Ficha Alt',
-          alt: 'Alt',
-          archor: 'Archor',
+          alt: char.id === 'ian' ? 'Traje' : 'Alt',
+          archor: unlockAll ? 'Archor' : '???',
+          mk3: 'Mark III',
+          mk3_alt: 'Mark III Alt',
+          mkl: 'Mark L',
+          ficha3: 'Ficha 3',
         };
         const label = labelMap[key] || key.toUpperCase();
         if (!detallesImages.some(img => img.id === key)) {
@@ -102,7 +106,8 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
 
   // Decide which image to show
   const currentImageObj = currentImagesList.find(img => img.id === selectedImageId) || currentImagesList[0];
-  const currentImage = currentImageObj?.src;
+  const isArchorLocked = selectedImageId === 'archor' && !unlockAll;
+  const currentImage = isArchorLocked ? '/personajes/FULLBODY SUIT/VESPERWING/vesperwing.webp' : currentImageObj?.src;
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -131,7 +136,9 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
   const accent = isLocked ? "#6b7280" : char.color;
   const vibrantAccent = getVibrantColor(accent);
   const darkBg = getDarkBgColor(accent);
-  const stats = isPowersMode ? char.powers?.stats : char.stats;
+  const stats = isArchorLocked
+    ? char.stats
+    : (isPowersMode ? char.powers?.stats : char.stats);
 
   // Resolve variant-specific content (habilidades / significa / crisis)
   // We use the selectedImageId if it corresponds to a variant (e.g. 'alt', 'archor')
@@ -141,10 +148,20 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
       : null;
 
   const variantContent = {
-    habilidades: activeVariantData?.habilidades ?? char.powers?.habilidades,
-    significa:   activeVariantData?.significa   ?? char.powers?.significa,
-    crisis:      activeVariantData?.crisis       ?? char.powers?.crisis,
-    variantLabel: activeVariantData?.label       ?? null,
+    habilidades: isArchorLocked
+      ? [
+          'Contenido Clasificado: Este registro contiene información sobre la fase final clasificada del multiverso.',
+          'Clasificado: Acceso restringido por la Iniciativa Vesperwing.',
+          '???'
+        ]
+      : (activeVariantData?.habilidades ?? char.powers?.habilidades),
+    significa: isArchorLocked
+      ? 'Información encriptada para evitar paradojas temporales. El destino final de Ian permanece oculto.'
+      : (activeVariantData?.significa ?? char.powers?.significa),
+    crisis: isArchorLocked
+      ? 'Alerta de Spoiler: Los datos tácticos han sido bloqueados voluntariamente.'
+      : (activeVariantData?.crisis ?? char.powers?.crisis),
+    variantLabel: isArchorLocked ? '???' : (activeVariantData?.label ?? null),
   };
 
   const statRows = [
@@ -464,7 +481,9 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
               .modal-img-panel { height: 100% !important; }
             }
           `}</style>
-          <div className="modal-img-panel absolute inset-0 flex items-end justify-center overflow-hidden">
+          <div className={`modal-img-panel absolute inset-0 flex justify-center overflow-hidden ${
+            (selectedImageId !== 'default' && selectedImageId !== 'alt') ? "items-center" : "items-end"
+          }`}>
             {isLocked ? (
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="absolute inset-0 speed-lines opacity-20" />
@@ -481,9 +500,9 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                 alt={isLocked ? "PRÓXIMAMENTE" : char.name}
                 title="Click para ver completo"
                 onClick={() => setImgFullscreen(true)}
-                className={`w-full h-full object-contain object-center sm:object-bottom p-1 sm:p-2 lg:p-4 transition-all duration-500 cursor-zoom-in ${
-                  isPowersMode ? "brightness-110" : ""
-                }`}
+                className={`w-full h-full object-contain p-1 sm:p-2 lg:p-4 transition-all duration-500 cursor-zoom-in ${
+                  (selectedImageId !== 'default' && selectedImageId !== 'alt') ? "object-center" : "object-center sm:object-bottom"
+                } ${isPowersMode ? "brightness-110" : ""}`}
                 style={{
                   filter: isPowersMode 
                     ? `drop-shadow(4px 4px 0 rgba(0,0,0,0.2)) drop-shadow(0 0 18px ${vibrantAccent})`

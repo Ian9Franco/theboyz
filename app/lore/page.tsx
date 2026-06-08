@@ -56,7 +56,7 @@ export default function LorePage() {
 
               <div className="bg-[#1a1a25] border-2 border-white/10 p-5 rounded-sm hover:border-[#f5e642] transition-colors">
                 <h3 className="font-[var(--font-bangers)] text-2xl text-[#f5e642] mb-2 tracking-widest">JULIÁN <span className="text-white/40 text-lg">/ WILDCARD</span></h3>
-                <p>Su mente fue alterada por la exposición, permitiéndole proyectar ecos semisólidos de sí mismo y manipular la percepción cognitiva de quienes lo rodean mediante ilusiones y "puntos ciegos".</p>
+                <p>Modifica energía pura e inestable (glitch azul y rojo) para proyectar proyectiles y armas tácticas de corto alcance, además de crear clones o ecos cuya carga explosiva se degrada con el tiempo.</p>
               </div>
 
               <div className="bg-[#1a1a25] border-2 border-white/10 p-5 rounded-sm hover:border-[#f5e642] transition-colors">
@@ -66,7 +66,7 @@ export default function LorePage() {
 
               <div className="bg-[#1a1a25] border-2 border-white/10 p-5 rounded-sm hover:border-[#f5e642] transition-colors">
                 <h3 className="font-[var(--font-bangers)] text-2xl text-[#f5e642] mb-2 tracking-widest">MATI <span className="text-white/40 text-lg">/ SWAPFIRE</span></h3>
-                <p>Sus habilidades no vienen del escape, sino de un vínculo directo con el multiverso despertado por el contacto de sus variantes. Puede manipular el espacio y las posiciones físicas tácticamente.</p>
+                <p>Su propio cuerpo es un nexo que absorbe y almacena energía térmica y cinética del multiverso. Canaliza esta devastación a través de su visor o de la palma de sus manos en ráfagas bifásicas.</p>
               </div>
 
               <div className="bg-[#1a1a25] border-2 border-white/10 p-5 rounded-sm hover:border-[#f5e642] transition-colors">
@@ -133,7 +133,7 @@ export default function LorePage() {
                 <div className="w-1.5 bg-[#f5e642] shrink-0"></div>
                 <div>
                   <h4 className="font-bold text-2xl text-white">Mati → Swapfire</h4>
-                  <p className="text-white/80 mt-1">El nombre no proviene de la Tierra original, sino que nace del multiverso. Durante una de las transmisiones interdimensionales, una de sus variantes tácticas avanzadas lo clasifica como <em>"Swapfire"</em> debido a su capacidad de intercambio espacial y la fricción térmica residual que deja al activarse.</p>
+                  <p className="text-white/80 mt-1">El nombre cobra un sentido destructivo: ya no intercambia posiciones, sino el estado de la materia alternando ráfagas bifásicas a alta velocidad, creando un &quot;fuego cruzado&quot; de plasma puramente sólido (cinético) y haz térmico de fricción molecular.</p>
                   <p className="text-white/60 text-sm mt-1 italic">
                     A pesar de este alias oficial, Julián se niega a usarlo y siempre se refiere a él como "el mati" o "el mati de mierda" (ej: <em>"Preguntale a el mati"</em> o <em>"¿En serio hizo eso? Qué mati de mierda"</em>).
                   </p>

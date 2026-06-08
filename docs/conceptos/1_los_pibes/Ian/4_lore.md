@@ -11,4 +11,4 @@ En este estado final, se convierte en **Emperor Vesper Archor** (o Archon Vesper
 *   Gobierna las probabilidades y el destino para garantizar que la humanidad sobreviva, erradicando el libre albedrío si es necesario.
 *   Se corona a sí mismo como el único Dios de Vesperia (*"There is no God, only Vesper Archor"*).
 *   Lleva una armadura negra mate con runas rojas brillantes, una capa cósmica viva y ojos vacíos con luz roja.
-*   Es un dios cansado que carga con el fin del mundo sobre sus espaldas para que otros puedan vivir.
+*   Es un dios que carga con el fin del mundo sobre sus espaldas para que otros puedan vivir.

@@ -1,83 +1,82 @@
-# 🦸‍♂️ Mati — "Swapfire" (El Controlador del Tablero)
+# 🦸‍♂️ Mati — "Swapfire" (El Reactor Humano)
 
-*   **Rol en el Roster:** Controlador táctico / reposicionamiento y ofensiva de fricción.
-*   **Poder Principal:** *Intercambio (El Sistema de Anclajes).*
-    *   **Punto A (Nexo Inicial):** Puede ser Mati mismo, su línea de visión directa, o un **Remanente de Plasma** estático (silueta residual púrpura) proyectada para atacar y volver a su posición original.
-    *   **Punto B (Anclaje Físico):** Se activa mediante un objeto sincronizado (como Dagas de Marcado, proyectiles o drones) que actúa como un **Anclaje IP Espacial**. Al impactar o desacelerar, el Punto B valida sus coordenadas.
-*   **Ofensiva Residual (La "Friction Overload"):** Al permutarse instantáneamente la materia del Punto A y el Punto B, la compresión violenta del aire genera un crack sónico y una liberación extrema de calor por fricción molecular. Si se intercambia a quemarropa, él aparece intacto pero el oponente recibe una onda de choque térmica directa que destruye armaduras y escudos.
-*   **Limitación y Estado Crítico:** Requiere línea de visión para intercambios sin marcas físicas y está sujeto a restricciones de masa y saturación mental. Si entra en **Falta de Memoria (Memory Leak)** al ser desarmado de sus herramientas, debe sincronizar y arrojar cualquier consumible del entorno al tacto (piedras, chatarra o la ropa del atacante) para improvisar intercambios de emergencia.
-*   **Modos de Combate / El Tablero Simultáneo:**
-    *   *Modo Acción (Base) — El "Sleight of Swap":* Maneja hasta dos hilos simultáneos. Arroja tres dagas en abanico que atraviesan o se clavan en tres enemigos distintos y activa un intercambio consecutivo a velocidad subatómica para ejecutar tres cortes físicos instantáneos en la escena, apareciendo al final atrapando su primera daga en el aire.
-    *   *Modo Completo (Momentum) — El "Lazo Cinético":* Intercambio en Cadena (Efecto Dominó) sin límites numéricos. Conecta la inercia y energía cinética de cargas pesadas a través de hilos de plasma hacia enemigos más pequeños, frenando al atacante en seco y transfiriendo el impacto de la inercia directamente a los cuerpos de sus subordinados.
-*   **Memoria de Matriz (Almacenamiento de Ubicaciones):** Funciona como un disco rígido de coordenadas espaciales. Puede guardar coordenadas para retornos seguros o escapes transdimensionales de largo alcance (dejando una daga en la Tierra 616). Intercambiar materia a través de dimensiones requiere una masa equivalente en el destino como "moneda de cambio".
-*   **Supervivencia Cósmica (La Burbuja de Espacio Local):** Su supervivencia en el espacio es una consecuencia de su firma espacial. Mantiene atrapada de forma inconsciente una burbuja de las condiciones de la Tierra a milímetros de su piel que lo protege de la presión y del frío absoluto. Su limitación (el "Oxígeno de Red") implica que la atmósfera atrapada se vicia, por lo que requiere trajes o recicladores de Vesperwing para misiones espaciales prolongadas.
-*   **Movilidad:** No vuela, pero utiliza su habilidad para aparecer instantáneamente donde le plazca.
-*   **Estética Visual:** Destellos púrpuras y líneas geométricas que conectan ambos puntos antes de realizar el intercambio.
+> "Mati es el primero en mandar un meme al grupo en medio de una crisis, pero también el primero en ponerse al frente cuando hay que tomar una decisión de la que depende la vida de todos. Sabe que sus ojos son una ventana al colapso multiversal, y no se permite parpadear cuando importa."
+
+*   **Rol en el Roster:** Controlador táctico / reposicionamiento, ofensiva de fricción y destrucción de cobertura a larga distancia.
 
 ---
 
-# ⚡ ¿Cómo obtiene sus poderes Mati?
+## 🔴 El Sistema de Conducción: "The Aperture" (La Apertura)
+A diferencia de Cíclopes, cuyos ojos son portales a otra dimensión de fuerza cinética, el poder de Mati no proviene de una mutación biológica estándar, sino de que sus ojos son literalmente un portal físico a otra dimensión del multiverso de donde brota una inmensa energía de plasma. Su cuerpo funciona como un nexo cuántico que absorbe la energía residual de sus contrapartes en otras realidades (el "Mativerse").
 
-## Origen del Poder
-Mati es un caso único. Sus habilidades no provienen de la energía liberada durante la fuga de los Backrooms que mutó al resto del equipo. Su conexión está vinculada directamente al multiverso.
-
-Por razones aún desconocidas, distintas versiones alternativas de Mati (el "Mativerse") han comenzado a detectar su existencia. Cada encuentro con una variante fortalece su vínculo con la estructura multiversal, permitiéndole manipular posiciones, espacio y eventualmente de forma más compleja la física del tablero. Es el único integrante cuya historia está ligada directamente a sus variantes.
-
-## Origen de su Nombre Clave (Swapfire)
-El nombre no lo elige él ni el grupo de la Tierra original; proviene directamente del multiverso. Durante una de las transmisiones interdimensionales, una de sus variantes tácticas avanzadas se refiere a él bajo la designación militar de **"Swapfire"** por su capacidad de intercambio espacial y la fricción térmica residual que genera al activarse.
-
-## 🌌 El Nexo Cósmico (El "Star-Lord" del Grupo)
-A diferencia de los poderes locales del resto de Los Pibes (cuyas mutaciones afectan solo la materia física), las habilidades de Mati manipulan el código del tejido espacio-temporal del multiverso. Esto lo convierte en un "Glitched User" y en el nexo cósmico de la trama.
-*   **La Infraestructura del Multiverso:** Mati no viaja al espacio por elección, sino por pura supervivencia: la infraestructura cuántica del multiverso y las bases del Consejo (como la de Mati Prime "El Arquitecto") operan en nexos cósmicos y estaciones espaciales construidas en el vacío interdimensional.
-*   **El Navegante y Router del Equipo:** En la proa de las naves tácticas de Vesperwing, usando su visor holográfico, Mati detecta puntos de anclaje a años luz de distancia y ejecuta un Swap de escala cósmica, teletransportando la nave entera instantáneamente a través de galaxias.
-*   **La Brújula Táctica:** Toma las decisiones duras y frías en el espacio profundo (donde no hay margen de error), priorizando la misión u objetivos críticos sobre la empatía de grupo.
-*   **La Revelación Cósmica:** Mati descubre que él (y todas sus variantes) son puntos de restauración indispensables para el multiverso. Si todos los Matis de una línea temporal son eliminados, la geografía espacio-temporal de esa dimensión colapsa por completo como un servidor sin base de datos.
+*   **Visor de Conducción Táctica:** Desarrollado por Vesperwing (Ian). Este dispositivo es indispensable para modular la energía del portal de sus ojos. Le permite realizar una calibración milimétrica para concentrar el haz en ráfagas finas, realizar rebotes geométricos complejos y controlar la intensidad. Además, el visor está completamente sellado y le proporciona respiración autónoma para sobrevivir en el espacio y en el vacío absoluto.
+*   **Sin Visor (Estado Pasivo):** Mati puede abrir los ojos con total normalidad en su vida cotidiana. Puede mirar a sus amigos, parpadear, reírse y hacer su vida diaria sin emitir energía ni romper nada. Sus ojos no proyectan plasma constantemente de forma pasiva.
+*   **Sin Visor (Estado Activo / Catastrófico):** Si intenta activar o liberar su poder sin el visor táctico colocado, la energía brota sin filtro alguno. El rayo se expande instantáneamente cubriendo todo su campo de visión, provocando una destrucción masiva de área, descontrolada y devastadora, lo que representa un grave peligro de fuego aliado para Los Pibes.
 
 ---
 
-# 👤 ¿Quién es Mati?
+## ⚡ Estética y Naturaleza del Rayo: El Violeta Base
+*   **Color Constante:** El rayo ya no cambia de color según el tipo de ráfaga. Siempre es de un color violeta base, una línea de plasma puro y concentrado.
+*   **El Efecto "Meltdown" (Fusión):** El cambio visual de color solo ocurre cuando Mati se sobrecalienta o entra en crisis. Al llegar al límite de la presión multiversal, el rayo violeta empieza a teñirse con tonos rojos incandescentes, similares al fuego, indicando que el reactor de su cuerpo está a punto de colapsar.
+*   **Dirección por la Mirada:** Los modos de disparo (Modo Acción y Overdrive) se guían al 100% con la mirada. El lector del cómic debe ver claramente que la dirección de su cabeza y el movimiento de sus ojos guían el trayecto del rayo púrpura.
 
-## Perfil Psicológico y Personalidad
-*   **Pragmatismo calculador:** Toma decisiones frías, lógicas y drásticas en milisegundos, anulando cualquier interferencia emocional para garantizar la eficiencia.
-*   **Combatiente adaptativo:** Un estratega de campo feroz y directo que protege los intereses de los suyos con un enfoque estrictamente utilitario.
-*   **Estilo:** Su campera bomber gris oscuro, remera verde oliva y hoyuelos marcados contrastan sutilmente con la severidad de su mirada.
-*   **Crisis (Resolución implacable):** Ante escenarios desesperados, su lógica fría puede volverse extrema, priorizando el éxito de la misión u objetivo macro por encima de la seguridad individual de los involucrados.
+---
 
-## ¿Dejó de ser humano? (El Desgaste del Soporte Físico)
-A medida que la Guerra Mativersal progresa y se vincula con variantes de La Corte de los Matis, la inmensa cantidad de datos a procesar diluye su humanidad biológica:
-*   **La "Defragmentación" Biológica:** Su sistema nervioso transmuta. Las sinapsis celulares dejan de ser impulsos puramente biológicos y comienzan a correr sobre hilos de plasma púrpura; sus células y fluidos se sincronizan progresivamente con la matriz espacio-temporal.
-*   **Un Archivo Corrupto:** En un examen médico convencional, sus órganos aparecen normales, pero a nivel atómico sus partículas parpadean con sutiles "frame drops". Físicamente, está transitando de una criatura de carne a un vector de datos consciente.
+## 🔄 Modos de Disparo y Escala (El Tablero de Ráfagas)
+
+### 🎭 Modo Acción: "Ráfagas Geométricas"
+*   **Mecánica Visual:** Usando su visor de calibración milimétrica, Mati calcula rebotes tridimensionales en superficies de alta densidad. El lector ve el rayo violeta base salir de sus ojos, rebotar en ángulos perfectos en paredes o el suelo y golpear a los enemigos por la espalda o por debajo de sus coberturas. Todo es dirigido con precisión milimétrica mediante su mirada.
+
+### 🌀 Modo Completo: "Overdrive Multiversal"
+*   **Mecánica Visual:** Un pilar masivo de plasma violeta que se tiñe de rojo incandescente al entrar en Meltdown, ocupando viñetas enteras. Borra coberturas completas. Para sostener este disparo, Mati requiere su traje de acción alternativo, el cual absorbe la violenta fuerza de retroceso que de lo contrario desgarraría sus articulaciones. Sus botas se entierran en el suelo para mantenerlo anclado.
+
+---
+
+## 🚫 Limitaciones y Estado Crítico: El "Meltdown"
+*   **Saturación y Desgaste:** Sostener el rayo por mucho tiempo sobrecarga su cuerpo. Sus venas y sinapsis brillan con hilos de plasma violeta bajo la piel, sufriendo quemaduras internas temporales.
+*   **Pérdida del Visor:** Si su visor es destruido o removido en combate, Mati queda limitado a su estado pasivo (sin usar sus poderes) o a desatar el estado activo catastrófico, arriesgándose a calcinar a sus propios aliados debido a la expansión incontrolada del rayo.
+
+---
+
+## 🌌 El Nexo Cósmico y Fisiología
+*   **La Batería Cósmica:** Cada variante en el Mativerse alimenta su reactor central en tiempo real. Si una variante muere en otra dimensión, Mati siente un doloroso "subidón" térmico que desestabiliza su visor.
+*   **Fuerza y Resistencia Sobrehumana:** Debido a la densidad de la energía multiversal que alberga, Mati posee una fuerza y resistencia física aumentadas de forma casi sobrehumana. Las balas pueden herir su piel y hacerlo sangrar, pero no tienen la fuerza para penetrar y dañar sus órganos internos.
+*   **Supervivencia Espacial:** Además de la respiración proporcionada por su visor, su cuerpo proyecta una burbuja de anclaje local de forma inconsciente que retiene la atmósfera terrestre a su alrededor, lo que le permite resistir la presión y temperaturas extremas del vacío.
+
+---
+
+## 👤 ¿Quién es Mati?
+
+### Perfil Psicológico y Personalidad
+*   **El Alma del Grupo:** A diferencia de lo que se podría esperar de alguien con semejante poder destructor, Mati es un tipo sumamente jovial, carismático y amante de los memes. En medio de las misiones más tensas, es el primero en mandar un chiste o una chicana al grupo para descontracturar el ambiente.
+*   **El Matiz "Polémico":** No es un cínico, sino un buen tipo con una perspectiva de la vida muy particular. Suele soltar comentarios conflictivos, teorías un poco locas o pensamientos extraños que descolocan a Los Pibes, desatando debates absurdos en momentos inoportunos.
+*   **La Frialdad Táctica (El Switch):** Su jovialidad no demerita su capacidad táctica. Mati posee un "switch" mental de madurez extrema: cuando la situación se vuelve crítica y las papas queman, activa esta frialdad táctica para tomar la batuta, ponerse al frente del equipo y asumir decisiones sumamente difíciles y drásticas.
+*   **Conciencia de su Rol:** No eligió ser un reactor cósmico ni tiene complejo de héroe. Simplemente es plenamente consciente de la inmensa responsabilidad que recae sobre él por el peso de su poder multiversal y actúa con madurez en consecuencia.
+
+---
+
+## 🎨 Aspecto Visual y Traje de Acción (Combat Suit)
+*   **Apariencia Cotidiana:** Campera bomber gris oscuro, remera verde oliva, pantalón cargo y hoyuelos marcados al sonreír.
+*   **Traje de Acción (Combat):** Cuando entra al campo de batalla o debe operar en entornos extremos/espaciales, utiliza un traje de combate de aleación ligera optimizado por Ian. Cuenta con placas reforzadas para amortiguar el retroceso de sus disparos, anclajes cinéticos en las botas y un visor táctico sellado con suministro de aire HUD para el espacio.
+
+---
 
 ## Relaciones con Otros Personajes
-*   **Julián:** Tiene una dinámica muy particular con él. Julián se niega rotundamente a llamarlo "Swapfire". Para Julián siempre será "el mati" o "mati de mierda" (*"—Preguntale a el mati." / "—¿En serio hizo eso? Qué mati de mierda."*).
-*   **El Grupo:** Actúa como el controlador de tablero para todos ellos. Aunque su frialdad a veces puede causar fricción, sus habilidades de reposicionamiento han salvado las vidas de los pibes en múltiples ocasiones.
-
-## Estadísticas Básicas
-*   **Fuerza:** 4/10
-*   **Inteligencia:** 6/10
-*   **Carisma:** 4/10
-*   **Suerte:** 3/10
-*   **Combate:** 4/10
-*   **Defensa:** 3/10
-*   **Habilidad Especial (Intercambio):** 0/10 (Base) / 10/10 (Swapfire)
+*   **Julián:** Su dinámica es un constante ida y vuelta de chistes y chicanas. Al ser Mati más bromista y jovial, las quejas de Julián ("Mati de mierda") son devueltas con humor y memes, convirtiendo su fricción en una complicidad muy divertida en viñetas.
+*   **Ian (Vesperwing):** Una relación táctica muy interesante. Ian es el inventor y estratega que diseña los planes y el visor que Mati utiliza, pero debido a la escala destructiva de los poderes de Mati, en el frente de batalla es Mati quien debe "tomar la batuta" y liderar el avance físico, coordinando con Ian en la retaguardia.
 
 ---
 
-# 📖 Lore de Mati
+## Estadísticas Básicas
+*   **Fuerza:** 6/10 (Sobrehumana leve)
+*   **Inteligencia:** 6/10
+*   **Carisma:** 7/10
+*   **Suerte:** 4/10
+*   **Combate:** 5/10
+*   **Defensa:** 5/10 (Resistencia dérmica aumentada)
+*   **Habilidad Especial (Intercambio/Apertura):** 10/10
 
-## Lore Actual (Punto de Partida)
-Durante la incursión dimensional y el escape de los Backrooms, la anomalía dispersó a los pibes por distintos universos. 
-El Mati original en la Tierra 616 inicialmente permanece ajeno al peligro inminente: sus variantes malignas —lideradas por **Mati Prime** desde su base de operaciones de alta tecnología— han iniciado la **Guerra Mativersal** para controlar el nexo dimensional.
+---
 
-Mati es el nexo central de esta confrontación. Su propia existencia sirve como catalizador, y a medida que entra en contacto con la Corriente y otras dimensiones, su control del tablero espacial se incrementa.
-
-## Lore Proyectado (El Futuro del Mativerse)
-La historia proyecta que Mati deba enfrentarse a su propio Consejo de Variantes en "La Corte de los Matis", donde variantes como:
-*   **Mati Gladiador** (Campeón del foso con intercambio de momentum)
-*   **Mati Astronauta** (Explorador con rango de intercambio ampliado)
-*   **Mati Augusto** (Emperador romano de silicio)
-*   **Mati Pixel** (Glitch 2D en plano 3D)
-*   **Mati Warden** (Juez de consecuencias de daño)
-*   **Mati Dweller** (Bestia del abismo corrupta)
-
-Todos ellos representan caminos alternativos. La confrontación final lo llevará a enfrentar a **Mati Prime "El Arquitecto"**, quien busca erradicar el libre albedrío considerándolo una anomalía de software del multiverso.
+## 📖 Lore Proyectado: El Futuro del Mativerse
+Mati es el nexo central de la Guerra Mativersal. Enfrentar a variantes como **Mati Gladiador** (fuerza de impacto), **Mati Astronauta** (radiación), **Mati Augusto** (silicio), **Mati Pixel** (glitch 2D), **Mati Warden** (fricción) y **Mati Dweller** (materia oscura) representará desafíos tácticos y morales para el equipo. La batalla final contra **Mati Prime** pondrá a prueba su switch de madurez para salvar el multiverso sin perder su humanidad ni su esencia bromista.

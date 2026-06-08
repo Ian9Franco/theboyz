@@ -1,66 +1,52 @@
-# 🦸‍♂️ Mati — "Swapfire" (El Controlador del Tablero)
+# 🦸‍♂️ Mati — "Swapfire" (El Reactor Humano)
 
-*   **Rol en el Roster:** Controlador táctico / reposicionamiento y ofensiva de fricción.
+> "Mati es el primero en mandar un meme al grupo en medio de una crisis, pero también el primero en ponerse al frente cuando hay que tomar una decisión de la que depende la vida de todos. Sabe que sus ojos son una ventana al colapso multiversal, y no se permite parpadear cuando importa."
 
-## 🎯 El Sistema de Anclajes (Punto A y Punto B)
-El poder de Mati requiere etiquetar objetivos geométricamente para realizar el intercambio espacial:
-*   **Punto A (Nexo Inicial):** Puede ser Mati mismo, su línea de visión directa, o un **Remanente de Plasma** estático (una silueta residual de energía violeta) que proyecta para atacar y volver a su posición original en un parpadeo.
-*   **Punto B (Anclaje Físico):** Se activa mediante un objeto sincronizado (como sus Dagas de Marcado, proyectiles o drones) que actúa como un **Anclaje IP Espacial**. Al impactar o desacelerar, el Punto B valida sus coordenadas en la realidad.
-
-## ⚡ Ofensiva Residual: La "Friction Overload"
-Al permutarse instantáneamente la materia del Punto A y el Punto B, la compresión violenta y asimétrica del aire genera un crack sónico y una liberación extrema de calor por fricción molecular. 
-*   **Swapfire:** Cuando Mati se intercambia con un enemigo a quemarropa, él aparece intacto (sincronizado con la distorsión), pero el oponente recibe una onda de choque térmica directa que calcina armaduras y revienta blindajes.
+*   **Rol en el Roster:** Controlador táctico / reposicionamiento, ofensiva de fricción y destrucción de cobertura a larga distancia.
 
 ---
 
-## 🔄 El Tablero Simultáneo (Modos y Escala)
+## 🔴 El Sistema de Conducción: "The Aperture" (La Apertura)
+A diferencia de Cíclopes, cuyos ojos son portales a otra dimensión de fuerza cinética, el poder de Mati no proviene de una mutación biológica estándar, sino de que sus ojos son literalmente un portal físico a otra dimensión del multiverso de donde brota esta energía de plasma. Su cuerpo funciona como un nexo cuántico que absorbe la energía residual de sus contrapartes en otras realidades (el "Mativerse").
 
-### 🎭 Modo Acción (Base): El "Sleight of Swap"
-Mati maneja hasta dos hilos simultáneos (intercambiar dos parejas de objetos a la vez) para un ataque en ráfaga imperceptible:
-*   **Mecánica de Combate:** Arroja tres dagas en abanico que atraviesan o se clavan en tres enemigos distintos, activando un intercambio consecutivo a velocidad subatómica. El lector ve a Mati desaparecer en un destello púrpura y, en un milisegundo, ejecutar tres cortes físicos consecutivos en diferentes partes del mapa, apareciendo al final atrapando su primera daga en el aire mientras los oponentes caen al suelo cortados y quemados por la fricción.
-
-### 🌀 Modo Completo (Momentum): El "Lazo Cinético"
-Rompe los límites numéricos y entra en un **Intercambio en Cadena** (Efecto Dominó) con vectores geométricos:
-*   **Mecánica de Combate:** Conecta la energía cinética de una carga pesada (como un tanque cósmico) a través de hilos de plasma hacia enemigos más pequeños. Al activar el intercambio, frena al atacante en seco absorbiendo su inercia y transfiere ese impacto concentrado directamente a los cuerpos de sus subordinados, rompiéndoles los huesos por el latigazo de velocidad transferida.
+*   **Visor de Conducción Táctica:** Desarrollado por Vesperwing. Regula el flujo de salida de sus ojos, permitiéndole calibrar con precisión milimétrica la dirección, intensidad y el diámetro del haz de plasma. Además, posee soporte de respiración autónoma para el vacío del espacio.
+*   **Sin Visor (Estado Pasivo):** Mati puede abrir los ojos de forma normal en su vida cotidiana, parpadear y mirar a sus amigos sin emitir energía ni causar daño.
+*   **Sin Visor (Estado Activo / Catastrófico):** Si intenta activar su poder sin el visor colocado, el rayo se expande sin filtro cubriendo todo su campo de visión de forma instantánea, provocando una destrucción masiva y descontrolada de área (peligro crítico de fuego aliado).
 
 ---
 
-## 💾 La Memoria de Matriz (Almacenamiento de Ubicaciones)
-Mati funciona como un disco rígido de coordenadas espaciales:
-*   **Punto de Retorno:** Clava una daga detrás de una cobertura segura, entra al combate cerrado y, cuando la situación se desborda, ejecuta un Swap instantáneo con su anclaje guardado para volver a salvo.
-*   **Escape Interdimensional:** Puede dejar una Daga de Marcado en otra dimensión (como la Tierra 616) y usarla para abrir un portal de retorno de largo alcance a años luz.
-*   **Costo de Equivalencia:** El intercambio dimensional requiere una masa equivalente en el destino (por ejemplo, toneladas de chatarra o un auto viejo como "moneda de cambio" de peso para traer a Los Pibes de regreso).
+## ⚡ Estética y Naturaleza del Rayo: El Violeta Base
+El rayo posee una naturaleza energética constante que se manifiesta visualmente en viñetas de forma dinámica:
+
+*   **Color Violeta Base:** El rayo ya no cambia de color según la ráfaga o disparo; siempre es de un color violeta base, representando plasma sólido y concentrado.
+*   **El Efecto "Meltdown" (Fusión):** El cambio visual de color solo ocurre cuando se sobrecalienta o entra en crisis. En estos momentos límites, el rayo violeta empieza a teñirse con tonos rojos incandescentes, de fuego, mostrando que la presión multiversal del nexo está al borde del colapso.
 
 ---
 
-## 🏹 La Lógica Técnica y Evolución del Arsenal
-Mati inyecta una **Firma de Datos Espaciales** en sus objetos basada en la conductividad geométrica y el cierre de matriz (la fluctuación cinética del impacto que abre el "puerto de red" espacial).
+## 🔄 Modos de Disparo y Escala (El Tablero de Ráfagas)
+Los disparos se guían al 100% con la mirada. El lector del cómic debe percibir que la dirección de su cabeza y la orientación de sus ojos guían el rayo púrpura.
 
-1.   **Dagas de Marcado (Clásico):** Sirven como anclajes físicos o marcas visuales para realizar intercambios tácticos instantáneos a distancia.
-2.   **Pistolas y Proyectiles Activos (Fuego Rápido):** Balas con núcleo de aleación cuántica conductora. En el milisegundo en que la bala impacta en el enemigo (freno de inercia), la coordenada se valida y Mati hace Swap para aparecer a milímetros con el arma lista.
-3.   **Arco y Flecha de Plasma (Precisión a Larga Distancia):** Flechas de alta estabilidad estructural y masa, ideales para realizar intercambios de objetos pesados a distancias de hasta un kilómetro.
-4.   **Drones "Ping-Pong" con Visor Holográfico (Control Absoluto):** Libera drones esféricos que rebotan por la escena y actúan como "IPs dinámicas" en movimiento. Conectado a su visor HUD táctico, Mati visualiza las líneas de intercambio tridimensionales en tiempo real y puede saltar de dron a dron para esquivar ataques, disparar y posicionarse a voluntad.
+### 🎭 Modo Acción (Base): "Ráfagas Geométricas"
+*   **Mecánica Visual:** Mati calcula parábolas y rebotes de sus ráfagas usando superficies densas. Dispara un rayo fino violeta que rebota en el suelo o paredes metálicas para impactar a los enemigos por la espalda o detrás de coberturas. Letal, geométrico y dirigido 100% con la mirada.
 
----
-
-## 🚫 Limitaciones y Estado Crítico
-*   **Limitación Base:** Requiere línea de visión para el anclaje directo sin marcadores, y está sujeto a restricciones de masa y saturación mental.
-*   **Falta de Memoria (Memory Leak):** Si es desarmado de sus dagas, drones y proyectiles, entra en un estado crítico donde su mente pierde los anclajes de red. Para sobrevivir, debe sincronizar y arrojar cualquier consumible del entorno al tacto (piedras, chatarra o incluso la ropa de su atacante) para improvisar intercambios de emergencia.
+### 🌀 Modo Completo (Momentum): "Overdrive Multiversal"
+*   **Mecánica Visual:** Mati abre las compuertas del visor al máximo, liberando un pilar masivo de plasma violeta (que se tiñe de rojo fuego si está en Meltdown) que ocupa viñetas completas de lado a lado. Borra del mapa la cobertura enemiga. Para aguantar la inmensa fuerza de retroceso que esto genera, utiliza su traje de acción alternativo, cuyas botas y amortiguadores se anclan al terreno.
 
 ---
 
-## 🌌 Supervivencia Cósmica: La Burbuja de Espacio Local
-Mati no "respira" en el vacío del espacio debido a una adaptación biológica, sino como consecuencia directa de su firma cuántica espacial:
-*   **La Matriz de Aislamiento:** Al recortar un volumen de espacio (Punto A) y pegarlo en otro (Punto B), su mente de forma inconsciente y constante mantiene atrapada una "burbuja" de las condiciones físicas de la Tierra a milímetros de su piel.
-*   **Presión y Temperatura:** El vacío no lo descompensa y el frío absoluto no lo congela porque la física que rodea su cuerpo sigue respondiendo a las coordenadas de un entorno habitable. Camina por el espacio llevando su propia porción de atmósfera terrestre pegada como un escudo de software.
-*   **Limitación (El "Oxígeno de Red"):** La burbuja solo retiene el oxígeno circundante del momento previo al Swap. Si se queda varado por horas, el aire se vicia. Por esto necesita los sistemas de reciclaje ligeros de Vesperwing para misiones prolongadas.
+## 🚫 Limitaciones y Estado Crítico: El "Meltdown" (Fusión)
+*   **Saturación Térmica:** Si dispara de forma continua por mucho tiempo, su propio cuerpo se recalienta. Los hilos de plasma púrpura brillan bajo su piel y sufre quemaduras internas (desgaste físico).
+*   **Pérdida del Visor:** Si pierde el visor, no puede abrir los ojos para usar su poder sin arriesgarse a una destrucción masiva descontrolada de todo su campo visual, obligándolo a pelear a ciegas guiándose solo por el oído o indicaciones tácticas.
 
 ---
 
 ## 🖼️ Fichas y Aspecto Visual (Suit)
 
-### Traje Default:
+### Traje Default (Urbano):
 ![Swapfire Default](../../../../public/personajes/FULLBODY%20SUIT/SWAPFIRE/Swapfire.webp)
+
+### Traje de Acción (Combat Suit):
+![Swapfire Combat](../../../../public/personajes/FULLBODY%20SUIT/SWAPFIRE/Swapfire_combat.webp)
 
 ### Ficha de Personaje:
 ![Swapfire Ficha](../../../../public/personajes/FULLBODY%20SUIT/SWAPFIRE/Swapfire_ficha.webp)

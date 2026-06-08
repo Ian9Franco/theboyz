@@ -35,7 +35,13 @@ export const pibes: CharacterDetail[] = [
         default: '/personajes/FULLBODY SUIT/VESPERWING/vesperwing.webp',
         alt: '/personajes/FULLBODY SUIT/VESPERWING/vesperwing_alt.webp',
         ficha: '/personajes/FULLBODY SUIT/VESPERWING/Vesperwing_Ficha.webp',
-        ficha2: '/personajes/FULLBODY SUIT/VESPERWING/Vesperwing_ficha2.webp'
+        ficha2: '/personajes/FULLBODY SUIT/VESPERWING/Vesperwing_ficha2.webp',
+        ficha3: '/personajes/FULLBODY SUIT/VESPERWING/Vesperwing_ficha3.webp',
+        combat: '/personajes/FULLBODY SUIT/VESPERWING/Vesperwing_combat.webp',
+        mk3: '/personajes/FULLBODY SUIT/VESPERWING/MK3/MARK-3.webp',
+        mk3_alt: '/personajes/FULLBODY SUIT/VESPERWING/MK3/MARK-3_ALT.webp',
+        mkl: '/personajes/FULLBODY SUIT/VESPERWING/MKL/MARK-L.webp',
+        archor: '/personajes/FULLBODY SUIT/VESPERWING/VESPER ARCHOR/VesperArchor.webp'
       },
       variantData: {
         alt: {
@@ -59,6 +65,56 @@ export const pibes: CharacterDetail[] = [
           ],
           significa: 'La ecuación resuelta. Al integrar el conocimiento de Jaz, Ian elimina el factor azar de su mapa. Deja de asesorar al equipo para pasar a rediseñar de manera unilateral las reglas del tablero.',
           crisis: 'Absolutismo estratégico: El control total diluye su empatía en favor de una lógica puramente utilitaria. Convencido de que las decisiones individuales solo generan caos, asume el control del resultado de forma fría e implacable, interviniendo el destino de los demás "por el bien común".'
+        },
+        combat: {
+          label: 'Protocolo Overlord (Exotraje)',
+          habilidades: [
+            'Sistemas Modular Mark III / LXXXV: Armaduras tácticas (estándar y cósmica) con propulsión verde esmeralda y sellado absoluto para el vacío espacial.',
+            'Mark XLIV "Aegisbuster": Armadura pesada de contingencia diseñada para inmovilizar a Uandi si pierde el control, usando guanteletes de absorción hidráulica.',
+            'Mark L "Mecha-Vesper": Coloso táctico de artillería pesada móvil pilotado desde el pecho para combatir amenazas de escala masiva o Kaiju.'
+          ],
+          significa: 'El Plan Overlord en acción. Ian utiliza armaduras modulares personalizadas y protocolos de contingencia dolorosos para proteger a sus amigos de amenazas cósmicas y de sí mismos.',
+          crisis: 'Sobrecarga de Contingencia: Activar los modelos pesados (Aegisbuster o Mecha-Vesper) consume el Archor Core a velocidad crítica, arriesgando el apagado total de sus sistemas.'
+        },
+        mk3: {
+          label: 'Mark III (Baseline)',
+          habilidades: [
+            'Placas Anatómicas de Titanio: Blindaje equilibrado que no limita la movilidad física en combates terrestres estándar.',
+            'Ópticas GhostLens Activas: HUD avanzado que escanea y resalta firmas térmicas de enemigos locales.',
+            'Propulsión Repulsora Estándar: Vuelo estable de mediano rango controlado por discos estabilizadores en las palmas.'
+          ],
+          significa: 'El traje principal para misiones estándar. Ian combate a la par de Los Pibes manteniendo su agilidad y reflejos tácticos sin sacrificar movilidad.',
+          crisis: 'Limitación de Blindaje: Diseñado para amenazas locales; no soporta impactos de artillería pesada ni el vacío del espacio exterior.'
+        },
+        mk3_alt: {
+          label: 'Mark III (Infiltración)',
+          habilidades: [
+            'Capa de Absorción Refractaria: Tejido molecular que absorbe luz visible y frecuencias de radar, garantizando sigilo completo.',
+            'Supresión de Fricción Acústica: Borceguíes y articulaciones silenciadas para aproximación letal en absoluto silencio.',
+            'GhostLens Pasivo: Reconocimiento indetectable que no emite firmas electromagnéticas activas.'
+          ],
+          significa: 'Especialista en sigilo y reconocimiento. Ideal para misiones de penetración profunda detrás de líneas enemigas sin alertar sensores.',
+          crisis: 'Fragilidad en Combate Abierto: Al prescindir de blindaje pesado por sigilo, queda altamente expuesto a daño letal en confrontación directa.'
+        },
+        mkl: {
+          label: 'Mark L (Mecha-Vesper)',
+          habilidades: [
+            'Cabina Acorazada Central: Compartimento blindado en el pecho de un coloso mecánico gigante desde donde Ian pilota la unidad.',
+            'Artillería Pesada Vectorial: Cañones integrados que disparan ráfagas masivas de energía cinética concentrada a gran escala.',
+            'Escudos de Absorción Magnética: Generadores que proyectan barreras masivas para absorber y disipar fuego de artillería de escala masiva.'
+          ],
+          significa: 'La respuesta de la ingeniería al tamaño colosal. Un mecha gigante pilotado para absorber daño masivo y proteger el flanco de ataque de Los Pibes.',
+          crisis: 'Baja Maniobrabilidad: Su inmenso tamaño lo vuelve un objetivo lento y fácil de flanquear, requiriendo cobertura constante de velocistas y atacantes ágiles.'
+        },
+        archor: {
+          label: 'Emperor Vesper Archor (Forma Divina)',
+          habilidades: [
+            'Tejido de Causalidad: Manipula probabilidades cuánticas para anular ataques enemigos o garantizar fallas estructurales críticas en el rival.',
+            'Ráfagas de Antimateria Roja: Canaliza energía primordial de Archon en descargas destructivas que borran la materia física de la existencia.',
+            'Capa Cósmica y Runas: Armadura negra mate grabada con runas rojas brillantes y capa cósmica que fluye con materia oscura y vacío.'
+          ],
+          significa: 'El Dios estratega de Vesperia. Ian asimila la entidad cósmica Archon para gobernar las probabilidades cuánticas del universo, sacrificando el libre albedrío por la supervivencia.',
+          crisis: 'Desapego Emocional Absoluto: Al unirse a la anomalía divina, pierde toda empatía humana y ve a sus propios amigos como variables caóticas que debe resolver.'
         }
       }
     }
@@ -121,53 +177,55 @@ export const pibes: CharacterDetail[] = [
     altImage: '/personajes/ALT/JULIAN_ALT.webp',
     overloadImage: '/personajes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
     color: '#0a1128',
-    role: 'Infiltración y engaño',
+    role: 'Hostigador ágil / Distracción táctica / Daño por fricción energética',
     visualCode: 'Suéter azul marino, barba, pelo corto con fade',
     perfil: [
-      'Mentiroso compulsivo funcional: Utiliza la falsedad y la distorsión de la reality como un escudo táctico y psicológico infranqueable.',
+      'Peleador ágil y hostigador: Combate con cartas y constructos de energía pura inestable (glitch azul y rojo) para desestabilizar coberturas y enemigos a corto/medio rango.',
       'Fachada sarcástica: Oculta una altísima ansiedad interna y un cerebro hiperactivo bajo una capa de cinismo, carisma magnético y humor negro.',
-      'Estilo urbano sobrio: Suéter azul marino de cuello redondo, pantalón negro y barba corta prolija; una apariencia ordinaria para un hombre de mil rostros.'
+      'Contextos de Vestimenta: Ropa normal (suéter azul marino) en el día a día para pasar desapercibido, y el Traje Cósmico "Wildcard" en misiones críticas.',
+      'Ancla Psicológica: Ponerse el traje cósmico le sirve como señal mental de que "la situación se fue global/multiversal", forzando a su mente ansiosa a enfocarse.'
     ],
-    crisis: 'Ocultamiento patológico: Ante crisis extremas o amenazas inminentes de muerte, su instinto es sepultar la información crítica bajo capas de engaño, prefiriendo el riesgo fatal antes que mostrarse vulnerable.',
-    stats: { fuerza: 3, inteligencia: 4, carisma: 6, suerte: 4, combate: 2, defensa: 2, especialVal: 0 },
-    especialLabel: 'Duplicidad',
+    crisis: 'Agotamiento por sobrecarga: Si se sobreesfuerza intentando cargar objetos grandes (como autos o columnas) o inyectando demasiada energía a sus clones, sufre migrañas incapacitantes y queda indefenso.',
+    stats: { fuerza: 3, inteligencia: 7, carisma: 8, suerte: 9, combate: 6, defensa: 4, especialVal: 0 },
+    especialLabel: 'Energía Pura',
     hint: 'Terminá el Capítulo 1 de Green Truck para desbloquear.',
     powers: {
-      role: 'Wildcard / Infiltración',
+      role: 'Wildcard / Hostigador Energético',
       habilidades: [
-        'Ecos de Presencia: Manifiesta hasta tres duplicados semisólidos de sí mismo. Estas copias pueden correr, hablar e interactuar de forma limitada con el entorno para desviar la atención.',
-        'Punto Ciego Cognitivo: Altera sutilmente la percepción del objetivo, hackeando su cerebro para que deje de registrar su presencia física directa (es una ilusión cognitiva, no invisibilidad real).',
-        'Detonación por Verdad: Sus clones están compuestos de engaño puro; si alguna de las copias enuncia una verdad absoluta e innegable, la paradoja lógica hace que colapse y detone violentamente de forma táctica.',
-        'Anclaje Superficial: No posee capacidades de vuelo, pero puede adherirse y escalar cualquier superficie vertical u horizontal con agilidad fluida.'
+        'Bomber Roja Táctica: Chaqueta de cuero técnico rojo borravino estilo Star-Lord que disipa la fricción de su energía glitch y hace juego visual con sus constructos.',
+        'Casco de Conducción Colapsable: Casco hermético inspirado en Star-Lord que le permite respirar en el espacio/vacío y cuenta con ópticas HUD de luz azul analógica.',
+        'Naipes de Energía: Proyectiles inestables de energía glitch (azul y roja) que lanza con asistencia del HUD de su casco para calcular parábolas perfectas.',
+        'Ecos de Conservación Decreciente: Clones de estática azul y roja que decaen temporalmente. Su detonación y energía residual son monitoreadas por las ópticas del casco.'
       ],
-      significa: 'El maestro de la distracción. Opera en los márgenes de la percepción ajena: infiltra líneas enemigas, fragmenta la atención del oponente y transforma sus propias ficciones en trampas letales.',
-      crisis: 'Paradoja de la honestidad: El costo de usar la verdad como arma es altísimo. Si un clon detona involuntariamente por una declaración real, el impacto residual sacude la estabilidad mental de Julián.',
+      significa: 'El maestro del engaño y la agilidad táctica. Emplea constructos y clones de energía pura degradable para sembrar el caos y castigar al oponente sin comprometer su seguridad.',
+      crisis: 'Migraña por Sobrecarga: Intentar mantener clones estables por mucho tiempo o cargar masas pesadas le genera migrañas y lo deja expuesto. Además, sus armas de energía vibran y pueden estallar en sus manos si no las descarta a tiempo.',
       stats: { fuerza: 7, inteligencia: 8, carisma: 9, suerte: 9, combate: 9, defensa: 7, especialVal: 9 },
       suitImages: {
         default: '/personajes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
-        ficha: '/personajes/FULLBODY SUIT/WILDCARD/Wildcard_Ficha.webp'
+        ficha: '/personajes/FULLBODY SUIT/WILDCARD/Wildcard_Ficha.webp',
+        combat: '/personajes/FULLBODY SUIT/WILDCARD/Wildcard_combat.webp'
       },
       variantData: {
         action: {
-          label: 'Modo Evasión Coreográfica',
+          label: 'Modo Acción (Traje Cósmico)',
           habilidades: [
-            'Despliegue Ilusorio Dinámico: Genera una secuencia fluida de clones explosivos en combate cerrado, utilizándolos como escudos humanos y trampas cinéticas en movimiento.',
-            'Asalto de Puntos Ciegos: Ataca de manera intermitente entrando y saliendo del radar cognitivo del enemigo, encadenando golpes quirúrgicos desde ángulos imposibles.',
-            'Sincronía Fantasma: Coordina ofensivas simuladas junto a sus duplicados, forzando al oponente a defenderse de amenazas fantasmas mientras el Julián real asesta el impacto definitivo.'
+            'Bomber Roja (Star-Lord Style): Cuero técnico carmesí con solapas mecánicas y cierres descentrados que amortigua la reacción cinética de sus dados y naipes.',
+            'Asistencia de Apuntado HUD: Las ópticas de su máscara proyectan una interfaz azul que calcula trayectorias balísticas de naipes y la distancia exacta para detonar Ecos.',
+            'Supervivencia Autónoma: Casco colapsable con sellado ambiental que filtra toxinas cuánticas y provee respiración en el vacío espacial.'
           ],
-          significa: 'El engaño en movimiento. Julián instrumentaliza la mentira en una coreografía física letal, donde el caos y la desorientación del rival son sus mejores herramientas de combate.',
-          crisis: 'Falla del engaño: Depende por completo de que el enemigo muerda el anzuelo. Si un oponente con alta percepción rompe la ilusión, Julián queda atrapado en una posición vulnerable y en fuego cruzado real.'
+          significa: 'El combate sucio e improvisado llevado a escala interdimensional. Julián utiliza la tecnología de su traje para compensar la falta de gravedad y distorsiones del espacio.',
+          crisis: 'Descalibración del HUD: Si la máscara sufre daños por impactos directos o estática glitch, el cálculo de trayectorias se distorsiona, arriesgando detonaciones accidentales.'
         },
         alt: {
-          label: 'Verdad Innegable (Forma Límite)',
+          label: 'Sobrecarga de Masa (Forma Límite)',
           habilidades: [
-            'Decreto de Realidad: Sus palabras adquieren un peso psicológico y metafísico anormal. Al hablar con honestidad brutal, es capaz de romper ilusiones ajenas y obligar a cualquier mente a escuchar.',
-            'Saturación Paradojal: Carga a sus duplicados al límite absoluto de energía; un solo hecho real enunciado por Julián hace que todos los clones detonen en una reacción en cadena devastadora.',
-            'Ruptura de Manipulaciones: Disipa instantáneamente los poderes de control mental, hipnosis o alteración de la realidad de los enemigos mediante una sola declaración honesta y factual.',
-            'Interferencia de Naipes: Proyecta cartas ilusorias cargadas de energía cinética residual para cortar flujos tácticos y defenderse a corta distancia.'
+            'Sobrecarga de Masa (Endgame): Mantiene contacto estático con objetos grandes (motores, columnas) inyectándoles energía masiva para causar una explosión devastadora.',
+            'Decreto de Realidad: Modula su energía glitch para proyectar distorsiones cognitivas que obligan al enemigo a ver duplicados y desorientar su puntería.',
+            'Válvula Cinética (Combo con Uandi): Crea pequeños constructos inestables que Uandi absorbe deliberadamente para cargar su barra de furia sin dañarse.',
+            'Interferencia de Naipes: Descarga ráfagas masivas de cartas de energía para desviar la atención táctica de los aliados caídos o sobrecalentados.'
           ],
-          significa: 'El mentiroso que decidió ser honesto. Al despojarse del escudo de la falsedad por una única y desesperada ocasión, Julián transmuta su debilidad en el ataque más honesto y peligroso de su arsenal.',
-          crisis: 'Exposición Absoluta: Al renunciar al engaño, Julián pierde toda su capacidad de infiltración y predictibilidad. Sin misterios ni fachadas tras las cuales esconderse, sus intenciones reales quedan completamente al desnudo, volviéndolo un blanco directo y fácil de leer para el enemigo.'
+          significa: 'El comodín de la baraja. Al asumir riesgos críticos, Julián deja de correr para sobrecargar masas pesadas u ofrecer su energía glitch como catalizador directo de la potencia física de Uandi.',
+          crisis: 'Exposición Total: Al realizar la sobrecarga de masa, queda completamente inmóvil y vulnerable durante varios segundos, arriesgando daño directo de fuego enemigo.'
         }
       }
     }
@@ -183,50 +241,53 @@ export const pibes: CharacterDetail[] = [
     role: 'Controlador táctico / reposicionamiento y ofensiva de fricción',
     visualCode: 'Piel bronceada, campera táctica, hoyuelos',
     perfil: [
-      'Pragmatismo calculador: Toma decisiones frías, lógicas y drásticas en milisegundos, aunando cualquier interferencia emocional para garantizar la eficiencia.',
-      'Combatiente adaptativo: Un estratega de campo feroz y directo que protege los intereses de los suyos con un enfoque estrictamente utilitario.',
-      'Dilución de su humanidad: Su sistema nervioso transmuta a impulsos sobre hilos de plasma púrpura y a nivel atómico experimenta frame drops, transitando de carne a un vector de datos.'
+      'Jovial y amante de los memes: El carismático que descontractura al grupo en medio del caos, aportando humor y ligereza incluso en las situaciones más tensas.',
+      'Perspectiva particular: A veces descoloca a Los Pibes con pensamientos raros, teorías locas o comentarios polémicos, pero siempre desde la nobleza de ser un buen tipo.',
+      'Switch táctico: Su supuesta frialdad es en realidad un switch de madurez. Cuando las papas queman, sabe asumir la responsabilidad y toma la batuta para tomar decisiones difíciles.',
+      'Conciencia de su rol: Plenamente consciente de que sus poderes no son un accidente y de su responsabilidad en el multiverso. No tiene complejo de héroe, actúa por madura convicción.',
+      'Resistencia y fuerza sobrehumana: Posee una fuerza física aumentada y una densidad dérmica que detiene las balas, hiriendo su piel pero sin perforar sus órganos vitales.'
     ],
-    crisis: 'Resolución implacable: Ante escenarios desesperados, su lógica fría puede volverse extrema, priorizando el éxito de la misión u objetivo macro por encima de la seguridad individual de los involucrados.',
-    stats: { fuerza: 4, inteligencia: 6, carisma: 4, suerte: 3, combate: 4, defensa: 3, especialVal: 0 },
+    crisis: 'Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía violeta brota sin filtro ni calibración, expandiéndose instantáneamente a todo su campo de visión y provocando destrucción masiva de área con peligro de fuego aliado.',
+    stats: { fuerza: 5, inteligencia: 6, carisma: 6, suerte: 4, combate: 5, defensa: 4, especialVal: 0 },
     especialLabel: 'Intercambio',
     hint: 'Terminá el Capítulo 3 (Worlds) de Mativerse Part 1.',
     powers: {
       role: 'Swapfire / Nexo Cósmico',
       habilidades: [
-        'Sistema de Anclajes: Etiqueta objetivos geométricamente usando el Punto A (Mati o su línea de visión/Remanente) y el Punto B (Anclajes IP Espaciales en sus armas/drones) para transponerlos.',
-        'Friction Overload (Swapfire): La compresión del aire en el intercambio genera un crack sónico y calor molecular extremo, infligiendo ondas de choque térmicas directas a quemarropa.',
-        'Memoria de Matriz: Almacena firmas geométricas de coordenadas para retornos seguros o escapes interdimensionales a larga distancia con costo de masa equivalente.',
-        'Burbuja de Espacio Local: Mantiene de forma inconsciente una porción de atmósfera terrestre pegada a su piel, permitiéndole sobrevivir a la presión y al frío absoluto en el vacío.'
+        'Portal Ocular ("The Aperture"): Sus ojos son un portal físico a otra dimensión de donde brota energía de plasma violeta base, la cual guía al 100% con su mirada y cabeza.',
+        'Visor de Calibración Táctica: Regula la energía del portal ocular en ráfagas finas y rebotes geométricos. Cuenta con soporte de respiración autónoma para el vacío del espacio.',
+        'Nexo de Anclajes (Punto A/B): Transpone objetivos geométricamente entre un Punto A (visión) y un Punto B (anclajes en armas/drones) catalizando calor molecular extremo.',
+        'Burbuja de Anclaje Local: Mantiene de forma pasiva una porción de atmósfera terrestre pegada a su piel, permitiéndole sobrevivir en el espacio junto a su visor táctico.'
       ],
-      significa: 'El dueño del espacio. Su filosofía dicta que la victoria no pertenece al más fuerte, sino a quien tiene la potestad absoluta de decidir dónde pisa cada jugador.',
-      crisis: 'Memory Leak y Desgaste: Si es desarmado de sus anclajes tácticos entra en estado crítico. Además, calcular intercambios a escalas cósmicas sobrecarga su cerebro y desgasta su soporte físico.',
+      significa: 'Mati es el primero en mandar un meme al grupo en medio de una crisis, pero también el primero en ponerse al frente cuando hay que tomar una decisión de la que depende la vida de todos. Sabe que sus ojos son una ventana al colapso multiversal, y no se permite parpadear cuando importa.',
+      crisis: 'Meltdown Multiversal: Al sobrecalentarse o entrar en crisis, el rayo violeta se tiñe de rojo incandescente como fuego. Activar su poder sin visor desata una destrucción masiva y descontrolada en todo su campo de visión.',
       stats: { fuerza: 9, inteligencia: 10, carisma: 8, suerte: 7, combate: 10, defensa: 9, especialVal: 10 },
       suitImages: {
         default: '/personajes/FULLBODY SUIT/SWAPFIRE/Swapfire.webp',
-        ficha: '/personajes/FULLBODY SUIT/SWAPFIRE/Swapfire_ficha.webp'
+        ficha: '/personajes/FULLBODY SUIT/SWAPFIRE/Swapfire_ficha.webp',
+        combat: '/personajes/FULLBODY SUIT/SWAPFIRE/Swapfire_combat.webp'
       },
       variantData: {
         action: {
-          label: 'Modo Acción (Sleight of Swap)',
+          label: 'Modo Acción (Traje de Combate)',
           habilidades: [
-            'Sleight of Swap: Arroja tres dagas en abanico y activa un intercambio consecutivo a velocidad subatómica para ejecutar tres cortes físicos y térmicos instantáneos en la escena.',
-            'Transposición en Movimiento: Intercambia posiciones de aliados y amenazas en medio de ráfagas de fuego cruzado, manteniendo su propio vector de avance sin desacelerar.',
-            'Emboscada por Reubicación: Fuerza al enemigo a ocupar la trayectoria de sus propios proyectiles o a quedar suspendido en el aire en puntos de caída libre.'
+            'Traje de Acción Alternativo: Armadura ligera optimizada para combate en tierra o espacio, que absorbe la violenta presión de retroceso y facilita maniobras físicas.',
+            'Guía Ocular Avanzada: Dirección del haz violeta base mediante giros de cabeza y ojos, logrando trayectorias geométricas complejas y rebotes en superficies de alta densidad.',
+            'Sleight of Swap: Proyecta anclajes tridimensionales para intercambiar posiciones en fracciones de segundo, obligando al enemigo a interceptar su propia ráfaga.'
           ],
-          significa: 'La manipulación espacial llevada al combate cerrado. Mati asimila el caos de la batalla en tiempo real, convirtiendo la velocidad del enemigo en su propia condena geométrica.',
-          crisis: 'Margen de error balístico: Operar a altas velocidades reduce el tiempo de cálculo. Un desvío milimétrico en el intercambio corre el riesgo de posicionar a un aliado en una trayectoria de peligro antes de poder enmendarlo.'
+          significa: 'La manipulación espacial y de energía combinadas en combate cerrado. Mati utiliza su visor y traje de acción para guiar su rayo violeta con precisión quirúrgica.',
+          crisis: 'Saturación en Meltdown: Sostener el flujo de disparos eleva la temperatura al límite, tiñendo el rayo de rojo y amenazando con fundir los disipadores del traje.'
         },
         full: {
-          label: 'Swapfire (Modo Completo - Lazo Cinético)',
+          label: 'Overdrive Multiversal (Nexo Completo)',
           habilidades: [
-            'Lazo Cinético (Intercambio en Cadena): Conecta la inercia y energía cinética de cargas pesadas a través de hilos de plasma y la transfiere directamente a otros cuerpos por efecto dominó.',
-            'Router y Navegación Cósmica: Su exotraje completo y visor HUD le permiten calcular coordenadas a años luz, teletransportando naves enteras a través de galaxias.',
-            'Arsenal de Red Avanzado: Emplea balas de aleación cuántica para Swaps balísticos inmediatos y drones "Ping-Pong" como nodos móviles tridimensionales que proyectan líneas de intercambio HUD.',
-            'Supremacía Cuerpo a Cuerpo: Al disolver las restricciones de rango, manipula los vectores de impacto enemigos en la corta distancia y utiliza dagas de plasma de gran tamaño.'
+            'Overdrive Ocular: Abre la compuerta del visor al máximo para liberar un pilar masivo de plasma violeta guiado con el movimiento de su cabeza que barre toda cobertura.',
+            'Respiración Espacial HUD: Su visor actúa como un respirador sellado de ciclo cerrado que filtra gases nocivos y genera oxígeno en entornos hostiles o en el vacío.',
+            'Lazo Cinético de Fricción: Conecta la inercia de objetos pesados a su rayo, permitiendo transferir momento físico e intercambiar estados moleculares por fricción térmica.',
+            'Redirección Defensiva: Utiliza su traje de acción y drones de red como nodos de desvío de impacto, protegiendo a aliados del retroceso y fuego de área.'
           ],
-          significa: 'El control absoluto del tablero. En su estado definitivo, Mati ya no solo altera dónde están los cuerpos, sino cómo se mueven. Entra a la vanguardia para redistribuir la física del combate a su antojo.',
-          crisis: 'Saturación Cinética: Absorber e intercambiar flujos masivos de energía y momentum sobrecarga los sistemas adaptativos del traje. Si el volumen de fuerza externa supera su capacidad de redirección, el impacto residual se descarga directamente sobre su propio cuerpo.'
+          significa: 'El control absoluto y destructivo del frente. Con su traje alternativo de acción y el visor al límite, Mati asume el mando en la línea de fuego para redistribuir la física y materia a su antojo.',
+          crisis: 'Fuego Ciego Catastrófico: Si el visor se daña bajo la inmensa presión, el rayo violeta se torna rojo fuego descontrolado, abarcando todo su campo visual y calcinando aliados por igual.'
         }
       }
     }
@@ -289,43 +350,43 @@ export const pibes: CharacterDetail[] = [
     fullBody: '/personajes/FULLBODY/VOLVO.webp',
     overloadImage: '/personajes/FULLBODY SUIT/NULL-VECTOR/Null-Vector.webp',
     color: '#f95700',
-    role: 'Saboteador',
+    role: 'Vanguardia / Infiltración y Desborde / Movilidad Absoluta',
     visualCode: 'Remera naranja, ojos celestes, cinturón táctico',
     perfil: [
-      'Audacia impulsiva: Actúa con una bajísima reactividad emocional ante el peligro directo, lo que le permite operar con cabeza fría en escenarios de alto riesgo.',
-      'Disrupción compulsiva: Posee el hábito crónico e intuitivo de manipular, analizar y sabotear cualquier arquitectura de alta tecnología que se cruce en su camino.',
-      'Estilo de vanguardia rústico: Remera naranja lisa de alto contraste, cinturón de cuero técnico con cartucheras funcionales y una mirada de ojos celestes intensos.'
+      'Velocidad de escape dimensional: Se desplaza a velocidades que desafían la física, abriendo portales naranjas brillantes por pura fricción con el espacio-tiempo.',
+      'Inmunidad de entorno natural: Al nacer su mutación de la Corriente, su cuerpo resiste el vacío del espacio y atmósferas hostiles sin necesidad de trajes especiales.',
+      'Vector Suit aerodinámico: Utiliza un traje molecular flexible diseñado por Ian que evita que la fricción dimensional desintegre su cuerpo o queme su ropa al correr.'
     ],
-    crisis: 'Iniciativa disruptiva: Su naturaleza audaz lo empuja a actuar por puro instinto cinético antes de que las órdenes se consoliden, arriesgándose a alterar los planes del equipo en pos de una oportunidad inmediata.',
-    stats: { fuerza: 3, inteligencia: 4, carisma: 2, suerte: 5, combate: 3, defensa: 2, especialVal: 1 },
+    crisis: 'Acecho del Eco Corrupto: Correr a máxima velocidad debilita las barreras dimensionales y atrae a Reverse Volvo, quien corre justo detrás de él en el fondo de sus portales, esperando a que se canse para ocupar su lugar.',
+    stats: { fuerza: 4, inteligencia: 5, carisma: 4, suerte: 4, combate: 4, defensa: 3, especialVal: 0 },
     especialLabel: 'Disrupción',
     hint: 'Terminá el Capítulo 3 (Worlds) de Mativerse Part 1.',
     powers: {
-      role: 'Null-Vector / Saboteador',
+      role: 'Null-Vector / Movilidad Absoluta',
       habilidades: [
-        'Interferencia de Espectro: Altera la electrónica, redes de datos y frecuencias de sensores enemigos; en lugar de apagarlos, induce un comportamiento caótico e impredecible.',
-        'Blink de Cortocircuito: Micro-teleportación cuántica (rango de 5 a 8 metros) utilizando líneas de tensión o flujos de conductividad cercanos como vectores de tránsito.',
-        'Sabotaje de Sistemas: Desincroniza y colapsa el hardware avanzado y los sistemas de armas rivales mediante un único contacto físico directo.',
-        'Ascensión Cinética-Eléctrica: Capacidad de vuelo natural cuya velocidad y empuje escalan proporcionalmente al volumen de sobrecarga eléctrica que absorbe del entorno.'
+        'Estelas de Portales: Abre grietas naranjas en el aire y superficies sólidas al correr, lo que le permite cruzar estructuras y saltar de dimensiones simplemente corriendo en línea recta.',
+        'Inmunidad de Entorno: Resistencia innata al vacío espacial, temperaturas extremas y atmósferas hostiles debido a su sintonía orgánica con la Corriente extradimensional.',
+        'Vibración Atómica: Hace vibrar sus átomos a alta velocidad para volverse completamente intangible durante unos breves segundos, dejando pasar amenazas físicas y energéticas a través de él.',
+        'Vector Suit Táctico: Traje molecular ultraligero diseñado por Ian que canaliza sus estelas naranjas y evita que la fricción dimensional desintegre su cuerpo o dañe su indumentaria.'
       ],
-      significa: 'El ecualizador del campo de batalla. Su función es neutralizar la brecha tecnológica del oponente antes de que puedan capitalizarla, desmantelando cualquier plan b digital.',
-      crisis: 'Dependencia de red: Su movilidad táctica y micro-teleportación exigen la presencia de infraestructura conductora o flujos energéticos. En entornos aislados o analógicos, su rango operativo se ve drásticamente acotado.',
+      significa: 'El desborde y la movilidad absoluta. Volvo domina la velocidad a escala cuántica, convirtiendo el espacio y la materia sólida en simples puertas que puede abrir corriendo.',
+      crisis: 'Acecho de Reverse Volvo: El uso de su velocidad de escape abre la puerta a su eco corrupto de estática oscura, quien le pisa los talones en el fondo de sus propios portales naranjas.',
       stats: { fuerza: 7, inteligencia: 8, carisma: 5, suerte: 9, combate: 8, defensa: 8, especialVal: 9 },
       suitImages: {
         default: '/personajes/FULLBODY SUIT/NULL-VECTOR/Null-Vector.webp',
-        ficha: '/personajes/FULLBODY SUIT/NULL-VECTOR/Null-Vector_Ficha.webp'
+        ficha: '/personajes/FULLBODY SUIT/NULL-VECTOR/Null-Vector_Ficha.webp',
+        combat: '/personajes/FULLBODY SUIT/NULL-VECTOR/Null-Vector_combat.webp'
       },
       variantData: {
         action: {
-          label: 'Modo Sobrecarga Máxima',
+          label: 'Modo Vector Suit (Movilidad Absoluta)',
           habilidades: [
-            'Arco de Conducción Continuo: Su exotraje canaliza flujos eléctricos de alta tensión constantes, provocando cortocircuitos inmediatos en cualquier superficie u objetivo que toque.',
-            'Vuelo de Interferencia EM: Desplazamiento aéreo de alta velocidad que proyecta de forma pasiva una onda de pulso electromagnético disruptivo a lo largo de toda su trayectoria.',
-            'Blink Desencadenado: Duplica el rango de su micro-teleportación, permitiéndole enlazar saltos espaciales en pleno movimiento libre sin depender de anclajes físicos fijos.',
-            'Descarga de Plasma Vectorial: Concentra la energía estática residual en sus guantes técnicos, proyectando ráfagas de arco voltaico directo contra objetivos individuales.'
+            'Armadura Molecular Flexible: Traje negro mate y naranja que se adapta a su vibración cuántica y resiste altas temperaturas de fricción sin rasgarse.',
+            'Estela de Portales Naranja: Desplazamiento supersónico que abre fisuras dimensionales en línea recta para flanquear coberturas y evadir proyectiles.',
+            'Intangibilidad Atómica: Micro-vibraciones que le permiten cruzar ataques densos de energía y trampas sólidas sin sufrir daño físico.'
           ],
-          significa: 'El vector nulo encarnado. Al entrar en sobrecarga máxima, Volvo deja de sabotear la infraestructura externa para convertirse él mismo en una anomalía electromagnética viviente.',
-          crisis: 'Indiscriminación de frecuencia: En este estado extremo, el output caótico de su energía es tan masivo que le resulta imposible filtrar objetivos; los sistemas tácticos e interfaces de sus propios aliados sufren la misma interferencia severa que los del enemigo.'
+          significa: 'La velocidad de escape definitiva. Volvo utiliza la aerodinámica pura del Vector Suit para desbordar al enemigo y cruzar el campo de batalla sin restricciones físicas.',
+          crisis: 'Fatiga de Conducción: Sostener la velocidad extrema desgasta sus músculos. Si se agota, las grietas naranjas pueden colapsar y atraparlo a merced de Reverse Volvo.'
         }
       }
     }

@@ -1,10 +1,11 @@
 # 📖 Lore de Volvo
 
-## Lore Actual: La Amenaza de Reverse Vector
-Durante sus años saltando en la Corriente, Volvo comenzó a ver reflejos y ecos de sí mismo en las sombras de los portales. Descubrió que era su propia versión futura: **Reverse Vector**.
-Reverse Vector existe completamente dentro de la Corriente, y ve a todas las variantes de Volvo como fragmentos incompletos de una única conciencia. Su objetivo es cazar y absorber a todas las versiones de Volvo para reunificarlas en una sola entidad.
+## Lore Actual: La Amenaza de Reverse Volvo (Reverse Vector)
+Durante los años que Volvo pasó varado en la Corriente corriendo de dimensión en dimensión para intentar volver a casa, cada vez que superaba los límites de la realidad y abría una grieta, dejaba un "eco" de su velocidad atrapado en el vacío extradimensional. 
 
-## Lore Proyectado: El Límite del Null State
-Volvo evita utilizar su máximo poder, el **Null State**:
-*   Aunque el Null State le da una libertad de desplazamiento y hackeo dimensional absoluta, debilita las barreras entre su mente y la Corriente.
-*   Cada vez que entra en Null State, a Reverse Vector le resulta más fácil rastrearlo, provocando visiones y voces donde Volvo puede ver a través de los ojos de su versión corrupta futura, acercándose a ser absorbido.
+Con el tiempo, este excedente acumulado de energía cinética residual, estática oscura y distorsión molecular se amalgamó en **Reverse Volvo** (o *Reverse Vector*). Esta entidad habita completamente en la dimensión del movimiento, hecha de energía naranja corrupta y estática oscura. Al no tener un cuerpo físico que cuidar o que sufra desgaste muscular, es terroríficamente rápido y destructivo.
+
+## El Peligro en Viñetas
+Cada vez que Volvo corre al límite para salvar al equipo y abre portales naranjas brillantes, debilita temporalmente la barrera que mantiene a raya al vacío. 
+
+El gran suspenso gráfico en el cómic se construye a través de sus portales: cuando Volvo va a máxima velocidad cruzando el campo de batalla, en las viñetas se empieza a ver a Reverse Volvo corriendo justo detrás de él, recortado en la estática oscura del fondo del portal naranja. Reverse Volvo no puede cruzar por sí solo, pero sigue la carrera de cerca, esperando a que nuestro Volvo sufra fatiga muscular o tropiece para cruzar el nexo, atraparlo y usurpar su lugar en el mundo real.

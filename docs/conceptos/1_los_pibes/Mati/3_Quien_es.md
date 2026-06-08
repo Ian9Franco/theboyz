@@ -1,29 +1,33 @@
 # 👤 ¿Quién es Mati?
 
 ## Perfil Psicológico y Personalidad
-*   **Pragmatismo calculador:** Toma decisiones frías, lógicas y drásticas en milisegundos, anulando cualquier interferencia emocional para garantizar la eficiencia.
-*   **Combatiente adaptativo:** Un estratega de campo feroz y directo que protege los intereses de los suyos con un enfoque estrictamente utilitario.
-*   **Estilo:** Su campera bomber gris oscuro, remera verde oliva y hoyuelos marcados contrastan sutilmente con la severidad de su mirada.
-*   **Crisis (Resolución implacable):** Ante escenarios desesperados, su lógica fría puede volverse extrema, priorizando el éxito de la misión u objetivo macro por encima de la seguridad individual de los involucrados.
+*   **El Descontracturador Jovial:** Lejos de ser un tipo frío y calculador en su día a día, Mati es sumamente carismático, jovial y amante de los memes. Es el alma graciosa que alivia las tensiones del grupo en medio de situaciones estresantes.
+*   **El Matiz Polémico:** A veces suelta teorías conspiranoicas locas, pensamientos raros o comentarios conflictivos que descolocan a Los Pibes, pero siempre desde una postura inofensiva y noble de "buen tipo".
+*   **El Switch Táctico (La Frialdad):** Su aparente frialdad táctica no es su forma de ser normal, sino una capacidad de switch de madurez. Cuando las papas queman y se necesita un líder en la línea de fuego, asume la batuta y toma las decisiones difíciles con cabeza fría.
+*   **Conciencia de su Rol:** Sabe que sus poderes multiversales no son un accidente y que él es una pieza central en el multiverso. No tiene complejo de héroe ni aires de grandeza; asume su rol con madurez porque sabe la responsabilidad que tiene encima.
 
 ---
 
-## 👤 ¿Dejó de ser humano? (El Desgaste del Soporte Físico)
-A medida que la Guerra Mativersal progresa y se vincula con variantes de La Corte de los Matis, la inmensa cantidad de datos a procesar diluye su humanidad biológica:
-*   **La "Defragmentación" Biológica:** Su sistema nervioso transmuta. Las sinapsis celulares dejan de ser impulsos puramente biológicos y comienzan a correr sobre hilos de plasma púrpura; sus células y fluidos se sincronizan progresivamente con la matriz espacio-temporal.
-*   **Un Archivo Corrupto:** En un examen médico convencional, sus órganos aparecen normales, pero a nivel atómico sus partículas parpadean con sutiles "frame drops". Físicamente, está transitando de una criatura de carne a un vector de datos consciente.
+## 🦾 Fisiología y Resistencia Física
+*   **Fuerza y Resistencia Sobrehumana:** El constante nexo de plasma multiversal en su interior le otorga una fuerza y resistencia biológica aumentada. Las balas pueden herir su piel y hacerlo sangrar, pero no tienen el impacto para atravesar su dermis reforzada y dañar sus órganos internos.
+*   **Supervivencia y Respiración Espacial:** Su visor táctico sellado le proporciona un suministro de oxígeno autónomo. De manera pasiva e inconsciente, proyecta una burbuja de anclaje local que retiene una porción de atmósfera terrestre a su alrededor, permitiéndole sobrevivir en el espacio y en el vacío absoluto.
 
 ---
 
 ## Relaciones con Otros Personajes
-*   **Julián:** Tiene una dinámica muy particular con él. Julián se niega rotundamente a llamarlo "Swapfire". Para Julián siempre será "el mati" o "mati de mierda" (*"—Preguntale a el mati." / "—¿En serio hizo eso? Qué mati de mierda."*).
-*   **El Grupo:** Actúa como el controlador de tablero para todos ellos. Aunque su frialdad a veces puede causar fricción, sus habilidades de reposicionamiento han salvado las vidas de los pibes en múltiples ocasiones.
+*   **Julián:** Su dinámica en viñetas es un ida y vuelta muy divertido de chistes y chicanas. Al ser Mati jovial y bromista, las quejas cómicas de Julián ("Mati de mierda") se resuelven con ironía, humor y memes.
+    *   *Mati destruye un búnker de un rayo de plasma violeta guiado con la mirada.*
+    *   *Julián: —Bueno, tampoco era para tanto, Mati de mierda... me dejaste sordo y me chamuscaste las cartas.*
+    *   *Mati: —De nada, Bub. La próxima te paso un tutorial de cómo esquivar.*
+*   **Ian (Vesperwing):** Una relación muy rica en dinámicas. Ian es el analista estratégico que diseña su equipamiento (incluido su visor táctico) y coordina los planes de retaguardia, pero debido al poder devastador que maneja Mati y a su switch de madurez, en la línea de fuego es Mati quien debe "tomar la batuta" y liderar el frente de combate.
+
+---
 
 ## Estadísticas Básicas
-*   **Fuerza:** 4/10
+*   **Fuerza:** 6/10 (Sobrehumana leve)
 *   **Inteligencia:** 6/10
-*   **Carisma:** 4/10
-*   **Suerte:** 3/10
-*   **Combate:** 4/10
-*   **Defensa:** 3/10
-*   **Habilidad Especial (Intercambio):** 0/10 (Base) / 10/10 (Swapfire)
+*   **Carisma:** 7/10
+*   **Suerte:** 4/10
+*   **Combate:** 5/10
+*   **Defensa:** 5/10 (Resistencia dérmica a proyectiles)
+*   **Habilidad Especial (Intercambio):** 10/10

@@ -1,19 +1,19 @@
 # ⚡ ¿Cómo obtiene sus poderes Mati?
 
 ## Origen del Poder
-Mati es un caso único. Sus habilidades no provienen de la energía liberada durante la fuga de los Backrooms que mutó al resto del equipo. Su conexión está vinculada directamente al multiverso.
+Mati es un caso único en el roster. A diferencia del resto de Los Pibes, cuyas mutaciones biológicas provienen de la energía liberada durante la fuga de los Backrooms, los poderes de Mati no son un accidente. Sus ojos son literalmente un portal físico a otra dimensión del multiverso de donde brota esta colosal energía de plasma violeta. 
 
-Por razones aún desconocidas, distintas versiones alternativas de Mati (el "Mativerse") han comenzado a detectar su existencia. Cada encuentro con una variante fortalece su vínculo con la estructura multiversal, permitiéndole manipular posiciones, espacio y eventualmente de forma más compleja la física del tablero. Es el único integrante cuya historia está ligada directamente a sus variantes.
+Su propio cuerpo funciona como un nexo cuántico que absorbe y almacena constantemente la energía térmica y cinética residual de sus contrapartes en otras realidades (el "Mativerse"). Él es algo único en el multiverso; no tiene complejo de héroe, pero posee una plena conciencia de su rol y de la responsabilidad que tiene encima, actuando en consecuencia con gran madurez.
 
 ## Origen de su Nombre Clave (Swapfire)
-El nombre no lo elige él ni el grupo de la Tierra original; proviene directamente del multiverso. Durante una de las transmisiones interdimensionales, una de sus variantes tácticas avanzadas se refiere a él bajo la designación militar de **"Swapfire"** por su capacidad de intercambio espacial y la fricción térmica residual que genera al activarse.
+El alias "Swapfire" representa el intercambio del estado físico de la materia en milisegundos mediante la canalización de su plasma violeta base y las dinámicas geométricas de anclaje de posición. Representa la combinación de sus ráfagas de plasma concentrado por la mirada con sus habilidades de intercambio posicional en el frente táctico.
 
 ---
 
-## 🌌 El Nexo Cósmico (El "Star-Lord" del Grupo)
-A diferencia de los poderes locales del resto de Los Pibes (cuyas mutaciones afectan solo la materia física), las habilidades de Mati manipulan el código del tejido espacio-temporal del multiverso. Esto lo convierte en un "Glitched User" y en el nexo cósmico de la trama.
+## 🌌 El Nexo Cósmico (El Reactor del Roster)
+A diferencia de los poderes locales del resto del equipo, la geografía energética de Mati está cableada directamente al multiverso:
 
-*   **La Infraestructura del Multiverso:** Mati no viaja al espacio por elección, sino por pura supervivencia: la infraestructura cuántica del multiverso y las bases del Consejo (como la de Mati Prime "El Arquitecto") operan en nexos cósmicos y estaciones espaciales construidas en el vacío interdimensional.
-*   **El Navegante y Router del Equipo:** En la proa de las naves tácticas de Vesperwing, usando su visor holográfico, Mati detecta puntos de anclaje a años luz de distancia y ejecuta un Swap de escala cósmica, teletransportando la nave entera instantáneamente a través de galaxias.
-*   **La Brújula Táctica:** Toma las decisiones duras y frías en el espacio profundo (donde no hay margen de error), priorizando la misión u objetivos críticos sobre la empatía de grupo.
-*   **La Revelación Cósmica:** Mati descubre que él (y todas sus variantes) son puntos de restauración indispensables para el multiverso. Si todos los Matis de una línea temporal son eliminados, la geografía espacio-temporal de esa dimensión colapsa por completo como un servidor sin base de datos.
+*   **La Batería Cósmica:** Las variantes del Mativerse actúan como generadores que recargan el reactor interno de Mati en tiempo real.
+*   **El Subidón de Energía:** Existe un costo simbiótico: si una de sus variantes muere en otra dimensión, Mati experimenta un doloroso "subidón" de energía incontrolable en el mundo real, forzando la calibración de su visor.
+*   **El Punto de Restauración:** Mati y sus variantes son indispensables para la estabilidad cuántica del multiverso. Si todos los Matis de una línea temporal son eliminados, la geografía energética de esa dimensión colapsa por completo, desencadenando una fusión destructiva.
+*   **El Switch de Madurez Táctica:** Tener el poder de desatar el colapso multiversal con la mirada exige un control absoluto. Esto no hace a Mati frío en su vida diaria, donde es jovial y bromista; en cambio, le otorga la capacidad de activar un "switch" de frialdad y madurez táctica inmediata cuando las papas queman para ponerse al frente y tomar decisiones difíciles.

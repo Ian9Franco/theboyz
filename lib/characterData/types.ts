@@ -16,6 +16,7 @@ export interface SuitImages {
   combat?: string;
   fichaAlt?: string;
   archor?: string;
+  [key: string]: string | undefined;
 }
 
 export interface VariantDetail {
