@@ -23,6 +23,13 @@ Estas descripciones y recursos sirven para generar imágenes de la forma humana 
 *   **Ropa:** `pink and dark maroon/burgundy color-blocked hooded puffer jacket (pink upper body and sleeves, dark maroon lower body, white accent stripe), cream-colored knit turtleneck sweater underneath, brown and red plaid scarf wrapped around her neck, dark grey cargo pants with side cargo pockets, dark brown leather combat boots`
 *   **Accesorios:** `holding a black digital tablet displaying blue graph and data lines in her left hand`
 
+
+aspecto previo al viaje:
+Cabello: thick voluminous curly black hair, tied up high in a messy bun with loose curls framing her face and ears
+
+Rostro: expressive large dark eyes with a shocked and tense gaze, soft light-medium skin tone, natural full lips, defined jawline in a three-quarter view, looking slightly upward in panic
+
+Ropa: cream-white heavy knit turtleneck sweater with detailed vertical ribbed patterns and a thick cozy collar, tucked into high-waisted dark charcoal grey denim pants or cargo pants with visible belt loops
 ---
 
 ## 🦸‍♂️ 2. Aspectos con Traje y Variantes

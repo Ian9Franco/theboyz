@@ -42,3 +42,18 @@ Este estilo es perfecto para el bardo en Nueva York y Tokio porque te permite pa
 prompt:
 
 [Describe aquí la escena o personaje, ej: "Ian, a 26-year-old backend programmer with wavy brown hair and glasses, wearing a dark gray hoodie, cinematic pose"], american comic book style, modern comic book character sheet, high-quality indie graphic novel, clean line art, varied line weight, defined black ink outlines, precise shadow hatching, cell-shading with soft edges, flat digital colors, desaturated and earthy tones, subtle paper grain texture, realistic human anatomy, professional comic book illustration, art by Jorge Jimenez and Olivier Coipel, masterpiece, sharp focus, 2D art, no 3D render --no 3d, photorealistic, CGI, anime, manga
+
+
+
+
+
+
+Apply the following artistic and structural style to the scene description provided below:
+
+Art Style & Media: Modern premium graphic novel and comic book page art. Clean, highly detailed ink linework with crisp black contours and expressive character anatomy. Cinematic digital coloring with high contrast, deep solid blacks, and rich atmospheric, multidirectional lighting that casts dramatic highlights and sharp shadows.
+
+Page Layout & Composition: The layout must be dynamically irregular, featuring sharp angular crops and diagonal panel borders with a full-bleed presentation (no outer margins).
+
+Core Visual Feature (Bleed-Out Effect): The composition must use a multi-layered depth effect where key elements—such as a main character, an exploding object, a limb, or an energy burst—physically break and overflow past their panel gutters, superimposing themselves over neighboring panels to create a three-dimensional pop-out effect. The background environment must be fully detailed and expand to the edges of the page.
+
+Scene Description to execute in this style:
