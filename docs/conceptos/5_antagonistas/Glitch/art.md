@@ -1,5 +1,7 @@
-# 🎨 Arte y Prompts Visuales de Glitch
+## 🎨 Aspecto y Estética Visual
 
-## 📝 Plantilla de Prompt de Apariencia (Inglés)
-
-*   **Aspecto:** `A futuristic anarchist (Glitch) wearing a gas mask with a digital screen displaying a red error logo, wearing a black leather jacket adorned with magnetic patches and exposed wires.`
+* **Estética General:** Un hombre maduro, de complexión delgada, aspecto demacrada y piel extremadamente pálida por los años sin sol en el laberinto. Viste ropa urbana gastada y funcional (una gabardina oscura y raída, botas pesadas, guantes sin dedos) combinada de forma caótica con cables analógicos, cintas y piezas de tecnología obsoleta que cuelgan de su cinturón. Su lenguaje corporal es impredecible: pasa de una apatía encorvada y pesada a movimientos rápidos, teatrales y espasmódicos.
+* **El Rostro:** Rostro curtido, cansado, con ojeras profundas y barba de varios días. No usa maquillaje de payaso. Su cara está limpia de pintura, lo que vuelve su mirada muerta e hipnótica aún más perturbadora. Su rostro solo se deforma cuando decide sonreír: una expresión humana, maquiavélica y grotesca que estira sus facciones de forma antinatural, acompañada a veces por un sutil parpadeo de estática visual a su alrededor.
+* **Plantilla de Prompt Visual (Inglés):**
+    `A cinematic gritty portrait of a cynical and deranged 45-year-old human villain, weathered face with deep wrinkles and intense dead eyes, dark circles, messy graying dark hair, completely bare face without makeup, cold and apathetic expression, wearing a tattered heavy dark street overcoat with duct tape and hanging analog wires, psychological thriller aesthetic, dark and raw cinematic lighting, hyper-realistic --ar 16:9`
+    *(Nota para cuando quieras que sonría en el prompt: Cambiar "cold and apathetic expression" por "showing a wide, terrifying, psychotic human grin, subtle reality glitch distortion around his face")*
