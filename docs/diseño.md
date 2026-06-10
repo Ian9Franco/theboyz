@@ -57,3 +57,164 @@ Page Layout & Composition: The layout must be dynamically irregular, featuring s
 Core Visual Feature (Bleed-Out Effect): The composition must use a multi-layered depth effect where key elements—such as a main character, an exploding object, a limb, or an energy burst—physically break and overflow past their panel gutters, superimposing themselves over neighboring panels to create a three-dimensional pop-out effect. The background environment must be fully detailed and expand to the edges of the page.
 
 Scene Description to execute in this style:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Here is the complete character design guide for all your characters, unified in Markdown format and translated into English for easy use with art tools or design documentation.
+
+🧑‍💻 IAN 
+🎨 Visual Profile & Style
+Archetype: Intellectual, focused, and tech-savvy. A young man in his early 20s with an average/slim build and an analytical, calculating posture.
+
+Color Palette: Dark gray, black, worn brown leather, and vibrant green accents.
+
+📐 Design Details
+Face & Hair: Thick, dark brown hair with a short, textured wavy style and natural volume on top. He wears glasses with thick black frames and multi-layered clear lenses. His gaze is fixed, serious, and highly expressive, denoting constant mental activity. Sharp, clean angular facial definition.
+
+Attire:
+
+Top: A minimalist hoodie in charcoal/taupe gray, made of heavy-weight cotton with visible reinforced stitching details. He wears a simple necklace featuring an arrowhead or crystal-shaped pendant in an amber/sunset gold tone.
+
+Bottom: Tailored dark jeans with subtle black pocket stitching.
+
+Footwear: Flat-soled urban canvas or leather sneakers in vibrant green with white details (Nike-style skate shoes).
+
+Key Accessories: * A robust smartwatch on his left wrist that projects light-blue holographic tech elements and interfaces.
+
+A crossbody messenger bag made of durable, worn brown leather with metallic buckles.
+
+He is frequently depicted holding an urban takeout coffee cup in his right hand.
+
+🦊 JAZ 
+🎨 Visual Profile & Style
+Archetype: Stealthy, agile, and pragmatic. A stylized, athletic silhouette with a firm, grounded stance designed for tactical movement and infiltration.
+
+Color Palette: Absolute matte black, subtle gold highlights, and warm cinematic contrast shadows.
+
+📐 Design Details
+Face & Hair: Long, straight, silky hair falling past her shoulders, dyed with a subtle gradient transitioning into warm sunset gold tones at the tips. She wears glasses with thin, transparent or light metallic frames in a slightly hexagonal or subtle cat-eye shape. Expressive eyes designed with unique reflections that mimic a sunset's glow. Clean facial features with a serious, distant expression.
+
+Attire:
+
+Top: A fitted, high-neck black turtleneck with long sleeves, made of a matte synthetic fabric or fine-knit cotton that tightly hugs her torso.
+
+Bottom: Reinforced black tactical leggings that continue the monochromatic line of her torso to maximize camouflage in the shadows.
+
+Footwear: High-shaft black leather tactical combat boots with thick laces and heavy-grip soles for unstable terrain.
+
+Key Accessories: Extreme minimalist aesthetic with no visible jewelry or tech to prevent unnecessary noise or reflections. The art design heavily utilizes warm rim lighting to carve her black silhouette out of dark backgrounds.
+
+🧔 JULIAN
+🎨 Visual Profile & Style
+Archetype: Urban survivor, always vigilant, and possessing fast reflexes. A young man with a robust, sturdy build standing at 1.85 m (6'1") with a firm, protective, and planted body language.
+
+Color Palette: Midnight blue, matte black, and earthy browns.
+
+📐 Design Details (Prompt Format)
+"A character design illustration in a clean comic-book art style of a young man named Julian. He has a robust and sturdy build with broad shoulders. His features include thick, tousled wavy dark hair, a full well-kept beard, and serious, intense brown eyes with a vigilant, focused expression."
+
+🥼 Attire & Gear
+Top: A crewneck sweatshirt made of heavy, worn cotton in a dark navy blue tone, featuring ribbed cuffs. The fit is comfortable yet fitted to his broad shoulders.
+
+Bottom: Straight-cut black denim or gabardine pants with a visibly washed, everyday-wear texture.
+
+Footwear: Weathered dark brown leather tactical or work boots with thick rubber soles and tightly tied black laces.
+
+Key Accessories: Entirely stripped of visible technology or flashy gadgets; his aesthetic focuses purely on clothing durability and physical readiness for direct action.
+
+🧥 MATI
+🎨 Visual Profile & Style
+Archetype: Charismatic, protective, and field-ready. A man with an imposing, broad build, an approachable leadership posture, and a constant smile that instills confidence.
+
+Color Palette: Dark gray, military/olive green, and khaki.
+
+📐 Design Details
+Face & Hair: Short black hair, casually styled and combed to one side. His face features friendly, warm characteristics highlighted by highly expressive, deep dimples in his cheeks when he smiles, balancing his intimidating tactical physique.
+
+Attire:
+
+Top: A heavy-weight tactical jacket in dark gray/graphite with zippered chest pockets and an arm pocket on the left sleeve. Underneath, he wears a crewneck knit sweater in olive green.
+
+Bottom: Spacious khaki/desert brown combat cargo pants with large side utility pockets and reinforced flaps.
+
+Footwear: Low-top urban tactical sneakers or short boots in light gray tones with white/cream soles, designed for running and agile maneuvering.
+
+Key Accessories: His clothing features a clean military-urban cut that denotes functionality and high carrying capacity while keeping the look of a civilian group leader.
+
+🧣 SOFI 
+🎨 Visual Profile & Style
+Archetype: Tech-oriented, methodical, and geared up for harsh environments. A young woman of medium build with a relaxed, natural posture, highly focused on real-time field data gathering.
+
+Color Palette: Pastel pink, burgundy/wine red, dark navy, and screen-light accents.
+
+📐 Design Details
+Face & Hair: Thick, highly curly dark brown hair loosely tied up into a casual messy bun, with loose strands framing her face. Large, natural, and highly expressive eyes.
+
+Attire:
+
+Top: A color-blocked winter puffer jacket with a hood, designed with horizontal panels (pastel pink on top, a dusty rose middle stripe, and deep burgundy/wine red at the bottom). Underneath, she wears a cream-colored knit turtleneck sweater. A long wool plaid scarf with brown and yellow patterns wraps around her neck.
+
+Bottom: Loose-fitting tactical cargo pants in dark navy blue or dark gray, with large utility pockets on the thighs.
+
+Footwear: Mid-calf dark brown leather boots with black laces and heavy-traction soles for cold or damp terrain.
+
+Key Accessories: She is always seen carrying a large-screen tactical tablet or data mobile device, analyzing real-time charts and data interfaces (casting a faint blue screen glow onto her hands).
+
+🎽 UANDI 
+🎨 Visual Profile & Style
+Archetype: Raw physical power, athletic performance, and integrated tech. A highly muscular man with broad shoulders and a militarized combat stance.
+
+Color Palette: Monochromatic asphalt gray and heavy black ink details.
+
+📐 Design Details
+Face & Hair: Dense black hair with sharply defined tight curls on top, paired with an immaculate skin fade on the sides. He wears thin, round-rimmed glasses with clear lenses. His expression is serious, cold, and intensely focused.
+
+Attire:
+
+Top: A high-performance compression shirt (Kappa technical suit style) in dark asphalt gray with short sleeves, tightly molding to his chest and abdominal muscles. Features reinforced flatlock stitching.
+
+Bottom: Matching tactical cargo pants made of dark gray ripstop technical fabric, featuring flat profile pockets and a tapered fit down to the ankles.
+
+Footwear: High-top black military combat boots made of leather and technical canvas, tightly laced to the top.
+
+Key Accessories: * A highly detailed, dark blackwork/surrealist full-sleeve tattoo that completely covers his left arm from the shoulder down to the wrist.
+
+A heavy-duty black canvas tactical belt with a quick-release tactical buckle.
+
+🚗 VOLVO (The Driver)
+🎨 Visual Profile & Style
+Archetype: Brute strength, mechanical reflexes, and instant action. A mature man with a solid, heavily muscled frame and an aggressive, feline body language—always poised to strike or execute a high-speed escape.
+
+Color Palette: High-visibility safety orange, dark charcoal gray, and rugged brown leather.
+
+📐 Design Details
+Face & Hair: Textured medium brown hair, styled upwards in a messy, spiky fashion. He sports a sharply defined, short-trimmed circle beard/goatee on his jawline. Light-colored, piercing, and defiant eyes.
+
+Attire:
+
+Top: A basic, tight-fitting cotton t-shirt in bright safety orange, making him visually pop in stark contrast to the darker tones of the rest of the crew.
+
+Bottom: Heavy-duty combat tactical pants in dark charcoal gray, featuring integrated reinforced knee panels woven into the fabric.
+
+Footwear: Classic rugged brown leather combat boots with high-durability soles for pedal traction and rough terrains.
+
+Key Accessories: * A heavy utility belt made of brown canvas or leather, packed with multiple pouches for tools, gear, and a large metallic buckle at the center.
+
+Dynamic stance: He is almost always depicted crouching, leaning, or winding up, ready to react to a sudden threat.
