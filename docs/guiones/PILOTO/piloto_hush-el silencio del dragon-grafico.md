@@ -249,31 +249,45 @@ Viñeta 25B (Plano General Nocturno): La cámara se aleja hacia el fondo del cua
 
 ---
 
-### PÁGINA 9: El Tablero de Salidas
+PÁGINA 7.5: Despedida en el JFK (8 Viñetas)
+[!TIP]
+PROMPT DE GENERACIÓN (PÁGINA 7.5):
+Official comic book page layout, multi-panel 8-panel narrative grid, professional graphic novel printing format. White panel borders, clean non-uniform layout. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors, desaturated tones. Art by Sara Pichelli and Jorge Jimenez. Sharp focus, 2D illustration. NO 3D render, NO photorealism, NO text, NO speech bubbles.
 
-> [!TIP]
-> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, dynamic multi-panel grid, professional graphic novel printing format. White panel borders, irregular panel shapes, diagonal panel borders, slanted gutters separating panels, non-uniform layout with dynamic angles. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors. Art by Sara Pichelli and Jorge Jimenez. NO 3D render, NO photorealism, NO text, NO speech bubbles.
-> 
-> Panel 1: Close-up of Sofi's 25-year-old face with her hood up, her brown eyes showing calm resolve and no doubt. In the background, Uandi (Uandi, 25-year-old, muscular, curly dark hair, round glasses) looks down sadly, scratching the back of his neck in resignation.
-> Panel 2: Inside the crowded airport terminal. Wide shot looking up at the massive digital departures board high on the wall. The glowing screen shows clean text: "FLIGHT AVAILABLE: TOKYO - JAPAN".
-> Panel 3: Medium shot. Below the board, Uandi, Julián (Julián, 27-year-old, wavy dark hair, neat beard), and Ian look up at the screen with expressions of deep, stunned surprise.
-> Panel 4: Emotional shot. Sofi hugs Ian tightly, burying her face in his shoulder, saying her final goodbye. Ian holds her back, staring into the terminal distance.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles, blurry borders, los angeles
-> 
-> **Personajes a subir al chat:**
-> - **Sofi (Ropa de Viaje)**
-> - **Ian**
-> - **Uandi**
-> - **Julián**
+Panel 1: Inside the busy, modern airport terminal. Wide shot. Ian (slender build, dark gray hoodie), Julián (slender build, dark navy blue sweater, beard), and Sofi (tricolor pink and burgundy winter jacket, heavy backpack) are walking inside. Uandi (25, average normal build) is walking at the front, helpfully rolling Sofi's small blue suitcase; a piece of clothing is visibly messy and sticking out from the side of the zipped suitcase.
 
-* **Viñeta 29 (Primer Plano):** Los ojos firmes de Sofi con la capucha puesta. Detrás, Uandi mira el piso apenado, rascándose la nuca.
-* **Viñeta 30 (Plano General de Escala):** El gran cartel luminoso del aeropuerto indicando el vuelo inmediato a Tokio.
-* **Viñeta 31 (Plano Medio):** Las caras de sorpresa de Uandi, Julián e Ian al ver el destino de viaje elegido.
-* **Viñeta 32 (Acción / Cierre del Acto 2):** El abrazo de despedida de Sofi e Ian antes de que ella cruce la puerta de embarque.
+Panel 2: Wide shot looking up at the massive digital airport departures board high on the wall. The glowing screen is packed with rows of clean, white text showing dozens of different flight destinations. Underneath, the four friends are looking up, their silhouettes small against the huge screen.
+
+Panel 3: Medium shot under the board. Sofi is pointing her finger up at one specific line on the glowing flight departures screen. Next to her, Ian, Julián, and Uandi stare at her in deep, stunned surprise, their eyes wide as they process the massive distance of the destination.
+
+Panel 4: Medium shot at the airport ticket counter. Sofi is standing at the desk, talking calmly to the clerk and buying her flight ticket. She has a serene, resolute expression, completely at peace with her decision.
+
+Panel 5: Close-up shot. Sofi is giving Julián a warm, tight goodbye hug. Julián's bearded face is frozen in an absolute look of wide-eyed surprise, completely caught off guard by the emotional embrace.
+
+Panel 6: Close-up shot. Sofi is hugging Uandi. Uandi (average build, showing his heavily tattooed right arm over her shoulder) has his head lowered, his face showing deep, intense sadness and heavy resignation.
+
+Panel 7: Close-up shot. Sofi is standing face-to-face with Ian. She is staring fixedly and deeply into his eyes. Ian (25, slender build, black glasses) is staring back at her with a completely serious, heavy, and intensely emotional expression. Absolute silence between them.
+
+Panel 8: Wide dynamic shot. Sofi throws her arms around Ian, hugging him tightly. Ian immediately hugs her back with desperate strength, wrapping his arms around her tricolor jacket. The terminal background is slightly blurred, focusing entirely on their powerful, final embrace.
+
+--no 3d, cgi, photorealistic, text, speech bubbles, blurry borders, digital gradients, los angeles, muscular ian, muscular julian, muscular uandi, bulky body, full sleeve on left arm
+
+Guía de Dibujo: Secuencia Detallada
+Viñeta 49 (Plano General): Entrada al aeropuerto JFK. Vos, Julián y Sofi caminan juntos cruzando la terminal repleta de gente. Uandi (contextura media) va un paso adelante cargándole las cosas a Sofi de onda: arrastra su carry-on azul, de la cual asoma un pedazo de ropa desprolija que quedó atrapada al cerrarla apurados.
+
+Viñeta 50 (Plano General de Escala): El grupo se frena frente al enorme tablero digital de salidas. La pantalla brilla gigante, llena de un laberinto de textos con infinitos destinos del mundo.
+
+Viñeta 51 (Plano Medio): Sofi levanta el brazo y señala un renglón específico en el cartel. Al ver el destino exacto (Tokio, Japón), vos, Julián y Uandi se quedan mudos, con las caras totalmente desfiguradas por el shock y la sorpresa ante la distancia.
+
+Viñeta 52 (Plano Medio Largo): En la ventanilla de la boletería. Sofi saca el pasaje frente al empleado de la aerolínea con una postura elocuente y tranquila, sin dudas en el cuerpo.
+
+Viñeta 53 (Primer Plano Emocional): Arrancan las despedidas individuales. Sofi se cuelga del cuello de Julián. Julián (flaco, con su suéter azul) se queda duro en el lugar con una cara de sorpresa total, procesando el impacto del adiós de su amiga.
+
+Viñeta 54 (Primer Plano Emocional): Sofi abraza a Uandi. El pibe baja la cabeza y la apoya contra el hombro de ella; su rostro denota una amargura y una tristeza enorme. En su brazo derecho se ve la manga de tatuajes envolviendo la escena.
+
+Viñeta 55 (Primer Plano de Tensión): Sofi se para frente a vos. Te clava la mirada fija a los ojos. Vos (flaco, con tu buzo gris y anteojos negros) la mirás de frente con una cara de extrema seriedad y procesando el quiebre del grupo en absoluto silencio.
+
+Viñeta 56 (Plano General Corto / Cierre de Página y de Acto): El abrazo definitivo. Sofi se lanza hacia adelante e Ian la recibe apretándola con fuerza contra su pecho. Ambos se abrazan con una lealtad inquebrantable en el medio de la terminal, cerrando el bloque de Brooklyn por todo lo alto antes de que ella cruce la puerta hacia Japón.
 
 ---
 

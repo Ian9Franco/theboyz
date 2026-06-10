@@ -218,3 +218,11 @@ Footwear: Classic rugged brown leather combat boots with high-durability soles f
 Key Accessories: * A heavy utility belt made of brown canvas or leather, packed with multiple pouches for tools, gear, and a large metallic buckle at the center.
 
 Dynamic stance: He is almost always depicted crouching, leaning, or winding up, ready to react to a sudden threat.
+
+
+
+Julián (Julián, 27, slender skinny build, dark navy blue sweater, full beard) is looking visibly angry and frustrated, gesturing intensely at Sofi. In the background, Jaz (Jaz, 25, black turtleneck
+
+
+Uandi (average normal build, wearing a short-sleeve dark asphalt gray t-shirt, showing a simple solid black armband tattoo around his left biceps)
+
