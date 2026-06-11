@@ -10,6 +10,7 @@ export type Chapter = {
   status?: string;
   draft?: boolean;
   cinematic?: boolean;
+  cover?: string | null;
 };
 
 export type Saga = {
@@ -145,6 +146,20 @@ export function getDynamicSagas(): Saga[] {
         }
       }
 
+      // Scan chPath for a cover image named "portada"
+      let chCover: string | null = null;
+      if (fs.existsSync(chPath)) {
+        const chFiles = fs.readdirSync(chPath);
+        const coverFile = chFiles.find((f) => {
+          const ext = path.extname(f).toLowerCase();
+          if (!SUPPORTED_FORMATS.includes(ext)) return false;
+          return path.basename(f, ext).toLowerCase() === "portada";
+        });
+        if (coverFile) {
+          chCover = `/comics/${encodeURIComponent(folder)}/${encodeURIComponent(chFolder)}/${encodeURIComponent(coverFile)}`;
+        }
+      }
+
       chapters.push({
         id: chCleanName, // Use cleaned name as the route id
         title: chTitle,
@@ -154,6 +169,7 @@ export function getDynamicSagas(): Saga[] {
         status: chStatus,
         draft: chStatus === "draft" || sagaStatus === "draft",
         cinematic: chCinematic || sagaCinematic,
+        cover: chCover,
       });
     });
 

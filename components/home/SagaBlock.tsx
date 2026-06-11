@@ -121,13 +121,17 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }:
   // Fetch the first page or the explicit "portada" image to use as cover
   useEffect(() => {
     if (isLocked) return;
+    if (chapter.cover) {
+      setCover(chapter.cover);
+      return;
+    }
     fetch(`/api/pages/${sagaId}/${chapter.id}`)
       .then(r => r.json())
       .then((d: { pages: string[]; cover: string | null }) => {
         if (d.cover) setCover(d.cover);
       })
       .catch(() => {});
-  }, [sagaId, chapter.id, isLocked]);
+  }, [sagaId, chapter.id, isLocked, chapter.cover]);
 
   if (isLocked) {
     return (
@@ -154,6 +158,13 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }:
               background: `repeating-linear-gradient(45deg, #13131e, #13131e 10px, #2a2a35 10px, #2a2a35 20px)`,
             }}
           >
+            {(chapter.cover || sagaCover) && (
+              <img
+                src={chapter.cover || sagaCover}
+                alt={`Portada de ${chapter.title}`}
+                className="absolute inset-0 w-full h-full object-cover object-top opacity-30 grayscale filter blur-[1px] brightness-[0.25]"
+              />
+            )}
             <div className="absolute inset-0 speed-lines opacity-20" />
             
             <div className="absolute inset-0 flex flex-col items-center justify-center z-20 gap-3">
@@ -184,7 +195,7 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }:
                 {saga_label(index)}
               </p>
               <h3 className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-tight uppercase tracking-wide text-gray-400">
-                Capítulo {chapter.number}
+                {chapter.title}
               </h3>
               <p className="font-[var(--font-sans)] text-xs text-gray-500 mt-1">
                 Leé el capítulo anterior para poder desbloquear este.
@@ -216,15 +227,15 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }:
           className="relative w-full overflow-hidden shrink-0"
           style={{
             aspectRatio: "3/4",
-            background: (cover || sagaCover)
+            background: (cover || chapter.cover || sagaCover)
               ? "#0a0a0f"
               : `linear-gradient(145deg, #0a0a0f 0%, ${accent}33 100%)`,
           }}
         >
           {/* Actual cover image */}
-          {(cover || sagaCover) && (
+          {(cover || chapter.cover || sagaCover) && (
             <img
-              src={cover || sagaCover || undefined}
+              src={cover || chapter.cover || sagaCover || undefined}
               alt={`Portada de ${chapter.title}`}
               className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             />
@@ -234,17 +245,17 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }:
           <div
             className="absolute inset-0 pointer-events-none z-10"
             style={{
-              background: (cover || sagaCover)
+              background: (cover || chapter.cover || sagaCover)
                 ? "linear-gradient(to top, rgba(10,10,15,0.85) 0%, rgba(10,10,15,0.1) 50%, transparent 100%)"
                 : undefined,
             }}
           />
 
           {/* No-cover placeholder */}
-          {!(cover || sagaCover) && (
+          {!(cover || chapter.cover || sagaCover) && (
             <div className="absolute inset-0 flex items-center justify-center z-10 speed-lines opacity-30" />
           )}
-          {!(cover || sagaCover) && (
+          {!(cover || chapter.cover || sagaCover) && (
             <div className="absolute inset-0 flex items-center justify-center z-20">
               <span
                 className="font-[var(--font-bangers)] text-[clamp(4rem,12vw,7rem)] leading-none text-white"

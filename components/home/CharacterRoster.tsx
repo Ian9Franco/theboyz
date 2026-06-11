@@ -80,6 +80,13 @@ const CATEGORY_METADATA = {
     shadowColor: "rgba(251,191,36,0.2)",
     borderColor: "#fbbf24",
   },
+  locaciones: {
+    title: "LOCACIONES",
+    tagline: "Los escenarios de la historia",
+    badgeColor: "#0ea5e9",
+    shadowColor: "rgba(14,165,233,0.2)",
+    borderColor: "#0ea5e9",
+  },
 };
 
 function getCategoryMeta(key: string) {
@@ -143,6 +150,7 @@ export function CharacterRoster() {
   }, []);  const getCardImage = (char: any) => {
     const isPibe = char.category === 'pibes' || ['ian', 'jaz', 'julian', 'mati', 'uandi', 'volvo', 'sofi'].includes(char.id);
     if (!isPibe) {
+      if (char.category === 'locaciones') return char.image;
       if (char.fichaImage) return char.fichaImage;
       if (char.id !== 'comandante' && char.altImage) return char.altImage;
       if (char.powers?.suitImages?.ficha) return char.powers.suitImages.ficha;
@@ -163,10 +171,15 @@ export function CharacterRoster() {
   const orderedCategories = activeCategories.sort((a, b) => {
     const orderPriority: Record<string, number> = {
       pibes: 1,
-      antagonistas: 2,
-      secundarios: 3,
-      independientes: 3,
-      taberna_resistencia: 3,
+      locaciones: 2,
+      antagonistas: 3,
+      secundarios: 4,
+      independientes: 4,
+      taberna_resistencia: 4,
+      voughtverse: 5,
+      matis: 6,
+      entidades: 7,
+      deidades: 8,
     };
     const priorityA = orderPriority[a] ?? 99;
     const priorityB = orderPriority[b] ?? 99;

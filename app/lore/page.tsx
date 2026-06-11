@@ -1,9 +1,6 @@
-import NavBar from "@/components/NavBar";
-
 export default function LorePage() {
   return (
     <main className="min-h-screen bg-[#0a0a0f] text-white selection:bg-[#e8185a] selection:text-white pb-20">
-      <NavBar />
       
       <div className="max-w-4xl mx-auto px-6 pt-16">
         <h1 className="font-[var(--font-bangers)] text-6xl text-[#f5e642] mb-8" style={{ textShadow: "4px 4px 0 #e8185a" }}>

@@ -5,6 +5,7 @@ import { matis } from "./characterData/matis";
 import { antagonistas } from "./characterData/antagonistas";
 import { entidades } from "./characterData/entidades";
 import { deidades } from "./characterData/deidades";
+import { locaciones } from "./characterData/locaciones";
 import { UNLOCK_RULES } from "./characterData/unlockRules";
 import { CharacterDetail } from "./characterData/types";
 
@@ -15,7 +16,8 @@ export const CHARACTER_DETAILS: CharacterDetail[] = [
   ...matis,
   ...antagonistas,
   ...entidades,
-  ...deidades
+  ...deidades,
+  ...locaciones
 ];
 
 export function getComputedCharacters(readChapters: string[], isClient: boolean, unlockAll: boolean = false) {

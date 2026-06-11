@@ -180,15 +180,26 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     variantLabel: isArchorLocked ? '???' : (activeVariantData?.label ?? null),
   };
 
-  const statRows = [
-    { name: "Fuerza",   val: stats?.fuerza ?? 0 },
-    { name: "Intel.",   val: stats?.inteligencia ?? 0 },
-    { name: "Carisma",  val: stats?.carisma ?? 0 },
-    { name: "Suerte",   val: stats?.suerte ?? 0 },
-    { name: "Combate",  val: stats?.combate ?? 0 },
-    { name: "Defensa",  val: stats?.defensa ?? 0 },
-    { name: char.especialLabel || "Especial", val: isPowersMode ? (char.powers?.stats?.especialVal ?? 0) : (char.stats?.especialVal ?? 0) },
-  ];
+  const isLocation = char.category === 'locaciones';
+  const statRows = isLocation
+    ? [
+        { name: "Recursos", val: stats?.fuerza ?? 0 },
+        { name: "Tecnología", val: stats?.inteligencia ?? 0 },
+        { name: "Confort", val: stats?.carisma ?? 0 },
+        { name: "Sigilo", val: stats?.suerte ?? 0 },
+        { name: "Defensas", val: stats?.combate ?? 0 },
+        { name: "Blindaje", val: stats?.defensa ?? 0 },
+        { name: char.especialLabel || "Especial", val: isPowersMode ? (char.powers?.stats?.especialVal ?? 0) : (char.stats?.especialVal ?? 0) },
+      ]
+    : [
+        { name: "Fuerza",   val: stats?.fuerza ?? 0 },
+        { name: "Intel.",   val: stats?.inteligencia ?? 0 },
+        { name: "Carisma",  val: stats?.carisma ?? 0 },
+        { name: "Suerte",   val: stats?.suerte ?? 0 },
+        { name: "Combate",  val: stats?.combate ?? 0 },
+        { name: "Defensa",  val: stats?.defensa ?? 0 },
+        { name: char.especialLabel || "Especial", val: isPowersMode ? (char.powers?.stats?.especialVal ?? 0) : (char.stats?.especialVal ?? 0) },
+      ];
 
   // Transition handler when switching Detalles mode
   const handlePowersModeToggle = () => {
@@ -727,7 +738,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                 className="border-t pt-2 flex flex-col gap-1.5 flex-shrink-0"
               >
                 <h4 className="font-[var(--font-bangers)] text-xs tracking-wider">
-                  {isPowersMode ? "MÉTRICAS:" : "STATS:"}
+                  {isLocation ? "MÉTRICAS:" : (isPowersMode ? "MÉTRICAS:" : "STATS:")}
                 </h4>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
                   {statRows.map((s, i) => (

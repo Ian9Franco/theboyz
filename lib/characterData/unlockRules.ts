@@ -48,5 +48,8 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   archon: [],
   azathos: [],
   lucy: [],
-  mars: []
+  mars: [],
+
+  // Locaciones
+  dumbo_base: []
 };
