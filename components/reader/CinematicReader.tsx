@@ -60,8 +60,20 @@ export function CinematicReader({
   const [isSaving, setIsSaving] = useState(false);
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
 
+  // Dialogue Password Auth States
+  const [isAuthorized, setIsAuthorized] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [passwordInput, setPasswordInput] = useState("");
+  const [authError, setAuthError] = useState(false);
+
   const containerRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsAuthorized(sessionStorage.getItem("editor_authorized") === "true");
+    }
+  }, []);
 
   // Initialize dialogues copy
   useEffect(() => {
@@ -118,7 +130,12 @@ export function CinematicReader({
   // Get current page dialogues safely
   const pgKey = String(pageIdx + 1);
   const currentPageData = localDialogues.pages?.[pgKey] || { panels: [] };
-  const currentPanels = currentPageData.panels;
+  
+  // Filter empty panels only in read mode so the editor can still see and edit all stops
+  const currentPanels = mode === "read"
+    ? (currentPageData.panels || []).filter(p => p.dialogue && p.dialogue.length > 0)
+    : (currentPageData.panels || []);
+
   const activePanel = currentPanels[panelIdx] || { focusY: 0.5, dialogue: [] };
 
   // Calculate layout dimensions
@@ -179,6 +196,39 @@ export function CinematicReader({
   };
 
   // ─── EDITOR OPERATIONS ──────────────────────────────────────────────────────
+
+  const handleToggleMode = () => {
+    setPanelIdx(0);
+    setZoomedOut(false);
+    if (mode === "edit") {
+      setMode("read");
+    } else {
+      if (isAuthorized) {
+        setMode("edit");
+      } else {
+        setShowAuthModal(true);
+        setPasswordInput("");
+        setAuthError(false);
+      }
+    }
+  };
+
+  const handleAuthSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (passwordInput === "hush2026") {
+      setIsAuthorized(true);
+      if (typeof window !== "undefined") {
+        sessionStorage.setItem("editor_authorized", "true");
+        sessionStorage.setItem("editor_password", passwordInput);
+      }
+      setShowAuthModal(false);
+      setPanelIdx(0);
+      setZoomedOut(false);
+      setMode("edit");
+    } else {
+      setAuthError(true);
+    }
+  };
 
   const updateDialoguesState = (newPages: Record<string, PageData>) => {
     setLocalDialogues(prev => ({
@@ -284,8 +334,8 @@ export function CinematicReader({
     const relativeY = ((info.point.y - rect.top) / rect.height) * 100;
 
     handleUpdateBubble(pIdx, bIdx, {
-      posX: Math.max(0, Math.min(100, Math.round(relativeX))),
-      posY: Math.max(0, Math.min(100, Math.round(relativeY))),
+      posX: Math.max(-20, Math.min(120, Math.round(relativeX))),
+      posY: Math.max(-20, Math.min(120, Math.round(relativeY))),
     });
   };
 
@@ -294,9 +344,13 @@ export function CinematicReader({
     setIsSaving(true);
     setSaveStatus("idle");
     try {
+      const savedPass = typeof window !== "undefined" ? sessionStorage.getItem("editor_password") || "" : "";
       const res = await fetch(`/api/chapters/${chapter.id}/dialogues`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "x-editor-password": savedPass
+        },
         body: JSON.stringify({ dialogues: localDialogues }),
       });
       if (res.ok) {
@@ -326,8 +380,8 @@ export function CinematicReader({
             key={`read-bub-${i}`}
             className="absolute pointer-events-none z-30"
             style={{
-              left: `${posX}%`,
-              top: `${posY}%`,
+              left: imgLeft + (posX / 100) * imgWidth,
+              top: imgTop + (posY / 100) * imgHeight,
               transform: "translate(-50%, -50%)",
               width: "max-content",
             }}
@@ -360,8 +414,8 @@ export function CinematicReader({
             }}
             className="absolute z-40 pointer-events-auto cursor-move"
             style={{
-              left: `${posX}%`,
-              top: `${posY}%`,
+              left: imgLeft + (posX / 100) * imgWidth,
+              top: imgTop + (posY / 100) * imgHeight,
               transform: "translate(-50%, -50%)",
               width: "max-content",
             }}
@@ -414,7 +468,7 @@ export function CinematicReader({
         {/* Mode Toggle Button */}
         <div className="flex items-center gap-2">
           <button
-            onClick={() => setMode(mode === "read" ? "edit" : "read")}
+            onClick={handleToggleMode}
             className={`font-[var(--font-bangers)] text-sm px-4 py-2 border-2 border-[#0a0a0f] transition-all ${
               mode === "edit"
                 ? "bg-[#f5e642] text-[#0a0a0f] shadow-[2px_2px_0_#0a0a0f]"
@@ -465,13 +519,7 @@ export function CinematicReader({
 
           {/* ── Dialogues Layer ── */}
           <div
-            className="absolute pointer-events-none z-30"
-            style={{
-              left: imgLeft,
-              top: imgTop,
-              width: imgWidth,
-              height: imgHeight,
-            }}
+            className="absolute inset-0 w-full h-full pointer-events-none z-30 overflow-visible"
           >
             {renderedDialogues}
           </div>
@@ -706,6 +754,23 @@ export function CinematicReader({
                     />
                   </div>
 
+                  {/* Speaker Presets */}
+                  <div className="flex flex-col gap-1">
+                    <label className="text-[10px] font-bold text-zinc-500">Hablantes rápidos:</label>
+                    <div className="flex flex-wrap gap-1">
+                      {["Uandi", "Sofi", "Jaz", "Ian", "Julián", "Mati", "Volvo"].map((name) => (
+                        <button
+                          key={name}
+                          type="button"
+                          onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { speaker: name })}
+                          className="px-2 py-1 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded active:translate-y-0.5 transition-all"
+                        >
+                          {name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
                   {/* Style */}
                   <div className="flex flex-col gap-1">
                     <label className="text-xs font-bold text-zinc-600">Estilo:</label>
@@ -720,6 +785,20 @@ export function CinematicReader({
                       <option value="scream">Grito (Llamativo/Bangers)</option>
                       <option value="whisper">Susurro (Discontinuo/Itálico)</option>
                       <option value="electronic">Electrónico (Futurista/Monospace)</option>
+                    </select>
+                  </div>
+
+                  {/* Size Preset */}
+                  <div className="flex flex-col gap-1">
+                    <label className="text-xs font-bold text-zinc-600">Tamaño del Globo:</label>
+                    <select
+                      value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].size || "medium"}
+                      onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { size: e.target.value as any })}
+                      className="w-full border-2 border-[#0a0a0f] p-2 text-xs font-mono rounded bg-white text-[#0a0a0f]"
+                    >
+                      <option value="small">Pequeño</option>
+                      <option value="medium">Mediano</option>
+                      <option value="large">Grande</option>
                     </select>
                   </div>
 
@@ -743,6 +822,30 @@ export function CinematicReader({
                     </div>
                   )}
 
+                  {/* Custom HEX Colors */}
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="flex flex-col gap-1">
+                      <label className="text-xs font-bold text-zinc-600">Color Fondo (Hex):</label>
+                      <input
+                        type="text"
+                        value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].customBg || ""}
+                        onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { customBg: e.target.value })}
+                        className="w-full border-2 border-[#0a0a0f] p-2 text-xs font-mono rounded bg-white text-[#0a0a0f]"
+                        placeholder="Ej: #ffffff"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <label className="text-xs font-bold text-zinc-600">Color Borde (Hex):</label>
+                      <input
+                        type="text"
+                        value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].customColor || ""}
+                        onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { customColor: e.target.value })}
+                        className="w-full border-2 border-[#0a0a0f] p-2 text-xs font-mono rounded bg-white text-[#0a0a0f]"
+                        placeholder="Ej: #0a0a0f"
+                      />
+                    </div>
+                  </div>
+
                   {/* Text */}
                   <div className="flex flex-col gap-1">
                     <label className="text-xs font-bold text-zinc-600">Texto:</label>
@@ -754,16 +857,75 @@ export function CinematicReader({
                     />
                   </div>
 
+                  {/* Position Presets */}
+                  <div className="flex flex-col gap-1 mt-1">
+                    <label className="text-xs font-bold text-zinc-600">Posición Rápida (Márgenes/Viñeta):</label>
+                    <div className="grid grid-cols-2 gap-1.5">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const targetY = Math.round(currentPanels[activePanelIdx].focusY * 100);
+                          handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: -15, posY: targetY });
+                        }}
+                        className="px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5"
+                      >
+                        <span>👈 Margen Izq.</span>
+                        <span className="text-[8px] text-zinc-500 font-mono">[-15%, Y]</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const targetY = Math.round(currentPanels[activePanelIdx].focusY * 100);
+                          handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: 115, posY: targetY });
+                        }}
+                        className="px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5"
+                      >
+                        <span>👉 Margen Der.</span>
+                        <span className="text-[8px] text-zinc-500 font-mono">[115%, Y]</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: 50, posY: -15 });
+                        }}
+                        className="px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5"
+                      >
+                        <span>👆 Margen Sup.</span>
+                        <span className="text-[8px] text-zinc-500 font-mono">[50%, -15%]</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: 50, posY: 115 });
+                        }}
+                        className="px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5"
+                      >
+                        <span>👇 Margen Inf.</span>
+                        <span className="text-[8px] text-zinc-500 font-mono">[50%, 115%]</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const targetY = Math.round(currentPanels[activePanelIdx].focusY * 100);
+                          handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: 50, posY: targetY });
+                        }}
+                        className="col-span-2 px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-center transition-colors active:translate-y-0.5"
+                      >
+                        🎯 Centro de Viñeta <span className="text-zinc-500 font-mono ml-1 text-[8px]">[50%, Y]</span>
+                      </button>
+                    </div>
+                  </div>
+
                   {/* Coords display & manual entry */}
                   <div className="grid grid-cols-2 gap-2 mt-1">
                     <div className="flex flex-col gap-1">
                       <label className="text-[10px] font-bold text-zinc-500">X (Ancho %):</label>
                       <input
                         type="number"
-                        min="0"
-                        max="100"
+                        min="-20"
+                        max="120"
                         value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].posX ?? 50}
-                        onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: Math.max(0, Math.min(100, parseInt(e.target.value) || 0)) })}
+                        onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: Math.max(-20, Math.min(120, parseInt(e.target.value) || 0)) })}
                         className="border-2 border-[#0a0a0f] p-1.5 text-xs font-mono text-center bg-white text-[#0a0a0f]"
                       />
                     </div>
@@ -771,10 +933,10 @@ export function CinematicReader({
                       <label className="text-[10px] font-bold text-zinc-500">Y (Alto %):</label>
                       <input
                         type="number"
-                        min="0"
-                        max="100"
+                        min="-20"
+                        max="120"
                         value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].posY ?? 50}
-                        onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posY: Math.max(0, Math.min(100, parseInt(e.target.value) || 0)) })}
+                        onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posY: Math.max(-20, Math.min(120, parseInt(e.target.value) || 0)) })}
                         className="border-2 border-[#0a0a0f] p-1.5 text-xs font-mono text-center bg-white text-[#0a0a0f]"
                       />
                     </div>
@@ -789,6 +951,70 @@ export function CinematicReader({
           </div>
         )}
       </div>
+
+      {/* ── Auth Modal ── */}
+      <AnimatePresence>
+        {showAuthModal && (
+          <div className="fixed inset-0 z-[250] flex items-center justify-center p-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowAuthModal(false)}
+              className="absolute inset-0 bg-[#0a0a0f]/90 backdrop-blur-sm cursor-pointer"
+            />
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              className="relative w-full max-w-sm bg-white border-4 border-[#0a0a0f] p-6 shadow-[8px_8px_0_#f5e642] z-10"
+            >
+              <button
+                type="button"
+                onClick={() => setShowAuthModal(false)}
+                className="absolute top-2 right-2 w-8 h-8 flex items-center justify-center font-[var(--font-bangers)] text-sm bg-red-500 text-white border-2 border-[#0a0a0f] hover:bg-red-600 transition-colors shadow-[2px_2px_0_#000]"
+              >
+                ✕
+              </button>
+              
+              <h3 className="font-[var(--font-bangers)] text-3xl text-[#0a0a0f] mb-2 tracking-wider">
+                🔐 MODO EDITOR
+              </h3>
+              <p className="font-sans text-xs text-zinc-500 mb-4 leading-relaxed">
+                Ingresá la contraseña de edición para poder modificar y guardar los diálogos de las viñetas.
+              </p>
+
+              <form onSubmit={handleAuthSubmit} className="flex flex-col gap-3">
+                <div className="flex flex-col gap-1.5">
+                  <input
+                    type="password"
+                    value={passwordInput}
+                    onChange={(e) => {
+                      setPasswordInput(e.target.value);
+                      if (authError) setAuthError(false);
+                    }}
+                    placeholder="Contraseña"
+                    className="w-full border-2 border-[#0a0a0f] p-3 text-sm font-mono rounded bg-white text-[#0a0a0f] focus:outline-none"
+                    autoFocus
+                  />
+                  {authError && (
+                    <span className="text-red-500 font-mono text-[10px] uppercase font-bold tracking-wider animate-bounce">
+                      ⚠️ Contraseña incorrecta
+                    </span>
+                  )}
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-2.5 bg-[#0a0a0f] hover:bg-zinc-800 text-white font-[var(--font-bangers)] text-base tracking-widest border-2 border-[#0a0a0f] shadow-[3px_3px_0_#f5e642] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#f5e642] transition-all"
+                >
+                  AUTORIZAR →
+                </button>
+              </form>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
