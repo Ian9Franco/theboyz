@@ -4,11 +4,11 @@ export const secundarios: CharacterDetail[] = [
   {
     id: 'matapobre',
     name: 'Matapobres',
-    category: 'secundarios',
+    category: 'independientes',
     isSecondary: true,
-    image: '/personajes/SECUNDARIOS/Matapobres/MATAPOBRES.webp',
-    fullBody: '/personajes/SECUNDARIOS/Matapobres/MATAPOBRES.webp',
-    altImage: '/personajes/SECUNDARIOS/Matapobres/Matapobres_ficha.webp',
+    image: '/personajes/SECUNDARIOS/Independientes/Matapobres/MATAPOBRES.webp',
+    fullBody: '/personajes/SECUNDARIOS/Independientes/Matapobres/MATAPOBRES.webp',
+    altImage: '/personajes/SECUNDARIOS/Independientes/Matapobres/Matapobres_ficha.webp',
     color: '#6b7280',
     role: 'Antiheroína / Karma',
     visualCode: 'Traje de piloto espacial, lentes de cazadora',
@@ -36,12 +36,12 @@ export const secundarios: CharacterDetail[] = [
   {
     id: 'supertrucker',
     name: 'Super Camionero',
-    category: 'secundarios',
+    category: 'independientes',
     isSecondary: true,
-    image: '/personajes/SECUNDARIOS/Supercamionero/Supercamionero.webp',
-    fullBody: '/personajes/SECUNDARIOS/Supercamionero/Supercamionero.webp',
-    altImage: '/personajes/SECUNDARIOS/Supercamionero/Supercamionero_alt.webp',
-    fichaImage: '/personajes/SECUNDARIOS/Supercamionero/Supercamionero_ficha.webp',
+    image: '/personajes/SECUNDARIOS/Independientes/Supercamionero/Supercamionero.webp',
+    fullBody: '/personajes/SECUNDARIOS/Independientes/Supercamionero/Supercamionero.webp',
+    altImage: '/personajes/SECUNDARIOS/Independientes/Supercamionero/Supercamionero_alt.webp',
+    fichaImage: '/personajes/SECUNDARIOS/Independientes/Supercamionero/Supercamionero_ficha.webp',
     color: '#f97316',
     role: 'El Centinela del Asfalto',
     visualCode: 'Gorra cromada, capa de lona roja, faros xenón',
@@ -100,10 +100,10 @@ export const secundarios: CharacterDetail[] = [
   {
     id: 'rylai',
     name: 'Crystal Maiden',
-    category: 'secundarios',
+    category: 'taberna_resistencia',
     isSecondary: true,
-    image: '/personajes/SECUNDARIOS/Rylai/Rylai.webp',
-    fullBody: '/personajes/SECUNDARIOS/Rylai/Rylai.webp',
+    image: '/personajes/SECUNDARIOS/Taberna de la resistencia/Rylai/Rylai.webp',
+    fullBody: '/personajes/SECUNDARIOS/Taberna de la resistencia/Rylai/Rylai.webp',
     color: '#3b82f6',
     role: 'La Canalizadora de la Tormenta',
     visualCode: 'Capa azul ártico con piel blanca, bastón místico con gema de hielo',
@@ -130,10 +130,10 @@ export const secundarios: CharacterDetail[] = [
   {
     id: 'bristleback',
     name: 'Bristleback',
-    category: 'secundarios',
+    category: 'independientes',
     isSecondary: true,
-    image: '/personajes/SECUNDARIOS/Bristleback/Bristleback.webp',
-    fullBody: '/personajes/SECUNDARIOS/Bristleback/Bristleback.webp',
+    image: '/personajes/SECUNDARIOS/Independientes/Bristleback/Bristleback.webp',
+    fullBody: '/personajes/SECUNDARIOS/Independientes/Bristleback/Bristleback.webp',
     color: '#15803d',
     role: 'El Matón de Callejón',
     visualCode: 'Chaleco vaquero sin mangas, aro en la nariz, lomo de espinas biomecánicas',
@@ -160,10 +160,10 @@ export const secundarios: CharacterDetail[] = [
   {
     id: 'invoker',
     name: 'Invoker',
-    category: 'secundarios',
+    category: 'independientes',
     isSecondary: true,
-    image: '/personajes/SECUNDARIOS/Invoker/Invoker.webp',
-    fullBody: '/personajes/SECUNDARIOS/Invoker/Invoker.webp',
+    image: '/personajes/SECUNDARIOS/Independientes/Invoker/Invoker.webp',
+    fullBody: '/personajes/SECUNDARIOS/Independientes/Invoker/Invoker.webp',
     color: '#d97706',
     role: 'El Mago del Arsenal',
     visualCode: 'Cabello blanco ingrávido, capa-gabardina marfil, orbes de energía',
@@ -190,10 +190,10 @@ export const secundarios: CharacterDetail[] = [
   {
     id: 'ymir',
     name: 'Tusk',
-    category: 'secundarios',
+    category: 'taberna_resistencia',
     isSecondary: true,
-    image: '/personajes/SECUNDARIOS/Ymir/Tusk.webp',
-    fullBody: '/personajes/SECUNDARIOS/Ymir/Tusk.webp',
+    image: '/personajes/SECUNDARIOS/Taberna de la resistencia/Ymir/Tusk.webp',
+    fullBody: '/personajes/SECUNDARIOS/Taberna de la resistencia/Ymir/Tusk.webp',
     color: '#0284c7',
     role: 'El Boxeador del Norte',
     visualCode: 'Morsa robusta, chaleco con piel de oso, guantelete de hielo eterno',
@@ -215,6 +215,37 @@ export const secundarios: CharacterDetail[] = [
       significa: 'Iniciador y luchador cuerpo a cuerpo. Desestabiliza las líneas enemigas mediante embestidas heladas y golpes críticos.',
       crisis: 'Exposición post-golpe: Tras descargar su Walrus Punch, el guantelete requiere enfriamiento térmico, reduciendo su defensa física.',
       stats: { fuerza: 10, inteligencia: 5, carisma: 9, suerte: 7, combate: 9, defensa: 8, especialVal: 10 }
+    }
+  },
+  {
+    id: 'kenji',
+    name: 'Kenji Sato',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/SECUNDARIOS/Kenji/Kenji.webp',
+    fullBody: '/personajes/SECUNDARIOS/Kenji/Kenji.webp',
+    color: '#c2410c',
+    role: 'Cocinero Tradicional / Soporte Emocional',
+    visualCode: 'Delantal de lona azul, vincha Hachimaki azul oscuro, mirada cansada pero cálida',
+    perfil: [
+      'Cocinero de callejón: Dueño de Sato\'s Ramen, un pequeño y acogedor local de fideos ubicado en las profundidades de Neo-Tokio.',
+      'Mentor y ancla: Ofrece cobijo, comida y consejos de vida a Sofi, sirviendo como su soporte emocional y conexión humana.',
+      'Espíritu zen: Mantiene un pequeño jardín de bambú y arce donde reina el silencio absoluto que Sofi necesita.'
+    ],
+    crisis: 'Temeridad obstinada: Su rigidez ética y lealtad le impiden someterse a la extorsión de las mafias, prefiriendo resistir de pie.',
+    stats: { fuerza: 3, inteligencia: 6, carisma: 7, suerte: 5, combate: 3, defensa: 4, especialVal: 1 },
+    especialLabel: 'Refugio',
+    hint: 'Desbloqueado desde el inicio de la historia de Tokio.',
+    powers: {
+      role: 'Kenji Sato',
+      habilidades: [
+        'Tazón de Calidez: Prepara cuencos humeantes de ramen que restauran la energía psíquica y física de sus aliados.',
+        'Machete de Jardín: Utiliza una herramienta de corte larga para el cuidado de su patio, utilizable en defensa desesperada.',
+        'Advertencia Táctica: Revela información local y dinámicas urbanas del Clan Kurogane para guiar a los héroes.'
+      ],
+      significa: 'El cable a tierra del equipo. Su ramen y sabiduría proveen un descanso vital para aliviar el trauma y recargar fuerzas.',
+      crisis: 'Muerte del mentor: Su deceso a manos del Clan Kurogane marca un punto sin retorno, forzando el despertar total de Hush.',
+      stats: { fuerza: 4, inteligencia: 7, carisma: 8, suerte: 6, combate: 4, defensa: 5, especialVal: 5 }
     }
   }
 ];

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useRef, useCallback } from "react";
 import { Lightbox as ReaderLightbox } from "@/components/reader/ReaderLightbox";
+import { DraftLockScreen } from "@/components/reader/DraftLockScreen";
 
 export default function ChapterPage() {
   const params  = useParams();
@@ -36,7 +37,7 @@ export default function ChapterPage() {
     return () => observer.disconnect();
   }, [chapterData]);
 
-  useEffect(() => {
+  const fetchChapterData = useCallback(() => {
     setLoading(true);
     setError(false);
     setIsLocked(false);
@@ -50,6 +51,10 @@ export default function ChapterPage() {
       .then((data) => {
         setChapterData(data);
         setLoading(false);
+
+        if (data.locked && data.reason === "draft") {
+          return;
+        }
 
         // Lock verification
         if (data.prevChapter) {
@@ -82,6 +87,10 @@ export default function ChapterPage() {
         setLoading(false);
       });
   }, [id]);
+
+  useEffect(() => {
+    fetchChapterData();
+  }, [id, fetchChapterData]);
 
   // Load more pages automatically in Lightbox (vista grande)
   useEffect(() => {
@@ -117,6 +126,16 @@ export default function ChapterPage() {
   }
 
   if (loading) return <div className="flex-1" style={{ background: "#f4f0e6" }}><LoadingState /></div>;
+
+  // Handle draft password lock
+  if (chapterData && chapterData.locked && chapterData.reason === "draft") {
+    return (
+      <DraftLockScreen
+        chapterTitle={chapterData.title}
+        onUnlock={fetchChapterData}
+      />
+    );
+  }
 
   const { chapter, saga, pages, prevChapter, nextChapter } = chapterData;
 

@@ -11,13 +11,18 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/sagas")
-      .then((r) => r.json())
-      .then((d) => {
-        setSagasList(d);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
+    const load = () => {
+      fetch("/api/sagas")
+        .then((r) => r.json())
+        .then((d) => {
+          setSagasList(d);
+          setLoading(false);
+        })
+        .catch(() => setLoading(false));
+    };
+    load();
+    window.addEventListener("previewStateChanged", load);
+    return () => window.removeEventListener("previewStateChanged", load);
   }, []);
 
   return (

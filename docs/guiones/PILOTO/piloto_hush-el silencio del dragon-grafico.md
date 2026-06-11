@@ -292,28 +292,34 @@ Viñeta 56 (Plano General Corto / Cierre de Página y de Acto): El abrazo defini
 ---
 
 ## ACTO 3: Quince Días de Luz y la Tragedia (Páginas 10 - 20)
+Official comic book page layout, multi-panel 6-panel narrative grid, professional graphic novel printing format. White panel borders, clean non-uniform layout. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors, desaturated tones. Art by Sara Pichelli and Jorge Jimenez. Sharp focus, 2D illustration. NO 3D render, NO photorealism, NO text, NO speech bubbles.
 
-### PÁGINA 10: Arribo a la Lluvia (Tokio)
+Panel 1: Medium wide shot. Bright, sunny daylight. Outside the modern, sleek airport exit terminal in Japan. Sofi (Sofi, a 25-year-old woman, curly hair up in a messy bun, wearing her color-blocked pink and burgundy winter jacket) is standing on the platform, carrying her heavy backpack and rolling her blue suitcase, looking up at the clear sky.
 
-> [!TIP]
-> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, dynamic multi-panel grid, professional graphic novel printing format. White panel borders, irregular panel shapes, diagonal panel borders, slanted gutters separating panels, non-uniform layout with dynamic angles. Modern american comic book art style, clean line art, defined black outlines, varied line weight, precise shadow hatching, cell-shading, flat digital colors, desaturated tones, subtle paper grain texture. Art by Sara Pichelli and Jorge Jimenez. NO 3D render, NO photorealism, NO text, NO speech bubbles.
-> 
-> Panel 1: Cinematic wide shot. Tokyo at night under a dense, heavy pouring rain storm. Giant, towering skyscrapers and bright neon billboards with Japanese characters glow in intense pink, magenta, and cyan, reflecting over the pitch-black wet asphalt streets.
-> Panel 2: A classic black and green Tokyo taxi pulls up smoothly to the concrete curb, its tires splashing water.
-> Panel 3: Medium shot. Sofi (Sofi, a 25-year-old woman with curly dark hair, wearing her tricolor pink, burgundy, and dark brown hooded jacket, a plaid scarf) opens the taxi door and gets into the backseat, looking out tiredly.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles, blurry borders, digital gradients, new york, los angeles
-> 
-> **Personajes a subir al chat:**
-> - **Sofi (Ropa de Viaje)**
+Panel 2: Wide shot. Afternoon transition. A modern Japanese monorail train is speeding along elevated tracks. The background sky is shifting into a moody, overcast orange and gray sunset over the distant, sprawling outskirts of Tokyo.
 
-* **Viñeta 33 (Plano General Panorámico):** Tokio de noche bajo la tormenta. Los neones gigantes rosa y cian iluminan las calles mojadas.
-* **Viñeta 34 (Plano General Corto):** El taxi tradicional negro y verde frena junto a la vereda levantando una estela de agua.
-* **Viñeta 35 (Plano Medio):** Sofi sube al asiento trasero con su mochila, exhausta por el viaje.
+Panel 3: Inside the train car. Medium shot. Sofi is sitting by the window, resting her head against the glass. Outside, heavy dark rain clouds are rapidly rolling in, blotting out the last light of dusk. Her expression is pensive and tired.
 
+Panel 4: Cinematic wide panoramic shot. Night has fallen completely. Tokyo under a dense, heavy pouring rain storm. Giant, towering skyscrapers and bright vertical neon billboards with Japanese kanji characters glow in intense pink, magenta, and cyan, reflecting sharply over the pitch-black wet asphalt streets.
+
+Panel 5: Medium shot on the wet sidewalk curb under the neon glare. A classic black and green Tokyo taxi cab pulls up smoothly to the concrete sidewalk, its tires splashing a clean fan of water into the air.
+
+Panel 6: Medium shot from outside the car. Sofi, tightly wrapping her wool plaid scarf around her neck, opens the rear door of the black and green taxi to step inside. Through the rain-streaked air, her face looks deeply exhausted, lonely, and introspective as she enters the heart of Japan.
+
+--no 3d, cgi, photorealistic, text, speech bubbles, blurry borders, digital gradients, new york, los angeles, yellow cab, airplane, interior airport, sunshine in panel 4, muscular ian
+
+Guía de Dibujo: Secuencia Detallada (Paso a Paso)
+Viñeta 33 (Plano Medio Largo - Día): Continuidad pura. Salida de la terminal del aeropuerto en Japón. El cielo está despejado y hay un sol brillante de día. Sofi (25 años, con su campera tricolor) está parada en la plataforma exterior con la mochila al hombro y agarrando la manija de su valija carry-on azul, entrecerrando los ojos por la luz del sol mientras mira el nuevo horizonte.
+
+Viñeta 33B (Plano General - Tarde): El paso del tiempo. Un tren monorriel japonés moderno avanza a gran velocidad por vías elevadas cruzando los suburbios. El cielo ya cambió: el sol se está ocultando y muta hacia un atardecer nublado, espeso, con tonos naranjas y grises que empiezan a tapar la luz.
+
+Viñeta 33C (Plano Medio Interno - Creciente): Adentro del vagón del tren. Sofi está sentada junto a la ventanilla, apoyando la sien contra el vidrio. Afuera, el crepúsculo desaparece rápido y nubarrones negros de tormenta avanzan tapando todo. Su rostro denota cansancio introspectivo.
+
+Viñeta 33D (Plano General Panorámico - Noche): El choque cyberpunk. Llegamos al centro de Tokio y la noche es total bajo una tormenta torrencial absoluta. Los rascacielos gigantescos y los neones verticales rosa, cian y magenta estallan contra la oscuridad, duplicándose como espejos sobre el asfalto negro y empapado de las avenidas.
+
+Viñeta 34 (Plano General Corto): El taxi. El clásico taxi tradicional japonés de color negro con franjas verdes frena de manera impecable junto al cordón de la vereda inundada, levantando una estela de agua con las ruedas.
+
+Viñeta 35 (Plano Medio / Cierre de Página): Sofi, ya con la bufanda escocesa bien envuelta en el cuello para cubrirse del frío de la tormenta, abre la puerta del taxi para subirse. La toma capta su rostro exhausto, asimilando con una soledad tremenda el laberinto de neón que la rodea. Dejó Brooklyn atrás; su nueva realidad en Japón acaba de empezar.
 ---
 
 ### PÁGINA 11: El Conductor del Dragón
@@ -345,102 +351,138 @@ Viñeta 56 (Plano General Corto / Cierre de Página y de Acto): El abrazo defini
 ### PÁGINA 12: Latidos y Emboscada
 
 > [!TIP]
-> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, dynamic multi-panel grid, professional graphic novel printing format. White panel borders, irregular panel shapes, diagonal panel borders, slanted gutters separating panels, non-uniform layout with dynamic angles. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors. Art by Sara Pichelli and Jorge Jimenez. NO 3D render, NO photorealism, NO text, NO speech bubbles.
-> 
-> Panel 1: Inside the backseat. Close-up of Sofi's face, her expression turning into deep tension and alarm. Her eyes are wide; her advanced hearing picks up the driver's heart, illustrated by subtle soundwave lines showing a fast, frantic, pounding heartbeat due to adrenaline.
-> Panel 2: The taxi suddenly turns sharply into a pitch-black, dead-end brick alleyway and screeches to a violent, sudden halt, splashing dirty water.
-> Panel 3: Action shot. The driver twists around fiercely into the backseat, lunging at her while wielding a medical syringe filled with a clear sedante liquid. Sofi reacts with defense instincts, her hands up.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles, blurry borders, digital gradients
-> 
-> **Personajes a subir al chat:**
-> - **Sofi (Ropa de Viaje)**
-> - **Taxista (Clan Kurogane / Maleante)**
+PROMPT DE GENERACIÓN (PÁGINA 12):
+Official comic book page layout, multi-panel 6-panel dynamic grid, professional graphic novel printing format. White panel borders, irregular panel shapes, diagonal panel borders, slanted gutters separating panels, non-uniform layout with dynamic angles. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors, desaturated and dark cold tones. Art by Sara Pichelli and Jorge Jimenez. Sharp focus, 2D illustration. NO 3D render, NO photorealism, NO text, NO speech bubbles.
 
-* **Viñeta 40 (Primer Plano):** Sofi se altera en el asiento; su oído detecta la adrenalina del chofer por el latido desbocado de su corazón.
-* **Viñeta 41 (Plano General de Acción):** El coche gira bruscamente y derrapa en un callejón sin salida rodeado de altas paredes de ladrillo.
-* **Viñeta 42 (Acción):** El taxista se abalanza ferozmente hacia atrás empuñando la jeringa sedante.
+Panel 1: Inside the dark taxi backseat. Close-up on Sofi's face (Sofi, a 25-year-old woman, curly hair up in a messy bun, wearing her tricolor pink and burgundy winter jacket). Her eyes widen in sudden alarm and intense alertness. Abstract soundwave patterns or subtle white pulse-lines ripple faintly in the dark air around her ears, showing her heightened superhuman hearing.
+
+Panel 2: Extreme close-up on the driver's tensed hands tightly gripping the steering wheel, knuckles white, sweating heavily. The background shows the blurry dark dashboard. The framing is tight, emphasizing extreme adrenaline and nervous anticipation.
+
+Panel 3: Exterior dynamic shot. The black and green Tokyo taxi makes a sudden, violent screeching turn under the pouring rain, its tires skidding and drifting across the wet asphalt. Water splashes aggressively against the frame.
+
+Panel 4: Wide shot. The taxi comes to a hard, abrupt halt, its headlights cutting through the dark rain to illuminate a dead-end alleyway enclosed by towering, grime-covered brick walls. The environment feels claustrophobic, dark, and dangerous.
+
+Panel 5: Interior shot from the front dashboard looking back. Sofi is defensively tensing up in the backseat, holding her heavy travel backpack like a shield. Her expression is fierce and defensive, ready to fight.
+
+Panel 6: Action shot. The middle-aged Japanese driver fiercely lunges backwards over his seat toward the back, his face twisted in a menacing, aggressive snarl. He is weaponizing a long, gleaming medical syringe filled with clear liquid sedatives, thrusting it violently toward Sofi.
+
+--no 3d, cgi, photorealistic, text, speech bubbles, blurry borders, digital gradients, new york, los angeles, yellow cab, airplane, gun, sunshine, muscular ian
+
+Guía de Dibujo: Secuencia Detallada
+Viñeta 40 (Primer Plano Emocional/Sonoro): Adentro del asiento trasero del taxi oscuro. Sofi se altera de golpe; su rostro exhausto pasa a una tensión absoluta, con los ojos re abiertos en alarma. Alrededor de su oreja podés meter de fondo unas líneas sutiles de ondas de pulso en blanco desaturado, representando visualmente que su oído supersensible acaba de detectar el latido cardíaco desbocado y la adrenalina del chofer a través del asiento.
+
+Viñeta 40B (Primer Plano Detalle): Las hands del taxista aferradas con violencia al volante. Se le notan los nudillos blancos por la fuerza y el sudor de la traición inminente. El ambiente es puro nerviosismo.
+
+Viñeta 41 (Plano General de Acción): El coche da un volantazo salvaje bajo la tormenta. El taxi negro y verde dobla de golpe y derrapa de costado, quemando caucho sobre el asfalto empapado y levantando cortinas de agua con las ruedas traseras.
+
+Viñeta 41B (Plano General): El auto frena en seco, clavándose en el piso. Las luces de los faros delanteros apuntan directo a una pared ciega: terminaron atrapados en un callejón sin salida lúgubre, angosto y rodeado de altas paredes de ladrillo visto bajo la lluvia torrencial. El entorno es súper claustrofóbico.
+
+Viñeta 41C (Plano Medio Interno): La cámara se para adelante. Sofi reacciona al toque en el asiento de atrás; se pega contra el respaldo y usa su mochila pesada como un escudo defensivo contra el pecho. Su cara ya no tiene miedo, tiene la mirada combativa de supervivencia que aprendió con los pibes.
+
+Viñeta 42 (Acción Feroz / Cierre de Página): El ataque. El taxista se abalanza salvajemente hacia atrás, trepándose sobre el espacio entre los asientos delanteros. Su rostro de cortesía japonesa se transformó en una máscara de violencia criminal. Empuña con furia una jeringa médica larga que brilla con el líquido sedante listo para clavárselo. La viñeta es un plano oblicuo que te deja el suspenso al mango.
 
 ---
 
 ### PÁGINA 13: El Contraataque
 
 > [!TIP]
-> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, dynamic multi-panel grid, professional graphic novel printing format. White panel borders, irregular panel shapes, diagonal panel borders, slanted gutters separating panels, non-uniform layout with dynamic angles. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors. Art by Sara Pichelli and Jorge Jimenez. NO 3D render, NO photorealism, NO text, NO speech bubbles.
-> 
-> Panel 1: Close-up action shot. Sofi (Sofi, 25-year-old, tricolor hooded jacket) catches the driver's wrist with lightning speed, trapping his arm in a powerful martial arts self-defense lock.
-> Panel 2: With a sharp, precise twist, Sofi redirects his own hand, driving the sharp needle deep into the side of the driver's own neck.
-> Panel 3: The driver's eyes instantly roll back in shock, and his body collapses limply over the steering wheel, completely unconscious.
-> Panel 4: Wide shot. Sofi steps out of the back door of the stopped taxi into the pouring rain, breathing heavily, looking around the hostile neon-lit Tokyo alleyways.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles, blurry borders, digital gradients
-> 
-> **Personajes a subir al chat:**
-> - **Sofi (Ropa de Viaje)**
-> - **Taxista (Clan Kurogane / Maleante)**
+PROMPT DE GENERACIÓN (PÁGINA 13):
+Official comic book page layout, multi-panel 7-panel dynamic grid, professional graphic novel printing format. White panel borders, irregular slanted panel shapes, diagonal layouts with sharp action angles. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors, desaturated tones. Art by Sara Pichelli and Jorge Jimenez. Sharp focus, 2D illustration. NO 3D render, NO photorealism, NO speech bubbles.
 
-* **Viñeta 43 (Plano Detalle de Acción):** Sofi intercepta el brazo del tipo con un agarre firme e implacable.
-* **Viñeta 44 (Acción):** Sofi le tuerce la muñeca forzándolo a inyectarse el líquido en su propio cuello.
-* **Viñeta 45 (Plano Medio):** Al chofer se le ponen los ojos en blanco y se desploma inerte sobre el volante.
-* **Viñeta 46 (Plano General):** Sofi desciende del taxi inmóvil, empapándose bajo la lluvia, sola, agitada y asimilando la hostilidad de Tokio.
+Panel 1: Close-up action shot inside the dark taxi. The middle-aged Japanese driver is lunging back, thrusting the needle towards Sofi's neck. Sofi (Sofi, a 25-year-old woman, tricolor winter jacket, plaid scarf) violently raises her left forearm to parry and block the blow, the syringe missing her skin by inches. A jagged, dynamic comic book sound effect text "CLANG" is drawn slanting diagonally in the background, matching the raw ink textures of the struggle.
 
----
+Panel 2: Close-up detail of the hands. Sofi's right hand immediately snaps forward, locking her fingers into an iron-firm grip around the driver's wrist, freezing his arm in mid-air. The driver's knuckles are white, resisting with brute force. Behind the hands, a blocky, hand-lettered comic book sound effect font reads "GRAB" with a dark, desaturated outline.
 
-### PÁGINA 14: El Aroma a Hogar (Kenji Sato)
+Panel 3: Medium shot inside the cabin showing the physical struggle. The driver is gritting his teeth, straining and leaning his weight back to overpower her. Sofi's face is fierce, her muscles tensed as she uses the car seat for leverage, pushing back hard against his resistance.
 
-> [!TIP]
-> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, dynamic multi-panel grid, professional graphic novel printing format. White panel borders, irregular panel shapes, diagonal panel borders, slanted gutters separating panels, non-uniform layout with dynamic angles. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors. Art by Sara Pichelli and Jorge Jimenez. NO 3D render, NO photorealism, NO text, NO speech bubbles.
-> 
-> Panel 1: Wide shot. Sofi walks down a rain-slicked, narrow Tokyo alleyway hugging her jacket. In the background, she spots a warm, glowing amber light cutting through the fog from behind the dark blue fabric curtains (noren) of a small, humble traditional ramen shop.
-> Panel 2: Inside the warm ramen shop. A very cozy, steaming atmosphere. Kenji Sato, a kind-looking 48-year-old Japanese chef with short hair and a blue apron, is smiling warmly while wiping the wooden counter.
-> Panel 3: Kenji looks up, seeing a wet, shivering, and exhausted 25-year-old Sofi entering the door. He speaks to her with an open, friendly laugh, gesturing toward a stool.
-> Panel 4: Medium shot. Kenji places a massive, steaming hot bowl of traditional ramen on the wooden counter right in front of Sofi. The thick steam rises, softening the scene with a sense of pure safety and relief.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles, blurry borders, digital gradients, new york
-> 
-> **Personajes a subir al chat:**
-> - **Sofi (Ropa de Viaje)**
-> - **Kenji (Cocinero)**
+Panel 4: Extreme close-up on the driver's hand and wrist. With a sudden burst of leverage, Sofi twists his wrist completely backward, snapping the joint out of alignment. The needle is violently forced to point directly toward the driver's own neck. A sharp, jagged comic book text "SNAP" cuts across the panel with raw, uneven ink borders, bursting from the point of the twist.
 
-* **Viñeta 47 (Plano General):** Sofi camina abrazándose el abrigo y divisa la cálida fachada de la pequeña tienda entre la neblina.
-* **Viñeta 48 (Plano General Interno):** Kenji limpia la barra sonriendo en una atmósfera cálida repleta de vapor.
-* **Viñeta 49 (Plano Medio):** Kenji levanta la vista, ve a Sofi tiritando de frío y le da la bienvenida en español, indicándole que tome asiento.
-* **Viñeta 50 (Plano Detalle / Cierre de Página):** El plato de ramen caliente sobre la barra. El denso vapor aísla los ruidos del exterior.
+Panel 5: Action shot. Sofi slams her arm down with full force, driving the needle deep into the side of the driver's neck. The driver's eyes widen in absolute shock, his mouth opening in a silent scream of pain as Sofi's thumb visibly presses the plunger down, emptying the clear liquid.
+
+Panel 6: Medium shot inside the front cabin. The driver's eyes instantly roll back into his head, his face going completely blank. His tensed body collapses face-first, slamming heavily onto the center of the steering wheel. Anchored to the dashboard with 3D perspective lines, a bold, heavy, ink-textured comic book sound effect "THUD" is drawn in desaturated gray tones.
+
+Panel 7: Wide panoramic shot. The green and black taxi is stationary in the dark, wet dead-end alleyway under the heavy pouring rain. Sofi has stepped out of the open rear door and stands alone on the asphalt, holding her travel backpack. Blending directly into the vertical falling rain lines, a low-opacity, elongated comic book sound effect "SHHHHHH" is sketched across the entire background texturing.
+
+--no 3d, cgi, photorealistic, speech bubbles, blurry borders, digital gradients, new york, los angeles, yellow cab, gun, sunshine, muscular ian, bright white text box, computer fonts
+
+Guía de Dibujo: Secuencia Detallada (El Desglose Físico)
+Viñeta 43 (Plano Detalle / El Bloqueo): La aguja viene directo a la yugular de Sofi. Ella mete un reflejo brutal y cruza su antebrazo izquierdo para bloquear el golpe en el aire, desviando la trayectoria de la mano del chofer. Detrás del choque de los brazos se lee la onomatopeya rota "CLANG" integrada en la penumbra del auto.
+
+Viñeta 43B (Plano Detalle / El Agarre): Instantáneamente, la hand derecha de Sofi entra en escena y le calza la muñeca al chofer con un agarre implacable de dedos firmes. Congela el ataque del tipo a mitad de camino. Entre las dos hands resalta el texto sucio "GRAB", fundido con las sombras.
+
+Viñeta 43C (Plano Medio / El Forcejeo): El tipo no cede. La viñeta muestra el esfuerzo real de la pelea: el taxista del Clan Kurogane hace fuerza hacia atrás, transpirando y apretando los dientes para clavarle la jeringa. Sofi, con la cara tensa y decidida, se apoya firme contra el respaldo del asiento trasero para hacer palanca, aguantando la presión física del tipo.
+
+Viñeta 44 (Plano Detalle / El Quiebre): Aprovechando la torsión, Sofi mete un palancazo seco y le dobla la muñeca por completo hacia atrás, venciéndole la articulación. La jeringa da un giro violento de 180 grados y ahora apunta directo al cuello del chofer. Cruzando la viñeta de forma diagonal, una onomatopeya rota y con bordes de tinta rasgados que dice "SNAP" marca el quiebre del brazo.
+
+Viñeta 44B (Acción / El Impacto): Sofi descarga el peso del cuerpo y le clava la aguja directo en el lateral del cuello. La toma muestra en primer plano el pulgar de Sofi hundiendo el émbolo por completo, vaciando el líquido transparente mientras el rostro del maleante se deforma en pánico y dolor.
+
+Viñeta 45 (Plano Medio Interno / El KO): El sedante actúa al toque. Al chofer se le ponen los ojos totalmente blancos y el cuerpo se le desploma inerte hacia adelante, pegando un cabezazo seco contra el centro del volante. Abajo del tablero, siguiendo la línea de fuga de la cabina, se lee un texto pesado y grisáceo que dice "THUD".
+
+Viñeta 46 (Plano General Panorámico / Cierre de Página): El taxi negro y verde queda mudo en el callejón de ladrillos. Sofi ya bajó y está de pie bajo la tormenta torrencial, empapándose sola y asimilando la hostilidad de Tokio con su mochila en mano. El ambiente está saturado por las líneas verticales de la lluvia y un "SHHHHHH" sutil dibujado entre los ladrillos de fondo.
 
 ---
 
-### PÁGINA 15: La Primera Alerta (El Idioma de Messi)
+### PÁGINA 14: El Aroma a Hogar (6 Viñetas) — Efectos Minimalistas
 
-> [!TIP]
-> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, dynamic multi-panel grid, professional graphic novel printing format. White panel borders, irregular panel shapes, diagonal panel borders, slanted gutters separating panels, non-uniform layout with dynamic angles. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors. Art by Sara Pichelli and Jorge Jimenez. NO 3D render, NO photorealism, NO text, NO speech bubbles.
-> 
-> Panel 1: Inside the warm ramen shop. Close-up of Kenji Sato (48-year-old Japanese chef, blue apron) pointing at a small Lionel Messi poster or flag taped to the wooden wall behind the kitchen counter, laughing warmly while talking to Sofi.
-> Panel 2: Medium shot. Sofi (Sofi, a 25-year-old woman with curly dark hair up in a messy bun, tricolor hooded jacket) laughs openly for the first time in weeks, her eyes shining with surprise and relief at hearing her own language in Tokyo.
-> Panel 3: Close-up of Kenji's face as his smile completely fades, turning into an expression of intense gravity and concern. He leans over the counter, whispering a dark warning.
-> Panel 4: Exterior shot of the small ramen shop from the rainy alleyway. The warm amber light shines through the windows, but the surrounding dark alleys feel oppressive, cold, and dangerous.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles, blurry borders, digital gradients, los angeles
-> 
-> **Personajes a subir al chat:**
-> - **Sofi (Ropa de Viaje)**
-> - **Kenji (Cocinero)**
+[!TIP]
+PROMPT DE GENERACIÓN (PÁGINA 14):
+Official comic book page layout, multi-panel 6-panel narrative grid, professional graphic novel printing format. White panel borders, clean layout. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors, warm and earthy interior tones contrasting with cold exterior tones. Art by Sara Pichelli and Jorge Jimenez. Sharp focus, 2D illustration. NO 3D render, NO photorealism, NO speech bubbles.
 
-* **Viñeta 51 (Plano Medio):** Kenji le señala un banderín de Messi pegado en la pared de la cocina, riéndose a carcajadas al romper el hielo con ella.
-* **Viñeta 52 (Primer Plano):** Sofi se tienta de la risa. El lector ve el contraste de su rostro: pasa del pánico del taxi a una calidez hogareña impensada.
-* **Viñeta 53 (Primer Plano):** La cara de Kenji se pone seria de golpe al escuchar el bardo del taxista; se inclina sobre la barra para advertirle sobre el Clan Kurogane.
-* **Viñeta 54 (Plano General Nocturno):** El local desde afuera bajo la lluvia. Una burbuja de luz en medio de un Tokio oscuro que la acecha.
+Panel 1: Wide shot. Sofi (Sofi, a 25-year-old woman, tricolor pink and burgundy winter jacket, wet hair) is walking down a dark Tokyo street, shivering and tightly hugging her wet coat against the cold. Through the rainy mist, the glowing warm yellow light of a small traditional ramen shop facade appears in the distance.
+
+Panel 2: Close-up on the ramen shop wooden sliding door. Sofi's wet hand pushes it open. Hanging above the door, a tiny traditional brass bell gently sways. Drawn with fine, thin ink lines near the bell, a very small and subtle comic book text effect "ting" indicates the quiet sound.
+
+Panel 3: Wide shot inside the cozy, small ramen shop. The atmosphere is filled with thick, soft white cooking steam, glowing under warm orange lamps. Kenji (Kenji, an elderly, kind-faced Japanese chef with a clean apron) is standing behind the wooden counter, smiling gently while wiping the surface with a cloth.
+
+Panel 4: Medium shot. Kenji looks up, noticing Sofi standing by the entrance, drenched and shivering from the cold storm. He welcomes her warmly with an expressive, friendly gesture, pointing towards a wooden stool at the counter to invite her to sit.
+
+Panel 5: Medium close-up. Sofi is now sitting on the wooden stool at the counter, her heavy travel backpack resting against the leg of the stool on the floor. Her jacket hood is down, and she looks up at Kenji with a look of immense relief and quiet gratitude, a soft smile breaking on her tired face.
+
+Panel 6: Sharp close-up detail shot. A large, beautiful, steaming ceramic bowl of hot traditional ramen sits on the polished wooden counter. Thick swirls of dense white steam rise vertically from the broth, filling the frame and softly blurring the edges of the panel, visually isolating the dish from the outside world. No text.
+
+--no 3d, cgi, photorealistic, speech bubbles, blurry borders, digital gradients, new york, los angeles, yellow cab, gun, big text, flashing neon
+
+Guía de Dibujo: Secuencia Detallada (Paso a Paso)
+Viñeta 47 (Plano General - Exterior): El contraste del frío. Sofi camina por una calle oscura de Tokio abrazándose con fuerza los brazos contra el pecho por el frío de la tormenta. Entre la neblina húmeda y la cortina de agua, divisa a lo lejos la fachada de una pequeña tienda tradicional (un local de ramen) que emite una luz amarilla, cálida y súper acogedora.
+
+Viñeta 47B (Plano Detalle - El Ingreso): La hand empapada de Sofi empuja la puerta corrediza de madera y vidrio del local. Arriba del marco, una campanita de bronce se mueve suavemente. Metemos un efecto de sonido ultra minimalista, chiquito y con una línea de tinta fina que dice "ting" flotando al lado del metal, marcando la entrada.
+
+Viñeta 48 (Plano General Interno): La transición térmica. Adentro del local la atmósfera es completamente distinta: un espacio chico, rústico, iluminado por lámparas incandescentes y repleto de un denso pero suave vapor blanco de cocina. Kenji Sato, un viejo cocinero japonés de rostro bonachón y delantal limpio, limpia la barra de madera sonriendo de espaldas a las ollas humeantes.
+
+Viñeta 49 (Plano Medio): Kenji levanta la vista de la barra y ve a Sofi parada en la entrada, tiritando de frío y chorreando agua. El viejo reacciona con una mirada hospitalaria y le da la bienvenida (en el guion le habla en español) mientras le señala de forma amable uno de los taburetes de madera para que se siente a resguardo.
+
+Viñeta 49B (Plano Medio Corto): Sofi ya está sentada en la barra de madera. Dejó caer su mochila pesada en el suelo, apoyada contra la pata del taburete. Se bajó la capucha de la campera tricolor; su rostro sigue cansado por el bardo del taxi y las horas de vuelo, pero mira a Kenji con un alivio inmenso y una sonrisa suave de agradecimiento por el trato humano.
+
+Viñeta 50 (Plano Detalle / Cierre de Página): El plato de la salvación. Un plano detalle cenital o en ángulo corto de un bol de cerámica con un ramen caliente y humeante apoyado sobre la madera limpia de la barra. El denso vapor blanco sube de forma vertical por la viñeta, difuminando un poco los bordes del cuadro. Visualmente, esa cortina de vapor funciona como un muro que aísla por completo a Sofi de los ruidos, el peligro y la hostilidad del exterior de Tokio. Encontró un refugio.
+---
+
+PÁGINA 15: La Primera Alerta (El Idioma de Messi) (5 Viñetas) — Sin Números Literales
+[!TIP]
+PROMPT DE GENERACIÓN (PÁGINA 15):
+Official comic book page layout, multi-panel 5-panel narrative grid, professional graphic novel printing format. White panel borders, clean layout. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors, warm interior lighting contrasting cold rainy exterior backgrounds. Art by Sara Pichelli and Jorge Jimenez. Sharp focus, 2D illustration. NO 3D render, NO photorealism, NO speech bubbles, NO text.
+
+First Panel: Medium shot inside the cozy kitchen. Kenji (elderly Japanese chef) is pointing a finger towards a small, traditional sports pennant of Lionel Messi in his Argentina jersey hanging proudly on the wooden wall. Kenji is laughing out loud, his eyes crinkling with genuine joy as he breaks the ice. Sofi sits at the counter, looking on.
+
+Second Panel: Close-up on Sofi (Sofi, a 25-year-old woman, curly hair up in a messy bun, wearing her tricolor pink and burgundy winter jacket). Her face completely transitions from the residual panic and trauma of the taxi fight into a burst of genuine, warm laughter. The interior glow emphasizes a cozy, home-like warmth on her expressions.
+
+Third Panel: Close-up on Kenji's face. His expression suddenly shifts, turning completely serious, solemn, and dark as he listens to the news of the hostile taxi driver. The previous laughter is entirely gone from his wrinkled face, replaced by intense concern.
+
+Fourth Panel: Medium shot across the wooden bar counter. Kenji leans heavily forward, resting his forearms on the surface to look closely into Sofi's eyes, speaking in a low, conspiratorial whisper. He is strictly warning her about the Kurogane Clan, his body language tense and urgent. Sofi listens attentively, her smile fading.
+
+Fifth Panel: Cinematic wide shot from across the street. The tiny, traditional wooden ramen shop appears as a solitary, glowing warm golden bubble of light in the middle of a pitch-black, menacing, and rain-drenched Tokyo night. Towering, dark shadows of skyscrapers surround the small lit window under the heavy storm.
+
+--no 3d, cgi, photorealistic, speech bubbles, blurry borders, digital gradients, panel numbers, literal labels, numeric text, numbers, alphabet letters, signs, jersey text
+
+Guía de Dibujo: Secuencia Detallada (Paso a Paso)
+Viñeta 51 (Plano Medio Interno): Rompiendo el hielo. Kenji Sato está metido detrás del mostrador de la cocina y señala con el dedo un pequeño banderín deportivo de Lionel Messi con la camiseta de la selección, colgado con orgullo en la pared de madera. El viejo se descostilla de la risa con los ojos achinados por la carcajada, usando el fútbol para conectar instantáneamente con ella.
+
+Viñeta 52 (Primer Plano): La catarsis. Sofi se tienta de la risa de manera limpia y espontánea. El lector ve el contraste directo en su cara: el pánico helado que traía del callejón y del taxi se derrite por completo, dando paso a una calidez hogareña impensada y reconfortante.
+
+Viñeta 53 (Primer Plano - El Quiebre): La sombra del Lore. La cara de Kenji cambia de golpe; la alegría desaparece en seco al escuchar los detalles del bardo con el chofer. Sus facciones arrugadas se vuelven serias, solemnes y cargadas de una profunda preocupación.
+
+Viñeta 54 (Plano Medio Acoplado): La advertencia. Kenji apoya los antebrazos sobre la madera limpia de la barra y se inclina bien hacia adelante, acortando distancia con Sofi para hablarle en un tono bajo y confidencial. Sus manos gesticulan con tensión mientras le advierte sobre el Clan Kurogane y el peligro real que corre en esas calles. Sofi lo escucha fija, perdiendo la sonrisa.
+
+Viñeta 55 (Plano General Nocturno / Cierre de Página): El exterior acechante. La cámara se para afuera, en la vereda de enfrente bajo la tormenta. La pequeña tienda de ramen se ve como una frágil y solitaria burbuja de luz dorada y vapor flotando en el centro de un Tokio oscuro, gigante y hostil que parece querer devorársela. La lluvia golpea el cuadro, cerrando la página con un suspenso bárbaro.
 
 ---
 
@@ -498,6 +540,39 @@ Viñeta 56 (Plano General Corto / Cierre de Página y de Acto): El abrazo defini
 
 ---
 
+PÁGINA 18: Un Techo Amigo (6 Viñetas) — Blindaje de Continuidad de Ropa
+[!TIP]
+PROMPT DE GENERACIÓN (PÁGINA 18):
+Official comic book page layout, multi-panel 6-panel narrative grid, professional graphic novel printing format. White panel borders, clean non-uniform layout. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors, warm and soft interior restaurant tones transitioning to dark cold rainy exterior backgrounds. Art by Sara Pichelli and Jorge Jimenez. Sharp focus, 2D illustration. NO 3D render, NO photorealism, NO speech bubbles, NO text.
+
+First Panel: Medium close-up behind the ramen counter. Sofi (Sofi, a 25-year-old woman, curly hair up in a messy bun) is wearing only her cream-colored white wool turtleneck sweater; her pink and burgundy winter jacket and plaid scarf are explicitly sitting folded on a stool next to her. She is looking intensely worried and protective, gently touching Kenji's shoulder. Kenji (elderly Japanese chef) is stubbornly waving his hands in a dismissing gesture, telling her not to worry.
+
+Second Panel: Close-up on Sofi's face. She is still wearing only her white turtleneck sweater. Her sharp, tense expression melts completely into an affectionate, deeply touched smile, finding the stubborn old man's prideful and protective attitude absolutely endearing and adorable.
+
+Third Panel: Medium shot across the wooden counter. Sofi remains in only her white turtleneck sweater. Kenji looks closely at her with a warm, fatherly, and concerned expression, gesturing with his hands while asking her an important question about where she plans to sleep.
+
+Fourth Panel: Action shot. Sofi explicitly picks up and slips her arms into her pink and dark burgundy color-blocked winter puffer jacket, pulling it up over her cream turtleneck sweater. Her expression is soft and honest as she shakes her head slightly, explaining she has nowhere to stay.
+
+Fifth Panel: Medium shot. Sofi is now fully wearing her colorful puffer jacket and is actively wrapping her red plaid wool scarf securely around her neck. Kenji smiles warmly, nodding with reassuring kindness as he gestures towards the exit door, offering his nearby home. Sofi nods in acceptance.
+
+Sixth Panel: Wide shot. Exterior of the ramen shop at night under the pouring rain. The front glass door slides open, casting a path of warm light onto the wet, dark sidewalk. Sofi (heavy backpack on, blue rolling suitcase in hand, fully dressed in her winter jacket and scarf) and Kenji step out together into the cold Tokyo night, walking side-by-side.
+
+--no 3d, cgi, photorealistic, speech bubbles, blurry borders, digital gradients, panel numbers, literal labels, numeric text, numbers, alphabet letters, big text, weapons, katanas, fight, wearing jacket in panels 1 2 3
+
+Guía de Dibujo: Secuencia Detallada (Paso a Paso)
+Viñeta 63 (Plano Medio Corto): Cuidado mutuo. Detrás de la barra del local. Sofi viste únicamente su polera de lana blanca color crema; su campera tricolor y la bufanda escocesa están apoyadas a un costado en una banqueta. Está re preocupada revisándole la cara a Kenji y tocándole el hombro con suavidad. El viejo cocinero sacude las hands restándole importancia al bardo con una sonrisa terca y orgullosa.
+
+Viñeta 64 (Primer Plano): El ablande. Foco en la cara de Sofi, quien sigue vistiendo solo su polera de lana blanca. Toda la tensión de la pelea se desarma. Al ver al viejo cascoteado y aun así queriendo hacerse el fuerte para cuidarla a ella, dibuja una sonrisa llena de ternura genuina. Le parece un viejo absolutamente adorable.
+
+Viñeta 65 (Plano Medio): La pregunta. Kenji la mira fijo a los ojos con una expresión paternal, cambiando de tema. Mueve las hands gesticulando mientras le pregunta algo crucial: si tiene un lugar seguro donde pasar la noche en Tokio. Sofi, todavía solo en su polera blanca, lo escucha con atención.
+
+Viñeta 66 (Acción / El Vestuario): El movimiento físico. Mientras le responde con un leve gesto de cabeza que no, Sofi agarra sus cosas de la banqueta y mete los brazos en las mangas de su campera puffer tricolor (rosa arriba y bordó abajo), subiéndosela sobre los hombros. Su rostro transmite la verdad absoluta de estar completamente sola y sin techo en esa ciudad gigante.
+
+Viñeta 67 (Plano Medio Corto): El abrigo completo. Sofi ya tiene la campera puesta y se está terminando de envolver y ajustar la bufanda escocesa a cuadros alrededor del cuello. Kenji sonríe con una amabilidad enorme y asiente, señalando hacia la salida para ofrecerle su casa que queda ahí nomás. Sofi duda un segundo por precaución, pero acepta contagiada por la dulzura del viejo.
+
+Viñeta 68 (Plano General Exterior / Cierre de Página): La salida. La cámara se para afuera del restaurante bajo la lluvia torrencial. La puerta corrediza se abre, proyectando un reflejo de luz dorada sobre la vereda empapada. Ambos salen juntos a la calle: Sofi cargando su mochila pesada y arrastrando la valija azul (completamente abrigada), y Kenji cubierto con un abrigo oscuro de lluvia. Caminan juntos a la par, dejando atrás el local.
+
+---
 ### PÁGINA 18: El Patio Zen (Nace Kenji)
 
 > [!TIP]
@@ -524,28 +599,31 @@ Viñeta 56 (Plano General Corto / Cierre de Página y de Acto): El abrazo defini
 
 ---
 
-### PÁGINA 19: Quince Días de Cocina y Ruido Tierno
+PROMPT DE GENERACIÓN (PÁGINA 20):
+Official comic book page layout, multi-panel 5-panel narrative grid, professional graphic novel printing format. White panel borders, clean non-uniform layout. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors, warm and vibrant golden-orange interior lighting tones. Art by Sara Pichelli and Jorge Jimenez. Sharp focus, 2D illustration. NO 3D render, NO photorealism, NO speech bubbles, NO text.
 
-> [!TIP]
-> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, dynamic multi-panel grid, professional graphic novel printing format. White panel borders, irregular panel shapes, diagonal panel borders, slanted gutters separating panels, non-uniform layout with dynamic angles. Modern american comic book art style, clean line art, defined black outlines, cell-shading, flat digital colors. Art by Sara Pichelli and Jorge Jimenez. NO 3D render, NO photorealism, NO text, NO speech bubbles.
-> 
-> Panel 1: Coexistence montage. Inside the busy restaurant kitchen. Kenji is teaching Sofi how to chop onions. Sofi (in her white turtleneck sweater) is chopping vegetables at a blinding, superhuman speed with incredible reflexes. Kenji stares at her cutting board with his mouth wide open in utter shock.
-> Panel 2: Montage panel. Sofi and Kenji behind the counter, working in perfect synchronization, passing bowls of steaming ramen to a crowd of happy Japanese customers. The kitchen is full of life and warm energy.
-> Panel 3: Intimate medium shot inside the house at night. Sofi and Kenji are sitting across from each other at a low wooden table, dining by the soft light of a single candle. They are laughing, sharing a deep, romantic, and comforting connection.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles, blurry borders, digital gradients, jacket, scarf
-> 
-> **Personajes a subir al chat:**
-> - **Sofi**
-> - **Kenji (Cocinero)**
+First Panel: Action montage shot behind the counter. Sofi (Sofi, a 25-year-old woman, her thick curly dark brown hair is down, falling softly over her shoulders) is wearing a new kitchen outfit: a traditional dark indigo blue Japanese chef coat (Happi) over her cream-colored turtleneck sweater, with a clean dark apron. She is chopping a mountain of green vegetables with a heavy Japanese chef knife at a blur of superhuman speed, her divine reflexes making her hands a flurry of motion. Standing next to her, Kenji (elderly Japanese chef) is staring at her chopping board with wide, dinner-plate eyes in complete, stunned disbelief. Small sound effects "CHOP-CHOP-CHOP" are finely integrated across the cutting board in a low-contrast hand-drawn font.
 
-* **Viñeta 67 (Plano General / Montaje):** Sofi picando verduras como un demonio gracias a sus reflejos divinos; Kenji al lado mirándola con los ojos como platos. (Usar onomatopeyas de *CHOP-CHOP-CHOP*).
-* **Viñeta 68 (Plano General Corto):** El restaurante lleno de clientes, ellos laburando a la par como un equipo perfecto. (Onomatopeyas del fuego *SSSSS* y los platos).
-* **Viñeta 69 (Plano Medio Emocional):** La cena romántica a la luz de las velas. Un plano cerrado de sus risas, construyendo el nudo romántico que va a hacer que la tragedia que sigue rompa el corazón del lector.
+Second Panel: Wide shot inside the busy, traditional ramen shop. The small restaurant is packed with customers at the wooden counter. Sofi (hair down, dark indigo chef coat) and Kenji are working side-by-side behind the bar as a flawless, synchronized team. Thick swirls of white steam rise from large pots, and a subtle, thin-ink sound effect "SSSSS" ripples softly from the gas stove flame under a wok.
 
+Third Panel: Close-up dual panel. On the left, Sofi's hands fluidly serve a steaming bowl of ramen with total grace. On the right, Kenji catches the plate she slides over, both smiling with a deep, proud father-and-daughter professional synchronization and mutual trust.
+
+Fourth Panel: Medium shot. Transition to a quiet, cozy night scene inside the home kitchen after hours. Sofi and Kenji are sitting face-to-face at a low wooden dining table under the warm, soft amber glow of a traditional paper lantern hanging overhead. Sofi is relaxed, without the apron, cradling a warm ceramic tea cup in her hands.
+
+Fifth Panel: Close-up on their faces across the warm table. Kenji is looking at her with a deeply kind, protective, and paternal expression, laughing softly while sharing a story. Sofi is laughing genuinely, her eyes bright with a sense of safety and belonging. The framing is tight and emotional, building a powerful, heartfelt bond of pure family intimacy, a true father-and-daughter connection. No text.
+
+--no 3d, cgi, photorealistic, speech bubbles, blurry borders, digital gradients, panel numbers, literal labels, numeric text, numbers, alphabet letters, jacket, scarf, rain, outdoors, modern weapons, neon, candles, romance, romantic, boyfriend, hair in a bun
+
+Guía de Dibujo: Secuencia Detallada (Paso a Paso)
+Viñeta 73 (Plano General de Acción / Montaje): Sentido de pertenencia. Detrás del mostrador del local. Sofi (25 años) estrena un outfit de cocina profesional: lleva una chaqueta tradicional de chef japonesa (Happi) de color azul índigo oscuro sobre su polera blanca, con las mangas recogidas y un delantal limpio. Su pelo rizado está suelto, cayendo de forma natural sobre los hombros y enmarcando su cara. Empuña el cuchillo picando una parva gigante de verduras sobre la tabla a una velocidad sobrehumana; el dibujo usa líneas de movimiento sutiles para mostrar el desenfoque de sus manos por sus reflejos divinos. Al lado, Kenji la mira fijo con los ojos abiertos como dos platos, totalmente anonadado por la destreza. Al ras de la madera se leen las letras chiquitas "CHOP-CHOP-CHOP" mimetizadas con la textura.
+
+Viñeta 74 (Plano General Corto): El equipo perfecto. El salón del restaurante está repleto de clientes. Sofi (pelo caído, chaqueta azul) y Kenji laburan codo a codo en un sincronismo absoluto, moviéndose entre el vapor de las ollas con la precisión de un reloj. El lugar rebosa de una energía hermosa de barrio. Saliendo de la hornalla donde hierve el caldo, una onomatopeya fina en tinta desaturada que dice "SSSSS" marca el rugido del fuego.
+
+Viñeta 74B (Plano Detalle / El Acople): Una viñeta horizontal y angosta que muestra en primer plano la complicidad técnica del equipo. Sofi pasa un bol humeante con gracia total y Kenji lo recibe al vuelo para entregarlo, cruzando una sonrisa de oreja a oreja llena de orgullo paternal y sintonía mutua.
+
+Viñeta 75 (Plano Medio Emocional): El living de sobremesa. Un salto de atmósfera hacia el silencio de la noche, después de cerrar el local. En el comedor, bajo la luz suave, tamizada y ámbar de una lámpara tradicional de papel de arroz que cuelga del techo, Sofi y Kenji están sentados frente a frente en la mesa baja. Sofi ya se sacó el delantal, se la ve cómoda con su chaqueta azul y sostiene una taza de té de cerámica caliente entre sus hands, relajada.
+
+Viñeta 75B (Primer Plano / Cierre de Página): El lazo familiar. La cámara se cierra sobre los rostros de ambos, envueltos por la luz cálida de la lámpara. Kenji la mira con una bondad y una protección puramente paternal, riéndose bajito mientras comparte una anécdota. Sofi larga una carcajada genuina y limpia, con los ojos brillando de alivio por haber encontrado, por fin, un hogar y una figura paterna que la cuide en este universo extraño. Un plano de una ternura tan devastadora que va a hacer que el lector se encariñe por completo con esta nueva familia.
 ---
 
 ### PÁGINA 20: El Vencimiento (La Sangre en el Ramen)

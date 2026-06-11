@@ -24,12 +24,26 @@ const CATEGORY_METADATA = {
     shadowColor: "rgba(232,24,90,0.2)",
     borderColor: "#e8185a",
   },
+  independientes: {
+    title: "ALIADOS INDEPENDIENTES",
+    tagline: "Héroes del asfalto y la fortuna",
+    badgeColor: "#8b5cf6",
+    shadowColor: "rgba(139,92,246,0.2)",
+    borderColor: "#8b5cf6",
+  },
   secundarios: {
     title: "ALIADOS Y SOPORTE",
     tagline: "El soporte táctico",
     badgeColor: "#8b5cf6",
     shadowColor: "rgba(139,92,246,0.2)",
     borderColor: "#8b5cf6",
+  },
+  taberna_resistencia: {
+    title: "TABERNA DE LA RESISTENCIA",
+    tagline: "El bastión del norte",
+    badgeColor: "#0284c7",
+    shadowColor: "rgba(2,132,199,0.2)",
+    borderColor: "#0284c7",
   },
   voughtverse: {
     title: "VOUGHTVERSE",
@@ -59,7 +73,46 @@ const CATEGORY_METADATA = {
     shadowColor: "rgba(30,41,59,0.2)",
     borderColor: "#1e293b",
   },
+  deidades: {
+    title: "DEIDADES",
+    tagline: "Seres cósmicos y divinos",
+    badgeColor: "#fbbf24",
+    shadowColor: "rgba(251,191,36,0.2)",
+    borderColor: "#fbbf24",
+  },
 };
+
+function getCategoryMeta(key: string) {
+  const predefined = (CATEGORY_METADATA as Record<string, any>)[key];
+  if (predefined) return predefined;
+
+  const title = key
+    .replace(/[-_]/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+
+  let hash = 0;
+  for (let i = 0; i < key.length; i++) {
+    hash = key.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  const colors = [
+    "#10b981", // emerald
+    "#06b6d4", // cyan
+    "#ec4899", // pink
+    "#f59e0b", // amber
+    "#84cc16", // lime
+    "#6366f1", // indigo
+    "#14b8a6", // teal
+  ];
+  const color = colors[Math.abs(hash) % colors.length];
+
+  return {
+    title,
+    tagline: `Roster de ${title}`,
+    badgeColor: color,
+    borderColor: color,
+    shadowColor: `${color}33`,
+  };
+}
 
 export function CharacterRoster() {
   const [readChapters, setReadChapters] = useState<string[]>([]);
@@ -101,6 +154,28 @@ export function CharacterRoster() {
     (c) => c.image && c.image !== ""
   );
 
+  const activeCategories = Array.from(
+    new Set(
+      characters.map((c) => c.category || (c.isSecondary ? "secundarios" : "pibes"))
+    )
+  );
+
+  const orderedCategories = activeCategories.sort((a, b) => {
+    const orderPriority: Record<string, number> = {
+      pibes: 1,
+      antagonistas: 2,
+      secundarios: 3,
+      independientes: 3,
+      taberna_resistencia: 3,
+    };
+    const priorityA = orderPriority[a] ?? 99;
+    const priorityB = orderPriority[b] ?? 99;
+    if (priorityA !== priorityB) {
+      return priorityA - priorityB;
+    }
+    return a.localeCompare(b);
+  });
+
   return (
     <section className="py-24 px-4 sm:px-6 overflow-hidden relative" style={{ background: "#0a0a0f", borderTop: "6px solid white" }}>
       {/* Decorative background elements */}
@@ -114,7 +189,8 @@ export function CharacterRoster() {
       />
       
       <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-24">
-        {Object.entries(CATEGORY_METADATA).map(([key, meta], secIndex) => {
+        {orderedCategories.map((key, secIndex) => {
+          const meta = getCategoryMeta(key);
           const groupChars = characters.filter((c) => {
             const cat = c.category || (c.isSecondary ? "secundarios" : "pibes");
             return cat === key;

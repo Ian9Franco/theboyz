@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getDynamicSagas, parsePrefix } from "@/lib/serverData";
+import { getDynamicSagas, parsePrefix, validatePreviewAccess } from "@/lib/serverData";
 import fs from "fs";
 import path from "path";
 
@@ -30,6 +30,19 @@ export async function GET(
 
   if (!foundSaga || !foundChapter) {
     return NextResponse.json({ error: "Chapter not found" }, { status: 404 });
+  }
+
+  // Check draft preview authorization
+  const isDraft = foundSaga.draft || foundChapter.draft;
+  if (isDraft) {
+    const hasAccess = validatePreviewAccess(request, foundSaga.id);
+    if (!hasAccess) {
+      return NextResponse.json({
+        locked: true,
+        reason: "draft",
+        title: foundChapter.title,
+      });
+    }
   }
 
   // Look up pages

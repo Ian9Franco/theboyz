@@ -7,6 +7,8 @@ export type Chapter = {
   number: number;
   coverColor?: string;
   accentColor?: string;
+  status?: string;
+  draft?: boolean;
 };
 
 export type Saga = {
@@ -17,6 +19,9 @@ export type Saga = {
   color: string;
   chapters: Chapter[];
   order: number;
+  status?: string;
+  draft?: boolean;
+  password?: string;
 };
 
 const POP_ART_COLORS = ["#e8185a", "#00b8d4", "#f5e642", "#6d28d9", "#f97316", "#16a34a"];
@@ -69,6 +74,8 @@ export function getDynamicSagas(): Saga[] {
     }
     let color = POP_ART_COLORS[idx % POP_ART_COLORS.length];
     let order = folderOrder !== null ? folderOrder : idx + 1;
+    let sagaStatus = "published";
+    let sagaPassword = undefined;
 
     // Load saga.json if exists
     const jsonPath = path.join(sagaPath, "saga.json");
@@ -80,6 +87,8 @@ export function getDynamicSagas(): Saga[] {
         if (meta.description) description = meta.description;
         if (meta.color) color = meta.color;
         if (meta.order !== undefined) order = meta.order;
+        if (meta.status) sagaStatus = meta.status;
+        if (meta.password) sagaPassword = meta.password;
       } catch (err) {
         console.error(`Error parsing saga.json in ${folder}:`, err);
       }
@@ -99,6 +108,7 @@ export function getDynamicSagas(): Saga[] {
       // Default chapter metadata
       let chTitle = titleCase(chCleanName);
       let chNumber = chOrder !== null ? chOrder : chIdx + 1;
+      let chStatus = "published";
 
       // Load chapter.json if exists
       const chJsonPath = path.join(chPath, "chapter.json");
@@ -107,6 +117,7 @@ export function getDynamicSagas(): Saga[] {
           const chMeta = JSON.parse(fs.readFileSync(chJsonPath, "utf-8"));
           if (chMeta.title) chTitle = chMeta.title;
           if (chMeta.number !== undefined) chNumber = chMeta.number;
+          if (chMeta.status) chStatus = chMeta.status;
         } catch (err) {
           console.error(`Error parsing chapter.json in ${folder}/${chFolder}:`, err);
         }
@@ -118,6 +129,8 @@ export function getDynamicSagas(): Saga[] {
         number: chNumber,
         coverColor: `from-[#0a0a0f] to-[#e8185a]`,
         accentColor: color,
+        status: chStatus,
+        draft: chStatus === "draft" || sagaStatus === "draft",
       });
     });
 
@@ -132,6 +145,9 @@ export function getDynamicSagas(): Saga[] {
       color,
       chapters,
       order,
+      status: sagaStatus,
+      draft: sagaStatus === "draft",
+      password: sagaPassword,
     });
   });
 
@@ -150,4 +166,40 @@ export function findDynamicChapter(chapterId: string): { chapter: Chapter; saga:
     }
   }
   return null;
+}
+
+import { NextRequest } from "next/server";
+
+export function validatePreviewAccess(request: NextRequest, sagaId?: string): boolean {
+  const cookiePass = request.cookies.get("preview_password")?.value;
+  const headerPass = request.headers.get("x-preview-password");
+  const urlPass = request.nextUrl.searchParams.get("password") || request.nextUrl.searchParams.get("preview_password");
+
+  const providedPassword = cookiePass || headerPass || urlPass;
+
+  if (!providedPassword) {
+    return false;
+  }
+
+  const masterPassword = process.env.PREVIEW_PASSWORD || "hush2026";
+  if (providedPassword === masterPassword) {
+    return true;
+  }
+
+  if (sagaId) {
+    const sagas = getDynamicSagas();
+    const targetSaga = sagas.find((s) => s.id === sagaId);
+    if (targetSaga && targetSaga.password && providedPassword === targetSaga.password) {
+      return true;
+    }
+  } else {
+    const sagas = getDynamicSagas();
+    for (const saga of sagas) {
+      if (saga.password && providedPassword === saga.password) {
+        return true;
+      }
+    }
+  }
+
+  return false;
 }

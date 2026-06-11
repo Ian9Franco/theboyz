@@ -2,37 +2,6 @@ import { CharacterDetail } from "./types";
 
 export const entidades: CharacterDetail[] = [
   {
-    id: 'archon',
-    name: 'ARCHON',
-    category: 'entidades',
-    isSecondary: true,
-    image: '/personajes/Entidades/Archon/ARCHON.webp',
-    fullBody: '/personajes/Entidades/Archon/ARCHON.webp',
-    fichaImage: '/personajes/Entidades/Archon/Archon_ficha.webp',
-    color: '#1e293b',
-    role: 'El Primer Vacío / Especie Primordial',
-    visualCode: 'Piel pálida, venas negras de antimateria, capa parásita viviente',
-    perfil: [
-      'Especie primordial: La encarnación del vacío necrótico. Su sola presencia absorbe el color de las viñetas.',
-      'Capa parásita: Tejido negro viviente en su espalda que materializa garras, cadenas y alas.',
-      'Mal absoluto: Piel blanca pálida con venas negras de antimateria que palpitan al conjurar.'
-    ],
-    crisis: 'Ancla física: Requiere un portal de energía negativa o un huésped biológico para sostenerse en el plano material.',
-    stats: { fuerza: 9, inteligencia: 9, carisma: 6, suerte: 5, combate: 9, defensa: 9, especialVal: 10 },
-    especialLabel: 'Necromateria',
-    powers: {
-      role: 'Void Primordial',
-      habilidades: [
-        'Necro-Materia: Forja hojas y cadenas oscuras que drenan directamente la fuerza vital de sus víctimas.',
-        'Vacío Asfixiante: Absorbe calor, luz y energía cinética en el área, bajando la temperatura a cero absoluto.',
-        'Regeneración Umbría: Se disuelve y se reforma instantáneamente emergiendo de las sombras de sus atacantes.'
-      ],
-      significa: 'El fin de la materia. Extingue la energía térmica y asfixia a sus oponentes mediante necro-espadas.',
-      crisis: 'La chispa de creación: Habilidades de luz pura (origen Big Bang) disuelven su cuerpo y le impiden regenerarse.',
-      stats: { fuerza: 10, inteligencia: 9, carisma: 6, suerte: 6, combate: 10, defensa: 10, especialVal: 10 }
-    }
-  },
-  {
     id: 'judge_null',
     name: 'Judge Null',
     category: 'entidades',
@@ -61,36 +30,6 @@ export const entidades: CharacterDetail[] = [
       significa: 'El heraldo del silencio absoluto. Destruye variables y extingue realidades mediante fuerza colosal.',
       crisis: 'Falla doctrinaria: Al regirse por leyes estrictas del fin cósmico, es vulnerable a paradojas de Julián.',
       stats: { fuerza: 10, inteligencia: 9, carisma: 8, suerte: 6, combate: 10, defensa: 10, especialVal: 10 }
-    }
-  },
-  {
-    id: 'lucy',
-    name: 'Mephisto-Lucifer',
-    category: 'entidades',
-    isSecondary: true,
-    image: '/personajes/Entidades/Lucy/Lucy.webp',
-    fullBody: '/personajes/Entidades/Lucy/Lucy.webp',
-    color: '#fbbf24',
-    role: 'Morningstar / El Titiritero de la Noche',
-    visualCode: 'Traje de sastre italiano, beauty aristocrática, seis alas de luz celestial',
-    perfil: [
-      'El primer ángel: Abandonó el infierno por encontrarlo burdo y se mudó al mundo mortal a dirigir un club de lujo.',
-      'Fascinación humana: Le atrae el libre albedrío y se divierte observando las elecciones de Los Pibes.',
-      'Estilo sofisticado: Conduce un descapotable clásico, viste de sastre italiano y trae neones dorados a las viñetas.'
-    ],
-    crisis: 'Palabra sagrada: Lucifer jamás miente por considerarlo cobardía. Cumple sus tratos al pie de la letra, sin excepciones.',
-    stats: { fuerza: 8, inteligencia: 10, carisma: 10, suerte: 8, combate: 9, defensa: 10, especialVal: 10 },
-    especialLabel: ' Morningstar',
-    powers: {
-      role: 'Lucifer',
-      habilidades: [
-        'Deseo Expuesto: Fuerza a cualquier ser a confesar su deseo oculto más vergonzoso con una mirada.',
-        'Anulación Infernal: Deshace tratos de demonios menores y disipa ataques oscuros con un chasquido.',
-        'Seis Alas de Luz: Despliega sus seis alas celestiales de energía fotónica pura para desintegrar amenazas.'
-      ],
-      significa: 'El titiritero absoluto. Posee inmunidad casi total ante ataques mágicos y maneja el destino humano.',
-      crisis: 'Restricción verbal: Si es forzado a romper una promesa escrita, su energía celestial se desestabiliza.',
-      stats: { fuerza: 10, inteligencia: 10, carisma: 10, suerte: 9, combate: 10, defensa: 10, especialVal: 10 }
     }
   },
   {
@@ -125,36 +64,6 @@ export const entidades: CharacterDetail[] = [
     }
   },
   {
-    id: 'mars',
-    name: 'Mars',
-    category: 'entidades',
-    isSecondary: true,
-    image: '/personajes/Entidades/Mars/Mars.webp',
-    fullBody: '/personajes/Entidades/Mars/Mars.webp',
-    color: '#dc2626',
-    role: 'Dios de la Guerra / El Primer Hijo',
-    visualCode: 'Armadura de gladiador de bronce ensangrentado, barba roja encendida, escudo con cara de monstruo',
-    perfil: [
-      'Dios de la guerra: Ares adoptó el nombre romano Mars por impacto de propaganda. Vive por la adrenalina del combate.',
-      'Luchador clandestino: Financia coliseos subterráneos y desafía a variantes de Mati a duelos por pura diversión.',
-      'Estilo bélico: Ojos de fuego naranja y onomatopeyas de tambores de guerra (¡BUM-BUM!) flotando en sus viñetas.'
-    ],
-    crisis: 'Adrenalina ciega: Su obsesión por la batalla lo lleva a rechazar el apoyo logístico, combatiendo solo.',
-    stats: { fuerza: 10, inteligencia: 5, carisma: 8, suerte: 6, combate: 10, defensa: 9, especialVal: 8 },
-    especialLabel: 'Arena',
-    powers: {
-      role: 'God of War',
-      habilidades: [
-        'Spear of Mars: Lanza una jabalina colosal de oro celestial que empala y aturde a los oponentes contra muros.',
-        'Arena of Blood: Levanta un coliseo cerrado custodiado por fantasmas de legionarios, forzando el uno contra uno.',
-        'Bulwark: Escudo circular masivo que bloquea pasivamente el 70% del daño frontal físico y de plasma.'
-      ],
-      significa: 'El coloso del combate cerrado. Inmoviliza y empala objetivos forzando duelos directos bajo su escudo.',
-      crisis: 'Ataques por la espalda: Bulwark solo mitiga el daño frontal, siendo vulnerable a flanqueos rápidos.',
-      stats: { fuerza: 10, inteligencia: 6, carisma: 9, suerte: 7, combate: 10, defensa: 10, especialVal: 10 }
-    }
-  },
-  {
     id: 'terrorblade',
     name: 'Terrorblade',
     category: 'entidades',
@@ -180,8 +89,100 @@ export const entidades: CharacterDetail[] = [
         'Reflection: Crea dobles oscuros de los enemigos que los atacan con sus propias habilidades físicas.'
       ],
       significa: 'El manipulador de salud. Intercambia la vitalidad del oponente y duplica amenazas mediante ilusiones.',
-      crisis: 'Vulnerabilidad previa a Sunder: Si es silenciado o aturdido antes de ejecutar Sunder, su defensa es limitada.',
+      crisis: 'Vulnerabilidad previa a Sunder: Si es silenciado o aturdido antes de ejecutar Sunder, su defense es limitada.',
       stats: { fuerza: 9, inteligencia: 8, carisma: 7, suerte: 7, combate: 9, defensa: 7, especialVal: 10 }
+    }
+  },
+  {
+    id: 'krillor',
+    name: 'Krillor',
+    category: 'entidades',
+    isSecondary: true,
+    image: '/personajes/Entidades/Krillor/Krillor_ficha.webp',
+    fullBody: '/personajes/Entidades/Krillor/Krillor_ficha.webp',
+    overloadImage: '/personajes/Entidades/Krillor/KRILLOR_concept.webp',
+    color: '#d1d5db',
+    role: 'Kingpin Cósmico / Plaga Solar',
+    visualCode: 'Piel dorada con grabados fractales violetas, bio-armadura de marfil, cola segmentada',
+    perfil: [
+      'El tirano de marfil: Cerebro criminal de la Plaga Solar. Conquista mundos mediante monopolios de recursos y deudas.',
+      'Silueta elegante: Fisonomía inspirada en tiranos intergalácticos, apoyado en un trono flotante de piedra negra.',
+      'Estética de lujo: Armadura restrictiva con remaches de oro y una larga cola segmentada de marfil y punta violeta.'
+    ],
+    crisis: 'Desprecio absoluto: Su arrogancia imperial lo lleva a subestimar a los combatientes humanos.',
+    stats: { fuerza: 9, inteligencia: 9, carisma: 9, suerte: 5, combate: 9, defensa: 9, especialVal: 10 },
+    especialLabel: 'Gravedad',
+    powers: {
+      role: 'Sindicato Cósmico',
+      habilidades: [
+        'Monopolio de Gravedad: Crea esferas de enana blanca para deformar el espacio y succionar flotas.',
+        'Aguja Cuántica: Cola segmentada equipada con punta de plasma cuántico violeta para ataques quirúrgicos.',
+        'Brazalete de Conversión: Dispositivo de marfil que absorbe la energía cinética enemiga para potenciar su cuerpo.'
+      ],
+      significa: 'El cobrador de soles. Asedia planetas mediante monopolio de atmósferas y embargos gravitatorios.',
+      crisis: 'Caos probabilístico: Su mente algorítmica y corporativa no puede predecir el caos estocástico de la suerte de Matapobres.',
+      stats: { fuerza: 10, inteligencia: 10, carisma: 9, suerte: 6, combate: 10, defensa: 10, especialVal: 10 }
+    }
+  },
+  {
+    id: 'balanar',
+    name: 'Night Stalker',
+    category: 'entidades',
+    isSecondary: true,
+    image: '/personajes/Entidades/Balanar/Night Stalker.webp',
+    fullBody: '/personajes/Entidades/Balanar/Night Stalker.webp',
+    color: '#1e3a8a',
+    role: 'El Rey de la Noche Urbana',
+    visualCode: 'Gárgola vampírica masiva, garras que sacan chispas, alas de murciélago',
+    perfil: [
+      'Depredador nocturno: Gárgola vampírica humanoide gigantesca. Su sola presencia absorbe la iluminación eléctrica urbana.',
+      'Cazador implacable: Su mandíbula partida en cuatro secciones revela hileras de dientes afilados y saliva ácida al rugir.',
+      'Estética de terror: Piel de tono azul nocturno, ojos de fuego carmesí y alas desgarradas replegadas como gabardina.'
+    ],
+    crisis: 'Vulnerabilidad solar: La luz ultravioleta o destellos de energía de espectro solar (como la magia de Jaz) reducen su fuerza física.',
+    stats: { fuerza: 8, inteligencia: 5, carisma: 3, suerte: 4, combate: 8, defensa: 7, especialVal: 8 },
+    especialLabel: 'Cacería',
+    powers: {
+      role: 'Balanar',
+      habilidades: [
+        'Void: Impacta al enemigo con un haz de oscuridad concentrada que daña, ralentiza e interrumpe sus habilidades.',
+        'Crippling Fear: Emite un aullido aterrador que silencia las capacidades mágicas de los enemigos a su alrededor.',
+        'Dark Ascension: Rinde tributo a la noche pura, alzando el vuelo con garras incandescentes y aumentando su velocidad.'
+      ],
+      significa: 'El depredador de las sombras. Deshabilita habilidades y acosa objetivos en la oscuridad absoluta.',
+      crisis: 'Amanecer artificial: Dispositivos que generen destellos fotónicos masivos disipan su velo de sombras.',
+      stats: { fuerza: 10, inteligencia: 6, carisma: 4, suerte: 5, combate: 10, defensa: 9, especialVal: 9 }
+    }
+  },
+  {
+    id: 'lion',
+    name: 'Lion',
+    category: 'entidades',
+    isSecondary: true,
+    image: '/personajes/Entidades/Lion/Lion.webp',
+    fullBody: '/personajes/Entidades/Lion/Lion.webp',
+    color: '#701a75',
+    role: 'El Demonologista Corrupto',
+    visualCode: 'Brujo felino jorobado, brazo izquierdo de garra demoníaca roja',
+    perfil: [
+      'Hechicero maldito: Brujo felino deforme con túnicas rasgadas de tonos púrpura y ocre.',
+      'Garra del infierno: Brazo izquierdo reemplazado por una garra demoníaca roja incandescente con venas de lava mística.',
+      'Resurrección constante: Cada vez que es derrotado, desciende al infierno y regresa más fuerte por tiempo limitado.',
+      'Dependencia de maná: Sus destructivos hechizos consumen su energía mística rápidamente, necesitando drenarla.'
+    ],
+    crisis: 'Dependencia de maná: Sus destructivos hechizos consumen su energía mística rápidamente, necesitando drenarla.',
+    stats: { fuerza: 3, inteligencia: 9, carisma: 4, suerte: 6, combate: 7, defensa: 5, especialVal: 8 },
+    especialLabel: 'Dedo de Muerte',
+    powers: {
+      role: 'Demonologist',
+      habilidades: [
+        'Finger of Death: Dispara un rayo de energía demoníaca rosa que deforma la viñeta y desintegra al objetivo.',
+        'Earth Spike: Golpea el suelo con su garra, levantando espinas de roca que empalan y aturden en línea recta.',
+        'Hex: Transmuta temporalmente a un héroe en una rana o criatura inofensiva, anulando sus poderes.'
+      ],
+      significa: 'Mago ráfaga. Ejecuta eliminación directa de objetivos prioritarios mediante descargas demoníacas extremas.',
+      crisis: 'Enfriamiento del brazo: El Dedo de la Muerte exige un tiempo de recarga masivo antes de volver a ser disparado.',
+      stats: { fuerza: 5, inteligencia: 10, carisma: 5, suerte: 7, combate: 9, defensa: 6, especialVal: 10 }
     }
   }
 ];

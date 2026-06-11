@@ -92,36 +92,7 @@ export const antagonistas: CharacterDetail[] = [
       stats: { fuerza: 8, inteligencia: 9, carisma: 8, suerte: 6, combate: 10, defensa: 8, especialVal: 9 }
     }
   },
-  {
-    id: 'krillor',
-    name: 'Krillor',
-    category: 'antagonistas',
-    isSecondary: true,
-    image: '/personajes/Antagonistas/Krillor/Krillor_ficha.webp',
-    fullBody: '/personajes/Antagonistas/Krillor/Krillor_ficha.webp',
-    color: '#d1d5db',
-    role: 'Kingpin Cósmico / Plaga Solar',
-    visualCode: 'Piel dorada con grabados fractales violetas, bio-armadura de marfil, cola segmentada',
-    perfil: [
-      'El tirano de marfil: Cerebro criminal de la Plaga Solar. Conquista mundos mediante monopolios de recursos y deudas.',
-      'Silueta elegante: Fisonomía inspirada en tiranos intergalácticos, apoyado en un trono flotante de piedra negra.',
-      'Estética de lujo: Armadura restrictiva con remaches de oro y una larga cola segmentada de marfil y punta violeta.'
-    ],
-    crisis: 'Desprecio absoluto: Su arrogancia imperial lo lleva a subestimar a los combatientes humanos.',
-    stats: { fuerza: 9, inteligencia: 9, carisma: 9, suerte: 5, combate: 9, defensa: 9, especialVal: 10 },
-    especialLabel: 'Gravedad',
-    powers: {
-      role: 'Sindicato Cósmico',
-      habilidades: [
-        'Monopolio de Gravedad: Crea esferas de enana blanca para deformar el espacio y succionar flotas.',
-        'Aguja Cuántica: Cola segmentada equipada con punta de plasma cuántico violeta para ataques quirúrgicos.',
-        'Brazalete de Conversión: Dispositivo de marfil que absorbe la energía cinética enemiga para potenciar su cuerpo.'
-      ],
-      significa: 'El cobrador de soles. Asedia planetas mediante monopolio de atmósferas y embargos gravitatorios.',
-      crisis: 'Caos probabilístico: Su mente algorítmica y corporativa no puede predecir el caos estocástico de la suerte de Matapobres.',
-      stats: { fuerza: 10, inteligencia: 10, carisma: 9, suerte: 6, combate: 10, defensa: 10, especialVal: 10 }
-    }
-  },
+
   {
     id: 'balthazar',
     name: 'Balthazar Vane',
@@ -152,37 +123,7 @@ export const antagonistas: CharacterDetail[] = [
       stats: { fuerza: 5, inteligencia: 10, carisma: 7, suerte: 6, combate: 8, defensa: 9, especialVal: 9 }
     }
   },
-  {
-    id: 'azathos',
-    name: 'Azathos',
-    category: 'antagonistas',
-    isSecondary: true,
-    image: '/personajes/Antagonistas/Azathos/Azathos.webp',
-    fullBody: '/personajes/Antagonistas/Azathos/Azathos.webp',
-    altImage: '/personajes/Antagonistas/Azathos/Azathos_alt.webp',
-    color: '#fca5a5',
-    role: 'Tejedor de Constelaciones / Deidad Astral',
-    visualCode: 'Silueta gigante sin rostro con galaxias en el torso, túnica de luz',
-    perfil: [
-      'Tejedor estelar: Deidad del plano astral que ve la realidad física como un tapiz mal tejido que debe desarmarse.',
-      'Cuerpo cósmico: Silueta humanoide con nebulosas girando en su torso y rodeado de anillos planetarios.',
-      'Estilo divino: Se manifiesta envuelto en hilos de oro y runas del End en rotación.'
-    ],
-    crisis: 'Inercia astral: Su enorme escala espacial hace que sus movimientos en el plano material sean lentos.',
-    stats: { fuerza: 9, inteligencia: 10, carisma: 8, suerte: 7, combate: 8, defensa: 9, especialVal: 10 },
-    especialLabel: 'Constelación',
-    powers: {
-      role: 'Astral Weaver',
-      habilidades: [
-        'Descomposición Estelar: Usa líneas gravitatorias de constelaciones para aplastar naves y alterar la física local.',
-        'Ecos Astrales: Avatares de luz pura que copian las habilidades físicas y proyectiles de los héroes.',
-        'Prisión del Zodíaco: Atrapa conciencias en dimensiones espejo basadas en símbolos astronómicos.'
-      ],
-      significa: 'El deconstructor del cosmos. Desarticula la materia física manipulando la gravedad de las estrellas.',
-      crisis: 'Luz del origen: Habilidades que canalicen energía pura del Big Bang disipan sus anillos de contención.',
-      stats: { fuerza: 10, inteligencia: 10, carisma: 8, suerte: 8, combate: 9, defensa: 10, especialVal: 10 }
-    }
-  },
+
   {
     id: 'comandante',
     name: 'Comandante R.E.G.U.L.A.R.',
@@ -215,65 +156,5 @@ export const antagonistas: CharacterDetail[] = [
       stats: { fuerza: 8, inteligencia: 9, carisma: 6, suerte: 5, combate: 10, defensa: 10, especialVal: 9 }
     }
   },
-  {
-    id: 'balanar',
-    name: 'Night Stalker',
-    category: 'antagonistas',
-    isSecondary: true,
-    image: '/personajes/Antagonistas/Balanar/Night Stalker.webp',
-    fullBody: '/personajes/Antagonistas/Balanar/Night Stalker.webp',
-    color: '#1e3a8a',
-    role: 'El Rey de la Noche Urbana',
-    visualCode: 'Gárgola vampírica masiva, garras que sacan chispas, alas de murciélago',
-    perfil: [
-      'Depredador nocturno: Gárgola vampírica humanoide gigantesca. Su sola presencia absorbe la iluminación eléctrica urbana.',
-      'Cazador implacable: Su mandíbula partida en cuatro secciones revela hileras de dientes afilados y saliva ácida al rugir.',
-      'Estética de terror: Piel de tono azul nocturno, ojos de fuego carmesí y alas desgarradas replegadas como gabardina.'
-    ],
-    crisis: 'Vulnerabilidad solar: La luz ultravioleta o destellos de energía de espectro solar (como la magia de Jaz) reducen su fuerza física.',
-    stats: { fuerza: 8, inteligencia: 5, carisma: 3, suerte: 4, combate: 8, defensa: 7, especialVal: 8 },
-    especialLabel: 'Cacería',
-    powers: {
-      role: 'Balanar',
-      habilidades: [
-        'Void: Impacta al enemigo con un haz de oscuridad concentrada que daña, ralentiza e interrumpe sus habilidades.',
-        'Crippling Fear: Emite un aullido aterrador que silencia las capacidades mágicas de los enemigos a su alrededor.',
-        'Dark Ascension: Rinde tributo a la noche pura, alzando el vuelo con garras incandescentes y aumentando su velocidad.'
-      ],
-      significa: 'El depredador de las sombras. Deshabilita habilidades y acosa objetivos en la oscuridad absoluta.',
-      crisis: 'Amanecer artificial: Dispositivos que generen destellos fotónicos masivos disipan su velo de sombras.',
-      stats: { fuerza: 10, inteligencia: 6, carisma: 4, suerte: 5, combate: 10, defensa: 9, especialVal: 9 }
-    }
-  },
-  {
-    id: 'lion',
-    name: 'Lion',
-    category: 'antagonistas',
-    isSecondary: true,
-    image: '/personajes/Antagonistas/Lion/Lion.webp',
-    fullBody: '/personajes/Antagonistas/Lion/Lion.webp',
-    color: '#701a75',
-    role: 'El Demonologista Corrupto',
-    visualCode: 'Brujo felino jorobado, brazo izquierdo de garra demoníaca roja',
-    perfil: [
-      'Hechicero maldito: Brujo felino deforme con túnicas rasgadas de tonos púrpura y ocre.',
-      'Garra del infierno: Brazo izquierdo reemplazado por una garra demoníaca roja incandescente con venas de lava mística.',
-      'Resurrección constante: Cada vez que es derrotado, desciende al infierno y regresa más fuerte por tiempo limitado.',
-      'Dependencia de maná: Sus destructivos hechizos consumen su energía mística rápidamente, necesitando drenarla.'
-    ],
-    crisis: 'Dependencia de maná: Sus destructivos hechizos consumen su energía mística rápidamente, necesitando drenarla.',
-    stats: { fuerza: 3, inteligencia: 9, carisma: 4, suerte: 6, combate: 7, defensa: 5, especialVal: 8 },
-    especialLabel: 'Dedo de Muerte',
-    powers: {
-      role: 'Demonologist',
-      habilidades: [
-        'Finger of Death: Dispara un rayo de energía demoníaca rosa que deforma la viñeta y desintegra al objetivo.',
-        'Earth Spike: Golpea el suelo con su garra, levantando espinas de roca que empalan y aturden en línea recta.',
-        'Hex: Transmuta temporalmente a un héroe en una rana o criatura inofensiva, anulando sus poderes.'
-      ],
-      significa: 'Mago ráfaga. Ejecuta eliminación directa de objetivos prioritarios mediante descargas demoníacas extremas.',
-      crisis: 'Enfriamiento del brazo: El Dedo de la Muerte exige un tiempo de recarga masivo antes de volver a ser disparado.',
-      stats: { fuerza: 5, inteligencia: 10, carisma: 5, suerte: 7, combate: 9, defensa: 6, especialVal: 10 }
-    }
-  }
+
 ];

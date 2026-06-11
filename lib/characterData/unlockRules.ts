@@ -16,6 +16,7 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   bristleback: [],
   invoker: [],
   ymir: [],
+  kenji: [],
 
   // Voughtverse
   julander: [],
@@ -32,18 +33,20 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   don: [],
   glitch: [],
   shinjuro: [],
-  krillor: [],
   balthazar: [],
-  azathos: [],
   comandante: ['casino'],
-  balanar: [],
-  lion: [],
 
   // Entidades
-  archon: [],
+  krillor: [],
+  balanar: [],
+  lion: [],
   judge_null: [],
-  lucy: [],
   malakas: [],
-  mars: [],
-  terrorblade: []
+  terrorblade: [],
+
+  // Deidades
+  archon: [],
+  azathos: [],
+  lucy: [],
+  mars: []
 };

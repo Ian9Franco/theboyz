@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { parsePrefix } from "@/lib/serverData";
+import { parsePrefix, getDynamicSagas, validatePreviewAccess } from "@/lib/serverData";
 import fs from "fs";
 import path from "path";
 
@@ -23,6 +23,20 @@ export async function GET(
     chapter.includes("\\")
   ) {
     return NextResponse.json({ pages: [], cover: null }, { status: 400 });
+  }
+
+  // Check draft preview authorization
+  const sagas = getDynamicSagas();
+  const targetSaga = sagas.find((s) => s.id.toLowerCase() === saga.toLowerCase());
+  if (targetSaga) {
+    const targetChapter = targetSaga.chapters.find((c) => c.id.toLowerCase() === chapter.toLowerCase());
+    const isDraft = targetSaga.draft || (targetChapter && targetChapter.draft);
+    if (isDraft) {
+      const hasAccess = validatePreviewAccess(request, targetSaga.id);
+      if (!hasAccess) {
+        return NextResponse.json({ pages: [], cover: null, error: "locked" });
+      }
+    }
   }
 
   const comicsDir = path.join(process.cwd(), "public", "comics");

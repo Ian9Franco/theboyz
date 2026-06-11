@@ -39,13 +39,14 @@ export interface PowersInfo {
 export interface CharacterDetail {
   id: string;
   name: string;
-  category: 'pibes' | 'secundarios' | 'voughtverse' | 'matis' | 'antagonistas' | 'entidades';
+  category: string;
   isSecondary?: boolean;
   image: string;
   fullBody: string;
   altImage?: string;
   overloadImage?: string;
   fichaImage?: string;
+  closeUp?: string;
   color: string;
   role: string;
   visualCode: string;

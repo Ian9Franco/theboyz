@@ -9,10 +9,13 @@ export default function NavBar() {
   const [unlockAll, setUnlockAll] = useState(false);
 
   useEffect(() => {
-    fetch("/api/sagas")
-      .then((r) => r.json())
-      .then((d) => setSagasList(d))
-      .catch(() => {});
+    const loadSagas = () => {
+      fetch("/api/sagas")
+        .then((r) => r.json())
+        .then((d) => setSagasList(d))
+        .catch(() => {});
+    };
+    loadSagas();
 
     const val = localStorage.getItem("unlock-all") === "true";
     setUnlockAll(val);
@@ -21,7 +24,11 @@ export default function NavBar() {
       setUnlockAll(localStorage.getItem("unlock-all") === "true");
     };
     window.addEventListener("unlockAllChanged", checkUnlock);
-    return () => window.removeEventListener("unlockAllChanged", checkUnlock);
+    window.addEventListener("previewStateChanged", loadSagas);
+    return () => {
+      window.removeEventListener("unlockAllChanged", checkUnlock);
+      window.removeEventListener("previewStateChanged", loadSagas);
+    };
   }, []);
 
   const toggleUnlockAll = () => {

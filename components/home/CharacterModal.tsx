@@ -56,6 +56,22 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     const label = isRegular ? "Cósmico" : "Alt";
     standardImages.push({ id: "alt", label, src: char.altImage });
   }
+
+  // Closeup mapping (only for Pibes with _FACE closeups)
+  const closeUpMap: Record<string, string> = {
+    ian: "/personajes/LosPibes/CLOSEUP/IAN_FACE.webp",
+    jaz: "/personajes/LosPibes/CLOSEUP/JAZ_FACE.webp",
+    julian: "/personajes/LosPibes/CLOSEUP/JULIAN_FACE.webp",
+    mati: "/personajes/LosPibes/CLOSEUP/MATI_FACE.webp",
+    sofi: "/personajes/LosPibes/CLOSEUP/SOFI_FACE.webp",
+    uandi: "/personajes/LosPibes/CLOSEUP/UANDI_FACE.webp",
+    volvo: "/personajes/LosPibes/CLOSEUP/VOLVO_FACE.webp",
+  };
+  const closeUpPath = char.closeUp || closeUpMap[char.id];
+  if (closeUpPath) {
+    standardImages.push({ id: "closeup", label: "Closeup", src: closeUpPath });
+  }
+
   if (!isPibe && char.fichaImage) {
     standardImages.push({ id: "ficha", label: "Ficha", src: char.fichaImage });
   }
@@ -107,7 +123,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
   // Decide which image to show
   const currentImageObj = currentImagesList.find(img => img.id === selectedImageId) || currentImagesList[0];
   const isArchorLocked = selectedImageId === 'archor' && !unlockAll;
-  const currentImage = isArchorLocked ? '/personajes/FULLBODY SUIT/VESPERWING/vesperwing.webp' : currentImageObj?.src;
+  const currentImage = isArchorLocked ? '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/vesperwing.webp' : currentImageObj?.src;
 
   useEffect(() => {
     document.body.style.overflow = "hidden";

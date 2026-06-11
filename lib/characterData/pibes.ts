@@ -5,10 +5,10 @@ export const pibes: CharacterDetail[] = [
     id: 'ian',
     name: 'Ian',
     category: 'pibes',
-    image: '/personajes/FULLBODY SUIT/VESPERWING/vesperwing.webp',
-    fullBody: '/personajes/FULLBODY/IAN.webp',
-    altImage: '/personajes/ALT/IAN_ALT.webp',
-    overloadImage: '/personajes/FULLBODY SUIT/VESPERWING/vesperwing.webp',
+    image: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/vesperwing.webp',
+    fullBody: '/personajes/LosPibes/FULLBODY/IAN.webp',
+    altImage: '/personajes/LosPibes/ALT/IAN_ALT.webp',
+    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/vesperwing.webp',
     color: '#0d3a2b',
     role: 'Analista táctico / inventor estratégico',
     visualCode: 'Buzo hoodie gris, lentes redondos',
@@ -32,16 +32,16 @@ export const pibes: CharacterDetail[] = [
       crisis: 'Saturación por fricción: Cuando las variables del entorno desafían la lógica planificada, su bucle analítico se ve forzado a optimizar sobre la marcha, consumiendo recursos mentales críticos.',
       stats: { fuerza: 7, inteligencia: 10, carisma: 8, suerte: 8, combate: 8, defensa: 7, especialVal: 10 },
       suitImages: {
-        default: '/personajes/FULLBODY SUIT/VESPERWING/vesperwing.webp',
-        alt: '/personajes/FULLBODY SUIT/VESPERWING/vesperwing_alt.webp',
-        ficha: '/personajes/FULLBODY SUIT/VESPERWING/Vesperwing_Ficha.webp',
-        ficha2: '/personajes/FULLBODY SUIT/VESPERWING/Vesperwing_ficha2.webp',
-        ficha3: '/personajes/FULLBODY SUIT/VESPERWING/Vesperwing_ficha3.webp',
-        combat: '/personajes/FULLBODY SUIT/VESPERWING/Vesperwing_combat.webp',
-        mk3: '/personajes/FULLBODY SUIT/VESPERWING/MK3/MARK-3.webp',
-        mk3_alt: '/personajes/FULLBODY SUIT/VESPERWING/MK3/MARK-3_ALT.webp',
-        mkl: '/personajes/FULLBODY SUIT/VESPERWING/MKL/MARK-L.webp',
-        archor: '/personajes/FULLBODY SUIT/VESPERWING/VESPER ARCHOR/VesperArchor.webp'
+        default: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/vesperwing.webp',
+        alt: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/vesperwing_alt.webp',
+        ficha: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/Vesperwing_Ficha.webp',
+        ficha2: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/Vesperwing_ficha2.webp',
+        ficha3: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/Vesperwing_ficha3.webp',
+        combat: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/Vesperwing_combat.webp',
+        mk3: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/MK3/MARK-3.webp',
+        mk3_alt: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/MK3/MARK-3_ALT.webp',
+        mkl: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/MKL/MARK-L.webp',
+        archor: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/VESPER ARCHOR/VesperArchor.webp'
       },
       variantData: {
         alt: {
@@ -123,9 +123,9 @@ export const pibes: CharacterDetail[] = [
     id: 'jaz',
     name: 'Jaz',
     category: 'pibes',
-    image: '/personajes/FULLBODY SUIT/ORACLE/Oracle.webp',
-    fullBody: '/personajes/FULLBODY/JAZ.webp',
-    overloadImage: '/personajes/FULLBODY SUIT/ORACLE/Oracle.webp',
+    image: '/personajes/LosPibes/FULLBODY SUIT/ORACLE/Oracle.webp',
+    fullBody: '/personajes/LosPibes/FULLBODY/JAZ.webp',
+    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/ORACLE/Oracle.webp',
     color: '#f5e642',
     role: 'Soporte defensivo / control de campo / enlace dimensional',
     visualCode: 'Polera negra, pelo sunset-gold, lentes de gato',
@@ -149,9 +149,9 @@ export const pibes: CharacterDetail[] = [
       crisis: 'Fluctuación del Velo: Bajo estrés extremo, su aura pierde estabilidad, provocando micro-grietas dimensionales involuntarias a su alrededor que alteran el espacio y representan un riesgo impredecible.',
       stats: { fuerza: 5, inteligencia: 9, carisma: 9, suerte: 10, combate: 7, defensa: 10, especialVal: 10 },
       suitImages: {
-        default: '/personajes/FULLBODY SUIT/ORACLE/Oracle.webp',
-        ficha: '/personajes/FULLBODY SUIT/ORACLE/Oracle_Ficha.webp',
-        fichaAlt: '/personajes/FULLBODY SUIT/ORACLE/Oracle_ficha_alt.webp'
+        default: '/personajes/LosPibes/FULLBODY SUIT/ORACLE/Oracle.webp',
+        ficha: '/personajes/LosPibes/FULLBODY SUIT/ORACLE/Oracle_Ficha.webp',
+        fichaAlt: '/personajes/LosPibes/FULLBODY SUIT/ORACLE/Oracle_ficha_alt.webp'
       },
       variantData: {
         full: {
@@ -172,10 +172,10 @@ export const pibes: CharacterDetail[] = [
     id: 'julian',
     name: 'Julián',
     category: 'pibes',
-    image: '/personajes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
-    fullBody: '/personajes/FULLBODY/JULIAN.webp',
-    altImage: '/personajes/ALT/JULIAN_ALT.webp',
-    overloadImage: '/personajes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
+    image: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
+    fullBody: '/personajes/LosPibes/FULLBODY/JULIAN.webp',
+    altImage: '/personajes/LosPibes/ALT/JULIAN_ALT.webp',
+    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
     color: '#0a1128',
     role: 'Hostigador ágil / Distracción táctica / Daño por fricción energética',
     visualCode: 'Suéter azul marino, barba, pelo corto con fade',
@@ -201,9 +201,9 @@ export const pibes: CharacterDetail[] = [
       crisis: 'Migraña por Sobrecarga: Intentar mantener clones estables por mucho tiempo o cargar masas pesadas le genera migrañas y lo deja expuesto. Además, sus armas de energía vibran y pueden estallar en sus manos si no las descarta a tiempo.',
       stats: { fuerza: 7, inteligencia: 8, carisma: 9, suerte: 9, combate: 9, defensa: 7, especialVal: 9 },
       suitImages: {
-        default: '/personajes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
-        ficha: '/personajes/FULLBODY SUIT/WILDCARD/Wildcard_Ficha.webp',
-        combat: '/personajes/FULLBODY SUIT/WILDCARD/Wildcard_combat.webp'
+        default: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
+        ficha: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard_Ficha.webp',
+        combat: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard_combat.webp'
       },
       variantData: {
         action: {
@@ -234,9 +234,9 @@ export const pibes: CharacterDetail[] = [
     id: 'mati',
     name: 'Mati',
     category: 'pibes',
-    image: '/personajes/FULLBODY SUIT/SWAPFIRE/Swapfire.webp',
-    fullBody: '/personajes/FULLBODY/MATI.webp',
-    overloadImage: '/personajes/FULLBODY SUIT/SWAPFIRE/Swapfire.webp',
+    image: '/personajes/LosPibes/FULLBODY SUIT/SWAPFIRE/Swapfire.webp',
+    fullBody: '/personajes/LosPibes/FULLBODY/MATI.webp',
+    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/SWAPFIRE/Swapfire.webp',
     color: '#4c1d95',
     role: 'Controlador táctico / reposicionamiento y ofensiva de fricción',
     visualCode: 'Piel bronceada, campera táctica, hoyuelos',
@@ -263,9 +263,9 @@ export const pibes: CharacterDetail[] = [
       crisis: 'Meltdown Multiversal: Al sobrecalentarse o entrar en crisis, el rayo violeta se tiñe de rojo incandescente como fuego. Activar su poder sin visor desata una destrucción masiva y descontrolada en todo su campo de visión.',
       stats: { fuerza: 9, inteligencia: 10, carisma: 8, suerte: 7, combate: 10, defensa: 9, especialVal: 10 },
       suitImages: {
-        default: '/personajes/FULLBODY SUIT/SWAPFIRE/Swapfire.webp',
-        ficha: '/personajes/FULLBODY SUIT/SWAPFIRE/Swapfire_ficha.webp',
-        combat: '/personajes/FULLBODY SUIT/SWAPFIRE/Swapfire_combat.webp'
+        default: '/personajes/LosPibes/FULLBODY SUIT/SWAPFIRE/Swapfire.webp',
+        ficha: '/personajes/LosPibes/FULLBODY SUIT/SWAPFIRE/Swapfire_ficha.webp',
+        combat: '/personajes/LosPibes/FULLBODY SUIT/SWAPFIRE/Swapfire_combat.webp'
       },
       variantData: {
         action: {
@@ -296,10 +296,10 @@ export const pibes: CharacterDetail[] = [
     id: 'uandi',
     name: 'Uandi',
     category: 'pibes',
-    image: '/personajes/FULLBODY SUIT/AEGIS/Aegis.webp',
-    fullBody: '/personajes/FULLBODY/UANDI.webp',
-    altImage: '/personajes/ALT/UANDI_ALT.webp',
-    overloadImage: '/personajes/FULLBODY SUIT/AEGIS/Aegis.webp',
+    image: '/personajes/LosPibes/FULLBODY SUIT/AEGIS/Aegis.webp',
+    fullBody: '/personajes/LosPibes/FULLBODY/UANDI.webp',
+    altImage: '/personajes/LosPibes/ALT/UANDI_ALT.webp',
+    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/AEGIS/Aegis.webp',
     color: '#b91c1c',
     role: 'Tanque y protector',
     visualCode: 'Remera técnica Kappa, lentes redondos, tatuaje manga izquierdo',
@@ -324,8 +324,8 @@ export const pibes: CharacterDetail[] = [
       crisis: 'Saturación de almacenamiento: Sus tatuajes tienen un límite de retención. Si se saturan de energía cinética y no ejecuta una descarga a tiempo, la tinta se agrieta superficialmente, liberando pulsos térmicos incontrolables.',
       stats: { fuerza: 10, inteligencia: 6, carisma: 8, suerte: 7, combate: 9, defensa: 10, especialVal: 10 },
       suitImages: {
-        default: '/personajes/FULLBODY SUIT/AEGIS/Aegis.webp',
-        ficha: '/personajes/FULLBODY SUIT/AEGIS/Aegis_Ficha.webp'
+        default: '/personajes/LosPibes/FULLBODY SUIT/AEGIS/Aegis.webp',
+        ficha: '/personajes/LosPibes/FULLBODY SUIT/AEGIS/Aegis_Ficha.webp'
       },
       variantData: {
         full: {
@@ -346,9 +346,9 @@ export const pibes: CharacterDetail[] = [
     id: 'volvo',
     name: 'Volvo',
     category: 'pibes',
-    image: '/personajes/FULLBODY SUIT/NULL-VECTOR/Null-Vector.webp',
-    fullBody: '/personajes/FULLBODY/VOLVO.webp',
-    overloadImage: '/personajes/FULLBODY SUIT/NULL-VECTOR/Null-Vector.webp',
+    image: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-Vector.webp',
+    fullBody: '/personajes/LosPibes/FULLBODY/VOLVO.webp',
+    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-Vector.webp',
     color: '#f95700',
     role: 'Vanguardia / Infiltración y Desborde / Movilidad Absoluta',
     visualCode: 'Remera naranja, ojos celestes, cinturón táctico',
@@ -373,9 +373,9 @@ export const pibes: CharacterDetail[] = [
       crisis: 'Acecho de Reverse Volvo: El uso de su velocidad de escape abre la puerta a su eco corrupto de estática oscura, quien le pisa los talones en el fondo de sus propios portales naranjas.',
       stats: { fuerza: 7, inteligencia: 8, carisma: 5, suerte: 9, combate: 8, defensa: 8, especialVal: 9 },
       suitImages: {
-        default: '/personajes/FULLBODY SUIT/NULL-VECTOR/Null-Vector.webp',
-        ficha: '/personajes/FULLBODY SUIT/NULL-VECTOR/Null-Vector_Ficha.webp',
-        combat: '/personajes/FULLBODY SUIT/NULL-VECTOR/Null-Vector_combat.webp'
+        default: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-Vector.webp',
+        ficha: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-Vector_Ficha.webp',
+        combat: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-Vector_combat.webp'
       },
       variantData: {
         action: {
@@ -395,10 +395,10 @@ export const pibes: CharacterDetail[] = [
     id: 'sofi',
     name: 'Sofi',
     category: 'pibes',
-    image: '/personajes/FULLBODY SUIT/HUSH/Hush.webp',
-    fullBody: '/personajes/FULLBODY/SOFI.webp',
-    altImage: '/personajes/ALT/SOFI_ALT.webp',
-    overloadImage: '/personajes/FULLBODY SUIT/HUSH/Hush.webp',
+    image: '/personajes/LosPibes/FULLBODY SUIT/HUSH/Hush.webp',
+    fullBody: '/personajes/LosPibes/FULLBODY/SOFI.webp',
+    altImage: '/personajes/LosPibes/ALT/SOFI_ALT.webp',
+    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/HUSH/Hush.webp',
     color: '#06b6d4',
     role: 'Reconocimiento avanzado / duelista táctica',
     visualCode: 'Campera puffer tricolor rosa y borgoña, bufanda, rulos en rodete',
@@ -423,9 +423,9 @@ export const pibes: CharacterDetail[] = [
       crisis: 'Sobrecarga Sensorial: Ruidos repentinos de extrema decibelia (explosiones cercanas, alarmas estridentes) la desorientan e incapacitan de dolor físico severo.',
       stats: { fuerza: 8, inteligencia: 8, carisma: 8, suerte: 8, combate: 9, defensa: 9, especialVal: 9 },
       suitImages: {
-        default: '/personajes/FULLBODY SUIT/HUSH/Hush.webp',
-        combat: '/personajes/FULLBODY SUIT/HUSH/Hush_combat.webp',
-        ficha: '/personajes/FULLBODY SUIT/HUSH/Hush_Ficha.webp'
+        default: '/personajes/LosPibes/FULLBODY SUIT/HUSH/Hush.webp',
+        combat: '/personajes/LosPibes/FULLBODY SUIT/HUSH/Hush_combat.webp',
+        ficha: '/personajes/LosPibes/FULLBODY SUIT/HUSH/Hush_Ficha.webp'
       },
       variantData: {
         combat: {

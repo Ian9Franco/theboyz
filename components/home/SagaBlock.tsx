@@ -253,6 +253,21 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked }: {
             #{chapter.number}
           </div>
 
+          {/* Borrador Badge */}
+          {chapter.draft && (
+            <div
+              className="absolute top-3 right-3 z-30 font-[var(--font-bangers)] text-sm px-2.5 py-0.5 tracking-wider rotate-[6deg] animate-pulse"
+              style={{
+                background: "#f5e642",
+                color: "#0a0a0f",
+                border: "2px solid #0a0a0f",
+                boxShadow: "3px 3px 0 #e8185a",
+              }}
+            >
+              ⚠️ Borrador
+            </div>
+          )}
+
           {/* Hover CTA overlay */}
           <div
             className="absolute inset-0 z-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-250"
