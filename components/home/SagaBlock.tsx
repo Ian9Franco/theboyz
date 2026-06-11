@@ -39,9 +39,17 @@ export function SagaBlock({ saga, index, prevSaga }: { saga: any; index: number;
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 100, damping: 18 }}
-        className="mb-3 flex flex-col sm:flex-row sm:items-end gap-4 flex-wrap"
+        className="mb-3 flex flex-col md:flex-row items-center md:items-start gap-8"
       >
-        <div>
+        {saga.cover && (
+          <div 
+            className="relative shrink-0 w-32 sm:w-44 aspect-[3/4] border-[3px] border-[#0a0a0f] overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_rgba(10,10,15,1)]"
+            style={{ transform: "rotate(-2deg)" }}
+          >
+            <img src={saga.cover} alt={`Portada de la saga ${saga.title}`} className="w-full h-full object-cover object-top" />
+          </div>
+        )}
+        <div className="flex-1 text-center md:text-left flex flex-col items-center md:items-start">
           <span
             className="tag text-xs mb-2 block w-fit"
             style={{ background: saga.color, color: "white", borderColor: "#0a0a0f" }}
@@ -49,14 +57,14 @@ export function SagaBlock({ saga, index, prevSaga }: { saga: any; index: number;
             Saga
           </span>
           <h2
-            className="font-[var(--font-bangers)] text-5xl sm:text-7xl leading-none tracking-wider"
+            className="font-[var(--font-bangers)] text-5xl sm:text-7xl leading-none tracking-wider mb-3"
             style={{ color: "#0a0a0f", textShadow: `3px 3px 0 ${saga.color}44` }}
           >
             {saga.title}
           </h2>
-        </div>
-        <div className="caption text-base sm:text-lg max-w-xs" style={{ transform: "rotate(-1deg)" }}>
-          {saga.description}
+          <div className="caption text-base sm:text-lg max-w-xl" style={{ transform: "rotate(-0.5deg)" }}>
+            {saga.description}
+          </div>
         </div>
       </motion.div>
 
@@ -87,6 +95,7 @@ export function SagaBlock({ saga, index, prevSaga }: { saga: any; index: number;
               sagaColor={saga.color}
               index={ci}
               isLocked={isLocked}
+              sagaCover={saga.cover}
             />
           );
         })}
@@ -98,12 +107,13 @@ export function SagaBlock({ saga, index, prevSaga }: { saga: any; index: number;
 /* ── CHAPTER CARD ── */
 const ACCENTS = ["#e8185a", "#00b8d4", "#f5e642", "#6d28d9", "#f97316"];
 
-function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked }: {
+function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }: {
   chapter: any;
   sagaId: string;
   sagaColor: string;
   index: number;
   isLocked: boolean;
+  sagaCover?: string | null;
 }) {
   const accent = ACCENTS[index % ACCENTS.length];
   const [cover, setCover] = useState<string | null>(null);
@@ -206,15 +216,15 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked }: {
           className="relative w-full overflow-hidden shrink-0"
           style={{
             aspectRatio: "3/4",
-            background: cover
+            background: (cover || sagaCover)
               ? "#0a0a0f"
               : `linear-gradient(145deg, #0a0a0f 0%, ${accent}33 100%)`,
           }}
         >
           {/* Actual cover image */}
-          {cover && (
+          {(cover || sagaCover) && (
             <img
-              src={cover}
+              src={cover || sagaCover || undefined}
               alt={`Portada de ${chapter.title}`}
               className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             />
@@ -224,17 +234,17 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked }: {
           <div
             className="absolute inset-0 pointer-events-none z-10"
             style={{
-              background: cover
+              background: (cover || sagaCover)
                 ? "linear-gradient(to top, rgba(10,10,15,0.85) 0%, rgba(10,10,15,0.1) 50%, transparent 100%)"
                 : undefined,
             }}
           />
 
           {/* No-cover placeholder */}
-          {!cover && (
+          {!(cover || sagaCover) && (
             <div className="absolute inset-0 flex items-center justify-center z-10 speed-lines opacity-30" />
           )}
-          {!cover && (
+          {!(cover || sagaCover) && (
             <div className="absolute inset-0 flex items-center justify-center z-20">
               <span
                 className="font-[var(--font-bangers)] text-[clamp(4rem,12vw,7rem)] leading-none text-white"

@@ -1,0 +1,26 @@
+{
+  "_readme": "Para cada página, definí las viñetas con focusY (0.0=arriba, 1.0=abajo) y los diálogos. style puede ser 'normal' (globo), 'caption' (caja narrador) o 'thought' (pensamiento). Si dialogue está vacío, el scroll solo frena un momento.",
+  "pages": {
+    "1":  { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "2":  { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "3":  { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "4":  { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "5":  { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "6":  { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "7":  { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "8":  { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "9":  { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "10": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "11": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "12": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "13": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "14": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "15": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "16": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "17": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "18": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "19": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "20": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
+    "21": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] }
+  }
+}

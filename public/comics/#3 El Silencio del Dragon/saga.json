@@ -4,5 +4,6 @@
   "description": "El blueprint gráfico piloto de Hush. Misterio, acción silenciosa y transformaciones extremas.",
   "color": "#e8185a",
   "status": "draft",
-  "password": "hush"
+  "password": "hush",
+  "cinematic": true
 }

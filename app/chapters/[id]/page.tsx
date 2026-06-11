@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useRef, useCallback } from "react";
 import { Lightbox as ReaderLightbox } from "@/components/reader/ReaderLightbox";
 import { DraftLockScreen } from "@/components/reader/DraftLockScreen";
+import { CinematicReader } from "@/components/reader/CinematicReader";
 
 export default function ChapterPage() {
   const params  = useParams();
@@ -138,6 +139,20 @@ export default function ChapterPage() {
   }
 
   const { chapter, saga, pages, prevChapter, nextChapter } = chapterData;
+
+  // ── Cinematic mode ──────────────────────────────────────────────────────────
+  if (chapterData.cinematic) {
+    return (
+      <CinematicReader
+        pages={pages}
+        dialogues={chapterData.dialogues ?? null}
+        chapter={chapter}
+        saga={saga}
+        nextChapter={nextChapter}
+        prevChapter={prevChapter}
+      />
+    );
+  }
 
   // Lock UI
   if (isLocked) {

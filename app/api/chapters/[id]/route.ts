@@ -130,5 +130,19 @@ export async function GET(
     cover,
     prevChapter,
     nextChapter,
+    cinematic: foundSaga.cinematic || foundChapter.cinematic || false,
+    dialogues: (() => {
+      // Try to load dialogues.json from the chapter folder
+      try {
+        const dialoguesPath = path.join(dirPath, "dialogues.json");
+        if (fs.existsSync(dialoguesPath)) {
+          const raw = fs.readFileSync(dialoguesPath, "utf-8");
+          return JSON.parse(raw);
+        }
+      } catch (e) {
+        console.error("Error reading dialogues.json:", e);
+      }
+      return null;
+    })(),
   });
 }

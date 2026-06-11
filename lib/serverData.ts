@@ -9,6 +9,7 @@ export type Chapter = {
   accentColor?: string;
   status?: string;
   draft?: boolean;
+  cinematic?: boolean;
 };
 
 export type Saga = {
@@ -22,9 +23,12 @@ export type Saga = {
   status?: string;
   draft?: boolean;
   password?: string;
+  cinematic?: boolean;
+  cover?: string | null;
 };
 
 const POP_ART_COLORS = ["#e8185a", "#00b8d4", "#f5e642", "#6d28d9", "#f97316", "#16a34a"];
+const SUPPORTED_FORMATS = [".jpg", ".jpeg", ".png", ".webp", ".gif"];
 
 export function titleCase(str: string): string {
   return str
@@ -76,6 +80,8 @@ export function getDynamicSagas(): Saga[] {
     let order = folderOrder !== null ? folderOrder : idx + 1;
     let sagaStatus = "published";
     let sagaPassword = undefined;
+    let sagaCinematic = false;
+    let sagaCover: string | null = null;
 
     // Load saga.json if exists
     const jsonPath = path.join(sagaPath, "saga.json");
@@ -89,8 +95,22 @@ export function getDynamicSagas(): Saga[] {
         if (meta.order !== undefined) order = meta.order;
         if (meta.status) sagaStatus = meta.status;
         if (meta.password) sagaPassword = meta.password;
+        if (meta.cinematic) sagaCinematic = true;
       } catch (err) {
         console.error(`Error parsing saga.json in ${folder}:`, err);
+      }
+    }
+
+    // Scan sagaPath for a cover image named "portada"
+    if (fs.existsSync(sagaPath)) {
+      const files = fs.readdirSync(sagaPath);
+      const coverFile = files.find((f) => {
+        const ext = path.extname(f).toLowerCase();
+        if (!SUPPORTED_FORMATS.includes(ext)) return false;
+        return path.basename(f, ext).toLowerCase() === "portada";
+      });
+      if (coverFile) {
+        sagaCover = `/comics/${encodeURIComponent(folder)}/${encodeURIComponent(coverFile)}`;
       }
     }
 
@@ -109,6 +129,7 @@ export function getDynamicSagas(): Saga[] {
       let chTitle = titleCase(chCleanName);
       let chNumber = chOrder !== null ? chOrder : chIdx + 1;
       let chStatus = "published";
+      let chCinematic = false;
 
       // Load chapter.json if exists
       const chJsonPath = path.join(chPath, "chapter.json");
@@ -118,6 +139,7 @@ export function getDynamicSagas(): Saga[] {
           if (chMeta.title) chTitle = chMeta.title;
           if (chMeta.number !== undefined) chNumber = chMeta.number;
           if (chMeta.status) chStatus = chMeta.status;
+          if (chMeta.cinematic) chCinematic = true;
         } catch (err) {
           console.error(`Error parsing chapter.json in ${folder}/${chFolder}:`, err);
         }
@@ -131,6 +153,7 @@ export function getDynamicSagas(): Saga[] {
         accentColor: color,
         status: chStatus,
         draft: chStatus === "draft" || sagaStatus === "draft",
+        cinematic: chCinematic || sagaCinematic,
       });
     });
 
@@ -148,13 +171,25 @@ export function getDynamicSagas(): Saga[] {
       status: sagaStatus,
       draft: sagaStatus === "draft",
       password: sagaPassword,
+      cinematic: sagaCinematic,
+      cover: sagaCover,
     });
   });
 
   // Sort sagas by order
   sagas.sort((a, b) => a.order - b.order);
 
-  return sagas;
+  // Deduplicate sagas by id, keeping the first one in sorted order
+  const uniqueSagas: Saga[] = [];
+  const seenIds = new Set<string>();
+  for (const saga of sagas) {
+    if (!seenIds.has(saga.id)) {
+      seenIds.add(saga.id);
+      uniqueSagas.push(saga);
+    }
+  }
+
+  return uniqueSagas;
 }
 
 export function findDynamicChapter(chapterId: string): { chapter: Chapter; saga: Saga; chapterIndex: number } | null {
