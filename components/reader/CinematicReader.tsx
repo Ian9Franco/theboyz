@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { DialogueBubble, type DialogueLine } from "./DialogueBubble";
+import { DialogueBubble, getBubbleStyles, type DialogueLine } from "./DialogueBubble";
+import { DialogueEditorPanel } from "./DialogueEditorPanel";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -65,6 +66,11 @@ export function CinematicReader({
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [passwordInput, setPasswordInput] = useState("");
   const [authError, setAuthError] = useState(false);
+
+  // Grid and Snapping States for Editor Mode
+  const [showGrid, setShowGrid] = useState(true);
+  const [snapToGrid, setSnapToGrid] = useState(true);
+  const [gridSize, setGridSize] = useState(5); // step size in percentage (e.g. 5%)
 
   const containerRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -330,12 +336,38 @@ export function CinematicReader({
     const rect = imgRef.current.getBoundingClientRect();
     
     // Convert absolute screen coordinate to image relative percentage
-    const relativeX = ((info.point.x - rect.left) / rect.width) * 100;
-    const relativeY = ((info.point.y - rect.top) / rect.height) * 100;
+    let relativeX = ((info.point.x - rect.left) / rect.width) * 100;
+    let relativeY = ((info.point.y - rect.top) / rect.height) * 100;
+
+    // Apply grid snapping if enabled
+    if (snapToGrid) {
+      relativeX = Math.round(relativeX / gridSize) * gridSize;
+      relativeY = Math.round(relativeY / gridSize) * gridSize;
+    }
 
     handleUpdateBubble(pIdx, bIdx, {
       posX: Math.max(-20, Math.min(120, Math.round(relativeX))),
       posY: Math.max(-20, Math.min(120, Math.round(relativeY))),
+    });
+  };
+
+  const handleTailTargetDragEnd = (info: any, pIdx: number, bIdx: number) => {
+    if (!imgRef.current) return;
+    const rect = imgRef.current.getBoundingClientRect();
+    
+    // Convert absolute screen coordinate to image relative percentage
+    let relativeX = ((info.point.x - rect.left) / rect.width) * 100;
+    let relativeY = ((info.point.y - rect.top) / rect.height) * 100;
+
+    // Apply grid snapping if enabled
+    if (snapToGrid) {
+      relativeX = Math.round(relativeX / gridSize) * gridSize;
+      relativeY = Math.round(relativeY / gridSize) * gridSize;
+    }
+
+    handleUpdateBubble(pIdx, bIdx, {
+      tailX: Math.max(-20, Math.min(120, Math.round(relativeX))),
+      tailY: Math.max(-20, Math.min(120, Math.round(relativeY))),
     });
   };
 
@@ -369,72 +401,206 @@ export function CinematicReader({
 
   const isLastPage = pageIdx === pages.length - 1;
 
+  /**
+   * Compute the point on the edge of the bubble (estimated as an ellipse/rect)
+   * in the direction of the anchor target. Returns {x, y} in screen pixels.
+   */
+  const getBubbleEdgePoint = (
+    centerX: number,
+    centerY: number,
+    targetX: number,
+    targetY: number,
+    halfW: number,
+    halfH: number,
+  ) => {
+    const dx = targetX - centerX;
+    const dy = targetY - centerY;
+    if (Math.abs(dx) < 0.01 && Math.abs(dy) < 0.01) return { x: centerX, y: centerY + halfH };
+    // Parametric intersection with ellipse: (x/hw)^2 + (y/hh)^2 = 1, x=t*dx, y=t*dy
+    // t = 1 / sqrt((dx/hw)^2 + (dy/hh)^2)
+    const t = 1 / Math.sqrt((dx / halfW) ** 2 + (dy / halfH) ** 2);
+    return { x: centerX + t * dx, y: centerY + t * dy };
+  };
+
+  // Estimate bubble half-dimensions from width/fontSize settings (approximate)
+  const estimateBubbleSize = (line: DialogueLine) => {
+    const w = line.width ?? 200;
+    // Height is roughly proportional to text length and font size
+    const fontSize = line.fontSize ?? 14;
+    const charPerLine = Math.max(1, w / (fontSize * 0.55));
+    const lines = Math.ceil((line.text?.length ?? 20) / charPerLine) + (line.speaker ? 1 : 0);
+    const h = lines * (fontSize * 1.5) + 16; // +padding
+    return { halfW: w / 2, halfH: h / 2 };
+  };
+
+  /**
+   * Build the SVG path for an elastic tail.
+   * Originates from the BUBBLE CENTER so the bubble body (higher z-index)
+   * naturally masks the wide base, guaranteeing a seamless visual connection
+   * regardless of the bubble's actual rendered size.
+   */
+  const buildTailPath = (
+    bubbleCenterX: number,
+    bubbleCenterY: number,
+    targetX: number,
+    targetY: number,
+    line?: DialogueLine
+  ) => {
+    const dx = targetX - bubbleCenterX;
+    const dy = targetY - bubbleCenterY;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    if (distance < 8) return null;
+
+    const angle = Math.atan2(dy, dx);
+    const perpAngle = angle + Math.PI / 2;
+    // Tail base width at center — scales down with distance for an organic look unless specified
+    const baseWidth = line?.tailWidth ?? Math.max(8, 28 - distance * 0.03);
+
+    const bLX = bubbleCenterX + Math.cos(perpAngle) * (baseWidth / 2);
+    const bLY = bubbleCenterY + Math.sin(perpAngle) * (baseWidth / 2);
+    const bRX = bubbleCenterX - Math.cos(perpAngle) * (baseWidth / 2);
+    const bRY = bubbleCenterY - Math.sin(perpAngle) * (baseWidth / 2);
+
+    // Quadratic control point halfway, offset by curvature
+    const curvature = line?.tailCurvature ?? 0;
+    const cx = bubbleCenterX + dx * 0.5 + Math.cos(perpAngle) * curvature;
+    const cy = bubbleCenterY + dy * 0.5 + Math.sin(perpAngle) * curvature;
+
+    // Open path to prevent stroke from closing the bubble
+    return `M ${bLX} ${bLY} Q ${cx} ${cy} ${targetX} ${targetY} Q ${cx} ${cy} ${bRX} ${bRY}`;
+  };
+
+  
+
+
   // Rendered Dialogues Helper
   const renderedDialogues = (() => {
     if (mode === "read") {
       return activePanel.dialogue?.map((line, i) => {
         const posX = line.posX ?? 50;
         const posY = line.posY ?? (activePanel.focusY * 100);
+        const bubbleLeft = imgLeft + (posX / 100) * imgWidth;
+        const bubbleTop = imgTop + (posY / 100) * imgHeight;
+        const targetX = line.tailX !== undefined ? imgLeft + (line.tailX / 100) * imgWidth : null;
+        const targetY = line.tailY !== undefined ? imgTop + (line.tailY / 100) * imgHeight : null;
+
+        let elasticTailNode = null;
+        if (targetX !== null && targetY !== null) {
+          const { bgColor } = getBubbleStyles(line);
+          const d = buildTailPath(0, 0, targetX - bubbleLeft, targetY - bubbleTop, line);
+          if (d) {
+            elasticTailNode = (
+              <svg className="absolute pointer-events-none overflow-visible" style={{ left: '50%', top: '50%', zIndex: 0 }}>
+                <path d={d} fill={bgColor} stroke="none" strokeWidth={0} />
+              </svg>
+            );
+          }
+        }
+
         return (
           <div
             key={`read-bub-${i}`}
             className="absolute pointer-events-none z-30"
             style={{
-              left: imgLeft + (posX / 100) * imgWidth,
-              top: imgTop + (posY / 100) * imgHeight,
+              left: bubbleLeft,
+              top: bubbleTop,
               transform: "translate(-50%, -50%)",
               width: "max-content",
             }}
           >
-            <DialogueBubble line={line} index={i} />
+            <DialogueBubble line={line} index={i} elasticTailNode={elasticTailNode} />
           </div>
         );
       }) || [];
     }
 
-    // Edit Mode: render all dialogues, with the active one being draggable
     return currentPanels.flatMap((panel, pIdx) => {
-      const dialoguesList = panel.dialogue || [];
-      return dialoguesList.map((line, bIdx) => {
+      return (panel.dialogue || []).map((line, bIdx) => {
         const isActive = activePanelIdx === pIdx && activeBubbleIdx === bIdx;
         const posX = line.posX ?? 50;
         const posY = line.posY ?? (panel.focusY * 100);
+        const targetX = line.tailX !== undefined ? imgLeft + (line.tailX / 100) * imgWidth : null;
+        const targetY = line.tailY !== undefined ? imgTop + (line.tailY / 100) * imgHeight : null;
+        const bubbleLeft = imgLeft + (posX / 100) * imgWidth;
+        const bubbleTop = imgTop + (posY / 100) * imgHeight;
+
+        let elasticTailNode = null;
+        if (targetX !== null && targetY !== null) {
+          const { bgColor, borderColor, strokeWidth } = getBubbleStyles(line);
+          const d = buildTailPath(0, 0, targetX - bubbleLeft, targetY - bubbleTop, line);
+          if (d) {
+            elasticTailNode = (
+              <svg className="absolute pointer-events-none overflow-visible" style={{ left: '50%', top: '50%', zIndex: 0 }}>
+                <path d={d} fill={bgColor} stroke={borderColor} strokeWidth={strokeWidth} strokeLinejoin="round" />
+              </svg>
+            );
+          }
+        }
 
         return (
-          <motion.div
-            key={`edit-bub-${pIdx}-${bIdx}`}
-            drag={isActive}
-            dragMomentum={false}
-            dragElastic={0}
-            onDragEnd={(_, info) => handleDragEnd(info, pIdx, bIdx)}
-            onClick={(e) => {
-              e.stopPropagation();
-              setActivePanelIdx(pIdx);
-              setActiveBubbleIdx(bIdx);
-            }}
-            className="absolute z-40 pointer-events-auto cursor-move"
-            style={{
-              left: imgLeft + (posX / 100) * imgWidth,
-              top: imgTop + (posY / 100) * imgHeight,
-              transform: "translate(-50%, -50%)",
-              width: "max-content",
-            }}
-          >
-            <div
-              className={`transition-all ${
-                isActive
-                  ? "outline-dashed outline-3 outline-red-500 outline-offset-4 scale-[1.03] drop-shadow-lg"
-                  : "opacity-60 hover:opacity-100"
-              }`}
+          <React.Fragment key={`edit-bub-container-${pIdx}-${bIdx}`}>
+            <motion.div
+              key={`edit-bub-${pIdx}-${bIdx}-${posX}-${posY}`}
+              drag={isActive}
+              dragMomentum={false}
+              dragElastic={0}
+              onDragEnd={(_, info) => handleDragEnd(info, pIdx, bIdx)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setActivePanelIdx(pIdx);
+                setActiveBubbleIdx(bIdx);
+              }}
+              className="absolute z-40 pointer-events-auto cursor-move"
+              style={{
+                left: bubbleLeft,
+                top: bubbleTop,
+                x: 0,
+                y: 0,
+                translateX: "-50%",
+                translateY: "-50%",
+                width: "max-content",
+              }}
             >
-              {isActive && (
-                <div className="absolute -top-7 left-1/2 -translate-x-1/2 bg-red-500 text-white font-mono text-xs px-2 py-0.5 rounded shadow">
-                  X:{posX}% Y:{posY}%
+              <div
+                className={`transition-all ${
+                  isActive
+                    ? "outline-dashed outline-2 outline-[#e8185a] outline-offset-3 drop-shadow-lg"
+                    : "opacity-70 hover:opacity-100"
+                }`}
+              >
+                {isActive && (
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#e8185a] text-white font-mono text-[10px] px-1.5 py-0.5 rounded shadow whitespace-nowrap">
+                    X:{posX}% Y:{posY}%
+                  </div>
+                )}
+                <DialogueBubble line={line} index={0} elasticTailNode={elasticTailNode} />
+              </div>
+            </motion.div>
+
+            {/* Draggable anchor target — only shown in edit mode when elastic tail is active */}
+            {isActive && targetX !== null && targetY !== null && (
+              <motion.div
+                key={`edit-anchor-${pIdx}-${bIdx}-${line.tailX}-${line.tailY}`}
+                drag
+                dragMomentum={false}
+                dragElastic={0}
+                onDragEnd={(_, info) => handleTailTargetDragEnd(info, pIdx, bIdx)}
+                className="absolute z-50 pointer-events-auto cursor-crosshair"
+                style={{
+                  left: targetX,
+                  top: targetY,
+                  x: 0,
+                  y: 0,
+                  translateX: "-50%",
+                  translateY: "-50%",
+                }}
+              >
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <div className="w-3.5 h-3.5 rounded-full bg-blue-400 border-2 border-white shadow-[0_0_10px_rgba(96,165,250,0.9)]" />
                 </div>
-              )}
-              <DialogueBubble line={line} index={0} />
-            </div>
-          </motion.div>
+              </motion.div>
+            )}
+          </React.Fragment>
         );
       });
     });
@@ -517,6 +683,42 @@ export function CinematicReader({
             />
           )}
 
+          {/* ── Grid Overlay (Editor Mode only) ── */}
+          {mode === "edit" && showGrid && imgSize && imgWidth > 0 && imgHeight > 0 && (
+            <div
+              style={{
+                position: "absolute",
+                left: imgLeft - 0.2 * imgWidth,
+                top: imgTop - 0.2 * imgHeight,
+                width: imgWidth * 1.4,
+                height: imgHeight * 1.4,
+                pointerEvents: "none",
+                zIndex: 10,
+                backgroundImage: `
+                  linear-gradient(to right, rgba(239, 68, 68, 0.12) 1px, transparent 1px),
+                  linear-gradient(to bottom, rgba(239, 68, 68, 0.12) 1px, transparent 1px)
+                `,
+                backgroundSize: `${imgWidth * (gridSize / 100)}px ${imgHeight * (gridSize / 100)}px`,
+                backgroundPosition: `${imgWidth * 0.2}px ${imgHeight * 0.2}px`,
+              }}
+            >
+              {/* Dashed outer red boundary representing the 0% to 100% page area */}
+              <div
+                style={{
+                  position: "absolute",
+                  left: imgWidth * 0.2,
+                  top: imgHeight * 0.2,
+                  width: imgWidth,
+                  height: imgHeight,
+                  border: "2px dashed rgba(239, 68, 68, 0.4)",
+                  pointerEvents: "none",
+                }}
+              />
+            </div>
+          )}
+
+          
+
           {/* ── Dialogues Layer ── */}
           <div
             className="absolute inset-0 w-full h-full pointer-events-none z-30 overflow-visible"
@@ -569,388 +771,34 @@ export function CinematicReader({
         </div>
 
         {/* Editor Side Panel (Right side) */}
-        {mode === "edit" && (
-          <div
-            className="w-full md:w-80 shrink-0 bg-white border-t-3 md:border-t-0 border-[#0a0a0f] flex flex-col overflow-y-auto z-40"
-            style={{ maxHeight: "calc(100vh - 64px)" }}
-          >
-            {/* Header / Save Block */}
-            <div className="p-4 border-b-3 border-[#0a0a0f] bg-zinc-50 flex items-center justify-between">
-              <span className="font-[var(--font-bangers)] text-xl tracking-wider text-[#0a0a0f]">
-                Editor de Diálogos
-              </span>
-              <button
-                onClick={handleSaveChanges}
-                disabled={isSaving}
-                className={`font-[var(--font-bangers)] text-sm px-4 py-2 border-2 border-[#0a0a0f] shadow-[2px_2px_0_#0a0a0f] transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#0a0a0f] ${
-                  saveStatus === "success"
-                    ? "bg-green-500 text-white"
-                    : saveStatus === "error"
-                    ? "bg-red-500 text-white"
-                    : "bg-[#e8185a] text-white hover:bg-rose-700"
-                }`}
-              >
-                {isSaving ? "Guardando..." : saveStatus === "success" ? "Guardado ✓" : "Guardar JSON"}
-              </button>
-            </div>
-
-            {/* Page navigation in sidebar */}
-            <div className="p-4 border-b-2 border-zinc-200 bg-zinc-50 flex items-center justify-between gap-2">
-              <button
-                onClick={() => pageIdx > 0 && resetPage(pageIdx - 1)}
-                disabled={pageIdx === 0}
-                className="btn btn-dark text-xs py-1 px-3 disabled:opacity-50"
-              >
-                Pág Ant
-              </button>
-              <span className="font-[var(--font-marker)] text-sm text-[#0a0a0f]">
-                Página {pageIdx + 1}
-              </span>
-              <button
-                onClick={() => pageIdx < pages.length - 1 && resetPage(pageIdx + 1)}
-                disabled={isLastPage}
-                className="btn btn-dark text-xs py-1 px-3 disabled:opacity-50"
-              >
-                Pág Sig
-              </button>
-            </div>
-
-            {/* Panels / Stops List */}
-            <div className="p-4 flex-1 flex flex-col gap-4">
-              <div className="flex justify-between items-center">
-                <span className="font-[var(--font-bangers)] text-lg text-zinc-600 tracking-wider">
-                  Paradas de Viñetas
-                </span>
-                <button
-                  onClick={handleAddPanel}
-                  className="font-[var(--font-bangers)] text-xs bg-emerald-500 text-white border border-[#0a0a0f] px-2 py-1 shadow-[1px_1px_0_#0a0a0f] hover:bg-emerald-600"
-                >
-                  + Agregar Viñeta
-                </button>
-              </div>
-
-              {currentPanels.length === 0 ? (
-                <div className="text-sm text-zinc-400 italic text-center py-6 border border-dashed border-zinc-300 rounded">
-                  No hay viñetas definidas en esta página. Agregá una para empezar.
-                </div>
-              ) : (
-                <div className="flex flex-col gap-3">
-                  {currentPanels.map((panel, pIdx) => {
-                    const isSelected = activePanelIdx === pIdx;
-                    return (
-                      <div
-                        key={pIdx}
-                        onClick={() => {
-                          setActivePanelIdx(pIdx);
-                          setActiveBubbleIdx(null);
-                        }}
-                        className={`p-3 border-2 border-[#0a0a0f] transition-all cursor-pointer ${
-                          isSelected
-                            ? "bg-yellow-50 shadow-[3px_3px_0_#0a0a0f]"
-                            : "bg-zinc-50 hover:bg-zinc-100"
-                        }`}
-                      >
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="font-[var(--font-marker)] text-xs text-[#0a0a0f]">
-                            Viñeta {pIdx + 1}
-                          </span>
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleRemovePanel(pIdx);
-                            }}
-                            className="text-xs text-red-500 hover:underline"
-                          >
-                            Eliminar
-                          </button>
-                        </div>
-
-                        {/* FocusY Slider */}
-                        <div className="flex flex-col gap-1 mb-3">
-                          <div className="flex justify-between text-xs font-mono text-zinc-500">
-                            <span>Posición Foco Y:</span>
-                            <span>{panel.focusY}</span>
-                          </div>
-                          <input
-                            type="range"
-                            min="0"
-                            max="1"
-                            step="0.01"
-                            value={panel.focusY}
-                            onChange={(e) => handleUpdateFocusY(pIdx, parseFloat(e.target.value))}
-                            className="w-full accent-[#e8185a]"
-                          />
-                        </div>
-
-                        {/* Dialogue List for this panel */}
-                        <div className="flex flex-col gap-2">
-                          <div className="flex justify-between items-center">
-                            <span className="text-xs font-bold text-zinc-500">Globos:</span>
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleAddBubble(pIdx);
-                              }}
-                              className="text-xs text-[#e8185a] hover:underline"
-                            >
-                              + Agregar Globo
-                            </button>
-                          </div>
-
-                          <div className="flex flex-col gap-1.5">
-                            {panel.dialogue?.map((bub, bIdx) => {
-                              const isBubActive = isSelected && activeBubbleIdx === bIdx;
-                              return (
-                                <button
-                                  key={bIdx}
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    setActivePanelIdx(pIdx);
-                                    setActiveBubbleIdx(bIdx);
-                                  }}
-                                  className={`text-left text-xs p-2 border rounded font-mono truncate transition-all ${
-                                    isBubActive
-                                      ? "border-red-500 bg-red-50 font-bold"
-                                      : "border-zinc-200 hover:bg-zinc-100"
-                                  }`}
-                                >
-                                  {bub.speaker ? `${bub.speaker}: ` : ""}
-                                  {bub.text || "(vacío)"}
-                                </button>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-
-              {/* Selected Bubble Editing Form */}
-              {activeBubbleIdx !== null && currentPanels[activePanelIdx]?.dialogue?.[activeBubbleIdx] && (
-                <div className="mt-4 p-4 border-2 border-red-500 bg-zinc-50 rounded flex flex-col gap-3 shadow-[3px_3px_0_rgba(239,68,68,0.2)]">
-                  <div className="flex justify-between items-center border-b pb-2 mb-1">
-                    <span className="font-[var(--font-bangers)] text-base text-red-500 tracking-wider">
-                      Editando Globo
-                    </span>
-                    <button
-                      onClick={() => handleRemoveBubble(activePanelIdx, activeBubbleIdx)}
-                      className="text-xs text-red-600 hover:underline"
-                    >
-                      Eliminar Globo
-                    </button>
-                  </div>
-
-                  {/* Speaker */}
-                  <div className="flex flex-col gap-1">
-                    <label className="text-xs font-bold text-zinc-600">Personaje / Hablante:</label>
-                    <input
-                      type="text"
-                      value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].speaker || ""}
-                      onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { speaker: e.target.value })}
-                      className="w-full border-2 border-[#0a0a0f] p-2 text-xs font-mono rounded bg-white text-[#0a0a0f]"
-                      placeholder="Ej: Sofi"
-                    />
-                  </div>
-
-                  {/* Speaker Presets */}
-                  <div className="flex flex-col gap-1">
-                    <label className="text-[10px] font-bold text-zinc-500">Hablantes rápidos:</label>
-                    <div className="flex flex-wrap gap-1">
-                      {["Uandi", "Sofi", "Jaz", "Ian", "Julián", "Mati", "Volvo"].map((name) => (
-                        <button
-                          key={name}
-                          type="button"
-                          onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { speaker: name })}
-                          className="px-2 py-1 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded active:translate-y-0.5 transition-all"
-                        >
-                          {name}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Style */}
-                  <div className="flex flex-col gap-1">
-                    <label className="text-xs font-bold text-zinc-600">Estilo:</label>
-                    <select
-                      value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].style || "normal"}
-                      onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { style: e.target.value as any })}
-                      className="w-full border-2 border-[#0a0a0f] p-2 text-xs font-mono rounded bg-white text-[#0a0a0f]"
-                    >
-                      <option value="normal">Normal (Bocadillo)</option>
-                      <option value="caption">Narración (Caja)</option>
-                      <option value="thought">Pensamiento (Nube)</option>
-                      <option value="scream">Grito (Llamativo/Bangers)</option>
-                      <option value="whisper">Susurro (Discontinuo/Itálico)</option>
-                      <option value="electronic">Electrónico (Futurista/Monospace)</option>
-                    </select>
-                  </div>
-
-                  {/* Size Preset */}
-                  <div className="flex flex-col gap-1">
-                    <label className="text-xs font-bold text-zinc-600">Tamaño del Globo:</label>
-                    <select
-                      value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].size || "medium"}
-                      onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { size: e.target.value as any })}
-                      className="w-full border-2 border-[#0a0a0f] p-2 text-xs font-mono rounded bg-white text-[#0a0a0f]"
-                    >
-                      <option value="small">Pequeño</option>
-                      <option value="medium">Mediano</option>
-                      <option value="large">Grande</option>
-                    </select>
-                  </div>
-
-                  {/* Tail Direction */}
-                  {currentPanels[activePanelIdx].dialogue![activeBubbleIdx].style !== "caption" && (
-                    <div className="flex flex-col gap-1">
-                      <label className="text-xs font-bold text-zinc-600">Dirección de la Cola:</label>
-                      <select
-                        value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].tail || "bottom-left"}
-                        onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { tail: e.target.value as any })}
-                        className="w-full border-2 border-[#0a0a0f] p-2 text-xs font-mono rounded bg-white text-[#0a0a0f]"
-                      >
-                        <option value="bottom-left">Abajo-Izquierda</option>
-                        <option value="bottom-right">Abajo-Derecha</option>
-                        <option value="top-left">Arriba-Izquierda</option>
-                        <option value="top-right">Arriba-Derecha</option>
-                        <option value="left">Izquierda</option>
-                        <option value="right">Derecha</option>
-                        <option value="none">Sin Cola (Flotante)</option>
-                      </select>
-                    </div>
-                  )}
-
-                  {/* Custom HEX Colors */}
-                  <div className="grid grid-cols-2 gap-2">
-                    <div className="flex flex-col gap-1">
-                      <label className="text-xs font-bold text-zinc-600">Color Fondo (Hex):</label>
-                      <input
-                        type="text"
-                        value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].customBg || ""}
-                        onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { customBg: e.target.value })}
-                        className="w-full border-2 border-[#0a0a0f] p-2 text-xs font-mono rounded bg-white text-[#0a0a0f]"
-                        placeholder="Ej: #ffffff"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <label className="text-xs font-bold text-zinc-600">Color Borde (Hex):</label>
-                      <input
-                        type="text"
-                        value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].customColor || ""}
-                        onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { customColor: e.target.value })}
-                        className="w-full border-2 border-[#0a0a0f] p-2 text-xs font-mono rounded bg-white text-[#0a0a0f]"
-                        placeholder="Ej: #0a0a0f"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Text */}
-                  <div className="flex flex-col gap-1">
-                    <label className="text-xs font-bold text-zinc-600">Texto:</label>
-                    <textarea
-                      value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].text}
-                      onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: e.target.value })}
-                      className="w-full h-20 border-2 border-[#0a0a0f] p-2 text-xs font-sans rounded bg-white text-[#0a0a0f] resize-none"
-                      placeholder="Escribí el diálogo..."
-                    />
-                  </div>
-
-                  {/* Position Presets */}
-                  <div className="flex flex-col gap-1 mt-1">
-                    <label className="text-xs font-bold text-zinc-600">Posición Rápida (Márgenes/Viñeta):</label>
-                    <div className="grid grid-cols-2 gap-1.5">
-                      <button
-                        type="button"
-                        onClick={() => {
-                          const targetY = Math.round(currentPanels[activePanelIdx].focusY * 100);
-                          handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: -15, posY: targetY });
-                        }}
-                        className="px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5"
-                      >
-                        <span>👈 Margen Izq.</span>
-                        <span className="text-[8px] text-zinc-500 font-mono">[-15%, Y]</span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          const targetY = Math.round(currentPanels[activePanelIdx].focusY * 100);
-                          handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: 115, posY: targetY });
-                        }}
-                        className="px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5"
-                      >
-                        <span>👉 Margen Der.</span>
-                        <span className="text-[8px] text-zinc-500 font-mono">[115%, Y]</span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: 50, posY: -15 });
-                        }}
-                        className="px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5"
-                      >
-                        <span>👆 Margen Sup.</span>
-                        <span className="text-[8px] text-zinc-500 font-mono">[50%, -15%]</span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: 50, posY: 115 });
-                        }}
-                        className="px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5"
-                      >
-                        <span>👇 Margen Inf.</span>
-                        <span className="text-[8px] text-zinc-500 font-mono">[50%, 115%]</span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          const targetY = Math.round(currentPanels[activePanelIdx].focusY * 100);
-                          handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: 50, posY: targetY });
-                        }}
-                        className="col-span-2 px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-center transition-colors active:translate-y-0.5"
-                      >
-                        🎯 Centro de Viñeta <span className="text-zinc-500 font-mono ml-1 text-[8px]">[50%, Y]</span>
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Coords display & manual entry */}
-                  <div className="grid grid-cols-2 gap-2 mt-1">
-                    <div className="flex flex-col gap-1">
-                      <label className="text-[10px] font-bold text-zinc-500">X (Ancho %):</label>
-                      <input
-                        type="number"
-                        min="-20"
-                        max="120"
-                        value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].posX ?? 50}
-                        onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: Math.max(-20, Math.min(120, parseInt(e.target.value) || 0)) })}
-                        className="border-2 border-[#0a0a0f] p-1.5 text-xs font-mono text-center bg-white text-[#0a0a0f]"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <label className="text-[10px] font-bold text-zinc-500">Y (Alto %):</label>
-                      <input
-                        type="number"
-                        min="-20"
-                        max="120"
-                        value={currentPanels[activePanelIdx].dialogue![activeBubbleIdx].posY ?? 50}
-                        onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posY: Math.max(-20, Math.min(120, parseInt(e.target.value) || 0)) })}
-                        className="border-2 border-[#0a0a0f] p-1.5 text-xs font-mono text-center bg-white text-[#0a0a0f]"
-                      />
-                    </div>
-                  </div>
-
-                  <span className="text-[10px] text-zinc-400 italic mt-1 text-center">
-                    💡 ¡También podés arrastrar la burbuja directamente en el cómic!
-                  </span>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
+        <DialogueEditorPanel
+          mode={mode}
+          currentPanels={currentPanels}
+          activePanelIdx={activePanelIdx}
+          activeBubbleIdx={activeBubbleIdx}
+          pageIdx={pageIdx}
+          pagesLength={pages.length}
+          isSaving={isSaving}
+          saveStatus={saveStatus}
+          showGrid={showGrid}
+          snapToGrid={snapToGrid}
+          gridSize={gridSize}
+          handleSaveChanges={handleSaveChanges}
+          resetPage={resetPage}
+          setShowGrid={setShowGrid}
+          setSnapToGrid={setSnapToGrid}
+          setGridSize={setGridSize}
+          handleAddPanel={handleAddPanel}
+          setActivePanelIdx={setActivePanelIdx}
+          setActiveBubbleIdx={setActiveBubbleIdx}
+          handleRemovePanel={handleRemovePanel}
+          handleUpdateFocusY={handleUpdateFocusY}
+          handleAddBubble={handleAddBubble}
+          handleRemoveBubble={handleRemoveBubble}
+          handleUpdateBubble={handleUpdateBubble}
+        />
       </div>
+
 
       {/* ── Auth Modal ── */}
       <AnimatePresence>

@@ -12,6 +12,14 @@ export type DialogueLine = {
   size?: "small" | "medium" | "large";
   customColor?: string;
   customBg?: string;
+  width?: number;        // Custom max-width in pixels
+  fontSize?: number;     // Custom font-size in pixels
+  borderRadius?: number; // Custom border-radius in pixels
+  tailX?: number;        // Elastic tail anchor X (0-100% of image)
+  tailY?: number;        // Elastic tail anchor Y (0-100% of image)
+  tailWidth?: number;    // Custom elastic tail base width
+  tailCurvature?: number;// Custom elastic tail curvature (-100 to 100)
+  linkedTo?: number;     // Index of sibling bubble to connect with an organic bridge
 };
 
 const SPEAKER_COLORS: Record<string, string> = {
@@ -23,6 +31,36 @@ const SPEAKER_COLORS: Record<string, string> = {
   mati: "#a855f7",    // Púrpura
   volvo: "#f97316",   // Naranja
 };
+
+export function getBubbleStyles(line: DialogueLine) {
+  const style = line.style ?? "normal";
+  let bgColor = line.customBg || "#ffffff";
+  let borderColor = line.customColor || "#0a0a0f";
+  let strokeWidth = 1.5;
+
+  if (style === "scream") {
+    bgColor = line.customBg || "#f5e642";
+    borderColor = line.customColor || "#0a0a0f";
+    strokeWidth = 2.5;
+  } else if (style === "whisper") {
+    bgColor = line.customBg || "#ffffff";
+    borderColor = line.customColor || "#a1a1aa";
+    strokeWidth = 1.5;
+  } else if (style === "electronic") {
+    bgColor = line.customBg || "rgba(10, 10, 15, 0.9)";
+    borderColor = line.customColor || "#00f0ff";
+    strokeWidth = 1.5;
+  } else if (style === "caption") {
+    bgColor = line.customBg || "#ffffff";
+    borderColor = line.customColor || "#0a0a0f";
+    strokeWidth = 1.5;
+  } else if (style === "thought") {
+    bgColor = line.customBg || "#ffffff";
+    borderColor = line.customColor || "#0a0a0f";
+    strokeWidth = 1.5;
+  }
+  return { bgColor, borderColor, strokeWidth };
+}
 
 function getSpeakerColor(speaker: string | null | undefined, defaultColor: string) {
   if (!speaker) return defaultColor;
@@ -111,9 +149,11 @@ function getTailStyles(
 export function DialogueBubble({
   line,
   index,
+  elasticTailNode
 }: {
   line: DialogueLine;
   index: number;
+  elasticTailNode?: React.ReactNode;
 }) {
   const style = line.style ?? "normal";
   const tailDir = line.tail ?? "bottom-left";
@@ -122,16 +162,31 @@ export function DialogueBubble({
 
   // 1. NARRATOR CAPTION
   if (style === "caption") {
-    const captionBg = line.customBg || "#faf8eb";
+    const captionBg = line.customBg || "#ffffff"; // White background like modern comics
     const captionBorderColor = line.customColor || "#0a0a0f";
     const captionSpeakerColor = getSpeakerColor(line.speaker, "#e8185a");
     
-    let captionSizeClass = "text-sm sm:text-base px-3.5 py-2.5";
+    let captionSizeClass = "text-sm sm:text-base px-3.5 py-2";
     if (size === "small") {
       captionSizeClass = "text-xs px-2.5 py-1.5";
     } else if (size === "large") {
       captionSizeClass = "text-base sm:text-lg px-5 py-3.5";
     }
+
+    const captionStyles: React.CSSProperties = {
+      pointerEvents: "none",
+      border: `1.5px solid ${captionBorderColor}`, // Thinner border
+      background: captionBg,
+      boxShadow: "none", // Flat look
+      borderRadius: line.borderRadius !== undefined ? `${line.borderRadius}px` : undefined,
+    };
+    if (line.fontSize) captionStyles.fontSize = `${line.fontSize}px`;
+    if (line.width) captionStyles.maxWidth = `${line.width}px`;
+
+    const wrapperStyles: React.CSSProperties = {
+      pointerEvents: "none",
+    };
+    if (line.width) wrapperStyles.maxWidth = `${line.width}px`;
 
     return (
       <motion.div
@@ -141,12 +196,7 @@ export function DialogueBubble({
         exit={{ opacity: 0, y: -8 }}
         transition={{ delay: index * 0.8, duration: 0.25, ease: "easeOut" }}
         className={`caption leading-snug text-left max-w-sm ${captionSizeClass}`}
-        style={{
-          pointerEvents: "none",
-          border: `3px solid ${captionBorderColor}`,
-          background: captionBg,
-          boxShadow: `3px 3px 0 ${captionBorderColor}`,
-        }}
+        style={{ ...captionStyles, ...wrapperStyles }}
       >
         {line.speaker && (
           <div 
@@ -171,24 +221,24 @@ export function DialogueBubble({
   // Define visual styling variables based on selected bubble type
   let bgColor = line.customBg || "#ffffff";
   let borderColor = line.customColor || "#0a0a0f";
-  let borderStyle = `3px solid ${borderColor}`;
+  let borderStyle = `1.5px solid ${borderColor}`; // Thinner border for cleaner look
   let bubbleClass = "font-[var(--font-marker)] text-[#0a0a0f]";
-  let shadowStyle = `4px 4px 0 ${borderColor}`;
+  let shadowStyle = "none"; // Flat design by default
   let speakerColor = getSpeakerColor(line.speaker, "#e8185a");
 
   // Size styling classes for padding/margins
-  let sizeClass = "px-5 py-3 rounded-2xl text-sm sm:text-base leading-snug";
+  let sizeClass = "px-3.5 py-2 rounded-2xl text-sm sm:text-base leading-snug";
   if (size === "small") {
-    sizeClass = "px-3.5 py-2 rounded-xl text-xs leading-tight";
+    sizeClass = "px-2 py-1 rounded-xl text-xs leading-tight";
   } else if (size === "large") {
-    sizeClass = "px-7 py-4 rounded-3xl text-base sm:text-lg leading-normal";
+    sizeClass = "px-6 py-3.5 rounded-3xl text-base sm:text-lg leading-normal";
   }
 
   if (style === "scream") {
     bgColor = line.customBg || "#f5e642"; // bright yellow default
     borderColor = line.customColor || "#0a0a0f";
-    borderStyle = `3.5px solid ${borderColor}`;
-    shadowStyle = `5px 5px 0 ${line.customColor || "#e8185a"}`;
+    borderStyle = `2.5px solid ${borderColor}`; // slightly thinner
+    shadowStyle = `4px 4px 0 ${line.customColor || "#e8185a"}`;
     bubbleClass = "font-[var(--font-bangers)] text-[#0a0a0f] uppercase tracking-wide leading-tight";
     
     if (size === "small") {
@@ -201,36 +251,38 @@ export function DialogueBubble({
   } else if (style === "whisper") {
     bgColor = line.customBg || "#ffffff";
     borderColor = line.customColor || "#a1a1aa";
-    borderStyle = `3px dashed ${borderColor}`;
+    borderStyle = `1.5px dashed ${borderColor}`; // thinner dashed
     shadowStyle = "none";
     bubbleClass = "font-[var(--font-marker)] italic text-zinc-500";
     speakerColor = getSpeakerColor(line.speaker, "#a1a1aa");
 
     if (size === "small") {
-      sizeClass = "px-3.5 py-2 rounded-xl text-[10px] sm:text-xs leading-tight";
+      sizeClass = "px-3 py-1.5 rounded-xl text-[10px] sm:text-xs leading-tight";
     } else if (size === "large") {
-      sizeClass = "px-7 py-4 rounded-3xl text-sm sm:text-base leading-normal";
+      sizeClass = "px-7 py-3.5 rounded-3xl text-sm sm:text-base leading-normal";
     } else {
-      sizeClass = "px-5 py-3 rounded-2xl text-xs sm:text-sm leading-snug";
+      sizeClass = "px-4 py-2 rounded-2xl text-xs sm:text-sm leading-snug";
     }
   } else if (style === "electronic") {
     bgColor = line.customBg || "rgba(10, 10, 15, 0.9)";
     borderColor = line.customColor || "#00f0ff";
-    borderStyle = `2px solid ${borderColor}`;
-    shadowStyle = `0 0 10px ${borderColor}59`; // 59 is hex for ~35% opacity
+    borderStyle = `1.5px solid ${borderColor}`; // thinner border
+    shadowStyle = `0 0 8px ${borderColor}59`; // subtle glow
     bubbleClass = "font-mono text-[#00f0ff]";
     speakerColor = getSpeakerColor(line.speaker, borderColor);
 
     if (size === "small") {
-      sizeClass = "px-3 py-2 rounded-none text-[10px] sm:text-xs leading-tight";
+      sizeClass = "px-2.5 py-1.5 rounded-none text-[10px] sm:text-xs leading-tight";
     } else if (size === "large") {
-      sizeClass = "px-7 py-4 rounded-none text-sm sm:text-base leading-normal";
+      sizeClass = "px-6 py-3.5 rounded-none text-sm sm:text-base leading-normal";
     } else {
-      sizeClass = "px-5 py-3 rounded-none text-xs sm:text-sm leading-snug";
+      sizeClass = "px-4 py-2.5 rounded-none text-xs sm:text-sm leading-snug";
     }
   }
 
   // 2. THOUGHT CLOUD BUBBLE
+  const hasElasticTail = line.tailX !== undefined && line.tailY !== undefined;
+
   if (style === "thought") {
     const thoughtBg = line.customBg || "#ffffff";
     const thoughtBorderColor = line.customColor || "#0a0a0f";
@@ -238,7 +290,7 @@ export function DialogueBubble({
 
     // Generate thought dots positioning based on tail target
     const renderThoughtDots = () => {
-      if (tailDir === "none") return null;
+      if (tailDir === "none" || hasElasticTail) return null;
       let positionClass = "-bottom-3 left-6";
       let scaleClass = "flex gap-1";
       if (tailDir === "bottom-right") positionClass = "-bottom-3 right-6";
@@ -251,22 +303,36 @@ export function DialogueBubble({
         <div className={`absolute ${positionClass} ${scaleClass} z-10`}>
           <div 
             className="w-2.5 h-2.5 rounded-full" 
-            style={{ border: `2px solid ${thoughtBorderColor}`, background: thoughtBg }}
+            style={{ border: `1.5px solid ${thoughtBorderColor}`, background: thoughtBg }}
           />
           <div 
             className="w-1.5 h-1.5 rounded-full self-center" 
-            style={{ border: `2px solid ${thoughtBorderColor}`, background: thoughtBg }}
+            style={{ border: `1.5px solid ${thoughtBorderColor}`, background: thoughtBg }}
           />
         </div>
       );
     };
 
-    let thoughtSizeClass = "px-5 py-3 rounded-[35%] text-sm sm:text-base leading-snug";
+    let thoughtSizeClass = "px-4 py-2 rounded-[35%] text-sm sm:text-base leading-snug";
     if (size === "small") {
-      thoughtSizeClass = "px-3.5 py-2 rounded-[30%] text-xs leading-tight";
+      thoughtSizeClass = "px-2.5 py-1 rounded-[30%] text-xs leading-tight";
     } else if (size === "large") {
-      thoughtSizeClass = "px-7 py-4.5 rounded-[40%] text-base sm:text-lg leading-normal";
+      thoughtSizeClass = "px-6 py-3.5 rounded-[40%] text-base sm:text-lg leading-normal";
     }
+
+    const thoughtStyles: React.CSSProperties = { 
+      background: thoughtBg, 
+      border: `1.5px solid ${thoughtBorderColor}`, 
+      boxShadow: "none",
+      borderRadius: line.borderRadius !== undefined ? `${line.borderRadius}px` : undefined,
+    };
+    if (line.fontSize) thoughtStyles.fontSize = `${line.fontSize}px`;
+    if (line.width) thoughtStyles.maxWidth = `${line.width}px`;
+
+    const wrapperStyles: React.CSSProperties = {
+      pointerEvents: "none",
+    };
+    if (line.width) wrapperStyles.maxWidth = `${line.width}px`;
 
     return (
       <motion.div
@@ -276,16 +342,12 @@ export function DialogueBubble({
         exit={{ opacity: 0, scale: 0.8 }}
         transition={{ delay: index * 0.8, type: "spring", stiffness: 250, damping: 18 }}
         className="relative max-w-sm"
-        style={{ pointerEvents: "none" }}
+        style={{ ...wrapperStyles, pointerEvents: "none" }}
       >
         {renderThoughtDots()}
         <div
           className={`font-[var(--font-marker)] text-[#0a0a0f] ${thoughtSizeClass}`}
-          style={{ 
-            background: thoughtBg, 
-            border: `3px solid ${thoughtBorderColor}`, 
-            boxShadow: `3px 3px 0 ${thoughtBorderColor}` 
-          }}
+          style={thoughtStyles}
         >
           {line.speaker && (
             <span 
@@ -309,7 +371,21 @@ export function DialogueBubble({
   }
 
   // 3. STANDARD / SCREAM / WHISPER / ELECTRONIC BUBBLES
-  const tail = getTailStyles(tailDir, bgColor, borderColor, style);
+  const tail = hasElasticTail ? null : getTailStyles(tailDir, bgColor, borderColor, style);
+
+  const wrapperStyles: React.CSSProperties = {
+    pointerEvents: "none",
+  };
+  if (line.width) wrapperStyles.maxWidth = `${line.width}px`;
+
+  const bubbleStyles: React.CSSProperties = {
+    backgroundColor: bgColor,
+    border: borderStyle,
+    boxShadow: shadowStyle,
+    borderRadius: line.borderRadius !== undefined ? `${line.borderRadius}px` : undefined,
+  };
+  if (line.fontSize) bubbleStyles.fontSize = `${line.fontSize}px`;
+  if (line.width) bubbleStyles.maxWidth = `${line.width}px`;
 
   return (
     <motion.div
@@ -319,44 +395,63 @@ export function DialogueBubble({
       exit={{ opacity: 0, scale: 0.75, y: 8 }}
       transition={{ delay: index * 0.8, type: "spring", stiffness: 280, damping: 20 }}
       className="relative max-w-sm"
-      style={{ pointerEvents: "none" }}
+      style={wrapperStyles}
     >
-      {/* Dynamic Tail Triangles */}
-      {tail && (
+      {/* Dynamic CSS Tail Triangles (for non-elastic classic tails) */}
+      {!hasElasticTail && tail && (
         <>
           <div style={tail.outer} />
           <div style={tail.inner} />
         </>
       )}
 
-      {/* Bubble body */}
+      {/* Bubble Background + Tail combined under a single drop-shadow for seamless border */}
+      {hasElasticTail ? (
+        <div className="absolute inset-0 z-0 pointer-events-none" style={{
+          filter: `drop-shadow(1.5px 0 0 ${borderColor}) drop-shadow(-1.5px 0 0 ${borderColor}) drop-shadow(0 1.5px 0 ${borderColor}) drop-shadow(0 -1.5px 0 ${borderColor})`,
+        }}>
+          {/* Main Bubble Background Shape (No Border) */}
+          <div 
+            className={`w-full h-full ${sizeClass}`}
+            style={{ 
+              backgroundColor: bgColor, 
+              borderRadius: bubbleStyles.borderRadius || '1rem',
+            }} 
+          />
+          {/* SVG Tail (No Stroke, Fill Only) */}
+          {elasticTailNode}
+        </div>
+      ) : (
+        /* If no elastic tail, we use the standard CSS border on the container itself */
+        null
+      )}
+      
+      {/* Bubble body (Text Container) */}
       <div
-        className={`${bubbleClass} ${sizeClass}`}
-        style={{
-          background: bgColor,
-          border: borderStyle,
-          boxShadow: shadowStyle,
-        }}
+        className={`${bubbleClass} ${sizeClass} relative z-10`}
+        style={hasElasticTail ? { ...bubbleStyles, border: 'none', backgroundColor: 'transparent', boxShadow: 'none' } : bubbleStyles}
       >
-        {line.speaker && (
-          <span
-            className="font-[var(--font-bangers)] text-xs tracking-wider block mb-1 uppercase"
-            style={{ color: speakerColor }}
-          >
-            {line.speaker}:
-          </span>
-        )}
-        <div className="flex flex-col gap-1.5">
-          {paragraphs.map((p, i) => (
-            <div key={i}>
-              {p.speaker && (
-                <strong className="font-[var(--font-bangers)] mr-1 tracking-wide" style={{ color: speakerColor }}>
-                  {p.speaker}:{" "}
-                </strong>
-              )}
-              <span>{p.text}</span>
-            </div>
-          ))}
+        <div className="relative z-10">
+          {line.speaker && (
+            <span
+              className="font-[var(--font-bangers)] text-xs tracking-wider block mb-1 uppercase"
+              style={{ color: speakerColor }}
+            >
+              {line.speaker}:
+            </span>
+          )}
+          <div className="flex flex-col gap-1.5">
+            {paragraphs.map((p, i) => (
+              <div key={i}>
+                {p.speaker && (
+                  <strong className="font-[var(--font-bangers)] mr-1 tracking-wide" style={{ color: speakerColor }}>
+                    {p.speaker}:{" "}
+                  </strong>
+                )}
+                <span>{p.text}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </motion.div>

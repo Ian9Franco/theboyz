@@ -4,39 +4,409 @@
     "1": {
       "panels": [
         {
-          "focusY": 0.1,
+          "focusY": 0.14,
           "dialogue": [
             {
-              "text": "Oe pe",
-              "speaker": "Uandi",
+              "text": "Nuevo diálogo",
+              "speaker": "",
               "style": "normal",
-              "posX": 71,
-              "posY": 4,
+              "posX": 110,
+              "posY": 5,
+              "tailX": 85,
+              "tailY": 5,
+              "fontSize": 8,
+              "width": 190,
+              "borderRadius": 0,
               "tail": "bottom-left"
             },
             {
               "text": "Nuevo diálogo",
               "speaker": "",
-              "style": "caption",
-              "posX": -15,
-              "posY": 10
+              "style": "normal",
+              "posX": 120,
+              "posY": 10,
+              "linkedTo": 0,
+              "tailX": 65,
+              "tailY": 15
             }
           ]
         },
         {
-          "focusY": 0.59,
+          "focusY": 0.45,
           "dialogue": [
             {
               "text": "Nuevo diálogo",
               "speaker": "",
-              "style": "thought",
-              "posX": -7,
-              "posY": 58
+              "style": "normal",
+              "posX": 115,
+              "posY": 30,
+              "size": "medium",
+              "tail": "bottom-left"
             }
           ]
         },
+        {"focusY": 0.7, "dialogue": []},
         {"focusY": 0.9, "dialogue": []},
+        {"focusY": 0.5, "dialogue": []}
+      ]
+    },
+    "2": {
+      "panels": [
+        {"focusY": 0.15, "dialogue": []},
+        {"focusY": 0.45, "dialogue": []},
+        {"focusY": 0.7, "dialogue": []},
         {"focusY": 0.9, "dialogue": []}
+      ]
+    },
+    "3": {
+      "panels": [
+        {"focusY": 0.5, "dialogue": []}
+      ]
+    },
+    "4": {
+      "panels": [
+        {"focusY": 0.15, "dialogue": []},
+        {"focusY": 0.45, "dialogue": []},
+        {"focusY": 0.7, "dialogue": []},
+        {"focusY": 0.9, "dialogue": []}
+      ]
+    },
+    "5": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "¡No sé a dónde va esto, pero es mejor que quedarnos a morir acá!",
+              "speaker": "Uandi",
+              "style": "scream",
+              "posX": 70,
+              "posY": 15,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        {"focusY": 0.45, "dialogue": []},
+        {
+          "focusY": 0.7,
+          "dialogue": [
+            {
+              "text": "¡No... me estoy... deshaciendo...!",
+              "speaker": "Sofi",
+              "style": "scream",
+              "posX": 20,
+              "posY": 65,
+              "tail": "bottom-right"
+            }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [
+            {
+              "text": "¡Sofi, dame la mano! ¡Sujetate fuerte!",
+              "speaker": "Ian",
+              "style": "scream",
+              "posX": 50,
+              "posY": 85,
+              "tail": "top-left"
+            }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "panels": [
+        {"focusY": 0.2, "dialogue": []},
+        {"focusY": 0.5, "dialogue": []},
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "¡¿Dónde carajo estaban?!",
+              "speaker": "Jaz",
+              "style": "scream",
+              "posX": 25,
+              "posY": 75,
+              "tail": "bottom-right"
+            },
+            {
+              "text": "Digamos que la casa no ganó esta vez, Jaz.",
+              "speaker": "Julián",
+              "style": "normal",
+              "posX": 70,
+              "posY": 85,
+              "tail": "top-left"
+            }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Tranquila... acá vas a estar segura.",
+              "speaker": "Ian",
+              "style": "normal",
+              "posX": 40,
+              "posY": 15,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "¡Mierda! Perdón, se me resbaló...",
+              "speaker": "Mati",
+              "style": "normal",
+              "posX": 35,
+              "posY": 45,
+              "tail": "top-right"
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            {
+              "text": "Tomá, ponete esto. Apaga el ruido.",
+              "speaker": "Ian",
+              "style": "whisper",
+              "posX": 50,
+              "posY": 80,
+              "tail": "bottom-left"
+            }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "Al menos la comida de este universo zafa.",
+              "speaker": "Julián",
+              "style": "normal",
+              "posX": 60,
+              "posY": 10,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        {
+          "focusY": 0.35,
+          "dialogue": [
+            {
+              "text": "Che, necesita aire. Conozco una cabaña aislada en el mapa. Ahí no hay ruido. Dejame que la lleve a descansar.",
+              "speaker": "Uandi",
+              "style": "normal",
+              "posX": 65,
+              "posY": 30,
+              "tail": "bottom-right"
+            },
+            {
+              "text": "Gracias, Uandi. De verdad.",
+              "speaker": "Sofi",
+              "style": "normal",
+              "posX": 30,
+              "posY": 35,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Tomá... es una laptop vieja. Para que... no sé, busques cosas de este lado.",
+              "speaker": "Mati",
+              "style": "whisper",
+              "posX": 50,
+              "posY": 50,
+              "tail": "top-right"
+            }
+          ]
+        },
+        {
+          "focusY": 0.65,
+          "dialogue": [
+            {
+              "text": "Gracias...",
+              "speaker": "Sofi",
+              "style": "whisper",
+              "posX": 40,
+              "posY": 65,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Todo es distinto... pero la miseria humana es la misma...",
+              "speaker": "Sofi",
+              "style": "thought",
+              "posX": 50,
+              "posY": 78,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        {"focusY": 0.95, "dialogue": []}
+      ]
+    },
+    "9": {
+      "panels": [
+        {
+          "focusY": 0.25,
+          "dialogue": [
+            {
+              "text": "Tengo miedo, Ian. Este mundo es demasiado violento, hace mucho ruido.",
+              "speaker": "Sofi",
+              "style": "normal",
+              "posX": 30,
+              "posY": 20,
+              "tail": "bottom-right"
+            }
+          ]
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            {
+              "text": "Este universo tiene cosas horribles, Sofi. Pero también tiene cosas buenas. No dejes que el ruido te tape lo que vale la pena conocer. Dale una oportunidad.",
+              "speaker": "Ian",
+              "style": "normal",
+              "posX": 65,
+              "posY": 50,
+              "tail": "top-left"
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            {
+              "text": "Me voy a recorrer el mundo sola. Necesito encontrar mi propio camino.",
+              "speaker": "Sofi",
+              "style": "normal",
+              "posX": 30,
+              "posY": 75,
+              "tail": "bottom-right"
+            },
+            {
+              "text": "Bueno... te llevo al aeropuerto. ¿A dónde querés ir?",
+              "speaker": "Uandi",
+              "style": "normal",
+              "posX": 65,
+              "posY": 80,
+              "tail": "bottom-left"
+            },
+            {
+              "text": "A cualquier parte. Lejos. Y ahora mismo.",
+              "speaker": "Sofi",
+              "style": "normal",
+              "posX": 30,
+              "posY": 88,
+              "tail": "bottom-right"
+            }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "panels": [
+        {"focusY": 0.12, "dialogue": []},
+        {
+          "focusY": 0.25,
+          "dialogue": [
+            {
+              "text": "VUELO DISPONIBLE: TOKIO - JAPÓN",
+              "speaker": "Aeropuerto",
+              "style": "electronic",
+              "posX": 50,
+              "posY": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.38,
+          "dialogue": [
+            {
+              "text": "¿Tokio? ¿Estás segura?",
+              "speaker": "Uandi",
+              "style": "normal",
+              "posX": 60,
+              "posY": 35,
+              "tail": "bottom-left"
+            },
+            {
+              "text": "Sí. Es hora.",
+              "speaker": "Sofi",
+              "style": "normal",
+              "posX": 30,
+              "posY": 38,
+              "tail": "bottom-right"
+            }
+          ]
+        },
+        {"focusY": 0.5, "dialogue": []},
+        {
+          "focusY": 0.62,
+          "dialogue": [
+            {
+              "text": "Cuidate mucho, Sofi.",
+              "speaker": "Julián",
+              "style": "normal",
+              "posX": 45,
+              "posY": 58,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        {
+          "focusY": 0.75,
+          "dialogue": [
+            {
+              "text": "Te vamos a extrañar, enana.",
+              "speaker": "Uandi",
+              "style": "normal",
+              "posX": 55,
+              "posY": 72,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        {
+          "focusY": 0.87,
+          "dialogue": [
+            {
+              "text": "Gracias por apagar el ruido...",
+              "speaker": "Sofi",
+              "style": "whisper",
+              "posX": 30,
+              "posY": 82,
+              "tail": "bottom-right"
+            },
+            {
+              "text": "Siempre...",
+              "speaker": "Ian",
+              "style": "whisper",
+              "posX": 65,
+              "posY": 85,
+              "tail": "top-left"
+            }
+          ]
+        },
+        {"focusY": 0.95, "dialogue": []}
       ]
     }
   }
