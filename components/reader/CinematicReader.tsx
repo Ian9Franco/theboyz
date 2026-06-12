@@ -11,6 +11,10 @@ import { DialogueEditorPanel } from "./DialogueEditorPanel";
 type PanelStop = {
   focusY: number;
   dialogue?: DialogueLine[];
+  zoomRect?: { x: number; y: number; w: number; h: number };
+  zoomRects?: { x: number; y: number; w: number; h: number }[];
+  duration?: number;
+  hideUntilReached?: boolean;
 };
 
 type PageData = {
@@ -48,6 +52,7 @@ export function CinematicReader({
   // Comic Reader States
   const [pageIdx, setPageIdx] = useState(0);
   const [panelIdx, setPanelIdx] = useState(0);
+  const [zoomIdx, setZoomIdx] = useState(0);
   const [zoomedOut, setZoomedOut] = useState(false);
   const [imgSize, setImgSize] = useState<{ w: number; h: number } | null>(null);
   const [containerSize, setContainerSize] = useState({ w: 0, h: 0 });
@@ -128,21 +133,49 @@ export function CinematicReader({
   const resetPage = useCallback((idx: number) => {
     setPageIdx(idx);
     setPanelIdx(0);
+    setZoomIdx(0);
     setZoomedOut(false);
     setActivePanelIdx(0);
     setActiveBubbleIdx(null);
   }, []);
 
+  // Reset zoomIdx on panelIdx or mode changes to keep them synchronized
+  useEffect(() => {
+    setZoomIdx(0);
+  }, [panelIdx, mode]);
+
   // Get current page dialogues safely
   const pgKey = String(pageIdx + 1);
   const currentPageData = localDialogues.pages?.[pgKey] || { panels: [] };
   
-  // Filter empty panels only in read mode so the editor can still see and edit all stops
+  // Filter empty panels only in read mode so the editor can still see and edit all stops.
+  // A panel is a valid stop if it has dialogues OR if it has zoomRect/zoomRects (cinematic camera closeup).
   const currentPanels = mode === "read"
-    ? (currentPageData.panels || []).filter(p => p.dialogue && p.dialogue.length > 0)
+    ? (currentPageData.panels || []).filter(p => (p.dialogue && p.dialogue.length > 0) || p.zoomRect || (p.zoomRects && p.zoomRects.length > 0))
     : (currentPageData.panels || []);
 
   const activePanel = currentPanels[panelIdx] || { focusY: 0.5, dialogue: [] };
+  const activePanelRects = activePanel ? (activePanel.zoomRects || (activePanel.zoomRect ? [activePanel.zoomRect] : [])) : [];
+  const activeZoomRect = activePanelRects[zoomIdx] || null;
+
+  // Auto-advance logic for panels with duration
+  useEffect(() => {
+    if (mode !== "read" || zoomedOut) return;
+    const activePanelStop = currentPanels[panelIdx];
+    if (activePanelStop && activePanelStop.duration && activePanelStop.duration > 0) {
+      const rects = activePanelStop.zoomRects || (activePanelStop.zoomRect ? [activePanelStop.zoomRect] : []);
+      const timer = setTimeout(() => {
+        if (zoomIdx < rects.length - 1) {
+          setZoomIdx(prev => prev + 1);
+        } else if (panelIdx < currentPanels.length - 1) {
+          setPanelIdx(prev => prev + 1);
+        } else {
+          setZoomedOut(true);
+        }
+      }, activePanelStop.duration * 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [panelIdx, zoomIdx, currentPanels, mode, zoomedOut]);
 
   // Calculate layout dimensions
   let imgWidth = 0;
@@ -162,12 +195,44 @@ export function CinematicReader({
       imgTop = (containerSize.h - imgSize.h * scale) / 2;
       imgHeight = imgSize.h * scale;
     } else {
-      // Reader Mode (Normal and ZoomedOut are the same fit-to-screen layout now)
-      const scale = Math.min(containerSize.w / imgSize.w, containerSize.h / imgSize.h);
-      imgWidth = imgSize.w * scale;
-      imgLeft = (containerSize.w - imgWidth) / 2;
-      imgTop = (containerSize.h - imgSize.h * scale) / 2;
-      imgHeight = imgSize.h * scale;
+      // Reader Mode
+      const zoom = activeZoomRect;
+      if (zoom && !zoomedOut) {
+        // Close-up Zoom State
+        const zX = zoom.x / 100;
+        const zY = zoom.y / 100;
+        const zW = zoom.w / 100;
+        const zH = zoom.h / 100;
+
+        const cropW = zW * imgSize.w;
+        const cropH = zH * imgSize.h;
+
+        // Fit crop area to container with 95% margin
+        const scale = Math.min(
+          (containerSize.w * 0.95) / cropW,
+          (containerSize.h * 0.95) / cropH
+        );
+
+        imgWidth = imgSize.w * scale;
+        imgHeight = imgSize.h * scale;
+
+        // Position the scaled crop center in the middle of the container
+        const cropCenterX = (zX + zW / 2) * imgSize.w * scale;
+        const cropCenterY = (zY + zH / 2) * imgSize.h * scale;
+
+        imgLeft = containerSize.w / 2 - cropCenterX;
+        imgTop = containerSize.h / 2 - cropCenterY;
+      } else {
+        // Standard View: fit to screen with a beautiful 92% safety margin to prevent bubble clipping on mobile
+        const scale = Math.min(
+          (containerSize.w * 0.92) / imgSize.w,
+          (containerSize.h * 0.92) / imgSize.h
+        );
+        imgWidth = imgSize.w * scale;
+        imgHeight = imgSize.h * scale;
+        imgLeft = (containerSize.w - imgWidth) / 2;
+        imgTop = (containerSize.h - imgHeight) / 2;
+      }
     }
   }
 
@@ -192,7 +257,13 @@ export function CinematicReader({
       return;
     }
 
-    if (panelIdx < currentPanels.length - 1) {
+    const activePanelStop = currentPanels[panelIdx];
+    const rects = activePanelStop?.zoomRects || (activePanelStop?.zoomRect ? [activePanelStop.zoomRect] : []);
+
+    if (zoomIdx < rects.length - 1) {
+      // Go to next zoom rectangle in the current panel sequence
+      setZoomIdx(prev => prev + 1);
+    } else if (panelIdx < currentPanels.length - 1) {
       // Go to next panel
       setPanelIdx(prev => prev + 1);
     } else {
@@ -205,6 +276,7 @@ export function CinematicReader({
 
   const handleToggleMode = () => {
     setPanelIdx(0);
+    setZoomIdx(0);
     setZoomedOut(false);
     if (mode === "edit") {
       setMode("read");
@@ -246,7 +318,7 @@ export function CinematicReader({
   const handleAddPanel = () => {
     const updatedPages = { ...localDialogues.pages };
     const pg = { ...currentPageData };
-    pg.panels = [...pg.panels, { focusY: 0.5, dialogue: [] }];
+    pg.panels = [...(pg.panels || []), { focusY: 0.5, dialogue: [] }];
     updatedPages[pgKey] = pg;
     updateDialoguesState(updatedPages);
     setActivePanelIdx(pg.panels.length - 1);
@@ -256,17 +328,17 @@ export function CinematicReader({
   const handleRemovePanel = (pIdx: number) => {
     const updatedPages = { ...localDialogues.pages };
     const pg = { ...currentPageData };
-    pg.panels = pg.panels.filter((_, idx) => idx !== pIdx);
+    pg.panels = (pg.panels || []).filter((_, idx) => idx !== pIdx);
     updatedPages[pgKey] = pg;
     updateDialoguesState(updatedPages);
     setActivePanelIdx(Math.max(0, pIdx - 1));
     setActiveBubbleIdx(null);
   };
 
-  const handleUpdateFocusY = (pIdx: number, val: number) => {
+  const handleUpdatePanelParams = (pIdx: number, updates: Partial<PanelStop>) => {
     const updatedPages = { ...localDialogues.pages };
     const pg = { ...currentPageData };
-    pg.panels = pg.panels.map((p, idx) => (idx === pIdx ? { ...p, focusY: val } : p));
+    pg.panels = (pg.panels || []).map((p, idx) => (idx === pIdx ? { ...p, ...updates } : p));
     updatedPages[pgKey] = pg;
     updateDialoguesState(updatedPages);
   };
@@ -274,7 +346,7 @@ export function CinematicReader({
   const handleAddBubble = (pIdx: number) => {
     const updatedPages = { ...localDialogues.pages };
     const pg = { ...currentPageData };
-    const panelsCopy = [...pg.panels];
+    const panelsCopy = [...(pg.panels || [])];
     const targetPanel = { ...panelsCopy[pIdx] };
     const dialoguesCopy = targetPanel.dialogue ? [...targetPanel.dialogue] : [];
 
@@ -299,7 +371,7 @@ export function CinematicReader({
   const handleUpdateBubble = (pIdx: number, bIdx: number, fields: Partial<DialogueLine>) => {
     const updatedPages = { ...localDialogues.pages };
     const pg = { ...currentPageData };
-    const panelsCopy = [...pg.panels];
+    const panelsCopy = [...(pg.panels || [])];
     const targetPanel = { ...panelsCopy[pIdx] };
     const dialoguesCopy = targetPanel.dialogue ? [...targetPanel.dialogue] : [];
 
@@ -318,7 +390,7 @@ export function CinematicReader({
   const handleRemoveBubble = (pIdx: number, bIdx: number) => {
     const updatedPages = { ...localDialogues.pages };
     const pg = { ...currentPageData };
-    const panelsCopy = [...pg.panels];
+    const panelsCopy = [...(pg.panels || [])];
     const targetPanel = { ...panelsCopy[pIdx] };
     const dialoguesCopy = targetPanel.dialogue ? [...targetPanel.dialogue] : [];
 
@@ -678,7 +750,8 @@ export function CinematicReader({
                 userSelect: "none",
                 WebkitUserSelect: "none",
                 maxWidth: "none",
-                transition: mode === "read" && zoomedOut ? `all ${ZOOM_OUT_MS}ms ease-out` : "none",
+                transition: mode === "read" ? "all 400ms cubic-bezier(0.25, 1, 0.5, 1)" : "none",
+                boxShadow: mode === "read" ? "0 15px 40px rgba(0, 0, 0, 0.8), 0 8px 16px rgba(0, 0, 0, 0.6)" : "none",
               }}
             />
           )}
@@ -717,7 +790,92 @@ export function CinematicReader({
             </div>
           )}
 
-          
+          {/* Visual Focus/Zoom Crop overlay in Editor Mode */}
+          {mode === "edit" && imgSize && imgWidth > 0 && imgHeight > 0 && (() => {
+            const activePanelStop = currentPanels[activePanelIdx];
+            const rects = activePanelStop 
+              ? (activePanelStop.zoomRects || (activePanelStop.zoomRect ? [activePanelStop.zoomRect] : []))
+              : [];
+            return rects.map((zoom, rIdx) => {
+              const maskLeft = imgLeft + (zoom.x / 100) * imgWidth;
+              const maskTop = imgTop + (zoom.y / 100) * imgHeight;
+              const maskWidth = (zoom.w / 100) * imgWidth;
+              const maskHeight = (zoom.h / 100) * imgHeight;
+              return (
+                <div
+                  key={`edit-zoom-overlay-${rIdx}`}
+                  style={{
+                    position: "absolute",
+                    left: maskLeft,
+                    top: maskTop,
+                    width: maskWidth,
+                    height: maskHeight,
+                    border: rIdx === 0 ? "3px dashed #10b981" : "2.5px dashed #3b82f6", // Emerald-500 for primary, blue-500 for secondary
+                    boxShadow: rIdx === 0 ? "0 0 0 9999px rgba(0, 0, 0, 0.65)" : "none", // Darken outside the main zoom only
+                    zIndex: 15 - rIdx,
+                    pointerEvents: "none",
+                  }}
+                >
+                  <div className="absolute top-1 left-1 bg-zinc-900/90 text-white font-mono text-[9px] px-1.5 py-0.5 rounded shadow">
+                    {rIdx === 0 ? `🎯 Zoom Principal (V${activePanelIdx + 1})` : `🤫 Máscara ${rIdx + 1}`}
+                  </div>
+                </div>
+              );
+            });
+          })()}
+
+          {/* Spoiler Masks for future panels & sequences */}
+          <AnimatePresence>
+            {mode === "read" && !zoomedOut && imgSize && imgWidth > 0 && imgHeight > 0 && (
+              currentPanels.flatMap((panel, pIdx) => {
+                const rects = panel.zoomRects || (panel.zoomRect ? [panel.zoomRect] : []);
+                return rects.map((zoom, rIdx) => {
+                  let shouldMask = false;
+                  if (pIdx > panelIdx) {
+                    shouldMask = (panel.hideUntilReached !== false);
+                  } else if (pIdx === panelIdx) {
+                    shouldMask = (rIdx > zoomIdx) && (panel.hideUntilReached !== false);
+                  }
+
+                  if (!shouldMask) return null;
+
+                  const maskLeft = imgLeft + (zoom.x / 100) * imgWidth;
+                  const maskTop = imgTop + (zoom.y / 100) * imgHeight;
+                  const maskWidth = (zoom.w / 100) * imgWidth;
+                  const maskHeight = (zoom.h / 100) * imgHeight;
+
+                  return (
+                    <motion.div
+                      key={`spoiler-mask-${pIdx}-${rIdx}`}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.35 }}
+                      className="absolute bg-zinc-950/95 border-2 border-zinc-900 flex flex-col items-center justify-center text-zinc-500 select-none overflow-hidden"
+                      style={{
+                        left: maskLeft,
+                        top: maskTop,
+                        width: maskWidth,
+                        height: maskHeight,
+                        zIndex: 20,
+                        boxShadow: "inset 0 0 24px rgba(0,0,0,0.95), 0 4px 10px rgba(0,0,0,0.5)",
+                      }}
+                    >
+                      <motion.div
+                        animate={{ opacity: [0.5, 0.9, 0.5] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                        className="flex flex-col items-center gap-1.5"
+                      >
+                        <span className="font-[var(--font-bangers)] text-[10px] sm:text-xs tracking-wider text-zinc-600">
+                          🤫 VIÑETA RESERVADA
+                        </span>
+                      </motion.div>
+                    </motion.div>
+                  );
+                });
+              })
+            )}
+          </AnimatePresence>
 
           {/* ── Dialogues Layer ── */}
           <div
@@ -792,7 +950,7 @@ export function CinematicReader({
           setActivePanelIdx={setActivePanelIdx}
           setActiveBubbleIdx={setActiveBubbleIdx}
           handleRemovePanel={handleRemovePanel}
-          handleUpdateFocusY={handleUpdateFocusY}
+          handleUpdatePanelParams={handleUpdatePanelParams}
           handleAddBubble={handleAddBubble}
           handleRemoveBubble={handleRemoveBubble}
           handleUpdateBubble={handleUpdateBubble}

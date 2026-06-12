@@ -116,11 +116,19 @@
           "focusY": 0.15,
           "dialogue": [
             {
-              "text": "Conozco un lugar perfecto para chicas como tú...",
+              "text": "A esta dirección, por favor.",
+              "speaker": "Sofi",
+              "style": "normal",
+              "posX": 30,
+              "posY": 10,
+              "tail": "bottom-right"
+            },
+            {
+              "text": "Yes, miss. Conozco un lugar perfecto para chicas como tú...",
               "speaker": "Taxista",
               "style": "normal",
               "posX": 60,
-              "posY": 15,
+              "posY": 18,
               "tail": "bottom-left"
             }
           ]
@@ -133,9 +141,20 @@
     "4": {
       "panels": [
         { "focusY": 0.15, "dialogue": [] },
-        { "focusY": 0.30, "dialogue": [] },
-        { "focusY": 0.45, "dialogue": [] },
-        { "focusY": 0.60, "dialogue": [] },
+        { "focusY": 0.35, "dialogue": [] },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            {
+              "text": "¡Ey! ¡Este no es el camino! —*(Respiración agitada)*—",
+              "speaker": "Sofi",
+              "style": "normal",
+              "posX": 35,
+              "posY": 52,
+              "tail": "bottom-right"
+            }
+          ]
+        },
         { "focusY": 0.75, "dialogue": [] },
         { "focusY": 0.90, "dialogue": [] }
       ]
@@ -144,18 +163,66 @@
       "panels": [
         { "focusY": 0.14, "dialogue": [] },
         { "focusY": 0.28, "dialogue": [] },
-        { "focusY": 0.42, "dialogue": [] },
+        {
+          "focusY": 0.42,
+          "dialogue": [
+            {
+              "text": "¡Soltame, hijo de puta!",
+              "speaker": "Sofi",
+              "style": "scream",
+              "posX": 30,
+              "posY": 38,
+              "tail": "bottom-right"
+            }
+          ]
+        },
         { "focusY": 0.56, "dialogue": [] },
-        { "focusY": 0.70, "dialogue": [] },
+        {
+          "focusY": 0.70,
+          "dialogue": [
+            {
+              "text": "—*(Grito ahogado de dolor)*—",
+              "speaker": "Taxista",
+              "style": "scream",
+              "posX": 65,
+              "posY": 68,
+              "tail": "bottom-left"
+            }
+          ]
+        },
         { "focusY": 0.84, "dialogue": [] },
         { "focusY": 0.95, "dialogue": [] }
       ]
     },
     "6": {
       "panels": [
-        { "focusY": 0.15, "dialogue": [] },
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "Adelante, adelante. Pasá, que la tormenta está terrible.",
+              "speaker": "Kenji",
+              "style": "normal",
+              "posX": 60,
+              "posY": 12,
+              "tail": "bottom-left"
+            }
+          ]
+        },
         { "focusY": 0.30, "dialogue": [] },
-        { "focusY": 0.45, "dialogue": [] },
+        {
+          "focusY": 0.45,
+          "dialogue": [
+            {
+              "text": "Sentate acá. Estás empapada.",
+              "speaker": "Kenji",
+              "style": "normal",
+              "posX": 55,
+              "posY": 42,
+              "tail": "bottom-left"
+            }
+          ]
+        },
         {
           "focusY": 0.60,
           "dialogue": [
@@ -179,10 +246,30 @@
               "posX": 30,
               "posY": 72,
               "tail": "bottom-right"
+            },
+            {
+              "text": "Tomá. Comé esto, te va a devolver el alma al cuerpo.",
+              "speaker": "Kenji",
+              "style": "normal",
+              "posX": 65,
+              "posY": 70,
+              "tail": "bottom-left"
             }
           ]
         },
-        { "focusY": 0.90, "dialogue": [] }
+        {
+          "focusY": 0.90,
+          "dialogue": [
+            {
+              "text": "Gracias...",
+              "speaker": "Sofi",
+              "style": "normal",
+              "posX": 35,
+              "posY": 86,
+              "tail": "bottom-right"
+            }
+          ]
+        }
       ]
     },
     "7": {
@@ -208,17 +295,41 @@
     },
     "8": {
       "panels": [
-        { "focusY": 0.15, "dialogue": [] },
-        { "focusY": 0.40, "dialogue": [] },
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "¡¿Dónde está la plata, viejo?!",
+              "speaker": "Matón Yakuza",
+              "style": "scream",
+              "posX": 40,
+              "posY": 12,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        {
+          "focusY": 0.40,
+          "dialogue": [
+            {
+              "text": "Les dije que la semana que viene...",
+              "speaker": "Kenji",
+              "style": "whisper",
+              "posX": 60,
+              "posY": 35,
+              "tail": "bottom-left"
+            }
+          ]
+        },
         {
           "focusY": 0.65,
           "dialogue": [
             {
-              "text": "Tenés quince días para pagar la deuda, viejo miserable, o la próxima te quebramos el cuello.",
+              "text": "¡Las pelotas la semana que viene! Tenés quince días para pagar la deuda, viejo miserable, o la próxima te quebramos el cuello.",
               "speaker": "Matón Yakuza",
               "style": "scream",
               "posX": 45,
-              "posY": 70,
+              "posY": 62,
               "tail": "bottom-left"
             }
           ]
@@ -228,8 +339,32 @@
     },
     "9": {
       "panels": [
-        { "focusY": 0.15, "dialogue": [] },
-        { "focusY": 0.40, "dialogue": [] },
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "La próxima vez te quemamos el local con vos adentro. Acordate.",
+              "speaker": "Matón Yakuza",
+              "style": "normal",
+              "posX": 45,
+              "posY": 12,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        {
+          "focusY": 0.40,
+          "dialogue": [
+            {
+              "text": "¡Ay, Dios! ¿Estás bien?",
+              "speaker": "Sofi",
+              "style": "normal",
+              "posX": 30,
+              "posY": 35,
+              "tail": "bottom-right"
+            }
+          ]
+        },
         {
           "focusY": 0.65,
           "dialogue": [
@@ -239,6 +374,14 @@
               "style": "normal",
               "posX": 55,
               "posY": 48,
+              "tail": "bottom-left"
+            },
+            {
+              "text": "No viste nada. ¿Me escuchaste? No te metas en esto, vos no sos de acá.",
+              "speaker": "Kenji",
+              "style": "normal",
+              "posX": 60,
+              "posY": 65,
               "tail": "bottom-left"
             }
           ]
@@ -322,17 +465,89 @@
     },
     "12": {
       "panels": [
-        { "focusY": 0.15, "dialogue": [] },
-        { "focusY": 0.35, "dialogue": [] },
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "¡Ciento uno, marchando!",
+              "speaker": "Kenji",
+              "style": "normal",
+              "posX": 60,
+              "posY": 12,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        {
+          "focusY": 0.35,
+          "dialogue": [
+            {
+              "text": "¡Acá tenés, cuidado que quema!",
+              "speaker": "Sofi",
+              "style": "normal",
+              "posX": 30,
+              "posY": 30,
+              "tail": "bottom-right"
+            }
+          ]
+        },
         { "focusY": 0.55, "dialogue": [] },
-        { "focusY": 0.75, "dialogue": [] },
-        { "focusY": 0.92, "dialogue": [] }
+        {
+          "focusY": 0.75,
+          "dialogue": [
+            {
+              "text": "Y entonces el tipo me dice... ¡caldo caliente!",
+              "speaker": "Kenji",
+              "style": "normal",
+              "posX": 55,
+              "posY": 70,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        {
+          "focusY": 0.92,
+          "dialogue": [
+            {
+              "text": "—*(Risas)*—",
+              "speaker": "Sofi",
+              "style": "normal",
+              "posX": 35,
+              "posY": 88,
+              "tail": "bottom-right"
+            }
+          ]
+        }
       ]
     },
     "13": {
       "panels": [
-        { "focusY": 0.20, "dialogue": [] },
-        { "focusY": 0.55, "dialogue": [] },
+        {
+          "focusY": 0.20,
+          "dialogue": [
+            {
+              "text": "Volví, conseguí las verdur...",
+              "speaker": "Sofi",
+              "style": "normal",
+              "posX": 30,
+              "posY": 15,
+              "tail": "bottom-right"
+            }
+          ]
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            {
+              "text": "Te avisamos, viejo tonto.",
+              "speaker": "Matón Yakuza",
+              "style": "normal",
+              "posX": 60,
+              "posY": 50,
+              "tail": "bottom-left"
+            }
+          ]
+        },
         {
           "focusY": 0.85,
           "dialogue": [
@@ -433,17 +648,203 @@
         { "focusY": 0.85, "dialogue": [] }
       ]
     },
-    "19": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
-    "20": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
-    "21": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
-    "22": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
-    "23": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
-    "24": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
-    "25": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
-    "26": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
-    "27": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
-    "28": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
-    "29": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] },
-    "30": { "panels": [{ "focusY": 0.15, "dialogue": [] }, { "focusY": 0.50, "dialogue": [] }, { "focusY": 0.82, "dialogue": [] }] }
+    "19": {
+      "panels": [
+        { "focusY": 0.15, "dialogue": [] },
+        { "focusY": 0.50, "dialogue": [] },
+        { "focusY": 0.82, "dialogue": [] }
+      ]
+    },
+    "20": {
+      "panels": [
+        { "focusY": 0.15, "dialogue": [] },
+        { "focusY": 0.40, "dialogue": [] },
+        { "focusY": 0.65, "dialogue": [] },
+        { "focusY": 0.90, "dialogue": [] }
+      ]
+    },
+    "21": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "Tecnología de primer nivel. El gobierno los deja operar para 'mantener las calles seguras', pero son mercenarios.",
+              "speaker": "Ian",
+              "style": "thought",
+              "posX": 40,
+              "posY": 10,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        { "focusY": 0.40, "dialogue": [] },
+        {
+          "focusY": 0.65,
+          "dialogue": [
+            {
+              "text": "Y Los Pibes... mirando las estrellas.",
+              "speaker": "Ian",
+              "style": "thought",
+              "posX": 45,
+              "posY": 60,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        { "focusY": 0.90, "dialogue": [] }
+      ]
+    },
+    "22": {
+      "panels": [
+        { "focusY": 0.15, "dialogue": [] },
+        { "focusY": 0.40, "dialogue": [] },
+        { "focusY": 0.65, "dialogue": [] },
+        { "focusY": 0.90, "dialogue": [] }
+      ]
+    },
+    "23": {
+      "panels": [
+        { "focusY": 0.15, "dialogue": [] },
+        { "focusY": 0.40, "dialogue": [] },
+        {
+          "focusY": 0.65,
+          "dialogue": [
+            {
+              "text": "Vision, activa los servidores secundarios. Tenemos trabajo.",
+              "speaker": "Ian",
+              "style": "normal",
+              "posX": 45,
+              "posY": 60,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        { "focusY": 0.90, "dialogue": [] }
+      ]
+    },
+    "24": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "Archivos cargados, creador. Patrones de patrulla de R.E.G.U.L.A.R. identificados. ¿Iniciamos simulación táctica?",
+              "speaker": "Vision",
+              "style": "electronic",
+              "posX": 50,
+              "posY": 12
+            }
+          ]
+        },
+        {
+          "focusY": 0.40,
+          "dialogue": [
+            {
+              "text": "No, Vision. Esta noche no hay simulación. Empezá a forjar las piezas de anclaje para los guanteletes. Nos movemos.",
+              "speaker": "Ian",
+              "style": "normal",
+              "posX": 45,
+              "posY": 35,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        { "focusY": 0.65, "dialogue": [] },
+        { "focusY": 0.90, "dialogue": [] }
+      ]
+    },
+    "25": {
+      "panels": [
+        { "focusY": 0.15, "dialogue": [] },
+        { "focusY": 0.40, "dialogue": [] },
+        { "focusY": 0.65, "dialogue": [] },
+        { "focusY": 0.90, "dialogue": [] }
+      ]
+    },
+    "26": {
+      "panels": [
+        { "focusY": 0.15, "dialogue": [] },
+        { "focusY": 0.40, "dialogue": [] },
+        { "focusY": 0.65, "dialogue": [] },
+        { "focusY": 0.90, "dialogue": [] }
+      ]
+    },
+    "27": {
+      "panels": [
+        { "focusY": 0.15, "dialogue": [] },
+        { "focusY": 0.40, "dialogue": [] },
+        { "focusY": 0.65, "dialogue": [] },
+        { "focusY": 0.90, "dialogue": [] }
+      ]
+    },
+    "28": {
+      "panels": [
+        { "focusY": 0.15, "dialogue": [] },
+        {
+          "focusY": 0.40,
+          "dialogue": [
+            {
+              "text": "No pueden saber quién soy. No es por mí... Si me rastrean, pongo en peligro a Los Pibes. A mi familia. Esta noche, Ian se queda acá adentro.",
+              "speaker": "Ian",
+              "style": "normal",
+              "posX": 40,
+              "posY": 35,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        { "focusY": 0.65, "dialogue": [] },
+        { "focusY": 0.90, "dialogue": [] }
+      ]
+    },
+    "29": {
+      "panels": [
+        { "focusY": 0.15, "dialogue": [] },
+        { "focusY": 0.40, "dialogue": [] },
+        { "focusY": 0.65, "dialogue": [] },
+        {
+          "focusY": 0.90,
+          "dialogue": [
+            {
+              "text": "Si la ley no nos protege del dragón, entonces nosotros seremos la tormenta. Es hora de volar.",
+              "speaker": "Ian",
+              "style": "thought",
+              "posX": 45,
+              "posY": 85,
+              "tail": "bottom-left"
+            }
+          ]
+        }
+      ]
+    },
+    "30": {
+      "panels": [
+        { "focusY": 0.15, "dialogue": [] },
+        { "focusY": 0.40, "dialogue": [] },
+        { "focusY": 0.65, "dialogue": [] },
+        { "focusY": 0.90, "dialogue": [] }
+      ]
+    },
+    "31": {
+      "panels": [
+        { "focusY": 0.15, "dialogue": [] },
+        {
+          "focusY": 0.40,
+          "dialogue": [
+            {
+              "text": "¡Volvo, pará! ¡No es lo que parece, dejame explicarte!",
+              "speaker": "Mati",
+              "style": "scream",
+              "posX": 40,
+              "posY": 35,
+              "tail": "bottom-left"
+            }
+          ]
+        },
+        { "focusY": 0.65, "dialogue": [] },
+        { "focusY": 0.90, "dialogue": [] }
+      ]
+    }
   }
 }

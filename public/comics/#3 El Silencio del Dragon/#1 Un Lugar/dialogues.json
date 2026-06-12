@@ -29,7 +29,15 @@
               "tailX": 65,
               "tailY": 15
             }
-          ]
+          ],
+          "zoomRect": {
+            "x": 53,
+            "y": 50,
+            "w": 43,
+            "h": 17
+          },
+          "duration": 2.5,
+          "hideUntilReached": true
         },
         {
           "focusY": 0.45,
@@ -45,7 +53,16 @@
             }
           ]
         },
-        {"focusY": 0.7, "dialogue": []},
+        {
+          "focusY": 0.7,
+          "dialogue": [],
+          "zoomRect": {
+            "x": 1,
+            "y": 68,
+            "w": 41,
+            "h": 10
+          }
+        },
         {"focusY": 0.9, "dialogue": []},
         {"focusY": 0.5, "dialogue": []}
       ]

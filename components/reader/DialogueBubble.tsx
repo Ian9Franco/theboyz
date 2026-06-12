@@ -12,6 +12,8 @@ export type DialogueLine = {
   size?: "small" | "medium" | "large";
   customColor?: string;
   customBg?: string;
+  textColor?: string;    // Custom text/typography color in hex
+  fontFamily?: "marker" | "bangers" | "mono" | "sans" | "serif"; // Custom font
   width?: number;        // Custom max-width in pixels
   fontSize?: number;     // Custom font-size in pixels
   borderRadius?: number; // Custom border-radius in pixels
@@ -166,6 +168,12 @@ export function DialogueBubble({
     const captionBorderColor = line.customColor || "#0a0a0f";
     const captionSpeakerColor = getSpeakerColor(line.speaker, "#e8185a");
     
+    let fontClass = "font-[var(--font-marker)]";
+    if (line.fontFamily === "bangers") fontClass = "font-[var(--font-bangers)]";
+    else if (line.fontFamily === "mono") fontClass = "font-mono";
+    else if (line.fontFamily === "sans") fontClass = "font-sans";
+    else if (line.fontFamily === "serif") fontClass = "font-serif";
+    
     let captionSizeClass = "text-sm sm:text-base px-3.5 py-2";
     if (size === "small") {
       captionSizeClass = "text-xs px-2.5 py-1.5";
@@ -182,6 +190,7 @@ export function DialogueBubble({
     };
     if (line.fontSize) captionStyles.fontSize = `${line.fontSize}px`;
     if (line.width) captionStyles.maxWidth = `${line.width}px`;
+    if (line.textColor) captionStyles.color = line.textColor;
 
     const wrapperStyles: React.CSSProperties = {
       pointerEvents: "none",
@@ -196,7 +205,11 @@ export function DialogueBubble({
         exit={{ opacity: 0, y: -8 }}
         transition={{ delay: index * 0.8, duration: 0.25, ease: "easeOut" }}
         className={`caption leading-snug text-left max-w-sm ${captionSizeClass}`}
-        style={{ ...captionStyles, ...wrapperStyles }}
+        style={{
+          ...captionStyles,
+          ...wrapperStyles,
+          filter: "drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.15))",
+        }}
       >
         {line.speaker && (
           <div 
@@ -208,7 +221,7 @@ export function DialogueBubble({
         )}
         <div className="flex flex-col gap-2">
           {paragraphs.map((p, i) => (
-            <div key={i} className="text-stone-800 font-[var(--font-marker)]">
+            <div key={i} className={`text-stone-800 ${fontClass}`} style={line.textColor ? { color: line.textColor } : undefined}>
               {p.speaker && <strong style={{ color: captionBorderColor }}>{p.speaker}: </strong>}
               {p.text}
             </div>
@@ -222,9 +235,17 @@ export function DialogueBubble({
   let bgColor = line.customBg || "#ffffff";
   let borderColor = line.customColor || "#0a0a0f";
   let borderStyle = `1.5px solid ${borderColor}`; // Thinner border for cleaner look
-  let bubbleClass = "font-[var(--font-marker)] text-[#0a0a0f]";
-  let shadowStyle = "none"; // Flat design by default
   let speakerColor = getSpeakerColor(line.speaker, "#e8185a");
+
+  // Determine font family class
+  let fontClass = "font-[var(--font-marker)]";
+  if (line.fontFamily === "bangers") fontClass = "font-[var(--font-bangers)]";
+  else if (line.fontFamily === "mono") fontClass = "font-mono";
+  else if (line.fontFamily === "sans") fontClass = "font-sans";
+  else if (line.fontFamily === "serif") fontClass = "font-serif";
+
+  let bubbleClass = `${fontClass} text-[#0a0a0f]`;
+  let shadowStyle = "none"; // Flat design by default
 
   // Size styling classes for padding/margins
   let sizeClass = "px-3.5 py-2 rounded-2xl text-sm sm:text-base leading-snug";
@@ -239,7 +260,7 @@ export function DialogueBubble({
     borderColor = line.customColor || "#0a0a0f";
     borderStyle = `2.5px solid ${borderColor}`; // slightly thinner
     shadowStyle = `4px 4px 0 ${line.customColor || "#e8185a"}`;
-    bubbleClass = "font-[var(--font-bangers)] text-[#0a0a0f] uppercase tracking-wide leading-tight";
+    bubbleClass = `${line.fontFamily ? fontClass : "font-[var(--font-bangers)]"} text-[#0a0a0f] uppercase tracking-wide leading-tight`;
     
     if (size === "small") {
       sizeClass = "px-4 py-2.5 rounded text-xs sm:text-sm";
@@ -253,7 +274,7 @@ export function DialogueBubble({
     borderColor = line.customColor || "#a1a1aa";
     borderStyle = `1.5px dashed ${borderColor}`; // thinner dashed
     shadowStyle = "none";
-    bubbleClass = "font-[var(--font-marker)] italic text-zinc-500";
+    bubbleClass = `${line.fontFamily ? fontClass : "font-[var(--font-marker)]"} italic text-zinc-500`;
     speakerColor = getSpeakerColor(line.speaker, "#a1a1aa");
 
     if (size === "small") {
@@ -268,7 +289,7 @@ export function DialogueBubble({
     borderColor = line.customColor || "#00f0ff";
     borderStyle = `1.5px solid ${borderColor}`; // thinner border
     shadowStyle = `0 0 8px ${borderColor}59`; // subtle glow
-    bubbleClass = "font-mono text-[#00f0ff]";
+    bubbleClass = `${line.fontFamily ? fontClass : "font-mono"} text-[#00f0ff]`;
     speakerColor = getSpeakerColor(line.speaker, borderColor);
 
     if (size === "small") {
@@ -328,6 +349,7 @@ export function DialogueBubble({
     };
     if (line.fontSize) thoughtStyles.fontSize = `${line.fontSize}px`;
     if (line.width) thoughtStyles.maxWidth = `${line.width}px`;
+    if (line.textColor) thoughtStyles.color = line.textColor;
 
     const wrapperStyles: React.CSSProperties = {
       pointerEvents: "none",
@@ -342,11 +364,15 @@ export function DialogueBubble({
         exit={{ opacity: 0, scale: 0.8 }}
         transition={{ delay: index * 0.8, type: "spring", stiffness: 250, damping: 18 }}
         className="relative max-w-sm"
-        style={{ ...wrapperStyles, pointerEvents: "none" }}
+        style={{
+          ...wrapperStyles,
+          pointerEvents: "none",
+          filter: "drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.20))",
+        }}
       >
         {renderThoughtDots()}
         <div
-          className={`font-[var(--font-marker)] text-[#0a0a0f] ${thoughtSizeClass}`}
+          className={`${bubbleClass} ${thoughtSizeClass}`}
           style={thoughtStyles}
         >
           {line.speaker && (
@@ -386,6 +412,7 @@ export function DialogueBubble({
   };
   if (line.fontSize) bubbleStyles.fontSize = `${line.fontSize}px`;
   if (line.width) bubbleStyles.maxWidth = `${line.width}px`;
+  if (line.textColor) bubbleStyles.color = line.textColor;
 
   return (
     <motion.div
@@ -395,7 +422,10 @@ export function DialogueBubble({
       exit={{ opacity: 0, scale: 0.75, y: 8 }}
       transition={{ delay: index * 0.8, type: "spring", stiffness: 280, damping: 20 }}
       className="relative max-w-sm"
-      style={wrapperStyles}
+      style={{
+        ...wrapperStyles,
+        filter: "drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.20))",
+      }}
     >
       {/* Dynamic CSS Tail Triangles (for non-elastic classic tails) */}
       {!hasElasticTail && tail && (
@@ -429,7 +459,10 @@ export function DialogueBubble({
       {/* Bubble body (Text Container) */}
       <div
         className={`${bubbleClass} ${sizeClass} relative z-10`}
-        style={hasElasticTail ? { ...bubbleStyles, border: 'none', backgroundColor: 'transparent', boxShadow: 'none' } : bubbleStyles}
+        style={{
+          ...(hasElasticTail ? { ...bubbleStyles, border: 'none', backgroundColor: 'transparent', boxShadow: 'none' } : bubbleStyles),
+          color: line.textColor
+        }}
       >
         <div className="relative z-10">
           {line.speaker && (
