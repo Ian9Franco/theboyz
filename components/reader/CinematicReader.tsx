@@ -63,6 +63,7 @@ export function CinematicReader({
   // Editor States
   const [activePanelIdx, setActivePanelIdx] = useState(0);
   const [activeBubbleIdx, setActiveBubbleIdx] = useState<number | null>(null);
+  const [undoStack, setUndoStack] = useState<Dialogues[]>([]);
   const [isSaving, setIsSaving] = useState(false);
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
 
@@ -94,6 +95,28 @@ export function CinematicReader({
       setLocalDialogues({ pages: {} });
     }
   }, [dialogues]);
+
+  // History stack handlers
+  const handleUndo = useCallback(() => {
+    if (undoStack.length === 0) return;
+    const previousState = undoStack[undoStack.length - 1];
+    setUndoStack(prev => prev.slice(0, -1));
+    setLocalDialogues(previousState);
+    setActiveBubbleIdx(null);
+  }, [undoStack]);
+
+  // Keyboard shortcut listener for Ctrl+Z
+  useEffect(() => {
+    if (mode !== "edit") return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z") {
+        e.preventDefault();
+        handleUndo();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mode, handleUndo]);
 
   // Lock body scroll
   useEffect(() => {
@@ -309,6 +332,8 @@ export function CinematicReader({
   };
 
   const updateDialoguesState = (newPages: Record<string, PageData>) => {
+    // Save snapshot before mutating
+    setUndoStack(prev => [...prev.slice(-49), JSON.parse(JSON.stringify(localDialogues))]);
     setLocalDialogues(prev => ({
       ...prev,
       pages: newPages,
@@ -343,19 +368,30 @@ export function CinematicReader({
     updateDialoguesState(updatedPages);
   };
 
-  const handleAddBubble = (pIdx: number) => {
+  const handleAddBubble = (pIdx: number, defaultPosition?: { posX: number; posY: number }) => {
     const updatedPages = { ...localDialogues.pages };
     const pg = { ...currentPageData };
     const panelsCopy = [...(pg.panels || [])];
     const targetPanel = { ...panelsCopy[pIdx] };
     const dialoguesCopy = targetPanel.dialogue ? [...targetPanel.dialogue] : [];
 
+    const posX = defaultPosition ? defaultPosition.posX : 50;
+    const posY = defaultPosition ? defaultPosition.posY : Math.round(targetPanel.focusY * 100);
+
     dialoguesCopy.push({
       text: "Nuevo diálogo",
       speaker: "",
       style: "normal",
-      posX: 50,
-      posY: Math.round(targetPanel.focusY * 100),
+      size: "small",
+      posX,
+      posY,
+      tailX: posX,
+      tailY: posY + 15,
+      tailWidth: 6,
+      tailCurvature: -22,
+      width: 120,
+      fontSize: 9,
+      borderRadius: 18,
     });
 
     targetPanel.dialogue = dialoguesCopy;
@@ -394,7 +430,21 @@ export function CinematicReader({
     const targetPanel = { ...panelsCopy[pIdx] };
     const dialoguesCopy = targetPanel.dialogue ? [...targetPanel.dialogue] : [];
 
-    targetPanel.dialogue = dialoguesCopy.filter((_, idx) => idx !== bIdx);
+    const filteredDialogues = dialoguesCopy.filter((_, idx) => idx !== bIdx);
+    
+    // Adjust linkedTo references
+    const adjustedDialogues = filteredDialogues.map((bub) => {
+      if (bub.linkedTo === undefined) return bub;
+      if (bub.linkedTo === bIdx) {
+        return { ...bub, linkedTo: undefined };
+      }
+      if (bub.linkedTo > bIdx) {
+        return { ...bub, linkedTo: bub.linkedTo - 1 };
+      }
+      return bub;
+    });
+
+    targetPanel.dialogue = adjustedDialogues;
     panelsCopy[pIdx] = targetPanel;
     pg.panels = panelsCopy;
     updatedPages[pgKey] = pg;
@@ -477,40 +527,6 @@ export function CinematicReader({
    * Compute the point on the edge of the bubble (estimated as an ellipse/rect)
    * in the direction of the anchor target. Returns {x, y} in screen pixels.
    */
-  const getBubbleEdgePoint = (
-    centerX: number,
-    centerY: number,
-    targetX: number,
-    targetY: number,
-    halfW: number,
-    halfH: number,
-  ) => {
-    const dx = targetX - centerX;
-    const dy = targetY - centerY;
-    if (Math.abs(dx) < 0.01 && Math.abs(dy) < 0.01) return { x: centerX, y: centerY + halfH };
-    // Parametric intersection with ellipse: (x/hw)^2 + (y/hh)^2 = 1, x=t*dx, y=t*dy
-    // t = 1 / sqrt((dx/hw)^2 + (dy/hh)^2)
-    const t = 1 / Math.sqrt((dx / halfW) ** 2 + (dy / halfH) ** 2);
-    return { x: centerX + t * dx, y: centerY + t * dy };
-  };
-
-  // Estimate bubble half-dimensions from width/fontSize settings (approximate)
-  const estimateBubbleSize = (line: DialogueLine) => {
-    const w = line.width ?? 200;
-    // Height is roughly proportional to text length and font size
-    const fontSize = line.fontSize ?? 14;
-    const charPerLine = Math.max(1, w / (fontSize * 0.55));
-    const lines = Math.ceil((line.text?.length ?? 20) / charPerLine) + (line.speaker ? 1 : 0);
-    const h = lines * (fontSize * 1.5) + 16; // +padding
-    return { halfW: w / 2, halfH: h / 2 };
-  };
-
-  /**
-   * Build the SVG path for an elastic tail.
-   * Originates from the BUBBLE CENTER so the bubble body (higher z-index)
-   * naturally masks the wide base, guaranteeing a seamless visual connection
-   * regardless of the bubble's actual rendered size.
-   */
   const buildTailPath = (
     bubbleCenterX: number,
     bubbleCenterY: number,
@@ -542,27 +558,172 @@ export function CinematicReader({
     return `M ${bLX} ${bLY} Q ${cx} ${cy} ${targetX} ${targetY} Q ${cx} ${cy} ${bRX} ${bRY}`;
   };
 
-  
+  // Estimate bubble half-dimensions from width/fontSize settings (approximate)
+  const estimateBubbleSize = (line: DialogueLine) => {
+    const w = line.width ?? 200;
+    // Height is roughly proportional to text length and font size
+    const fontSize = line.fontSize ?? 14;
+    const charPerLine = Math.max(1, w / (fontSize * 0.55));
+    const lines = Math.ceil((line.text?.length ?? 20) / charPerLine) + (line.speaker ? 1 : 0);
+    const h = lines * (fontSize * 1.5) + 16; // +padding
+    return { halfW: w / 2, halfH: h / 2 };
+  };
 
+
+  // Find if a point is inside another dialogue bubble
+  const findTargetBubble = (
+    tx: number, // Target X in percentage (0-100)
+    ty: number, // Target Y in percentage (0-100)
+    dialogues: DialogueLine[],
+    sourceIdx: number
+  ): { index: number; line: DialogueLine } | null => {
+    if (!imgWidth || !imgHeight) return null;
+    const txPx = imgLeft + (tx / 100) * imgWidth;
+    const tyPx = imgTop + (ty / 100) * imgHeight;
+
+    for (let i = 0; i < dialogues.length; i++) {
+      if (i === sourceIdx) continue;
+      const line = dialogues[i];
+      const cx = line.posX ?? 50;
+      const cy = line.posY ?? 50;
+      const size = estimateBubbleSize(line);
+
+      const cxPx = imgLeft + (cx / 100) * imgWidth;
+      const cyPx = imgTop + (cy / 100) * imgHeight;
+
+      const dx = txPx - cxPx;
+      const dy = tyPx - cyPx;
+
+      // Ellipse test: (dx / radiusX)^2 + (dy / radiusY)^2 <= 1
+      // 10% safety margin for target drop accuracy
+      const radiusX = size.halfW * 1.1;
+      const radiusY = size.halfH * 1.1;
+
+      if ((dx / radiusX) ** 2 + (dy / radiusY) ** 2 <= 1) {
+        return { index: i, line };
+      }
+    }
+    return null;
+  };
+
+  // Synchronized delay groups calculation based on anchor collisions
+  const getEffectiveIndexes = (dialogue: DialogueLine[]): number[] => {
+    const n = dialogue.length;
+    if (n === 0) return [];
+
+    const adj: number[][] = Array.from({ length: n }, () => []);
+    for (let i = 0; i < n; i++) {
+      const line = dialogue[i];
+      if (line.tailX !== undefined && line.tailY !== undefined) {
+        const target = findTargetBubble(line.tailX, line.tailY, dialogue, i);
+        if (target) {
+          adj[i].push(target.index);
+          adj[target.index].push(i);
+        }
+      }
+    }
+
+    const visited = new Set<number>();
+    const components: number[][] = [];
+
+    for (let i = 0; i < n; i++) {
+      if (!visited.has(i)) {
+        const component: number[] = [];
+        const queue = [i];
+        visited.add(i);
+        while (queue.length > 0) {
+          const u = queue.shift()!;
+          component.push(u);
+          for (const v of adj[u]) {
+            if (!visited.has(v)) {
+              visited.add(v);
+              queue.push(v);
+            }
+          }
+        }
+        component.sort((a, b) => a - b);
+        components.push(component);
+      }
+    }
+
+    components.sort((a, b) => a[0] - b[0]);
+
+    const effectiveIdx = new Array(n).fill(0);
+    for (let compIdx = 0; compIdx < components.length; compIdx++) {
+      for (const u of components[compIdx]) {
+        effectiveIdx[u] = compIdx;
+      }
+    }
+
+    return effectiveIdx;
+  };
+
+  // buildTailSVGPaths removed.
 
   // Rendered Dialogues Helper
   const renderedDialogues = (() => {
     if (mode === "read") {
-      return activePanel.dialogue?.map((line, i) => {
+      const dialogueList = activePanel.dialogue || [];
+      const effectiveIndexes = getEffectiveIndexes(dialogueList);
+
+      return dialogueList.map((line, i) => {
         const posX = line.posX ?? 50;
         const posY = line.posY ?? (activePanel.focusY * 100);
         const bubbleLeft = imgLeft + (posX / 100) * imgWidth;
         const bubbleTop = imgTop + (posY / 100) * imgHeight;
         const targetX = line.tailX !== undefined ? imgLeft + (line.tailX / 100) * imgWidth : null;
         const targetY = line.tailY !== undefined ? imgTop + (line.tailY / 100) * imgHeight : null;
+        const effIdx = effectiveIndexes[i] ?? i;
+
+        // Check if this bubble is a target of any other bubble's tail in the same panel
+        const isTargetOfAny = dialogueList.some((otherLine, otherIdx) => {
+          if (otherIdx === i) return false;
+          if (otherLine.tailX === undefined || otherLine.tailY === undefined) return false;
+          const target = findTargetBubble(otherLine.tailX, otherLine.tailY, dialogueList, otherIdx);
+          return target && target.index === i;
+        });
 
         let elasticTailNode = null;
         if (targetX !== null && targetY !== null) {
           const { bgColor } = getBubbleStyles(line);
-          const d = buildTailPath(0, 0, targetX - bubbleLeft, targetY - bubbleTop, line);
+          const target = findTargetBubble(line.tailX!, line.tailY!, dialogueList, i);
+          
+          let finalTargetX = targetX - bubbleLeft;
+          let finalTargetY = targetY - bubbleTop;
+          
+          if (target) {
+            // It connects to another bubble!
+            // Calculate the edge point of target bubble B
+            const targetLine = target.line;
+            const targetPosX = targetLine.posX ?? 50;
+            const targetPosY = targetLine.posY ?? (activePanel.focusY * 100);
+            const targetLeft = imgLeft + (targetPosX / 100) * imgWidth;
+            const targetTop = imgTop + (targetPosY / 100) * imgHeight;
+            
+            // Vector from A's center to B's center in local coordinates of A
+            const bx = targetLeft - bubbleLeft;
+            const by = targetTop - bubbleTop;
+            const dist = Math.sqrt(bx * bx + by * by);
+            
+            if (dist > 0.01) {
+              const targetSize = estimateBubbleSize(targetLine);
+              const t = 1 / Math.sqrt((bx / targetSize.halfW) ** 2 + (by / targetSize.halfH) ** 2);
+              
+              // Intersection point on B's ellipse relative to A's center
+              const edgeX = bx - bx * t;
+              const edgeY = by - by * t;
+              
+              // Penetrate 10px inside B
+              finalTargetX = edgeX + (bx / dist) * 10;
+              finalTargetY = edgeY + (by / dist) * 10;
+            }
+          }
+
+          const d = buildTailPath(0, 0, finalTargetX, finalTargetY, line);
           if (d) {
             elasticTailNode = (
-              <svg className="absolute pointer-events-none overflow-visible" style={{ left: '50%', top: '50%', zIndex: 0 }}>
+              <svg className="absolute pointer-events-none overflow-visible" style={{ left: "50%", top: "50%", zIndex: 0 }}>
+                {/* No stroke here! We rely on the drop-shadow filter in DialogueBubble to outline the combined shape */}
                 <path d={d} fill={bgColor} stroke="none" strokeWidth={0} />
               </svg>
             );
@@ -572,38 +733,82 @@ export function CinematicReader({
         return (
           <div
             key={`read-bub-${i}`}
-            className="absolute pointer-events-none z-30"
+            className="absolute pointer-events-none"
             style={{
               left: bubbleLeft,
               top: bubbleTop,
               transform: "translate(-50%, -50%)",
               width: "max-content",
+              zIndex: isTargetOfAny ? 29 : 30,
             }}
           >
-            <DialogueBubble line={line} index={i} elasticTailNode={elasticTailNode} />
+            <DialogueBubble line={line} index={effIdx} elasticTailNode={elasticTailNode} />
           </div>
         );
-      }) || [];
+      });
     }
 
     return currentPanels.flatMap((panel, pIdx) => {
-      return (panel.dialogue || []).map((line, bIdx) => {
+      const dialogueList = panel.dialogue || [];
+      return dialogueList.map((line, bIdx) => {
         const isActive = activePanelIdx === pIdx && activeBubbleIdx === bIdx;
         const posX = line.posX ?? 50;
         const posY = line.posY ?? (panel.focusY * 100);
-        const targetX = line.tailX !== undefined ? imgLeft + (line.tailX / 100) * imgWidth : null;
-        const targetY = line.tailY !== undefined ? imgTop + (line.tailY / 100) * imgHeight : null;
         const bubbleLeft = imgLeft + (posX / 100) * imgWidth;
         const bubbleTop = imgTop + (posY / 100) * imgHeight;
+        const targetX = line.tailX !== undefined ? imgLeft + (line.tailX / 100) * imgWidth : null;
+        const targetY = line.tailY !== undefined ? imgTop + (line.tailY / 100) * imgHeight : null;
+
+        // Check if this bubble is a target of any other bubble's tail in the same panel
+        const isTargetOfAny = dialogueList.some((otherLine, otherIdx) => {
+          if (otherIdx === bIdx) return false;
+          if (otherLine.tailX === undefined || otherLine.tailY === undefined) return false;
+          const target = findTargetBubble(otherLine.tailX, otherLine.tailY, dialogueList, otherIdx);
+          return target && target.index === bIdx;
+        });
 
         let elasticTailNode = null;
         if (targetX !== null && targetY !== null) {
-          const { bgColor, borderColor, strokeWidth } = getBubbleStyles(line);
-          const d = buildTailPath(0, 0, targetX - bubbleLeft, targetY - bubbleTop, line);
+          const { bgColor } = getBubbleStyles(line);
+          const target = findTargetBubble(line.tailX!, line.tailY!, dialogueList, bIdx);
+          
+          let finalTargetX = targetX - bubbleLeft;
+          let finalTargetY = targetY - bubbleTop;
+          
+          if (target) {
+            // It connects to another bubble!
+            // Calculate the edge point of target bubble B
+            const targetLine = target.line;
+            const targetPosX = targetLine.posX ?? 50;
+            const targetPosY = targetLine.posY ?? (panel.focusY * 100);
+            const targetLeft = imgLeft + (targetPosX / 100) * imgWidth;
+            const targetTop = imgTop + (targetPosY / 100) * imgHeight;
+            
+            // Vector from A's center to B's center in local coordinates of A
+            const bx = targetLeft - bubbleLeft;
+            const by = targetTop - bubbleTop;
+            const dist = Math.sqrt(bx * bx + by * by);
+            
+            if (dist > 0.01) {
+              const targetSize = estimateBubbleSize(targetLine);
+              const t = 1 / Math.sqrt((bx / targetSize.halfW) ** 2 + (by / targetSize.halfH) ** 2);
+              
+              // Intersection point on B's ellipse relative to A's center
+              const edgeX = bx - bx * t;
+              const edgeY = by - by * t;
+              
+              // Penetrate 10px inside B
+              finalTargetX = edgeX + (bx / dist) * 10;
+              finalTargetY = edgeY + (by / dist) * 10;
+            }
+          }
+
+          const d = buildTailPath(0, 0, finalTargetX, finalTargetY, line);
           if (d) {
             elasticTailNode = (
-              <svg className="absolute pointer-events-none overflow-visible" style={{ left: '50%', top: '50%', zIndex: 0 }}>
-                <path d={d} fill={bgColor} stroke={borderColor} strokeWidth={strokeWidth} strokeLinejoin="round" />
+              <svg className="absolute pointer-events-none overflow-visible" style={{ left: "50%", top: "50%", zIndex: 0 }}>
+                {/* No stroke here! We rely on the drop-shadow filter in DialogueBubble to outline the combined shape */}
+                <path d={d} fill={bgColor} stroke="none" strokeWidth={0} />
               </svg>
             );
           }
@@ -622,7 +827,7 @@ export function CinematicReader({
                 setActivePanelIdx(pIdx);
                 setActiveBubbleIdx(bIdx);
               }}
-              className="absolute z-40 pointer-events-auto cursor-move"
+              className="absolute pointer-events-auto cursor-move"
               style={{
                 left: bubbleLeft,
                 top: bubbleTop,
@@ -631,13 +836,14 @@ export function CinematicReader({
                 translateX: "-50%",
                 translateY: "-50%",
                 width: "max-content",
+                zIndex: isActive ? 48 : (isTargetOfAny ? 39 : 40),
               }}
             >
               <div
                 className={`transition-all ${
                   isActive
                     ? "outline-dashed outline-2 outline-[#e8185a] outline-offset-3 drop-shadow-lg"
-                    : "opacity-70 hover:opacity-100"
+                    : "opacity-95 hover:opacity-100"
                 }`}
               >
                 {isActive && (
@@ -649,29 +855,36 @@ export function CinematicReader({
               </div>
             </motion.div>
 
-            {/* Draggable anchor target — only shown in edit mode when elastic tail is active */}
-            {isActive && targetX !== null && targetY !== null && (
-              <motion.div
-                key={`edit-anchor-${pIdx}-${bIdx}-${line.tailX}-${line.tailY}`}
-                drag
-                dragMomentum={false}
-                dragElastic={0}
-                onDragEnd={(_, info) => handleTailTargetDragEnd(info, pIdx, bIdx)}
-                className="absolute z-50 pointer-events-auto cursor-crosshair"
-                style={{
-                  left: targetX,
-                  top: targetY,
-                  x: 0,
-                  y: 0,
-                  translateX: "-50%",
-                  translateY: "-50%",
-                }}
-              >
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <div className="w-3.5 h-3.5 rounded-full bg-blue-400 border-2 border-white shadow-[0_0_10px_rgba(96,165,250,0.9)]" />
-                </div>
-              </motion.div>
-            )}
+            {/* Draggable anchor target */}
+            {isActive && line.tailX !== undefined && line.tailY !== undefined && (() => {
+              const targetX2 = imgLeft + (line.tailX / 100) * imgWidth;
+              const targetY2 = imgTop + (line.tailY / 100) * imgHeight;
+              const isInBubble = !!findTargetBubble(line.tailX, line.tailY, panel.dialogue || [], bIdx);
+              return (
+                <motion.div
+                  key={`edit-anchor-${pIdx}-${bIdx}-${line.tailX}-${line.tailY}`}
+                  drag
+                  dragMomentum={false}
+                  dragElastic={0}
+                  onDragEnd={(_, info) => handleTailTargetDragEnd(info, pIdx, bIdx)}
+                  className="absolute z-50 pointer-events-auto cursor-crosshair"
+                  style={{
+                    left: targetX2,
+                    top: targetY2,
+                    x: 0,
+                    y: 0,
+                    translateX: "-50%",
+                    translateY: "-50%",
+                  }}
+                >
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <div className={`w-3.5 h-3.5 rounded-full border-2 border-white shadow-[0_0_10px_rgba(96,165,250,0.9)] ${
+                      isInBubble ? "bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.9)]" : "bg-blue-400"
+                    }`} />
+                  </div>
+                </motion.div>
+              );
+            })()}
           </React.Fragment>
         );
       });
@@ -786,7 +999,32 @@ export function CinematicReader({
                   border: "2px dashed rgba(239, 68, 68, 0.4)",
                   pointerEvents: "none",
                 }}
-              />
+              >
+                {/* Vertical Center Line */}
+                <div
+                  style={{
+                    position: "absolute",
+                    left: "50%",
+                    top: 0,
+                    bottom: 0,
+                    width: "2px",
+                    backgroundColor: "rgba(239, 68, 68, 0.65)",
+                    pointerEvents: "none",
+                  }}
+                />
+                {/* Horizontal Center Line */}
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: 0,
+                    right: 0,
+                    height: "2px",
+                    backgroundColor: "rgba(239, 68, 68, 0.65)",
+                    pointerEvents: "none",
+                  }}
+                />
+              </div>
             </div>
           )}
 
@@ -811,7 +1049,7 @@ export function CinematicReader({
                     width: maskWidth,
                     height: maskHeight,
                     border: rIdx === 0 ? "3px dashed #10b981" : "2.5px dashed #3b82f6", // Emerald-500 for primary, blue-500 for secondary
-                    boxShadow: rIdx === 0 ? "0 0 0 9999px rgba(0, 0, 0, 0.65)" : "none", // Darken outside the main zoom only
+                    boxShadow: rIdx === 0 ? "0 0 0 9999px rgba(0, 0, 0, 0.15)" : "none", // Darken outside the main zoom only
                     zIndex: 15 - rIdx,
                     pointerEvents: "none",
                   }}
@@ -877,12 +1115,9 @@ export function CinematicReader({
             )}
           </AnimatePresence>
 
-          {/* ── Dialogues Layer ── */}
-          <div
-            className="absolute inset-0 w-full h-full pointer-events-none z-30 overflow-visible"
-          >
-            {renderedDialogues}
-          </div>
+          {/* Tails Overlay is now handled locally inside DialogueBubble */}
+
+          {renderedDialogues}
 
           {/* ── FocusY Indicator line in Editor Mode ── */}
           {mode === "edit" && currentPanels[activePanelIdx] && (
@@ -892,9 +1127,23 @@ export function CinematicReader({
                 top: imgTop + currentPanels[activePanelIdx].focusY * imgHeight,
               }}
             >
-              <span className="absolute right-4 -top-6 bg-red-400 text-[#0a0a0f] font-mono text-xs px-2 py-0.5 rounded">
-                Parada {activePanelIdx + 1}: focusY {currentPanels[activePanelIdx].focusY}
-              </span>
+              <div 
+                className="absolute right-4 -top-6 bg-red-400 text-[#0a0a0f] font-mono text-xs px-2 py-0.5 rounded flex items-center gap-2 pointer-events-auto select-none shadow"
+                onPointerDown={(e) => e.stopPropagation()}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <span>Parada {activePanelIdx + 1}: focusY {currentPanels[activePanelIdx].focusY}</span>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleAddBubble(activePanelIdx);
+                  }}
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded border border-emerald-700 active:scale-95 transition-all"
+                >
+                  + Globo
+                </button>
+              </div>
             </div>
           )}
 
@@ -924,6 +1173,57 @@ export function CinematicReader({
                   </Link>
                 )}
               </div>
+            </div>
+          )}
+
+          {/* Canvas Floating Editor Controls (Editor Mode only) */}
+          {mode === "edit" && (
+            <div className="absolute top-4 right-4 z-50 flex flex-col gap-3 pointer-events-auto">
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleAddBubble(activePanelIdx);
+                }}
+                className="w-12 h-12 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-[var(--font-bangers)] text-3xl flex items-center justify-center border-3 border-[#0a0a0f] shadow-[3px_3px_0_#0a0a0f] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#0a0a0f] transition-all cursor-pointer"
+                title="Añadir globo a la viñeta seleccionada"
+              >
+                +
+              </button>
+              <button
+                type="button"
+                disabled={activeBubbleIdx === null}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (activeBubbleIdx !== null) {
+                    handleRemoveBubble(activePanelIdx, activeBubbleIdx);
+                  }
+                }}
+                className={`w-12 h-12 rounded-full font-[var(--font-bangers)] text-3xl flex items-center justify-center border-3 border-[#0a0a0f] transition-all ${
+                  activeBubbleIdx !== null
+                    ? "bg-red-500 hover:bg-red-600 text-white shadow-[3px_3px_0_#0a0a0f] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#0a0a0f] cursor-pointer"
+                    : "bg-zinc-600 text-zinc-400 border-zinc-700 cursor-not-allowed opacity-50 shadow-none"
+                }`}
+                title="Eliminar globo seleccionado"
+              >
+                −
+              </button>
+              <button
+                type="button"
+                disabled={undoStack.length === 0}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleUndo();
+                }}
+                className={`w-12 h-12 rounded-full font-[var(--font-bangers)] text-3xl flex items-center justify-center border-3 border-[#0a0a0f] transition-all ${
+                  undoStack.length > 0
+                    ? "bg-blue-500 hover:bg-blue-600 text-white shadow-[3px_3px_0_#0a0a0f] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#0a0a0f] cursor-pointer"
+                    : "bg-zinc-600 text-zinc-400 border-zinc-700 cursor-not-allowed opacity-50 shadow-none"
+                }`}
+                title="Deshacer cambio (Ctrl+Z)"
+              >
+                ↶
+              </button>
             </div>
           )}
         </div>

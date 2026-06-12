@@ -34,7 +34,7 @@ export interface DialogueEditorPanelProps {
   setActiveBubbleIdx: (idx: number | null) => void;
   handleRemovePanel: (idx: number) => void;
   handleUpdatePanelParams: (pIdx: number, updates: Partial<PanelConfig>) => void;
-  handleAddBubble: (pIdx: number) => void;
+  handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }) => void;
   handleRemoveBubble: (pIdx: number, bIdx: number) => void;
   handleUpdateBubble: (pIdx: number, bIdx: number, updates: Partial<DialogueLine>) => void;
 }
@@ -73,7 +73,7 @@ export function DialogueEditorPanel({
 
   return (
     <div
-      className="w-full md:w-80 shrink-0 bg-white border-t-3 md:border-t-0 border-[#0a0a0f] flex flex-col overflow-y-auto z-40"
+      className="w-full md:w-96 shrink-0 bg-white border-t-3 md:border-t-0 border-[#0a0a0f] flex flex-col overflow-y-auto z-40"
       style={{ maxHeight: "calc(100vh - 64px)" }}
     >
       {/* Header / Save Block */}
@@ -179,7 +179,7 @@ export function DialogueEditorPanel({
         </div>
 
         {isViñetasOpen && (
-          <div className="max-h-60 overflow-y-auto flex flex-col gap-3 pr-1">
+          <div className="flex flex-col gap-3 pr-1">
             {currentPanels.length === 0 ? (
               <div className="text-sm text-zinc-400 italic text-center py-6 border border-dashed border-zinc-300 rounded">
                 No hay viñetas definidas en esta página. Agregá una para empezar.
@@ -487,13 +487,6 @@ export function DialogueEditorPanel({
                   type="button"
                   onClick={() => {
                     handleAddBubble(activePanelIdx);
-                    // Automatically activate the newly added bubble
-                    setTimeout(() => {
-                      const updatedPanel = currentPanels[activePanelIdx];
-                      if (updatedPanel?.dialogue) {
-                        setActiveBubbleIdx(updatedPanel.dialogue.length);
-                      }
-                    }, 50);
                   }}
                   className="font-[var(--font-bangers)] text-[10px] bg-red-100 hover:bg-red-200 text-red-600 border border-red-300 px-2 py-0.5 rounded transition-all"
                 >
@@ -747,6 +740,39 @@ export function DialogueEditorPanel({
                 </select>
               </div>
 
+              {/* Preset Día / Noche */}
+              <div className="flex flex-col gap-1 mb-2">
+                <label className="text-xs font-bold text-zinc-600">Preset Día / Noche:</label>
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                        customBg: "#ffffff",
+                        customColor: "#1c1c1c",
+                        textColor: "#1c1c1c",
+                      });
+                    }}
+                    className="flex-1 py-1 px-2 bg-white hover:bg-zinc-100 border border-zinc-300 text-zinc-800 text-[10px] font-bold rounded flex items-center justify-center gap-1 transition-colors"
+                  >
+                    ☀️ Día
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                        customBg: "#f5e642",
+                        customColor: "#000000",
+                        textColor: "#000000",
+                      });
+                    }}
+                    className="flex-1 py-1 px-2 bg-yellow-400 hover:bg-yellow-500 border border-[#0a0a0f] text-black text-[10px] font-bold rounded flex items-center justify-center gap-1 transition-colors"
+                  >
+                    🌙 Noche
+                  </button>
+                </div>
+              </div>
+
               {/* Colors Pickers */}
               <div className="flex flex-col gap-1 mt-1">
                 <label className="text-xs font-bold text-zinc-600">Color Fondo:</label>
@@ -803,7 +829,7 @@ export function DialogueEditorPanel({
                     className="w-8 h-7 p-0 border border-zinc-300 rounded cursor-pointer bg-transparent"
                   />
                 </div>
-              </div>
+            </div>
             </div>
 
             {/* Custom Width and Font Size with Sliders */}
@@ -883,7 +909,25 @@ export function DialogueEditorPanel({
 
             {/* Text */}
             <div className="flex flex-col gap-1">
-              <label className="text-xs font-bold text-zinc-600">Texto:</label>
+              <div className="flex justify-between items-center">
+                <label className="text-xs font-bold text-zinc-600">Texto:</label>
+                <button
+                  type="button"
+                  onClick={async () => {
+                    try {
+                      const text = await navigator.clipboard.readText();
+                      if (text) {
+                        handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text });
+                      }
+                    } catch (err) {
+                      console.error("Error al leer el portapapeles:", err);
+                    }
+                  }}
+                  className="font-[var(--font-bangers)] text-[10px] bg-blue-100 hover:bg-blue-200 text-blue-600 border border-blue-300 px-2 py-0.5 rounded transition-all"
+                >
+                  ⚡ Auto (Pegar)
+                </button>
+              </div>
               <textarea
                 value={bubble.text}
                 onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: e.target.value })}

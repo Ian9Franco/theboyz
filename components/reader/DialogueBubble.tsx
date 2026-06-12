@@ -151,7 +151,7 @@ function getTailStyles(
 export function DialogueBubble({
   line,
   index,
-  elasticTailNode
+  elasticTailNode,
 }: {
   line: DialogueLine;
   index: number;
@@ -161,6 +161,20 @@ export function DialogueBubble({
   const tailDir = line.tail ?? "bottom-left";
   const paragraphs = parseParagraphs(line.text);
   const size = line.size ?? "medium";
+
+  let customFontFamily = "";
+  if (line.fontFamily) {
+    if (line.fontFamily === "bangers") customFontFamily = "var(--font-bangers)";
+    else if (line.fontFamily === "marker") customFontFamily = "var(--font-marker)";
+    else if (line.fontFamily === "mono") customFontFamily = "ui-monospace, monospace";
+    else if (line.fontFamily === "sans") customFontFamily = "var(--font-inter), sans-serif";
+    else if (line.fontFamily === "serif") customFontFamily = "ui-serif, Georgia, serif";
+  } else {
+    if (style === "scream") customFontFamily = "var(--font-bangers)";
+    else if (style === "electronic") customFontFamily = "ui-monospace, monospace";
+    else if (style === "whisper") customFontFamily = "var(--font-marker)";
+    else customFontFamily = "var(--font-marker)";
+  }
 
   // 1. NARRATOR CAPTION
   if (style === "caption") {
@@ -221,7 +235,14 @@ export function DialogueBubble({
         )}
         <div className="flex flex-col gap-2">
           {paragraphs.map((p, i) => (
-            <div key={i} className={`text-stone-800 ${fontClass}`} style={line.textColor ? { color: line.textColor } : undefined}>
+            <div 
+              key={i} 
+              className={`text-stone-800 ${fontClass}`} 
+              style={{
+                fontFamily: customFontFamily,
+                ...(line.textColor ? { color: line.textColor } : {})
+              }}
+            >
               {p.speaker && <strong style={{ color: captionBorderColor }}>{p.speaker}: </strong>}
               {p.text}
             </div>
@@ -235,6 +256,7 @@ export function DialogueBubble({
   let bgColor = line.customBg || "#ffffff";
   let borderColor = line.customColor || "#0a0a0f";
   let borderStyle = `1.5px solid ${borderColor}`; // Thinner border for cleaner look
+  let strokeWidth = 1.5;
   let speakerColor = getSpeakerColor(line.speaker, "#e8185a");
 
   // Determine font family class
@@ -259,6 +281,7 @@ export function DialogueBubble({
     bgColor = line.customBg || "#f5e642"; // bright yellow default
     borderColor = line.customColor || "#0a0a0f";
     borderStyle = `2.5px solid ${borderColor}`; // slightly thinner
+    strokeWidth = 2.5;
     shadowStyle = `4px 4px 0 ${line.customColor || "#e8185a"}`;
     bubbleClass = `${line.fontFamily ? fontClass : "font-[var(--font-bangers)]"} text-[#0a0a0f] uppercase tracking-wide leading-tight`;
     
@@ -350,6 +373,7 @@ export function DialogueBubble({
     if (line.fontSize) thoughtStyles.fontSize = `${line.fontSize}px`;
     if (line.width) thoughtStyles.maxWidth = `${line.width}px`;
     if (line.textColor) thoughtStyles.color = line.textColor;
+    if (customFontFamily) thoughtStyles.fontFamily = customFontFamily;
 
     const wrapperStyles: React.CSSProperties = {
       pointerEvents: "none",
@@ -413,6 +437,7 @@ export function DialogueBubble({
   if (line.fontSize) bubbleStyles.fontSize = `${line.fontSize}px`;
   if (line.width) bubbleStyles.maxWidth = `${line.width}px`;
   if (line.textColor) bubbleStyles.color = line.textColor;
+  if (customFontFamily) bubbleStyles.fontFamily = customFontFamily;
 
   return (
     <motion.div
@@ -425,6 +450,7 @@ export function DialogueBubble({
       style={{
         ...wrapperStyles,
         filter: "drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.20))",
+        overflow: "visible",
       }}
     >
       {/* Dynamic CSS Tail Triangles (for non-elastic classic tails) */}
@@ -438,29 +464,29 @@ export function DialogueBubble({
       {/* Bubble Background + Tail combined under a single drop-shadow for seamless border */}
       {hasElasticTail ? (
         <div className="absolute inset-0 z-0 pointer-events-none" style={{
-          filter: `drop-shadow(1.5px 0 0 ${borderColor}) drop-shadow(-1.5px 0 0 ${borderColor}) drop-shadow(0 1.5px 0 ${borderColor}) drop-shadow(0 -1.5px 0 ${borderColor})`,
+          filter: `drop-shadow(${strokeWidth}px 0 0 ${borderColor}) drop-shadow(-${strokeWidth}px 0 0 ${borderColor}) drop-shadow(0 ${strokeWidth}px 0 ${borderColor}) drop-shadow(0 -${strokeWidth}px 0 ${borderColor})`,
         }}>
           {/* Main Bubble Background Shape (No Border) */}
           <div 
             className={`w-full h-full ${sizeClass}`}
             style={{ 
               backgroundColor: bgColor, 
-              borderRadius: bubbleStyles.borderRadius || '1rem',
+              borderRadius: bubbleStyles.borderRadius !== undefined ? `${bubbleStyles.borderRadius}px` : '1rem',
             }} 
           />
           {/* SVG Tail (No Stroke, Fill Only) */}
           {elasticTailNode}
         </div>
-      ) : (
-        /* If no elastic tail, we use the standard CSS border on the container itself */
-        null
-      )}
-      
+      ) : null}
+
       {/* Bubble body (Text Container) */}
       <div
         className={`${bubbleClass} ${sizeClass} relative z-10`}
         style={{
-          ...(hasElasticTail ? { ...bubbleStyles, border: 'none', backgroundColor: 'transparent', boxShadow: 'none' } : bubbleStyles),
+          ...(hasElasticTail 
+            ? { ...bubbleStyles, border: 'none', backgroundColor: 'transparent', boxShadow: 'none' } 
+            : bubbleStyles
+          ),
           color: line.textColor
         }}
       >

@@ -4,39 +4,55 @@
     "1": {
       "panels": [
         {
-          "focusY": 0.14,
+          "focusY": 0.16,
           "dialogue": [
             {
-              "text": "Nuevo diálogo",
+              "text": "Che, Sigo sin entender... ¿Qué carajo hacía la cara de el Mati metida en la pantalla de ese casino?",
               "speaker": "",
               "style": "normal",
-              "posX": 110,
-              "posY": 5,
-              "tailX": 85,
-              "tailY": 5,
+              "posX": 50,
+              "posY": 25,
+              "tailX": 60,
+              "tailY": 15,
               "fontSize": 8,
-              "width": 190,
-              "borderRadius": 0,
-              "tail": "bottom-left"
+              "width": 120,
+              "borderRadius": 18,
+              "tail": "bottom-left",
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "size": "small",
+              "fontFamily": "marker",
+              "customBg": "#ffffff",
+              "customColor": "#1c1c1c",
+              "textColor": "#1c1c1c"
             },
             {
-              "text": "Nuevo diálogo",
+              "text": "Los Ángeles. Otra realidad, The boyz",
+              "speaker": "",
+              "style": "caption",
+              "posX": 50,
+              "posY": 0,
+              "size": "small",
+              "customBg": "#050000",
+              "customColor": "#fff700",
+              "textColor": "#ffffff"
+            },
+            {
+              "text": "Qué sé yo, Julián. Estaba toda rota, llena de estática. Para mí que el hdp nos hackeó desde Buenos Aires... o se volvió loco.",
               "speaker": "",
               "style": "normal",
-              "posX": 120,
-              "posY": 10,
-              "linkedTo": 0,
-              "tailX": 65,
-              "tailY": 15
+              "size": "small",
+              "posX": 100,
+              "posY": 5,
+              "tailX": 80,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 13
             }
           ],
-          "zoomRect": {
-            "x": 53,
-            "y": 50,
-            "w": 43,
-            "h": 17
-          },
-          "duration": 2.5,
           "hideUntilReached": true
         },
         {
@@ -46,23 +62,82 @@
               "text": "Nuevo diálogo",
               "speaker": "",
               "style": "normal",
-              "posX": 115,
-              "posY": 30,
-              "size": "medium",
-              "tail": "bottom-left"
+              "size": "small",
+              "posX": 5,
+              "posY": 35,
+              "tailX": 20,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 9,
+              "borderRadius": 18
+            },
+            {
+              "text": "Nuevo diálogo",
+              "speaker": "",
+              "style": "normal",
+              "size": "small",
+              "posX": 5,
+              "posY": 40,
+              "tailX": 20,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 9,
+              "borderRadius": 18
+            },
+            {
+              "text": "Nuevo diálogo",
+              "speaker": "",
+              "style": "normal",
+              "size": "small",
+              "posX": 95,
+              "posY": 35,
+              "tailX": 80,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 9,
+              "borderRadius": 18
+            },
+            {
+              "text": "Nuevo diálogo",
+              "speaker": "",
+              "style": "normal",
+              "size": "small",
+              "posX": 110,
+              "posY": 40,
+              "tailX": 70,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 9,
+              "borderRadius": 18,
+              "linkedTo": 2
+            },
+            {
+              "text": "Nuevo diálogo",
+              "speaker": "",
+              "style": "normal",
+              "size": "small",
+              "posX": 100,
+              "posY": 45,
+              "tailX": 75,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 9,
+              "borderRadius": 18,
+              "linkedTo": 3
             }
           ]
         },
-        {
-          "focusY": 0.7,
-          "dialogue": [],
-          "zoomRect": {
-            "x": 1,
-            "y": 68,
-            "w": 41,
-            "h": 10
-          }
-        },
+        {"focusY": 0.7, "dialogue": []},
         {"focusY": 0.9, "dialogue": []},
         {"focusY": 0.5, "dialogue": []}
       ]
