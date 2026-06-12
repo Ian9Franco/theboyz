@@ -152,15 +152,52 @@ export function DialogueBubble({
   line,
   index,
   elasticTailNode,
+  instant,
+  appearanceAnimation,
+  fadeOutAnimation,
+  depth,
 }: {
   line: DialogueLine;
   index: number;
   elasticTailNode?: React.ReactNode;
+  instant?: boolean;
+  appearanceAnimation?: "spring" | "fade" | "slide" | "zoom";
+  fadeOutAnimation?: "fade" | "slide" | "zoom";
+  depth?: number;
 }) {
   const style = line.style ?? "normal";
   const tailDir = line.tail ?? "bottom-left";
   const paragraphs = parseParagraphs(line.text);
   const size = line.size ?? "medium";
+
+  // Calculate dynamic shadow based on depth setting
+  const depthVal = depth ?? 2;
+  const shadowOffsetY = 2 + depthVal * 1.5;
+  const shadowBlur = 4 + depthVal * 2.5;
+  const shadowAlpha = 0.12 + depthVal * 0.04;
+  const customDropShadow = `drop-shadow(0px ${shadowOffsetY}px ${shadowBlur}px rgba(0, 0, 0, ${shadowAlpha}))`;
+
+  // Motion variants based on master setting selection
+  const animVariants = {
+    initial: appearanceAnimation === "fade"
+      ? { opacity: 0 }
+      : appearanceAnimation === "slide"
+      ? { opacity: 0, y: 20 }
+      : appearanceAnimation === "zoom"
+      ? { opacity: 0, scale: 0.4 }
+      : { opacity: 0, scale: 0.75, y: 8 }, // spring default
+    animate: { opacity: 1, scale: 1, x: 0, y: 0 },
+    exit: fadeOutAnimation === "slide"
+      ? { opacity: 0, y: -20 }
+      : fadeOutAnimation === "zoom"
+      ? { opacity: 0, scale: 0.5 }
+      : { opacity: 0 }, // fade default
+  };
+
+  const delay = instant ? 0 : index * 0.8;
+  const animTransition: any = (appearanceAnimation ?? "spring") === "spring" && !instant
+    ? { delay, type: "spring", stiffness: 280, damping: 20 }
+    : { delay, duration: instant ? 0.15 : 0.35, ease: "easeOut" };
 
   let customFontFamily = "";
   if (line.fontFamily) {
@@ -214,15 +251,16 @@ export function DialogueBubble({
     return (
       <motion.div
         key={`caption-${index}`}
-        initial={{ opacity: 0, y: -8 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -8 }}
-        transition={{ delay: index * 0.8, duration: 0.25, ease: "easeOut" }}
+        variants={animVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={animTransition}
         className={`caption leading-snug text-left max-w-sm ${captionSizeClass}`}
         style={{
           ...captionStyles,
           ...wrapperStyles,
-          filter: "drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.15))",
+          filter: customDropShadow,
         }}
       >
         {line.speaker && (
@@ -325,7 +363,7 @@ export function DialogueBubble({
   }
 
   // 2. THOUGHT CLOUD BUBBLE
-  const hasElasticTail = line.tailX !== undefined && line.tailY !== undefined;
+  const hasElasticTail = line.tail !== "none" && line.tailX !== undefined && line.tailY !== undefined;
 
   if (style === "thought") {
     const thoughtBg = line.customBg || "#ffffff";
@@ -357,18 +395,17 @@ export function DialogueBubble({
       );
     };
 
-    let thoughtSizeClass = "px-4 py-2 rounded-[35%] text-sm sm:text-base leading-snug";
+    let thoughtSizeClass = "px-2.5 py-1.5 rounded-[35%] text-sm sm:text-base leading-snug";
     if (size === "small") {
-      thoughtSizeClass = "px-2.5 py-1 rounded-[30%] text-xs leading-tight";
+      thoughtSizeClass = "px-1.5 py-0.5 rounded-[30%] text-xs leading-tight";
     } else if (size === "large") {
-      thoughtSizeClass = "px-6 py-3.5 rounded-[40%] text-base sm:text-lg leading-normal";
+      thoughtSizeClass = "px-4.5 py-2.5 rounded-[40%] text-base sm:text-lg leading-normal";
     }
 
     const thoughtStyles: React.CSSProperties = { 
-      background: thoughtBg, 
-      border: `1.5px solid ${thoughtBorderColor}`, 
+      background: "transparent", 
+      border: "none", 
       boxShadow: "none",
-      borderRadius: line.borderRadius !== undefined ? `${line.borderRadius}px` : undefined,
     };
     if (line.fontSize) thoughtStyles.fontSize = `${line.fontSize}px`;
     if (line.width) thoughtStyles.maxWidth = `${line.width}px`;
@@ -383,20 +420,60 @@ export function DialogueBubble({
     return (
       <motion.div
         key={`thought-${index}`}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.8 }}
-        transition={{ delay: index * 0.8, type: "spring", stiffness: 250, damping: 18 }}
+        variants={animVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={animTransition}
         className="relative max-w-sm"
         style={{
           ...wrapperStyles,
           pointerEvents: "none",
-          filter: "drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.20))",
+          filter: customDropShadow,
         }}
       >
         {renderThoughtDots()}
+        {/* Cloud background with continuous border outline using drop-shadow */}
+        <div 
+          className="absolute inset-0 z-0 pointer-events-none" 
+          style={{
+            filter: `drop-shadow(1.5px 0 0 ${thoughtBorderColor}) drop-shadow(-1.5px 0 0 ${thoughtBorderColor}) drop-shadow(0 1.5px 0 ${thoughtBorderColor}) drop-shadow(0 -1.5px 0 ${thoughtBorderColor})`,
+          }}
+        >
+          {/* Main Bubble Background Shape (No Border) */}
+          <div 
+            className="w-full h-full"
+            style={{ 
+              backgroundColor: thoughtBg, 
+              borderRadius: line.borderRadius !== undefined ? `${line.borderRadius}px` : '2rem',
+            }} 
+          />
+
+          {/* Cloud Bumps (Overlapping circles positioned around the edges) */}
+          {/* Top Bumps */}
+          <div className="absolute rounded-full -top-3 left-[15%] -translate-x-1/2 w-7 h-7" style={{ backgroundColor: thoughtBg }} />
+          <div className="absolute rounded-full -top-4 left-[40%] -translate-x-1/2 w-9 h-9" style={{ backgroundColor: thoughtBg }} />
+          <div className="absolute rounded-full -top-4 left-[60%] -translate-x-1/2 w-9 h-9" style={{ backgroundColor: thoughtBg }} />
+          <div className="absolute rounded-full -top-3 left-[85%] -translate-x-1/2 w-7 h-7" style={{ backgroundColor: thoughtBg }} />
+          
+          {/* Bottom Bumps */}
+          <div className="absolute rounded-full -bottom-2.5 left-[20%] -translate-x-1/2 w-6 h-6" style={{ backgroundColor: thoughtBg }} />
+          <div className="absolute rounded-full -bottom-3.5 left-[50%] -translate-x-1/2 w-8 h-8" style={{ backgroundColor: thoughtBg }} />
+          <div className="absolute rounded-full -bottom-2.5 left-[80%] -translate-x-1/2 w-6 h-6" style={{ backgroundColor: thoughtBg }} />
+
+          {/* Left/Right side Bumps */}
+          <div className="absolute rounded-full -left-2.5 top-[25%] -translate-y-1/2 w-7 h-7" style={{ backgroundColor: thoughtBg }} />
+          <div className="absolute rounded-full -left-2 top-[75%] -translate-y-1/2 w-6 h-6" style={{ backgroundColor: thoughtBg }} />
+          <div className="absolute rounded-full -right-2.5 top-[25%] -translate-y-1/2 w-7 h-7" style={{ backgroundColor: thoughtBg }} />
+          <div className="absolute rounded-full -right-2 top-[75%] -translate-y-1/2 w-6 h-6" style={{ backgroundColor: thoughtBg }} />
+
+          {/* SVG Tail (No Stroke, Fill Only) */}
+          {hasElasticTail && elasticTailNode}
+        </div>
+
+        {/* Text Container on top */}
         <div
-          className={`${bubbleClass} ${thoughtSizeClass}`}
+          className={`${bubbleClass} ${thoughtSizeClass} relative z-10`}
           style={thoughtStyles}
         >
           {line.speaker && (
@@ -442,14 +519,15 @@ export function DialogueBubble({
   return (
     <motion.div
       key={`bubble-${index}`}
-      initial={{ opacity: 0, scale: 0.75, y: 8 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.75, y: 8 }}
-      transition={{ delay: index * 0.8, type: "spring", stiffness: 280, damping: 20 }}
+      variants={animVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={animTransition}
       className="relative max-w-sm"
       style={{
         ...wrapperStyles,
-        filter: "drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.20))",
+        filter: customDropShadow,
         overflow: "visible",
       }}
     >
@@ -471,7 +549,7 @@ export function DialogueBubble({
             className={`w-full h-full ${sizeClass}`}
             style={{ 
               backgroundColor: bgColor, 
-              borderRadius: bubbleStyles.borderRadius !== undefined ? `${bubbleStyles.borderRadius}px` : '1rem',
+              borderRadius: bubbleStyles.borderRadius,
             }} 
           />
           {/* SVG Tail (No Stroke, Fill Only) */}

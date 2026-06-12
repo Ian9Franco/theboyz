@@ -10,6 +10,13 @@ export interface PanelConfig {
   hideUntilReached?: boolean;
 }
 
+export interface ChapterSettings {
+  clearReadDialogues?: boolean;
+  appearanceAnimation?: "spring" | "fade" | "slide" | "zoom";
+  fadeOutAnimation?: "fade" | "slide" | "zoom";
+  dialogueDepth?: number;
+}
+
 export interface DialogueEditorPanelProps {
   mode: "read" | "edit";
   currentPanels: PanelConfig[];
@@ -22,6 +29,7 @@ export interface DialogueEditorPanelProps {
   showGrid: boolean;
   snapToGrid: boolean;
   gridSize: number;
+  settings: ChapterSettings;
   
   // Handlers
   handleSaveChanges: () => void;
@@ -37,6 +45,7 @@ export interface DialogueEditorPanelProps {
   handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }) => void;
   handleRemoveBubble: (pIdx: number, bIdx: number) => void;
   handleUpdateBubble: (pIdx: number, bIdx: number, updates: Partial<DialogueLine>) => void;
+  handleUpdateSettings: (updates: Partial<ChapterSettings>) => void;
 }
 
 export function DialogueEditorPanel({
@@ -51,6 +60,7 @@ export function DialogueEditorPanel({
   showGrid,
   snapToGrid,
   gridSize,
+  settings,
   handleSaveChanges,
   resetPage,
   setShowGrid,
@@ -64,8 +74,10 @@ export function DialogueEditorPanel({
   handleAddBubble,
   handleRemoveBubble,
   handleUpdateBubble,
+  handleUpdateSettings,
 }: DialogueEditorPanelProps) {
   const [isViñetasOpen, setIsViñetasOpen] = React.useState(true);
+  const [isGlobalSettingsOpen, setIsGlobalSettingsOpen] = React.useState(false);
 
   if (mode !== "edit") return null;
 
@@ -154,6 +166,81 @@ export function DialogueEditorPanel({
             <option value="10">10%</option>
           </select>
         </div>
+      </div>
+
+      {/* Global settings */}
+      <div className="p-4 shrink-0 flex flex-col gap-3 border-b-2 border-zinc-200 bg-zinc-50/50">
+        <button
+          type="button"
+          onClick={() => setIsGlobalSettingsOpen(!isGlobalSettingsOpen)}
+          className="flex items-center gap-1.5 font-[var(--font-bangers)] text-lg text-zinc-600 tracking-wider hover:text-[#e8185a] transition-colors"
+        >
+          <span>{isGlobalSettingsOpen ? "▼" : "▶"} Configuración del Capítulo</span>
+        </button>
+
+        {isGlobalSettingsOpen && (
+          <div className="flex flex-col gap-3.5 mt-1 bg-white p-3 border border-zinc-200 rounded">
+            {/* Clear Read Dialogues Toggle */}
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex flex-col">
+                <span className="text-xs font-bold text-zinc-700">Limpieza Automática:</span>
+                <span className="text-[9px] text-zinc-400">Ocultar globos leídos</span>
+              </div>
+              <input
+                type="checkbox"
+                checked={settings.clearReadDialogues ?? true}
+                onChange={(e) => handleUpdateSettings({ clearReadDialogues: e.target.checked })}
+                className="w-4 h-4 accent-[#e8185a] cursor-pointer"
+              />
+            </div>
+
+            {/* Appearance Animation Selector */}
+            <div className="flex flex-col gap-1">
+              <span className="text-xs font-bold text-zinc-700">Animación Aparición:</span>
+              <select
+                value={settings.appearanceAnimation ?? "spring"}
+                onChange={(e) => handleUpdateSettings({ appearanceAnimation: e.target.value as any })}
+                className="border border-zinc-300 p-1 text-xs rounded bg-white text-[#0a0a0f]"
+              >
+                <option value="spring">Spring (Cómic Rebote)</option>
+                <option value="fade">Fade (Desvanecer)</option>
+                <option value="slide">Slide (Deslizar desde abajo)</option>
+                <option value="zoom">Zoom (Escalar desde centro)</option>
+              </select>
+            </div>
+
+            {/* Fade Out Animation Selector */}
+            <div className="flex flex-col gap-1">
+              <span className="text-xs font-bold text-zinc-700">Animación Desaparición:</span>
+              <select
+                value={settings.fadeOutAnimation ?? "fade"}
+                onChange={(e) => handleUpdateSettings({ fadeOutAnimation: e.target.value as any })}
+                className="border border-zinc-300 p-1 text-xs rounded bg-white text-[#0a0a0f]"
+              >
+                <option value="fade">Fade (Desvanecer)</option>
+                <option value="slide">Slide (Deslizar hacia arriba)</option>
+                <option value="zoom">Zoom (Encoger hacia centro)</option>
+              </select>
+            </div>
+
+            {/* Parallax Depth Selector */}
+            <div className="flex flex-col gap-1">
+              <div className="flex justify-between items-center text-xs font-bold text-zinc-700">
+                <span>Profundidad (Parallax): {settings.dialogueDepth ?? 2}</span>
+                <span className="text-[9px] text-zinc-400">Efecto 3D</span>
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="5"
+                step="1"
+                value={settings.dialogueDepth ?? 2}
+                onChange={(e) => handleUpdateSettings({ dialogueDepth: parseInt(e.target.value) })}
+                className="w-full accent-[#e8185a] cursor-pointer"
+              />
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Panels / Stops List */}
@@ -468,7 +555,7 @@ export function DialogueEditorPanel({
         {activeBubbleIdx !== null && currentPanels[activePanelIdx]?.dialogue?.[activeBubbleIdx] && (() => {
           const bubble = currentPanels[activePanelIdx].dialogue![activeBubbleIdx];
           const hasAnchor = bubble.tailX !== undefined;
-          const isHidden = bubble.tail === "none" && !hasAnchor;
+          const isHidden = bubble.tail === "none";
           // 8-direction tail anchor presets [arrow, ΔX%, ΔY%]
           const tailPresets: [string, number, number][] = [
             ["↖", -12, -12], ["↑", 0, -15], ["↗", 12, -12],
@@ -620,6 +707,7 @@ export function DialogueEditorPanel({
                           onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { tail: e.target.value as any })}
                           className="w-full border border-zinc-300 p-1.5 text-[11px] font-mono rounded bg-white text-[#0a0a0f]"
                         >
+                          <option value="none">❌ Sin cola</option>
                           <option value="bottom-left">↙ Abajo-Izquierda</option>
                           <option value="bottom-right">↘ Abajo-Derecha</option>
                           <option value="top-left">↖ Arriba-Izquierda</option>

@@ -17,11 +17,19 @@ type PanelStop = {
   hideUntilReached?: boolean;
 };
 
+type ChapterSettings = {
+  clearReadDialogues?: boolean;
+  appearanceAnimation?: "spring" | "fade" | "slide" | "zoom";
+  fadeOutAnimation?: "fade" | "slide" | "zoom";
+  dialogueDepth?: number;
+};
+
 type PageData = {
   panels: PanelStop[];
 };
 
 type Dialogues = {
+  settings?: ChapterSettings;
   pages?: Record<string, PageData>;
 };
 
@@ -54,6 +62,7 @@ export function CinematicReader({
   const [panelIdx, setPanelIdx] = useState(0);
   const [zoomIdx, setZoomIdx] = useState(0);
   const [zoomedOut, setZoomedOut] = useState(false);
+  const [showAllDialogues, setShowAllDialogues] = useState(false);
   const [imgSize, setImgSize] = useState<{ w: number; h: number } | null>(null);
   const [containerSize, setContainerSize] = useState({ w: 0, h: 0 });
 
@@ -158,6 +167,7 @@ export function CinematicReader({
     setPanelIdx(0);
     setZoomIdx(0);
     setZoomedOut(false);
+    setShowAllDialogues(false);
     setActivePanelIdx(0);
     setActiveBubbleIdx(null);
   }, []);
@@ -453,6 +463,17 @@ export function CinematicReader({
     setActiveBubbleIdx(null);
   };
 
+  const handleUpdateSettings = (updates: Partial<ChapterSettings>) => {
+    setUndoStack(prev => [...prev.slice(-49), JSON.parse(JSON.stringify(localDialogues))]);
+    setLocalDialogues(prev => ({
+      ...prev,
+      settings: {
+        ...(prev.settings || {}),
+        ...updates,
+      },
+    }));
+  };
+
   const handleDragEnd = (info: any, pIdx: number, bIdx: number) => {
     if (!imgRef.current) return;
     const rect = imgRef.current.getBoundingClientRect();
@@ -662,89 +683,120 @@ export function CinematicReader({
 
   // Rendered Dialogues Helper
   const renderedDialogues = (() => {
+    const settings = localDialogues.settings || {};
+    const clearReadDialogues = settings.clearReadDialogues ?? true;
+    const appearanceAnimation = settings.appearanceAnimation ?? "spring";
+    const fadeOutAnimation = settings.fadeOutAnimation ?? "fade";
+    const dialogueDepth = settings.dialogueDepth ?? 2;
+
+    const centeredLeft = (containerSize.w - imgWidth) / 2;
+    const centeredTop = (containerSize.h - imgHeight) / 2;
+    const shiftX = imgLeft - centeredLeft;
+    const shiftY = imgTop - centeredTop;
+
     if (mode === "read") {
-      const dialogueList = activePanel.dialogue || [];
-      const effectiveIndexes = getEffectiveIndexes(dialogueList);
+      const parallaxFactor = dialogueDepth * 0.08;
+      const parallaxX = shiftX * parallaxFactor;
+      const parallaxY = shiftY * parallaxFactor;
 
-      return dialogueList.map((line, i) => {
-        const posX = line.posX ?? 50;
-        const posY = line.posY ?? (activePanel.focusY * 100);
-        const bubbleLeft = imgLeft + (posX / 100) * imgWidth;
-        const bubbleTop = imgTop + (posY / 100) * imgHeight;
-        const targetX = line.tailX !== undefined ? imgLeft + (line.tailX / 100) * imgWidth : null;
-        const targetY = line.tailY !== undefined ? imgTop + (line.tailY / 100) * imgHeight : null;
-        const effIdx = effectiveIndexes[i] ?? i;
+      const panelsToRender = showAllDialogues
+        ? currentPanels
+        : !clearReadDialogues
+        ? currentPanels.slice(0, panelIdx + 1)
+        : [activePanel];
 
-        // Check if this bubble is a target of any other bubble's tail in the same panel
-        const isTargetOfAny = dialogueList.some((otherLine, otherIdx) => {
-          if (otherIdx === i) return false;
-          if (otherLine.tailX === undefined || otherLine.tailY === undefined) return false;
-          const target = findTargetBubble(otherLine.tailX, otherLine.tailY, dialogueList, otherIdx);
-          return target && target.index === i;
-        });
+      return panelsToRender.flatMap((panel, pIndex) => {
+        const dialogueList = panel.dialogue || [];
+        const effectiveIndexes = getEffectiveIndexes(dialogueList);
 
-        let elasticTailNode = null;
-        if (targetX !== null && targetY !== null) {
-          const { bgColor } = getBubbleStyles(line);
-          const target = findTargetBubble(line.tailX!, line.tailY!, dialogueList, i);
-          
-          let finalTargetX = targetX - bubbleLeft;
-          let finalTargetY = targetY - bubbleTop;
-          
-          if (target) {
-            // It connects to another bubble!
-            // Calculate the edge point of target bubble B
-            const targetLine = target.line;
-            const targetPosX = targetLine.posX ?? 50;
-            const targetPosY = targetLine.posY ?? (activePanel.focusY * 100);
-            const targetLeft = imgLeft + (targetPosX / 100) * imgWidth;
-            const targetTop = imgTop + (targetPosY / 100) * imgHeight;
+        return dialogueList.map((line, i) => {
+          const posX = line.posX ?? 50;
+          const posY = line.posY ?? (panel.focusY * 100);
+          const bubbleLeft = imgLeft + (posX / 100) * imgWidth + parallaxX;
+          const bubbleTop = imgTop + (posY / 100) * imgHeight + parallaxY;
+          const targetX = line.tailX !== undefined ? imgLeft + (line.tailX / 100) * imgWidth : null;
+          const targetY = line.tailY !== undefined ? imgTop + (line.tailY / 100) * imgHeight : null;
+          const effIdx = showAllDialogues ? 0 : (effectiveIndexes[i] ?? i);
+
+          // Check if this bubble is a target of any other bubble's tail in the same panel
+          const isTargetOfAny = dialogueList.some((otherLine, otherIdx) => {
+            if (otherIdx === i) return false;
+            if (otherLine.tailX === undefined || otherLine.tailY === undefined) return false;
+            const target = findTargetBubble(otherLine.tailX, otherLine.tailY, dialogueList, otherIdx);
+            return target && target.index === i;
+          });
+
+          let elasticTailNode = null;
+          if (targetX !== null && targetY !== null && line.tail !== "none") {
+            const { bgColor } = getBubbleStyles(line);
+            const target = findTargetBubble(line.tailX!, line.tailY!, dialogueList, i);
             
-            // Vector from A's center to B's center in local coordinates of A
-            const bx = targetLeft - bubbleLeft;
-            const by = targetTop - bubbleTop;
-            const dist = Math.sqrt(bx * bx + by * by);
+            let finalTargetX = targetX - bubbleLeft;
+            let finalTargetY = targetY - bubbleTop;
             
-            if (dist > 0.01) {
-              const targetSize = estimateBubbleSize(targetLine);
-              const t = 1 / Math.sqrt((bx / targetSize.halfW) ** 2 + (by / targetSize.halfH) ** 2);
+            if (target) {
+              // It connects to another bubble!
+              // Calculate the edge point of target bubble B (using shifted positions)
+              const targetLine = target.line;
+              const targetPosX = targetLine.posX ?? 50;
+              const targetPosY = targetLine.posY ?? (panel.focusY * 100);
+              const targetLeft = imgLeft + (targetPosX / 100) * imgWidth + parallaxX;
+              const targetTop = imgTop + (targetPosY / 100) * imgHeight + parallaxY;
               
-              // Intersection point on B's ellipse relative to A's center
-              const edgeX = bx - bx * t;
-              const edgeY = by - by * t;
+              // Vector from A's center to B's center in local coordinates of A
+              const bx = targetLeft - bubbleLeft;
+              const by = targetTop - bubbleTop;
+              const dist = Math.sqrt(bx * bx + by * by);
               
-              // Penetrate 10px inside B
-              finalTargetX = edgeX + (bx / dist) * 10;
-              finalTargetY = edgeY + (by / dist) * 10;
+              if (dist > 0.01) {
+                const targetSize = estimateBubbleSize(targetLine);
+                const t = 1 / Math.sqrt((bx / targetSize.halfW) ** 2 + (by / targetSize.halfH) ** 2);
+                
+                // Intersection point on B's ellipse relative to A's center
+                const edgeX = bx - bx * t;
+                const edgeY = by - by * t;
+                
+                // Penetrate 10px inside B
+                finalTargetX = edgeX + (bx / dist) * 10;
+                finalTargetY = edgeY + (by / dist) * 10;
+              }
+            }
+
+            const d = buildTailPath(0, 0, finalTargetX, finalTargetY, line);
+            if (d) {
+              elasticTailNode = (
+                <svg className="absolute pointer-events-none overflow-visible" style={{ left: "50%", top: "50%", zIndex: 0 }}>
+                  <path d={d} fill={bgColor} stroke="none" strokeWidth={0} />
+                </svg>
+              );
             }
           }
 
-          const d = buildTailPath(0, 0, finalTargetX, finalTargetY, line);
-          if (d) {
-            elasticTailNode = (
-              <svg className="absolute pointer-events-none overflow-visible" style={{ left: "50%", top: "50%", zIndex: 0 }}>
-                {/* No stroke here! We rely on the drop-shadow filter in DialogueBubble to outline the combined shape */}
-                <path d={d} fill={bgColor} stroke="none" strokeWidth={0} />
-              </svg>
-            );
-          }
-        }
-
-        return (
-          <div
-            key={`read-bub-${i}`}
-            className="absolute pointer-events-none"
-            style={{
-              left: bubbleLeft,
-              top: bubbleTop,
-              transform: "translate(-50%, -50%)",
-              width: "max-content",
-              zIndex: isTargetOfAny ? 29 : 30,
-            }}
-          >
-            <DialogueBubble line={line} index={effIdx} elasticTailNode={elasticTailNode} />
-          </div>
-        );
+          return (
+            <div
+              key={`read-bub-${pIndex}-${i}`}
+              className="absolute pointer-events-none"
+              style={{
+                left: bubbleLeft,
+                top: bubbleTop,
+                transform: "translate(-50%, -50%)",
+                width: "max-content",
+                zIndex: isTargetOfAny ? 29 : 30,
+                transition: mode === "read" ? "all 400ms cubic-bezier(0.25, 1, 0.5, 1)" : "none",
+              }}
+            >
+              <DialogueBubble 
+                line={line} 
+                index={effIdx} 
+                elasticTailNode={elasticTailNode} 
+                instant={showAllDialogues}
+                appearanceAnimation={appearanceAnimation}
+                fadeOutAnimation={fadeOutAnimation}
+                depth={dialogueDepth}
+              />
+            </div>
+          );
+        });
       });
     }
 
@@ -768,7 +820,7 @@ export function CinematicReader({
         });
 
         let elasticTailNode = null;
-        if (targetX !== null && targetY !== null) {
+        if (targetX !== null && targetY !== null && line.tail !== "none") {
           const { bgColor } = getBubbleStyles(line);
           const target = findTargetBubble(line.tailX!, line.tailY!, dialogueList, bIdx);
           
@@ -851,12 +903,20 @@ export function CinematicReader({
                     X:{posX}% Y:{posY}%
                   </div>
                 )}
-                <DialogueBubble line={line} index={0} elasticTailNode={elasticTailNode} />
+                <DialogueBubble 
+                  line={line} 
+                  index={0} 
+                  elasticTailNode={elasticTailNode} 
+                  instant={true}
+                  appearanceAnimation={appearanceAnimation}
+                  fadeOutAnimation={fadeOutAnimation}
+                  depth={dialogueDepth}
+                />
               </div>
             </motion.div>
 
             {/* Draggable anchor target */}
-            {isActive && line.tailX !== undefined && line.tailY !== undefined && (() => {
+            {isActive && line.tail !== "none" && line.tailX !== undefined && line.tailY !== undefined && (() => {
               const targetX2 = imgLeft + (line.tailX / 100) * imgWidth;
               const targetY2 = imgTop + (line.tailY / 100) * imgHeight;
               const isInBubble = !!findTargetBubble(line.tailX, line.tailY, panel.dialogue || [], bIdx);
@@ -1153,6 +1213,32 @@ export function CinematicReader({
               className="absolute inset-0 flex flex-col items-center justify-end pb-12 gap-4 z-40 pointer-events-none"
               style={{ background: "linear-gradient(to top, rgba(10,10,15,0.85) 0%, transparent 60%)" }}
             >
+              {/* Review / Control Row */}
+              <div className="flex gap-3 px-4 mb-2 pointer-events-auto">
+                <button
+                  onClick={() => {
+                    setPanelIdx(0);
+                    setZoomIdx(0);
+                    setZoomedOut(false);
+                    setShowAllDialogues(false);
+                  }}
+                  className="px-4 py-2 border-2 border-white bg-black/60 text-white font-[var(--font-bangers)] tracking-wide hover:bg-white hover:text-black transition-colors rounded text-sm uppercase shadow-lg"
+                >
+                  🔄 Volver a ver
+                </button>
+                <button
+                  onClick={() => setShowAllDialogues(!showAllDialogues)}
+                  className={`px-4 py-2 border-2 text-white font-[var(--font-bangers)] tracking-wide transition-colors rounded text-sm uppercase shadow-lg ${
+                    showAllDialogues 
+                      ? "bg-purple-600 border-purple-500 hover:bg-purple-700" 
+                      : "bg-black/60 border-white hover:bg-white hover:text-black"
+                  }`}
+                >
+                  👁️ {showAllDialogues ? "Ocultar diálogos" : "Ver completo"}
+                </button>
+              </div>
+
+              {/* Navigation Row */}
               <div className="flex gap-3 flex-wrap justify-center px-4 pointer-events-auto">
                 {pageIdx > 0 && (
                   <button onClick={() => resetPage(pageIdx - 1)} className="btn btn-dark text-lg">
@@ -1241,6 +1327,7 @@ export function CinematicReader({
           showGrid={showGrid}
           snapToGrid={snapToGrid}
           gridSize={gridSize}
+          settings={localDialogues.settings || {}}
           handleSaveChanges={handleSaveChanges}
           resetPage={resetPage}
           setShowGrid={setShowGrid}
@@ -1254,6 +1341,7 @@ export function CinematicReader({
           handleAddBubble={handleAddBubble}
           handleRemoveBubble={handleRemoveBubble}
           handleUpdateBubble={handleUpdateBubble}
+          handleUpdateSettings={handleUpdateSettings}
         />
       </div>
 
