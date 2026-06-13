@@ -19,7 +19,7 @@ export function NewsTicker({ sagas }: { sagas: any[] }) {
   return (
     <div
       className="overflow-hidden select-none"
-      style={{ background: "#e8185a", borderTop: "3px solid #0a0a0f", borderBottom: "3px solid #0a0a0f" }}
+      style={{ background: "#1b4332", borderTop: "3px solid #0a0a0f", borderBottom: "3px solid #0a0a0f" }}
     >
       <div className="flex animate-marquee whitespace-nowrap py-3">
         {list.map((item, i) => (

@@ -1,14 +1,26 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { getComicPageUrl } from "@/components/reader/readerUtils";
+
+function getTextColor(hexColor: string) {
+  if (!hexColor) return "white";
+  const color = hexColor.replace("#", "");
+  const r = parseInt(color.substring(0, 2), 16);
+  const g = parseInt(color.substring(2, 4), 16);
+  const b = parseInt(color.substring(4, 6), 16);
+  const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+  return yiq >= 140 ? "#0a0a0f" : "white";
+}
 
 export function SagaBlock({ saga, index, prevSaga }: { saga: any; index: number; prevSaga?: any }) {
   const isEven = index % 2 === 0;
   const [readChapters, setReadChapters] = useState<string[]>([]);
   const [isClient, setIsClient] = useState(false);
   const [unlockAll, setUnlockAll] = useState(false);
+  const [showChapters, setShowChapters] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -31,81 +43,136 @@ export function SagaBlock({ saga, index, prevSaga }: { saga: any; index: number;
     };
   }, []);
 
+  const isLightBg = getTextColor(saga.color) === "#0a0a0f";
+  const buttonIconSrc = isLightBg ? "/boom.png" : "/boom-white.png";
+
   return (
-    <div>
-      {/* Saga header */}
-      <motion.div
-        initial={{ opacity: 0, x: isEven ? -40 : 40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ type: "spring", stiffness: 100, damping: 18 }}
-        className="mb-3 flex flex-col md:flex-row items-center md:items-start gap-8"
-      >
+    <div className="border-4 border-[#0a0a0f] bg-white p-6 sm:p-10 shadow-[8px_8px_0_#1b4332] relative overflow-hidden rounded-lg">
+      {/* Halftone pop-art subtle background pattern */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        style={{
+          backgroundImage: "radial-gradient(circle, #0f2042 1.5px, transparent 1.5px)",
+          backgroundSize: "10px 10px",
+        }}
+      />
+
+      <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 sm:gap-12 relative z-10">
         {saga.cover && (
           <div 
-            className="relative shrink-0 w-32 sm:w-44 aspect-[3/4] border-[3px] border-[#0a0a0f] overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_rgba(10,10,15,1)]"
-            style={{ transform: "rotate(-2deg)" }}
+            className="relative shrink-0 w-64 sm:w-80 aspect-[3/4] border-4 border-[#0a0a0f] overflow-hidden rounded bg-zinc-900 shadow-[8px_8px_0_rgba(10,10,15,1)] group"
+            style={{ transform: isEven ? "rotate(-1.5deg)" : "rotate(1.5deg)" }}
           >
-            <img src={saga.cover} alt={`Portada de la saga ${saga.title}`} className="w-full h-full object-cover object-top" />
+            <img 
+              src={getComicPageUrl(saga.cover)} 
+              alt={`Portada de la saga ${saga.title}`} 
+              className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 via-transparent to-transparent pointer-events-none" />
           </div>
         )}
-        <div className="flex-1 text-center md:text-left flex flex-col items-center md:items-start">
-          <span
-            className="tag text-xs mb-2 block w-fit"
-            style={{ background: saga.color, color: "white", borderColor: "#0a0a0f" }}
-          >
-            Saga
-          </span>
-          <h2
-            className="font-[var(--font-bangers)] text-5xl sm:text-7xl leading-none tracking-wider mb-3"
-            style={{ color: "#0a0a0f", textShadow: `3px 3px 0 ${saga.color}44` }}
-          >
-            {saga.title}
-          </h2>
-          <div className="caption text-base sm:text-lg max-w-xl" style={{ transform: "rotate(-0.5deg)" }}>
-            {saga.description}
+        <div className="flex-1 flex flex-col justify-between text-center lg:text-left items-center lg:items-start py-2">
+          <div className="flex flex-col items-center lg:items-start">
+            <div className="flex items-center gap-2 mb-4">
+              <img 
+                src="/comic-book.png" 
+                alt="Saga Icon" 
+                className="w-6 h-6 object-contain" 
+              />
+              <span
+                className="tag text-xs font-[var(--font-bangers)] tracking-widest px-2.5 py-0.5 border-2 border-black"
+                style={{ background: saga.color, color: getTextColor(saga.color) }}
+              >
+                SAGA
+              </span>
+            </div>
+            <h2
+              className="font-[var(--font-bangers)] text-4xl sm:text-6xl leading-none tracking-wider mb-4"
+              style={{ color: "#0a0a0f", textShadow: `3px 3px 0 ${saga.color}44` }}
+            >
+              {saga.title}
+            </h2>
+            <div className="font-sans text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mb-6">
+              {saga.description}
+            </div>
           </div>
-        </div>
-      </motion.div>
 
-      {/* Divider */}
-      <div className="flex items-center gap-3 mb-10">
-        <div className="h-[3px] flex-1" style={{ background: "#0a0a0f" }} />
-        <div className="w-3 h-3 rotate-45" style={{ background: saga.color }} />
-      </div>
-
-      {/* Cards — uniform grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-        {saga.chapters.map((chapter: any, ci: number) => {
-          let isLocked = false;
-          if (isClient && !unlockAll) {
-            if (ci === 0) {
-              if (prevSaga) {
-                isLocked = !prevSaga.chapters.every((ch: any) => readChapters.includes(ch.id));
-              }
-            } else {
-              isLocked = !readChapters.includes(saga.chapters[ci - 1].id);
-            }
-          }
-          return (
-            <ChapterCard
-              key={chapter.id}
-              chapter={chapter}
-              sagaId={saga.id}
-              sagaColor={saga.color}
-              index={ci}
-              isLocked={isLocked}
-              sagaCover={saga.cover}
+          <button
+            onClick={() => setShowChapters(!showChapters)}
+            className="font-[var(--font-bangers)] text-lg sm:text-xl tracking-wider px-8 py-3.5 border-4 border-[#0a0a0f] uppercase transition-all shadow-[4px_4px_0_#0a0a0f] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#0a0a0f] cursor-pointer flex items-center gap-3 mt-4"
+            style={{ 
+              background: saga.color, 
+              color: getTextColor(saga.color)
+            }}
+          >
+            <img 
+              src={buttonIconSrc} 
+              alt="Boom" 
+              className={`w-6 h-6 object-contain transition-transform duration-300 ${showChapters ? "rotate-45" : ""}`} 
             />
-          );
-        })}
+            {showChapters ? "Ocultar Episodios" : "Ver Episodios"}
+          </button>
+        </div>
       </div>
+
+      {/* Chapters list inside collapsible accordion */}
+      <AnimatePresence>
+        {showChapters && (
+          <motion.div
+            initial={{ opacity: 0, height: 0, marginTop: 0 }}
+            animate={{ opacity: 1, height: "auto", marginTop: 40 }}
+            exit={{ opacity: 0, height: 0, marginTop: 0 }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <div className="border-t-4 border-dashed border-[#0a0a0f]/20 pt-8">
+              <div className="flex items-center gap-3 mb-8">
+                <img 
+                  src="/comic-page.png" 
+                  alt="Page" 
+                  className="w-6 h-6 object-contain" 
+                />
+                <h4 className="font-[var(--font-bangers)] text-2xl tracking-wider text-[#0a0a0f]">
+                  EPISODIOS DISPONIBLES
+                </h4>
+                <div className="h-[2px] flex-1 bg-[#0a0a0f]/10" />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+                {saga.chapters.map((chapter: any, ci: number) => {
+                  let isLocked = false;
+                  if (isClient && !unlockAll) {
+                    if (ci === 0) {
+                      if (prevSaga) {
+                        isLocked = !prevSaga.chapters.every((ch: any) => readChapters.includes(ch.id));
+                      }
+                    } else {
+                      isLocked = !readChapters.includes(saga.chapters[ci - 1].id);
+                    }
+                  }
+                  return (
+                    <ChapterCard
+                      key={chapter.id}
+                      chapter={chapter}
+                      sagaId={saga.id}
+                      sagaColor={saga.color}
+                      index={ci}
+                      isLocked={isLocked}
+                      sagaCover={saga.cover}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
 
 /* ── CHAPTER CARD ── */
-const ACCENTS = ["#e8185a", "#00b8d4", "#f5e642", "#6d28d9", "#f97316"];
+const ACCENTS = ["#1b4332", "#00b8d4", "#f5e642", "#6d28d9", "#f97316"];
 
 function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }: {
   chapter: any;
@@ -118,7 +185,6 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }:
   const accent = ACCENTS[index % ACCENTS.length];
   const [cover, setCover] = useState<string | null>(null);
 
-  // Fetch the first page or the explicit "portada" image to use as cover
   useEffect(() => {
     if (isLocked) return;
     if (chapter.cover) {
@@ -127,7 +193,7 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }:
     }
     fetch(`/api/pages/${sagaId}/${chapter.id}`)
       .then(r => r.json())
-      .then((d: { pages: string[]; cover: string | null }) => {
+      .then((d: { cover: string | null }) => {
         if (d.cover) setCover(d.cover);
       })
       .catch(() => {});
@@ -160,7 +226,7 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }:
           >
             {(chapter.cover || sagaCover) && (
               <img
-                src={chapter.cover || sagaCover}
+                src={getComicPageUrl(chapter.cover || sagaCover)}
                 alt={`Portada de ${chapter.title}`}
                 className="absolute inset-0 w-full h-full object-cover object-top opacity-30 grayscale filter blur-[1px] brightness-[0.25]"
               />
@@ -177,14 +243,6 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }:
               <span className="font-[var(--font-bangers)] text-lg text-white/60 tracking-widest uppercase">
                 Bloqueado
               </span>
-            </div>
-
-            {/* Issue number badge */}
-            <div
-              className="absolute top-3 left-3 z-30 font-[var(--font-bangers)] text-xl px-2.5 py-0.5"
-              style={{ background: "#0a0a0f", color: "white", border: "2px solid #0a0a0f", boxShadow: "2px 2px 0 #0a0a0f" }}
-            >
-              #{chapter.number}
             </div>
           </div>
 
@@ -235,7 +293,7 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }:
           {/* Actual cover image */}
           {(cover || chapter.cover || sagaCover) && (
             <img
-              src={cover || chapter.cover || sagaCover || undefined}
+              src={getComicPageUrl(cover || chapter.cover || sagaCover || undefined)}
               alt={`Portada de ${chapter.title}`}
               className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             />
@@ -255,24 +313,6 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }:
           {!(cover || chapter.cover || sagaCover) && (
             <div className="absolute inset-0 flex items-center justify-center z-10 speed-lines opacity-30" />
           )}
-          {!(cover || chapter.cover || sagaCover) && (
-            <div className="absolute inset-0 flex items-center justify-center z-20">
-              <span
-                className="font-[var(--font-bangers)] text-[clamp(4rem,12vw,7rem)] leading-none text-white"
-                style={{ WebkitTextStroke: `3px ${accent}`, textShadow: `0 0 60px ${accent}55` }}
-              >
-                #{chapter.number}
-              </span>
-            </div>
-          )}
-
-          {/* Issue number badge */}
-          <div
-            className="absolute top-3 left-3 z-30 font-[var(--font-bangers)] text-xl px-2.5 py-0.5"
-            style={{ background: accent, color: accent === "#f5e642" ? "#0a0a0f" : "white", border: "2px solid #0a0a0f", boxShadow: "2px 2px 0 #0a0a0f" }}
-          >
-            #{chapter.number}
-          </div>
 
           {/* Borrador Badge */}
           {chapter.draft && (
@@ -282,10 +322,10 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover }:
                 background: "#f5e642",
                 color: "#0a0a0f",
                 border: "2px solid #0a0a0f",
-                boxShadow: "3px 3px 0 #e8185a",
+                boxShadow: "3px 3px 0 #1b4332",
               }}
             >
-              ⚠️ Borrador
+              Borrador
             </div>
           )}
 

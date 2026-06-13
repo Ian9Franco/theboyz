@@ -6,639 +6,196 @@
         {
           "focusY": 0.16,
           "dialogue": [
-            {
-              "text": "Che, Sigo sin entender... ¿Qué carajo hacía la cara de el Mati metida en la pantalla de ese casino?",
-              "speaker": "",
-              "style": "normal",
-              "posX": 50,
-              "posY": 25,
-              "tailX": 60,
-              "tailY": 15,
-              "fontSize": 8,
-              "width": 120,
-              "borderRadius": 18,
-              "tail": "bottom-left",
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "size": "small",
-              "fontFamily": "marker",
-              "customBg": "#ffffff",
-              "customColor": "#1c1c1c",
-              "textColor": "#1c1c1c"
-            },
-            {
-              "text": "Los Ángeles. Otra realidad, The boyz",
-              "speaker": "",
-              "style": "caption",
-              "posX": 50,
-              "posY": 0,
-              "size": "small",
-              "customBg": "#050000",
-              "customColor": "#fff700",
-              "textColor": "#ffffff"
-            },
-            {
-              "text": "Qué sé yo, Julián. Estaba toda rota, llena de estática. Para mí que el hdp nos hackeó desde Buenos Aires... o se volvió loco.",
-              "speaker": "",
-              "style": "normal",
-              "size": "small",
-              "posX": 100,
-              "posY": 5,
-              "tailX": 80,
-              "tailY": 10,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 120,
-              "fontSize": 8,
-              "borderRadius": 13
-            }
+            { "text": "Che, Sigo sin entender... ¿Qué carajo hacía la cara de el Mati metida en la pantalla de ese casino?", "posX": 50, "posY": 25, "tailX": 60, "tailY": 15, "fontSize": 10, "width": 120, "borderRadius": 18, "tailWidth": 6, "tailCurvature": -22, "size": "small", "customColor": "#1c1c1c" },
+            { "text": "Los Ángeles. Otra realidad, The boyz", "style": "caption", "posX": 50, "posY": 0, "size": "small", "customBg": "#050000", "customColor": "#fff700", "textColor": "#ffffff" },
+            { "text": "Qué sé yo, Julián. Estaba toda rota, llena de estática. Para mí que el hdp nos hackeó desde Buenos Aires... o se volvió loco.", "size": "small", "posX": 100, "posY": 5, "tailX": 80, "tailY": 10, "tailWidth": 14, "tailCurvature": -22, "width": 120, "fontSize": 10, "borderRadius": 13 }
           ],
           "hideUntilReached": true
         },
         {
           "focusY": 0.45,
           "dialogue": [
-            {
-              "text": "Yo todavía no caigo en que estemos vivos, che. Cruzar el mapa para buscar a este cavernícola en España...",
-              "speaker": "",
-              "style": "normal",
-              "size": "small",
-              "posX": 5,
-              "posY": 30,
-              "tailX": 25,
-              "tailY": 35,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 135,
-              "fontSize": 8,
-              "borderRadius": 6,
-              "customBg": "#ffffff",
-              "customColor": "#1c1c1c",
-              "textColor": "#1c1c1c"
-            },
-            {
-              "text": "...¡para que terminemos en un avión de la Segunda Guerra que escupía aceite! ¡Nos tuvimos que tirar en paracaídas arriba de Vietnam, Julián! ¡De Vietnam!",
-              "speaker": "",
-              "style": "normal",
-              "size": "small",
-              "posX": 0,
-              "posY": 45,
-              "tailX": 10,
-              "tailY": 30,
-              "tailWidth": 10,
-              "tailCurvature": 0,
-              "width": 220,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Pará un poco, histriónico, si el dato de Mati y Volvo desde la base era posta. La escotilla en el piso estaba donde dijeron. Y vos solo.. no la abrías ni en pedo.",
-              "speaker": "",
-              "style": "normal",
-              "size": "small",
-              "posX": 100,
-              "posY": 30,
-              "tailX": 75,
-              "tailY": 40,
-              "tailWidth": 12,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 19,
-              "fontFamily": "marker"
-            },
-            {
-              "text": "Lo que no te conté, Juli, es que la selva estaba llena de milicos corruptos. Me tuve que papear a medio cuartel a mano limpia para que no nos dejen como coladores.",
-              "speaker": "",
-              "style": "normal",
-              "size": "small",
-              "posX": 105,
-              "posY": 40,
-              "tailX": 100,
-              "tailY": 30,
-              "tailWidth": 16,
-              "tailCurvature": 24,
-              "width": 185,
-              "fontSize": 8,
-              "borderRadius": 14,
-              "linkedTo": 2
-            },
-            {
-              "text": "Igual... hay algo raro. Siento los brazos pesadísimos desde que salimos de ese portal. Como si tuviera electricidad estática corriendo abajo de la piel.",
-              "speaker": "",
-              "style": "normal",
-              "size": "small",
-              "posX": 100,
-              "posY": 50,
-              "tailX": 105,
-              "tailY": 40,
-              "tailWidth": 6,
-              "tailCurvature": 42,
-              "width": 230,
-              "fontSize": 8,
-              "borderRadius": 18,
-              "linkedTo": 3
-            }
+            { "text": "Yo todavía no caigo en que estemos vivos, che. Cruzar el mapa para buscar a este cavernícola en España...", "size": "small", "posX": 5, "posY": 30, "tailX": 25, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 135, "fontSize": 8, "borderRadius": 6, "customColor": "#1c1c1c" },
+            { "text": "...¡para que terminemos en un avión de la Segunda Guerra que escupía aceite! ¡Nos tuvimos que tirar en paracaídas arriba de Vietnam, Julián! ¡De Vietnam!", "size": "small", "posX": 0, "posY": 45, "tailX": 10, "tailY": 30, "tailWidth": 10, "tailCurvature": 0, "width": 220, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Pará un poco, histriónico, si el dato de Mati y Volvo desde la base era posta. La escotilla en el piso estaba donde dijeron. Y vos solo.. no la abrías ni en pedo.", "size": "small", "posX": 90, "posY": 25, "tailX": 75, "tailY": 40, "tailWidth": 12, "tailCurvature": -22, "width": 150, "fontSize": 10, "borderRadius": 19 },
+            { "text": "Lo que no te conté, Juli, es que la selva estaba llena de milicos corruptos. Me tuve que papear a medio cuartel a mano limpia para que no nos dejen como coladores.", "size": "small", "posX": 105, "posY": 35, "tailX": 85, "tailY": 25, "tailWidth": 16, "tailCurvature": 66, "width": 185, "fontSize": 9, "borderRadius": 14, "linkedTo": 2 },
+            { "text": "Igual... hay algo raro. Siento los brazos pesadísimos desde que salimos de ese portal. Como si tuviera electricidad estática corriendo abajo de la piel.", "size": "small", "posX": 90, "posY": 45, "tailX": 105, "tailY": 35, "tailWidth": 6, "tailCurvature": -38, "width": 230, "fontSize": 9, "borderRadius": 18, "linkedTo": 3 }
           ]
         },
         {
           "focusY": 0.59,
           "dialogue": [
-            {
-              "text": "(¿Qué es ese zumbido en la calle? El quilombo de la avenida... las bocinas... de golpe todo me retumba adentro de la cabeza...)",
-              "speaker": "",
-              "style": "thought",
-              "size": "small",
-              "posX": 0,
-              "posY": 55,
-              "tailX": 25,
-              "tailY": 60,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 135,
-              "fontSize": 8,
-              "borderRadius": 31
-            },
-            {
-              "text": "Bzzzzzzzz...",
-              "speaker": "",
-              "style": "caption",
-              "size": "small",
-              "posX": 40,
-              "posY": 65,
-              "tailX": 40,
-              "tailY": 60,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 120,
-              "fontSize": 9,
-              "borderRadius": 18,
-              "customColor": "#000000",
-              "customBg": "#f5e642",
-              "textColor": "#000000"
-            },
-            {
-              "text": "Ya estaba armando el testamento mientras ustedes pleotudeaban. \nQué querés que te diga... me dio un toque de ternura verles las caras de asustados.",
-              "speaker": "",
-              "style": "normal",
-              "size": "small",
-              "posX": 110,
-              "posY": 65,
-              "tailX": 95,
-              "tailY": 55,
-              "tailWidth": 16,
-              "tailCurvature": 20,
-              "width": 330,
-              "fontSize": 8,
-              "borderRadius": 17
-            },
-            {
-              "text": "Sí, divino el laberinto. Estuve semanas encerrado en ese pasillo amarillo inmundo con un zumbido sordo que me taladraba el cerebro.",
-              "speaker": "",
-              "style": "normal",
-              "size": "small",
-              "posX": 100,
-              "posY": 55,
-              "tailX": 75,
-              "tailY": 60,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 205,
-              "fontSize": 8,
-              "borderRadius": 9
-            }
+            { "text": "(¿Qué es ese zumbido en la calle? El quilombo de la avenida... las bocinas... de golpe todo me retumba adentro de la cabeza...)", "style": "thought", "size": "small", "posX": 0, "posY": 55, "tailX": 25, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 135, "fontSize": 8, "borderRadius": 17 },
+            { "text": "Bzzzzzzzz...", "style": "caption", "size": "small", "posX": 40, "posY": 65, "tailX": 40, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customColor": "#000000", "customBg": "#f5e642" },
+            { "text": "Ya estaba armando el testamento mientras ustedes pleotudeaban. \nQué querés que te diga... me dio un toque de ternura verles las caras de asustados.", "size": "small", "posX": 110, "posY": 65, "tailX": 95, "tailY": 55, "tailWidth": 16, "tailCurvature": 20, "width": 330, "fontSize": 8, "borderRadius": 17 },
+            { "text": "Sí, divino el laberinto. Estuve semanas encerrado en ese pasillo amarillo inmundo con un zumbido sordo que me taladraba el cerebro.", "size": "small", "posX": 100, "posY": 55, "tailX": 75, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 205, "fontSize": 8, "borderRadius": 9 }
           ]
         },
         {
           "focusY": 0.74,
           "dialogue": [
-            {
-              "text": "Que decissss, estabas llorando del miedo",
-              "speaker": "",
-              "style": "normal",
-              "size": "small",
-              "posX": 0,
-              "posY": 70,
-              "tailX": 25,
-              "tailY": 75,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 120,
-              "fontSize": 9,
-              "borderRadius": 18
-            },
-            {
-              "text": "¡Si no fuera por esa voz en el portal, (que para mí era la de Jaz) gritándonos que saltemos, seguíamos ahí adentro! ",
-              "speaker": "",
-              "style": "normal",
-              "size": "small",
-              "posX": 0,
-              "posY": 80,
-              "tailX": 10,
-              "tailY": 70,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 245,
-              "fontSize": 8,
-              "borderRadius": 16
-            },
-            {
-              "text": "Que dice este pelotudo",
-              "speaker": "",
-              "style": "thought",
-              "size": "small",
-              "posX": 100,
-              "posY": 75,
-              "tailX": 75,
-              "tailY": 75,
-              "tailWidth": 20,
-              "tailCurvature": -40,
-              "width": 130,
-              "fontSize": 8,
-              "borderRadius": 1,
-              "tail": "bottom-left"
-            }
+            { "text": "Que decissss, estabas llorando del miedo", "size": "small", "posX": 0, "posY": 70, "tailX": 25, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 10, "borderRadius": 18 },
+            { "text": "¡Si no fuera por esa voz en el portal, (que para mí era la de Jaz) gritándonos que saltemos, seguíamos ahí adentro! ", "size": "small", "posX": 0, "posY": 80, "tailX": 10, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 245, "fontSize": 9, "borderRadius": 16 },
+            { "text": "¿¿Que dice este pelotudo", "style": "thought", "size": "small", "posX": 100, "posY": 75, "tailX": 75, "tailY": 75, "tailWidth": 20, "tailCurvature": -68, "width": 290, "fontSize": 11, "borderRadius": 6 }
           ]
         },
         {
           "focusY": 0.91,
           "dialogue": [
-            {
-              "text": "Es una demencia total.\nPasamos del infierno de los Backrooms a terminar metidos en un casino clavándome el mejor café de mi vida.",
-              "speaker": "",
-              "style": "normal",
-              "size": "small",
-              "posX": -5,
-              "posY": 90,
-              "tailX": 40,
-              "tailY": 90,
-              "tailWidth": 4,
-              "tailCurvature": 74,
-              "width": 120,
-              "fontSize": 9,
-              "borderRadius": 18
-            }
+            { "text": "Es una demencia total.\nPasamos del infierno de los Backrooms a terminar metidos en un casino clavándome el mejor café de mi vida.", "size": "small", "posX": 60, "posY": 100, "tailX": 40, "tailY": 90, "tailWidth": 4, "tailCurvature": 74, "width": 305, "fontSize": 11, "borderRadius": 18 },
+            { "text": "Che... cállense un segundo.", "size": "small", "posX": 0, "posY": 85, "tailX": 20, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 195, "fontSize": 9, "borderRadius": 18 },
+            { "text": "¿Soy la única que lo siente? Las ventanas... el cielo... el mundo entero está vibrando.", "size": "small", "posX": -5, "posY": 95, "tailX": 0, "tailY": 85, "tailWidth": 14, "tailCurvature": -100, "width": 125, "fontSize": 10, "borderRadius": 18 }
           ]
         }
       ]
     },
     "2": {
       "panels": [
-        {"focusY": 0.15, "dialogue": []},
-        {"focusY": 0.45, "dialogue": []},
-        {"focusY": 0.7, "dialogue": []},
-        {"focusY": 0.9, "dialogue": []}
-      ]
-    },
-    "3": {
-      "panels": [
-        {"focusY": 0.5, "dialogue": []}
-      ]
-    },
-    "4": {
-      "panels": [
-        {"focusY": 0.15, "dialogue": []},
-        {"focusY": 0.45, "dialogue": []},
-        {"focusY": 0.7, "dialogue": []},
-        {"focusY": 0.9, "dialogue": []}
-      ]
-    },
-    "5": {
-      "panels": [
         {
           "focusY": 0.15,
           "dialogue": [
-            {
-              "text": "¡No sé a dónde va esto, pero es mejor que quedarnos a morir acá!",
-              "speaker": "Uandi",
-              "style": "scream",
-              "posX": 70,
-              "posY": 15,
-              "tail": "bottom-left"
-            }
+            { "text": "¡Te juro que cuando Julián sacó el dos y el cinco pensé que nos linchaban ahí mismo!", "size": "small", "posX": 15, "posY": 30, "tailX": 20, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Jajaja, ¡les dio un ACV del cagazo que tenían! No sabían dónde meterse", "size": "small", "posX": 35, "posY": 25, "tailX": 30, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "(No es el tráfico. No son las bocinas... Es adentro de las paredes. Como si el aire tuviera dientes...)", "style": "thought", "size": "small", "posX": 95, "posY": 0, "tailX": 70, "tailY": 10, "tailWidth": 26, "tailCurvature": -82, "width": 135, "fontSize": 8, "borderRadius": 5 }
           ]
         },
-        {"focusY": 0.45, "dialogue": []},
         {
-          "focusY": 0.7,
+          "focusY": 0.45,
           "dialogue": [
-            {
-              "text": "¡No... me estoy... deshaciendo...!",
-              "speaker": "Sofi",
-              "style": "scream",
-              "posX": 20,
-              "posY": 65,
-              "tail": "bottom-right"
-            }
+            { "text": "(Por favor, díganme que me volví loca de golpe...)", "style": "thought", "size": "small", "posX": 10, "posY": 45, "tailX": 40, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.63,
+          "dialogue": [
+            { "text": "¡GLITCH-TZZZZ!", "style": "sfx", "size": "small", "posX": 75, "posY": 60, "tailX": 55, "tailY": 65, "tailWidth": 8, "tailCurvature": -56, "width": 255, "fontSize": 18, "borderRadius": 18, "fontFamily": "marker", "customColor": "#ff149d", "textColor": "#3c39d5" }
+          ],
+          "hideUntilReached": true,
+          "duration": 2,
+          "zoomRects": [
+            { "x": 0, "y": 51, "w": 100, "h": 21 }
           ]
         },
         {
           "focusY": 0.9,
           "dialogue": [
-            {
-              "text": "¡Sofi, dame la mano! ¡Sujetate fuerte!",
-              "speaker": "Ian",
-              "style": "scream",
-              "posX": 50,
-              "posY": 85,
-              "tail": "top-left"
-            }
+            { "text": "¡Jajaja, olvidate! ¡Vos te llenaste de guita y yo casi salgo de ahí casado con tres gallegas! ¡Una mística total!", "size": "small", "posX": 45, "posY": 95, "tailX": 50, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "¿Viste, Ian? Al final sos re maldito vos", "size": "small", "posX": 5, "posY": 80, "tailX": 40, "tailY": 80, "tailWidth": 6, "tailCurvature": -84, "width": 120, "fontSize": 9, "borderRadius": 16 },
+            { "text": "son re wachines", "size": "small", "posX": 15, "posY": 95, "tailX": 35, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "¿Qué? Sofi, pará, ¿qué te pas--?", "size": "small", "posX": 100, "posY": 95, "tailX": 75, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 11, "borderRadius": 18, "customBg": "#f5e642", "customColor": "#000000" }
           ]
+        }
+      ]
+    },
+    "3": {
+      "panels": [
+        {
+          "focusY": 0.26,
+          "dialogue": [
+            { "text": "¡¿QUÉ CARAJO ES ESO?! ¡¿QUÉ ESTÁ CAYENDO DEL CIELO?!", "style": "scream", "size": "small", "posX": 35, "posY": 45, "tailX": 25, "tailY": 35, "tailWidth": 30, "tailCurvature": -22, "width": 115, "fontSize": 13, "borderRadius": 9 },
+            { "text": "¡¡¡CRACK-TZZZZZZZZ!!!", "style": "sfx", "size": "small", "posX": 90, "posY": 30, "tailX": 50, "tailY": 43, "tailWidth": 6, "tailCurvature": -22, "width": 220, "fontSize": 14, "borderRadius": 18, "customColor": "#05070b", "textColor": "#7422d8" },
+            { "text": "Advertencia: Estructura física comprometida. Colapso de frecuencia en curso.", "style": "caption", "size": "small", "posX": 100, "posY": 15, "tailX": 50, "tailY": 43, "tailWidth": 6, "tailCurvature": -22, "width": 175, "fontSize": 8, "borderRadius": 0 }
+          ]
+        },
+        {
+          "focusY": 0.73,
+          "dialogue": [
+            { "text": "Chicos! ¡Miren el cielo! ¡No es un satélite, se nos viene encima!", "size": "small", "posX": 10, "posY": 70, "tailX": 25, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "¡¿Pero qué carajo...?! ¡Se cortó la luz de golpe!", "speaker": "Julián", "size": "small", "posX": 15, "posY": 55, "tailX": 0, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "¡¡¡SHLAACK!!!", "size": "small", "posX": 100, "posY": 65, "tailX": 90, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "fontFamily": "bungee", "customBg": "#0e0d0c", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "¡¿Qué satélite?! ¡Es un planeta entero, boluda! ¡Está distorsionando la gravedad!", "size": "small", "posX": 55, "posY": 90, "tailX": 70, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 50, "w": 100, "h": 50 }
+          ],
+          "duration": 4,
+          "hideUntilReached": true
+        }
+      ]
+    },
+    "4": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "¡¿PERO QUÉ CARAJO ES ESO?! ¡¿QUÉ MIERDA ESTÁ PASANDO CON EL CIELO?!", "style": "scream", "size": "small", "posX": 5, "posY": 20, "tailX": 10, "tailY": 35, "tailWidth": 24, "tailCurvature": 100, "width": 120, "fontSize": 10, "borderRadius": 19 },
+            { "text": "No, no, no... díganme que estamos drogados o traumados por los Backrooms.", "size": "small", "posX": 45, "posY": 35, "tailX": 55, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "¡¿Qué droga boludo?!", "size": "small", "posX": 70, "posY": 45, "tailX": 75, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "¡No, no, no... bóludo, miren eso! ¡¿Qué carajo es?! ¡¿De dónde salió esa masa?!  ", "size": "small", "posX": 85, "posY": 50, "tailX": 85, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "¡Se nos viene encima! ¡Un planeta entero va a chocar contra la ciudad! ¡Nos vamos a morir!", "size": "small", "posX": 60, "posY": 40, "tailX": 65, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "fontFamily": "luckiest" },
+            { "text": " ¡Múevanse ya para adentro!  ", "size": "small", "posX": 65, "posY": 5, "tailX": 60, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "fontFamily": "bungee" }
+          ]
+        },
+        {
+          "focusY": 0.76,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 59, "w": 100, "h": 41 }
+          ],
+          "duration": 2.5
         }
       ]
     },
     "6": {
       "panels": [
-        {"focusY": 0.2, "dialogue": []},
-        {"focusY": 0.5, "dialogue": []},
         {
-          "focusY": 0.8,
+          "focusY": 0.11,
           "dialogue": [
-            {
-              "text": "¡¿Dónde carajo estaban?!",
-              "speaker": "Jaz",
-              "style": "scream",
-              "posX": 25,
-              "posY": 75,
-              "tail": "bottom-right"
-            },
-            {
-              "text": "Digamos que la casa no ganó esta vez, Jaz.",
-              "speaker": "Julián",
-              "style": "normal",
-              "posX": 70,
-              "posY": 85,
-              "tail": "top-left"
-            }
-          ]
-        }
-      ]
-    },
-    "7": {
-      "panels": [
-        {
-          "focusY": 0.2,
-          "dialogue": [
-            {
-              "text": "Tranquila... acá vas a estar segura.",
-              "speaker": "Ian",
-              "style": "normal",
-              "posX": 40,
-              "posY": 15,
-              "tail": "bottom-left"
-            }
+            { "text": "(No puedo mover las piernas... Es el fin. Es el maldito fin del mundo...)", "style": "whisper", "size": "small", "posX": 90, "posY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 115, "fontSize": 11, "borderRadius": 18, "tail": "left" }
           ]
         },
         {
-          "focusY": 0.5,
+          "focusY": 0.32,
           "dialogue": [
-            {
-              "text": "¡Mierda! Perdón, se me resbaló...",
-              "speaker": "Mati",
-              "style": "normal",
-              "posX": 35,
-              "posY": 45,
-              "tail": "top-right"
-            }
+            { "text": "¡Che, qué carajo! ¡Mis fichas se están yendo para arriba! ¡La gravedad se rompió por completo!", "speaker": "Julián", "size": "small", "posX": 85, "posY": 30, "tailX": 110, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 155, "fontSize": 8, "borderRadius": 4 },
+            { "text": "¡¿A quién le importan tus fichas, enfermo?! ¡Se está levantando el piso!", "speaker": "Uandi", "size": "small", "posX": 80, "posY": 45, "tailX": 110, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 170, "fontSize": 8, "borderRadius": 4 }
           ]
         },
         {
-          "focusY": 0.85,
+          "focusY": 0.53,
           "dialogue": [
-            {
-              "text": "Tomá, ponete esto. Apaga el ruido.",
-              "speaker": "Ian",
-              "style": "whisper",
-              "posX": 50,
-              "posY": 80,
-              "tail": "bottom-left"
-            }
-          ]
-        }
-      ]
-    },
-    "8": {
-      "panels": [
-        {
-          "focusY": 0.15,
-          "dialogue": [
-            {
-              "text": "Al menos la comida de este universo zafa.",
-              "speaker": "Julián",
-              "style": "normal",
-              "posX": 60,
-              "posY": 10,
-              "tail": "bottom-left"
-            }
-          ]
-        },
-        {
-          "focusY": 0.35,
-          "dialogue": [
-            {
-              "text": "Che, necesita aire. Conozco una cabaña aislada en el mapa. Ahí no hay ruido. Dejame que la lleve a descansar.",
-              "speaker": "Uandi",
-              "style": "normal",
-              "posX": 65,
-              "posY": 30,
-              "tail": "bottom-right"
-            },
-            {
-              "text": "Gracias, Uandi. De verdad.",
-              "speaker": "Sofi",
-              "style": "normal",
-              "posX": 30,
-              "posY": 35,
-              "tail": "bottom-left"
-            }
-          ]
-        },
-        {
-          "focusY": 0.5,
-          "dialogue": [
-            {
-              "text": "Tomá... es una laptop vieja. Para que... no sé, busques cosas de este lado.",
-              "speaker": "Mati",
-              "style": "whisper",
-              "posX": 50,
-              "posY": 50,
-              "tail": "top-right"
-            }
-          ]
-        },
-        {
-          "focusY": 0.65,
-          "dialogue": [
-            {
-              "text": "Gracias...",
-              "speaker": "Sofi",
-              "style": "whisper",
-              "posX": 40,
-              "posY": 65,
-              "tail": "bottom-left"
-            }
-          ]
+            { "text": "¡¡¡CRRRRASH-SHHHH!!!", "style": "sfx", "size": "small", "posX": 95, "posY": 60, "tailX": 75, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 17, "borderRadius": 18, "fontFamily": "bangers", "textColor": "#ebd914" },
+            { "text": "¡SOFI, CUIDADO! ¡AGACHATE!", "size": "small", "posX": 55, "posY": 60, "tailX": 50, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "¡¡¡IAN!!!  ", "size": "small", "posX": 5, "posY": 55, "tailX": 20, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 1, "y": 44, "w": 100, "h": 20 }
+          ],
+          "duration": 2.5
         },
         {
           "focusY": 0.8,
           "dialogue": [
-            {
-              "text": "Todo es distinto... pero la miseria humana es la misma...",
-              "speaker": "Sofi",
-              "style": "thought",
-              "posX": 50,
-              "posY": 78,
-              "tail": "bottom-left"
-            }
-          ]
-        },
-        {"focusY": 0.95, "dialogue": []}
+            { "text": "¡¡¡BOOOOOMMMM-CRACK!!!", "style": "sfx", "size": "small", "posX": 20, "posY": 80, "tailX": 40, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 15, "borderRadius": 18, "textColor": "#db6b0f" },
+            { "text": "¡¡¡HIJO DE PUTA, SE VOLÓ EL TECHO!!! ¡¡¡NOS VA A TRAGAR EL CIELO!!!", "size": "small", "posX": 85, "posY": 70, "tailX": 80, "tailY": 85, "tailWidth": 4, "tailCurvature": -40, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 64, "w": 100, "h": 36 }
+          ],
+          "duration": 3
+        }
       ]
     },
     "9": {
       "panels": [
         {
-          "focusY": 0.25,
+          "focusY": 0.2,
           "dialogue": [
-            {
-              "text": "Tengo miedo, Ian. Este mundo es demasiado violento, hace mucho ruido.",
-              "speaker": "Sofi",
-              "style": "normal",
-              "posX": 30,
-              "posY": 20,
-              "tail": "bottom-right"
-            }
+            { "text": "Es la única forma de que duerma en paz. Si se queda acá, no hay chance.", "speaker": "Ian", "posX": 35, "posY": 15, "tail": "bottom-right" }
           ]
         },
         {
-          "focusY": 0.55,
+          "focusY": 0.45,
           "dialogue": [
-            {
-              "text": "Este universo tiene cosas horribles, Sofi. Pero también tiene cosas buenas. No dejes que el ruido te tape lo que vale la pena conocer. Dale una oportunidad.",
-              "speaker": "Ian",
-              "style": "normal",
-              "posX": 65,
-              "posY": 50,
-              "tail": "top-left"
-            }
+            { "text": "No sé... igual me da cosa dejarla sola.", "speaker": "Ian", "posX": 20, "posY": 40, "tail": "top-right" }
           ]
         },
         {
-          "focusY": 0.85,
+          "focusY": 0.7,
           "dialogue": [
-            {
-              "text": "Me voy a recorrer el mundo sola. Necesito encontrar mi propio camino.",
-              "speaker": "Sofi",
-              "style": "normal",
-              "posX": 30,
-              "posY": 75,
-              "tail": "bottom-right"
-            },
-            {
-              "text": "Bueno... te llevo al aeropuerto. ¿A dónde querés ir?",
-              "speaker": "Uandi",
-              "style": "normal",
-              "posX": 65,
-              "posY": 80,
-              "tail": "bottom-left"
-            },
-            {
-              "text": "A cualquier parte. Lejos. Y ahora mismo.",
-              "speaker": "Sofi",
-              "style": "normal",
-              "posX": 30,
-              "posY": 88,
-              "tail": "bottom-right"
-            }
+            { "text": "Si vuelve a pasar, nos enteramos en un toque. Tranquilo.", "speaker": "Uandi", "posX": 65, "posY": 65 }
           ]
         }
-      ]
-    },
-    "10": {
-      "panels": [
-        {"focusY": 0.12, "dialogue": []},
-        {
-          "focusY": 0.25,
-          "dialogue": [
-            {
-              "text": "VUELO DISPONIBLE: TOKIO - JAPÓN",
-              "speaker": "Aeropuerto",
-              "style": "electronic",
-              "posX": 50,
-              "posY": 20
-            }
-          ]
-        },
-        {
-          "focusY": 0.38,
-          "dialogue": [
-            {
-              "text": "¿Tokio? ¿Estás segura?",
-              "speaker": "Uandi",
-              "style": "normal",
-              "posX": 60,
-              "posY": 35,
-              "tail": "bottom-left"
-            },
-            {
-              "text": "Sí. Es hora.",
-              "speaker": "Sofi",
-              "style": "normal",
-              "posX": 30,
-              "posY": 38,
-              "tail": "bottom-right"
-            }
-          ]
-        },
-        {"focusY": 0.5, "dialogue": []},
-        {
-          "focusY": 0.62,
-          "dialogue": [
-            {
-              "text": "Cuidate mucho, Sofi.",
-              "speaker": "Julián",
-              "style": "normal",
-              "posX": 45,
-              "posY": 58,
-              "tail": "bottom-left"
-            }
-          ]
-        },
-        {
-          "focusY": 0.75,
-          "dialogue": [
-            {
-              "text": "Te vamos a extrañar, enana.",
-              "speaker": "Uandi",
-              "style": "normal",
-              "posX": 55,
-              "posY": 72,
-              "tail": "bottom-left"
-            }
-          ]
-        },
-        {
-          "focusY": 0.87,
-          "dialogue": [
-            {
-              "text": "Gracias por apagar el ruido...",
-              "speaker": "Sofi",
-              "style": "whisper",
-              "posX": 30,
-              "posY": 82,
-              "tail": "bottom-right"
-            },
-            {
-              "text": "Siempre...",
-              "speaker": "Ian",
-              "style": "whisper",
-              "posX": 65,
-              "posY": 85,
-              "tail": "top-left"
-            }
-          ]
-        },
-        {"focusY": 0.95, "dialogue": []}
       ]
     }
   }

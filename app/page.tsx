@@ -52,12 +52,13 @@ export default function Home() {
               {/* === ERA CANON OFICIAL === */}
               {officialSagas.length > 0 && (
                 <div className="flex flex-col gap-24">
-                  <div className="border-4 border-[#0a0a0f] bg-white p-6 md:p-8 shadow-[8px_8px_0_#e8185a] relative overflow-hidden">
-                    <div className="absolute top-0 right-0 bg-[#e8185a] text-white font-[var(--font-bangers)] text-xs px-3 py-1 uppercase tracking-wider">
+                  <div className="border-4 border-[#0a0a0f] bg-white p-6 md:p-8 shadow-[8px_8px_0_#1b4332] relative overflow-hidden">
+                    <div className="absolute top-0 right-0 bg-[#1b4332] text-white font-[var(--font-bangers)] text-xs px-3 py-1 uppercase tracking-wider">
                       Línea Canon
                     </div>
-                    <h3 className="font-[var(--font-bangers)] text-3xl sm:text-4xl text-[#0a0a0f] mb-2">
-                      🔥 HISTORIA PRINCIPAL
+                    <h3 className="font-[var(--font-bangers)] text-3xl sm:text-4xl text-[#0a0a0f] mb-2 flex items-center gap-3">
+                      <img src="/comic-dynamic.png" alt="Comic Book" className="w-8 h-8 object-contain shrink-0" />
+                      HISTORIA PRINCIPAL
                     </h3>
                     <p className="font-sans text-sm sm:text-base text-gray-700 max-w-2xl leading-relaxed">
                       Aquí comienza la historia oficial del cómic. La trama, el guion formal y los dibujos manuales están completamente trabajados para establecer el canon oficial de <strong>The Boyz</strong>.
@@ -87,7 +88,8 @@ export default function Home() {
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div>
                       <h3 className="font-[var(--font-bangers)] text-2xl tracking-wider text-gray-500 flex items-center gap-2">
-                        📜 ARCHIVOS HISTÓRICOS (ETAPA PILOTO)
+                        <img src="/comic-book.png" alt="Comic Book" className="w-6 h-6 object-contain grayscale opacity-60 shrink-0" />
+                        ARCHIVOS HISTÓRICOS (ETAPA PILOTO)
                       </h3>
                       <p className="font-sans text-xs text-gray-500 mt-1 max-w-xl">
                         Sagas experimentales creadas libremente antes de formalizar el rumbo y los guiones definitivos de la serie.
@@ -97,7 +99,7 @@ export default function Home() {
                       onClick={() => setShowClassic(!showClassic)}
                       className="font-[var(--font-bangers)] text-sm tracking-wider px-5 py-2 border-2 border-black bg-white hover:bg-gray-100 text-black uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] cursor-pointer self-start sm:self-auto shrink-0"
                     >
-                      {showClassic ? "✕ Ocultar Pilotos" : "👁️ Ver Etapas Anteriores"}
+                      {showClassic ? "Ocultar Pilotos" : "Ver Etapas Anteriores"}
                     </button>
                   </div>
 

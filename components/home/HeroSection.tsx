@@ -77,7 +77,7 @@ export function HeroSection() {
         <div
           className="absolute right-0 top-0 w-80 h-80 pointer-events-none opacity-[0.04] z-10"
           style={{
-            backgroundImage: "radial-gradient(circle, #e8185a 1.5px, transparent 1.5px)",
+            backgroundImage: "radial-gradient(circle, #1b4332 1.5px, transparent 1.5px)",
             backgroundSize: "10px 10px",
           }}
         />
@@ -343,7 +343,7 @@ function CharCard({
             <img
               src={char.image}
               alt="?"
-              className="absolute inset-0 w-full h-full object-cover object-center opacity-15 grayscale blur-[3px]"
+              className="absolute inset-0 w-full h-full object-cover object-top opacity-15 grayscale blur-[3px]"
               onError={() => setHasError(true)}
             />
           )}
@@ -354,7 +354,6 @@ function CharCard({
           >
             ?
           </span>
-          <div className="absolute inset-1.5 border-2 border-black pointer-events-none z-20" />
         </div>
       ) : hasError || !char.image ? (
         <div className="absolute inset-0 flex items-center justify-center">
@@ -364,17 +363,15 @@ function CharCard({
           >
             ?
           </span>
-          <div className="absolute inset-1.5 border-2 border-black pointer-events-none z-20" />
         </div>
       ) : (
         <>
           <img
             src={char.image}
             alt={char.displayName}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-top"
             onError={() => setHasError(true)}
           />
-          <div className="absolute inset-1.5 border-2 border-black pointer-events-none z-20" />
         </>
       )}
 
@@ -456,7 +453,7 @@ export function BannerLightbox({ src, alt, onClose }: { src: string; alt: string
             e.stopPropagation();
             setIsZoomed(!isZoomed);
           }}
-          className="bg-[#e8185a] hover:bg-[#c8134d] px-3 py-1 rounded text-white transition-colors"
+          className="bg-[#1b4332] hover:bg-[#2d6a4f] px-3 py-1 rounded text-white transition-colors"
         >
           {isZoomed ? "LUPA -" : "LUPA +"}
         </button>
@@ -464,7 +461,7 @@ export function BannerLightbox({ src, alt, onClose }: { src: string; alt: string
 
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-[#e8185a] border-2 border-white text-white font-[var(--font-bangers)] text-xl shadow-lg z-20 hover:bg-[#c8134d] transition-colors"
+        className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-[#1b4332] border-2 border-white text-white font-[var(--font-bangers)] text-xl shadow-lg z-20 hover:bg-[#2d6a4f] transition-colors"
       >
         ✕
       </button>

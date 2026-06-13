@@ -4,11 +4,13 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-bangers: var(--font-bangers), 'Bangers', sans-serif;
   --font-marker: var(--font-marker), 'Permanent Marker', cursive;
+  --font-bungee: var(--font-bungee), 'Bungee', sans-serif;
+  --font-luckiest: var(--font-luckiest), 'Luckiest Guy', cursive;
 
   /* ── Modern Pop Art Palette ── */
   --ink:        #0a0a0f;
   --paper:      #f4f0e6;
-  --magenta:    #e8185a;
+  --magenta:    #1b4332;
   --cyan:       #00b8d4;
   --yellow:     #f5e642;
   --violet:     #6d28d9;
@@ -140,13 +142,13 @@ body {
     transform: translate(3px, 3px);
     box-shadow: 1px 1px 0 #0a0a0f;
   }
-  .btn-magenta { background: #e8185a; color: white; }
-  .btn-magenta:hover { background: #c8134d; }
+  .btn-magenta { background: #1b4332; color: white; }
+  .btn-magenta:hover { background: #2d6a4f; }
   .btn-yellow  { background: #f5e642; color: #0a0a0f; }
-  .btn-yellow:hover  { background: #e8185a; color: white; }
+  .btn-yellow:hover  { background: #1b4332; color: white; }
   .btn-cyan    { background: #00b8d4; color: #0a0a0f; }
   .btn-dark    { background: #0a0a0f; color: white; }
-  .btn-dark:hover { background: #e8185a; }
+  .btn-dark:hover { background: #1b4332; }
 
   /* ── LABEL / TAG ── */
   .tag {
@@ -198,5 +200,17 @@ body {
     .hero-banner-img {
       animation: pan-banner 30s ease-in-out infinite;
     }
+  }
+
+  /* ── Pop-art dot-grid backgrounds ── */
+  .bg-dark-popart {
+    background-color: #0a0a0f !important;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1.2px, transparent 1.2px) !important;
+    background-size: 16px 16px !important;
+  }
+  .bg-light-popart {
+    background-color: #f4f0e6 !important;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.04) 1.2px, transparent 1.2px) !important;
+    background-size: 16px 16px !important;
   }
 }

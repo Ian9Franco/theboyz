@@ -39,19 +39,19 @@ export default function NavBar() {
   };
 
   return (
-    <header className="sticky top-0 z-50" style={{ background: "#0a0a0f", borderBottom: "3px solid #e8185a" }}>
+    <header className="sticky top-0 z-50" style={{ background: "#0a0a0f", borderBottom: "3px solid #1b4332" }}>
       <div className="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between gap-4">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0 group hover:opacity-90 transition-opacity">
           <img
-            src="/logo.png"
+            src="/logo_dark.jpg"
             alt="The Boyz Logo"
-            className="h-10 w-auto object-contain block"
+            className="h-10 w-auto object-contain block rounded-lg"
           />
           <span
             className="font-[var(--font-bungee)] text-3xl tracking-widest text-white leading-none hidden sm:block pt-1"
-            style={{ textShadow: "3px 3px 0 #e8185a" }}
+            style={{ textShadow: "3px 3px 0 #1b4332" }}
           >
             THE BOYZ
           </span>
@@ -73,7 +73,7 @@ export default function NavBar() {
             <div className="absolute top-full left-0 pt-2 hidden group-hover:flex flex-col z-50">
               <div
                 className="flex flex-col gap-4 p-4 min-w-[280px] max-w-[320px] max-h-[70vh] overflow-y-auto"
-                style={{ background: "#13131e", border: "2px solid #e8185a", boxShadow: "6px 6px 0 #e8185a" }}
+                style={{ background: "#13131e", border: "2px solid #1b4332", boxShadow: "6px 6px 0 #1b4332" }}
               >
                 {sagasList.map((saga) => {
                   const isClassic = saga.order < 3;
@@ -96,7 +96,7 @@ export default function NavBar() {
                         {saga.chapters.map((ch: any) => (
                           <Link key={ch.id} href={`/chapters/${ch.id}`}
                             className="font-[var(--font-bangers)] text-base tracking-wider py-1 text-white hover:text-[#0a0a0f] hover:bg-[#f5e642] transition-all block px-2 rounded-sm">
-                            <span className="text-[#e8185a] mr-2">#{ch.number}</span>{ch.title}
+                            <span className="text-[#1b4332] mr-2">#{ch.number}</span>{ch.title}
                           </Link>
                         ))}
                       </div>
@@ -120,11 +120,11 @@ export default function NavBar() {
             <div className="absolute top-full right-0 pt-2 hidden group-hover:flex flex-col z-50">
               <div
                 className="flex flex-col gap-1 p-2 min-w-[260px]"
-                style={{ background: "#13131e", border: "2px solid #e8185a", boxShadow: "6px 6px 0 #e8185a" }}
+                style={{ background: "#13131e", border: "2px solid #1b4332", boxShadow: "6px 6px 0 #1b4332" }}
               >
                 <Link href="/lore"
                   className="font-[var(--font-bangers)] text-lg tracking-wider px-3 py-2 text-white hover:text-[#0a0a0f] hover:bg-[#f5e642] transition-all block">
-                  <span className="text-[#e8185a] mr-2">✦</span>Historia y Poderes
+                  <span className="text-[#1b4332] mr-2">✦</span>Historia y Poderes
                 </Link>
               </div>
             </div>
@@ -133,7 +133,7 @@ export default function NavBar() {
           {/* Leer Cómic Button */}
           <Link
             href="/#sagas"
-            className="font-[var(--font-bangers)] text-sm tracking-wider px-3.5 py-1.5 border-2 border-white bg-[#e8185a] hover:bg-[#c8134d] text-white uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] shrink-0"
+            className="font-[var(--font-bangers)] text-sm tracking-wider px-3.5 py-1.5 border-2 border-white bg-[#1b4332] hover:bg-[#2d6a4f] text-white uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] shrink-0"
           >
             Leer Cómic →
           </Link>
@@ -155,7 +155,7 @@ export default function NavBar() {
         <div className="flex md:hidden items-center gap-3">
           <Link
             href="/#sagas"
-            className="font-[var(--font-bangers)] text-[11px] tracking-wider px-2.5 py-1 border-2 border-white bg-[#e8185a] text-white uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] shrink-0"
+            className="font-[var(--font-bangers)] text-[11px] tracking-wider px-2.5 py-1 border-2 border-white bg-[#1b4332] text-white uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] shrink-0"
           >
             Leer
           </Link>
@@ -173,7 +173,7 @@ export default function NavBar() {
           
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="font-[var(--font-bangers)] text-2xl text-white border-2 border-white/20 px-3 py-1 hover:border-[#e8185a] hover:text-[#e8185a] transition-colors"
+            className="font-[var(--font-bangers)] text-2xl text-white border-2 border-white/20 px-3 py-1 hover:border-[#1b4332] hover:text-[#1b4332] transition-colors"
           >
             {menuOpen ? "✕" : "☰"}
           </button>
@@ -182,12 +182,12 @@ export default function NavBar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div style={{ background: "#13131e", borderTop: "2px solid #e8185a" }} className="md:hidden px-5 py-6 flex flex-col gap-5">
+        <div style={{ background: "#13131e", borderTop: "2px solid #1b4332" }} className="md:hidden px-5 py-6 flex flex-col gap-5">
           {/* Leer Cómic Button on Mobile Dropdown */}
           <Link
             href="/#sagas"
             onClick={() => setMenuOpen(false)}
-            className="w-full font-[var(--font-bangers)] text-lg text-center tracking-wider py-2.5 border-2 border-white bg-[#e8185a] hover:bg-[#c8134d] text-white uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] block"
+            className="w-full font-[var(--font-bangers)] text-lg text-center tracking-wider py-2.5 border-2 border-white bg-[#1b4332] hover:bg-[#2d6a4f] text-white uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] block"
           >
             Leer Cómic →
           </Link>
@@ -215,8 +215,8 @@ export default function NavBar() {
               {saga.chapters.map((ch: any) => (
                 <Link key={ch.id} href={`/chapters/${ch.id}`}
                   onClick={() => setMenuOpen(false)}
-                  className="font-[var(--font-bangers)] text-xl tracking-wider pl-4 py-1.5 block text-white/70 hover:text-[#f5e642] hover:pl-6 transition-all border-l-2 border-white/10 hover:border-[#e8185a] mb-1">
-                  <span className="text-[#e8185a] mr-2">#{ch.number}</span>{ch.title}
+                  className="font-[var(--font-bangers)] text-xl tracking-wider pl-4 py-1.5 block text-white/70 hover:text-[#f5e642] hover:pl-6 transition-all border-l-2 border-white/10 hover:border-[#1b4332] mb-1">
+                  <span className="text-[#1b4332] mr-2">#{ch.number}</span>{ch.title}
                 </Link>
               ))}
             </div>
@@ -231,8 +231,8 @@ export default function NavBar() {
             </p>
             <Link href="/lore"
               onClick={() => setMenuOpen(false)}
-              className="font-[var(--font-bangers)] text-xl tracking-wider pl-4 py-1.5 block text-white/70 hover:text-[#f5e642] hover:pl-6 transition-all border-l-2 border-white/10 hover:border-[#e8185a] mb-1">
-              <span className="text-[#e8185a] mr-2">✦</span>Historia y Poderes
+              className="font-[var(--font-bangers)] text-xl tracking-wider pl-4 py-1.5 block text-white/70 hover:text-[#f5e642] hover:pl-6 transition-all border-l-2 border-white/10 hover:border-[#1b4332] mb-1">
+              <span className="text-[#1b4332] mr-2">✦</span>Historia y Poderes
             </Link>
           </div>
         </div>

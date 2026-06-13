@@ -202,7 +202,7 @@ export const pibes: CharacterDetail[] = [
       stats: { fuerza: 7, inteligencia: 8, carisma: 9, suerte: 9, combate: 9, defensa: 7, especialVal: 9 },
       suitImages: {
         default: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
-        ficha: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard_Ficha.webp',
+        ficha: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard_ficha.webp',
         combat: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard_combat.webp'
       },
       variantData: {

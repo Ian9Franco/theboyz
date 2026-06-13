@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Bangers, Permanent_Marker, Bungee } from "next/font/google";
+import { Inter, Bangers, Permanent_Marker, Bungee, Luckiest_Guy } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 
@@ -7,6 +7,7 @@ const inter   = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const bangers = Bangers({ weight: "400", variable: "--font-bangers", subsets: ["latin"] });
 const marker  = Permanent_Marker({ weight: "400", variable: "--font-marker", subsets: ["latin"] });
 const bungee  = Bungee({ weight: "400", variable: "--font-bungee", subsets: ["latin"] });
+const luckiest = Luckiest_Guy({ weight: "400", variable: "--font-luckiest", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "The Boyz | Cómic",
@@ -15,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es-AR" suppressHydrationWarning className={`${inter.variable} ${bangers.variable} ${marker.variable} ${bungee.variable}`}>
-      <body className="antialiased min-h-screen flex flex-col font-sans" style={{ background: "#f4f0e6" }}>
+    <html lang="es-AR" suppressHydrationWarning className={`${inter.variable} ${bangers.variable} ${marker.variable} ${bungee.variable} ${luckiest.variable}`}>
+      <body className="antialiased min-h-screen flex flex-col font-sans bg-light-popart">
         <NavBar />
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
@@ -29,27 +30,28 @@ function Footer() {
   return (
     <footer
       className="pt-16 pb-10 px-6 overflow-hidden relative"
-      style={{ background: "#0a0a0f", borderTop: "3px solid #e8185a" }}
+      style={{ background: "#f1f5f9", borderTop: "3px solid #1b4332" }}
     >
       {/* Halftone bg */}
       <div
         className="absolute inset-0 pointer-events-none opacity-5"
         style={{
-          backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, #0f2042 1px, transparent 1px)",
           backgroundSize: "12px 12px",
         }}
       />
 
       <div className="max-w-5xl mx-auto relative z-10 text-center flex flex-col items-center gap-6">
-        <div
-          className="font-[var(--font-bangers)] text-5xl sm:text-7xl text-white tracking-widest"
-          style={{ textShadow: "4px 4px 0 #e8185a" }}
-        >
-          …
+        <div className="relative w-60 h-16 sm:w-72 sm:h-20 max-w-full overflow-hidden rounded-xl shadow-sm border border-[#0f2042]/10 bg-white">
+          <img
+            src="/logo_white.jpg"
+            alt="The Boyz Logo"
+            className="w-full h-full object-contain rounded-xl"
+          />
         </div>
         <p
           className="font-[var(--font-marker)] text-lg"
-          style={{ color: "rgba(255,255,255,0.4)" }}
+          style={{ color: "#0f2042", opacity: 0.8 }}
         >
           Pronto caen más capítulos — dale que llueve
         </p>
@@ -59,12 +61,13 @@ function Footer() {
           <span
             className="font-[var(--font-bangers)] text-xs sm:text-sm tracking-[0.35em] uppercase"
             style={{
-              color: "#e8185a",
-              border: "1px solid rgba(232,24,90,0.45)",
+              color: "#1b4332",
+              border: "2px solid #1b4332",
               padding: "0.4rem 1.25rem",
-              background: "rgba(10, 10, 15, 0.9)",
-              boxShadow: "3px 3px 0 rgba(232, 24, 90, 0.3)",
+              background: "white",
+              boxShadow: "3px 3px 0 #1b4332",
               display: "inline-block",
+              borderRadius: "4px",
             }}
           >
             Un cómic original
@@ -73,18 +76,19 @@ function Footer() {
 
         <div
           className="w-24 h-px"
-          style={{ background: "rgba(255,255,255,0.1)" }}
+          style={{ background: "rgba(15,32,66,0.15)" }}
         />
         <p
           className="font-[var(--font-bangers)] text-sm tracking-[0.2em]"
-          style={{ color: "rgba(255,255,255,0.25)" }}
+          style={{ color: "#0f2042", opacity: 0.6 }}
         >
           © {new Date().getFullYear()} THE BOYZ COMICS — CREADO POR{" "}
           <a
             href="https://ian-pontorno-portfolio.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-[#f5e642] underline transition-colors"
+            className="hover:text-[#1b4332] underline transition-colors font-bold"
+            style={{ color: "#0f2042" }}
           >
             IAN PONTORNO
           </a>

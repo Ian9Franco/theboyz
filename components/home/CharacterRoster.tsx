@@ -20,9 +20,9 @@ const CATEGORY_METADATA = {
   pibes: {
     title: "LOS PIBES",
     tagline: "El equipo principal",
-    badgeColor: "#e8185a",
-    shadowColor: "rgba(232,24,90,0.2)",
-    borderColor: "#e8185a",
+    badgeColor: "#1b4332",
+    shadowColor: "rgba(27,67,50,0.2)",
+    borderColor: "#1b4332",
   },
   independientes: {
     title: "ALIADOS INDEPENDIENTES",
@@ -189,8 +189,15 @@ export function CharacterRoster() {
     return a.localeCompare(b);
   });
 
+  const getCategoryIcon = (key: string): string => {
+    if (key === "pibes") return "/comic-dynamic-white.png";
+    if (key === "antagonistas") return "/boom-white.png";
+    if (key === "locaciones") return "/comic-page-white.png";
+    return "/comic-book-white.png";
+  };
+
   return (
-    <section className="py-24 px-4 sm:px-6 overflow-hidden relative" style={{ background: "#0a0a0f", borderTop: "6px solid white" }}>
+    <section className="bg-dark-popart py-24 px-4 sm:px-6 overflow-hidden relative" style={{ borderTop: "6px solid white" }}>
       {/* Decorative background elements */}
       <div className="absolute inset-0 speed-lines opacity-10" />
       <div
@@ -249,9 +256,14 @@ export function CharacterRoster() {
                     {meta.tagline}
                   </span>
                   <h2
-                    className="font-[var(--font-bangers)] text-5xl sm:text-7xl leading-none tracking-wider text-white"
+                    className="font-[var(--font-bangers)] text-5xl sm:text-7xl leading-none tracking-wider text-white flex items-center justify-center gap-4"
                     style={{ textShadow: `4px 4px 0 ${meta.borderColor}, 8px 8px 0 ${meta.shadowColor}` }}
                   >
+                    <img 
+                      src={getCategoryIcon(key)} 
+                      alt="Icon" 
+                      className="w-10 h-10 sm:w-12 sm:h-12 object-contain shrink-0" 
+                    />
                     {meta.title}
                   </h2>
                 </motion.div>
@@ -317,11 +329,10 @@ export function CharacterRoster() {
                               <img 
                                 src={cardImg} 
                                 alt="Incógnito" 
-                                className="absolute inset-0 w-full h-full object-cover object-center opacity-20 grayscale blur-sm"
+                                className="absolute inset-0 w-full h-full object-cover object-top opacity-20 grayscale blur-sm"
                               />
                             )}
                             <div className="absolute inset-0 bg-black/50" />
-                            <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
                           </div>
                         ) : (
                           <>
@@ -329,10 +340,9 @@ export function CharacterRoster() {
                               <img 
                                 src={cardImg} 
                                 alt={char.displayName} 
-                                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2 grayscale-[0.3] group-hover:grayscale-0"
+                                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2 grayscale-[0.3] group-hover:grayscale-0"
                               />
                             )}
-                            <div className="absolute inset-2 border-2 border-black pointer-events-none z-20" />
                           </>
                         )}
                         

@@ -28,7 +28,7 @@ export type Saga = {
   cover?: string | null;
 };
 
-const POP_ART_COLORS = ["#e8185a", "#00b8d4", "#f5e642", "#6d28d9", "#f97316", "#16a34a"];
+const POP_ART_COLORS = ["#1b4332", "#00b8d4", "#f5e642", "#6d28d9", "#f97316", "#16a34a"];
 const SUPPORTED_FORMATS = [".jpg", ".jpeg", ".png", ".webp", ".gif"];
 
 export function titleCase(str: string): string {

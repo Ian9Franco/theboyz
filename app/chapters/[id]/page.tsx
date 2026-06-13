@@ -7,6 +7,7 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import { Lightbox as ReaderLightbox } from "@/components/reader/ReaderLightbox";
 import { DraftLockScreen } from "@/components/reader/DraftLockScreen";
 import { CinematicReader } from "@/components/reader/CinematicReader";
+import { getComicPageUrl } from "@/components/reader/readerUtils";
 
 export default function ChapterPage() {
   const params  = useParams();
@@ -269,7 +270,7 @@ export default function ChapterPage() {
       <AnimatePresence>
         {lightboxIndex !== null && pages.length > 0 && (
           <ReaderLightbox 
-            src={pages[lightboxIndex]} 
+            src={getComicPageUrl(pages[lightboxIndex])} 
             alt={`${chapter.title} — Página ${lightboxIndex + 1}`} 
             onClose={() => setLightboxIndex(null)}
             onNext={() => setLightboxIndex(lightboxIndex + 1)}
@@ -336,7 +337,7 @@ export default function ChapterPage() {
                 className="relative w-full group border-0 sm:border-[3px] border-[#0a0a0f] shadow-none sm:shadow-[5px_5px_0_#0a0a0f] bg-white"
               >
                 <img
-                  src={src}
+                  src={getComicPageUrl(src)}
                   alt={`${chapter.title} — Página ${i + 1}`}
                   className="w-full h-auto block"
                   loading="lazy"
