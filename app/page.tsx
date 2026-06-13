@@ -60,7 +60,8 @@ export default function Home() {
                       HISTORIA PRINCIPAL
                     </h3>
                     <p className="font-sans text-sm sm:text-base text-gray-700 max-w-2xl leading-relaxed">
-                      Acá comienza la historia oficial del cómic. La trama, el guion formal y los dibujos están completamente trabajados para establecer el canon oficial de <strong>The Boyz</strong>.
+                    Acá comienza el canon oficial de <strong>The Boyz</strong>. 
+                      La historia arranca tras un escape desesperado: <strong>Ian</strong> y <strong>Uandi</strong> lograron rescatar a <strong>Julián</strong> de un secuestro en los <strong>Backrooms</strong>, un perturbador universo paralelo. Al huir de allí sin saber cómo, aparecieron en lo que parecía su propia Tierra; sin embargo, terminaron varados en el <strong>Universo 616</strong>. Tras conocer a <strong>Sofi</strong> en un casino local, la trama actual encuentra a los cuatro refugiados en un hotel, mientras <strong>Jaz</strong> y <strong>Mati</strong> asimilan la situación. Pero el caos es total: aterrorizado por algo que vio, <strong>Volvo</strong> huyó de Mati y ahora vaga completamente perdido en otra realidad.
                     </p>
                   </div>
 
