@@ -346,9 +346,9 @@ export const pibes: CharacterDetail[] = [
     id: 'volvo',
     name: 'Volvo',
     category: 'pibes',
-    image: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-Vector.webp',
+    image: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-vector.webp',
     fullBody: '/personajes/LosPibes/FULLBODY/VOLVO.webp',
-    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-Vector.webp',
+    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-vector.webp',
     color: '#f95700',
     role: 'Vanguardia / Infiltración y Desborde / Movilidad Absoluta',
     visualCode: 'Remera naranja, ojos celestes, cinturón táctico',
@@ -373,9 +373,9 @@ export const pibes: CharacterDetail[] = [
       crisis: 'Acecho de Reverse Volvo: El uso de su velocidad de escape abre la puerta a su eco corrupto de estática oscura, quien le pisa los talones en el fondo de sus propios portales naranjas.',
       stats: { fuerza: 7, inteligencia: 8, carisma: 5, suerte: 9, combate: 8, defensa: 8, especialVal: 9 },
       suitImages: {
-        default: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-Vector.webp',
-        ficha: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-Vector_Ficha.webp',
-        combat: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-Vector_combat.webp'
+        default: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-vector.webp',
+        ficha: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/NULL-VECTOR_ficha.webp',
+        combat: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-vector.webp'
       },
       variantData: {
         action: {

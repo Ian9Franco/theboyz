@@ -92,6 +92,7 @@ export function CinematicReader({
     bubbleOffsets,
     setBubbleOffsets,
     draggedBubbleKey,
+    totalDragDistRef,
     handleMouseDown,
     handleMouseMove,
     handleMouseUp,
@@ -372,10 +373,14 @@ export function CinematicReader({
   }
 
   const handleReaderTap = (e: React.MouseEvent) => {
+    // Suppress tap if the user dragged or panned (distance > 6px = not a real click)
+    if (isPanning || totalDragDistRef.current > 6) return;
+
     if (e && e.target) {
       if (
         (e.target as HTMLElement).closest(".btn") ||
         (e.target as HTMLElement).closest(".tag") ||
+        (e.target as HTMLElement).closest(".zoom-controls") ||
         (e.target as HTMLElement).closest(".cursor-grab") ||
         (e.target as HTMLElement).closest(".cursor-grabbing")
       ) {

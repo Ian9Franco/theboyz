@@ -60,12 +60,12 @@ export default function Home() {
                       HISTORIA PRINCIPAL
                     </h3>
                     <p className="font-sans text-sm sm:text-base text-gray-700 max-w-2xl leading-relaxed">
-                      Aquí comienza la historia oficial del cómic. La trama, el guion formal y los dibujos manuales están completamente trabajados para establecer el canon oficial de <strong>The Boyz</strong>.
+                      Acá comienza la historia oficial del cómic. La trama, el guion formal y los dibujos están completamente trabajados para establecer el canon oficial de <strong>The Boyz</strong>.
                     </p>
                   </div>
 
                   <div className="flex flex-col gap-32">
-                    {officialSagas.map((saga) => {
+                    {[...officialSagas].reverse().map((saga) => {
                       const fullIndex = sagasList.findIndex((s) => s.id === saga.id);
                       const prevSaga = fullIndex > 0 ? sagasList[fullIndex - 1] : null;
                       return (

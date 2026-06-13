@@ -252,6 +252,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
     bubbleOffsets,
     setBubbleOffsets,
     draggedBubbleKey,
+    totalDragDistRef,
     handleMouseDown,
     handleMouseMove,
     handleMouseUp,
