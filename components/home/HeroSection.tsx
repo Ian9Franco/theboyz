@@ -85,7 +85,7 @@ export function HeroSection() {
 
       {/* ── Infinite character marquee (Rendered below Hero, completely separate) ── */}
       <div 
-        className="relative w-full bg-[#0a0a0f] py-4 sm:py-8 border-t border-b border-gray-900/50"
+        className="relative w-full bg-dark-popart py-4 sm:py-8 border-t border-b border-gray-900/50"
       >
         <CharacterMarquee
           characters={characters}

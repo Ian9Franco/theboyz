@@ -298,24 +298,13 @@ export function CharacterRoster() {
                       }}
                     >
                       <div 
-                        className="relative w-full aspect-[4/5] overflow-hidden shrink-0"
+                        className="relative w-full aspect-[3/4] overflow-hidden shrink-0"
                         style={{
                           background: char.incognito 
                             ? "#2a2a35" 
                             : `radial-gradient(circle at center, ${char.displayColor}33 0%, #13131e 100%)`
                         }}
                       >
-                        {!char.incognito && char.powers?.role && (
-                          <div 
-                            className="absolute top-2 left-2 z-20 font-[var(--font-bangers)] text-[9px] tracking-wider px-2 py-0.5 border-2 border-black rotate-[-3deg] shadow-[2px_2px_0_#000] uppercase"
-                            style={{ 
-                              backgroundColor: char.displayColor, 
-                              color: getTextColor(char.displayColor) 
-                            }}
-                          >
-                            {char.powers.role.split(" / ")[0]}
-                          </div>
-                        )}
                         {char.incognito ? (
                           <div className="absolute inset-0 flex items-center justify-center">
                             <div className="absolute inset-0 speed-lines opacity-20" />
@@ -375,10 +364,16 @@ export function CharacterRoster() {
                             : (getTextColor(char.displayColor) === '#0a0a0f' 
                               ? "1px 1px 0 rgba(255,255,255,0.6)" 
                               : "2px 2px 0 rgba(0,0,0,0.3)"),
-                          fontSize: char.incognito ? "clamp(0.9rem, 2vw, 1.3rem)" : "clamp(1.2rem, 2.5vw, 1.8rem)"
+                          fontSize: char.incognito 
+                            ? "clamp(0.9rem, 2vw, 1.3rem)" 
+                            : (char.powers?.role ? "clamp(0.95rem, 2vw, 1.4rem)" : "clamp(1.2rem, 2.5vw, 1.8rem)")
                         }}
                       >
-                        {char.incognito ? "PRÓXIMAMENTE" : char.displayName.toUpperCase()}
+                        {char.incognito 
+                          ? "PRÓXIMAMENTE" 
+                          : (char.powers?.role 
+                              ? `${char.displayName.toUpperCase()} - ${char.powers.role.split(" / ")[0].toUpperCase()}`
+                              : char.displayName.toUpperCase())}
                       </h3>
                     </div>
                   </motion.div>

@@ -205,12 +205,12 @@ body {
   /* ── Pop-art dot-grid backgrounds ── */
   .bg-dark-popart {
     background-color: #0a0a0f !important;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1.2px, transparent 1.2px) !important;
-    background-size: 16px 16px !important;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px) !important;
+    background-size: 18px 18px !important;
   }
   .bg-light-popart {
     background-color: #f4f0e6 !important;
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.04) 1.2px, transparent 1.2px) !important;
-    background-size: 16px 16px !important;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.06) 1.5px, transparent 1.5px) !important;
+    background-size: 18px 18px !important;
   }
 }
