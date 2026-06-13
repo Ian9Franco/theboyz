@@ -74,6 +74,17 @@ function Footer() {
           </span>
         </div>
 
+        <div className="flex flex-col gap-4 text-center max-w-2xl mt-4">
+          <p className="font-sans text-sm sm:text-base text-gray-700 leading-relaxed">
+            Este proyecto surge de mi imaginación y de un flujo de trabajo que armé paso a paso: empiezo con un guion en crudo, divido la narrativa y diseño la dirección artística. El apartado visual lo normalizo con IA bajo mi total supervisión, inspirándome hoy en el talento de <strong>Sara Pichelli</strong> y <strong>Jorge Jiménez</strong>, y apuntando a futuro hacia la fuerza de <strong>Greg Capullo</strong> y <strong>Lee Garbett</strong>. Al final, todo se vuelve un laburo a mano: programé mi propio editor integrado para colocar meticulosamente cada globo de texto y efecto de sonido, logrando que la historia se sienta natural y orgánica.
+          </p>
+
+          <p className="font-sans text-sm sm:text-base text-gray-700 leading-relaxed">
+            Acá comienza el canon oficial de <strong>The Boyz</strong>. 
+            La historia arranca tras un escape desesperado: <strong>Ian</strong> y <strong>Uandi</strong> lograron rescatar a <strong>Julián</strong> de un secuestro en los <strong>Backrooms</strong>, un perturbador universo paralelo. Al huir de allí sin saber cómo, aparecieron en lo que parecía su propia Tierra; sin embargo, terminaron varados en el <strong>Universo 616</strong>. Tras conocer a <strong>Sofi</strong> en un casino local, la trama actual encuentra a los cuatro refugiados en un hotel, mientras <strong>Jaz</strong> y <strong>Mati</strong> asimilan la situación. Pero el caos es total: aterrorizado por algo que vio, <strong>Volvo</strong> huyó de Mati y ahora vaga completamente perdido en otra realidad.
+          </p>
+        </div>
+
         <div
           className="w-24 h-px"
           style={{ background: "rgba(15,32,66,0.15)" }}
