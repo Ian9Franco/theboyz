@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: "Contraseña requerida" }, { status: 400 });
     }
 
-    const masterPassword = process.env.PREVIEW_PASSWORD || "hush2026";
+    const masterPassword = process.env.PREVIEW_PASSWORD;
     let isValid = (password === masterPassword);
 
     if (!isValid) {

@@ -14,7 +14,7 @@ export async function POST(
 
     // Validate editor password
     const editorPassword = request.headers.get("x-editor-password");
-    const masterPassword = process.env.PREVIEW_PASSWORD || "hush2026";
+    const masterPassword = process.env.PREVIEW_PASSWORD;
     if (editorPassword !== masterPassword) {
       return NextResponse.json({ error: "Unauthorized: Invalid editor password" }, { status: 401 });
     }
