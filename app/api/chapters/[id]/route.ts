@@ -1,17 +1,34 @@
+/**
+ * app/api/chapters/[id]/route.ts
+ *
+ * API route que devuelve metadata y páginas de un capítulo.
+ * En producción, las páginas se obtienen via GitHub API (githubComics.ts)
+ * para no depender del filesystem de Vercel.
+ *
+ * Los dialogues.json SÍ se leen desde el filesystem local porque
+ * viven en el repo principal (the-boys), no en el de imágenes.
+ */
+
 import { NextRequest, NextResponse } from "next/server";
 import { getDynamicSagas, parsePrefix, validatePreviewAccess } from "@/lib/serverData";
+import {
+  fetchSagaFolders,
+  fetchChapterFolders,
+  fetchComicPages,
+  resolveFolderName,
+} from "@/lib/githubComics";
 import fs from "fs";
 import path from "path";
 
 export const dynamic = "force-dynamic";
-
-const SUPPORTED_FORMATS = [".jpg", ".jpeg", ".png", ".webp", ".gif"];
 
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
+
+  // ── 1. Buscar el capítulo en la estructura de sagas ──────────────────────
   const sagas = getDynamicSagas();
 
   let foundSaga: any = null;
@@ -32,7 +49,7 @@ export async function GET(
     return NextResponse.json({ error: "Chapter not found" }, { status: 404 });
   }
 
-  // Check draft preview authorization
+  // ── 2. Verificar acceso a borradores ────────────────────────────────────
   const isDraft = foundSaga.draft || foundChapter.draft;
   if (isDraft) {
     const hasAccess = validatePreviewAccess(request, foundSaga.id);
@@ -45,64 +62,50 @@ export async function GET(
     }
   }
 
-  // Look up pages
-  const comicsDir = path.join(process.cwd(), "public", "comics");
-  
-  // Find actual saga folder name matching foundSaga.id using parsePrefix
-  const sagaFolders = fs.readdirSync(comicsDir);
-  const actualSagaFolder = sagaFolders.find(f => {
-    const { cleanName } = parsePrefix(f);
-    return cleanName === foundSaga.id;
-  }) || foundSaga.id;
+  // ── 3. Obtener páginas desde GitHub API ──────────────────────────────────
+  // Resolvemos el nombre exacto de la carpeta en el repo de imágenes
+  // buscando por el cleanName (id) de la saga y el capítulo.
+  const sagaFolders    = await fetchSagaFolders();
+  const sagaFolderName = resolveFolderName(sagaFolders, foundSaga.id) ?? foundSaga.id;
 
-  const sagaPath = path.join(comicsDir, actualSagaFolder);
-  const chapterFolders = fs.readdirSync(sagaPath);
-  const actualChapterFolder = chapterFolders.find(f => {
-    const { cleanName } = parsePrefix(f);
-    return cleanName === foundChapter.id;
-  }) || foundChapter.id;
+  const chapterFolders    = await fetchChapterFolders(sagaFolderName);
+  const chapterFolderName = resolveFolderName(chapterFolders, foundChapter.id) ?? foundChapter.id;
 
-  const dirPath = path.join(sagaPath, actualChapterFolder);
-  
-  let pages: string[] = [];
-  let cover: string | null = null;
+  const { pages, cover } = await fetchComicPages(sagaFolderName, chapterFolderName);
 
-  const encSaga = encodeURIComponent(actualSagaFolder);
-  const encChapter = encodeURIComponent(actualChapterFolder);
+  // ── 4. Leer dialogues.json desde el filesystem local (repo principal) ────
+  // Los diálogos SÍ están en el repo the-boys, por eso siguen usando fs.
+  const dialogues = (() => {
+    try {
+      const comicsDir  = path.join(process.cwd(), "public", "comics");
+      const sagaFolders = fs.readdirSync(comicsDir);
+      const actualSagaFolder = sagaFolders.find((f) => {
+        const { cleanName } = parsePrefix(f);
+        return cleanName === foundSaga.id;
+      }) ?? foundSaga.id;
 
-  if (fs.existsSync(dirPath)) {
-    const allFiles = fs.readdirSync(dirPath);
-    const filteredFiles: string[] = [];
+      const sagaPath     = path.join(comicsDir, actualSagaFolder);
+      const chFolders    = fs.existsSync(sagaPath) ? fs.readdirSync(sagaPath) : [];
+      const actualChFolder = chFolders.find((f) => {
+        const { cleanName } = parsePrefix(f);
+        return cleanName === foundChapter.id;
+      }) ?? foundChapter.id;
 
-    for (const file of allFiles) {
-      const ext = path.extname(file).toLowerCase();
-      if (!SUPPORTED_FORMATS.includes(ext)) continue;
-
-      const baseName = path.basename(file, ext).toLowerCase();
-      if (baseName === "portada") {
-        cover = `/comics/${encSaga}/${encChapter}/${encodeURIComponent(file)}`;
-      } else {
-        filteredFiles.push(file);
+      const dialoguesPath = path.join(comicsDir, actualSagaFolder, actualChFolder, "dialogues.json");
+      if (fs.existsSync(dialoguesPath)) {
+        return JSON.parse(fs.readFileSync(dialoguesPath, "utf-8"));
       }
+    } catch (e) {
+      console.error("Error reading dialogues.json:", e);
     }
+    return null;
+  })();
 
-    pages = filteredFiles
-      .sort((a, b) => {
-        const nameA = path.basename(a, path.extname(a));
-        const nameB = path.basename(b, path.extname(b));
-        return nameA.localeCompare(nameB, undefined, { numeric: true, sensitivity: "base" });
-      })
-      .map((file) => `/comics/${encSaga}/${encChapter}/${encodeURIComponent(file)}`);
-  }
-
-  if (!cover && pages.length > 0) {
-    cover = pages[0];
-  }
+  // ── 5. Navegación entre capítulos ────────────────────────────────────────
+  const sagaIndex = sagas.findIndex((s) => s.id === foundSaga.id);
 
   let prevChapter = null;
   let nextChapter = null;
-
-  const sagaIndex = sagas.findIndex((s) => s.id === foundSaga.id);
 
   if (chapterIndex > 0) {
     prevChapter = foundSaga.chapters[chapterIndex - 1];
@@ -131,18 +134,6 @@ export async function GET(
     prevChapter,
     nextChapter,
     cinematic: foundSaga.cinematic || foundChapter.cinematic || false,
-    dialogues: (() => {
-      // Try to load dialogues.json from the chapter folder
-      try {
-        const dialoguesPath = path.join(dirPath, "dialogues.json");
-        if (fs.existsSync(dialoguesPath)) {
-          const raw = fs.readFileSync(dialoguesPath, "utf-8");
-          return JSON.parse(raw);
-        }
-      } catch (e) {
-        console.error("Error reading dialogues.json:", e);
-      }
-      return null;
-    })(),
+    dialogues,
   });
 }
