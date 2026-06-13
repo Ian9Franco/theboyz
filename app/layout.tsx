@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es-AR" suppressHydrationWarning className={`${inter.variable} ${bangers.variable} ${marker.variable} ${bungee.variable} ${luckiest.variable}`}>
-      <body className="antialiased min-h-screen flex flex-col font-sans bg-light-popart">
+      <body className="antialiased min-h-screen flex flex-col font-sans bg-light-popart" suppressHydrationWarning>
         <NavBar />
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />

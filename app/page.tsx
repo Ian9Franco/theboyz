@@ -56,8 +56,7 @@ export default function Home() {
                     <div className="absolute top-0 right-0 bg-[#1b4332] text-white font-[var(--font-bangers)] text-xs px-3 py-1 uppercase tracking-wider">
                       Línea Canon
                     </div>
-                    <h3 className="font-[var(--font-bangers)] text-3xl sm:text-4xl text-[#0a0a0f] mb-2 flex items-center gap-3">
-                      <img src="/comic-dynamic.png" alt="Comic Book" className="w-8 h-8 object-contain shrink-0" />
+                    <h3 className="font-[var(--font-bangers)] text-3xl sm:text-4xl text-[#0a0a0f] mb-2">
                       HISTORIA PRINCIPAL
                     </h3>
                     <p className="font-sans text-sm sm:text-base text-gray-700 max-w-2xl leading-relaxed">
@@ -87,8 +86,7 @@ export default function Home() {
                 <div className="mt-16 border-4 border-dashed border-[#0a0a0f]/30 bg-[#fbfaf7]/60 p-6 md:p-8 shadow-[4px_4px_0_rgba(10,10,15,0.05)] transition-all">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div>
-                      <h3 className="font-[var(--font-bangers)] text-2xl tracking-wider text-gray-500 flex items-center gap-2">
-                        <img src="/comic-book.png" alt="Comic Book" className="w-6 h-6 object-contain grayscale opacity-60 shrink-0" />
+                      <h3 className="font-[var(--font-bangers)] text-2xl tracking-wider text-gray-500">
                         ARCHIVOS HISTÓRICOS (ETAPA PILOTO)
                       </h3>
                       <p className="font-sans text-xs text-gray-500 mt-1 max-w-xl">

@@ -256,14 +256,9 @@ export function CharacterRoster() {
                     {meta.tagline}
                   </span>
                   <h2
-                    className="font-[var(--font-bangers)] text-5xl sm:text-7xl leading-none tracking-wider text-white flex items-center justify-center gap-4"
+                    className="font-[var(--font-bangers)] text-5xl sm:text-7xl leading-none tracking-wider text-white"
                     style={{ textShadow: `4px 4px 0 ${meta.borderColor}, 8px 8px 0 ${meta.shadowColor}` }}
                   >
-                    <img 
-                      src={getCategoryIcon(key)} 
-                      alt="Icon" 
-                      className="w-10 h-10 sm:w-12 sm:h-12 object-contain shrink-0" 
-                    />
                     {meta.title}
                   </h2>
                 </motion.div>
@@ -298,7 +293,7 @@ export function CharacterRoster() {
                       }}
                     >
                       <div 
-                        className="relative w-full aspect-[3/4] overflow-hidden shrink-0"
+                        className="relative w-full aspect-[2/3] overflow-hidden shrink-0"
                         style={{
                           background: char.incognito 
                             ? "#2a2a35" 
@@ -346,7 +341,7 @@ export function CharacterRoster() {
                       </div>
                     
                     <div 
-                      className="p-3 sm:p-4 text-center border-t-[4px] border-white relative z-10 flex-1 flex items-center justify-center overflow-hidden" 
+                      className="px-2 py-2.5 text-center border-t-[4px] border-white relative z-10 flex items-center justify-center overflow-hidden" 
                       style={{ 
                         background: char.incognito 
                           ? "#374151" 
@@ -356,7 +351,7 @@ export function CharacterRoster() {
                       }}
                     >
                       <h3 
-                        className="font-[var(--font-bangers)] tracking-widest drop-shadow-md leading-none pt-1 truncate w-full"
+                        className="font-[var(--font-bangers)] tracking-widest drop-shadow-md leading-none truncate w-full"
                         style={{ 
                           color: char.incognito ? "white" : getTextColor(char.displayColor),
                           textShadow: char.incognito 
@@ -364,15 +359,13 @@ export function CharacterRoster() {
                             : (getTextColor(char.displayColor) === '#0a0a0f' 
                               ? "1px 1px 0 rgba(255,255,255,0.6)" 
                               : "2px 2px 0 rgba(0,0,0,0.3)"),
-                          fontSize: char.incognito 
-                            ? "clamp(0.9rem, 2vw, 1.3rem)" 
-                            : (char.powers?.role ? "clamp(0.95rem, 2vw, 1.4rem)" : "clamp(1.2rem, 2.5vw, 1.8rem)")
+                          fontSize: "0.85rem"
                         }}
                       >
                         {char.incognito 
                           ? "PRÓXIMAMENTE" 
                           : (char.powers?.role 
-                              ? `${char.displayName.toUpperCase()} - ${char.powers.role.split(" / ")[0].toUpperCase()}`
+                              ? `${char.displayName.toUpperCase()} · ${char.powers.role.split(" / ")[0].toUpperCase()}`
                               : char.displayName.toUpperCase())}
                       </h3>
                     </div>
