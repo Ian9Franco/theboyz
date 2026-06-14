@@ -62,16 +62,83 @@ export async function GET(
     }
   }
 
-  // ── 3. Obtener páginas desde GitHub API ──────────────────────────────────
-  // Resolvemos el nombre exacto de la carpeta en el repo de imágenes
-  // buscando por el cleanName (id) de la saga y el capítulo.
-  const sagaFolders    = await fetchSagaFolders();
-  const sagaFolderName = resolveFolderName(sagaFolders, foundSaga.id) ?? foundSaga.id;
+  // ── 3. Obtener páginas ──────────────────────────────────────────────────
+  let pages: string[] = [];
+  let cover: string | null = null;
 
-  const chapterFolders    = await fetchChapterFolders(sagaFolderName);
-  const chapterFolderName = resolveFolderName(chapterFolders, foundChapter.id) ?? foundChapter.id;
+  const isDev = process.env.NODE_ENV === "development";
 
-  const { pages, cover } = await fetchComicPages(sagaFolderName, chapterFolderName);
+  if (isDev) {
+    try {
+      const comicsDir = path.join(process.cwd(), "public", "comics");
+      const sagaFolders = fs.readdirSync(comicsDir);
+      const actualSagaFolder = sagaFolders.find((f) => {
+        const { cleanName } = parsePrefix(f);
+        return cleanName === foundSaga.id;
+      }) ?? foundSaga.id;
+
+      const sagaPath = path.join(comicsDir, actualSagaFolder);
+      const chFolders = fs.existsSync(sagaPath) ? fs.readdirSync(sagaPath) : [];
+      const actualChFolder = chFolders.find((f) => {
+        const { cleanName } = parsePrefix(f);
+        return cleanName === foundChapter.id;
+      }) ?? foundChapter.id;
+
+      const chapterPath = path.join(comicsDir, actualSagaFolder, actualChFolder);
+      if (fs.existsSync(chapterPath)) {
+        const files = fs.readdirSync(chapterPath);
+        const imageFiles = files.filter(f => {
+          const ext = path.extname(f).toLowerCase();
+          return [".webp", ".jpg", ".jpeg", ".png", ".gif"].includes(ext) && path.basename(f, ext).toLowerCase() !== "portada";
+        });
+
+        // Ordenar numéricamente por nombre de archivo
+        imageFiles.sort((a, b) => {
+          const nameA = a.slice(0, a.lastIndexOf("."));
+          const nameB = b.slice(0, b.lastIndexOf("."));
+          return nameA.localeCompare(nameB, undefined, { numeric: true, sensitivity: "base" });
+        });
+
+        // Construir URLs de asset relativas o absolutas
+        const baseUrl = (process.env.NEXT_PUBLIC_ASSETS_BASE_URL || "").replace(/\/$/, "");
+        pages = imageFiles.map(f => {
+          const relPath = `/comics/${actualSagaFolder}/${actualChFolder}/${f}`;
+          return baseUrl ? `${baseUrl}${relPath.split("/").map(encodeURIComponent).join("/")}` : relPath;
+        });
+
+        const coverFile = files.find(f => {
+          const ext = path.extname(f).toLowerCase();
+          return [".webp", ".jpg", ".jpeg", ".png", ".gif"].includes(ext) && path.basename(f, ext).toLowerCase() === "portada";
+        });
+
+        if (coverFile) {
+          const relPath = `/comics/${actualSagaFolder}/${actualChFolder}/${coverFile}`;
+          cover = baseUrl ? `${baseUrl}${relPath.split("/").map(encodeURIComponent).join("/")}` : relPath;
+        } else if (pages.length > 0) {
+          cover = pages[0];
+        }
+      }
+    } catch (err) {
+      console.error("Error cargando páginas locales en desarrollo:", err);
+    }
+  }
+
+  // Fallback a la GitHub API (producción o si falla la lectura local)
+  if (pages.length === 0) {
+    try {
+      const sagaFolders    = await fetchSagaFolders();
+      const sagaFolderName = resolveFolderName(sagaFolders, foundSaga.id) ?? foundSaga.id;
+
+      const chapterFolders    = await fetchChapterFolders(sagaFolderName);
+      const chapterFolderName = resolveFolderName(chapterFolders, foundChapter.id) ?? foundChapter.id;
+
+      const githubRes = await fetchComicPages(sagaFolderName, chapterFolderName);
+      pages = githubRes.pages;
+      cover = githubRes.cover;
+    } catch (err) {
+      console.error("Error al obtener páginas desde GitHub:", err);
+    }
+  }
 
   // ── 4. Leer dialogues.json desde el filesystem local (repo principal) ────
   // Los diálogos SÍ están en el repo the-boys, por eso siguen usando fs.

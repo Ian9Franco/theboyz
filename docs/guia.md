@@ -182,3 +182,9 @@ Esto desbloquea todo visualmente **solo en tu navegador** para poder revisar el 
 localStorage.removeItem("unlock-all")
 window.dispatchEvent(new Event("unlockAllChanged"))
 ```
+
+
+
+
+comando para correr el entorno: npm run dev:all
+comando para publicar: npm run publish:all
