@@ -434,19 +434,31 @@ export function CinematicReader({
     }
   };
 
-  const handleAuthSubmit = (e: React.FormEvent) => {
+  const handleAuthSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (passwordInput === "hush2026") {
-      setIsAuthorized(true);
-      if (typeof window !== "undefined") {
-        sessionStorage.setItem("editor_authorized", "true");
-        sessionStorage.setItem("editor_password", passwordInput);
+    setAuthError(false);
+    try {
+      const res = await fetch("/api/auth/preview", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: passwordInput }),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setIsAuthorized(true);
+        if (typeof window !== "undefined") {
+          sessionStorage.setItem("editor_authorized", "true");
+          sessionStorage.setItem("editor_password", passwordInput);
+        }
+        setShowAuthModal(false);
+        setPanelIdx(0);
+        setZoomedOut(false);
+        setMode("edit");
+      } else {
+        setAuthError(true);
       }
-      setShowAuthModal(false);
-      setPanelIdx(0);
-      setZoomedOut(false);
-      setMode("edit");
-    } else {
+    } catch (err) {
+      console.error("Error authenticating:", err);
       setAuthError(true);
     }
   };
