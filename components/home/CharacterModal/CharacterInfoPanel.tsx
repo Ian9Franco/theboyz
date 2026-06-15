@@ -210,6 +210,26 @@ export function CharacterInfoPanel({
             </div>
           )}
 
+          {/* ── extras ── */}
+          {char.extras && Object.keys(char.extras).length > 0 && (
+            <div
+              className="border-t-2 pt-2 flex flex-col gap-1 flex-shrink-0"
+              style={{ borderColor: isPowersMode ? `${vibrantAccent}33` : "#0a0a0f" }}
+            >
+              <h4 className="font-[var(--font-bangers)] text-xs tracking-wider">EXTRAS:</h4>
+              <div className="flex flex-col gap-1 pl-1">
+                {Object.entries(char.extras).map(([key, val]) => (
+                  <div key={key} className="text-xs font-sans leading-relaxed">
+                    <strong className="font-[var(--font-bangers)] tracking-wider uppercase text-[10px] mr-1" style={{ color: isPowersMode ? vibrantAccent : accent }}>
+                      {key}:
+                    </strong>
+                    <span>{val as string}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* ── significa banner ── */}
           {((isPowersMode && variantContent.significa) || (!isPibe && char.powers?.significa)) && (
             <div

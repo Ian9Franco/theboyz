@@ -59,4 +59,5 @@ export interface CharacterDetail {
   incognito?: boolean;
   displayName?: string;
   displayColor?: string;
+  extras?: Record<string, string>;
 }

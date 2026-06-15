@@ -64,35 +64,57 @@ export const deidades: CharacterDetail[] = [
     }
   },
   {
-    id: 'lucy',
-    name: 'Mephisto-Lucifer',
-    category: 'deidades',
-    isSecondary: true,
-    image: '/personajes/Deidades/Lucy/Lucy.webp',
-    fullBody: '/personajes/Deidades/Lucy/Lucy.webp',
-    color: '#fbbf24',
-    role: 'Morningstar / El Titiritero de la Noche',
-    visualCode: 'Traje de sastre italiano, beauty aristocrática, seis alas de luz celestial',
-    perfil: [
-      'El primer ángel: Abandonó el infierno por encontrarlo burdo y se mudó al mundo mortal a dirigir un club de lujo.',
-      'Fascinación humana: Le atrae el libre albedrío y se divierte observando las elecciones de Los Pibes.',
-      'Estilo sofisticado: Conduce un descapotable clásico, viste de sastre italiano y trae neones dorados a las viñetas.'
+  id: 'lucifer',
+  name: 'Lucifer Morningstar',
+  category: 'deidades',
+  isSecondary: true,
+  image: '/personajes/Deidades/Lucifer/Lucifer.webp',
+  fullBody: '/personajes/Deidades/Lucifer/Lucifer.webp',
+  color: '#d97706',
+  role: 'El Diablo Retirado / Dueño de Lux',
+  visualCode: 'Traje italiano impecable, sonrisa encantadora, ojos demoníacos carmesí, alas angelicales blancas',
+  perfil: [
+    'Ex Señor del Infierno: Abandonó su trono infernal para vivir entre los humanos y dirigir Lux, el club nocturno más exclusivo de la ciudad.',
+    'Consultor investigador: Colabora con agencias policiales resolviendo homicidios gracias a su intuición sobrenatural y su habilidad para leer deseos ocultos.',
+    'Encanto irresistible: Carismático, elegante y provocador. Utiliza el humor, la seducción y la honestidad brutal como armas principales.'
+  ],
+  crisis: 'Vulnerabilidad emocional: Sus sentimientos hacia las personas que aprecia pueden afectar su juicio y volverlo menos efectivo en situaciones críticas.',
+  stats: {
+    fuerza: 8,
+    inteligencia: 9,
+    carisma: 10,
+    suerte: 8,
+    combate: 8,
+    defensa: 9,
+    especialVal: 10
+  },
+  especialLabel: 'Deseo',
+  powers: {
+    role: 'Lucifer Morningstar',
+    habilidades: [
+      '¿Qué es lo que realmente deseas?: Con una simple pregunta obliga a las personas a revelar su deseo más profundo y sincero.',
+      'Rostro del Diablo: Revela su verdadera apariencia infernal, paralizando de terror incluso a criminales y entidades sobrenaturales.',
+      'Alas Celestiales: Despliega sus enormes alas angelicales para volar, proteger aliados o atravesar grandes distancias instantáneamente.'
     ],
-    crisis: 'Palabra sagrada: Lucifer jamás miente por considerarlo cobardía. Cumple sus tratos al pie de la letra, sin excepciones.',
-    stats: { fuerza: 8, inteligencia: 10, carisma: 10, suerte: 8, combate: 9, defensa: 10, especialVal: 10 },
-    especialLabel: ' Morningstar',
-    powers: {
-      role: 'Lucifer',
-      habilidades: [
-        'Deseo Expuesto: Fuerza a cualquier ser a confesar su deseo oculto más vergonzoso con una mirada.',
-        'Anulación Infernal: Deshace tratos de demonios menores y disipa ataques oscuros con un chasquido.',
-        'Seis Alas de Luz: Despliega sus seis alas celestiales de energía fotónica pura para desintegrar amenazas.'
-      ],
-      significa: 'El titiritero absoluto. Posee inmunidad casi total ante ataques mágicos y maneja el destino humano.',
-      crisis: 'Restricción verbal: Si es forzado a romper una promesa escrita, su energía celestial se desestabiliza.',
-      stats: { fuerza: 10, inteligencia: 10, carisma: 10, suerte: 9, combate: 10, defensa: 10, especialVal: 10 }
+    significa: 'El amo del libre albedrío. No domina a las personas por la fuerza; las expone ante sus propias verdades y deseos ocultos.',
+    crisis: 'Moralidad humana: Cuanto más se involucra emocionalmente con los mortales, más impredecibles se vuelven sus poderes y decisiones.',
+    stats: {
+      fuerza: 100,
+      inteligencia: 100,
+      carisma: 10,
+      suerte: 100,
+      combate: 100,
+      defensa: 100,
+      especialVal: 100
     }
   },
+
+  extras: {
+    vehiculo: 'Chevrolet Corvette C1 descapotable negro de colección.',
+    negocio: 'Lux, un exclusivo club nocturno de lujo donde se reúne la élite, criminales, celebridades y seres sobrenaturales.',
+    ocupacion: 'Consultor civil de investigaciones criminales, especializado en homicidios y casos imposibles.'
+  }
+},
   {
     id: 'mars',
     name: 'Mars',
