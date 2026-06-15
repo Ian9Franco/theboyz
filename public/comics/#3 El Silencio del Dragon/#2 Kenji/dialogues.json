@@ -787,30 +787,42 @@
     "28": {
       "panels": [
         {
-          "focusY": 0.42,
+          "focusY": 0.35,
           "dialogue": [
             { "text": "¡¿Pensaste que era un chiste, infeliz?! ¡Pagá lo que debés o de acá no salís caminando!", "size": "small", "posX": 40, "posY": 0, "tailX": 20, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "¡¡¡KLANG!!!", "style": "sfx", "size": "small", "posX": 90, "posY": 20, "tailX": 70, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 13, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 25 }
           ]
         },
         {
           "focusY": 0.4,
           "dialogue": [
             { "text": "No me costó nada encontrarlos. La frecuencia de sus malditos corazones corruptos resuena en todo el barrio como una alarma.", "style": "whisper", "size": "small", "posX": 80, "posY": 40, "tailX": 50, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18, "customBg": "#f5e642", "customColor": "#000000", "textColor": "#000000" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 24, "w": 100, "h": 24 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
             { "text": "Tump... Tump... Tump-tump-tump!", "size": "small", "posX": 90, "posY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#ff0000", "tail": "none" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 47, "w": 100, "h": 14 }
           ]
         },
         {
-          "focusY": 0.5,
+          "focusY": 0.65,
           "dialogue": [
             { "text": "Jajaja, ¡¿pero qué carajo?! ¡Miren a la extranjera, se cree que está en una película de samuráis!", "size": "small", "posX": 90, "posY": 60, "tailX": 70, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "Te equivocaste de callejón, linda. Esa espada vieja no te va a salvar de una bala.", "size": "small", "posX": 10, "posY": 60, "tailX": 30, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "Buenas noches, turista.", "size": "small", "posX": 50, "posY": 100, "tailX": 50, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 62, "w": 100, "h": 40 }
           ]
         }
       ]
