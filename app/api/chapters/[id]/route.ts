@@ -194,6 +194,7 @@ export async function GET(
       id: foundSaga.id,
       title: foundSaga.title,
       color: foundSaga.color,
+      cover: foundSaga.cover,
     },
     chapterIndex,
     pages,
