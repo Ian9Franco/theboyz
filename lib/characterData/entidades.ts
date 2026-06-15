@@ -155,6 +155,52 @@ export const entidades: CharacterDetail[] = [
     }
   },
   {
+    id: 'freezer',
+    name: 'Frieza',
+    category: 'entidades',
+    isSecondary: false,
+    image: '/personajes/Entidades/Freezer/Freezer.webp',
+    fullBody: '/personajes/Entidades/Freezer/Freezer.webp',
+    color: '#8b5cf6',
+    role: 'El Emperador Galáctico',
+    visualCode: 'Alienígena de piel blanca y bioarmadura púrpura, mirada fría, aura intimidante y transformaciones devastadoras',
+    perfil: [
+      'Tirano interplanetario: Gobernó gran parte del universo mediante el miedo, conquistando y destruyendo mundos enteros.',
+      'Genio estratégico: Manipulador, inteligente y extremadamente calculador. Prefiere quebrar psicológicamente a sus enemigos antes de eliminarlos.',
+      'Poder monstruoso: Incluso en sus formas limitadas supera a la mayoría de los guerreros del universo. Su potencial evolutivo es extraordinario.'
+    ],
+    crisis: 'Exceso de confianza: Su arrogancia lo lleva a subestimar rivales aparentemente inferiores, permitiendo que sus enemigos encuentren oportunidades para derrotarlo.',
+    stats: {
+      fuerza: 10,
+      inteligencia: 9,
+      carisma: 7,
+      suerte: 8,
+      combate: 10,
+      defensa: 9,
+      especialVal: 10
+    },
+    especialLabel: 'Transformación',
+    powers: {
+      role: 'Frieza',
+      habilidades: [
+        'Death Beam: Dispara rayos de energía extremadamente precisos capaces de perforar casi cualquier defensa.',
+        'Death Ball: Crea una esfera de energía colosal diseñada para aniquilar ciudades, planetas o incluso sistemas enteros.',
+        'Golden Frieza: Libera una transformación dorada que multiplica drásticamente su velocidad, resistencia y poder destructivo.'
+      ],
+      significa: 'La encarnación de la dominación absoluta. Combina poder abrumador, crueldad estratégica y una capacidad destructiva capaz de amenazar galaxias enteras.',
+      crisis: 'Desgaste energético: Sus transformaciones más avanzadas consumen enormes cantidades de energía si no han sido dominadas completamente.',
+      stats: {
+        fuerza: 10,
+        inteligencia: 10,
+        carisma: 8,
+        suerte: 8,
+        combate: 10,
+        defensa: 10,
+        especialVal: 10
+      }
+    }
+  },
+  {
     id: 'lion',
     name: 'Lion',
     category: 'entidades',
