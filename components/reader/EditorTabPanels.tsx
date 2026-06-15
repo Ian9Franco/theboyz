@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import type { PanelConfig } from "./DialogueEditorPanel";
+import type { PanelSound } from "./CinematicReader";
 
 /**
  * WaveformVisualizer Component
@@ -171,19 +172,31 @@ export function EditorTabPanels({
     loadSounds();
   }, []);
 
-  // Load audio duration when sound changes
+  // Load audio durations for any audio files in the active panel configuration
   useEffect(() => {
-    if (currentPanels[activePanelIdx]?.sound) {
-      const audio = new Audio();
-      audio.src = currentPanels[activePanelIdx].sound;
-      audio.onloadedmetadata = () => {
-        setSoundMetadata((prev) => ({
-          ...prev,
-          [currentPanels[activePanelIdx].sound!]: audio.duration,
-        }));
-      };
+    const activePanel = currentPanels[activePanelIdx];
+    if (!activePanel) return;
+
+    const paths: string[] = [];
+    if (activePanel.sounds && Array.isArray(activePanel.sounds)) {
+      activePanel.sounds.forEach((s) => {
+        if (s.sound) paths.push(s.sound);
+      });
+    } else if (activePanel.sound) {
+      paths.push(activePanel.sound);
     }
-  }, [currentPanels[activePanelIdx]?.sound, activePanelIdx, currentPanels]);
+
+    paths.forEach((path) => {
+      const audio = new Audio();
+      audio.src = path;
+      audio.onloadedmetadata = () => {
+        setSoundMetadata((prev) => {
+          if (prev[path] === audio.duration) return prev;
+          return { ...prev, [path]: audio.duration };
+        });
+      };
+    });
+  }, [activePanelIdx, currentPanels]);
 
   const stopPreview = () => {
     if (previewAudioRef.current) {
@@ -606,369 +619,391 @@ export function EditorTabPanels({
 
                   {/* Audio Config Section */}
                   <div className="border border-zinc-300 p-2 rounded bg-blue-50/50 mb-3 flex flex-col gap-2">
-                    <div className="flex items-center justify-between">
-                      <label className="text-[10px] font-bold text-zinc-600 uppercase tracking-wider flex items-center gap-1">
-                        🔊 Configuración de Audio
-                      </label>
-                      {panel.sound && (
-                        <button
-                          type="button"
-                          onClick={() =>
-                            handleUpdatePanelParams(pIdx, {
-                              sound: undefined,
-                              soundConfig: undefined,
-                              soundStartTime: undefined,
-                              soundEndTime: undefined,
-                            })
+                    {(() => {
+                      const soundsList = panel.sounds || (panel.sound ? [{
+                        sound: panel.sound,
+                        soundStartTime: panel.soundStartTime,
+                        soundEndTime: panel.soundEndTime,
+                        soundConfig: panel.soundConfig
+                      }] : []);
+
+                      const updateSoundItem = (sIdx: number, updates: Partial<PanelSound>) => {
+                        const newList = [...soundsList];
+                        const existing = newList[sIdx] || { sound: "" };
+                        const newConfig = updates.soundConfig 
+                          ? { ...(existing.soundConfig || {}), ...updates.soundConfig }
+                          : existing.soundConfig;
+                        
+                        newList[sIdx] = {
+                          ...existing,
+                          ...updates,
+                          soundConfig: newConfig
+                        };
+
+                        handleUpdatePanelParams(pIdx, {
+                          sound: undefined,
+                          soundStartTime: undefined,
+                          soundEndTime: undefined,
+                          soundConfig: undefined,
+                          sounds: newList
+                        });
+                      };
+
+                      const removeSoundItem = (sIdx: number) => {
+                        const newList = soundsList.filter((_, idx) => idx !== sIdx);
+                        handleUpdatePanelParams(pIdx, {
+                          sound: undefined,
+                          soundStartTime: undefined,
+                          soundEndTime: undefined,
+                          soundConfig: undefined,
+                          sounds: newList
+                        });
+                      };
+
+                      const addSoundItem = () => {
+                        const newList = [
+                          ...soundsList,
+                          {
+                            sound: "",
+                            soundStartTime: 0,
+                            soundConfig: { volume: 1, playbackRate: 1 }
                           }
-                          className="text-[9px] text-red-500 hover:underline font-bold"
-                        >
-                          Limpiar
-                        </button>
-                      )}
-                    </div>
+                        ];
+                        handleUpdatePanelParams(pIdx, {
+                          sound: undefined,
+                          soundStartTime: undefined,
+                          soundEndTime: undefined,
+                          soundConfig: undefined,
+                          sounds: newList
+                        });
+                      };
 
-                    {/* Sound Selector Dropdown */}
-                    <div className="flex flex-col gap-1">
-                      <label className="text-[9px] font-mono text-zinc-600">
-                        Seleccionar sonido:
-                      </label>
-                      <select
-                        value={panel.sound || ""}
-                        onChange={(e) => {
-                          handleUpdatePanelParams(pIdx, { sound: e.target.value || undefined });
-                        }}
-                        onClick={(e) => e.stopPropagation()}
-                        className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
-                      >
-                        <option value="">-- Selecciona un sonido --</option>
-                        {availableSounds.map((sound) => (
-                          <option key={sound.path} value={sound.path}>
-                            {sound.name}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
+                      return (
+                        <>
+                          <div className="flex items-center justify-between border-b border-blue-200 pb-1">
+                            <label className="text-[10px] font-bold text-zinc-600 uppercase tracking-wider flex items-center gap-1">
+                              🔊 Configuración de Audio ({soundsList.length})
+                            </label>
+                            {soundsList.length > 0 && (
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleUpdatePanelParams(pIdx, {
+                                    sound: undefined,
+                                    soundStartTime: undefined,
+                                    soundEndTime: undefined,
+                                    soundConfig: undefined,
+                                    sounds: []
+                                  });
+                                }}
+                                className="text-[9px] text-red-500 hover:underline font-bold"
+                              >
+                                Limpiar todo
+                              </button>
+                            )}
+                          </div>
 
-                    {/* Duration Display */}
-                    {panel.sound && soundMetadata[panel.sound] && (
-                      <div className="text-[8px] text-zinc-500 px-1.5 py-1 bg-zinc-100 rounded">
-                        📹 Duración: {soundMetadata[panel.sound].toFixed(2)}s
-                        {panel.soundEndTime && (
-                          <span className="ml-2">
-                            | Reproducción: {(panel.soundEndTime - (panel.soundStartTime || 0)).toFixed(2)}s
-                          </span>
-                        )}
-                      </div>
-                    )}
+                          {soundsList.map((soundItem, sIdx) => {
+                            const previewKey = `${pIdx}-${sIdx}`;
+                            const isPreviewing = previewingSound === previewKey;
+                            
+                            return (
+                              <div key={sIdx} className="border border-zinc-200 rounded p-2 bg-white flex flex-col gap-2 relative shadow-sm">
+                                <div className="flex justify-between items-center bg-zinc-50 -m-2 mb-1 p-1.5 border-b border-zinc-200 rounded-t">
+                                  <span className="text-[9px] font-bold text-zinc-600 font-mono">
+                                    🎵 Audio #{sIdx + 1}
+                                  </span>
+                                  <button
+                                    type="button"
+                                    onClick={() => removeSoundItem(sIdx)}
+                                    className="text-[9px] text-red-500 hover:text-red-700 font-bold"
+                                  >
+                                    ✕ Eliminar
+                                  </button>
+                                </div>
 
-                    {/* Waveform Visualizer */}
-                    {panel.sound && (
-                      <div className="rounded border border-zinc-300 bg-white overflow-hidden">
-                        <WaveformVisualizer
-                          soundPath={panel.sound}
-                          startTime={panel.soundStartTime || 0}
-                          endTime={panel.soundEndTime}
-                          height={60}
-                        />
-                        <div className="text-[7px] text-zinc-400 px-1.5 py-0.5 bg-zinc-50 flex justify-between">
-                          <span>🟩 Inicio | 🟥 Fin</span>
-                        </div>
-                      </div>
-                    )}
+                                {/* Sound Selector Dropdown */}
+                                <div className="flex flex-col gap-1">
+                                  <label className="text-[9px] font-mono text-zinc-600">
+                                    Seleccionar sonido:
+                                  </label>
+                                  <select
+                                    value={soundItem.sound || ""}
+                                    onChange={(e) => {
+                                      updateSoundItem(sIdx, { sound: e.target.value || "" });
+                                    }}
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                                  >
+                                    <option value="">-- Selecciona un sonido --</option>
+                                    {availableSounds.map((sound) => (
+                                      <option key={sound.path} value={sound.path}>
+                                        {sound.name}
+                                      </option>
+                                    ))}
+                                  </select>
+                                </div>
 
-                    {panel.sound && (
-                      <div className="flex flex-col gap-2 pt-2 border-t border-blue-200">
-                        {/* Preview Button */}
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            if (previewingSound === panel.sound) {
-                              stopPreview();
-                            } else {
-                              playPreview(panel.sound!, {
-                                startTime: panel.soundStartTime || 0,
-                                endTime: panel.soundEndTime,
-                                volume: panel.soundConfig?.volume ?? 1,
-                                playbackRate: panel.soundConfig?.playbackRate ?? 1,
-                                fadeIn: panel.soundConfig?.fadeIn ?? 0,
-                                fadeOut: panel.soundConfig?.fadeOut ?? 0,
-                                delay: panel.soundConfig?.delay ?? 0,
-                              });
-                            }
-                          }}
-                          className={`text-[8px] font-bold px-2 py-1 rounded border transition-all w-full ${
-                            previewingSound === panel.sound
-                              ? "bg-green-600 text-white border-green-700"
-                              : "bg-green-500 hover:bg-green-600 text-white border-green-700"
-                          }`}
-                        >
-                          {previewingSound === panel.sound ? "⏸ Detener Preview" : "▶ Preview Sonido"}
-                        </button>
+                                {/* Duration Display */}
+                                {soundItem.sound && soundMetadata[soundItem.sound] && (
+                                  <div className="text-[8px] text-zinc-500 px-1.5 py-1 bg-zinc-100 rounded">
+                                    📹 Duración: {soundMetadata[soundItem.sound].toFixed(2)}s
+                                    {soundItem.soundEndTime && (
+                                      <span className="ml-2">
+                                        | Reproducción: {(soundItem.soundEndTime - (soundItem.soundStartTime || 0)).toFixed(2)}s
+                                      </span>
+                                    )}
+                                  </div>
+                                )}
 
-                        {/* Confirmation feedback — data already flows to state on every onChange, this just reassures the user */}
-                        <div className="flex gap-1.5">
+                                {/* Waveform Visualizer */}
+                                {soundItem.sound && (
+                                  <div className="rounded border border-zinc-300 bg-white overflow-hidden">
+                                    <WaveformVisualizer
+                                      soundPath={soundItem.sound}
+                                      startTime={soundItem.soundStartTime || 0}
+                                      endTime={soundItem.soundEndTime}
+                                      height={50}
+                                    />
+                                    <div className="text-[7px] text-zinc-400 px-1.5 py-0.5 bg-zinc-50 flex justify-between">
+                                      <span>🟩 Inicio | 🟥 Fin</span>
+                                    </div>
+                                  </div>
+                                )}
+
+                                {soundItem.sound && (
+                                  <div className="flex flex-col gap-2 pt-2 border-t border-blue-200">
+                                    {/* Preview Button */}
+                                    <button
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (isPreviewing) {
+                                          stopPreview();
+                                        } else {
+                                          playPreview(soundItem.sound, {
+                                            startTime: soundItem.soundStartTime || 0,
+                                            endTime: soundItem.soundEndTime,
+                                            volume: soundItem.soundConfig?.volume ?? 1,
+                                            playbackRate: soundItem.soundConfig?.playbackRate ?? 1,
+                                            fadeIn: soundItem.soundConfig?.fadeIn ?? 0,
+                                            fadeOut: soundItem.soundConfig?.fadeOut ?? 0,
+                                            delay: soundItem.soundConfig?.delay ?? 0,
+                                          });
+                                          // Override previewingSound state to our unique key
+                                          setPreviewingSound(previewKey);
+                                        }
+                                      }}
+                                      className={`text-[8px] font-bold px-2 py-1 rounded border transition-all w-full ${
+                                        isPreviewing
+                                          ? "bg-green-600 text-white border-green-700"
+                                          : "bg-green-500 hover:bg-green-600 text-white border-green-700"
+                                      }`}
+                                    >
+                                      {isPreviewing ? "⏸ Detener Preview" : "▶ Preview Sonido"}
+                                    </button>
+                                  </div>
+                                )}
+
+                                {/* Controls Grid */}
+                                <div className="grid grid-cols-2 gap-2 mt-1">
+                                  {/* Sound Start Time */}
+                                  <div className="flex flex-col gap-1">
+                                    <label className="text-[9px] font-mono text-zinc-600">
+                                      Inicio (seg):
+                                    </label>
+                                    <input
+                                      type="number"
+                                      min="0"
+                                      step="0.1"
+                                      value={soundItem.soundStartTime ?? 0}
+                                      onChange={(e) => {
+                                        const val = parseFloat(e.target.value) || 0;
+                                        updateSoundItem(sIdx, {
+                                          soundStartTime: val > 0 ? val : undefined,
+                                        });
+                                      }}
+                                      onClick={(e) => e.stopPropagation()}
+                                      className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                                    />
+                                  </div>
+
+                                  {/* Sound End Time */}
+                                  <div className="flex flex-col gap-1">
+                                    <label className="text-[9px] font-mono text-zinc-600">
+                                      Fin (seg):
+                                    </label>
+                                    <input
+                                      type="number"
+                                      min="0"
+                                      step="0.1"
+                                      value={soundItem.soundEndTime ?? ""}
+                                      onChange={(e) => {
+                                        const val = e.target.value ? parseFloat(e.target.value) : undefined;
+                                        updateSoundItem(sIdx, {
+                                          soundEndTime: val ? val : undefined,
+                                        });
+                                      }}
+                                      onClick={(e) => e.stopPropagation()}
+                                      placeholder="Completo si está vacío"
+                                      className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                                    />
+                                  </div>
+                                </div>
+
+                                {/* Volume & Speed Sliders */}
+                                <div className="grid grid-cols-2 gap-2 mt-1">
+                                  {/* Volume */}
+                                  <div className="flex flex-col gap-1">
+                                    <div className="flex justify-between text-[9px] font-mono text-zinc-600">
+                                      <span>Volumen:</span>
+                                      <span className="text-blue-600 font-bold">
+                                        {((soundItem.soundConfig?.volume ?? 1) * 100).toFixed(0)}%
+                                      </span>
+                                    </div>
+                                    <input
+                                      type="range"
+                                      min="0"
+                                      max="1"
+                                      step="0.05"
+                                      value={soundItem.soundConfig?.volume ?? 1}
+                                      onChange={(e) => {
+                                        const val = parseFloat(e.target.value);
+                                        updateSoundItem(sIdx, {
+                                          soundConfig: { volume: val },
+                                        });
+                                      }}
+                                      onClick={(e) => e.stopPropagation()}
+                                      className="w-full accent-blue-500 cursor-pointer h-1"
+                                    />
+                                  </div>
+
+                                  {/* Playback Rate */}
+                                  <div className="flex flex-col gap-1">
+                                    <div className="flex justify-between text-[9px] font-mono text-zinc-600">
+                                      <span>Velocidad:</span>
+                                      <span className="text-blue-600 font-bold">
+                                        {(soundItem.soundConfig?.playbackRate ?? 1).toFixed(2)}x
+                                      </span>
+                                    </div>
+                                    <input
+                                      type="range"
+                                      min="0.5"
+                                      max="5"
+                                      step="0.1"
+                                      value={soundItem.soundConfig?.playbackRate ?? 1}
+                                      onChange={(e) => {
+                                        const val = parseFloat(e.target.value);
+                                        updateSoundItem(sIdx, {
+                                          soundConfig: { playbackRate: val },
+                                        });
+                                      }}
+                                      onClick={(e) => e.stopPropagation()}
+                                      className="w-full accent-blue-500 cursor-pointer h-1"
+                                    />
+                                  </div>
+                                </div>
+
+                                {/* Fade In & Fade Out */}
+                                <div className="grid grid-cols-2 gap-2 mt-1">
+                                  <div className="flex flex-col gap-1">
+                                    <label className="text-[9px] font-mono text-zinc-600">
+                                      Fade In (ms):
+                                    </label>
+                                    <input
+                                      type="number"
+                                      min="0"
+                                      max="5000"
+                                      step="100"
+                                      value={soundItem.soundConfig?.fadeIn ?? 0}
+                                      onChange={(e) => {
+                                        const val = parseInt(e.target.value) || 0;
+                                        updateSoundItem(sIdx, {
+                                          soundConfig: { fadeIn: val > 0 ? val : undefined },
+                                        });
+                                      }}
+                                      onClick={(e) => e.stopPropagation()}
+                                      className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                                    />
+                                  </div>
+
+                                  <div className="flex flex-col gap-1">
+                                    <label className="text-[9px] font-mono text-zinc-600">
+                                      Fade Out (ms):
+                                    </label>
+                                    <input
+                                      type="number"
+                                      min="0"
+                                      max="5000"
+                                      step="100"
+                                      value={soundItem.soundConfig?.fadeOut ?? 0}
+                                      onChange={(e) => {
+                                        const val = parseInt(e.target.value) || 0;
+                                        updateSoundItem(sIdx, {
+                                          soundConfig: { fadeOut: val > 0 ? val : undefined },
+                                        });
+                                      }}
+                                      onClick={(e) => e.stopPropagation()}
+                                      className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                                    />
+                                  </div>
+                                </div>
+
+                                {/* Delay & Loop */}
+                                <div className="grid grid-cols-2 gap-2 mt-1">
+                                  <div className="flex flex-col gap-1">
+                                    <label className="text-[9px] font-mono text-zinc-600">
+                                      Delay (ms):
+                                    </label>
+                                    <input
+                                      type="number"
+                                      min="0"
+                                      max="10000"
+                                      step="100"
+                                      value={soundItem.soundConfig?.delay ?? 0}
+                                      onChange={(e) => {
+                                        const val = parseInt(e.target.value) || 0;
+                                        updateSoundItem(sIdx, {
+                                          soundConfig: { delay: val > 0 ? val : undefined },
+                                        });
+                                      }}
+                                      onClick={(e) => e.stopPropagation()}
+                                      className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                                    />
+                                  </div>
+
+                                  <div className="flex items-center gap-1.5 mt-4">
+                                    <input
+                                      type="checkbox"
+                                      id={`loop-${pIdx}-${sIdx}`}
+                                      checked={soundItem.soundConfig?.loop ?? false}
+                                      onChange={(e) => {
+                                        updateSoundItem(sIdx, {
+                                          soundConfig: { loop: e.target.checked },
+                                        });
+                                      }}
+                                      className="w-3.5 h-3.5 accent-blue-500 rounded border-zinc-300 focus:ring-blue-400 cursor-pointer"
+                                    />
+                                    <label htmlFor={`loop-${pIdx}-${sIdx}`} className="text-[9px] font-mono text-zinc-600 cursor-pointer select-none">
+                                      Repetir (Loop)
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
+
                           <button
                             type="button"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              stopPreview();
-                              // Show brief visual confirmation that the audio data is in state
-                              setConfirmedPanels((prev) => new Set(prev).add(pIdx));
-                              setTimeout(() => {
-                                setConfirmedPanels((prev) => {
-                                  const next = new Set(prev);
-                                  next.delete(pIdx);
-                                  return next;
-                                });
-                              }, 2000);
-                            }}
-                            className={`flex-1 text-[8px] font-bold px-2 py-1 rounded border transition-all ${
-                              confirmedPanels.has(pIdx)
-                                ? "bg-emerald-600 text-white border-emerald-700"
-                                : "bg-blue-600 hover:bg-blue-700 text-white border-blue-700"
-                            }`}
+                            onClick={addSoundItem}
+                            className="text-[9px] font-bold py-1.5 px-3 bg-blue-600 hover:bg-blue-700 text-white rounded border border-blue-700 transition-all text-center flex items-center justify-center gap-1 mt-1"
                           >
-                            {confirmedPanels.has(pIdx) ? "✓ Audio guardado en JSON" : "✓ Confirmar audio"}
+                            ➕ Agregar otro sonido
                           </button>
-                          <button
-                            type="button"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleUpdatePanelParams(pIdx, {
-                                sound: undefined,
-                                soundConfig: undefined,
-                                soundStartTime: undefined,
-                                soundEndTime: undefined,
-                              });
-                            }}
-                            className="text-[8px] font-bold px-2 py-1 rounded border bg-red-500 hover:bg-red-600 text-white border-red-600 transition-all"
-                          >
-                            ✕
-                          </button>
-                        </div>
-
-                        {/* Sound Start Time */}
-                        <div className="flex flex-col gap-1">
-                          <label className="text-[9px] font-mono text-zinc-600">
-                            Inicio (seg):
-                          </label>
-                          <input
-                            type="number"
-                            min="0"
-                            step="0.1"
-                            value={panel.soundStartTime ?? 0}
-                            onChange={(e) => {
-                              const val = parseFloat(e.target.value) || 0;
-                              handleUpdatePanelParams(pIdx, {
-                                soundStartTime: val > 0 ? val : undefined,
-                              });
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                            className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
-                          />
-                        </div>
-
-                        {/* Sound End Time */}
-                        <div className="flex flex-col gap-1">
-                          <label className="text-[9px] font-mono text-zinc-600">
-                            Fin (seg) - Opcional:
-                          </label>
-                          <input
-                            type="number"
-                            min="0"
-                            step="0.1"
-                            value={panel.soundEndTime ?? ""}
-                            onChange={(e) => {
-                              const val = e.target.value ? parseFloat(e.target.value) : undefined;
-                              handleUpdatePanelParams(pIdx, {
-                                soundEndTime: val ? val : undefined,
-                              });
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                            placeholder="Completo si está vacío"
-                            className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
-                          />
-                        </div>
-
-                        {/* Volume */}
-                        <div className="flex flex-col gap-1">
-                          <div className="flex justify-between text-[9px] font-mono text-zinc-600">
-                            <span>Volumen:</span>
-                            <span className="text-blue-600 font-bold">
-                              {((panel.soundConfig?.volume ?? 1) * 100).toFixed(0)}%
-                            </span>
-                          </div>
-                          <input
-                            type="range"
-                            min="0"
-                            max="1"
-                            step="0.05"
-                            value={panel.soundConfig?.volume ?? 1}
-                            onChange={(e) => {
-                              const val = parseFloat(e.target.value);
-                              handleUpdatePanelParams(pIdx, {
-                                soundConfig: {
-                                  ...panel.soundConfig,
-                                  volume: val,
-                                },
-                              });
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                            className="w-full accent-blue-500 cursor-pointer h-1"
-                          />
-                        </div>
-
-                        {/* Playback Rate */}
-                        <div className="flex flex-col gap-1">
-                          <div className="flex justify-between text-[9px] font-mono text-zinc-600">
-                            <span>Velocidad:</span>
-                            <span className="text-blue-600 font-bold">
-                              {(panel.soundConfig?.playbackRate ?? 1).toFixed(2)}x
-                            </span>
-                          </div>
-                          <input
-                            type="range"
-                            min="0.5"
-                            max="2"
-                            step="0.1"
-                            value={panel.soundConfig?.playbackRate ?? 1}
-                            onChange={(e) => {
-                              const val = parseFloat(e.target.value);
-                              handleUpdatePanelParams(pIdx, {
-                                soundConfig: {
-                                  ...panel.soundConfig,
-                                  playbackRate: val,
-                                },
-                              });
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                            className="w-full accent-blue-500 cursor-pointer h-1"
-                          />
-                        </div>
-
-                        {/* Fade In */}
-                        <div className="flex flex-col gap-1">
-                          <label className="text-[9px] font-mono text-zinc-600">
-                            Fade In (ms):
-                          </label>
-                          <input
-                            type="number"
-                            min="0"
-                            max="5000"
-                            step="100"
-                            value={panel.soundConfig?.fadeIn ?? 0}
-                            onChange={(e) => {
-                              const val = parseInt(e.target.value) || 0;
-                              handleUpdatePanelParams(pIdx, {
-                                soundConfig: {
-                                  ...panel.soundConfig,
-                                  fadeIn: val > 0 ? val : undefined,
-                                },
-                              });
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                            className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
-                          />
-                        </div>
-
-                        {/* Fade Out */}
-                        <div className="flex flex-col gap-1">
-                          <label className="text-[9px] font-mono text-zinc-600">
-                            Fade Out (ms):
-                          </label>
-                          <input
-                            type="number"
-                            min="0"
-                            max="5000"
-                            step="100"
-                            value={panel.soundConfig?.fadeOut ?? 0}
-                            onChange={(e) => {
-                              const val = parseInt(e.target.value) || 0;
-                              handleUpdatePanelParams(pIdx, {
-                                soundConfig: {
-                                  ...panel.soundConfig,
-                                  fadeOut: val > 0 ? val : undefined,
-                                },
-                              });
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                            className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
-                          />
-                        </div>
-
-                        {/* Delay */}
-                        <div className="flex flex-col gap-1">
-                          <label className="text-[9px] font-mono text-zinc-600">
-                            Delay (ms):
-                          </label>
-                          <input
-                            type="number"
-                            min="0"
-                            max="5000"
-                            step="100"
-                            value={panel.soundConfig?.delay ?? 0}
-                            onChange={(e) => {
-                              const val = parseInt(e.target.value) || 0;
-                              handleUpdatePanelParams(pIdx, {
-                                soundConfig: {
-                                  ...panel.soundConfig,
-                                  delay: val > 0 ? val : undefined,
-                                },
-                              });
-                            }}
-                            onClick={(e) => e.stopPropagation()}
-                            className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
-                          />
-                        </div>
-
-                        {/* Loop */}
-                        <div className="flex items-center justify-between">
-                          <span className="text-[9px] font-bold text-zinc-600">🔁 Repetir:</span>
-                          <div className="flex gap-1">
-                            <button
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleUpdatePanelParams(pIdx, {
-                                  soundConfig: {
-                                    ...panel.soundConfig,
-                                    loop: true,
-                                  },
-                                });
-                              }}
-                              className={`text-[9px] font-bold px-2 py-0.5 rounded border transition-all ${
-                                panel.soundConfig?.loop
-                                  ? "bg-blue-600 text-white border-blue-700 font-bold"
-                                  : "bg-zinc-100 text-zinc-500 border-zinc-300 hover:bg-zinc-200"
-                              }`}
-                            >
-                              Sí
-                            </button>
-                            <button
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleUpdatePanelParams(pIdx, {
-                                  soundConfig: {
-                                    ...panel.soundConfig,
-                                    loop: false,
-                                  },
-                                });
-                              }}
-                              className={`text-[9px] font-bold px-2 py-0.5 rounded border transition-all ${
-                                !panel.soundConfig?.loop
-                                  ? "bg-zinc-700 text-white border-zinc-800 font-bold"
-                                  : "bg-zinc-100 text-zinc-500 border-zinc-300 hover:bg-zinc-200"
-                              }`}
-                            >
-                              No
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    )}
+                        </>
+                      );
+                    })()}
                   </div>
 
                   {/* Dialogue List for this panel */}

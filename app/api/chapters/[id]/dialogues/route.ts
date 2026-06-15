@@ -67,14 +67,20 @@ export async function POST(
       for (const [pgKey, pgData] of Object.entries(cleanedDialogues.pages) as any) {
         const panels = pgData.panels || [];
         const hasDialogues = panels.some((p: any) => p.dialogue && p.dialogue.length > 0);
+        const hasCustomZoom = panels.some((p: any) => p.zoomRect || (p.zoomRects && p.zoomRects.length > 0));
+        const hasCustomSound = panels.some((p: any) => p.sound || p.soundConfig);
+        const hasCustomDuration = panels.some((p: any) => p.duration !== undefined);
         
-        // A page is considered default/unedited if it has exactly 3 panels, no dialogues, and focusY close to defaults
+        // A page is considered default/unedited if it has exactly 3 panels, no dialogues, no custom zoom rects, no sounds, no durations, and focusY close to defaults
         const isDefault = panels.length === 3 &&
+          !hasCustomZoom &&
+          !hasCustomSound &&
+          !hasCustomDuration &&
           Math.abs((panels[0].focusY || 0) - 0.15) <= 0.05 &&
           Math.abs((panels[1].focusY || 0) - 0.5) <= 0.1 &&
           Math.abs((panels[2].focusY || 0) - 0.82) <= 0.05;
 
-        if (!hasDialogues && (isDefault || panels.length === 0)) {
+        if (!hasDialogues && !hasCustomZoom && !hasCustomSound && !hasCustomDuration && (isDefault || panels.length === 0)) {
           delete cleanedDialogues.pages[pgKey];
         } else {
           // Prune redundant dialogue properties to save space and line count

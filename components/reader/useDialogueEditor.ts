@@ -294,7 +294,7 @@ export function useDialogueEditor({
     const panelsCopy = [...(pg.panels || [])];
     const targetPanel = { ...panelsCopy[pIdx] };
     
-    let newFocusY = (targetPanel.focusY * 100) + deltaYPercent;
+    let newFocusY = ((targetPanel.focusY ?? 0.5) * 100) + deltaYPercent;
 
     if (snapToGrid) {
       newFocusY = Math.round(newFocusY / gridSize) * gridSize;

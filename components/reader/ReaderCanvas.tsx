@@ -384,7 +384,7 @@ export function ReaderCanvas({
           const isActivePanel = pIdx === activePanelIdx;
           return (
             <motion.div
-              key={`focusy-${pIdx}`}
+              key={`focusy-${pIdx}-${panel.focusY}`}
               drag={isActivePanel ? "y" : false}
               dragMomentum={false}
               dragElastic={0}

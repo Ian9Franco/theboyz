@@ -493,7 +493,7 @@ export function EditorAudioTracks({
                     <span className="font-bold">×{form.playbackRate.toFixed(2)}</span>
                   </div>
                   <input
-                    type="range" min="0.5" max="2" step="0.05"
+                    type="range" min="0.5" max="5" step="0.1"
                     value={form.playbackRate}
                     onChange={(e) => handleFormChange("playbackRate", parseFloat(e.target.value))}
                     className="w-full accent-blue-500 cursor-pointer h-1.5"

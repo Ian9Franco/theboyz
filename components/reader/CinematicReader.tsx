@@ -22,6 +22,20 @@ import {
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
+export type PanelSound = {
+  sound: string;
+  soundStartTime?: number;
+  soundEndTime?: number;
+  soundConfig?: {
+    volume?: number;
+    playbackRate?: number;
+    loop?: boolean;
+    fadeIn?: number;
+    fadeOut?: number;
+    delay?: number;
+  };
+};
+
 export type PanelStop = {
   focusY: number;
   dialogue?: DialogueLine[];
@@ -40,6 +54,7 @@ export type PanelStop = {
     fadeOut?: number; // duration in ms (default: 0)
     delay?: number; // delay before playing in ms (default: 0)
   };
+  sounds?: PanelSound[];
 };
 
 /**
@@ -168,6 +183,7 @@ export function CinematicReader({
   } = useReaderZoom({ containerSize, containerRef });
   const imgRef = useRef<HTMLImageElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const activePanelAudiosRef = useRef<HTMLAudioElement[]>([]);
   // Map of active multi-span audio tracks keyed by track.id
   const activeTracksRef = useRef<Map<string, HTMLAudioElement>>(new Map());
 
@@ -406,25 +422,44 @@ export function CinematicReader({
     };
   }, [panelIdx, pageIdx, mode, activePanel]);
 
-  // Play sound effect when panel changes
+  // Play sound effect(s) when panel changes
   useEffect(() => {
-    if (mode !== "read" || !activePanel?.sound) {
-      // Stop audio if no sound is assigned
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0;
-      }
-      return;
+    // 1. Stop all currently playing panel audios
+    activePanelAudiosRef.current.forEach((audio) => {
+      audio.pause();
+      audio.currentTime = 0;
+    });
+    activePanelAudiosRef.current = [];
+
+    if (mode !== "read" || !activePanel) return;
+
+    // 2. Gather all sounds config for this panel
+    const soundsToPlay: PanelSound[] = [];
+    if (activePanel.sounds && Array.isArray(activePanel.sounds) && activePanel.sounds.length > 0) {
+      soundsToPlay.push(...activePanel.sounds);
+    } else if (activePanel.sound) {
+      soundsToPlay.push({
+        sound: activePanel.sound,
+        soundStartTime: activePanel.soundStartTime,
+        soundEndTime: activePanel.soundEndTime,
+        soundConfig: activePanel.soundConfig,
+      });
     }
 
-    const playAudio = async () => {
-      if (!audioRef.current) {
-        const audio = new Audio();
-        audioRef.current = audio;
-      }
+    if (soundsToPlay.length === 0) return;
 
-      const audio = audioRef.current;
-      const config = activePanel.soundConfig || {};
+    const activeAudios: HTMLAudioElement[] = [];
+    const timersToClear: NodeJS.Timeout[] = [];
+    const intervalsToClear: NodeJS.Timeout[] = [];
+
+    // 3. Start each sound
+    soundsToPlay.forEach((soundItem) => {
+      if (!soundItem.sound) return;
+
+      const audio = new Audio(soundItem.sound);
+      activeAudios.push(audio);
+
+      const config = soundItem.soundConfig || {};
       const {
         volume = 1,
         playbackRate = 1,
@@ -433,17 +468,15 @@ export function CinematicReader({
         fadeOut = 0,
         delay = 0,
       } = config;
-      const soundStartTime = activePanel.soundStartTime || 0;
-      const soundEndTime = activePanel.soundEndTime || undefined;
-      const targetVolume = volume * volume;
+      const soundStartTime = soundItem.soundStartTime || 0;
+      const soundEndTime = soundItem.soundEndTime || undefined;
+      const targetVolume = volume * volume; // log curve
 
-      audio.src = activePanel.sound!;
       audio.currentTime = soundStartTime;
       audio.volume = 0; // Start at 0 if fadeIn is set, else set to targetVolume
       audio.playbackRate = playbackRate;
       audio.loop = loop;
 
-      // Apply fade-out on next panel change
       if (fadeOut > 0) {
         audio.onended = () => {
           audio.pause();
@@ -463,6 +496,7 @@ export function CinematicReader({
                 clearInterval(checkInterval);
               }
             }, 100);
+            intervalsToClear.push(checkInterval);
           }
 
           // Fade in effect
@@ -481,48 +515,70 @@ export function CinematicReader({
                 clearInterval(fadeInInterval);
               }
             }, stepDuration);
+            intervalsToClear.push(fadeInInterval);
           } else {
             audio.volume = targetVolume;
           }
 
           // Fade out effect (before audio ends based on duration config)
           if (fadeOut > 0 && !loop) {
-            const effectiveDuration = soundEndTime ? (soundEndTime - soundStartTime) : audio.duration;
-            const fadeOutDelay = (effectiveDuration - fadeOut / 1000) * 1000;
+            const triggerFadeOut = () => {
+              const effectiveDuration = soundEndTime ? (soundEndTime - soundStartTime) : audio.duration;
+              const fadeOutDelay = (effectiveDuration - fadeOut / 1000) * 1000;
 
-            if (fadeOutDelay > 0) {
-              setTimeout(() => {
-                const fadeOutSteps = 50;
-                const stepDuration = fadeOut / fadeOutSteps;
-                const volumePerStep = audio.volume / fadeOutSteps;
-                let currentStep = 0;
+              if (fadeOutDelay > 0) {
+                const fadeOutTimeout = setTimeout(() => {
+                  const fadeOutSteps = 50;
+                  const stepDuration = fadeOut / fadeOutSteps;
+                  const volumePerStep = audio.volume / fadeOutSteps;
+                  let currentStep = 0;
 
-                const fadeOutInterval = setInterval(() => {
-                  if (currentStep < fadeOutSteps && audio.volume > 0) {
-                    audio.volume = Math.max(0, audio.volume - volumePerStep);
-                    currentStep++;
-                  } else {
-                    audio.volume = 0;
-                    clearInterval(fadeOutInterval);
-                  }
-                }, stepDuration);
-              }, fadeOutDelay);
+                  const fadeOutInterval = setInterval(() => {
+                    if (currentStep < fadeOutSteps && audio.volume > 0) {
+                      audio.volume = Math.max(0, audio.volume - volumePerStep);
+                      currentStep++;
+                    } else {
+                      audio.volume = 0;
+                      clearInterval(fadeOutInterval);
+                    }
+                  }, stepDuration);
+                  intervalsToClear.push(fadeOutInterval);
+                }, fadeOutDelay);
+                timersToClear.push(fadeOutTimeout);
+              }
+            };
+
+            if (isNaN(audio.duration)) {
+              audio.onloadedmetadata = triggerFadeOut;
+            } else {
+              triggerFadeOut();
             }
           }
         } catch (error) {
-          console.error("Error playing audio:", error);
+          console.error("Error playing audio item:", error);
         }
       };
 
       if (delay > 0) {
-        setTimeout(playWithDelay, delay);
+        const delayTimeout = setTimeout(playWithDelay, delay);
+        timersToClear.push(delayTimeout);
       } else {
         playWithDelay();
       }
-    };
+    });
 
-    playAudio();
-  }, [panelIdx, pageIdx, mode, activePanel?.sound, activePanel?.soundConfig, activePanel?.soundStartTime, activePanel?.soundEndTime]);
+    activePanelAudiosRef.current = activeAudios;
+
+    return () => {
+      // Cleanup all audios and timers for this effect run
+      activeAudios.forEach((audio) => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+      timersToClear.forEach((t) => clearTimeout(t));
+      intervalsToClear.forEach((i) => clearInterval(i));
+    };
+  }, [panelIdx, pageIdx, mode, activePanel?.sound, activePanel?.soundConfig, activePanel?.soundStartTime, activePanel?.soundEndTime, activePanel?.sounds]);
 
   // ─── Multi-span Audio Track Engine ───────────────────────────────────────
 

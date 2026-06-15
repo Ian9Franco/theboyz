@@ -232,6 +232,7 @@
       "panels": [
         {
           "dialogue": [
+            { "text": "Nuevo diálogo", "size": "small", "posX": 50, "posY": null, "tailX": 50, "tailY": null, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "Y ahí se fue. Sola hacia lo desconocido. Dejando atrás el eco de su pasado... para empezar a escribir su propia historia.", "style": "caption", "size": "small", "posX": 50, "posY": 0, "tailX": 30, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 220, "fontSize": 8, "borderRadius": 3, "customBg": "#f5e642", "customColor": "#000000" }
           ],
           "focusY": null
@@ -347,11 +348,16 @@
     "13": {
       "panels": [
         {
-          "focusY": 0.35,
+          "focusY": 0.2,
           "dialogue": [
             { "text": "Escapé corriendo entre callejones oscuros, perdida en una ciudad que no conozco y bajo un agua que no paraba de castigar. Hasta que vi esa luz.", "size": "small", "posX": 35, "posY": 25, "tailX": 30, "tailY": 20, "tailWidth": 4, "tailCurvature": -64, "width": 175, "fontSize": 8, "borderRadius": 5 },
             { "text": "¡Ting-ting!", "size": "small", "posX": 85, "posY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 3, "tail": "none", "customBg": "#f5e642", "customColor": "#000000" }
-          ]
+          ],
+          "sound": "/sounds/campana.mp3",
+          "soundConfig": {
+            "volume": 0.75,
+            "playbackRate": 2
+          }
         },
         {
           "focusY": 0.43,
@@ -360,14 +366,14 @@
           ]
         },
         {
-          "focusY": 0.65,
+          "focusY": 0.9,
           "dialogue": [
             { "text": "Mi nombre es Kenji, Sentate acá cerca de las ollas, el vapor te va a revivir. ", "size": "small", "posX": 35, "posY": 75, "tailX": 30, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "Gracias Kenji", "size": "small", "posX": 55, "posY": 75, "tailX": 65, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
           ]
         },
         {
-          "focusY": 0.54,
+          "focusY": 0.65,
           "dialogue": [
             { "text": "Primero comé esto. Invita la casa. Un buen ramen caliente cura cualquier bardo que traigas de la calle.", "size": "small", "posX": 85, "posY": 95, "tailX": 110, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
@@ -413,20 +419,31 @@
     "15": {
       "panels": [
         {
-          "focusY": 0.3,
+          "focusY": 0.15,
           "dialogue": [
             { "text": "¡¡¡Oi!!! ¡¡¡Kore wa nanda!!!", "size": "small", "posX": 45, "posY": 20, "tailX": 105, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "#ff0000", "customColor": "#000000", "fontFamily": "bungee" }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/botella rota.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.3,
+                "playbackRate": 1.2
+              }
+            }
           ]
         },
         {
-          "focusY": 0.45,
+          "focusY": 0.4,
           "dialogue": [
             { "text": "¡Se te venció el plazo, viejo! ¿Dónde está el dinero del mes? ¡¿Pensaste que nos íbamos a olvidar de pasar?!", "size": "small", "posX": 20, "posY": 35, "tailX": 55, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "¡Por favor... la tormenta espantó a todos los clientes... déjenme una semana más...!", "size": "small", "posX": 85, "posY": 40, "tailX": 60, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 27, "w": 100, "h": 42 }
-          ]
+          ],
+          "sounds": []
         },
         {
           "focusY": 0.55,
@@ -434,11 +451,11 @@
             { "text": "l Clan Kurogane no da prórrogas. La próxima vez que vengamos con las manos vacías, te prendemos fuego el boliche con vos adentro.", "size": "small", "posX": 25, "posY": 55, "tailX": 50, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
           ],
           "zoomRects": [
-            { "x": 0, "y": 69, "w": 100, "h": 32 }
+            { "x": 0, "y": 70, "w": 100, "h": 30 }
           ]
         },
         {
-          "focusY": 0.65,
+          "focusY": 0.8,
           "dialogue": [
             { "text": "Otra vez la misma impotencia. Otra vez la violencia buscándome en los rincones. No puedo hacer nada... solo esconderme en el silencio.", "size": "small", "posX": 50, "posY": 90, "tailX": 75, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
           ]
@@ -561,23 +578,28 @@
     "21": {
       "panels": [
         {
-          "focusY": 0.3,
+          "focusY": 0.2,
           "dialogue": [
             { "text": "Y así empezó. Sin planes rúnicos, sin portales temporales... solo una barra de madera, un delantal azul y un maestro testarudo.", "style": "caption", "size": "small", "posX": 45, "posY": 0, "tailX": 50, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 220, "fontSize": 8, "borderRadius": 5 }
           ]
         },
         {
-          "focusY": 0.5,
+          "focusY": 0.45,
           "dialogue": [
             { "text": "El secreto del caldo está en el corte exacto de la verdura, Sofi. Tiene que ser rápido y fino. Mirá bien cómo muevo los dedos.", "style": "caption", "size": "small", "posX": 25, "posY": 50, "tailX": 50, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 5 }
           ]
         },
         {
-          "focusY": 0.55,
+          "focusY": 0.6,
           "dialogue": [
             { "text": "¡¡¡TAK-TAK-TAK-TAK-TAK-TAK-TAK!!!", "style": "sfx", "size": "small", "posX": 35, "posY": 65, "tailX": 20, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "(¿Pero qué carajo...? ¿Cómo mueve las manos tan rápido? Esta chica no es una turista normal).", "style": "thought", "size": "small", "posX": 95, "posY": 70, "tailX": 85, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
-          ]
+          ],
+          "sound": "/sounds/cortando vegetales.mp3",
+          "soundConfig": {
+            "playbackRate": 3,
+            "volume": 0.75
+          }
         },
         {
           "focusY": 0.7,
@@ -659,13 +681,33 @@
             { "text": "¡¡¡TAK-TAK-TAK-TAK-TAK!!!", "style": "sfx", "size": "small", "posX": 10, "posY": 20, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "¡¡¡Pará un poco, Sofi, vas a picar la madera de la mesa!!! ¡Te dije rápido, no supersónico!", "size": "small", "posX": 90, "posY": 10, "tailX": 60, "tailY": 10, "tailWidth": 6, "tailCurvature": 40, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
-          "focusY": null
+          "focusY": null,
+          "sounds": [
+            {
+              "sound": "/sounds/vegetales2.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.5,
+                "playbackRate": 4.1
+              }
+            }
+          ]
         },
         {
           "focusY": 0.4,
           "dialogue": [
             { "text": "Sssssssss...", "style": "sfx", "size": "small", "posX": 70, "posY": 40, "tailX": 50, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "El local se llenó hasta el tope. Por unas horas, los Kurogane y las amenazas quedaron afuera, ahogados por el olor a caldo y las risas de la gente.", "size": "small", "posX": 50, "posY": 20, "tailX": 30, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 295, "fontSize": 8, "borderRadius": 4, "customBg": "#f5e642", "customColor": "#000000" }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/fritura.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.4,
+                "playbackRate": 0.9
+              }
+            }
           ]
         },
         {
@@ -843,6 +885,16 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 22 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/disparo_eco.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.35,
+                "playbackRate": 1.7
+              }
+            }
           ]
         },
         {
@@ -851,20 +903,35 @@
           "zoomRects": [
             { "x": 0, "y": 21, "w": 100, "h": 43 }
           ],
-          "sound": "/sounds/dragon-studio-sword-slice-2-393845.mp3",
-          "soundConfig": {
-            "volume": 0.4,
-            "playbackRate": 1.1,
-            "loop": false
-          }
+          "sounds": [
+            {
+              "sound": "/sounds/katana.mp3",
+              "soundConfig": {
+                "volume": 0.4,
+                "playbackRate": 1.1,
+                "loop": false
+              }
+            }
+          ]
         },
         {
           "focusY": 0.7,
           "dialogue": [
-            { "text": "¡¡¡Maldita perra!!! ¡¿Cómo hiciste eso?!", "size": "small", "posX": 90, "posY": 70, "tailX": 80, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+            { "text": "¡¡¡Maldita perra!!! ¡¿Cómo hiciste eso?!", "size": "small", "posX": 90, "posY": 70, "tailX": 80, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "AAAAAAAAAH!", "size": "small", "posX": 35, "posY": 60, "tailX": 30, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 62, "w": 100, "h": 39 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/grito.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.3,
+                "playbackRate": 1
+              }
+            }
           ]
         }
       ]
@@ -872,41 +939,55 @@
     "30": {
       "panels": [
         {
-          "focusY": 0.42,
+          "focusY": 0.2,
           "dialogue": [
             { "text": "¡¿Qué... qué sos v-vos?! ¡¿Quién te mandó?!", "size": "small", "posX": 20, "posY": 0, "tailX": 20, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "Díganle a su jefe que se terminó el tiempo de extorsionar gente buena.", "size": "small", "posX": 70, "posY": 0, "tailX": 50, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
           ]
         },
         {
-          "focusY": 0.43,
+          "focusY": 0.55,
           "dialogue": [
             { "text": "La próxima vez que un Kurogane pise estas calles... no voy a cortar sus armas. Voy a cortar sus cabezas. ¡Váyanse!", "size": "small", "posX": 80, "posY": 40, "tailX": 110, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
           ]
         },
         {
-          "focusY": 0.6,
+          "focusY": 0.85,
           "dialogue": [
             { "text": "Los dejé vivir por una sola razón. Necesitaba que le llevaran el mensaje al monstruo que maneja los hilos.", "size": "small", "posX": 90, "posY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 2, "tail": "none", "customBg": "#f5e642", "customColor": "#000000" }
-          ]
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 55, "w": 100, "h": 46 }
+          ],
+          "hideUntilReached": false
         }
       ]
     },
     "31": {
       "panels": [
         {
-          "focusY": 0.39,
+          "focusY": 0.08,
           "dialogue": [
             { "text": "¡O-Oyabun...! Le juramos que no era un rival común... E-Era una extranjera... Se movía como un demonio en la oscuridad...", "size": "small", "posX": 20, "posY": 0, "tailX": 30, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
-          "focusY": 0.4,
+          "focusY": 0.37,
           "dialogue": [
             { "text": "... humillados en un callejón por una turista. Qué decepción.", "size": "small", "posX": 90, "posY": 30, "tailX": 70, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 46, "y": 24, "w": 56, "h": 22 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/madera.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.2,
+                "playbackRate": 2.2
+              }
+            }
           ]
         },
         {
@@ -914,13 +995,24 @@
           "dialogue": [],
           "zoomRects": [
             { "x": 0, "y": 46, "w": 100, "h": 20 }
-          ]
+          ],
+          "sounds": []
         },
         {
           "focusY": 0.7,
           "dialogue": [],
           "zoomRects": [
             { "x": 0, "y": 62, "w": 100, "h": 17 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/espada.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.3,
+                "playbackRate": 1.1
+              }
+            }
           ]
         },
         {
@@ -931,6 +1023,16 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 74, "w": 100, "h": 26 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/filoso.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.75,
+                "playbackRate": 1
+              }
+            }
           ]
         }
       ]
@@ -944,7 +1046,7 @@
       "id": "track-1781558225781-taa9w",
       "layer": "music",
       "src": "/sounds/DRAKE - FAMILY MATTERS (INSTRUMENTAL) FULL [Kendrick Diss].mp3",
-      "startPageKey": "26",
+      "startPageKey": "27",
       "startPanelIdx": 2,
       "stopTrigger": {
         "type": "pageEnd",
@@ -956,6 +1058,24 @@
         "loop": true,
         "fadeIn": 2200,
         "fadeOut": 2200
+      }
+    },
+    {
+      "id": "track-1781563451577-eguq4",
+      "layer": "music",
+      "src": "/sounds/restaurant.mp3",
+      "startPageKey": "24",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "24"
+      },
+      "soundConfig": {
+        "volume": 0.35,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
       }
     }
   ]
