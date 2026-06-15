@@ -414,20 +414,19 @@
     "15": {
       "panels": [
         {
-          "focusY": 0.14,
+          "focusY": 0.3,
           "dialogue": [
             { "text": "¡¡¡Oi!!! ¡¡¡Kore wa nanda!!!", "size": "small", "posX": 45, "posY": 20, "tailX": 105, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "#ff0000", "customColor": "#000000", "fontFamily": "bungee" }
-          ],
-          "sound": "/sounds/universfield-glass-bottle-smash-03-229205.mp3",
-          "soundConfig": {
-            "volume": 0.35
-          }
+          ]
         },
         {
           "focusY": 0.45,
           "dialogue": [
             { "text": "¡Se te venció el plazo, viejo! ¿Dónde está el dinero del mes? ¡¿Pensaste que nos íbamos a olvidar de pasar?!", "size": "small", "posX": 20, "posY": 35, "tailX": 55, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "¡Por favor... la tormenta espantó a todos los clientes... déjenme una semana más...!", "size": "small", "posX": 85, "posY": 40, "tailX": 60, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 27, "w": 100, "h": 42 }
           ]
         },
         {
@@ -436,7 +435,7 @@
             { "text": "l Clan Kurogane no da prórrogas. La próxima vez que vengamos con las manos vacías, te prendemos fuego el boliche con vos adentro.", "size": "small", "posX": 25, "posY": 55, "tailX": 50, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
           ],
           "zoomRects": [
-            { "x": 0, "y": 25, "w": 100, "h": 70 }
+            { "x": 0, "y": 69, "w": 100, "h": 32 }
           ]
         },
         {
@@ -778,9 +777,7 @@
         },
         {
           "focusY": 0.5,
-          "dialogue": [
-            { "text": "perdonenme..", "size": "small", "posX": 90, "posY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 270, "fontSize": 11, "borderRadius": 0, "customBg": "#f5e642", "customColor": "#000000", "tail": "none" }
-          ],
+          "dialogue": [],
           "zoomRects": [
             { "x": 0, "y": 42, "w": 100, "h": 36 }
           ]
@@ -948,7 +945,7 @@
       "id": "track-1781558225781-taa9w",
       "layer": "music",
       "src": "/sounds/DRAKE - FAMILY MATTERS (INSTRUMENTAL) FULL [Kendrick Diss].mp3",
-      "startPageKey": "27",
+      "startPageKey": "26",
       "startPanelIdx": 2,
       "stopTrigger": {
         "type": "pageEnd",

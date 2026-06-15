@@ -540,40 +540,57 @@ export function CinematicReader({
   }, [pages]);
 
   /**
-   * Returns true if `keyA` comes strictly after `keyB` in the pages array.
+   * Compares two reader positions (page + panel).
+   * Returns:
+   * - negative if posA is before posB
+   * - positive if posA is after posB
+   * - 0 if they are identical
    */
-  const isPageAfter = useCallback(
-    (keyA: string, keyB: string) =>
-      (pageKeyOrder.get(keyA) ?? 0) > (pageKeyOrder.get(keyB) ?? 0),
+  const comparePositions = useCallback(
+    (pageKeyA: string, panelIdxA: number, pageKeyB: string, panelIdxB: number): number => {
+      const idxA = pageKeyOrder.get(pageKeyA) ?? 0;
+      const idxB = pageKeyOrder.get(pageKeyB) ?? 0;
+      if (idxA !== idxB) return idxA - idxB;
+      return panelIdxA - panelIdxB;
+    },
     [pageKeyOrder]
   );
 
   /**
-   * Determines whether a running track should stop at the current reader position.
+   * Determines whether the current reader position falls within the active range of a track.
    */
-  const shouldStopTrack = useCallback(
+  const isPositionInTrackRange = useCallback(
     (track: AudioTrack, currentPageKey: string, currentPanelIdx: number): boolean => {
-      if (!track.stopTrigger) return false;
+      const startCompare = comparePositions(currentPageKey, currentPanelIdx, track.startPageKey, track.startPanelIdx);
+      if (startCompare < 0) {
+        // Reader position is before the track starts
+        return false;
+      }
+
+      if (!track.stopTrigger) {
+        // No stop trigger, plays until the end of the chapter
+        return true;
+      }
+
       const t = track.stopTrigger;
       switch (t.type) {
         case "panelStart":
-          // Stop the moment the reader arrives at this exact panel
-          return currentPageKey === t.pageKey && currentPanelIdx === t.panelIdx;
+          // Stop upon arriving at this panel
+          return comparePositions(currentPageKey, currentPanelIdx, t.pageKey, t.panelIdx) < 0;
         case "panelEnd":
-          // Stop when the reader has moved past this panel (next panel or next page)
-          if (currentPageKey === t.pageKey) return currentPanelIdx > t.panelIdx;
-          return isPageAfter(currentPageKey, t.pageKey);
+          // Stop after leaving this panel
+          return comparePositions(currentPageKey, currentPanelIdx, t.pageKey, t.panelIdx) <= 0;
         case "pageStart":
-          // Stop as soon as the reader enters this page (first panel)
-          return currentPageKey === t.pageKey;
+          // Stop upon arriving at this page
+          return comparePositions(currentPageKey, 0, t.pageKey, 0) < 0;
         case "pageEnd":
-          // Stop when the reader has moved past this page
-          return isPageAfter(currentPageKey, t.pageKey);
+          // Stop after leaving this page
+          return comparePositions(currentPageKey, 0, t.pageKey, 0) <= 0;
         default:
-          return false;
+          return true;
       }
     },
-    [isPageAfter]
+    [comparePositions]
   );
 
   /** Fades out a playing HTMLAudioElement over `durationMs` milliseconds then pauses it. */
@@ -602,104 +619,96 @@ export function CinematicReader({
   /**
    * Main multi-track playback effect.
    * Fires on every panel/page change and on track list changes.
-   * - Stops any active tracks whose stopTrigger matches the current position.
-   * - Starts any tracks whose startPageKey/startPanelIdx matches the current position.
-   * Layers (music/sfx) are fully independent: a new sfx track does NOT stop music and vice versa.
+   * - Starts tracks whose range covers the current position and are not yet playing.
+   * - Stops playing tracks whose range no longer covers the current position (including backwards navigation).
+   * - Automatically clears tracks deleted from chapter configuration.
    */
   useEffect(() => {
     if (mode !== "read") return;
     const tracks = localDialogues.audioTracks || [];
-    if (tracks.length === 0) return;
-
-    const currentPageKey = getPageKeyFromUrl(pages[pageIdx]) || "";
     const activeTracks = activeTracksRef.current;
 
-    // 1. Stop tracks that have reached their stop trigger
-    activeTracks.forEach((audio, trackId) => {
-      const track = tracks.find((t) => t.id === trackId);
-      if (!track) {
-        // Track was removed from config entirely — stop immediately
-        audio.pause();
-        activeTracks.delete(trackId);
-        return;
-      }
-      if (shouldStopTrack(track, currentPageKey, panelIdx)) {
+    const currentPageKey = getPageKeyFromUrl(pages[pageIdx]) || "";
+
+    // 1. Process all configured tracks
+    tracks.forEach((track) => {
+      const inRange = isPositionInTrackRange(track, currentPageKey, panelIdx);
+      const isPlaying = activeTracks.has(track.id);
+
+      if (inRange && !isPlaying) {
+        const config = track.soundConfig || {};
+        const {
+          volume = 1,
+          playbackRate = 1,
+          loop = false,
+          fadeIn = 0,
+          delay = 0,
+          startTime = 0,
+          endTime,
+        } = config;
+        const targetVolume = volume * volume;
+
+        const audio = new Audio(track.src);
+        audio.currentTime = startTime;
+        audio.playbackRate = playbackRate;
+        audio.loop = loop;
+        audio.volume = fadeIn > 0 ? 0 : targetVolume;
+        activeTracks.set(track.id, audio);
+
+        const doPlay = () => {
+          try {
+            audio.play();
+
+            // Fade-in effect
+            if (fadeIn > 0) {
+              const steps = 40;
+              const stepDuration = fadeIn / steps;
+              const volStep = targetVolume / steps;
+              let s = 0;
+              const interval = setInterval(() => {
+                s++;
+                audio.volume = Math.min(targetVolume, audio.volume + volStep);
+                if (s >= steps) { audio.volume = targetVolume; clearInterval(interval); }
+              }, stepDuration);
+            }
+
+            // Stop at endTime if defined
+            if (endTime !== undefined) {
+              const check = setInterval(() => {
+                if (!activeTracks.has(track.id)) { clearInterval(check); return; }
+                if (audio.currentTime >= endTime) {
+                  clearInterval(check);
+                  audio.pause();
+                  activeTracks.delete(track.id);
+                }
+              }, 100);
+            }
+          } catch (err) {
+            console.error("[AudioTrack] Error playing track", track.id, err);
+            activeTracks.delete(track.id);
+          }
+        };
+
+        if (delay > 0) setTimeout(doPlay, delay);
+        else doPlay();
+
+      } else if (!inRange && isPlaying) {
+        const audio = activeTracks.get(track.id)!;
         const fadeOut = track.soundConfig?.fadeOut ?? 0;
         fadeOutAndStop(audio, fadeOut);
-        activeTracks.delete(trackId);
+        activeTracks.delete(track.id);
       }
     });
 
-    // 2. Start tracks that begin at this exact position
-    tracks.forEach((track) => {
-      // Already playing
-      if (activeTracks.has(track.id)) return;
-      // Not the right position yet
-      if (track.startPageKey !== currentPageKey || track.startPanelIdx !== panelIdx) return;
-
-      const config = track.soundConfig || {};
-      const {
-        volume = 1,
-        playbackRate = 1,
-        loop = false,
-        fadeIn = 0,
-        delay = 0,
-        startTime = 0,
-        endTime,
-      } = config;
-      const targetVolume = volume * volume;
-
-      const audio = new Audio(track.src);
-      audio.currentTime = startTime;
-      audio.playbackRate = playbackRate;
-      audio.loop = loop;
-      audio.volume = fadeIn > 0 ? 0 : targetVolume;
-      activeTracks.set(track.id, audio);
-
-      const doPlay = () => {
-        try {
-          audio.play();
-
-          // Fade-in effect
-          if (fadeIn > 0) {
-            const steps = 40;
-            const stepDuration = fadeIn / steps;
-            const volStep = targetVolume / steps;
-            let s = 0;
-            const interval = setInterval(() => {
-              s++;
-              audio.volume = Math.min(targetVolume, audio.volume + volStep);
-              if (s >= steps) { audio.volume = targetVolume; clearInterval(interval); }
-            }, stepDuration);
-          }
-
-          // Stop at endTime if defined
-          if (endTime !== undefined) {
-            const check = setInterval(() => {
-              if (!activeTracks.has(track.id)) { clearInterval(check); return; }
-              if (audio.currentTime >= endTime) {
-                clearInterval(check);
-                audio.pause();
-                activeTracks.delete(track.id);
-              }
-            }, 100);
-          }
-        } catch (err) {
-          console.error("[AudioTrack] Error playing track", track.id, err);
-          activeTracks.delete(track.id);
-        }
-      };
-
-      if (delay > 0) setTimeout(doPlay, delay);
-      else doPlay();
+    // 2. Stop tracks that were entirely deleted from settings
+    activeTracks.forEach((audio, trackId) => {
+      const exists = tracks.some((t) => t.id === trackId);
+      if (!exists) {
+        audio.pause();
+        activeTracks.delete(trackId);
+      }
     });
-
-    // Cleanup: stop all active tracks when the reader leaves read mode or unmounts
-    return () => {
-      // NOTE: we do NOT stop tracks here — we let the "stop trigger" logic
-      // handle it so tracks persist across panel/page changes naturally.
-    };
-  }, [panelIdx, pageIdx, mode, localDialogues.audioTracks, shouldStopTrack, pages]);
+  }, [panelIdx, pageIdx, mode, localDialogues.audioTracks, isPositionInTrackRange, pages]);
 
   // Stop ALL multi-span tracks when leaving read mode
   useEffect(() => {
