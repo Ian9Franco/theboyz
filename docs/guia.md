@@ -188,3 +188,54 @@ window.dispatchEvent(new Event("unlockAllChanged"))
 
 comando para correr el entorno: npm run dev:all
 comando para publicar: npm run publish:all
+
+---
+
+## 🔓 Sistema de Desbloqueo de Personajes (Spoilers)
+
+El sistema de personajes oculta automáticamente la ficha y detalles de un personaje si el usuario no ha completado la lectura del capítulo asociado.
+
+Las reglas de desbloqueo se configuran en el archivo:
+`the-boys/lib/characterData/unlockRules.ts`
+
+### Formato de Regla
+
+El archivo exporta una constante `UNLOCK_RULES` que mapea el `id` de cada personaje (definido en sus respectivos archivos de datos en `lib/characterData/`) a un array de nombres de capítulos que habilitan su desbloqueo:
+
+```typescript
+export const UNLOCK_RULES: Record<string, string[]> = {
+  // Siempre desbloqueado (público desde el inicio)
+  ian: [],
+
+  // Desbloqueado solo cuando el lector termina un capítulo específico
+  kenji: ['Un Lugar'],
+
+  // Nunca desbloqueable directamente (oculto permanentemente hasta futuras sagas)
+  matapobre: ['never-unlocked']
+};
+```
+
+### Cómo agregar un nuevo desbloqueo al final de una saga o episodio
+
+1. **Obtener el ID del Personaje**:
+   Busca el ID del personaje en los archivos de `lib/characterData/` (por ejemplo, `pibes.ts`, `secundarios.ts`, `antagonistas.ts`). Es la propiedad `id` de la ficha del personaje.
+
+2. **Obtener el ID del Capítulo**:
+   Usa el nombre limpio de la carpeta del capítulo como identificador (por ejemplo, para la carpeta `#1 Un Lugar` es `Un Lugar`; para `#2 Kenji` es `Kenji`; para `#4 no-turning-back` es `no-turning-back`).
+   *Nota: La comparación de IDs en el sistema no es sensible a mayúsculas ni espacios, pero se recomienda usar exactamente el nombre limpio del capítulo.*
+
+3. **Configurar la Regla**:
+   Abre `lib/characterData/unlockRules.ts` y actualiza la entrada del personaje.
+   - Si quieres que el personaje se desbloquee al terminar el **Capítulo A**:
+     ```typescript
+     mi_personaje_id: ['Capitulo A']
+     ```
+   - Si quieres que se desbloquee al terminar **cualquiera** de varios capítulos (por ejemplo, el capítulo final de la Saga A o el de la Saga B):
+     ```typescript
+     mi_personaje_id: ['Capitulo A', 'Capitulo B']
+     ```
+
+4. **Cómo funciona bajo el capó**:
+   Cuando un usuario lee un capítulo (por ejemplo, la ruta `/chapters/Un Lugar`), la aplicación Next.js guarda el ID del capítulo leído en el `localStorage` del navegador bajo la clave `read-chapters` (como un array JSON).
+   El componente `CharacterRoster.tsx` consulta este `localStorage` y compara los capítulos leídos con las reglas de `UNLOCK_RULES`. Si el usuario ha leído al menos uno de los capítulos requeridos, el personaje se muestra de inmediato sin el velo de incógnito ("PRÓXIMAMENTE").
+

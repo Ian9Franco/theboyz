@@ -277,7 +277,7 @@ export function CharacterRoster() {
                       transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.05 }}
                       className="relative group bg-[#13131e] flex flex-col cursor-pointer select-none border-4 transition-colors duration-300"
                       style={{ 
-                        borderColor: "white", 
+                        borderColor: "#ffffff", 
                         boxShadow: char.incognito 
                           ? "8px 8px 0 #6b7280" 
                           : `8px 8px 0 ${char.displayColor}, 0 0 15px ${char.displayColor}2b` 
@@ -285,7 +285,7 @@ export function CharacterRoster() {
                       whileHover={{ 
                         scale: 1.03, 
                         rotate: i % 2 === 0 ? 1 : -1, 
-                        borderColor: char.incognito ? "white" : char.displayColor,
+                        borderColor: char.incognito ? "#ffffff" : char.displayColor,
                         boxShadow: char.incognito 
                           ? "12px 12px 0 #6b7280" 
                           : `12px 12px 0 ${char.displayColor}, 0 0 25px ${char.displayColor}55`,

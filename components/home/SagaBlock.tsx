@@ -154,9 +154,7 @@ export function SagaBlock({
                   let isLocked = false;
                   if (isClient && !unlockAll) {
                     if (ci === 0) {
-                      if (prevSaga) {
-                        isLocked = !prevSaga.chapters.every((ch: any) => readChapters.includes(ch.id));
-                      }
+                      isLocked = false; // El capítulo #1 de cada saga siempre está desbloqueado
                     } else {
                       isLocked = !readChapters.includes(saga.chapters[ci - 1].id);
                     }

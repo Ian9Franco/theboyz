@@ -6,6 +6,7 @@ import { DialogueBubble, getBubbleStyles, type DialogueLine } from "./DialogueBu
 import { DialogueEditorPanel } from "./DialogueEditorPanel";
 import { ReaderTopBar } from "./ReaderTopBar";
 import { ReaderAuthModal } from "./ReaderAuthModal";
+import { ReaderInstructionsModal } from "./ReaderInstructionsModal";
 import { useReaderZoom } from "./useReaderZoom";
 import { useDialogueEditor } from "./useDialogueEditor";
 import { ReaderCanvas } from "./ReaderCanvas";
@@ -148,6 +149,7 @@ export function CinematicReader({
   } = useDialogueEditor({ dialogues, chapterId: chapter.id, pageKey: getPageKeyFromUrl(pages[pageIdx]), imgRef });
 
   const [textScale, setTextScale] = useState<number>(1.0);
+  const [showInstructions, setShowInstructions] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -155,8 +157,19 @@ export function CinematicReader({
       if (saved) {
         setTextScale(parseFloat(saved));
       }
+      const hasRead = localStorage.getItem("has_read_instructions") === "true";
+      if (!hasRead) {
+        setShowInstructions(true);
+      }
     }
   }, []);
+
+  const handleCloseInstructions = () => {
+    setShowInstructions(false);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("has_read_instructions", "true");
+    }
+  };
 
   const handleSetTextScale = (scale: number) => {
     setTextScale(scale);
@@ -867,6 +880,8 @@ export function CinematicReader({
         totalPages={pages.length}
         textScale={textScale}
         setTextScale={handleSetTextScale}
+        resetPage={resetPage}
+        onOpenHelp={() => setShowInstructions(true)}
       />
 
       {/* ── Main Workspace split ── */}
@@ -971,6 +986,12 @@ export function CinematicReader({
         authError={authError}
         setAuthError={setAuthError}
         handleAuthSubmit={handleAuthSubmit}
+      />
+
+      {/* ── Instructions Modal ── */}
+      <ReaderInstructionsModal
+        isOpen={showInstructions}
+        onClose={handleCloseInstructions}
       />
     </div>
   );

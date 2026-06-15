@@ -18,6 +18,8 @@ interface ReaderTopBarProps {
   totalPages: number;
   textScale: number;
   setTextScale: (scale: number) => void;
+  resetPage: (idx: number) => void;
+  onOpenHelp: () => void;
 }
 
 /**
@@ -34,8 +36,11 @@ export function ReaderTopBar({
   totalPages,
   textScale,
   setTextScale,
+  resetPage,
+  onOpenHelp,
 }: ReaderTopBarProps) {
   const [showPublish, setShowPublish] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
     <>
@@ -126,12 +131,55 @@ export function ReaderTopBar({
           >
             {mode === "edit" ? "🛠️ Modo Editor" : "📖 Modo Lectura"}
           </button>
-          <div className="font-[var(--font-bangers)] text-[#0a0a0f] text-sm px-3 py-1 border-2 border-[#0a0a0f] bg-zinc-100">
-            Pág {pageIdx + 1} / {totalPages}
+          
+          <div className="relative">
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="font-[var(--font-bangers)] text-[#0a0a0f] text-sm px-3 py-1.5 border-2 border-[#0a0a0f] bg-zinc-100 hover:bg-zinc-200 transition-colors flex items-center gap-1.5 shadow-[2px_2px_0_#0a0a0f] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#0a0a0f]"
+              title="Seleccionar Página"
+            >
+              Pág {pageIdx + 1} / {totalPages} <span className="text-[10px] select-none">▼</span>
+            </button>
+            {isDropdownOpen && (
+              <>
+                <div 
+                  className="fixed inset-0 z-[60]" 
+                  onClick={() => setIsDropdownOpen(false)} 
+                />
+                <div className="absolute right-0 mt-2 w-36 max-h-64 overflow-y-auto bg-white border-2 border-[#0a0a0f] shadow-[4px_4px_0_#0a0a0f] z-[70] py-1 rounded">
+                  {Array.from({ length: totalPages }, (_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => {
+                        resetPage(i);
+                        setIsDropdownOpen(false);
+                      }}
+                      className={`w-full text-left px-3 py-1.5 text-xs font-[var(--font-bangers)] tracking-wide border-b border-zinc-100 last:border-0 transition-colors ${
+                        pageIdx === i
+                          ? "bg-[#0a0a0f] text-white"
+                          : "text-[#0a0a0f] hover:bg-zinc-100"
+                      }`}
+                    >
+                      Pág {i + 1}
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
+
+          <button
+            onClick={onOpenHelp}
+            className="w-8 h-8 flex items-center justify-center bg-white hover:bg-zinc-100 text-[#0a0a0f] border-2 border-[#0a0a0f] font-[var(--font-bangers)] text-sm shadow-[2px_2px_0_#0a0a0f] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#0a0a0f] transition-all"
+            title="Ver Guía de Lectura"
+          >
+            ❓
+          </button>
         </div>
       </div>
       <PublishModal isOpen={showPublish} onClose={() => setShowPublish(false)} />
     </>
   );
 }
+
+

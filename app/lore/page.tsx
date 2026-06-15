@@ -48,7 +48,7 @@ export default function LorePage() {
 
               <div className="bg-[#1a1a25] border-2 border-white/10 p-5 rounded-sm hover:border-[#f5e642] transition-colors">
                 <h3 className="font-[var(--font-bangers)] text-2xl text-[#f5e642] mb-2 tracking-widest">UANDI <span className="text-white/40 text-lg">/ AEGIS</span></h3>
-                <p>Recibió la mayor exposición a la energía. Su cuerpo se convirtió en una batería viviente capaz de absorber y almacenar energía cinética. Desarrolla capacidades avanzadas de resistencia y fuerza devastadora.</p>
+                <p>Recibió la mayor exposición a la energía. Su cuerpo se alteró genéticamente, convirtiéndose en una batería viviente capaz de absorber y almacenar radiacion. Con la capaidad de aumentar su poder a medida que se enoja. Desarrolla capacidades avanzadas de resistencia y fuerza devastadora.</p>
               </div>
 
               <div className="bg-[#1a1a25] border-2 border-white/10 p-5 rounded-sm hover:border-[#f5e642] transition-colors">

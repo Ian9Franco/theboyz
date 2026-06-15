@@ -58,8 +58,8 @@ export default function ChapterPage() {
           return;
         }
 
-        // Lock verification
-        if (data.prevChapter) {
+        // Lock verification (solo si no es el primer capítulo de la saga)
+        if (data.chapterIndex > 0 && data.prevChapter) {
           try {
             const read = localStorage.getItem("read-chapters");
             const readList = read ? JSON.parse(read) : [];

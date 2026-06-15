@@ -1,55 +1,55 @@
 export const UNLOCK_RULES: Record<string, string[]> = {
-  // Los Pibes
+  // Los Pibes (Siempre desbloqueados)
   ian: [],
   jaz: [],
-  julian: ['the-green-truck-chronicles'],
-  mati: ['worlds'],
-  uandi: ['no-turning-back'],
-  volvo: ['worlds'],
-  sofi: ['casino'],
+  julian: [],
+  mati: [],
+  uandi: [],
+  volvo: [],
+  sofi: [],
 
   // Secundarios
-  matapobre: ['worlds'],
-  supertrucker: ['the-green-truck-chronicles'],
-  coleccionista: ['no-turning-back'],
-  rylai: [],
-  bristleback: [],
-  invoker: [],
-  ymir: [],
-  kenji: [],
+  matapobre: ['never-unlocked'],
+  supertrucker: [], // Siempre desbloqueado (supercamionero)
+  coleccionista: [], // Siempre desbloqueado (the tinkerer)
+  rylai: ['never-unlocked'],
+  bristleback: ['never-unlocked'],
+  invoker: ['never-unlocked'],
+  ymir: ['never-unlocked'],
+  kenji: ['Un Lugar'], // Se desbloquea al terminar #1 Un Lugar de Hush: El Silencio del Dragón
 
   // Voughtverse
-  julander: [],
-  volvo_carnicero: [],
-  a_uandi: [],
+  julander: ['never-unlocked'],
+  volvo_carnicero: [], // Siempre desbloqueado (volvo butcher)
+  a_uandi: ['never-unlocked'],
 
   // Consejo de Matis
-  mati_prime: [],
-  gladiador: [],
-  augusto: [],
-  warden: [],
+  mati_prime: ['never-unlocked'],
+  gladiador: ['never-unlocked'],
+  augusto: ['never-unlocked'],
+  warden: ['never-unlocked'],
 
   // Antagonistas
-  don: [],
-  glitch: [],
-  shinjuro: [],
-  balthazar: [],
-  comandante: ['casino'],
+  don: ['never-unlocked'],
+  glitch: ['never-unlocked'],
+  shinjuro: ['Kenji'], // Se desbloquea al terminar #2 Kenji de Hush: El Silencio del Dragón
+  balthazar: ['never-unlocked'],
+  comandante: ['never-unlocked'],
 
   // Entidades
-  krillor: [],
-  balanar: [],
-  lion: [],
-  judge_null: [],
-  malakas: [],
-  terrorblade: [],
+  krillor: ['never-unlocked'],
+  balanar: ['never-unlocked'],
+  lion: ['never-unlocked'],
+  judge_null: ['never-unlocked'],
+  malakas: ['never-unlocked'],
+  terrorblade: ['never-unlocked'],
 
   // Deidades
-  archon: [],
-  azathos: [],
-  lucy: [],
-  mars: [],
+  archon: ['never-unlocked'],
+  azathos: ['never-unlocked'],
+  lucy: ['never-unlocked'],
+  mars: ['never-unlocked'],
 
   // Locaciones
-  dumbo_base: []
+  dumbo_base: [] // Siempre desbloqueada
 };
