@@ -94,8 +94,8 @@ export default function ChapterPage() {
     fetchChapterData();
   }, [id, fetchChapterData]);
 
-  const displayPages = (chapterData?.saga?.cover && chapterData?.pages)
-    ? [chapterData.saga.cover, ...chapterData.pages]
+  const displayPages = (chapterData?.cover && chapterData?.pages)
+    ? [chapterData.cover, ...chapterData.pages]
     : (chapterData?.pages || []);
 
   // Load more pages automatically in Lightbox (vista grande)
@@ -155,6 +155,7 @@ export default function ChapterPage() {
         saga={saga}
         nextChapter={nextChapter}
         prevChapter={prevChapter}
+        cover={chapterData.cover}
       />
     );
   }

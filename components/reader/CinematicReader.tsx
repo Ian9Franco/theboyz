@@ -55,6 +55,7 @@ export function CinematicReader({
   saga,
   nextChapter,
   prevChapter,
+  cover,
 }: {
   pages: string[];
   dialogues: Dialogues | null;
@@ -62,14 +63,15 @@ export function CinematicReader({
   saga: any;
   nextChapter: any;
   prevChapter: any;
+  cover?: string | null;
 }) {
   // Mode selection: "read" or "edit"
   const [mode, setMode] = useState<"read" | "edit">("read");
 
-  // Dynamic pages list: prepends the saga cover in read mode
+  // Dynamic pages list: prepends the episode cover in read mode
   const pages = React.useMemo(() => {
-    return (mode === "read" && saga.cover) ? [saga.cover, ...rawPages] : rawPages;
-  }, [mode, saga.cover, rawPages]);
+    return (mode === "read" && cover) ? [cover, ...rawPages] : rawPages;
+  }, [mode, cover, rawPages]);
 
   // Comic Reader States
   const [pageIdx, setPageIdx] = useState(0);
@@ -177,7 +179,7 @@ export function CinematicReader({
   const prevModeRef = useRef(mode);
   useEffect(() => {
     if (prevModeRef.current !== mode) {
-      if (saga.cover) {
+      if (cover) {
         if (mode === "edit") {
           setPageIdx((prev) => Math.max(0, prev - 1));
         } else if (mode === "read") {
@@ -186,7 +188,7 @@ export function CinematicReader({
       }
       prevModeRef.current = mode;
     }
-  }, [mode, saga.cover]);
+  }, [mode, cover]);
 
   // Keyboard shortcut listener for Ctrl+Z
   useEffect(() => {
