@@ -1,0 +1,587 @@
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
+import type { AudioTrack, AudioTrackStopTrigger, Dialogues } from "./CinematicReader";
+import { getPageKeyFromUrl } from "./readerUtils";
+
+// ─── Types ────────────────────────────────────────────────────────────────────
+
+interface EditorAudioTracksProps {
+  /** Current list of chapter-level audio tracks */
+  audioTracks: AudioTrack[];
+  /** Ordered pages array (same as what CinematicReader receives) */
+  pages: string[];
+  /** Full localDialogues object — used to count panels per page */
+  localDialogues: Dialogues;
+  /** Callback to persist the updated tracks array */
+  onUpdate: (tracks: AudioTrack[]) => void;
+}
+
+type StopTriggerType = "panelEnd" | "panelStart" | "pageStart" | "pageEnd" | "none";
+
+/** Shape of the new-track form state */
+interface TrackFormState {
+  layer: "music" | "sfx";
+  src: string;
+  startPageKey: string;
+  startPanelIdx: number;
+  stopType: StopTriggerType;
+  stopPageKey: string;
+  stopPanelIdx: number;
+  volume: number;
+  playbackRate: number;
+  loop: boolean;
+  fadeIn: number;
+  fadeOut: number;
+  delay: number;
+  startTime: number;
+}
+
+const DEFAULT_FORM: TrackFormState = {
+  layer: "music",
+  src: "",
+  startPageKey: "",
+  startPanelIdx: 0,
+  stopType: "none",
+  stopPageKey: "",
+  stopPanelIdx: 0,
+  volume: 0.8,
+  playbackRate: 1,
+  loop: true,
+  fadeIn: 1000,
+  fadeOut: 1000,
+  delay: 0,
+  startTime: 0,
+};
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+/** Generates a unique ID for a new audio track */
+const genId = () => `track-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+
+/** Builds a stopTrigger object from the form state, or returns undefined if "none" */
+function buildStopTrigger(form: TrackFormState): AudioTrackStopTrigger | undefined {
+  if (form.stopType === "none" || !form.stopPageKey) return undefined;
+  if (form.stopType === "panelStart" || form.stopType === "panelEnd") {
+    return { type: form.stopType, pageKey: form.stopPageKey, panelIdx: form.stopPanelIdx };
+  }
+  return { type: form.stopType, pageKey: form.stopPageKey };
+}
+
+/** Returns a human-readable description of a stop trigger */
+function describeTrigger(trigger?: AudioTrackStopTrigger): string {
+  if (!trigger) return "Nunca (manual / fin del cap.)";
+  switch (trigger.type) {
+    case "panelStart": return `Al llegar a pág ${trigger.pageKey}, viñeta ${trigger.panelIdx + 1}`;
+    case "panelEnd":   return `Al salir de pág ${trigger.pageKey}, viñeta ${trigger.panelIdx + 1}`;
+    case "pageStart":  return `Al comenzar pág ${trigger.pageKey}`;
+    case "pageEnd":    return `Al terminar pág ${trigger.pageKey}`;
+  }
+}
+
+// ─── Component ────────────────────────────────────────────────────────────────
+
+/**
+ * EditorAudioTracks
+ * Manages chapter-level multi-span audio tracks from within the editor sidebar.
+ * Each track can start at a specific panel and stop at any later panel or page boundary.
+ * Music and SFX layers are independent and never interrupt each other.
+ */
+export function EditorAudioTracks({
+  audioTracks,
+  pages,
+  localDialogues,
+  onUpdate,
+}: EditorAudioTracksProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const [form, setForm] = useState<TrackFormState>(DEFAULT_FORM);
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [availableSounds, setAvailableSounds] = useState<Array<{ name: string; path: string }>>([]);
+  const [previewingId, setPreviewingId] = useState<string | null>(null);
+  const previewAudioRef = useRef<HTMLAudioElement | null>(null);
+
+  // Fetch available sounds from the API
+  useEffect(() => {
+    fetch("/api/sounds")
+      .then((r) => r.json())
+      .then(setAvailableSounds)
+      .catch((err) => console.error("Error loading sounds:", err));
+  }, []);
+
+  // Derive ordered page keys from the pages array
+  const pageKeys = pages.map((p) => getPageKeyFromUrl(p)).filter(Boolean) as string[];
+
+  // Count panels for a given pageKey
+  const panelCountForPage = (pageKey: string): number =>
+    localDialogues.pages?.[pageKey]?.panels?.length ?? 0;
+
+  // ─── Preview helpers ───────────────────────────────────────────────────────
+
+  const stopPreview = () => {
+    if (previewAudioRef.current) {
+      previewAudioRef.current.pause();
+      previewAudioRef.current.currentTime = 0;
+    }
+    setPreviewingId(null);
+  };
+
+  const playPreview = (track: AudioTrack) => {
+    stopPreview();
+    const config = track.soundConfig || {};
+    const audio = new Audio(track.src);
+    const volume = config.volume ?? 1;
+    audio.volume = volume * volume;
+    audio.playbackRate = config.playbackRate ?? 1;
+    audio.currentTime = config.startTime ?? 0;
+    previewAudioRef.current = audio;
+    setPreviewingId(track.id);
+    audio.play().catch(console.error);
+    audio.onended = () => setPreviewingId(null);
+  };
+
+  // ─── Form helpers ──────────────────────────────────────────────────────────
+
+  const openNewForm = () => {
+    setForm({
+      ...DEFAULT_FORM,
+      startPageKey: pageKeys[0] ?? "",
+      stopPageKey: pageKeys[0] ?? "",
+    });
+    setEditingId(null);
+    setShowForm(true);
+  };
+
+  const openEditForm = (track: AudioTrack) => {
+    const stopTrigger = track.stopTrigger;
+    let stopType: StopTriggerType = "none";
+    let stopPageKey = pageKeys[0] ?? "";
+    let stopPanelIdx = 0;
+    if (stopTrigger) {
+      stopType = stopTrigger.type;
+      stopPageKey = stopTrigger.pageKey;
+      stopPanelIdx = "panelIdx" in stopTrigger ? stopTrigger.panelIdx : 0;
+    }
+    setForm({
+      layer: track.layer,
+      src: track.src,
+      startPageKey: track.startPageKey,
+      startPanelIdx: track.startPanelIdx,
+      stopType,
+      stopPageKey,
+      stopPanelIdx,
+      volume: track.soundConfig?.volume ?? 0.8,
+      playbackRate: track.soundConfig?.playbackRate ?? 1,
+      loop: track.soundConfig?.loop ?? true,
+      fadeIn: track.soundConfig?.fadeIn ?? 1000,
+      fadeOut: track.soundConfig?.fadeOut ?? 1000,
+      delay: track.soundConfig?.delay ?? 0,
+      startTime: track.soundConfig?.startTime ?? 0,
+    });
+    setEditingId(track.id);
+    setShowForm(true);
+  };
+
+  const handleFormChange = <K extends keyof TrackFormState>(key: K, val: TrackFormState[K]) => {
+    setForm((prev) => ({ ...prev, [key]: val }));
+  };
+
+  const handleSaveTrack = () => {
+    if (!form.src || !form.startPageKey) return;
+
+    const newTrack: AudioTrack = {
+      id: editingId ?? genId(),
+      layer: form.layer,
+      src: form.src,
+      startPageKey: form.startPageKey,
+      startPanelIdx: form.startPanelIdx,
+      stopTrigger: buildStopTrigger(form),
+      soundConfig: {
+        volume: form.volume,
+        playbackRate: form.playbackRate,
+        loop: form.loop,
+        fadeIn: form.fadeIn,
+        fadeOut: form.fadeOut,
+        delay: form.delay > 0 ? form.delay : undefined,
+        startTime: form.startTime > 0 ? form.startTime : undefined,
+      },
+    };
+
+    if (editingId) {
+      onUpdate(audioTracks.map((t) => (t.id === editingId ? newTrack : t)));
+    } else {
+      onUpdate([...audioTracks, newTrack]);
+    }
+    setShowForm(false);
+    setEditingId(null);
+  };
+
+  const handleDeleteTrack = (trackId: string) => {
+    stopPreview();
+    onUpdate(audioTracks.filter((t) => t.id !== trackId));
+  };
+
+  // ─── Render ────────────────────────────────────────────────────────────────
+
+  const needsPanelSelector = form.stopType === "panelStart" || form.stopType === "panelEnd";
+  const stopPanelCount = panelCountForPage(form.stopPageKey);
+
+  return (
+    <div className="border-b-2 border-zinc-200 shrink-0">
+      {/* Accordion Header */}
+      <div className="p-4 flex justify-between items-center">
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex items-center gap-1.5 font-[var(--font-bangers)] text-lg text-zinc-600 tracking-wider hover:text-[#e8185a] transition-colors"
+        >
+          <span>{isOpen ? "▼" : "▶"} Pistas de Audio</span>
+          <span className="text-xs font-mono bg-zinc-200 text-zinc-700 px-1.5 py-0.5 rounded-full">
+            {audioTracks.length}
+          </span>
+        </button>
+        {isOpen && !showForm && (
+          <button
+            type="button"
+            onClick={openNewForm}
+            className="font-[var(--font-bangers)] text-xs bg-blue-500 text-white border border-[#0a0a0f] px-2 py-1 shadow-[1px_1px_0_#0a0a0f] hover:bg-blue-600 transition-colors"
+          >
+            + Nueva Pista
+          </button>
+        )}
+      </div>
+
+      {isOpen && (
+        <div className="px-4 pb-4 flex flex-col gap-3">
+          {/* ── Track List ── */}
+          {audioTracks.length === 0 && !showForm && (
+            <div className="text-sm text-zinc-400 italic text-center py-4 border border-dashed border-zinc-300 rounded">
+              No hay pistas. Usá "+ Nueva Pista" para agregar música o SFX persistente.
+            </div>
+          )}
+
+          {audioTracks.map((track) => {
+            const isPreviewing = previewingId === track.id;
+            const layerColor = track.layer === "music" ? "bg-purple-100 border-purple-300" : "bg-orange-100 border-orange-300";
+            const layerBadge = track.layer === "music"
+              ? "bg-purple-600 text-white"
+              : "bg-orange-500 text-white";
+
+            return (
+              <div key={track.id} className={`border-2 rounded p-3 flex flex-col gap-2 ${layerColor}`}>
+                {/* Track header */}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className={`text-[9px] font-bold uppercase px-1.5 py-0.5 rounded shrink-0 ${layerBadge}`}>
+                      {track.layer === "music" ? "🎵 Music" : "💥 SFX"}
+                    </span>
+                    <span className="text-[10px] font-mono text-zinc-700 truncate">
+                      {track.src.split("/").pop()}
+                    </span>
+                  </div>
+                  <div className="flex gap-1 shrink-0">
+                    <button
+                      type="button"
+                      onClick={() => isPreviewing ? stopPreview() : playPreview(track)}
+                      className={`text-[9px] font-bold px-1.5 py-0.5 rounded border transition-all ${
+                        isPreviewing
+                          ? "bg-green-600 text-white border-green-700"
+                          : "bg-green-100 text-green-700 border-green-300 hover:bg-green-200"
+                      }`}
+                    >
+                      {isPreviewing ? "⏸" : "▶"}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => openEditForm(track)}
+                      className="text-[9px] font-bold px-1.5 py-0.5 rounded border bg-blue-100 text-blue-700 border-blue-300 hover:bg-blue-200 transition-all"
+                    >
+                      ✏️
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleDeleteTrack(track.id)}
+                      className="text-[9px] font-bold px-1.5 py-0.5 rounded border bg-red-100 text-red-600 border-red-300 hover:bg-red-200 transition-all"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                </div>
+
+                {/* Track details */}
+                <div className="flex flex-col gap-0.5">
+                  <div className="flex gap-2 text-[9px] font-mono text-zinc-600">
+                    <span className="bg-white/60 px-1.5 py-0.5 rounded border border-zinc-200">
+                      ▶ Pág {track.startPageKey}, Viñeta {track.startPanelIdx + 1}
+                    </span>
+                    <span className="bg-white/60 px-1.5 py-0.5 rounded border border-zinc-200">
+                      ⏹ {describeTrigger(track.stopTrigger)}
+                    </span>
+                  </div>
+                  <div className="flex gap-2 text-[8px] text-zinc-500 font-mono">
+                    <span>Vol: {Math.round((track.soundConfig?.volume ?? 1) * 100)}%</span>
+                    <span>×{track.soundConfig?.playbackRate ?? 1}</span>
+                    {track.soundConfig?.loop && <span>🔁 Loop</span>}
+                    {(track.soundConfig?.fadeIn ?? 0) > 0 && <span>FI: {track.soundConfig!.fadeIn}ms</span>}
+                    {(track.soundConfig?.fadeOut ?? 0) > 0 && <span>FO: {track.soundConfig!.fadeOut}ms</span>}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+
+          {/* ── New / Edit Form ── */}
+          {showForm && (
+            <div className="border-2 border-blue-400 rounded p-3 bg-blue-50 flex flex-col gap-3">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-bold text-blue-800 uppercase tracking-wider">
+                  {editingId ? "✏️ Editar Pista" : "➕ Nueva Pista"}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => { setShowForm(false); setEditingId(null); }}
+                  className="text-[10px] text-zinc-500 hover:text-zinc-800"
+                >
+                  ✕ Cancelar
+                </button>
+              </div>
+
+              {/* Layer selector */}
+              <div className="flex flex-col gap-1">
+                <label className="text-[9px] font-bold text-zinc-600 uppercase tracking-wider">Capa</label>
+                <div className="flex gap-2">
+                  {(["music", "sfx"] as const).map((l) => (
+                    <button
+                      key={l}
+                      type="button"
+                      onClick={() => handleFormChange("layer", l)}
+                      className={`flex-1 text-[9px] font-bold py-1.5 rounded border transition-all ${
+                        form.layer === l
+                          ? l === "music" ? "bg-purple-600 text-white border-purple-700" : "bg-orange-500 text-white border-orange-600"
+                          : "bg-white text-zinc-500 border-zinc-300 hover:border-zinc-400"
+                      }`}
+                    >
+                      {l === "music" ? "🎵 Música" : "💥 SFX"}
+                    </button>
+                  ))}
+                </div>
+                <p className="text-[8px] text-zinc-400">
+                  {form.layer === "music"
+                    ? "No interrumpe pistas SFX activas."
+                    : "No interrumpe pistas de música activas."}
+                </p>
+              </div>
+
+              {/* Sound selector */}
+              <div className="flex flex-col gap-1">
+                <label className="text-[9px] font-bold text-zinc-600 uppercase tracking-wider">Sonido</label>
+                <select
+                  value={form.src}
+                  onChange={(e) => handleFormChange("src", e.target.value)}
+                  className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                >
+                  <option value="">-- Seleccioná un archivo --</option>
+                  {availableSounds.map((s) => (
+                    <option key={s.path} value={s.path}>{s.name}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Start position */}
+              <div className="border border-zinc-200 rounded p-2 bg-white flex flex-col gap-2">
+                <span className="text-[9px] font-bold text-zinc-600 uppercase tracking-wider">▶ Inicio</span>
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="flex flex-col gap-0.5">
+                    <label className="text-[8px] font-mono text-zinc-500">Página</label>
+                    <select
+                      value={form.startPageKey}
+                      onChange={(e) => handleFormChange("startPageKey", e.target.value)}
+                      className="text-[8px] px-1 py-0.5 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                    >
+                      {pageKeys.map((k) => (
+                        <option key={k} value={k}>Pág {k}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="flex flex-col gap-0.5">
+                    <label className="text-[8px] font-mono text-zinc-500">Viñeta</label>
+                    <select
+                      value={form.startPanelIdx}
+                      onChange={(e) => handleFormChange("startPanelIdx", parseInt(e.target.value))}
+                      className="text-[8px] px-1 py-0.5 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                    >
+                      {Array.from({ length: Math.max(1, panelCountForPage(form.startPageKey)) }, (_, i) => (
+                        <option key={i} value={i}>Viñeta {i + 1}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              {/* Stop trigger */}
+              <div className="border border-zinc-200 rounded p-2 bg-white flex flex-col gap-2">
+                <span className="text-[9px] font-bold text-zinc-600 uppercase tracking-wider">⏹ Stop / Fin</span>
+                <select
+                  value={form.stopType}
+                  onChange={(e) => handleFormChange("stopType", e.target.value as StopTriggerType)}
+                  className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                >
+                  <option value="none">Nunca (manual / fin del capítulo)</option>
+                  <option value="panelEnd">Al salir de una viñeta</option>
+                  <option value="panelStart">Al llegar a una viñeta (antes de reproducirla)</option>
+                  <option value="pageEnd">Al terminar una página</option>
+                  <option value="pageStart">Al comenzar una página</option>
+                </select>
+
+                {form.stopType !== "none" && (
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="flex flex-col gap-0.5">
+                      <label className="text-[8px] font-mono text-zinc-500">Página de stop</label>
+                      <select
+                        value={form.stopPageKey}
+                        onChange={(e) => {
+                          handleFormChange("stopPageKey", e.target.value);
+                          handleFormChange("stopPanelIdx", 0);
+                        }}
+                        className="text-[8px] px-1 py-0.5 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                      >
+                        {pageKeys.map((k) => (
+                          <option key={k} value={k}>Pág {k}</option>
+                        ))}
+                      </select>
+                    </div>
+                    {needsPanelSelector && (
+                      <div className="flex flex-col gap-0.5">
+                        <label className="text-[8px] font-mono text-zinc-500">Viñeta</label>
+                        <select
+                          value={form.stopPanelIdx}
+                          onChange={(e) => handleFormChange("stopPanelIdx", parseInt(e.target.value))}
+                          className="text-[8px] px-1 py-0.5 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                        >
+                          {Array.from({ length: Math.max(1, stopPanelCount) }, (_, i) => (
+                            <option key={i} value={i}>Viñeta {i + 1}</option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              {/* Sound config */}
+              <div className="border border-zinc-200 rounded p-2 bg-white flex flex-col gap-2">
+                <span className="text-[9px] font-bold text-zinc-600 uppercase tracking-wider">⚙️ Configuración</span>
+
+                {/* Volume */}
+                <div className="flex flex-col gap-0.5">
+                  <div className="flex justify-between text-[8px] font-mono text-zinc-500">
+                    <span>Volumen</span>
+                    <span className="font-bold">{Math.round(form.volume * 100)}%</span>
+                  </div>
+                  <input
+                    type="range" min="0" max="1" step="0.05"
+                    value={form.volume}
+                    onChange={(e) => handleFormChange("volume", parseFloat(e.target.value))}
+                    className="w-full accent-blue-500 cursor-pointer h-1.5"
+                  />
+                </div>
+
+                {/* Playback rate */}
+                <div className="flex flex-col gap-0.5">
+                  <div className="flex justify-between text-[8px] font-mono text-zinc-500">
+                    <span>Velocidad</span>
+                    <span className="font-bold">×{form.playbackRate.toFixed(2)}</span>
+                  </div>
+                  <input
+                    type="range" min="0.5" max="2" step="0.05"
+                    value={form.playbackRate}
+                    onChange={(e) => handleFormChange("playbackRate", parseFloat(e.target.value))}
+                    className="w-full accent-blue-500 cursor-pointer h-1.5"
+                  />
+                </div>
+
+                {/* Fade In */}
+                <div className="flex flex-col gap-0.5">
+                  <div className="flex justify-between text-[8px] font-mono text-zinc-500">
+                    <span>Fade In</span>
+                    <span className="font-bold">{form.fadeIn}ms</span>
+                  </div>
+                  <input
+                    type="range" min="0" max="5000" step="100"
+                    value={form.fadeIn}
+                    onChange={(e) => handleFormChange("fadeIn", parseInt(e.target.value))}
+                    className="w-full accent-blue-500 cursor-pointer h-1.5"
+                  />
+                </div>
+
+                {/* Fade Out */}
+                <div className="flex flex-col gap-0.5">
+                  <div className="flex justify-between text-[8px] font-mono text-zinc-500">
+                    <span>Fade Out</span>
+                    <span className="font-bold">{form.fadeOut}ms</span>
+                  </div>
+                  <input
+                    type="range" min="0" max="5000" step="100"
+                    value={form.fadeOut}
+                    onChange={(e) => handleFormChange("fadeOut", parseInt(e.target.value))}
+                    className="w-full accent-blue-500 cursor-pointer h-1.5"
+                  />
+                </div>
+
+                {/* Loop, delay, startTime in a grid */}
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[8px] font-mono text-zinc-500">Loop</span>
+                    <input
+                      type="checkbox"
+                      checked={form.loop}
+                      onChange={(e) => handleFormChange("loop", e.target.checked)}
+                      className="w-3.5 h-3.5 accent-blue-500"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-0.5">
+                    <label className="text-[8px] font-mono text-zinc-500">Delay (ms)</label>
+                    <input
+                      type="number" min="0" step="100"
+                      value={form.delay}
+                      onChange={(e) => handleFormChange("delay", parseInt(e.target.value) || 0)}
+                      className="text-[8px] px-1 py-0.5 border border-zinc-300 rounded font-mono bg-white w-full focus:outline-none focus:ring-1 focus:ring-blue-400"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-0.5">
+                    <label className="text-[8px] font-mono text-zinc-500">Inicio (seg)</label>
+                    <input
+                      type="number" min="0" step="0.5"
+                      value={form.startTime}
+                      onChange={(e) => handleFormChange("startTime", parseFloat(e.target.value) || 0)}
+                      className="text-[8px] px-1 py-0.5 border border-zinc-300 rounded font-mono bg-white w-full focus:outline-none focus:ring-1 focus:ring-blue-400"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Save / Cancel */}
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  onClick={handleSaveTrack}
+                  disabled={!form.src || !form.startPageKey}
+                  className="flex-1 text-[9px] font-bold py-1.5 rounded border bg-blue-600 hover:bg-blue-700 text-white border-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {editingId ? "✓ Guardar cambios" : "✓ Agregar pista"}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => { setShowForm(false); setEditingId(null); }}
+                  className="text-[9px] font-bold px-3 py-1.5 rounded border bg-zinc-100 text-zinc-600 border-zinc-300 hover:bg-zinc-200 transition-all"
+                >
+                  Cancelar
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}

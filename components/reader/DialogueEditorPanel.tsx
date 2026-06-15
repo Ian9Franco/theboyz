@@ -2,9 +2,11 @@
 
 import React, { useState } from "react";
 import type { DialogueLine } from "./DialogueBubble";
+import type { AudioTrack, Dialogues } from "./CinematicReader";
 import { EditorTabSettings } from "./EditorTabSettings";
 import { EditorTabPanels } from "./EditorTabPanels";
 import { EditorTabDialogues } from "./EditorTabDialogues";
+import { EditorAudioTracks } from "./EditorAudioTracks";
 
 export interface PanelConfig {
   focusY: number; // 0 to 1
@@ -40,6 +42,10 @@ export interface DialogueEditorPanelProps {
   activeBubbleIdx: number | null;
   pageIdx: number;
   pagesLength: number;
+  /** Ordered pages array for audio track page selectors */
+  pages: string[];
+  /** Full localDialogues for audio track panel counts */
+  localDialogues: Dialogues;
   isSaving: boolean;
   saveStatus: "success" | "error" | "idle" | null;
   showGrid: boolean;
@@ -62,6 +68,7 @@ export interface DialogueEditorPanelProps {
   handleRemoveBubble: (pIdx: number, bIdx: number) => void;
   handleUpdateBubble: (pIdx: number, bIdx: number, updates: Partial<DialogueLine>) => void;
   handleUpdateSettings: (updates: Partial<ChapterSettings>) => void;
+  handleUpdateAudioTracks: (tracks: AudioTrack[]) => void;
 }
 
 /**
@@ -76,6 +83,8 @@ export function DialogueEditorPanel({
   activeBubbleIdx,
   pageIdx,
   pagesLength,
+  pages,
+  localDialogues,
   isSaving,
   saveStatus,
   showGrid,
@@ -96,6 +105,7 @@ export function DialogueEditorPanel({
   handleRemoveBubble,
   handleUpdateBubble,
   handleUpdateSettings,
+  handleUpdateAudioTracks,
 }: DialogueEditorPanelProps) {
   const [isViñetasOpen, setIsViñetasOpen] = useState(true);
   const [isGlobalSettingsOpen, setIsGlobalSettingsOpen] = useState(false);
@@ -210,6 +220,14 @@ export function DialogueEditorPanel({
         handleRemovePanel={handleRemovePanel}
         handleUpdatePanelParams={handleUpdatePanelParams}
         handleAddBubble={handleAddBubble}
+      />
+
+      {/* Accordion: Chapter-level Audio Tracks */}
+      <EditorAudioTracks
+        audioTracks={localDialogues.audioTracks ?? []}
+        pages={pages}
+        localDialogues={localDialogues}
+        onUpdate={handleUpdateAudioTracks}
       />
 
       {/* Active Dialogue Bubble Settings Panel */}

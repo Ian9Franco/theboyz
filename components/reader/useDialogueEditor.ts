@@ -199,6 +199,18 @@ export function useDialogueEditor({
     }));
   };
 
+  /**
+   * Replaces the entire audioTracks array in localDialogues.
+   * Supports undo like all other state mutations.
+   */
+  const handleUpdateAudioTracks = (tracks: import("./CinematicReader").AudioTrack[]) => {
+    setUndoStack((prev) => [...prev.slice(-49), JSON.parse(JSON.stringify(localDialogues))]);
+    setLocalDialogues((prev) => ({
+      ...prev,
+      audioTracks: tracks,
+    }));
+  };
+
   const handleDragEnd = (info: any, pIdx: number, bIdx: number) => {
     if (!imgRef.current) return;
     const rect = imgRef.current.getBoundingClientRect();
@@ -447,6 +459,7 @@ export function useDialogueEditor({
     handleUpdateBubble,
     handleRemoveBubble,
     handleUpdateSettings,
+    handleUpdateAudioTracks,
     handleDragEnd,
     handleTailTargetDragEnd,
     handlePanelRectDragEnd,

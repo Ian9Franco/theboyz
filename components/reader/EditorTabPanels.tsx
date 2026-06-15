@@ -222,12 +222,13 @@ export function EditorTabPanels({
       fadeOut = 0,
       delay = 0,
     } = config || {};
+    const targetVolume = volume * volume;
 
     const audio = new Audio();
     audio.src = soundPath;
     audio.currentTime = startTime;
     audio.playbackRate = playbackRate;
-    audio.volume = fadeIn > 0 ? 0 : volume;
+    audio.volume = fadeIn > 0 ? 0 : targetVolume;
     previewAudioRef.current = audio;
     setPreviewingSound(soundPath);
 
@@ -242,16 +243,16 @@ export function EditorTabPanels({
         if (fadeIn > 0) {
           const fadeInSteps = 30;
           const stepDuration = fadeIn / fadeInSteps;
-          const volumePerStep = volume / fadeInSteps;
+          const volumePerStep = targetVolume / fadeInSteps;
           let currentStep = 0;
 
           const fadeInInterval = setInterval(() => {
             if (currentStep < fadeInSteps && previewAudioRef.current === audio) {
-              audio.volume = Math.min(volume, audio.volume + volumePerStep);
+              audio.volume = Math.min(targetVolume, audio.volume + volumePerStep);
               currentStep++;
             } else {
               if (previewAudioRef.current === audio) {
-                audio.volume = volume;
+                audio.volume = targetVolume;
               }
               clearInterval(fadeInInterval);
               fadeInIntervalsRef.splice(fadeInIntervalsRef.indexOf(fadeInInterval), 1);
@@ -279,7 +280,7 @@ export function EditorTabPanels({
               const timeUntilEnd = endTime ? endTime - audio.currentTime : audio.duration - audio.currentTime;
               const newVolume = Math.max(
                 0,
-                volume * Math.max(0, timeUntilEnd / (fadeOut / 1000))
+                targetVolume * Math.max(0, timeUntilEnd / (fadeOut / 1000))
               );
               audio.volume = newVolume;
 

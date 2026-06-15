@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { motion } from "framer-motion";
 import { DialogueBubble, getBubbleStyles, type DialogueLine } from "./DialogueBubble";
 import { DialogueEditorPanel } from "./DialogueEditorPanel";
@@ -42,6 +42,45 @@ export type PanelStop = {
   };
 };
 
+/**
+ * Defines when a multi-span audio track should stop playing.
+ * - panelStart: stops as soon as the reader arrives at this panel (before it plays).
+ * - panelEnd: stops when the reader moves past this panel.
+ * - pageStart: stops when the reader arrives at the first panel of this page.
+ * - pageEnd: stops when the reader leaves this page (moves to the next).
+ */
+export type AudioTrackStopTrigger =
+  | { type: "panelStart"; pageKey: string; panelIdx: number }
+  | { type: "panelEnd"; pageKey: string; panelIdx: number }
+  | { type: "pageStart"; pageKey: string }
+  | { type: "pageEnd"; pageKey: string };
+
+/**
+ * A multi-span audio track that can start at any panel and persist across
+ * panels and pages. Tracks belong to independent layers:
+ * - "music": background music — never interrupted by sfx tracks.
+ * - "sfx": sound effects — never interrupted by music tracks.
+ *   Multiple sfx tracks CAN overlap (each is an independent audio element).
+ */
+export type AudioTrack = {
+  id: string;
+  layer: "music" | "sfx";
+  src: string;
+  startPageKey: string;
+  startPanelIdx: number;
+  stopTrigger?: AudioTrackStopTrigger;
+  soundConfig?: {
+    volume?: number;       // 0–1, default 1
+    playbackRate?: number; // 0.5–2, default 1
+    loop?: boolean;        // default false
+    fadeIn?: number;       // fade-in duration in ms
+    fadeOut?: number;      // fade-out duration in ms
+    delay?: number;        // delay before playing in ms
+    startTime?: number;    // seek to this offset when starting
+    endTime?: number;      // stop at this timestamp (seconds)
+  };
+};
+
 export type ChapterSettings = {
   clearReadDialogues?: boolean;
   appearanceAnimation?: "spring" | "fade" | "slide" | "zoom";
@@ -55,6 +94,7 @@ export type PageData = {
 
 export type Dialogues = {
   settings?: ChapterSettings;
+  audioTracks?: AudioTrack[];
   pages?: Record<string, PageData>;
 };
 
@@ -128,6 +168,8 @@ export function CinematicReader({
   } = useReaderZoom({ containerSize, containerRef });
   const imgRef = useRef<HTMLImageElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
+  // Map of active multi-span audio tracks keyed by track.id
+  const activeTracksRef = useRef<Map<string, HTMLAudioElement>>(new Map());
 
   const {
     localDialogues,
@@ -152,6 +194,7 @@ export function CinematicReader({
     handleUpdateBubble,
     handleRemoveBubble,
     handleUpdateSettings,
+    handleUpdateAudioTracks,
     handleDragEnd,
     handleTailTargetDragEnd,
     handlePanelRectDragEnd,
@@ -392,10 +435,11 @@ export function CinematicReader({
       } = config;
       const soundStartTime = activePanel.soundStartTime || 0;
       const soundEndTime = activePanel.soundEndTime || undefined;
+      const targetVolume = volume * volume;
 
       audio.src = activePanel.sound!;
       audio.currentTime = soundStartTime;
-      audio.volume = 0; // Start at 0 if fadeIn is set, else set to volume
+      audio.volume = 0; // Start at 0 if fadeIn is set, else set to targetVolume
       audio.playbackRate = playbackRate;
       audio.loop = loop;
 
@@ -425,20 +469,20 @@ export function CinematicReader({
           if (fadeIn > 0) {
             const fadeInSteps = 50;
             const stepDuration = fadeIn / fadeInSteps;
-            const volumePerStep = volume / fadeInSteps;
+            const volumePerStep = targetVolume / fadeInSteps;
             let currentStep = 0;
 
             const fadeInInterval = setInterval(() => {
               if (currentStep < fadeInSteps) {
-                audio.volume = Math.min(volume, audio.volume + volumePerStep);
+                audio.volume = Math.min(targetVolume, audio.volume + volumePerStep);
                 currentStep++;
               } else {
-                audio.volume = volume;
+                audio.volume = targetVolume;
                 clearInterval(fadeInInterval);
               }
             }, stepDuration);
           } else {
-            audio.volume = volume;
+            audio.volume = targetVolume;
           }
 
           // Fade out effect (before audio ends based on duration config)
@@ -479,6 +523,193 @@ export function CinematicReader({
 
     playAudio();
   }, [panelIdx, pageIdx, mode, activePanel?.sound, activePanel?.soundConfig, activePanel?.soundStartTime, activePanel?.soundEndTime]);
+
+  // ─── Multi-span Audio Track Engine ───────────────────────────────────────
+
+  /**
+   * Build a stable page-key → numeric order map so we can compare
+   * "is page A before / after page B" without assuming numeric pageKeys.
+   */
+  const pageKeyOrder = useMemo(() => {
+    const map = new Map<string, number>();
+    pages.forEach((p, i) => {
+      const key = getPageKeyFromUrl(p);
+      if (key) map.set(key, i);
+    });
+    return map;
+  }, [pages]);
+
+  /**
+   * Returns true if `keyA` comes strictly after `keyB` in the pages array.
+   */
+  const isPageAfter = useCallback(
+    (keyA: string, keyB: string) =>
+      (pageKeyOrder.get(keyA) ?? 0) > (pageKeyOrder.get(keyB) ?? 0),
+    [pageKeyOrder]
+  );
+
+  /**
+   * Determines whether a running track should stop at the current reader position.
+   */
+  const shouldStopTrack = useCallback(
+    (track: AudioTrack, currentPageKey: string, currentPanelIdx: number): boolean => {
+      if (!track.stopTrigger) return false;
+      const t = track.stopTrigger;
+      switch (t.type) {
+        case "panelStart":
+          // Stop the moment the reader arrives at this exact panel
+          return currentPageKey === t.pageKey && currentPanelIdx === t.panelIdx;
+        case "panelEnd":
+          // Stop when the reader has moved past this panel (next panel or next page)
+          if (currentPageKey === t.pageKey) return currentPanelIdx > t.panelIdx;
+          return isPageAfter(currentPageKey, t.pageKey);
+        case "pageStart":
+          // Stop as soon as the reader enters this page (first panel)
+          return currentPageKey === t.pageKey;
+        case "pageEnd":
+          // Stop when the reader has moved past this page
+          return isPageAfter(currentPageKey, t.pageKey);
+        default:
+          return false;
+      }
+    },
+    [isPageAfter]
+  );
+
+  /** Fades out a playing HTMLAudioElement over `durationMs` milliseconds then pauses it. */
+  const fadeOutAndStop = (audio: HTMLAudioElement, durationMs: number) => {
+    if (durationMs <= 0) {
+      audio.pause();
+      audio.currentTime = 0;
+      return;
+    }
+    const steps = 40;
+    const stepDuration = durationMs / steps;
+    const startVol = audio.volume;
+    let step = 0;
+    const interval = setInterval(() => {
+      step++;
+      audio.volume = Math.max(0, startVol * (1 - step / steps));
+      if (step >= steps || audio.volume <= 0) {
+        clearInterval(interval);
+        audio.pause();
+        audio.currentTime = 0;
+        audio.volume = startVol;
+      }
+    }, stepDuration);
+  };
+
+  /**
+   * Main multi-track playback effect.
+   * Fires on every panel/page change and on track list changes.
+   * - Stops any active tracks whose stopTrigger matches the current position.
+   * - Starts any tracks whose startPageKey/startPanelIdx matches the current position.
+   * Layers (music/sfx) are fully independent: a new sfx track does NOT stop music and vice versa.
+   */
+  useEffect(() => {
+    if (mode !== "read") return;
+    const tracks = localDialogues.audioTracks || [];
+    if (tracks.length === 0) return;
+
+    const currentPageKey = getPageKeyFromUrl(pages[pageIdx]) || "";
+    const activeTracks = activeTracksRef.current;
+
+    // 1. Stop tracks that have reached their stop trigger
+    activeTracks.forEach((audio, trackId) => {
+      const track = tracks.find((t) => t.id === trackId);
+      if (!track) {
+        // Track was removed from config entirely — stop immediately
+        audio.pause();
+        activeTracks.delete(trackId);
+        return;
+      }
+      if (shouldStopTrack(track, currentPageKey, panelIdx)) {
+        const fadeOut = track.soundConfig?.fadeOut ?? 0;
+        fadeOutAndStop(audio, fadeOut);
+        activeTracks.delete(trackId);
+      }
+    });
+
+    // 2. Start tracks that begin at this exact position
+    tracks.forEach((track) => {
+      // Already playing
+      if (activeTracks.has(track.id)) return;
+      // Not the right position yet
+      if (track.startPageKey !== currentPageKey || track.startPanelIdx !== panelIdx) return;
+
+      const config = track.soundConfig || {};
+      const {
+        volume = 1,
+        playbackRate = 1,
+        loop = false,
+        fadeIn = 0,
+        delay = 0,
+        startTime = 0,
+        endTime,
+      } = config;
+      const targetVolume = volume * volume;
+
+      const audio = new Audio(track.src);
+      audio.currentTime = startTime;
+      audio.playbackRate = playbackRate;
+      audio.loop = loop;
+      audio.volume = fadeIn > 0 ? 0 : targetVolume;
+      activeTracks.set(track.id, audio);
+
+      const doPlay = () => {
+        try {
+          audio.play();
+
+          // Fade-in effect
+          if (fadeIn > 0) {
+            const steps = 40;
+            const stepDuration = fadeIn / steps;
+            const volStep = targetVolume / steps;
+            let s = 0;
+            const interval = setInterval(() => {
+              s++;
+              audio.volume = Math.min(targetVolume, audio.volume + volStep);
+              if (s >= steps) { audio.volume = targetVolume; clearInterval(interval); }
+            }, stepDuration);
+          }
+
+          // Stop at endTime if defined
+          if (endTime !== undefined) {
+            const check = setInterval(() => {
+              if (!activeTracks.has(track.id)) { clearInterval(check); return; }
+              if (audio.currentTime >= endTime) {
+                clearInterval(check);
+                audio.pause();
+                activeTracks.delete(track.id);
+              }
+            }, 100);
+          }
+        } catch (err) {
+          console.error("[AudioTrack] Error playing track", track.id, err);
+          activeTracks.delete(track.id);
+        }
+      };
+
+      if (delay > 0) setTimeout(doPlay, delay);
+      else doPlay();
+    });
+
+    // Cleanup: stop all active tracks when the reader leaves read mode or unmounts
+    return () => {
+      // NOTE: we do NOT stop tracks here — we let the "stop trigger" logic
+      // handle it so tracks persist across panel/page changes naturally.
+    };
+  }, [panelIdx, pageIdx, mode, localDialogues.audioTracks, shouldStopTrack, pages]);
+
+  // Stop ALL multi-span tracks when leaving read mode
+  useEffect(() => {
+    if (mode === "read") return;
+    activeTracksRef.current.forEach((audio) => {
+      audio.pause();
+      audio.currentTime = 0;
+    });
+    activeTracksRef.current.clear();
+  }, [mode]);
 
   // Calculate layout dimensions
   let imgWidth = 0;
@@ -1085,6 +1316,8 @@ export function CinematicReader({
           activeBubbleIdx={activeBubbleIdx}
           pageIdx={pageIdx}
           pagesLength={pages.length}
+          pages={pages}
+          localDialogues={localDialogues}
           isSaving={isSaving}
           saveStatus={saveStatus}
           showGrid={showGrid}
@@ -1105,6 +1338,7 @@ export function CinematicReader({
           handleRemoveBubble={handleRemoveBubble}
           handleUpdateBubble={handleUpdateBubble}
           handleUpdateSettings={handleUpdateSettings}
+          handleUpdateAudioTracks={handleUpdateAudioTracks}
         />
       </div>
 

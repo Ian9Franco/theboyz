@@ -414,10 +414,14 @@
     "15": {
       "panels": [
         {
-          "focusY": 0.3,
+          "focusY": 0.14,
           "dialogue": [
             { "text": "¡¡¡Oi!!! ¡¡¡Kore wa nanda!!!", "size": "small", "posX": 45, "posY": 20, "tailX": 105, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "#ff0000", "customColor": "#000000", "fontFamily": "bungee" }
-          ]
+          ],
+          "sound": "/sounds/universfield-glass-bottle-smash-03-229205.mp3",
+          "soundConfig": {
+            "volume": 0.35
+          }
         },
         {
           "focusY": 0.45,
@@ -757,25 +761,32 @@
     "27": {
       "panels": [
         {
-          "focusY": 0.3,
+          "focusY": 0.2,
           "dialogue": [
             { "text": "Me dijeron que el Clan Kurogane controla toda la ciudad. Que son despiadados. Que nadie puede seguirlos en las sombras.", "style": "whisper", "size": "small", "posX": 80, "posY": 0, "tailX": 40, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 270, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 28 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 28, "w": 100, "h": 18 }
+          ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [
+            { "text": "perdonenme..", "size": "small", "posX": 90, "posY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 270, "fontSize": 11, "borderRadius": 0, "customBg": "#f5e642", "customColor": "#000000", "tail": "none" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 42, "w": 100, "h": 36 }
+          ]
         },
         {
-          "focusY": 0.6,
-          "dialogue": []
-        },
-        {
-          "focusY": 0.7,
+          "focusY": 0.8,
           "dialogue": [],
           "zoomRects": [
             { "x": 0, "y": 75, "w": 100, "h": 25 }
@@ -931,5 +942,25 @@
   },
   "settings": {
     "dialogueDepth": 2
-  }
+  },
+  "audioTracks": [
+    {
+      "id": "track-1781558225781-taa9w",
+      "layer": "music",
+      "src": "/sounds/DRAKE - FAMILY MATTERS (INSTRUMENTAL) FULL [Kendrick Diss].mp3",
+      "startPageKey": "27",
+      "startPanelIdx": 2,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "30"
+      },
+      "soundConfig": {
+        "volume": 0.25,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 2200,
+        "fadeOut": 2200
+      }
+    }
+  ]
 }
