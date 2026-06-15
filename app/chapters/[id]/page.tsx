@@ -94,13 +94,17 @@ export default function ChapterPage() {
     fetchChapterData();
   }, [id, fetchChapterData]);
 
+  const displayPages = (chapterData?.saga?.cover && chapterData?.pages)
+    ? [chapterData.saga.cover, ...chapterData.pages]
+    : (chapterData?.pages || []);
+
   // Load more pages automatically in Lightbox (vista grande)
   useEffect(() => {
-    if (lightboxIndex !== null && lightboxIndex >= visiblePagesCount && chapterData?.pages) {
+    if (lightboxIndex !== null && lightboxIndex >= visiblePagesCount && displayPages) {
       const nextBatch = Math.ceil((lightboxIndex + 1) / 3) * 3;
-      setVisiblePagesCount(Math.min(chapterData.pages.length, nextBatch));
+      setVisiblePagesCount(Math.min(displayPages.length, nextBatch));
     }
-  }, [lightboxIndex, chapterData?.pages, visiblePagesCount]);
+  }, [lightboxIndex, displayPages, visiblePagesCount]);
 
   if (!mounted) return null;
 
@@ -268,14 +272,14 @@ export default function ChapterPage() {
 
       {/* Lightbox */}
       <AnimatePresence>
-        {lightboxIndex !== null && pages.length > 0 && (
+        {lightboxIndex !== null && displayPages.length > 0 && (
           <ReaderLightbox 
-            src={getComicPageUrl(pages[lightboxIndex])} 
+            src={getComicPageUrl(displayPages[lightboxIndex])} 
             alt={`${chapter.title} — Página ${lightboxIndex + 1}`} 
             onClose={() => setLightboxIndex(null)}
             onNext={() => setLightboxIndex(lightboxIndex + 1)}
             onPrev={() => setLightboxIndex(lightboxIndex - 1)}
-            hasNext={lightboxIndex < pages.length - 1}
+            hasNext={lightboxIndex < displayPages.length - 1}
             hasPrev={lightboxIndex > 0}
           />
         )}
@@ -313,21 +317,21 @@ export default function ChapterPage() {
       </div>
 
       {/* ── Page count banner ── */}
-      {pages.length > 0 && (
+      {displayPages.length > 0 && (
         <div className="py-2.5 px-4 text-center" style={{ background: "#e8185a" }}>
           <span className="font-[var(--font-bangers)] text-white text-lg tracking-[0.2em]">
-            {pages.length} páginas — click en cualquier imagen para hacer zoom
+            {displayPages.length} páginas — click en cualquier imagen para hacer zoom
           </span>
         </div>
       )}
 
       {/* ── Content ── */}
       <div className="max-w-2xl mx-auto px-0 sm:px-6 py-4 sm:py-10">
-        {pages.length === 0 && <EmptyState chapterTitle={chapter.title} sagaColor={saga.color} />}
+        {displayPages.length === 0 && <EmptyState chapterTitle={chapter.title} sagaColor={saga.color} />}
 
-        {pages.length > 0 && (
+        {displayPages.length > 0 && (
           <div className="flex flex-col gap-0 sm:gap-4">
-            {pages.slice(0, visiblePagesCount).map((src: string, i: number) => (
+            {displayPages.slice(0, visiblePagesCount).map((src: string, i: number) => (
               <motion.div
                 key={src}
                 initial={{ opacity: 0, y: 20 }}
@@ -369,7 +373,7 @@ export default function ChapterPage() {
         )}
 
         {/* Load More Sentinel */}
-        {pages.length > visiblePagesCount && (
+        {displayPages.length > visiblePagesCount && (
           <div ref={observerRef} className="h-10 w-full" />
         )}
 

@@ -49,7 +49,7 @@ export type Dialogues = {
 // ─── Constants ───────────────────────────────────────────────────────────────
 
 export function CinematicReader({
-  pages,
+  pages: rawPages,
   dialogues,
   chapter,
   saga,
@@ -65,6 +65,11 @@ export function CinematicReader({
 }) {
   // Mode selection: "read" or "edit"
   const [mode, setMode] = useState<"read" | "edit">("read");
+
+  // Dynamic pages list: prepends the saga cover in read mode
+  const pages = React.useMemo(() => {
+    return (mode === "read" && saga.cover) ? [saga.cover, ...rawPages] : rawPages;
+  }, [mode, saga.cover, rawPages]);
 
   // Comic Reader States
   const [pageIdx, setPageIdx] = useState(0);
@@ -167,6 +172,21 @@ export function CinematicReader({
       }
     }
   }, []);
+
+  // Adjust pageIdx when mode toggles between read (cover prepended) and edit (no cover)
+  const prevModeRef = useRef(mode);
+  useEffect(() => {
+    if (prevModeRef.current !== mode) {
+      if (saga.cover) {
+        if (mode === "edit") {
+          setPageIdx((prev) => Math.max(0, prev - 1));
+        } else if (mode === "read") {
+          setPageIdx((prev) => prev + 1);
+        }
+      }
+      prevModeRef.current = mode;
+    }
+  }, [mode, saga.cover]);
 
   // Keyboard shortcut listener for Ctrl+Z
   useEffect(() => {
@@ -430,7 +450,11 @@ export function CinematicReader({
     }
 
     if (currentPanels.length === 0) {
-      setZoomedOut(true);
+      if (pageIdx < pages.length - 1) {
+        resetPage(pageIdx + 1);
+      } else {
+        setZoomedOut(true);
+      }
       return;
     }
 

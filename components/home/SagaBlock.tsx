@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getComicPageUrl } from "@/components/reader/readerUtils";
+import { ImageLightbox } from "./CharacterModal/ImageLightbox";
 
 function getTextColor(hexColor: string) {
   if (!hexColor) return "white";
@@ -21,6 +22,7 @@ export function SagaBlock({ saga, index, prevSaga }: { saga: any; index: number;
   const [isClient, setIsClient] = useState(false);
   const [unlockAll, setUnlockAll] = useState(false);
   const [showChapters, setShowChapters] = useState(false);
+  const [showLightbox, setShowLightbox] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -60,8 +62,9 @@ export function SagaBlock({ saga, index, prevSaga }: { saga: any; index: number;
       <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 sm:gap-12 relative z-10">
         {saga.cover && (
           <div 
-            className="relative shrink-0 w-64 sm:w-80 aspect-[3/4] border-4 border-[#0a0a0f] overflow-hidden rounded bg-zinc-900 shadow-[8px_8px_0_rgba(10,10,15,1)] group"
+            className="relative shrink-0 w-64 sm:w-80 aspect-[3/4] border-4 border-[#0a0a0f] overflow-hidden rounded bg-zinc-900 shadow-[8px_8px_0_rgba(10,10,15,1)] group cursor-zoom-in"
             style={{ transform: isEven ? "rotate(-1.5deg)" : "rotate(1.5deg)" }}
+            onClick={() => setShowLightbox(true)}
           >
             <img 
               src={getComicPageUrl(saga.cover)} 
@@ -165,6 +168,16 @@ export function SagaBlock({ saga, index, prevSaga }: { saga: any; index: number;
               </div>
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {showLightbox && saga.cover && (
+          <ImageLightbox
+            src={getComicPageUrl(saga.cover)}
+            alt={`Portada de la saga ${saga.title}`}
+            onClose={() => setShowLightbox(false)}
+          />
         )}
       </AnimatePresence>
     </div>
