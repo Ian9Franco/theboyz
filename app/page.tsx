@@ -1,15 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import { HeroSection } from "@/components/home/HeroSection";
 import { NewsTicker } from "@/components/home/NewsTicker";
 import { SagaBlock } from "@/components/home/SagaBlock";
 import { CharacterRoster } from "@/components/home/CharacterRoster";
+import { ImageLightbox } from "@/components/home/CharacterModal/ImageLightbox";
 
 export default function Home() {
   const [sagasList, setSagasList] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [showClassic, setShowClassic] = useState(false);
+  const [lightboxSaga, setLightboxSaga] = useState<{ url: string; title: string } | null>(null);
 
   useEffect(() => {
     const load = () => {
@@ -75,6 +78,7 @@ export default function Home() {
                           saga={saga}
                           index={fullIndex}
                           prevSaga={prevSaga}
+                          onCoverClick={(url) => setLightboxSaga({ url, title: saga.title })}
                         />
                       );
                     })}
@@ -113,6 +117,7 @@ export default function Home() {
                             saga={saga}
                             index={fullIndex}
                             prevSaga={prevSaga}
+                            onCoverClick={(url) => setLightboxSaga({ url, title: saga.title })}
                           />
                         );
                       })}
@@ -125,6 +130,16 @@ export default function Home() {
         </div>
       </section>
       <CharacterRoster />
+
+      <AnimatePresence>
+        {lightboxSaga && (
+          <ImageLightbox
+            src={lightboxSaga.url}
+            alt={`Portada de la saga ${lightboxSaga.title}`}
+            onClose={() => setLightboxSaga(null)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
