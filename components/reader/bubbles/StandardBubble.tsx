@@ -12,6 +12,7 @@ interface StandardBubbleProps {
   appearanceAnimation?: "spring" | "fade" | "slide" | "zoom";
   fadeOutAnimation?: "fade" | "slide" | "zoom";
   depth?: number;
+  textScale?: number;
 }
 
 const SPEAKER_COLORS: Record<string, string> = {
@@ -21,8 +22,9 @@ const SPEAKER_COLORS: Record<string, string> = {
   jaz: "#eab308",
   julian: "#3b82f6",
   mati: "#a855f7",
-  volvo: "#f97316",
+volvo: "#f97316",
 };
+
 
 function getSpeakerColor(speaker: string | null | undefined, defaultColor: string) {
   if (!speaker) return defaultColor;
@@ -112,6 +114,7 @@ export function StandardBubble({
   appearanceAnimation,
   fadeOutAnimation,
   depth,
+  textScale = 1.0,
 }: StandardBubbleProps) {
   const style = line.style ?? "normal";
   const tailDir = line.tail ?? "bottom-left";
@@ -266,7 +269,17 @@ export function StandardBubble({
     boxShadow: shadowStyle,
     borderRadius: line.borderRadius !== undefined ? `${line.borderRadius}px` : undefined,
   };
-  if (line.fontSize) bubbleStyles.fontSize = `${line.fontSize}px`;
+
+  // Determine base font size for scaling
+  let baseFontSize = line.fontSize;
+  if (!baseFontSize) {
+    if (style === "sfx") {
+      baseFontSize = size === "small" ? 18 : size === "large" ? 48 : 32;
+    } else {
+      baseFontSize = size === "small" ? 12 : size === "large" ? 18 : 14;
+    }
+  }
+  bubbleStyles.fontSize = `${baseFontSize * textScale}px`;
   if (line.width) bubbleStyles.maxWidth = `${line.width}px`;
   if (line.textColor) bubbleStyles.color = line.textColor;
   if (customFontFamily) bubbleStyles.fontFamily = customFontFamily;

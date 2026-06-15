@@ -167,3 +167,14 @@ export function getComicPageUrl(relativePath: string | null | undefined): string
   }
   return relativePath;
 }
+
+/**
+ * Extrae la clave de página a partir de la URL (ej. "/comics/saga/chapter/12.webp" -> "12")
+ */
+export function getPageKeyFromUrl(url: string | undefined): string {
+  if (!url) return "1";
+  const parts = url.split('/');
+  const filename = parts[parts.length - 1]; // "12.webp"
+  const basename = filename.split('.')[0];  // "12"
+  return basename;
+}

@@ -69,6 +69,7 @@ export function DialogueBubble({
   appearanceAnimation,
   fadeOutAnimation,
   depth,
+  textScale = 1.0,
 }: {
   line: DialogueLine;
   index: number;
@@ -77,6 +78,7 @@ export function DialogueBubble({
   appearanceAnimation?: "spring" | "fade" | "slide" | "zoom";
   fadeOutAnimation?: "fade" | "slide" | "zoom";
   depth?: number;
+  textScale?: number;
 }) {
   const style = line.style ?? "normal";
 
@@ -89,6 +91,7 @@ export function DialogueBubble({
         appearanceAnimation={appearanceAnimation}
         fadeOutAnimation={fadeOutAnimation}
         depth={depth}
+        textScale={textScale}
       />
     );
   }
@@ -103,6 +106,7 @@ export function DialogueBubble({
         appearanceAnimation={appearanceAnimation}
         fadeOutAnimation={fadeOutAnimation}
         depth={depth}
+        textScale={textScale}
       />
     );
   }
@@ -116,6 +120,7 @@ export function DialogueBubble({
       appearanceAnimation={appearanceAnimation}
       fadeOutAnimation={fadeOutAnimation}
       depth={depth}
+      textScale={textScale}
     />
   );
 }

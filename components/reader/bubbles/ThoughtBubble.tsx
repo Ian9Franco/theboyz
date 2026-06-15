@@ -12,6 +12,7 @@ interface ThoughtBubbleProps {
   appearanceAnimation?: "spring" | "fade" | "slide" | "zoom";
   fadeOutAnimation?: "fade" | "slide" | "zoom";
   depth?: number;
+  textScale?: number;
 }
 
 const SPEAKER_COLORS: Record<string, string> = {
@@ -55,6 +56,7 @@ export function ThoughtBubble({
   appearanceAnimation,
   fadeOutAnimation,
   depth,
+  textScale = 1.0,
 }: ThoughtBubbleProps) {
   const tailDir = line.tail ?? "bottom-left";
   const paragraphs = parseParagraphs(line.text);
@@ -153,7 +155,11 @@ export function ThoughtBubble({
     border: "none",
     boxShadow: "none",
   };
-  if (line.fontSize) thoughtStyles.fontSize = `${line.fontSize}px`;
+  let baseFontSize = line.fontSize;
+  if (!baseFontSize) {
+    baseFontSize = size === "small" ? 12 : size === "large" ? 18 : 14;
+  }
+  thoughtStyles.fontSize = `${baseFontSize * textScale}px`;
   if (line.width) thoughtStyles.maxWidth = `${line.width}px`;
   if (line.textColor) thoughtStyles.color = line.textColor;
   if (customFontFamily) thoughtStyles.fontFamily = customFontFamily;

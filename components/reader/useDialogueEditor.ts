@@ -7,7 +7,7 @@ import type { Dialogues, PageData, PanelStop as PanelConfig, ChapterSettings } f
 interface UseDialogueEditorProps {
   dialogues: Dialogues | null;
   chapterId: string;
-  pageIdx: number;
+  pageKey: string;
   imgRef: React.RefObject<HTMLImageElement | null>;
 }
 
@@ -20,7 +20,7 @@ interface UseDialogueEditorProps {
 export function useDialogueEditor({
   dialogues,
   chapterId,
-  pageIdx,
+  pageKey,
   imgRef,
 }: UseDialogueEditorProps) {
   // Dialogues Local Copy for Editing
@@ -56,12 +56,19 @@ export function useDialogueEditor({
     setActiveBubbleIdx(null);
   }, [undoStack, localDialogues]);
 
-  const pgKey = String(pageIdx + 1);
+  const pgKey = pageKey;
   const currentPageData = localDialogues.pages?.[pgKey] || { panels: [] };
 
   const updateDialoguesState = (newPages: Record<string, PageData>) => {
     // Save snapshot before mutating
     setUndoStack((prev) => [...prev.slice(-49), JSON.parse(JSON.stringify(localDialogues))]);
+    setLocalDialogues((prev) => ({
+      ...prev,
+      pages: newPages,
+    }));
+  };
+
+  const updateDialoguesStateNoUndo = (newPages: Record<string, PageData>) => {
     setLocalDialogues((prev) => ({
       ...prev,
       pages: newPages,
@@ -195,6 +202,7 @@ export function useDialogueEditor({
   const handleDragEnd = (info: any, pIdx: number, bIdx: number) => {
     if (!imgRef.current) return;
     const rect = imgRef.current.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return;
 
     // Convert absolute screen coordinate to image relative percentage
     let relativeX = ((info.point.x - rect.left) / rect.width) * 100;
@@ -215,6 +223,7 @@ export function useDialogueEditor({
   const handleTailTargetDragEnd = (info: any, pIdx: number, bIdx: number) => {
     if (!imgRef.current) return;
     const rect = imgRef.current.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return;
 
     // Convert absolute screen coordinate to image relative percentage
     let relativeX = ((info.point.x - rect.left) / rect.width) * 100;
@@ -230,6 +239,60 @@ export function useDialogueEditor({
       tailX: Math.max(-20, Math.min(120, Math.round(relativeX))),
       tailY: Math.max(-20, Math.min(120, Math.round(relativeY))),
     });
+  };
+
+  const handlePanelRectDragEnd = (info: any, pIdx: number, rIdx: number) => {
+    if (!imgRef.current) return;
+    const rect = imgRef.current.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return;
+
+    const deltaXPercent = (info.offset.x / rect.width) * 100;
+    const deltaYPercent = (info.offset.y / rect.height) * 100;
+
+    const pg = localDialogues.pages?.[pageKey] || { panels: [] };
+    const panelsCopy = [...(pg.panels || [])];
+    const targetPanel = { ...panelsCopy[pIdx] };
+    const rects = targetPanel.zoomRects ? [...targetPanel.zoomRects] : targetPanel.zoomRect ? [{...targetPanel.zoomRect}] : [];
+    
+    if (rects[rIdx]) {
+      let newX = rects[rIdx].x + deltaXPercent;
+      let newY = rects[rIdx].y + deltaYPercent;
+
+      if (snapToGrid) {
+        newX = Math.round(newX / gridSize) * gridSize;
+        newY = Math.round(newY / gridSize) * gridSize;
+      } else {
+        newX = Math.round(newX);
+        newY = Math.round(newY);
+      }
+
+      rects[rIdx] = { ...rects[rIdx], x: newX, y: newY };
+      handleUpdatePanelParams(pIdx, { zoomRects: rects, zoomRect: undefined });
+    }
+  };
+
+  const handleFocusYDragEnd = (info: any, pIdx: number) => {
+    if (!imgRef.current) return;
+    const rect = imgRef.current.getBoundingClientRect();
+    if (rect.height <= 0) return;
+
+    const deltaYPercent = (info.offset.y / rect.height) * 100;
+
+    const pg = localDialogues.pages?.[pageKey] || { panels: [] };
+    const panelsCopy = [...(pg.panels || [])];
+    const targetPanel = { ...panelsCopy[pIdx] };
+    
+    let newFocusY = (targetPanel.focusY * 100) + deltaYPercent;
+
+    if (snapToGrid) {
+      newFocusY = Math.round(newFocusY / gridSize) * gridSize;
+    } else {
+      newFocusY = Math.round(newFocusY);
+    }
+
+    newFocusY = Math.max(0, Math.min(100, newFocusY)) / 100;
+
+    handleUpdatePanelParams(pIdx, { focusY: newFocusY });
   };
 
   // Save changes to disk using our API endpoint
@@ -260,6 +323,106 @@ export function useDialogueEditor({
     }
   };
 
+  const handlePanelRectResizeStart = (
+    e: React.PointerEvent,
+    handle: string,
+    pIdx: number,
+    rIdx: number
+  ) => {
+    e.stopPropagation();
+    e.preventDefault();
+    if (!imgRef.current) return;
+    const imgBound = imgRef.current.getBoundingClientRect();
+    if (imgBound.width <= 0 || imgBound.height <= 0) return;
+    const startX = e.clientX;
+    const startY = e.clientY;
+    
+    const pg = localDialogues.pages?.[pageKey] || { panels: [] };
+    const panelsCopy = [...(pg.panels || [])];
+    const targetPanel = { ...panelsCopy[pIdx] };
+    const rects = targetPanel.zoomRects ? [...targetPanel.zoomRects] : targetPanel.zoomRect ? [{...targetPanel.zoomRect}] : [];
+    const zoom = rects[rIdx];
+    if (!zoom) return;
+
+    const startRect = { ...zoom };
+
+    // Push the current state to the undo stack exactly once when starting the drag
+    setUndoStack((prev) => [...prev.slice(-49), JSON.parse(JSON.stringify(localDialogues))]);
+
+    const handlePointerMove = (moveEvent: PointerEvent) => {
+      const dx = moveEvent.clientX - startX;
+      const dy = moveEvent.clientY - startY;
+      
+      const deltaXPercent = (dx / imgBound.width) * 100;
+      const deltaYPercent = (dy / imgBound.height) * 100;
+
+      let newX = startRect.x;
+      let newY = startRect.y;
+      let newW = startRect.w;
+      let newH = startRect.h;
+
+      if (handle.includes("r")) {
+        newW = startRect.w + deltaXPercent;
+      }
+      if (handle.includes("l")) {
+        newX = startRect.x + deltaXPercent;
+        newW = startRect.w - deltaXPercent;
+      }
+      if (handle.includes("b")) {
+        newH = startRect.h + deltaYPercent;
+      }
+      if (handle.includes("t")) {
+        newY = startRect.y + deltaYPercent;
+        newH = startRect.h - deltaYPercent;
+      }
+
+      // Constrain coordinates and size
+      const minSize = 2;
+      
+      if (snapToGrid) {
+        newX = Math.round(newX / gridSize) * gridSize;
+        newY = Math.round(newY / gridSize) * gridSize;
+        newW = Math.round(newW / gridSize) * gridSize;
+        newH = Math.round(newH / gridSize) * gridSize;
+      }
+
+      if (newW < minSize) {
+        if (handle.includes("l")) {
+          newX = startRect.x + startRect.w - minSize;
+        }
+        newW = minSize;
+      }
+      if (newH < minSize) {
+        if (handle.includes("t")) {
+          newY = startRect.y + startRect.h - minSize;
+        }
+        newH = minSize;
+      }
+
+      newX = Math.max(0, Math.min(100 - newW, newX));
+      newY = Math.max(0, Math.min(100 - newH, newY));
+      newW = Math.max(minSize, Math.min(100 - newX, newW));
+      newH = Math.max(minSize, Math.min(100 - newY, newH));
+
+      rects[rIdx] = { x: newX, y: newY, w: newW, h: newH };
+      
+      const updatedPages = { ...localDialogues.pages };
+      const pgUpdate = { ...pg, panels: panelsCopy };
+      panelsCopy[pIdx] = { ...targetPanel, zoomRects: rects, zoomRect: undefined };
+      updatedPages[pageKey] = pgUpdate;
+
+      updateDialoguesStateNoUndo(updatedPages);
+    };
+
+    const handlePointerUp = () => {
+      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("pointerup", handlePointerUp);
+    };
+
+    window.addEventListener("pointermove", handlePointerMove);
+    window.addEventListener("pointerup", handlePointerUp);
+  };
+
   return {
     localDialogues,
     setLocalDialogues,
@@ -286,6 +449,9 @@ export function useDialogueEditor({
     handleUpdateSettings,
     handleDragEnd,
     handleTailTargetDragEnd,
+    handlePanelRectDragEnd,
+    handleFocusYDragEnd,
+    handlePanelRectResizeStart,
     handleSaveChanges,
   };
 }

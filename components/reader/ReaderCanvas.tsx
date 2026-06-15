@@ -44,8 +44,13 @@ interface ReaderCanvasProps {
   handleDoubleClick: (e: React.MouseEvent) => void;
   handleReaderTap: (e: React.MouseEvent) => void;
   handleUndo: () => void;
+  handleAddPanel?: () => void;
   handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }) => void;
   handleRemoveBubble: (pIdx: number, bIdx: number) => void;
+  setActivePanelIdx?: (idx: number) => void;
+  handlePanelRectDragEnd?: (info: any, pIdx: number, rIdx: number) => void;
+  handleFocusYDragEnd?: (info: any, pIdx: number) => void;
+  handlePanelRectResizeStart?: (e: React.PointerEvent, handle: string, pIdx: number, rIdx: number) => void;
   resetPage: (idx: number) => void;
   setZoomScale: React.Dispatch<React.SetStateAction<number>>;
   setPanOffset: React.Dispatch<React.SetStateAction<{ x: number; y: number }>> | ((val: { x: number; y: number }) => void);
@@ -89,8 +94,13 @@ export function ReaderCanvas({
   handleDoubleClick,
   handleReaderTap,
   handleUndo,
+  handleAddPanel,
   handleAddBubble,
   handleRemoveBubble,
+  setActivePanelIdx,
+  handlePanelRectDragEnd,
+  handleFocusYDragEnd,
+  handlePanelRectResizeStart,
   resetPage,
   setZoomScale,
   setPanOffset,
@@ -229,35 +239,88 @@ export function ReaderCanvas({
 
         {/* Visual Focus/Zoom Crop overlay in Editor Mode */}
         {mode === "edit" && imgSize && imgWidth > 0 && imgHeight > 0 && (() => {
-          const activePanelStop = currentPanels[activePanelIdx];
-          const rects = activePanelStop
-            ? activePanelStop.zoomRects || (activePanelStop.zoomRect ? [activePanelStop.zoomRect] : [])
-            : [];
-          return rects.map((zoom: any, rIdx: number) => {
-            const maskLeft = imgLeft + (zoom.x / 100) * imgWidth;
-            const maskTop = imgTop + (zoom.y / 100) * imgHeight;
-            const maskWidth = (zoom.w / 100) * imgWidth;
-            const maskHeight = (zoom.h / 100) * imgHeight;
-            return (
-              <div
-                key={`edit-zoom-overlay-${rIdx}`}
-                style={{
-                  position: "absolute",
-                  left: maskLeft,
-                  top: maskTop,
-                  width: maskWidth,
-                  height: maskHeight,
-                  border: rIdx === 0 ? "3px dashed #10b981" : "2.5px dashed #3b82f6",
-                  boxShadow: rIdx === 0 ? "0 0 0 9999px rgba(0, 0, 0, 0.15)" : "none",
-                  zIndex: 15 - rIdx,
-                  pointerEvents: "none",
-                }}
-              >
-                <div className="absolute top-1 left-1 bg-zinc-900/90 text-white font-mono text-[9px] px-1.5 py-0.5 rounded shadow">
-                  {rIdx === 0 ? `🎯 Zoom Principal (V${activePanelIdx + 1})` : `🤫 Máscara ${rIdx + 1}`}
-                </div>
-              </div>
-            );
+          return currentPanels.flatMap((panelStop, pIdx) => {
+            const rects = panelStop.zoomRects || (panelStop.zoomRect ? [panelStop.zoomRect] : []);
+            const isActivePanel = pIdx === activePanelIdx;
+
+            return rects.map((zoom: any, rIdx: number) => {
+              const maskLeft = imgLeft + (zoom.x / 100) * imgWidth;
+              const maskTop = imgTop + (zoom.y / 100) * imgHeight;
+              const maskWidth = (zoom.w / 100) * imgWidth;
+              const maskHeight = (zoom.h / 100) * imgHeight;
+              
+              return (
+                <motion.div
+                  key={`edit-zoom-overlay-${pIdx}-${rIdx}-${zoom.x}-${zoom.y}`}
+                  drag={isActivePanel}
+                  dragMomentum={false}
+                  dragElastic={0}
+                  onDragEnd={(_, info) => handlePanelRectDragEnd?.(info, pIdx, rIdx)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActivePanelIdx?.(pIdx);
+                  }}
+                  className={`absolute pointer-events-auto ${isActivePanel ? 'cursor-move' : 'cursor-pointer'}`}
+                  style={{
+                    left: maskLeft,
+                    top: maskTop,
+                    width: maskWidth,
+                    height: maskHeight,
+                    border: rIdx === 0 
+                      ? (isActivePanel ? "3px dashed #10b981" : "2px dashed rgba(16, 185, 129, 0.4)")
+                      : (isActivePanel ? "2.5px dashed #3b82f6" : "2px dashed rgba(59, 130, 246, 0.4)"),
+                    boxShadow: (rIdx === 0 && isActivePanel) ? "0 0 0 9999px rgba(0, 0, 0, 0.15)" : "none",
+                    backgroundColor: isActivePanel ? "rgba(255, 255, 255, 0)" : "rgba(255, 255, 255, 0.05)",
+                    zIndex: isActivePanel ? 40 - rIdx : 15 - rIdx,
+                  }}
+                  whileHover={!isActivePanel ? { backgroundColor: "rgba(255, 255, 255, 0.15)" } : undefined}
+                >
+                  <div className={`absolute top-1 left-1 font-mono text-[9px] px-1.5 py-0.5 rounded shadow ${isActivePanel ? 'bg-zinc-900/90 text-white' : 'bg-zinc-900/50 text-zinc-300'} select-none pointer-events-none`}>
+                    {rIdx === 0 ? `🎯 V${pIdx + 1}` : `🤫 Máscara ${rIdx + 1}`}
+                  </div>
+
+                  {isActivePanel && (
+                    <>
+                      {/* Edge Resizers */}
+                      <div
+                        className="absolute top-[-3px] left-[3px] right-[3px] h-[6px] cursor-ns-resize z-50 hover:bg-emerald-400/50 transition-colors"
+                        onPointerDown={(e) => handlePanelRectResizeStart?.(e, "t", pIdx, rIdx)}
+                      />
+                      <div
+                        className="absolute bottom-[-3px] left-[3px] right-[3px] h-[6px] cursor-ns-resize z-50 hover:bg-emerald-400/50 transition-colors"
+                        onPointerDown={(e) => handlePanelRectResizeStart?.(e, "b", pIdx, rIdx)}
+                      />
+                      <div
+                        className="absolute left-[-3px] top-[3px] bottom-[3px] w-[6px] cursor-ew-resize z-50 hover:bg-emerald-400/50 transition-colors"
+                        onPointerDown={(e) => handlePanelRectResizeStart?.(e, "l", pIdx, rIdx)}
+                      />
+                      <div
+                        className="absolute right-[-3px] top-[3px] bottom-[3px] w-[6px] cursor-ew-resize z-50 hover:bg-emerald-400/50 transition-colors"
+                        onPointerDown={(e) => handlePanelRectResizeStart?.(e, "r", pIdx, rIdx)}
+                      />
+
+                      {/* Corner Resizers */}
+                      <div
+                        className="absolute -top-1.5 -left-1.5 w-3 h-3 bg-white border-2 border-emerald-500 rounded-sm cursor-nwse-resize z-50 shadow-sm"
+                        onPointerDown={(e) => handlePanelRectResizeStart?.(e, "tl", pIdx, rIdx)}
+                      />
+                      <div
+                        className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-white border-2 border-emerald-500 rounded-sm cursor-nesw-resize z-50 shadow-sm"
+                        onPointerDown={(e) => handlePanelRectResizeStart?.(e, "tr", pIdx, rIdx)}
+                      />
+                      <div
+                        className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-white border-2 border-emerald-500 rounded-sm cursor-nesw-resize z-50 shadow-sm"
+                        onPointerDown={(e) => handlePanelRectResizeStart?.(e, "bl", pIdx, rIdx)}
+                      />
+                      <div
+                        className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-white border-2 border-emerald-500 rounded-sm cursor-nwse-resize z-50 shadow-sm"
+                        onPointerDown={(e) => handlePanelRectResizeStart?.(e, "br", pIdx, rIdx)}
+                      />
+                    </>
+                  )}
+                </motion.div>
+              );
+            });
           });
         })()}
 
@@ -317,32 +380,53 @@ export function ReaderCanvas({
         {renderedDialogues}
 
         {/* ── FocusY Indicator line in Editor Mode ── */}
-        {mode === "edit" && currentPanels[activePanelIdx] && (
-          <div
-            className="absolute left-0 right-0 h-0.5 border-t-2 border-dashed border-red-400 z-20 pointer-events-none"
-            style={{
-              top: imgTop + currentPanels[activePanelIdx].focusY * imgHeight,
-            }}
-          >
-            <div
-              className="absolute right-4 -top-6 bg-red-400 text-[#0a0a0f] font-mono text-xs px-2 py-0.5 rounded flex items-center gap-2 pointer-events-auto select-none shadow"
-              onPointerDown={(e) => e.stopPropagation()}
-              onClick={(e) => e.stopPropagation()}
+        {mode === "edit" && currentPanels.map((panel, pIdx) => {
+          const isActivePanel = pIdx === activePanelIdx;
+          return (
+            <motion.div
+              key={`focusy-${pIdx}`}
+              drag={isActivePanel ? "y" : false}
+              dragMomentum={false}
+              dragElastic={0}
+              onDragEnd={(_, info) => handleFocusYDragEnd?.(info, pIdx)}
+              className={`absolute left-0 right-0 h-0.5 border-t-2 border-dashed z-20 pointer-events-auto ${
+                isActivePanel ? "border-red-400 cursor-row-resize" : "border-red-400/40"
+              }`}
+              style={{
+                top: imgTop + (panel.focusY ?? 0.5) * imgHeight,
+                y: 0,
+              }}
             >
-              <span>Parada {activePanelIdx + 1}: focusY {currentPanels[activePanelIdx].focusY}</span>
-              <button
-                type="button"
+              <div
+                className={`absolute right-4 -top-6 text-[#0a0a0f] font-mono text-xs px-2 py-0.5 rounded flex items-center gap-2 pointer-events-auto select-none shadow cursor-pointer transition-colors ${
+                  isActivePanel ? "bg-red-400" : "bg-red-400/60 hover:bg-red-400/90"
+                }`}
+                onPointerDown={(e) => {
+                  e.stopPropagation();
+                  setActivePanelIdx?.(pIdx);
+                }}
                 onClick={(e) => {
                   e.stopPropagation();
-                  handleAddBubble(activePanelIdx);
+                  setActivePanelIdx?.(pIdx);
                 }}
-                className="bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded border border-emerald-700 active:scale-95 transition-all"
               >
-                + Globo
-              </button>
-            </div>
-          </div>
-        )}
+                <span>Parada {pIdx + 1}: focusY {panel.focusY ?? 0.5}</span>
+                {isActivePanel && (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleAddBubble(pIdx);
+                    }}
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded border border-emerald-700 active:scale-95 transition-all"
+                  >
+                    + Globo
+                  </button>
+                )}
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
 
       {/* Floating Zoom & Pan Controls in Reader Mode */}

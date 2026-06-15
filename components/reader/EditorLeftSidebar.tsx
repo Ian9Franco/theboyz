@@ -1,0 +1,621 @@
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import { getComicPageUrl } from "./readerUtils";
+import { EditorPromptModal, ModalField } from "./EditorPromptModal";
+
+interface TreeNode {
+  name: string;
+  displayName: string;
+  path: string;
+  type: "file" | "directory";
+  children?: TreeNode[];
+}
+
+interface EditorLeftSidebarProps {
+  pages: string[];
+  pageIdx: number;
+  resetPage: (idx: number) => void;
+  chapter: any;
+  saga: any;
+  onSave?: () => Promise<void>;
+}
+
+export function EditorLeftSidebar({
+  pages,
+  pageIdx,
+  resetPage,
+  chapter,
+  saga,
+  onSave,
+}: EditorLeftSidebarProps) {
+  const router = useRouter();
+  const [activeTab, setActiveTab] = useState<"pages" | "episodes" | "docs">("pages");
+
+  // Auth token helper
+  const getPass = () => typeof window !== "undefined" ? sessionStorage.getItem("editor_password") || "" : "";
+
+  // ─── Modal State ───
+  const [modalConfig, setModalConfig] = useState<{
+    isOpen: boolean;
+    title: string;
+    fields: ModalField[];
+  } | null>(null);
+
+  const resolveModalRef = useRef<((val: Record<string, string> | null) => void) | null>(null);
+
+  const requestForm = (title: string, fields: ModalField[]): Promise<Record<string, string> | null> => {
+    return new Promise((resolve) => {
+      resolveModalRef.current = resolve;
+      setModalConfig({ isOpen: true, title, fields });
+    });
+  };
+
+  const handleModalSubmit = (values: Record<string, string>) => {
+    if (resolveModalRef.current) resolveModalRef.current(values);
+    setModalConfig(null);
+  };
+
+  const handleModalCancel = () => {
+    if (resolveModalRef.current) resolveModalRef.current(null);
+    setModalConfig(null);
+  };
+
+  // ─── Sagas List State ───
+  const [sagas, setSagas] = useState<any[]>([]);
+  const [loadingSagas, setLoadingSagas] = useState(false);
+
+  // ─── Docs State ───
+  const [docTree, setDocTree] = useState<{ conceptos: TreeNode | null; guiones: TreeNode | null }>({
+    conceptos: null,
+    guiones: null,
+  });
+  const [loadingDocs, setLoadingDocs] = useState(false);
+  const [selectedFilePath, setSelectedFilePath] = useState<string | null>(null);
+  const [selectedFileContent, setSelectedFileContent] = useState<string | null>(null);
+  const [loadingContent, setLoadingContent] = useState(false);
+  const [openFolders, setOpenFolders] = useState<Record<string, boolean>>({});
+
+  // ─── Editor Modes & Tools ───
+  const [isEditingDoc, setIsEditingDoc] = useState(false);
+  const [editedDocContent, setEditedDocContent] = useState("");
+  
+  // Modals/Prompts states
+  const [editingPageName, setEditingPageName] = useState<number | null>(null);
+  const [newPageName, setNewPageName] = useState("");
+
+  const [copiedText, setCopiedText] = useState<string | null>(null);
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+
+  const [isOpen, setIsOpen] = useState(true);
+
+  // Fetch Sagas
+  const loadSagas = () => {
+    setLoadingSagas(true);
+    fetch("/api/sagas")
+      .then((r) => r.json())
+      .then((d) => {
+        setSagas(d);
+        setLoadingSagas(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setLoadingSagas(false);
+      });
+  };
+
+  useEffect(() => {
+    if (activeTab === "episodes" && sagas.length === 0) loadSagas();
+  }, [activeTab]);
+
+  // Fetch Docs Tree
+  const loadDocsTree = () => {
+    setLoadingDocs(true);
+    fetch("/api/editor/docs", { headers: { "x-editor-password": getPass() } })
+      .then((r) => {
+        if (!r.ok) throw new Error("Unauthorized or Error");
+        return r.json();
+      })
+      .then((d) => {
+        setDocTree({ conceptos: d.conceptos, guiones: d.guiones });
+        setLoadingDocs(false);
+        setOpenFolders(prev => ({ ...prev, "conceptos": true, "guiones": true }));
+      })
+      .catch((err) => {
+        console.error(err);
+        setLoadingDocs(false);
+      });
+  };
+
+  useEffect(() => {
+    if (activeTab === "docs" && !docTree.conceptos && !docTree.guiones) loadDocsTree();
+  }, [activeTab]);
+
+  // ─── ACTIONS: Pages ───
+  const handleRenamePage = async (idx: number, oldSrc: string) => {
+    if (!newPageName) return;
+    const oldName = oldSrc.substring(oldSrc.lastIndexOf("/") + 1, oldSrc.lastIndexOf("."));
+    if (oldName === newPageName) {
+      setEditingPageName(null);
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/editor/pages", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json", "x-editor-password": getPass() },
+        body: JSON.stringify({ chapterId: chapter.id, oldName, newName: newPageName })
+      });
+      if (res.ok) {
+        alert("Página renombrada. Recarga la página para ver el nuevo orden.");
+        window.location.reload();
+      } else {
+        const errorData = await res.json();
+        alert("Error: " + errorData.error);
+      }
+    } catch (e) {
+      alert("Error renaming page");
+    }
+  };
+
+  // ─── ACTIONS: Episodes ───
+  const handleCreateSaga = async () => {
+    const values = await requestForm("Nueva Saga", [
+      { key: "name", label: "Nombre corto de la saga (ej: The Boys)", required: true },
+      { key: "title", label: "Título completo", required: true },
+      { key: "number", label: "Número de orden", type: "number", required: true },
+      { key: "color", label: "Color Hex", type: "color", defaultValue: "#e8185a", required: true }
+    ]);
+    if (!values) return;
+
+    await fetch("/api/editor/structure", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-editor-password": getPass() },
+      body: JSON.stringify({ type: "saga", name: values.name, title: values.title, number: values.number, color: values.color })
+    });
+    loadSagas();
+  };
+
+  const handleCreateChapter = async (sagaId: string) => {
+    const values = await requestForm("Nuevo Capítulo", [
+      { key: "name", label: "Nombre corto de la carpeta", required: true },
+      { key: "title", label: "Título completo", required: true },
+      { key: "number", label: "Número de capítulo", type: "number", required: true }
+    ]);
+    if (!values) return;
+
+    await fetch("/api/editor/structure", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-editor-password": getPass() },
+      body: JSON.stringify({ type: "chapter", sagaId, name: values.name, title: values.title, number: values.number })
+    });
+    loadSagas();
+  };
+
+  const handleRenameSaga = async (sagaId: string, currentNumber: number, currentTitle: string) => {
+    const values = await requestForm("Editar Saga", [
+      { key: "name", label: "Nombre corto de carpeta (opcional)", defaultValue: sagaId },
+      { key: "title", label: "Título completo", defaultValue: currentTitle },
+      { key: "number", label: "Número de orden", type: "number", defaultValue: currentNumber.toString() }
+    ]);
+    if (!values) return;
+    if (values.name === sagaId && values.title === currentTitle && values.number === currentNumber.toString()) return;
+
+    await fetch("/api/editor/structure", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json", "x-editor-password": getPass() },
+      body: JSON.stringify({ type: "saga", sagaId, newName: values.name, newTitle: values.title, newNumber: values.number })
+    });
+    loadSagas();
+  };
+
+  const handleRenameChapter = async (sagaId: string, chapterId: string, currentNumber: number, currentTitle: string) => {
+    const values = await requestForm("Editar Capítulo", [
+      { key: "name", label: "Nombre corto de carpeta (opcional)", defaultValue: chapterId },
+      { key: "title", label: "Título completo", defaultValue: currentTitle },
+      { key: "number", label: "Número de orden", type: "number", defaultValue: currentNumber.toString() }
+    ]);
+    if (!values) return;
+    if (values.name === chapterId && values.title === currentTitle && values.number === currentNumber.toString()) return;
+
+    await fetch("/api/editor/structure", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json", "x-editor-password": getPass() },
+      body: JSON.stringify({ type: "chapter", sagaId, chapterId, newName: values.name, newTitle: values.title, newNumber: values.number })
+    });
+    loadSagas();
+  };
+
+  const handleSwitchChapter = async (chapterId: string) => {
+    if (chapterId === chapter.id) return;
+    if (onSave) {
+      await onSave();
+    }
+    router.push(`/chapters/${chapterId}`);
+  };
+
+  // ─── ACTIONS: Docs ───
+  const handleSelectFile = (filePath: string) => {
+    setSelectedFilePath(filePath);
+    setLoadingContent(true);
+    setIsEditingDoc(false);
+    
+    fetch(`/api/editor/docs?file=${encodeURIComponent(filePath)}`, { headers: { "x-editor-password": getPass() } })
+      .then((r) => r.json())
+      .then((d) => {
+        setSelectedFileContent(d.content || "");
+        setEditedDocContent(d.content || "");
+        setLoadingContent(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setLoadingContent(false);
+      });
+  };
+
+  const handleSaveDoc = async () => {
+    if (!selectedFilePath) return;
+    setLoadingContent(true);
+    await fetch("/api/editor/docs", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json", "x-editor-password": getPass() },
+      body: JSON.stringify({ file: selectedFilePath, content: editedDocContent })
+    });
+    setSelectedFileContent(editedDocContent);
+    setIsEditingDoc(false);
+    setLoadingContent(false);
+  };
+
+  const handleCreateNode = async (parentPath: string, type: "file" | "folder") => {
+    const values = await requestForm(`Nuevo ${type === "file" ? "Archivo" : "Carpeta"}`, [
+      { key: "name", label: `Nombre ${type === "file" ? "(sin .md)" : ""}`, required: true }
+    ]);
+    if (!values) return;
+
+    await fetch("/api/editor/docs", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-editor-password": getPass() },
+      body: JSON.stringify({ parent: parentPath, name: values.name, type })
+    });
+    loadDocsTree();
+  };
+
+  const handleRenameNode = async (filePath: string, oldName: string) => {
+    const values = await requestForm("Renombrar", [
+      { key: "name", label: "Nuevo nombre", defaultValue: oldName, required: true }
+    ]);
+    if (!values || values.name === oldName) return;
+
+    await fetch("/api/editor/docs", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json", "x-editor-password": getPass() },
+      body: JSON.stringify({ filePath, newName: values.name })
+    });
+    loadDocsTree();
+    if (selectedFilePath === filePath) setSelectedFilePath(null);
+  };
+
+  const handleDeleteNode = async (filePath: string) => {
+    const values = await requestForm("Confirmar Eliminación", [
+      { key: "confirm", label: `Escribe "eliminar" para confirmar borrar ${filePath}`, required: true, placeholder: "eliminar" }
+    ]);
+    if (!values || values.confirm.toLowerCase() !== "eliminar") return;
+
+    const res = await fetch(`/api/editor/docs?file=${encodeURIComponent(filePath)}`, {
+      method: "DELETE",
+      headers: { "x-editor-password": getPass() }
+    });
+    
+    if (res.ok) {
+      loadDocsTree();
+      if (selectedFilePath === filePath) setSelectedFilePath(null);
+    } else {
+      const data = await res.json();
+      alert("Error al eliminar: " + data.error);
+    }
+  };
+
+  const toggleFolder = (path: string) => {
+    setOpenFolders((prev) => ({ ...prev, [path]: !prev[path] }));
+  };
+
+  const getCleanDialogueText = (line: string): string => {
+    const dashMatch = line.match(/[—]([^—]+)[—]/);
+    if (dashMatch && dashMatch[1]) return dashMatch[1].trim();
+    const quoteMatch = line.match(/["“]([^"”]+)["”]/);
+    if (quoteMatch && quoteMatch[1]) return quoteMatch[1].trim();
+    const speakerMatch = line.match(/\*\*[^*]+\*\*:\s*(.*)/);
+    if (speakerMatch && speakerMatch[1]) return speakerMatch[1].trim();
+    return line.replace(/^\*\s*/, "").replace(/\*\*/g, "").trim();
+  };
+
+  const handleCopyText = (rawText: string, index: number) => {
+    const cleanText = getCleanDialogueText(rawText);
+    navigator.clipboard.writeText(cleanText);
+    setCopiedText(cleanText);
+    setCopiedIndex(index);
+    setTimeout(() => {
+      setCopiedText(null);
+      setCopiedIndex(null);
+    }, 2000);
+  };
+
+  const renderMarkdownContent = (text: string) => {
+    if (!text) return <p className="text-zinc-400 text-xs italic">El archivo está vacío.</p>;
+    const lines = text.split("\n");
+    return (
+      <div className="flex flex-col gap-2.5 pb-8">
+        {lines.map((line, idx) => {
+          const trimmed = line.trim();
+          if (trimmed.startsWith("# ")) return <h1 key={idx} className="text-lg font-bold border-b-2 border-[#0a0a0f] pb-1.5 mt-5 mb-2" style={{ fontFamily: "var(--font-bangers)", letterSpacing: "0.05em" }}>{trimmed.slice(2)}</h1>;
+          if (trimmed.startsWith("## ")) return <h2 key={idx} className="text-sm font-bold mt-4 mb-1.5 border-b border-dashed border-zinc-300 pb-0.5" style={{ fontFamily: "var(--font-marker)" }}>{trimmed.slice(3)}</h2>;
+          if (trimmed.startsWith("### ")) return <h3 key={idx} className="text-xs font-black uppercase text-rose-600 mt-3 mb-1 tracking-wider">{trimmed.slice(4)}</h3>;
+          if (trimmed === "---") return <hr key={idx} className="my-3 border-[#0a0a0f]" />;
+          if (trimmed === "") return <div key={idx} className="h-1" />;
+
+          const isBullet = trimmed.startsWith("* ") || trimmed.startsWith("- ");
+          const content = isBullet ? trimmed.slice(2) : trimmed;
+
+          const renderInline = (str: string) => {
+            return str.split("**").map((part, i) => i % 2 === 1 ? <strong key={i} className="font-bold text-zinc-900 bg-yellow-100/60 px-0.5 rounded">{part}</strong> : part);
+          };
+
+          const hasDialogueDash = trimmed.includes("—") || trimmed.includes("\"") || trimmed.includes("“");
+          const isCopied = copiedIndex === idx;
+
+          return (
+            <motion.div key={idx} whileHover={{ x: 2 }} className={`group relative flex items-start gap-1 p-1.5 rounded border transition-all ${isBullet ? "pl-2" : ""} ${hasDialogueDash ? "bg-amber-50/40 border-amber-200/50 hover:bg-amber-50 hover:border-amber-300" : "border-transparent hover:bg-zinc-50"}`}>
+              {isBullet && <span className="text-zinc-400 mr-1 select-none">•</span>}
+              <div className="flex-1 text-xs text-zinc-700 leading-relaxed font-sans select-text">{renderInline(content)}</div>
+              <button onClick={() => handleCopyText(content, idx)} title="Copiar diálogo limpio" className={`shrink-0 ml-1.5 p-1 rounded border border-[#0a0a0f] shadow-[1px_1px_0_#0a0a0f] cursor-pointer transition-all opacity-0 group-hover:opacity-100 ${isCopied ? "bg-emerald-500 text-white" : "bg-white hover:bg-zinc-100"}`}>
+                {isCopied ? "✓" : "📋"}
+              </button>
+            </motion.div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const renderTree = (node: TreeNode | null, parentPath: string = "") => {
+    if (!node) return null;
+
+    const renderNode = (item: TreeNode) => {
+      const isDir = item.type === "directory";
+      const isFolderOpen = openFolders[item.path] ?? false;
+
+      if (!isDir) {
+        const isSelected = selectedFilePath === item.path;
+        return (
+          <div key={item.path} className="flex items-center gap-1 my-1">
+            <motion.div
+              whileHover={{ x: 2 }}
+              onClick={() => handleSelectFile(item.path)}
+              className={`flex-1 flex items-center gap-2.5 py-1 px-2 rounded border-2 cursor-pointer text-xs select-none transition-all min-w-0 ${
+                isSelected ? "bg-[#e8185a] text-white font-bold border-[#0a0a0f] shadow-[2px_2px_0_#0a0a0f]" : "text-zinc-700 bg-white border-zinc-200 hover:border-zinc-400"
+              }`}
+            >
+              <span className="shrink-0">📄</span>
+              <span className="truncate flex-1 min-w-0">{item.displayName}</span>
+            </motion.div>
+            <div className="flex flex-col gap-0.5 shrink-0">
+              <button onClick={() => handleRenameNode(item.path, item.name)} className="text-[10px] bg-zinc-100 border border-zinc-300 px-1 hover:bg-zinc-200" title="Renombrar">✏️</button>
+              <button onClick={() => handleDeleteNode(item.path)} className="text-[10px] bg-red-100 border border-red-300 px-1 hover:bg-red-200 text-red-600" title="Eliminar">🗑</button>
+            </div>
+          </div>
+        );
+      }
+
+      return (
+        <div key={item.path} className="flex flex-col my-1">
+          <div className="flex items-center gap-1">
+            <div
+              onClick={() => toggleFolder(item.path)}
+              className="flex-1 flex items-center justify-between py-1 px-2 rounded border border-transparent cursor-pointer text-xs select-none hover:bg-zinc-100 font-bold text-zinc-800 min-w-0"
+            >
+              <div className="flex items-center gap-2 truncate flex-1 min-w-0">
+                <span className="text-sm leading-none shrink-0">{isFolderOpen ? "📂" : "📁"}</span>
+                <span className="truncate flex-1 min-w-0">{item.displayName}</span>
+              </div>
+              <span className="text-[10px] text-zinc-400 font-mono pr-1 shrink-0">{isFolderOpen ? "▲" : "▼"}</span>
+            </div>
+            <div className="flex gap-0.5 shrink-0">
+              <button onClick={() => handleCreateNode(item.path, "file")} className="text-[10px] bg-blue-100 border border-blue-300 px-1 hover:bg-blue-200" title="Nuevo Archivo">📄+</button>
+              <button onClick={() => handleCreateNode(item.path, "folder")} className="text-[10px] bg-green-100 border border-green-300 px-1 hover:bg-green-200" title="Nueva Carpeta">📁+</button>
+              {item.path !== "conceptos" && item.path !== "guiones" && (
+                <>
+                  <button onClick={() => handleRenameNode(item.path, item.name)} className="text-[10px] bg-zinc-100 border border-zinc-300 px-1 hover:bg-zinc-200" title="Renombrar">✏️</button>
+                  <button onClick={() => handleDeleteNode(item.path)} className="text-[10px] bg-red-100 border border-red-300 px-1 hover:bg-red-200 text-red-600" title="Eliminar">🗑</button>
+                </>
+              )}
+            </div>
+          </div>
+          {isFolderOpen && item.children && (
+            <div className="pl-3 border-l-2 border-dashed border-zinc-200 ml-3.5 flex flex-col">
+              {item.children.map((child) => renderNode(child))}
+            </div>
+          )}
+        </div>
+      );
+    };
+
+    return renderNode(node);
+  };
+
+  if (!isOpen) {
+    return (
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 z-[160]">
+        <button onClick={() => setIsOpen(true)} className="w-10 h-12 flex items-center justify-center bg-white border-y-3 border-r-3 border-[#0a0a0f] shadow-[4px_4px_0_#0a0a0f] text-[#0a0a0f] font-bold text-lg hover:bg-zinc-50 hover:translate-x-0.5 cursor-pointer rounded-r-md">
+          ▶
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <div className="w-full md:w-[350px] shrink-0 bg-white border-b-3 md:border-b-0 md:border-r-3 border-[#0a0a0f] flex flex-col overflow-hidden z-40 relative" style={{ maxHeight: "calc(100vh - 64px)", height: "100%" }}>
+        <button onClick={() => setIsOpen(false)} className="absolute right-2 top-3 w-7 h-7 flex items-center justify-center bg-zinc-100 hover:bg-zinc-200 border-2 border-[#0a0a0f] shadow-[1px_1px_0_#0a0a0f] text-xs font-mono font-bold text-[#0a0a0f] cursor-pointer rounded transition-all active:translate-y-0.5" style={{ zIndex: 100 }}>
+          ◀
+        </button>
+
+        <div className="p-4 border-b-3 border-[#0a0a0f] bg-zinc-50 flex flex-col gap-1 pr-12">
+          <span className="font-[var(--font-bangers)] text-xl tracking-wider text-[#0a0a0f]">Panel de Control</span>
+          <span className="font-sans text-[10px] text-zinc-500 font-bold uppercase tracking-wider truncate">{saga.title} — Cap #{chapter.number}</span>
+        </div>
+
+        <div className="flex border-b-3 border-[#0a0a0f] bg-zinc-100 p-1.5 gap-1.5">
+          {(["pages", "episodes", "docs"] as const).map((tab) => {
+            let label = tab === "pages" ? "Págs" : tab === "episodes" ? "Episodios" : "Docs";
+            const isActive = activeTab === tab;
+            return (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`flex-1 font-[var(--font-bangers)] text-xs py-1.5 border-2 rounded transition-all cursor-pointer ${isActive ? "bg-[#e8185a] text-white border-[#0a0a0f] shadow-[2px_2px_0_#0a0a0f] translate-y-[-1px]" : "bg-white text-zinc-600 border-zinc-300 hover:border-zinc-400 hover:bg-zinc-50"}`}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="flex-1 overflow-y-auto p-4 bg-zinc-50/50">
+          <AnimatePresence mode="wait">
+            {activeTab === "pages" && (
+              <motion.div key="pages-tab" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col gap-3">
+                <span className="font-[var(--font-bangers)] text-sm text-[#0a0a0f] tracking-wide mb-1 block">📖 Páginas ({pages.length})</span>
+                <div className="grid grid-cols-2 gap-3">
+                  {pages.map((src, idx) => {
+                    const isSelected = pageIdx === idx;
+                    const isEditing = editingPageName === idx;
+                    const oldName = src.substring(src.lastIndexOf("/") + 1, src.lastIndexOf("."));
+                    return (
+                      <motion.div key={src} whileHover={{ scale: 1.03 }} className={`flex flex-col border-2 rounded bg-white overflow-hidden transition-all ${isSelected ? "border-[#e8185a] shadow-[4px_4px_0_#e8185a]" : "border-zinc-300 shadow-[2px_2px_0_rgba(10,10,15,0.05)] hover:border-zinc-500"}`}>
+                        <div className="relative aspect-[3/4] bg-zinc-100 border-b border-zinc-200 cursor-pointer" onClick={() => resetPage(idx)}>
+                          <img src={getComicPageUrl(src)} alt={`Página ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                          <div className="absolute bottom-1 right-1 bg-[#0a0a0f] text-yellow-400 font-[var(--font-bangers)] text-xs px-1.5 rounded">#{idx + 1}</div>
+                        </div>
+                        <div className="p-1.5 text-center flex flex-col gap-1">
+                          {isEditing ? (
+                            <div className="flex items-center gap-1">
+                              <input autoFocus type="text" value={newPageName} onChange={(e) => setNewPageName(e.target.value)} className="w-full text-xs p-1 border border-[#0a0a0f] rounded" />
+                              <button onClick={() => handleRenamePage(idx, src)} className="bg-green-500 text-white p-1 rounded">✓</button>
+                              <button onClick={() => setEditingPageName(null)} className="bg-zinc-300 p-1 rounded">✕</button>
+                            </div>
+                          ) : (
+                            <div className="flex items-center justify-between px-1">
+                              <span className={`text-[10px] font-bold ${isSelected ? "text-[#e8185a]" : "text-zinc-600"}`}>
+                                {oldName}
+                              </span>
+                              <button onClick={() => { setEditingPageName(idx); setNewPageName(oldName); }} className="text-[10px] text-blue-500 hover:text-blue-700">✏️</button>
+                            </div>
+                          )}
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            )}
+
+            {activeTab === "episodes" && (
+              <motion.div key="episodes-tab" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col gap-3">
+                <div className="flex justify-between items-center mb-1">
+                  <span className="font-[var(--font-bangers)] text-sm text-[#0a0a0f] tracking-wide">⚡ Sagas y Capítulos</span>
+                  <button onClick={handleCreateSaga} className="bg-emerald-400 text-[#0a0a0f] text-[10px] font-bold px-2 py-1 rounded border-2 border-[#0a0a0f] shadow-[1px_1px_0_#0a0a0f]">+ Nueva Saga</button>
+                </div>
+
+                {loadingSagas ? <div className="text-center py-8 text-zinc-400 text-xs animate-pulse">Cargando...</div> : (
+                  <div className="flex flex-col gap-4">
+                    {sagas.map((s) => (
+                      <div key={s.id} className="border-2 border-[#0a0a0f] bg-white p-2.5 rounded shadow-[3px_3px_0_#0a0a0f]">
+                        <div className="flex justify-between items-center mb-2">
+                          <div className="flex items-center gap-2">
+                            <div className="font-[var(--font-bangers)] text-xs px-2 py-0.5 rounded text-white border border-[#0a0a0f]" style={{ backgroundColor: s.color || "#0a0a0f" }}>
+                              #{s.order} — {s.title}
+                            </div>
+                            <button onClick={() => handleRenameSaga(s.id, s.order, s.title)} className="text-[10px] text-blue-500 hover:text-blue-700">✏️</button>
+                          </div>
+                          <button onClick={() => handleCreateChapter(s.id)} className="text-[10px] bg-zinc-200 border border-zinc-400 px-1 rounded hover:bg-zinc-300">+ Capítulo</button>
+                        </div>
+                        <div className="flex flex-col gap-1.5">
+                          {s.chapters.map((ch: any) => {
+                            const isCurrent = ch.id === chapter.id;
+                            return (
+                              <div key={ch.id} className="flex gap-1">
+                                <button onClick={() => handleSwitchChapter(ch.id)} className={`flex-1 text-left py-1.5 px-2.5 border-2 rounded text-xs transition-all flex items-center justify-between cursor-pointer ${isCurrent ? "bg-zinc-100 border-[#0a0a0f] text-[#0a0a0f] font-black" : "bg-white border-zinc-200 text-zinc-600 hover:border-zinc-400"}`}>
+                                  <span className="truncate flex-1">#{ch.number} — {ch.title}</span>
+                                  {isCurrent && <span className="text-[10px] text-[#e8185a] font-black">ACTIVO</span>}
+                                </button>
+                                <button onClick={() => handleRenameChapter(s.id, ch.id, ch.number, ch.title)} className="px-1.5 text-[10px] bg-zinc-100 border border-zinc-300 rounded hover:bg-zinc-200" title="Renombrar">✏️</button>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </motion.div>
+            )}
+
+            {activeTab === "docs" && (
+              <motion.div key="docs-tab" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="h-full flex flex-col">
+                <AnimatePresence mode="wait">
+                  {selectedFilePath === null ? (
+                    <motion.div key="explorer-view" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col gap-3">
+                      <span className="font-[var(--font-bangers)] text-sm text-[#0a0a0f] tracking-wide mb-1 block">📁 Guiones & Conceptos</span>
+                      {loadingDocs ? <div className="text-center py-8 text-zinc-400 text-xs animate-pulse">Cargando...</div> : (
+                        <div className="flex flex-col gap-3">
+                          {docTree.guiones && <div className="border border-zinc-200 rounded p-2 bg-white"><span className="text-[10px] font-black text-zinc-400 block mb-1">Guiones</span>{renderTree(docTree.guiones)}</div>}
+                          {docTree.conceptos && <div className="border border-zinc-200 rounded p-2 bg-white"><span className="text-[10px] font-black text-zinc-400 block mb-1">Conceptos</span>{renderTree(docTree.conceptos)}</div>}
+                        </div>
+                      )}
+                    </motion.div>
+                  ) : (
+                    <motion.div key="viewer-view" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col h-full">
+                      <div className="flex items-center gap-2 mb-3">
+                        <button onClick={() => setSelectedFilePath(null)} className="py-1 px-2.5 bg-zinc-200 border-2 border-[#0a0a0f] shadow-[1px_1px_0_#0a0a0f] text-[10px] font-bold cursor-pointer rounded hover:translate-y-0.5">← Volver</button>
+                        <span className="text-[10px] font-bold text-zinc-400 truncate flex-1 uppercase tracking-wider text-right">{selectedFilePath.split("/").pop()}</span>
+                        <button onClick={() => isEditingDoc ? handleSaveDoc() : setIsEditingDoc(true)} className={`py-1 px-2.5 border-2 border-[#0a0a0f] shadow-[1px_1px_0_#0a0a0f] text-[10px] font-bold cursor-pointer rounded hover:translate-y-0.5 ${isEditingDoc ? 'bg-green-400 text-[#0a0a0f]' : 'bg-blue-400 text-white'}`}>
+                          {isEditingDoc ? "💾 Guardar" : "✏️ Editar"}
+                        </button>
+                      </div>
+
+                      <div className="bg-white border-2 border-[#0a0a0f] rounded p-3 shadow-[3px_3px_0_#0a0a0f] overflow-y-auto max-h-[60vh] relative flex flex-col flex-1">
+                        {loadingContent ? (
+                          <div className="text-center py-12 text-zinc-400 text-xs animate-pulse">Cargando...</div>
+                        ) : isEditingDoc ? (
+                          <textarea
+                            value={editedDocContent}
+                            onChange={(e) => setEditedDocContent(e.target.value)}
+                            className="w-full h-full min-h-[300px] text-xs font-mono p-2 border border-zinc-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none flex-1"
+                          />
+                        ) : (
+                          renderMarkdownContent(selectedFileContent || "")
+                        )}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+      
+      {modalConfig && (
+        <EditorPromptModal
+          isOpen={modalConfig.isOpen}
+          title={modalConfig.title}
+          fields={modalConfig.fields}
+          onSubmit={handleModalSubmit}
+          onCancel={handleModalCancel}
+        />
+      )}
+    </>
+  );
+}

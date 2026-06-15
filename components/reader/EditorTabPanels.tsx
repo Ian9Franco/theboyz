@@ -102,14 +102,14 @@ export function EditorTabPanels({
                   <div className="flex flex-col gap-1 mb-2">
                     <div className="flex justify-between text-xs font-mono text-zinc-500">
                       <span>Posición Foco Y:</span>
-                      <span>{panel.focusY}</span>
+                      <span>{panel.focusY ?? 0.5}</span>
                     </div>
                     <input
                       type="range"
                       min="0"
                       max="1"
                       step="0.01"
-                      value={panel.focusY}
+                      value={panel.focusY ?? 0.5}
                       onChange={(e) =>
                         handleUpdatePanelParams(pIdx, { focusY: parseFloat(e.target.value) })
                       }

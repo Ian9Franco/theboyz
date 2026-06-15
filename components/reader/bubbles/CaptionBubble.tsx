@@ -11,6 +11,7 @@ interface CaptionBubbleProps {
   appearanceAnimation?: "spring" | "fade" | "slide" | "zoom";
   fadeOutAnimation?: "fade" | "slide" | "zoom";
   depth?: number;
+  textScale?: number;
 }
 
 const SPEAKER_COLORS: Record<string, string> = {
@@ -53,6 +54,7 @@ export function CaptionBubble({
   appearanceAnimation,
   fadeOutAnimation,
   depth,
+  textScale = 1.0,
 }: CaptionBubbleProps) {
   const paragraphs = parseParagraphs(line.text);
   const size = line.size ?? "medium";
@@ -125,7 +127,12 @@ export function CaptionBubble({
     boxShadow: "none",
     borderRadius: line.borderRadius !== undefined ? `${line.borderRadius}px` : undefined,
   };
-  if (line.fontSize) captionStyles.fontSize = `${line.fontSize}px`;
+  
+  let baseFontSize = line.fontSize;
+  if (!baseFontSize) {
+    baseFontSize = size === "small" ? 12 : size === "large" ? 18 : 14;
+  }
+  captionStyles.fontSize = `${baseFontSize * textScale}px`;
   if (line.width) captionStyles.maxWidth = `${line.width}px`;
   if (line.textColor) captionStyles.color = line.textColor;
 

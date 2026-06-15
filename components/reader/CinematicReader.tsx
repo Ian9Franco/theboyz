@@ -9,12 +9,14 @@ import { ReaderAuthModal } from "./ReaderAuthModal";
 import { useReaderZoom } from "./useReaderZoom";
 import { useDialogueEditor } from "./useDialogueEditor";
 import { ReaderCanvas } from "./ReaderCanvas";
+import { EditorLeftSidebar } from "./EditorLeftSidebar";
 import {
   buildTailPath,
   estimateBubbleSize,
   findTargetBubble,
   getEffectiveIndexes,
   getComicPageUrl,
+  getPageKeyFromUrl,
 } from "./readerUtils";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -132,12 +134,37 @@ export function CinematicReader({
     handleUpdateSettings,
     handleDragEnd,
     handleTailTargetDragEnd,
+    handlePanelRectDragEnd,
+    handleFocusYDragEnd,
+    handlePanelRectResizeStart,
     handleSaveChanges,
-  } = useDialogueEditor({ dialogues, chapterId: chapter.id, pageIdx, imgRef });
+  } = useDialogueEditor({ dialogues, chapterId: chapter.id, pageKey: getPageKeyFromUrl(pages[pageIdx]), imgRef });
+
+  const [textScale, setTextScale] = useState<number>(1.0);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setIsAuthorized(sessionStorage.getItem("editor_authorized") === "true");
+      const saved = localStorage.getItem("reader_text_scale");
+      if (saved) {
+        setTextScale(parseFloat(saved));
+      }
+    }
+  }, []);
+
+  const handleSetTextScale = (scale: number) => {
+    setTextScale(scale);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("reader_text_scale", String(scale));
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const auth = sessionStorage.getItem("editor_authorized") === "true";
+      setIsAuthorized(auth);
+      if (auth && sessionStorage.getItem("editor_mode") === "edit") {
+        setMode("edit");
+      }
     }
   }, []);
 
@@ -226,8 +253,8 @@ export function CinematicReader({
   }, [panelIdx, zoomIdx, setZoomScale, setPanOffset, setBubbleOffsets]);
 
   // Get current page dialogues safely
-  const pgKey = String(pageIdx + 1);
-  const currentPageData = localDialogues.pages?.[pgKey] || { panels: [] };
+  const pgKey = getPageKeyFromUrl(pages[pageIdx]);
+  const currentPageData = pgKey ? (localDialogues.pages?.[pgKey] || { panels: [] }) : { panels: [] };
 
   // Filter empty panels only in read mode so the editor can still see and edit all stops.
   const currentPanels =
@@ -423,9 +450,11 @@ export function CinematicReader({
     setZoomedOut(false);
     if (mode === "edit") {
       setMode("read");
+      if (typeof window !== "undefined") sessionStorage.setItem("editor_mode", "read");
     } else {
       if (isAuthorized) {
         setMode("edit");
+        if (typeof window !== "undefined") sessionStorage.setItem("editor_mode", "edit");
       } else {
         setShowAuthModal(true);
         setPasswordInput("");
@@ -449,6 +478,7 @@ export function CinematicReader({
         if (typeof window !== "undefined") {
           sessionStorage.setItem("editor_authorized", "true");
           sessionStorage.setItem("editor_password", passwordInput);
+          sessionStorage.setItem("editor_mode", "edit");
         }
         setShowAuthModal(false);
         setPanelIdx(0);
@@ -610,6 +640,7 @@ export function CinematicReader({
                 appearanceAnimation={appearanceAnimation}
                 fadeOutAnimation={fadeOutAnimation}
                 depth={dialogueDepth}
+                textScale={textScale}
               />
             </div>
           );
@@ -742,6 +773,7 @@ export function CinematicReader({
                   appearanceAnimation={appearanceAnimation}
                   fadeOutAnimation={fadeOutAnimation}
                   depth={dialogueDepth}
+                  textScale={textScale}
                 />
               </div>
             </motion.div>
@@ -805,10 +837,22 @@ export function CinematicReader({
         handleToggleMode={handleToggleMode}
         pageIdx={pageIdx}
         totalPages={pages.length}
+        textScale={textScale}
+        setTextScale={handleSetTextScale}
       />
 
       {/* ── Main Workspace split ── */}
       <div className="flex-1 flex flex-col md:flex-row overflow-hidden w-full h-full relative">
+        {mode === "edit" && (
+          <EditorLeftSidebar
+            pages={pages}
+            pageIdx={pageIdx}
+            resetPage={resetPage}
+            chapter={chapter}
+            saga={saga}
+            onSave={handleSaveChanges}
+          />
+        )}
         <ReaderCanvas
           mode={mode}
           containerRef={containerRef}
@@ -846,8 +890,13 @@ export function CinematicReader({
           handleDoubleClick={handleDoubleClick}
           handleReaderTap={handleReaderTap}
           handleUndo={handleUndo}
+          handleAddPanel={handleAddPanel}
           handleAddBubble={handleAddBubble}
           handleRemoveBubble={handleRemoveBubble}
+          setActivePanelIdx={setActivePanelIdx}
+          handlePanelRectDragEnd={handlePanelRectDragEnd}
+          handleFocusYDragEnd={handleFocusYDragEnd}
+          handlePanelRectResizeStart={handlePanelRectResizeStart}
           resetPage={resetPage}
           setZoomScale={setZoomScale}
           setPanOffset={setPanOffset}
