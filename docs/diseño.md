@@ -226,3 +226,18 @@ Julián (Julián, 27, slender skinny build, dark navy blue sweater, full beard) 
 
 Uandi (average normal build, wearing a short-sleeve dark asphalt gray t-shirt, showing a simple solid black armband tattoo around his left biceps)
 
+portada:
+A professional, high-end comic book cover layout and commercial print design. 
+
+EDITORIAL LOGO AND TEXT ELEMENTS:
+- In the upper left corner, a clean, solid vertical rectangular logo box with a sharp publisher badge icon, a bold "#01" issue number, and a small "$4.99 US" price tag.
+- Across the top third, a massive, powerful comic book title logo reading "[INSERT_TITLE]" in an extra-bold, heavy-weight uppercase sans-serif font with a distinct gritty, slightly distressed stencil texture.
+- In the bottom left corner, a crisp, realistic white barcode box with black scanning lines and serialization numbers.
+- In the lower section, modern minimalist text in an uppercase, pure white condensed sans-serif font displaying brief dramatic story taglines, with a tiny, sharp "ian ©" mark aligned to the bottom right.
+
+ARTWORK COMPOSITION AND STYLE:
+- The background features a dynamic graphic novel illustration, beautifully split or framed into atmospheric composite scenes using sharp diagonal cinematic lines.
+- The art style is high-end digital comic book line-art with deep, intense shadows, professional cell-shading, dramatic contrast, and an atmospheric graphic novel coloring palette.
+- THE CENTRAL SCENE DEPICITON: [INSERT_SCENE_AND_CHARACTERS]
+
+The final generation must look like a high-contrast, perfectly crisp printed comic book cover, professional, clean, balanced, and ready for commercial publication.
