@@ -1,8 +1,10 @@
 {
-  "title": "Testt",
-  "tagline": "Una saga de cómics original.",
-  "description": "Una historia picante donde los pibes se mandan una tras otra.",
+  "title": "Distrito Nulo",
+  "tagline": "Nuevas facciones. Nuevos territorios. La ciudad se parte en dos.",
+  "description": "Los equipos Aegis y Wildcard se infiltran en el Distrito Nulo, el corazón de la droga sintética, para desmantelar la operación. Pero la violencia extrema y las viejas rivalidades los atrapan en un laberinto sin salida.",
   "color": "#e8185a",
   "status": "draft",
-  "order": 4
+  "order": 5,
+  "password": "nulo",
+  "cinematic": true
 }
