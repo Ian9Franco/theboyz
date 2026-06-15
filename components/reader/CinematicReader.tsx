@@ -404,12 +404,14 @@ export function CinematicReader({
     if (isPanning || totalDragDistRef.current > 6) return;
 
     if (e && e.target) {
+      const closestGrab = (e.target as HTMLElement).closest(".cursor-grab");
+      const closestGrabbing = (e.target as HTMLElement).closest(".cursor-grabbing");
       if (
         (e.target as HTMLElement).closest(".btn") ||
         (e.target as HTMLElement).closest(".tag") ||
         (e.target as HTMLElement).closest(".zoom-controls") ||
-        (e.target as HTMLElement).closest(".cursor-grab") ||
-        (e.target as HTMLElement).closest(".cursor-grabbing")
+        (closestGrab && closestGrab !== containerRef.current) ||
+        (closestGrabbing && closestGrabbing !== containerRef.current)
       ) {
         return;
       }

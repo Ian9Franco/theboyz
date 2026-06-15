@@ -58,12 +58,14 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (e.button === 0) {
+      const closestGrab = (e.target as HTMLElement).closest(".cursor-grab");
+      const closestGrabbing = (e.target as HTMLElement).closest(".cursor-grabbing");
       if (
         (e.target as HTMLElement).closest(".zoom-controls") ||
         (e.target as HTMLElement).closest(".btn") ||
         (e.target as HTMLElement).closest(".tag") ||
-        (e.target as HTMLElement).closest(".cursor-grab") ||
-        (e.target as HTMLElement).closest(".cursor-grabbing")
+        (closestGrab && closestGrab !== containerRef.current) ||
+        (closestGrabbing && closestGrabbing !== containerRef.current)
       ) {
         return;
       }
@@ -111,12 +113,14 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
+    const closestGrab = (e.target as HTMLElement).closest(".cursor-grab");
+    const closestGrabbing = (e.target as HTMLElement).closest(".cursor-grabbing");
     if (
       (e.target as HTMLElement).closest(".zoom-controls") ||
       (e.target as HTMLElement).closest(".btn") ||
       (e.target as HTMLElement).closest(".tag") ||
-      (e.target as HTMLElement).closest(".cursor-grab") ||
-      (e.target as HTMLElement).closest(".cursor-grabbing")
+      (closestGrab && closestGrab !== containerRef.current) ||
+      (closestGrabbing && closestGrabbing !== containerRef.current)
     ) {
       return;
     }
