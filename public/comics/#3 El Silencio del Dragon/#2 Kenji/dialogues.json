@@ -232,7 +232,6 @@
       "panels": [
         {
           "dialogue": [
-            { "text": "Nuevo diálogo", "size": "small", "posX": 50, "posY": null, "tailX": 50, "tailY": null, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "Y ahí se fue. Sola hacia lo desconocido. Dejando atrás el eco de su pasado... para empezar a escribir su propia historia.", "style": "caption", "size": "small", "posX": 50, "posY": 0, "tailX": 30, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 220, "fontSize": 8, "borderRadius": 3, "customBg": "#f5e642", "customColor": "#000000" }
           ],
           "focusY": null
