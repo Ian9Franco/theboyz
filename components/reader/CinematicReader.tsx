@@ -29,6 +29,17 @@ export type PanelStop = {
   zoomRects?: { x: number; y: number; w: number; h: number }[];
   duration?: number;
   hideUntilReached?: boolean;
+  sound?: string; // Path to the audio file
+  soundStartTime?: number; // in seconds
+  soundEndTime?: number; // in seconds
+  soundConfig?: {
+    volume?: number; // 0 to 1 (default: 1)
+    playbackRate?: number; // 0.5 to 2 (default: 1)
+    loop?: boolean; // default: false
+    fadeIn?: number; // duration in ms (default: 0)
+    fadeOut?: number; // duration in ms (default: 0)
+    delay?: number; // delay before playing in ms (default: 0)
+  };
 };
 
 export type ChapterSettings = {
@@ -116,6 +127,7 @@ export function CinematicReader({
     handleBubblePointerUp,
   } = useReaderZoom({ containerSize, containerRef });
   const imgRef = useRef<HTMLImageElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const {
     localDialogues,
@@ -292,13 +304,15 @@ export function CinematicReader({
   const currentPageData = pgKey ? (localDialogues.pages?.[pgKey] || { panels: [] }) : { panels: [] };
 
   // Filter empty panels only in read mode so the editor can still see and edit all stops.
+  // Panels with sound are also preserved so audio can play even if there are no dialogues or zoom rects.
   const currentPanels =
     mode === "read"
       ? (currentPageData.panels || []).filter(
           (p: PanelStop) =>
             (p.dialogue && p.dialogue.length > 0) ||
             p.zoomRect ||
-            (p.zoomRects && p.zoomRects.length > 0)
+            (p.zoomRects && p.zoomRects.length > 0) ||
+            p.sound
         )
       : currentPageData.panels || [];
 
@@ -348,6 +362,123 @@ export function CinematicReader({
       timers.forEach((t) => clearTimeout(t));
     };
   }, [panelIdx, pageIdx, mode, activePanel]);
+
+  // Play sound effect when panel changes
+  useEffect(() => {
+    if (mode !== "read" || !activePanel?.sound) {
+      // Stop audio if no sound is assigned
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+      return;
+    }
+
+    const playAudio = async () => {
+      if (!audioRef.current) {
+        const audio = new Audio();
+        audioRef.current = audio;
+      }
+
+      const audio = audioRef.current;
+      const config = activePanel.soundConfig || {};
+      const {
+        volume = 1,
+        playbackRate = 1,
+        loop = false,
+        fadeIn = 0,
+        fadeOut = 0,
+        delay = 0,
+      } = config;
+      const soundStartTime = activePanel.soundStartTime || 0;
+      const soundEndTime = activePanel.soundEndTime || undefined;
+
+      audio.src = activePanel.sound!;
+      audio.currentTime = soundStartTime;
+      audio.volume = 0; // Start at 0 if fadeIn is set, else set to volume
+      audio.playbackRate = playbackRate;
+      audio.loop = loop;
+
+      // Apply fade-out on next panel change
+      if (fadeOut > 0) {
+        audio.onended = () => {
+          audio.pause();
+          audio.currentTime = 0;
+        };
+      }
+
+      const playWithDelay = () => {
+        try {
+          audio.play();
+
+          // Set end time if specified
+          if (soundEndTime !== undefined) {
+            const checkInterval = setInterval(() => {
+              if (audio.currentTime >= soundEndTime) {
+                audio.pause();
+                clearInterval(checkInterval);
+              }
+            }, 100);
+          }
+
+          // Fade in effect
+          if (fadeIn > 0) {
+            const fadeInSteps = 50;
+            const stepDuration = fadeIn / fadeInSteps;
+            const volumePerStep = volume / fadeInSteps;
+            let currentStep = 0;
+
+            const fadeInInterval = setInterval(() => {
+              if (currentStep < fadeInSteps) {
+                audio.volume = Math.min(volume, audio.volume + volumePerStep);
+                currentStep++;
+              } else {
+                audio.volume = volume;
+                clearInterval(fadeInInterval);
+              }
+            }, stepDuration);
+          } else {
+            audio.volume = volume;
+          }
+
+          // Fade out effect (before audio ends based on duration config)
+          if (fadeOut > 0 && !loop) {
+            const effectiveDuration = soundEndTime ? (soundEndTime - soundStartTime) : audio.duration;
+            const fadeOutDelay = (effectiveDuration - fadeOut / 1000) * 1000;
+
+            if (fadeOutDelay > 0) {
+              setTimeout(() => {
+                const fadeOutSteps = 50;
+                const stepDuration = fadeOut / fadeOutSteps;
+                const volumePerStep = audio.volume / fadeOutSteps;
+                let currentStep = 0;
+
+                const fadeOutInterval = setInterval(() => {
+                  if (currentStep < fadeOutSteps && audio.volume > 0) {
+                    audio.volume = Math.max(0, audio.volume - volumePerStep);
+                    currentStep++;
+                  } else {
+                    audio.volume = 0;
+                    clearInterval(fadeOutInterval);
+                  }
+                }, stepDuration);
+              }, fadeOutDelay);
+            }
+          }
+        } catch (error) {
+          console.error("Error playing audio:", error);
+        }
+      };
+
+      if (delay > 0) {
+        setTimeout(playWithDelay, delay);
+      } else {
+        playWithDelay();
+      }
+    };
+
+    playAudio();
+  }, [panelIdx, pageIdx, mode, activePanel?.sound, activePanel?.soundConfig, activePanel?.soundStartTime, activePanel?.soundEndTime]);
 
   // Calculate layout dimensions
   let imgWidth = 0;

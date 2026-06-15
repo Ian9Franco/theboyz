@@ -818,7 +818,7 @@
     "29": {
       "panels": [
         {
-          "focusY": 0.42,
+          "focusY": 0.3,
           "dialogue": [
             { "text": "¡¡¡BANG!!!", "style": "sfx", "size": "small", "posX": 50, "posY": 0, "tailX": 30, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 28, "borderRadius": 18, "customBg": "#f5e642", "customColor": "#e8185a", "textColor": "#ffffff", "tail": "none" }
           ],
@@ -828,12 +828,16 @@
         },
         {
           "focusY": 0.4,
-          "dialogue": [
-            { "text": "¡¡¡Maldita perra!!! ¡¿Cómo hiciste eso?!", "size": "small", "posX": 10, "posY": 60, "tailX": 40, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
-          ],
+          "dialogue": [],
           "zoomRects": [
             { "x": 0, "y": 21, "w": 100, "h": 43 }
-          ]
+          ],
+          "sound": "/sounds/dragon-studio-sword-slice-2-393845.mp3",
+          "soundConfig": {
+            "volume": 0.4,
+            "playbackRate": 1.1,
+            "loop": false
+          }
         },
         {
           "focusY": 0.7,

@@ -13,6 +13,17 @@ export interface PanelConfig {
   zoomRects?: { x: number; y: number; w: number; h: number }[];
   duration?: number;
   hideUntilReached?: boolean;
+  sound?: string; // Path to audio file
+  soundStartTime?: number; // in seconds
+  soundEndTime?: number; // in seconds
+  soundConfig?: {
+    volume?: number; // 0 to 1
+    playbackRate?: number; // 0.5 to 2
+    loop?: boolean;
+    fadeIn?: number; // ms
+    fadeOut?: number; // ms
+    delay?: number; // ms
+  };
 }
 
 export interface ChapterSettings {

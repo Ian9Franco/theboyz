@@ -1,7 +1,121 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import type { PanelConfig } from "./DialogueEditorPanel";
+
+/**
+ * WaveformVisualizer Component
+ * Draws an audio waveform on canvas with trim start/end markers
+ */
+interface WaveformVisualizerProps {
+  soundPath: string;
+  startTime?: number;
+  endTime?: number;
+  height?: number;
+}
+
+function WaveformVisualizer({ soundPath, startTime = 0, endTime, height = 60 }: WaveformVisualizerProps) {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [waveformData, setWaveformData] = useState<number[]>([]);
+  const [duration, setDuration] = useState<number>(0);
+
+  useEffect(() => {
+    const analyzeAudio = async () => {
+      try {
+        const response = await fetch(soundPath);
+        const arrayBuffer = await response.arrayBuffer();
+        const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+        const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+
+        setDuration(audioBuffer.duration);
+
+        // Sample the audio data
+        const samples = 200; // Number of bars in waveform
+        const blockSize = Math.floor(audioBuffer.length / samples);
+        const filteredData: number[] = [];
+        const rawData = audioBuffer.getChannelData(0); // Get mono channel
+
+        for (let i = 0; i < samples; i++) {
+          let sum = 0;
+          for (let j = 0; j < blockSize; j++) {
+            sum += Math.abs(rawData[i * blockSize + j]);
+          }
+          filteredData.push(sum / blockSize);
+        }
+
+        setWaveformData(filteredData);
+      } catch (error) {
+        console.error("Error analyzing audio:", error);
+      }
+    };
+
+    if (soundPath) {
+      analyzeAudio();
+    }
+  }, [soundPath]);
+
+  useEffect(() => {
+    if (!canvasRef.current || waveformData.length === 0) return;
+
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const width = canvas.width;
+    const h = canvas.height;
+
+    // Clear canvas
+    ctx.fillStyle = "#f3f4f6";
+    ctx.fillRect(0, 0, width, h);
+
+    // Draw waveform
+    const barWidth = width / waveformData.length;
+    const maxValue = Math.max(...waveformData, 0.01);
+
+    ctx.fillStyle = "#3b82f6";
+    waveformData.forEach((value, index) => {
+      const barHeight = (value / maxValue) * (h * 0.8);
+      const x = index * barWidth;
+      const y = (h - barHeight) / 2;
+      ctx.fillRect(x, y, barWidth - 1, barHeight);
+    });
+
+    // Draw trim markers
+    if (endTime !== undefined && duration > 0) {
+      const startPixel = (startTime / duration) * width;
+      const endPixel = (endTime / duration) * width;
+
+      // Start marker (green)
+      ctx.strokeStyle = "#10b981";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(startPixel, 0);
+      ctx.lineTo(startPixel, h);
+      ctx.stroke();
+
+      // End marker (red)
+      ctx.strokeStyle = "#ef4444";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(endPixel, 0);
+      ctx.lineTo(endPixel, h);
+      ctx.stroke();
+
+      // Fill trimmed area
+      ctx.fillStyle = "rgba(59, 130, 246, 0.1)";
+      ctx.fillRect(startPixel, 0, endPixel - startPixel, h);
+    }
+  }, [waveformData, startTime, endTime, duration]);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      width={300}
+      height={height}
+      className="w-full border border-zinc-300 rounded bg-gray-100"
+    />
+  );
+}
 
 interface EditorTabPanelsProps {
   currentPanels: PanelConfig[];
@@ -36,6 +150,160 @@ export function EditorTabPanels({
   handleUpdatePanelParams,
   handleAddBubble,
 }: EditorTabPanelsProps) {
+  const [availableSounds, setAvailableSounds] = useState<Array<{ name: string; path: string }>>([]);
+  const [previewingSound, setPreviewingSound] = useState<string | null>(null);
+  const previewAudioRef = useRef<HTMLAudioElement | null>(null);
+  const previewIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const [soundMetadata, setSoundMetadata] = useState<Record<string, number>>({});
+  // Track which panels have their audio confirmed (for visual feedback only — data updates in real time)
+  const [confirmedPanels, setConfirmedPanels] = useState<Set<number>>(new Set());
+
+  useEffect(() => {
+    const loadSounds = async () => {
+      try {
+        const response = await fetch("/api/sounds");
+        const sounds = await response.json();
+        setAvailableSounds(sounds);
+      } catch (error) {
+        console.error("Error loading sounds:", error);
+      }
+    };
+    loadSounds();
+  }, []);
+
+  // Load audio duration when sound changes
+  useEffect(() => {
+    if (currentPanels[activePanelIdx]?.sound) {
+      const audio = new Audio();
+      audio.src = currentPanels[activePanelIdx].sound;
+      audio.onloadedmetadata = () => {
+        setSoundMetadata((prev) => ({
+          ...prev,
+          [currentPanels[activePanelIdx].sound!]: audio.duration,
+        }));
+      };
+    }
+  }, [currentPanels[activePanelIdx]?.sound, activePanelIdx, currentPanels]);
+
+  const stopPreview = () => {
+    if (previewAudioRef.current) {
+      previewAudioRef.current.pause();
+      previewAudioRef.current.currentTime = 0;
+      previewAudioRef.current.volume = 1;
+      previewAudioRef.current.playbackRate = 1;
+    }
+    if (previewIntervalRef.current) {
+      clearInterval(previewIntervalRef.current);
+      previewIntervalRef.current = null;
+    }
+    setPreviewingSound(null);
+  };
+
+  const playPreview = (
+    soundPath: string,
+    config?: {
+      startTime?: number;
+      endTime?: number;
+      volume?: number;
+      playbackRate?: number;
+      fadeIn?: number;
+      fadeOut?: number;
+      delay?: number;
+    }
+  ) => {
+    stopPreview();
+
+    const {
+      startTime = 0,
+      endTime,
+      volume = 1,
+      playbackRate = 1,
+      fadeIn = 0,
+      fadeOut = 0,
+      delay = 0,
+    } = config || {};
+
+    const audio = new Audio();
+    audio.src = soundPath;
+    audio.currentTime = startTime;
+    audio.playbackRate = playbackRate;
+    audio.volume = fadeIn > 0 ? 0 : volume;
+    previewAudioRef.current = audio;
+    setPreviewingSound(soundPath);
+
+    const fadeInIntervalsRef: NodeJS.Timeout[] = [];
+    const fadeOutIntervalsRef: NodeJS.Timeout[] = [];
+
+    const playWithDelay = () => {
+      try {
+        audio.play();
+
+        // Fade in
+        if (fadeIn > 0) {
+          const fadeInSteps = 30;
+          const stepDuration = fadeIn / fadeInSteps;
+          const volumePerStep = volume / fadeInSteps;
+          let currentStep = 0;
+
+          const fadeInInterval = setInterval(() => {
+            if (currentStep < fadeInSteps && previewAudioRef.current === audio) {
+              audio.volume = Math.min(volume, audio.volume + volumePerStep);
+              currentStep++;
+            } else {
+              if (previewAudioRef.current === audio) {
+                audio.volume = volume;
+              }
+              clearInterval(fadeInInterval);
+              fadeInIntervalsRef.splice(fadeInIntervalsRef.indexOf(fadeInInterval), 1);
+            }
+          }, stepDuration);
+          fadeInIntervalsRef.push(fadeInInterval);
+        }
+
+        // Check for end time and apply fade out
+        if (endTime || fadeOut > 0) {
+          const effectiveDuration = endTime ? endTime - startTime : audio.duration;
+          const fadeOutStartTime = effectiveDuration - fadeOut / 1000;
+
+          previewIntervalRef.current = setInterval(() => {
+            if (previewAudioRef.current !== audio) {
+              clearInterval(previewIntervalRef.current!);
+              return;
+            }
+
+            if (endTime && audio.currentTime >= endTime) {
+              stopPreview();
+              clearInterval(previewIntervalRef.current!);
+              previewIntervalRef.current = null;
+            } else if (fadeOut > 0 && audio.currentTime - startTime >= fadeOutStartTime) {
+              const timeUntilEnd = endTime ? endTime - audio.currentTime : audio.duration - audio.currentTime;
+              const newVolume = Math.max(
+                0,
+                volume * Math.max(0, timeUntilEnd / (fadeOut / 1000))
+              );
+              audio.volume = newVolume;
+
+              if (audio.volume <= 0 || (endTime && audio.currentTime >= endTime)) {
+                stopPreview();
+                clearInterval(previewIntervalRef.current!);
+                previewIntervalRef.current = null;
+              }
+            }
+          }, 50);
+        }
+      } catch (error) {
+        console.error("Error playing preview:", error);
+        setPreviewingSound(null);
+      }
+    };
+
+    if (delay > 0) {
+      setTimeout(playWithDelay, delay);
+    } else {
+      playWithDelay();
+    }
+  };
+
   return (
     <div className="p-4 shrink-0 flex flex-col gap-3 border-b-2 border-zinc-200">
       <div className="flex justify-between items-center">
@@ -333,6 +601,373 @@ export function EditorTabPanels({
                         </div>
                       </div>
                     </div>
+                  </div>
+
+                  {/* Audio Config Section */}
+                  <div className="border border-zinc-300 p-2 rounded bg-blue-50/50 mb-3 flex flex-col gap-2">
+                    <div className="flex items-center justify-between">
+                      <label className="text-[10px] font-bold text-zinc-600 uppercase tracking-wider flex items-center gap-1">
+                        🔊 Configuración de Audio
+                      </label>
+                      {panel.sound && (
+                        <button
+                          type="button"
+                          onClick={() =>
+                            handleUpdatePanelParams(pIdx, {
+                              sound: undefined,
+                              soundConfig: undefined,
+                              soundStartTime: undefined,
+                              soundEndTime: undefined,
+                            })
+                          }
+                          className="text-[9px] text-red-500 hover:underline font-bold"
+                        >
+                          Limpiar
+                        </button>
+                      )}
+                    </div>
+
+                    {/* Sound Selector Dropdown */}
+                    <div className="flex flex-col gap-1">
+                      <label className="text-[9px] font-mono text-zinc-600">
+                        Seleccionar sonido:
+                      </label>
+                      <select
+                        value={panel.sound || ""}
+                        onChange={(e) => {
+                          handleUpdatePanelParams(pIdx, { sound: e.target.value || undefined });
+                        }}
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                      >
+                        <option value="">-- Selecciona un sonido --</option>
+                        {availableSounds.map((sound) => (
+                          <option key={sound.path} value={sound.path}>
+                            {sound.name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    {/* Duration Display */}
+                    {panel.sound && soundMetadata[panel.sound] && (
+                      <div className="text-[8px] text-zinc-500 px-1.5 py-1 bg-zinc-100 rounded">
+                        📹 Duración: {soundMetadata[panel.sound].toFixed(2)}s
+                        {panel.soundEndTime && (
+                          <span className="ml-2">
+                            | Reproducción: {(panel.soundEndTime - (panel.soundStartTime || 0)).toFixed(2)}s
+                          </span>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Waveform Visualizer */}
+                    {panel.sound && (
+                      <div className="rounded border border-zinc-300 bg-white overflow-hidden">
+                        <WaveformVisualizer
+                          soundPath={panel.sound}
+                          startTime={panel.soundStartTime || 0}
+                          endTime={panel.soundEndTime}
+                          height={60}
+                        />
+                        <div className="text-[7px] text-zinc-400 px-1.5 py-0.5 bg-zinc-50 flex justify-between">
+                          <span>🟩 Inicio | 🟥 Fin</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {panel.sound && (
+                      <div className="flex flex-col gap-2 pt-2 border-t border-blue-200">
+                        {/* Preview Button */}
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (previewingSound === panel.sound) {
+                              stopPreview();
+                            } else {
+                              playPreview(panel.sound!, {
+                                startTime: panel.soundStartTime || 0,
+                                endTime: panel.soundEndTime,
+                                volume: panel.soundConfig?.volume ?? 1,
+                                playbackRate: panel.soundConfig?.playbackRate ?? 1,
+                                fadeIn: panel.soundConfig?.fadeIn ?? 0,
+                                fadeOut: panel.soundConfig?.fadeOut ?? 0,
+                                delay: panel.soundConfig?.delay ?? 0,
+                              });
+                            }
+                          }}
+                          className={`text-[8px] font-bold px-2 py-1 rounded border transition-all w-full ${
+                            previewingSound === panel.sound
+                              ? "bg-green-600 text-white border-green-700"
+                              : "bg-green-500 hover:bg-green-600 text-white border-green-700"
+                          }`}
+                        >
+                          {previewingSound === panel.sound ? "⏸ Detener Preview" : "▶ Preview Sonido"}
+                        </button>
+
+                        {/* Confirmation feedback — data already flows to state on every onChange, this just reassures the user */}
+                        <div className="flex gap-1.5">
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              stopPreview();
+                              // Show brief visual confirmation that the audio data is in state
+                              setConfirmedPanels((prev) => new Set(prev).add(pIdx));
+                              setTimeout(() => {
+                                setConfirmedPanels((prev) => {
+                                  const next = new Set(prev);
+                                  next.delete(pIdx);
+                                  return next;
+                                });
+                              }, 2000);
+                            }}
+                            className={`flex-1 text-[8px] font-bold px-2 py-1 rounded border transition-all ${
+                              confirmedPanels.has(pIdx)
+                                ? "bg-emerald-600 text-white border-emerald-700"
+                                : "bg-blue-600 hover:bg-blue-700 text-white border-blue-700"
+                            }`}
+                          >
+                            {confirmedPanels.has(pIdx) ? "✓ Audio guardado en JSON" : "✓ Confirmar audio"}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleUpdatePanelParams(pIdx, {
+                                sound: undefined,
+                                soundConfig: undefined,
+                                soundStartTime: undefined,
+                                soundEndTime: undefined,
+                              });
+                            }}
+                            className="text-[8px] font-bold px-2 py-1 rounded border bg-red-500 hover:bg-red-600 text-white border-red-600 transition-all"
+                          >
+                            ✕
+                          </button>
+                        </div>
+
+                        {/* Sound Start Time */}
+                        <div className="flex flex-col gap-1">
+                          <label className="text-[9px] font-mono text-zinc-600">
+                            Inicio (seg):
+                          </label>
+                          <input
+                            type="number"
+                            min="0"
+                            step="0.1"
+                            value={panel.soundStartTime ?? 0}
+                            onChange={(e) => {
+                              const val = parseFloat(e.target.value) || 0;
+                              handleUpdatePanelParams(pIdx, {
+                                soundStartTime: val > 0 ? val : undefined,
+                              });
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                          />
+                        </div>
+
+                        {/* Sound End Time */}
+                        <div className="flex flex-col gap-1">
+                          <label className="text-[9px] font-mono text-zinc-600">
+                            Fin (seg) - Opcional:
+                          </label>
+                          <input
+                            type="number"
+                            min="0"
+                            step="0.1"
+                            value={panel.soundEndTime ?? ""}
+                            onChange={(e) => {
+                              const val = e.target.value ? parseFloat(e.target.value) : undefined;
+                              handleUpdatePanelParams(pIdx, {
+                                soundEndTime: val ? val : undefined,
+                              });
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                            placeholder="Completo si está vacío"
+                            className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                          />
+                        </div>
+
+                        {/* Volume */}
+                        <div className="flex flex-col gap-1">
+                          <div className="flex justify-between text-[9px] font-mono text-zinc-600">
+                            <span>Volumen:</span>
+                            <span className="text-blue-600 font-bold">
+                              {((panel.soundConfig?.volume ?? 1) * 100).toFixed(0)}%
+                            </span>
+                          </div>
+                          <input
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.05"
+                            value={panel.soundConfig?.volume ?? 1}
+                            onChange={(e) => {
+                              const val = parseFloat(e.target.value);
+                              handleUpdatePanelParams(pIdx, {
+                                soundConfig: {
+                                  ...panel.soundConfig,
+                                  volume: val,
+                                },
+                              });
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="w-full accent-blue-500 cursor-pointer h-1"
+                          />
+                        </div>
+
+                        {/* Playback Rate */}
+                        <div className="flex flex-col gap-1">
+                          <div className="flex justify-between text-[9px] font-mono text-zinc-600">
+                            <span>Velocidad:</span>
+                            <span className="text-blue-600 font-bold">
+                              {(panel.soundConfig?.playbackRate ?? 1).toFixed(2)}x
+                            </span>
+                          </div>
+                          <input
+                            type="range"
+                            min="0.5"
+                            max="2"
+                            step="0.1"
+                            value={panel.soundConfig?.playbackRate ?? 1}
+                            onChange={(e) => {
+                              const val = parseFloat(e.target.value);
+                              handleUpdatePanelParams(pIdx, {
+                                soundConfig: {
+                                  ...panel.soundConfig,
+                                  playbackRate: val,
+                                },
+                              });
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="w-full accent-blue-500 cursor-pointer h-1"
+                          />
+                        </div>
+
+                        {/* Fade In */}
+                        <div className="flex flex-col gap-1">
+                          <label className="text-[9px] font-mono text-zinc-600">
+                            Fade In (ms):
+                          </label>
+                          <input
+                            type="number"
+                            min="0"
+                            max="5000"
+                            step="100"
+                            value={panel.soundConfig?.fadeIn ?? 0}
+                            onChange={(e) => {
+                              const val = parseInt(e.target.value) || 0;
+                              handleUpdatePanelParams(pIdx, {
+                                soundConfig: {
+                                  ...panel.soundConfig,
+                                  fadeIn: val > 0 ? val : undefined,
+                                },
+                              });
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                          />
+                        </div>
+
+                        {/* Fade Out */}
+                        <div className="flex flex-col gap-1">
+                          <label className="text-[9px] font-mono text-zinc-600">
+                            Fade Out (ms):
+                          </label>
+                          <input
+                            type="number"
+                            min="0"
+                            max="5000"
+                            step="100"
+                            value={panel.soundConfig?.fadeOut ?? 0}
+                            onChange={(e) => {
+                              const val = parseInt(e.target.value) || 0;
+                              handleUpdatePanelParams(pIdx, {
+                                soundConfig: {
+                                  ...panel.soundConfig,
+                                  fadeOut: val > 0 ? val : undefined,
+                                },
+                              });
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                          />
+                        </div>
+
+                        {/* Delay */}
+                        <div className="flex flex-col gap-1">
+                          <label className="text-[9px] font-mono text-zinc-600">
+                            Delay (ms):
+                          </label>
+                          <input
+                            type="number"
+                            min="0"
+                            max="5000"
+                            step="100"
+                            value={panel.soundConfig?.delay ?? 0}
+                            onChange={(e) => {
+                              const val = parseInt(e.target.value) || 0;
+                              handleUpdatePanelParams(pIdx, {
+                                soundConfig: {
+                                  ...panel.soundConfig,
+                                  delay: val > 0 ? val : undefined,
+                                },
+                              });
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                          />
+                        </div>
+
+                        {/* Loop */}
+                        <div className="flex items-center justify-between">
+                          <span className="text-[9px] font-bold text-zinc-600">🔁 Repetir:</span>
+                          <div className="flex gap-1">
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleUpdatePanelParams(pIdx, {
+                                  soundConfig: {
+                                    ...panel.soundConfig,
+                                    loop: true,
+                                  },
+                                });
+                              }}
+                              className={`text-[9px] font-bold px-2 py-0.5 rounded border transition-all ${
+                                panel.soundConfig?.loop
+                                  ? "bg-blue-600 text-white border-blue-700 font-bold"
+                                  : "bg-zinc-100 text-zinc-500 border-zinc-300 hover:bg-zinc-200"
+                              }`}
+                            >
+                              Sí
+                            </button>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleUpdatePanelParams(pIdx, {
+                                  soundConfig: {
+                                    ...panel.soundConfig,
+                                    loop: false,
+                                  },
+                                });
+                              }}
+                              className={`text-[9px] font-bold px-2 py-0.5 rounded border transition-all ${
+                                !panel.soundConfig?.loop
+                                  ? "bg-zinc-700 text-white border-zinc-800 font-bold"
+                                  : "bg-zinc-100 text-zinc-500 border-zinc-300 hover:bg-zinc-200"
+                              }`}
+                            >
+                              No
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
 
                   {/* Dialogue List for this panel */}
