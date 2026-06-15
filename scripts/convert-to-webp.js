@@ -8,7 +8,7 @@ const deleteOriginals = true; // Por defecto siempre eliminar originales
 const dryRun = args.includes('--dry-run');
 const quality = 80;
 
-const targetDir = path.join(__dirname, 'public'); // Por defecto toda la carpeta public
+const targetDir = path.join(__dirname, "..", "public"); // Por defecto toda la carpeta public
 
 const PROTECTED_ASSETS = ['logo.png', 'ian.png', 'jaz.png', 'julian.png', 'mati.png', 'uandi.png', 'volvo.png', 'matapobre.png', 'sofi.png'];
 
