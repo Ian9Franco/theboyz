@@ -1,10 +1,11 @@
 {
   "title": "Distrito Nulo",
   "tagline": "Nuevas facciones. Nuevos territorios. La ciudad se parte en dos.",
-  "description": "Aegis y Wildcard se encuentran en el Distrito Nulo, el corazón de la droga sintética, para desmantelar la operación. Pero la violencia extrema y las viejas rivalidades los atrapan en un laberinto sin salida.",
+  "description": "En una Nueva York oscura y amenazada por colapsos dimensionales, Ian intenta descifrar las anomalías de los Backrooms mientras sus amigos, Uandi y Julián, descubren con pánico que la radiación multiversal de su última misión está mutando sus células, despertando en ellos poderes inestables —un escudo cinético invisible y alteraciones de estática digital— que se activan por puro instinto de supervivencia. Mientras el grupo intenta procesar el shock de estas mutaciones en su búnker de Brooklyn, la organización mercenaria Vanguard aprovecha el caos para tomar militarmente el control de la ciudad, forzando a Ian a asumir una resolución sombría: descifrar el sistema detrás de este caos celular y frenar la invasión antes de que se les agote el tiempo.",
   "color": "#e8185a",
   "status": "draft",
   "order": 5,
   "password": "nulo",
-  "cinematic": true
+  "cinematic": true,
+  "proximamente": true
 }

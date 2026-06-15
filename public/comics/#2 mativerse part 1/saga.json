@@ -5,5 +5,6 @@
   "color": "#e8185a",
   "status": "draft",
   "order": 2,
-  "cinematic": true
+  "cinematic": true,
+  "proximamente": false
 }

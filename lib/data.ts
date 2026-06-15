@@ -13,6 +13,8 @@ export type Saga = {
   description: string;
   color: string; // primary saga color hex
   chapters: Chapter[];
+  nuevo?: boolean;
+  proximamente?: boolean;
 };
 
 export const sagas: Saga[] = [

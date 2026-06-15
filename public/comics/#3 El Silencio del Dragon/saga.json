@@ -5,5 +5,7 @@
   "color": "#e8185a",
   "status": "published",
   "password": "hush",
-  "cinematic": true
+  "cinematic": true,
+  "nuevo": true,
+  "proximamente": false
 }

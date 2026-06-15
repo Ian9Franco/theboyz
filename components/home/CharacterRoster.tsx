@@ -223,20 +223,39 @@ export function CharacterRoster() {
               key={key} 
               className={`pt-16 ${secIndex > 0 ? "border-t-4 border-dashed border-gray-800" : ""}`}
             >
-              {key === 'matis' && (
-                <div 
-                  className="w-full mb-12 border-4 border-white shadow-[8px_8px_0_#b45309] overflow-hidden relative group cursor-zoom-in pointer-events-auto"
-                  onClick={() => setShowMatiLightbox(true)}
-                >
-                  <img 
-                    src="/personajes/Consejo de matis/Mativariantes.webp" 
-                    alt="Consejo de Matis Banner"
-                    className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute inset-2 border-2 border-dashed border-white/40 pointer-events-none" />
-                </div>
-              )}
+              {key === 'matis' && (() => {
+                const isMatisUnlocked = groupChars.some(c => !c.incognito);
+                return (
+                  <div 
+                    className={`w-full mb-12 border-4 border-white shadow-[8px_8px_0_#b45309] overflow-hidden relative group ${isMatisUnlocked ? "cursor-zoom-in pointer-events-auto" : "cursor-not-allowed pointer-events-auto"}`}
+                    onClick={isMatisUnlocked ? () => setShowMatiLightbox(true) : undefined}
+                  >
+                    <img 
+                      src="/personajes/Consejo de matis/Mativariantes.webp" 
+                      alt="Consejo de Matis Banner"
+                      className={`w-full h-auto block transition-transform duration-700 ${isMatisUnlocked ? "group-hover:scale-105" : "grayscale blur-[2.5px] opacity-45"}`}
+                    />
+                    {isMatisUnlocked ? (
+                      <>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                        <div className="absolute inset-2 border-2 border-dashed border-white/40 pointer-events-none" />
+                      </>
+                    ) : (
+                      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 gap-2">
+                        <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white border border-white/20 shadow-md">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2.5" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                          </svg>
+                        </div>
+                        <span className="font-[var(--font-bangers)] text-lg sm:text-xl text-white tracking-widest uppercase">
+                          Consejo Bloqueado
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                );
+              })()}
 
               <div className="text-center mb-16">
                 <motion.div

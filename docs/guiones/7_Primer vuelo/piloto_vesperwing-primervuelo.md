@@ -89,3 +89,45 @@
 ### 🎨 Notas de Estilo de Vesperwing:
 * **La iluminación del visor:** Las ópticas verdes del antifaz de Vesperwing deben ser el único elemento luminoso y vibrante de la escena cuando él se encuentra en la oscuridad, guiando la mirada del lector en la página.
 * **La VISION IA:** Los textos en pantalla generados por VISION deben mostrarse en cuadros de diálogo verdes y cuadrados, emulando la estética de un monitor de fósforo verde clásico de los años 80.
+
+
+
+
+
+📖 Guion del Piloto: Jaz — Frecuencia Crítica (Nueva York: Distrito Nulo)
+ACTO 1: El Desborde de la Señal
+El detonante: Jaz está en un colectivo o caminando cerca de una antena de Vanguard en Brooklyn. El estrés de ver las patrullas militares en la calle activa algo en sus células que quedó latente tras los eventos multiversales.
+
+El caos: De golpe, empieza a escuchar todo. Las radios de la policía, las transmisiones encriptadas de Vanguard, los pensamientos en estática de la gente. El dolor de cabeza es insoportable. Cuando entra en pánico, su propio cuerpo emite un pulso electromagnético (EMP) biológico involuntario: las luces de la calle estallan, los celulares de la gente a su alrededor se apagan y los semáforos titilan descontrolados.
+
+La huida: Asustada, ensordecida por el ruido en su cabeza y viendo que las patrullas de Vanguard se dirigen hacia el apagón que ella misma provocó, Jaz corre a ciegas buscando un lugar donde esconderse.
+
+ACTO 2: El Descubrimiento Accidental
+El escape: Jaz se mete en el viejo taller/garaje de Ian en los muelles de Brooklyn, buscando un refugio o a su amigo para que la ayude. El lugar parece vacío, pero las luces del taller parpadean al ritmo de los espasmos de energía que Jaz emite.
+
+El accidente: Tropezando en la penumbra por culpa del dolor, Jaz choca contra un panel de herramientas en el fondo del garaje. El impacto activa un mecanismo oculto o abre una pesada puerta blindada disimulada en la pared.
+
+El shock: Jaz cae rodando por las escaleras de concreto y aterriza directamente en el suelo del búnker subterráneo. Al levantar la vista, se queda completamente impactada: frente a ella hay una muralla colosal de monitores con mapas de anomalías dimensionales de los cinco distritos, planos militares de Vanguard y, en el centro, el prototipo de la armadura de Vesperwing colgado, con sus líneas verdes brillando en la oscuridad.
+
+ACTO 3: Contención y Alianza
+El encuentro: Ian baja corriendo las escaleras con un destornillador en la mano, alertado por el fallo en los sistemas que provocó el EMP de Jaz. Al verla en el suelo, hiperventilando y con los ojos inyectados en sangre mientras de sus dedos saltan chispas de estática azul, se frena en seco.
+
+La confrontación: Jaz, entre el dolor y la confusión total de ver el búnker, lo mira sin poder creerlo.
+
+JAZ: —Ian... ¿Qué carajo es este lugar? ¿Qué son esas pantallas?... Ayudame, por favor, no puedo apagar el ruido...—
+
+La solución técnica: Ian procesa el shock de ser descubierto, pero su instinto de protector e ingeniero se activa de inmediato. Corre a sus estantes, toma unos auriculares de alta fidelidad aislantes que estaba modificando y los conecta a su tablet. Le coloca los auriculares a Jaz a la fuerza y activa a Vision en una frecuencia inversa (frecuencia de cancelación de ruido cuántico).
+
+IAN: —Vision, desfasá la señal. Aislá sus ondas celulares ahora.—
+
+ACTO 4: El Nuevo Tablero
+La calma: El zumbido en la cabeza de Jaz se detiene de golpe. Ella se desploma en la silla del taller, exhausta, mirando a Ian con una mezcla de alivio y terror por todo lo que acaba de descubrir.
+
+El cierre: Ian se saca las gafas, se refriega los ojos y mira el mapa de la ciudad en las pantallas, que empieza a registrar el pulso que Jaz dejó en la calle. Ya no puede ocultarle nada.
+
+IAN: —Bienvenida al búnker, Jaz. El multiverso también te encontró a vos. Ahora cambiate los zapatos, porque Vanguard ya viene para acá y tenemos que movernos.—
+
+⚡ ¿Qué le aporta Jaz a la trama general con esto?
+La verdad sale a la luz: Ella es la primera del grupo de amigos que descubre el búnker de Ian por accidente. Esto genera un contraste tremendo: mientras Ian es un humano común usando tecnología para ser un vigilante (Vesperwing), Jaz entra con un poder biológico puro e incontrolable.
+
+El "Radar" del equipo: A partir de acá, con la tecnología de contención de Ian, Jaz se convierte en la pieza clave para interceptar los movimientos de Vanguard. Ella puede "sentir" y escuchar las comunicaciones del enemigo antes de que ataquen.

@@ -130,6 +130,35 @@ the-boys/public/comics/#3 El Silencio del Dragon/saga.json
 
 ---
 
+### 🌟 Destacar Sagas (Último Lanzamiento y Próximamente)
+
+En el archivo `saga.json` de cada saga, además del `"status"`, podés configurar dos propiedades booleanas opcionales para destacar y diferenciar sagas en la cartelera principal:
+
+| Propiedad | Tipo | Comportamiento | Estilo Visual |
+|---|---|---|---|
+| `"nuevo"` | `boolean` | **Último lanzamiento.** Destaca la saga como la más nueva en la plataforma. | Borde pop-art con sombra del color de la saga, badge animado de `"¡NUEVA!"` y cartelera de `"¡ÚLTIMO LANZAMIENTO!"` en la esquina superior. |
+| `"proximamente"` | `boolean` | **Próximo proyecto.** Presenta la saga como un teaser en desarrollo. | Borde discontinuo (`dashed`), fondo de plano/construcción (`blueprint`), portada oscurecida y con marca de `"PROYECTO EN CURSO"`, botón alternativo de avance y bloqueo automático de todos sus capítulos. |
+
+**Ejemplo de saga nueva (`public/comics/#3 El Silencio del Dragon/saga.json`):**
+```json
+{
+  "title": "Hush: El Silencio del Dragón",
+  "status": "published",
+  "nuevo": true
+}
+```
+
+**Ejemplo de saga próxima (`public/comics/#5 Distrito Nulo/saga.json`):**
+```json
+{
+  "title": "Distrito Nulo",
+  "status": "draft",
+  "proximamente": true
+}
+```
+
+---
+
 ### Contraseñas de acceso
 
 Hay **dos niveles** de contraseña:

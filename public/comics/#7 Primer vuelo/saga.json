@@ -1,0 +1,13 @@
+{
+  "title": "El Primer Vuelo",
+  "tagline": "Cuando el ruido apaga la ciudad, la tormenta aprende a volar.",
+  "description": "Huyendo a ciegas tras sufrir un brote caótico de sus nuevos poderes —un pulso electromagnético biológico que la ensordece con frecuencias de radio y apaga la red eléctrica de la calle—, Jaz se refugia en el garaje de Ian y termina descubriendo por accidente el búnker subterráneo, quedando completamente impactada al ver la muralla de monitores tácticos y la armadura de Vesperwing. Al encontrarla en shock y con espasmos de estática azul, Ian reacciona rápidamente usando su tecnología y a su IA Vision para colocarle unos auriculares de cancelación cuántica que logran estabilizar su mente; sin embargo, con el búnker expuesto y el rastro energético de Jaz marcando el mapa, Ian se ve obligado a revelarle la verdad y sumarla al equipo, consciente de que Vanguard ya detectó la anomalía y el tiempo para ocultarse se terminó.",
+  "color": "#00ff66",
+  "color_secondary": "#ffcc00",
+  "status": "draft",
+  "order": 7,
+  "password": "vuelo",
+  "cinematic": true,
+  "nuevo": false,
+  "proximamente": true
+}

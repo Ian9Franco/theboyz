@@ -26,6 +26,8 @@ export type Saga = {
   password?: string;
   cinematic?: boolean;
   cover?: string | null;
+  nuevo?: boolean;
+  proximamente?: boolean;
 };
 
 const POP_ART_COLORS = ["#1b4332", "#00b8d4", "#f5e642", "#6d28d9", "#f97316", "#16a34a"];
@@ -83,6 +85,8 @@ export function getDynamicSagas(): Saga[] {
     let sagaPassword = undefined;
     let sagaCinematic = false;
     let sagaCover: string | null = null;
+    let sagaNuevo = false;
+    let sagaProximamente = false;
 
     // Load saga.json if exists
     const jsonPath = path.join(sagaPath, "saga.json");
@@ -97,6 +101,8 @@ export function getDynamicSagas(): Saga[] {
         if (meta.status) sagaStatus = meta.status;
         if (meta.password) sagaPassword = meta.password;
         if (meta.cinematic) sagaCinematic = true;
+        if (meta.nuevo !== undefined) sagaNuevo = !!meta.nuevo;
+        if (meta.proximamente !== undefined) sagaProximamente = !!meta.proximamente;
       } catch (err) {
         console.error(`Error parsing saga.json in ${folder}:`, err);
       }
@@ -189,6 +195,8 @@ export function getDynamicSagas(): Saga[] {
       password: sagaPassword,
       cinematic: sagaCinematic,
       cover: sagaCover,
+      nuevo: sagaNuevo,
+      proximamente: sagaProximamente,
     });
   });
 
