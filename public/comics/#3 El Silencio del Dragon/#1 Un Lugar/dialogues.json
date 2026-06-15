@@ -304,8 +304,11 @@
     "9": {
       "panels": [
         {
-          "focusY": 0.16,
-          "dialogue": []
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "¡Me rompieron la taza, me mancharon el sillón y la alfombra, casi me da un paro!", "size": "small", "posX": 5, "posY": 5, "tailX": 30, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "¡Pará un poco, Jaz, después te compramos otra taza! ¡Casi nos morimos aplastados por un planeta!", "size": "small", "posX": 85, "posY": 0, "tailX": 70, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
         },
         {
           "focusY": 0.36,
@@ -328,14 +331,8 @@
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "¡Me rompieron la taza, me mancharon el sillón y la alfombra, casi me da un paro!", "size": "small", "posX": 5, "posY": 10, "tailX": 30, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
-            { "text": "¡Pará un poco, Jaz, después te compramos otra taza! ¡Casi nos morimos aplastados por un planeta!", "size": "small", "posX": 75, "posY": 0, "tailX": 65, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 105, "fontSize": 8, "borderRadius": 18 },
             { "text": "(Las luces parpadean... las voces... todo me grita... apaguen el ruido...)", "style": "thought", "size": "small", "posX": 15, "posY": 100, "tailX": 45, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
-        },
-        {
-          "focusY": 0.5,
-          "dialogue": []
         }
       ]
     },
@@ -364,7 +361,6 @@
         {
           "focusY": 0.54,
           "dialogue": [
-            { "text": "(Del portón de metal oxidado abriéndose con un chirrido seco):\n", "size": "small", "posX": 105, "posY": 80, "tailX": 80, "tailY": 80, "tailWidth": 38, "tailCurvature": -22, "width": 165, "fontSize": 8, "borderRadius": 3 },
             { "text": "Pasen rápido que se largó a llover con todo. Bienvenidos al búnker", "size": "small", "posX": 35, "posY": 100, "tailX": 65, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "Avisame si hay algo para tomar, Uandi.", "size": "small", "posX": 90, "posY": 100, "tailX": 75, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
