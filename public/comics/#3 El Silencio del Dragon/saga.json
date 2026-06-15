@@ -1,9 +1,9 @@
 {
   "title": "Hush: El Silencio del Dragón",
   "tagline": "El silencio del dragón resuena en la oscuridad.",
-  "description": "El blueprint gráfico piloto de Hush. Misterio, acción silenciosa y transformaciones extremas.",
+  "description": "La saga de Hush comienza. Un thriller de espionaje urbano, códigos ocultos y transformaciones extremas, donde cada panel te acerca al corazón del misterio.",
   "color": "#e8185a",
-  "status": "draft",
+  "status": "published",
   "password": "hush",
   "cinematic": true
 }
