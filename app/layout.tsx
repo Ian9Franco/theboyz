@@ -44,7 +44,7 @@ function Footer() {
       <div className="max-w-5xl mx-auto relative z-10 text-center flex flex-col items-center gap-6">
         <div className="relative w-60 h-16 sm:w-72 sm:h-20 max-w-full overflow-hidden rounded-xl shadow-sm border border-[#0f2042]/10 bg-white">
           <img
-            src="/logo_white.jpg"
+            src="/logo_white.webp"
             alt="The Boyz Logo"
             className="w-full h-full object-contain rounded-xl"
           />

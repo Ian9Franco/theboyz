@@ -45,7 +45,7 @@ export default function NavBar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0 group hover:opacity-90 transition-opacity">
           <img
-            src="/logo_dark.jpg"
+            src="/logo_dark.webp"
             alt="The Boyz Logo"
             className="h-10 w-auto object-contain block rounded-lg"
           />

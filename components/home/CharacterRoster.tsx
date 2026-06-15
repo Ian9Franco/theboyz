@@ -190,10 +190,10 @@ export function CharacterRoster() {
   });
 
   const getCategoryIcon = (key: string): string => {
-    if (key === "pibes") return "/comic-dynamic-white.png";
-    if (key === "antagonistas") return "/boom-white.png";
-    if (key === "locaciones") return "/comic-page-white.png";
-    return "/comic-book-white.png";
+    if (key === "pibes") return "/comic-dynamic-white.webp";
+    if (key === "antagonistas") return "/boom-white.webp";
+    if (key === "locaciones") return "/comic-page-white.webp";
+    return "/comic-book-white.webp";
   };
 
   return (

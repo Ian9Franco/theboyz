@@ -54,7 +54,7 @@ export function SagaBlock({
   }, []);
 
   const isLightBg = getTextColor(saga.color) === "#0a0a0f";
-  const buttonIconSrc = isLightBg ? "/boom.png" : "/boom-white.png";
+  const buttonIconSrc = isLightBg ? "/boom.webp" : "/boom-white.webp";
 
   return (
     <div className="border-4 border-[#0a0a0f] bg-white p-6 sm:p-10 shadow-[8px_8px_0_#1b4332] relative overflow-hidden rounded-lg">
@@ -86,7 +86,7 @@ export function SagaBlock({
           <div className="flex flex-col items-center lg:items-start">
             <div className="flex items-center gap-2 mb-4">
               <img 
-                src="/comic-book.png" 
+                src="/comic-book.webp" 
                 alt="Saga Icon" 
                 className="w-6 h-6 object-contain" 
               />
@@ -139,7 +139,7 @@ export function SagaBlock({
             <div className="border-t-4 border-dashed border-[#0a0a0f]/20 pt-8">
               <div className="flex items-center gap-3 mb-8">
                 <img 
-                  src="/comic-page.png" 
+                  src="/comic-page.webp" 
                   alt="Page" 
                   className="w-6 h-6 object-contain" 
                 />
