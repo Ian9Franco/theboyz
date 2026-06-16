@@ -161,7 +161,17 @@
           "zoomRects": [
             { "x": 1, "y": 44, "w": 100, "h": 20 }
           ],
-          "duration": 2.5
+          "duration": 2.5,
+          "sounds": [
+            {
+              "sound": "/sounds/ventana rota.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.35,
+                "playbackRate": 1
+              }
+            }
+          ]
         },
         {
           "focusY": 0.8,
@@ -172,7 +182,17 @@
           "zoomRects": [
             { "x": 0, "y": 64, "w": 100, "h": 36 }
           ],
-          "duration": 3
+          "duration": 3,
+          "sounds": [
+            {
+              "sound": "/sounds/terremoto.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.6,
+                "playbackRate": 1
+              }
+            }
+          ]
         }
       ]
     },
@@ -285,7 +305,17 @@
           "zoomRects": [
             { "x": 0, "y": 30, "w": 100, "h": 25 }
           ],
-          "hideUntilReached": true
+          "hideUntilReached": true,
+          "sounds": [
+            {
+              "sound": "/sounds/portal1.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.5,
+                "playbackRate": 0.9
+              }
+            }
+          ]
         },
         {
           "focusY": 0.7,
@@ -398,6 +428,19 @@
             { "text": "¡¡¡¡CLAAANGGG!!!!", "style": "sfx", "size": "small", "posX": 35, "posY": 55, "tailX": 45, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "¡Upa! ¡Se me fue!", "size": "small", "posX": 40, "posY": 45, "tailX": 55, "tailY": 45, "tailWidth": 18, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "¡¡¡¡AHHHH!!!! ¡¡¡BASTA, POR FAVOR!!!  ", "size": "small", "posX": 90, "posY": 60, "tailX": 80, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/metal hit.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.55,
+                "playbackRate": 1
+              }
+            }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 40, "w": 100, "h": 55 }
           ]
         },
         {
@@ -411,6 +454,9 @@
           "dialogue": [
             { "text": "¡Jajaja! ¡Sos un salchicha, Mati! ¡Tenés dos manos izquierdas, hermano!", "size": "small", "posX": 5, "posY": 95, "tailX": 25, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "Pará, boludo, no te burles... Estaba resbalosa la porquería esa.", "size": "small", "posX": 95, "posY": 95, "tailX": 70, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 79, "w": 100, "h": 20 }
           ]
         }
       ]
@@ -430,7 +476,8 @@
           "dialogue": [
             { "text": "Blub... blub... blub...", "size": "small", "posX": 10, "posY": 50, "tailX": 35, "tailY": 60, "tailWidth": 4, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 0, "customBg": "#f5e642", "customColor": "#000000" },
             { "text": "¡Vayan buscando platos que en cinco sale este guiso", "size": "small", "posX": 85, "posY": 55, "tailX": 55, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
-          ]
+          ],
+          "sounds": []
         },
         {
           "focusY": 0.82,
@@ -633,5 +680,43 @@
         }
       ]
     }
-  }
+  },
+  "audioTracks": [
+    {
+      "id": "track-1781565100744-nupks",
+      "layer": "music",
+      "src": "/sounds/soundtrack_end.mp3",
+      "startPageKey": "2",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "pageStart",
+        "pageKey": "7"
+      },
+      "soundConfig": {
+        "volume": 0.6,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1781568478807-mn1z2",
+      "layer": "music",
+      "src": "/sounds/hirviendo.mp3",
+      "startPageKey": "14",
+      "startPanelIdx": 1,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "15"
+      },
+      "soundConfig": {
+        "volume": 0.5,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    }
+  ]
 }

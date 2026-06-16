@@ -4,6 +4,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { PublishModal } from "./PublishModal";
 
+const fontLabels: Record<number, string> = {
+  0.85: "A- Chico",
+  1.0: "A Normal",
+  1.2: "A+ Grande",
+  1.4: "A++ X-Grande",
+};
+
 interface ReaderTopBarProps {
   saga: {
     title: string;
@@ -18,6 +25,8 @@ interface ReaderTopBarProps {
   totalPages: number;
   textScale: number;
   setTextScale: (scale: number) => void;
+  autoplay: boolean;
+  setAutoplay: (autoplay: boolean) => void;
   resetPage: (idx: number) => void;
   onOpenHelp: () => void;
 }
@@ -36,11 +45,14 @@ export function ReaderTopBar({
   totalPages,
   textScale,
   setTextScale,
+  autoplay,
+  setAutoplay,
   resetPage,
   onOpenHelp,
 }: ReaderTopBarProps) {
   const [showPublish, setShowPublish] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isFontDropdownOpen, setIsFontDropdownOpen] = useState(false);
 
   return (
     <>
@@ -65,53 +77,62 @@ export function ReaderTopBar({
         {/* Mode Toggle Button and Page Indicator */}
         <div className="flex items-center gap-2">
           {mode === "read" && (
-            <div className="flex items-center gap-0.5 border-2 border-[#0a0a0f] bg-zinc-50 p-0.5 shadow-[2px_2px_0_#0a0a0f] rounded mr-1">
-              <span className="hidden sm:inline font-[var(--font-bangers)] text-xs text-zinc-500 px-1.5 uppercase tracking-wider">Texto:</span>
+            <>
+              {/* Font Size Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsFontDropdownOpen(!isFontDropdownOpen)}
+                  className="font-[var(--font-bangers)] text-[#0a0a0f] text-xs sm:text-sm px-2.5 py-1.5 border-2 border-[#0a0a0f] bg-zinc-100 hover:bg-zinc-200 transition-colors flex items-center gap-1.5 shadow-[2px_2px_0_#0a0a0f] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#0a0a0f] select-none"
+                  title="Seleccionar Tamaño de Texto"
+                >
+                  <span className="text-[10px] text-zinc-500 uppercase tracking-wider hidden md:inline">Texto:</span>
+                  <span>{fontLabels[textScale] || "Normal"}</span>
+                  <span className="text-[8px] select-none">▼</span>
+                </button>
+                {isFontDropdownOpen && (
+                  <>
+                    <div 
+                      className="fixed inset-0 z-[60]" 
+                      onClick={() => setIsFontDropdownOpen(false)} 
+                    />
+                    <div className="absolute right-0 mt-2 w-32 bg-white border-2 border-[#0a0a0f] shadow-[3px_3px_0_#0a0a0f] z-[70] py-1 rounded">
+                      {[0.85, 1.0, 1.2, 1.4].map((scale) => {
+                        const label = fontLabels[scale];
+                        return (
+                          <button
+                            key={scale}
+                            onClick={() => {
+                              setTextScale(scale);
+                              setIsFontDropdownOpen(false);
+                            }}
+                            className={`w-full text-left px-3 py-1.5 text-xs font-[var(--font-bangers)] tracking-wide border-b border-zinc-100 last:border-0 transition-colors ${
+                              textScale === scale
+                                ? "bg-[#0a0a0f] text-white"
+                                : "text-[#0a0a0f] hover:bg-zinc-100"
+                            }`}
+                          >
+                            {label}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </>
+                )}
+              </div>
+
+              {/* Autoplay Override Toggle Button */}
               <button
-                onClick={() => setTextScale(0.85)}
-                className={`w-7 h-6 flex items-center justify-center text-xs font-bold transition-all rounded font-mono ${
-                  textScale === 0.85
-                    ? "bg-[#0a0a0f] text-white"
-                    : "hover:bg-zinc-200 text-[#0a0a0f]"
+                onClick={() => setAutoplay(!autoplay)}
+                className={`font-[var(--font-bangers)] text-xs sm:text-sm px-2.5 py-1.5 border-2 border-[#0a0a0f] shadow-[2px_2px_0_#0a0a0f] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#0a0a0f] transition-all flex items-center gap-1.5 ${
+                  autoplay
+                    ? "bg-emerald-400 hover:bg-emerald-500 text-[#0a0a0f]"
+                    : "bg-rose-500 hover:bg-rose-600 text-white"
                 }`}
-                title="Texto Pequeño"
+                title={autoplay ? "Autoplay Activo - Pausar" : "Autoplay Desactivado - Activar"}
               >
-                A-
+                <span>{autoplay ? "⏱️ Auto: Sí" : "⏱️ Auto: No"}</span>
               </button>
-              <button
-                onClick={() => setTextScale(1.0)}
-                className={`w-7 h-6 flex items-center justify-center text-xs font-bold transition-all rounded font-mono ${
-                  textScale === 1.0
-                    ? "bg-[#0a0a0f] text-white"
-                    : "hover:bg-zinc-200 text-[#0a0a0f]"
-                }`}
-                title="Texto Normal"
-              >
-                A
-              </button>
-              <button
-                onClick={() => setTextScale(1.2)}
-                className={`w-7 h-6 flex items-center justify-center text-xs font-bold transition-all rounded font-mono ${
-                  textScale === 1.2
-                    ? "bg-[#0a0a0f] text-white"
-                    : "hover:bg-zinc-200 text-[#0a0a0f]"
-                }`}
-                title="Texto Grande"
-              >
-                A+
-              </button>
-              <button
-                onClick={() => setTextScale(1.4)}
-                className={`w-7 h-6 flex items-center justify-center text-xs font-bold transition-all rounded font-mono ${
-                  textScale === 1.4
-                    ? "bg-[#0a0a0f] text-white"
-                    : "hover:bg-zinc-200 text-[#0a0a0f]"
-                }`}
-                title="Texto Extra Grande"
-              >
-                A++
-              </button>
-            </div>
+            </>
           )}
           {mode === "edit" && (
             <button

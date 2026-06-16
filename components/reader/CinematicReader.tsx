@@ -221,12 +221,17 @@ export function CinematicReader({
 
   const [textScale, setTextScale] = useState<number>(1.0);
   const [showInstructions, setShowInstructions] = useState(false);
+  const [autoplay, setAutoplay] = useState<boolean>(true);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem("reader_text_scale");
       if (saved) {
         setTextScale(parseFloat(saved));
+      }
+      const savedAutoplay = localStorage.getItem("reader_autoplay");
+      if (savedAutoplay !== null) {
+        setAutoplay(savedAutoplay === "true");
       }
       const hasRead = localStorage.getItem("has_read_instructions") === "true";
       if (!hasRead) {
@@ -246,6 +251,13 @@ export function CinematicReader({
     setTextScale(scale);
     if (typeof window !== "undefined") {
       localStorage.setItem("reader_text_scale", String(scale));
+    }
+  };
+
+  const handleSetAutoplay = (value: boolean) => {
+    setAutoplay(value);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("reader_autoplay", String(value));
     }
   };
 
@@ -381,9 +393,9 @@ export function CinematicReader({
     : [];
   const activeZoomRect = activePanelRects[zoomIdx] || null;
 
-  // Auto-advance logic for panels with duration
+  // Auto-advance logic for panels with duration (only runs if autoplay is enabled)
   useEffect(() => {
-    if (mode !== "read" || zoomedOut) return;
+    if (mode !== "read" || zoomedOut || !autoplay) return;
     const activePanelStop = currentPanels[panelIdx];
     if (activePanelStop && activePanelStop.duration && activePanelStop.duration > 0) {
       const rects =
@@ -399,7 +411,7 @@ export function CinematicReader({
       }, activePanelStop.duration * 1000);
       return () => clearTimeout(timer);
     }
-  }, [panelIdx, zoomIdx, currentPanels, mode, zoomedOut]);
+  }, [panelIdx, zoomIdx, currentPanels, mode, zoomedOut, autoplay]);
 
   // Track which bubble is currently appearing in reader mode (for sequential camera drift)
   useEffect(() => {
@@ -1307,6 +1319,8 @@ export function CinematicReader({
         totalPages={pages.length}
         textScale={textScale}
         setTextScale={handleSetTextScale}
+        autoplay={autoplay}
+        setAutoplay={handleSetAutoplay}
         resetPage={resetPage}
         onOpenHelp={() => setShowInstructions(true)}
       />
