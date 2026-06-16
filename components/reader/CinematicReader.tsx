@@ -788,6 +788,23 @@ export function CinematicReader({
     activeTracksRef.current.clear();
   }, [mode]);
 
+  // Clean up all active audio elements (multi-span tracks and panel sfx) when leaving/unmounting the reader
+  useEffect(() => {
+    return () => {
+      activeTracksRef.current.forEach((audio) => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+      activeTracksRef.current.clear();
+
+      activePanelAudiosRef.current.forEach((audio) => {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+      activePanelAudiosRef.current = [];
+    };
+  }, []);
+
   // Calculate layout dimensions
   let imgWidth = 0;
   let imgLeft = 0;
