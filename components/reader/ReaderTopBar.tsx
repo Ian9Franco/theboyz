@@ -93,7 +93,7 @@ export function ReaderTopBar({
                     className="fixed inset-0 z-[60]" 
                     onClick={() => setIsSettingsOpen(false)} 
                   />
-                  <div className="absolute right-0 mt-2 w-52 bg-white border-2 border-[#0a0a0f] shadow-[4px_4px_0_#0a0a0f] z-[70] p-3 rounded flex flex-col gap-3">
+                  <div className="absolute left-0 mt-2 w-52 bg-white border-2 border-[#0a0a0f] shadow-[4px_4px_0_#0a0a0f] z-[70] p-3 rounded flex flex-col gap-3">
                     {/* Font size control */}
                     <div>
                       <span className="block font-[var(--font-bangers)] text-[10px] text-zinc-500 uppercase tracking-wider mb-1">Tamaño de letra:</span>
