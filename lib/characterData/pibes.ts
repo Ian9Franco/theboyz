@@ -302,10 +302,10 @@ export const pibes: CharacterDetail[] = [
     overloadImage: '/personajes/LosPibes/FULLBODY SUIT/AEGIS/Aegis.webp',
     color: '#b91c1c',
     role: 'Tanque y protector',
-    visualCode: 'Remera técnica Kappa, lentes redondos, tatuaje manga izquierdo',
+    visualCode: 'Remera técnica Kappa, lentes redondos, tatuajes manga en ambos brazos',
     perfil: [
       'Honestidad brutal e ingenua: Transparente en sus intenciones, actúa bajo un código moral directo y se posiciona como el protector rígido del grupo. Tiene la costumbre recurrente de referirse a amigos y enemigos por igual con el apelativo "Bub".',
-      'Complexión atlética: Porte físico imponente, caracterizado por una intrincada y extensa manga de tatuajes de diseño tribal/geométrico en su brazo izquierdo.',
+      'Complexión atlética: Porte físico imponente, caracterizado por una intrincada y extensa manga de tatuajes de diseño tribal/geométrico en ambos brazos.',
       'Estilo urbano deportivo: Remera técnica ajustada de Kappa, pantalón cargo gris y lentes redondos que suavizan sutilmente sus facciones de combate.'
     ],
     crisis: 'Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo vuelve inflexible; tiende a cargar de frente contra el peligro, confiando en su resistencia física antes de evaluar rutas de evasión.',
@@ -329,15 +329,15 @@ export const pibes: CharacterDetail[] = [
       },
       variantData: {
         full: {
-          label: 'Modo Solidificación Total',
+          label: 'Modo Sobrecarga Cinética',
           habilidades: [
-            'Transmutación Metalúrgica: Transmuta temporalmente la estructura molecular de sus extremidades superiores en una aleación metálica hiperdensa de resistencia casi indestructible.',
-            'Deflexión Balística Pesada: Capacidad para cruzar los brazos y desviar ráfagas de proyectiles pesados o impactos de artillería sin sufrir daño estructural.',
-            'Impacto de Demolición: Su fuerza física se eleva a escala colosal, permitiéndole fracturar blindajes pesados, derribar fortificaciones o hundir el terreno con un solo golpe.',
-            'Luminiscencia Rúnica: Al alcanzar el umbral máximo de almacenamiento, los patrones de sus tatuajes brillan en un tono rojo incandescente, disipando calor térmico residual.'
+            'Hipertrofia Muscular Cinética: Su masa muscular se incrementa de forma masiva y su piel se torna de un color rojo incandescente debido al calor de la energía acumulada.',
+            'Absorción Cinética Total: Resiste ráfagas de proyectiles pesados o impactos de gran escala al recibir la fuerza física y asimilarla directamente en sus fibras musculares dilatadas.',
+            'Fuerza de Impacto Colosal: Su fuerza física se eleva a escala colosal, permitiéndole fracturar blindajes pesados, derribar fortificaciones o hundir el terreno con golpes devastadores.',
+            'Luminiscencia Rúnica y Vapor: Al alcanzar el umbral máximo de almacenamiento, sus tatuajes brillan en rojo vivo mientras su cuerpo emana nubes de vapor denso debido al calor térmico residual.'
           ],
-          significa: 'El coloso de primera línea. Cuando la batería está al máximo y sus brazos se solidifican, Uandi deja de amortiguar el combate; quiebra la ofensiva enemiga y se convierte en una barrera infranqueable.',
-          crisis: 'Agotamiento cinético: La solidificación y los ataques de demolición consumen la totalidad de la energía almacenada en un solo evento masivo. Tras la descarga, el exotraje entra en un breve estado de latencia, dejándolo sin reservas de absorción y expuesto a la fatiga física inmediata.'
+          significa: 'El coloso de primera línea. Cuando la sobrecarga está al máximo, su musculatura se expande de forma masiva y su piel se vuelve roja por la energía cinética acumulada, convirtiéndose en una fuerza imparable.',
+          crisis: 'Agotamiento cinético extremo: La liberación masiva de energía acumulada agota instantáneamente sus reservas físicas. Tras la descarga, sufre de fatiga extrema y debilidad muscular inmediata.'
         }
       }
     }

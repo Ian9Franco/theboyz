@@ -241,3 +241,32 @@ ARTWORK COMPOSITION AND STYLE:
 - THE CENTRAL SCENE DEPICITON: [INSERT_SCENE_AND_CHARACTERS]
 
 The final generation must look like a high-contrast, perfectly crisp printed comic book cover, professional, clean, balanced, and ready for commercial publication.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Opción 1: El "Híbrido Moderno Elegante" (Equilibrado)
+Este prompt prioriza la limpieza de Pichelli/Garbett pero introduce la fuerza de Capullo en las sombras y el dinamismo de Jiménez.
+
+"Official comic book page layout, dramatic multi-panel grid, professional graphic novel format. White panel borders, clean non-uniform dynamic layout. Art style is a hybrid of Modern American Comic Book and European Line Art. Technical breakdown: Clean organic line art and human expressions inspired by Sara Pichelli. Stylized, sleek character designs and clarity inspired by Lee Garbett. Kinetic compositions, aggressive foreshortening, and speed lines inspired by Jorge Jimenez. Dense ink rendering with strong usage of heavy black masses and high-contrast shadows inspired by Greg Capullo. Cell-shading with a sophisticated, slightly muted pop-color palette. 2D illustration, sharp focus. NO 3D render, NO photorealism, NO text, NO speech bubbles."
+
+Opción 2: El "Kinético Oscuro" (Acción Brutal)
+Este prompt prioriza la energía de Jiménez y la oscuridad de Capullo, usando a Pichelli/Garbett para mantener la anatomía correcta y la página legible.
+
+"Official comic book page layout, chaotic dynamic multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American heroic art style. Technical breakdown: Explosive energy, extreme perspectives, and manga-influenced lines of movement inspired by Jorge Jimenez. Visceral textures, brutalist rendering, heavy inking, and atmospheric darkness inspired by Greg Capullo. Clean facial features and fluent body language to balance the intensity inspired by Sara Pichelli. Elegant stilyzation and narrative clarity inspired by Lee Garbett. Flat digital colors with gritty overlay textures, palette of deep desaturated tones mixed with electric neon contrast highlights. 2D illustration, sharp focus. NO 3D render, NO photorealism, NO text, NO speech bubbles."
