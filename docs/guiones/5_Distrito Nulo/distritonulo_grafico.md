@@ -2,589 +2,455 @@
 
 ---
 
-## ACTO 1: La Ciudad Anomalía (Páginas 1 - 5)
+## 👥 Fichas Visuales y Prompts de los Personajes
 
-**Personajes:** Ninguno (Entorno / Nueva York)
+### 🛡️ UANDI
+* **Rostro y Cabello:** Cabello castaño oscuro, muy denso, con rulos muy definidos y apretados (tight curls/coily hair) en la parte superior que caen levemente sobre su frente, y un degradado limpio en los costados. Rostro redondo y muy expresivo, mandíbula redondeada y estructurada cubierta por una barba corta de pocos días perfectamente recortada. Ojos oscuros tras lentes de marco redondo y negro. Cejas pobladas, castañas oscuras y bien definidas.
+* **Físico y Tatuajes:** Complexión maradamente musculosa y atlética, hombros anchos, cuello grueso, brazos robustos y desarrollados. Brazo izquierdo cubierto por una manga completa de tatuajes clásicos/mitológicos (rostro y patrón geométrico griego en tinta negra) y una banda negra continua arriba del codo. Brazo derecho COMPLETAMENTE LIMPIO de manga de tatuajes, teniendo únicamente dos bandas negras delgadas paralelas (brazaletes negros lisos) alrededor del bicep.
+* **Vestimenta:** Remera básica negra lisa de cuello redondo, entallada. Ocasionalmente lleva una campera oscura abierta sobre ella.
 
-### PÁGINA 1: La Ciudad y la Estática
+### 🃏 JULIÁN
+* **Rostro y Cabello:** Cabello muy oscuro (casi negro), corto, de textura netamente ondulada (wavy hair, sin rulos ni rizos) con volumen moderadamente bajo en la parte superior (con menor volumen y más chato que el de Uandi o Ian) y corte degradado prolijo (fade) en los costados. Mandíbula definida y recta, pómulos sutiles, expresión seria, alerta y concentrada. Ojos marrón claro almendrados, sin anteojos, mirada fija. Barba y bigote de tres días densos de una semana, bien recortados y simétricos. Cejas pobladas oscuras y arqueadas.
+* **Físico y Piel:** Complexión delgada pero atlética, brazos esbeltos (más delgados que Uandi), proyecta agilidad y tensión. Piel marrón claro cálido, libre de tatuajes (sin marcas visibles).
+* **Vestimenta:** Suéter de punto de color azul marino oscuro con patrón de costura visible en cuello redondo y canalé en puños/dobladillo. Pantalón de mezclilla azul oscuro, cinturón de cuero negro con hebilla plateada. Ocasionalmente lleva una campera de cuero negra encima.
 
-> [!TIP]
-> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown: Explosive energy, extreme perspectives, and manga-influenced lines of movement inspired by Jorge Jimenez. Visceral textures, heavy inking, and atmospheric darkness inspired by Greg Capullo. Clean facial features, organic anatomy, and fluent body language inspired by Sara Pichelli. Elegant stylization and narrative clarity inspired by Lee Garbett. Flat digital colors with gritty paper overlay textures; color palette of deep desaturated urban tones mixed with sharp chromatic aberration, cian, magenta, and electric red/blue static contrast highlights. 2D illustration, sharp focus. NO 3D render, NO photorealism, NO text, NO speech bubbles.
-> 
-> Panel 1: Wide panoramic shot of New York City at night, but dystopian and dark. The skyscrapers of Manhattan are wrapped in a sickly green mist. The heavy storm clouds move in perfect concentric circles in the sky.
-> Panel 2: Close-up of a giant neon billboard in Times Square flickering violently with intense red static and analog television noise patterns.
-> Panel 3: Close-up of the sky, showing details of the concentric clouds forming a perfect, eerie cosmic spiral defying physics.
-> Panel 4: Medium shot of a dirty, trash-strewn alleyway at street level, with thick steam rising from a sewer grate under green-tinted street lamps.
-> Panel 5: Close-up of a street light bulb bursting in a shower of bright blue and cyan static sparks.
-> 
-> --no 3d, photorealistic, CGI, anime, manga, text, speech bubbles, blurry borders, digital gradients
-
-* **Viñeta 1 (Plano General Panorámico):** Vista de Nueva York de noche, de aspecto distópico. Los rascacielos están envueltos en niebla verde, y las nubes forman círculos concéntricos en el cielo.
-* **Viñeta 2 (Plano Detalle):** Cartel de Times Square parpadeando con estática roja y ruido de televisión analógica.
-* **Viñeta 3 (Plano Detalle):** Primer plano de las nubes del cielo formando una espiral concéntrica perfecta.
-* **Viñeta 4 (Plano Medio):** Un callejón de Nueva York sucio y con basura, con vapor denso saliendo de una alcantarilla bajo una bombilla mortecina.
-* **Viñeta 5 (Plano Detalle):** Una lámpara urbana del callejón estallando en una lluvia de chispas de estática de color azul y cian.
+### 🔬 IAN
+* **Rostro y Cabello:** Cabello castaño, ondulado con textura despeinada y volumen notable en la parte superior (messy wavy hair), con mechones que caen suavemente sobre la frente y lados. Mandíbula bien definida, pómulos sutiles, completamente afeitado (aspecto juvenil, sin barba ni bigote). Ojos marrón claro tras lentes de marco marrón y grueso. Mirada analítica y enfocada.
+* **Físico y Complexión:** Estructura física delgada y estilizada, 1.75 m (5'11"), físico esbelto sin musculatura hiperdesarrollada. Piel clara, sin tatuajes.
+* **Vestimenta y Accesorios:** Buzo con capucha (hoodie) gris oscuro texturizado con bolsillo canguro y cordones. Remera interior gris más claro. Jeans ajustados azul muy oscuro. Tenis deportivos verde brillante con suela blanca y logotipo. Collar fino con dije de lágrima dorado/ámbar. Reloj inteligente negro con interfaz holográfica azul en la muñeca izquierda. Bolso de mensajero de cuero marrón desgastado con correas y hebillas metálicas (solo en exteriores, no dentro del auto ni la base).
 
 ---
 
-**Personajes:** Uandi, Sofi (en foto/monitor de fondo)
+## ACTO 1: Las Secuelas del Viaje (Páginas 1 - 10)
 
-### PÁGINA 2: La Base de Dumbo y los Síntomas de Uandi
-
+### PÁGINA 1: Regreso de JFK
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown: Explosive energy, extreme perspectives, inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; color palette of desaturated tones and electric red-hot neon contrast highlights. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: Wide shot of the rusty, abandoned Brooklyn docks. An old subway train passes over elevated tracks, throwing off bright electrical blue sparks.
-> Panel 2: Inside the Dumbo Base, a spacious industrial warehouse with exposed brick walls, exposed wiring, computer servers, and old CRT monitors. On a wooden shelf, a dusty framed group photo of the characters (including a young woman, Sofi). On a secondary CRT monitor, a fuzzy, static-filled video message of Sofi plays in a loop.
-> Panel 3: Uandi (an imposing, muscular athletic young man with dark curly hair and round wire-rimmed glasses, wearing a Kappa technical t-shirt, sweating heavily and looking pale) is sitting on a wooden crate, shivering, holding a cold plastic water bottle to his forehead.
-> Panel 4: Close-up of Uandi pulling down his t-shirt collar to check his shoulder. Under his skin, faint red tribal/geometric tattoo patterns (Runas Cinéticas) glow dimly with a hot, red-hot volcanic energy, resembling chemical burns or parasitic tracks.
-> Panel 5: Close-up of Uandi looking anxious and talking with a worried expression, eyes wide.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles, digital gradients
-> 
-> **Personajes a subir al chat:**
-> - **Uandi** (Porte físico imponente, musculoso, remera Kappa técnica, lentes redondos, tatuajes/runas en ambos brazos)
+> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style, inspired by Jorge Jimenez, Greg Capullo, and Sara Pichelli. Gritty paper textures. Color palette of desaturated urban tones, dark autumn colors, wet asphalt, and pale streetlights. 2D illustration. NO 3D, NO text.
+> Panel 1: A wide panoramic shot of an autumnal New York City at night under a cold drizzle. The skyline of Manhattan is covered in a heavy grey mist.
+> Panel 2: A dark car (sedan) driving on the highway from JFK airport, water splashing from the tires.
+> Panel 3: Close-up of the rear-view mirror reflecting the tired faces of three young men inside the car: Uandi driving, Ian in the passenger seat, and Julian in the back. A heavy silence in their expressions.
+> Panel 4: Inside the car, Julian looking out the window, drops of rain reflecting on his face, looking melancholic and lost in thought.
+> --no 3d, photorealistic, cgi, text, speech bubbles
 
-* **Viñeta 6 (Plano General):** Los muelles oxidados de Brooklyn. Un vagón de subte pasa sobre las vías elevadas soltando chispas de color azul eléctrico.
-* **Viñeta 7 (Plano General Interno):** El interior de la base de Dumbo. Al fondo, una foto de grupo enmarcada y con polvo sobre un estante, y en una pantalla secundaria, una videollamada de Sofi con estática desde Tokio.
-* **Viñeta 8 (Plano Medio):** Uandi sentado en una caja de madera, sudando y pálido, presionando una botella de agua fría contra su frente.
-* **Viñeta 9 (Plano Detalle):** Uandi se baja el cuello de la remera y muestra las marcas rojas bajo su piel, palpitando tenuemente como quemaduras.
-* **Viñeta 10 (Primer Plano):** Uandi hablando con voz preocupada, asumiendo que algo no anda bien tras regresar del hotel.
+* **Viñeta 1 (Plano General Panorámico):** Vista panorámica de Nueva York otoñal de noche bajo una llovizna fría.
+* **Viñeta 2 (Plano Medio):** Un auto negro circulando por la autopista mojada volviendo de JFK, salpicando agua de las ruedas.
+* **Viñeta 3 (Plano Detalle):** El espejo retrovisor mostrando los rostros cansados de Uandi conduciendo, Ian en el asiento delantero y Julián atrás.
+* **Viñeta 4 (Plano Medio):** Julián mirando por la ventana del auto, con el reflejo de las gotas de lluvia en el vidrio, pensativo.
 
 ---
 
-**Personajes:** Julián, Ian
-
-### PÁGINA 3: Los Síntomas de Julián e Ian
-
+### PÁGINA 2: El Lore en el Auto
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; color palette of desaturated tones and electric red and blue static highlights. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: Inside the Dumbo Base. Julián (a slender, lean young man, short hair with a clean fade on the sides, a neat trim beard, no glasses, sharp facial features, wearing a navy blue crewneck sweater) is lying back on a worn leather couch, holding his head with both hands in intense pain, eyes squeezed shut.
-> Panel 2: Point of View of Julián looking at the base, showing severe double vision and chromatic aberration with magenta and cyan color fringes and digital television noise.
-> Panel 3: Julián sits up on the couch, rubbing his eyes, looking exhausted and speaking.
-> Panel 4: Ian (a young man with textured wavy brown hair, wearing black-rimmed glasses, a dark gray hoodie) is seen from behind, sitting in front of a massive wall of twelve monitors flashing with green matrix-like code. He rubs the bridge of his nose in deep frustration, his glasses lying on the desk.
-> Panel 5: Ian spins his chair around, pointing a digital tablet stylus pen towards Julián, his face looking exhausted and warnings-filled.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles, digital gradients
-> 
-> **Personajes a subir al chat:**
-> - **Julián** (Esbelto, pelo corto con fade, barba prolija, sin anteojos, suéter azul marino)
-> - **Ian** (Cabello castaño ondeado, gafas de marco negro, buzo hoodie gris)
+> Official comic book page layout, multi-panel grid. Modern American dark sci-fi comic book art style. Desaturated urban tones. 2D illustration. NO 3D, NO text.
+> Panel 1: Inside the car. Uandi (muscular, dark curly hair, round glasses, short trimmed beard, basic black t-shirt) is driving, looking tired but focused on the wet road ahead.
+> Panel 2: Medium shot of Ian (slender, wavy brown hair, brown-rimmed thick glasses, dark grey hoodie) sitting in the passenger seat, turning slightly to talk with a serious expression.
+> Panel 3: Close-up of Julian (slender, fade haircut, neat beard, navy blue crewneck sweater) talking from the back seat, gesturing with his hands.
+> Panel 4: A ghostly, brief visual representation of Universe 5458 breaking apart in gold and purple fragments (memory sequence, glowing neon gold/purple highlights).
+> Panel 5: Close-up of Uandi groaning and gripping the steering wheel tightly, sweat bead on his forehead, looking in pain. Ian in the passenger seat turns to him with a worried and warning expression, pointing forward.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 11 (Plano Americano):** Julián tirado en el sillón de cuero desfondado, sosteniéndose la cabeza con fuerza por una migraña.
-* **Viñeta 12 (Plano POV):** Visión distorsionada de Julián, con aberración cromática roja/azul y visión doble de la base de Dumbo.
-* **Viñeta 13 (Plano Medio):** Julián sentándose, frotándose los ojos con cara de fatiga extrema.
-* **Viñeta 14 (Plano General):** Ian de espaldas, sepultado bajo los doce monitores de código verde matrix, frotándose el puente de la nariz.
-* **Viñeta 15 (Plano Medio):** Ian girando la silla y hablándoles con gravedad, sosteniendo un lápiz óptico.
+* **Viñeta 5 (Plano Medio):** Uandi manejando el auto con expresión cansada, mirando el camino. Ian a su lado en el asiento del acompañante, hablando serio.
+* **Viñeta 6 (Plano Medio):** Ian se acomoda los lentes marrones y continúa hablando con gravedad.
+* **Viñeta 7 (Primer Plano):** Julián en el asiento trasero gesticulando mientras habla para romper el hielo.
+* **Viñeta 8 (Plano Detalle / Flashback):** Una pequeña viñeta estilizada que muestra la desintegración dorada y púrpura del Universo 5458 en píxeles cuánticos.
+* **Viñeta 8b (Plano Corto):** De repente, Uandi aprieta el volante con fuerza y gime de dolor, con sudor frío en la frente. Ian lo mira preocupado, señalando hacia adelante indicando que falta poco.
 
 ---
 
-**Personajes:** Uandi, Ian
-
-### PÁGINA 4: El Accidente de Uandi
-
+### PÁGINA 3: Llegada a la Base de Dumbo
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; desaturated tones, red neon highlights. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: Uandi walks over to help tidy the warehouse, reaching down to move a massive concrete block blocking a pipe.
-> Panel 2: Close-up of Uandi's muscular arms grasping the heavy concrete block, his muscles tensing.
-> Panel 3: Suddenly, the tribal red marks (Runas Cinéticas) under the skin of both of his arms flare up in an intense, hot volcanic red-hot glow, radiating heat waves and distorting the air.
-> Panel 4: Uandi screams in pain, letting go of the concrete block in a reflex spasm.
-> Panel 5: The concrete block slams onto the floor, raising a cloud of dust. Uandi backing away in terror, clutching his forearms which are smoking slightly.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles, digital gradients
-> 
-> **Personajes a subir al chat:**
-> - **Uandi** (Porte físico imponente, musculoso, remera Kappa técnica, lentes redondos, tatuajes/runas en ambos brazos)
-> - **Ian** (Cabello castaño ondeado, gafas de marco negro, buzo hoodie gris)
+> Official comic book page layout, multi-panel grid. Modern American dark sci-fi comic book art style. Desaturated urban tones. 2D illustration. NO 3D, NO text.
+> Panel 1: The car parks outside the Dumbo Base, a rusty industrial warehouse under the shadow of the Manhattan Bridge. Inside the car, Uandi rests his forehead against the steering wheel, completely exhausted.
+> Panel 2: Uandi gets out of the car with great difficulty, leaning heavily against the car door frame. Ian stands beside him, holding Uandi's arm to support his weight. Julian walks a few steps ahead carrying his backpack, looking back distractedly.
+> Panel 3: Inside the base. Julian walks away towards a worn leather couch, throwing his jacket onto it. In the foreground, Uandi stumbles in, pale, shivering, leaning his robust body against a metal column.
+> Panel 4: Ian walks up to Uandi with a worried look, putting a hand on Uandi's shoulder.
+> Panel 5: Ian leads Uandi towards the workshop doorway in the back of the base.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 17 (Plano Medio):** Uandi se levanta e intenta mover un bloque de hormigón colapsado del almacén.
-* **Viñeta 18 (Plano Corto):** Los brazos de Uandi aferrando el bloque, con los músculos en máxima tensión.
-* **Viñeta 19 (Acción):** De repente, las marcas rojas bajo su piel se encienden en un rojo incandescente vivo.
-* **Viñeta 20 (Acción):** Uandi suelta el bloque de golpe por un espasmo. El hormigón cae al suelo levantando polvo (¡THOOM!).
-* **Viñeta 21 (Plano Medio Largo):** Uandi retrocede aturdido, tomándose los brazos humeantes y mirando con terror sus marcas.
+* **Viñeta 9 (Plano General):** El auto estaciona frente a la base de Dumbo bajo el puente. Uandi apoya la cabeza sobre el volante con cansancio extremo.
+* **Viñeta 10 (Plano Medio):** Uandi baja a duras penas del auto, apoyándose pesado en la puerta; Ian lo sostiene del brazo para ayudarlo, mientras Julián camina unos pasos adelante de espaldas con su mochila.
+* **Viñeta 11 (Plano Medio Interno):** Entran a la base. Julián tira su campera en el sillón y se desploma. Uandi entra tambaleándose y se apoya contra una columna de metal en el taller, temblando y transpirando frío.
+* **Viñeta 12 (Primer Plano):** Ian se acerca preocupado, tomándolo del hombro.
+* **Viñeta 13 (Plano Medio):** Ian guiando a Uandi hacia el taller de la base.
 
 ---
 
-**Personajes:** Julián, Uandi, Ian
-
-### PÁGINA 5: El Glitch de la Carta y el Giro
-
+### PÁGINA 4: Exámenes en el Living y el Taller
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; desaturated tones, red and blue neon accents. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: Julián, startled by the concrete block crash, drops a deck of ordinary playing cards.
-> Panel 2: Close-up of a single playing card falling. Halfway to the floor, it freezes in mid-air, defying gravity.
-> Panel 3: The card glitches, shaking and flickering with intense red and blue analog television static.
-> Panel 4: The card disintegrates into a cloud of cyan and magenta pixels and vanishes completely.
-> Panel 5: Julián and Uandi stare in shock at the empty air, Julián pointing with a trembling finger.
-> Panel 6: Ian turns to his main computer monitor, which displays massive energy graphs peaking at the exact moment of the card glitch. He looks pale, taking off his glasses.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Ian** (Cabello castaño ondeado, gafas de marco negro, buzo hoodie gris)
-> - **Julián** (Esbelto, pelo corto con fade, barba prolija, sin anteojos, suéter azul marino)
-> - **Uandi** (Porte físico imponente, musculoso, remera Kappa técnica, lentes redondos, tatuajes/runas en ambos brazos)
+> Official comic book page layout, multi-panel grid. Modern American dark sci-fi comic book art style. High contrast, desaturated tones. 2D illustration. NO 3D, NO text.
+> Panel 1: Inside the base living room. Julian is sitting on a single large, wide leather couch. Ian, holding a conscious, pale and sweating Uandi by the arm, stands on the floor in front of Julian, making an urgent hand gesture to tell Julian to stand up and leave the couch. Julian looks annoyed, beginning to get up. Ian is not pointing outside and not standing on the couch.
+> Panel 2: Uandi is now sitting on the same wide leather couch, leaning back with a weak but conscious expression. Ian, standing on the floor in front of the couch (not on the couch), is carefully attaching round suction cup biometric sensors (suction electrodes) to Uandi's arms and forehead. Wires hang from the sensors. Julian watches from behind, curious.
+> Panel 3: Ian runs into the messy dark workshop in the background, sitting in front of a desk with a computer and multiple large glowing monitors.
+> Panel 4: Close-up of the computer monitors displaying Uandi's status, showing wild chaotic red electromagnetic spikes and quantum energy anomalies.
+> Panel 5: Close-up of Ian staring at the glowing screens in absolute terror and shock, his thick brown-rimmed glasses reflecting the glowing spikes.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 22 (Plano Corto):** Julián se asusta por el estruendo y deja caer un mazo de naipes comunes.
-* **Viñeta 23 (Efecto Glitch):** Una de las cartas se congela inerte a mitad de camino del suelo.
-* **Viñeta 24 (Plano Detalle):** La carta parpadea de forma violenta con estática analógica roja y azul.
-* **Viñeta 25 (Acción):** La carta se disuelve silenciosamente en píxeles y desaparece.
-* **Viñeta 26 (Plano Medio):** Julián y Uandi atónitos, mirando el espacio vacío; Julián señala asustado.
-* **Viñeta 27 (Plano General):** Ian gira frente a sus monitores que registran picos de energía simultáneos al glitch de la carta, sacándose los anteojos con el rostro pálido.
+* **Viñeta 14 (Plano General):** En el living de la base. Julián está sentado en el único y amplio sillón de cuero. Ian entra sosteniendo del brazo a Uandi, que está consciente pero pálido y sudando frío. Ian, parado en el suelo frente a Julián, le hace un gesto urgente de prisa con la mano para que se levante y le deje el lugar. Julián se para refunfuñando.
+* **Viñeta 15 (Plano Medio):** Uandi está sentado en el amplio sillón de cuero, cansado pero bien despierto. Ian, parado frente al sillón en el piso, le conecta sensores de chupete (electrodos biométricos de succión) en los brazos descubiertos y en la frente, con los cables colgando. Julián observa de pie con curiosidad.
+* **Viñeta 16 (Plano Medio):** Ian corre de prisa al taller del fondo, sentándose frente a su escritorio equipado con una computadora y varios monitores encendidos.
+* **Viñeta 17 (Plano Detalle):** Primer plano de las pantallas. Muestran las lecturas biométricas de Uandi con picos caóticos y ruidosos de color rojo, registrando anomalías electromagnéticas y cuánticas extremas.
+* **Viñeta 17b (Primer Plano):** Rostro de Ian desencajado por el miedo, con el brillo rojo de las pantallas reflejado en sus anteojos.
 
 ---
 
-## ACTO 2: La Batería Cinética (Páginas 6 - 10)
-
-**Personajes:** Ian, Uandi
-
-### PÁGINA 6: La Anomalía bajo el Puente
-
+### PÁGINA 4.5: Recuperación y Cervezas
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el Administrative bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; deep desaturated urban tones, dirty orange and green neon highlights. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: Wide shot of an industrial zone under the Brooklyn Bridge at dusk. Construction scaffolding, shipping containers, cracked streets with rising steam, under a dirty orange sky.
-> Panel 2: Ian walks holding a prototype hand-held electromagnetic scanner that glows with a green digital screen. Uandi walks next to him, wearing his Kappa technical t-shirt under a dark open hooded jacket, his arms showing his Runas Cinéticas, looking around warily.
-> Panel 3: Close-up of the prototype scanner in Ian's hand. The screen is glitching with simple static lines.
-> Panel 4: Close-up of Uandi, his jaw clenched, looking up at the overpass above with sudden tension.
-> Panel 5: High-angle shot of a heavy-duty flatbed tow truck carrying massive steel structural beams sliding out of control on a slick, glowing puddle on the highway overpass above.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Ian**
-> - **Uandi**
+> Official comic book page layout, multi-panel grid. Modern American dark sci-fi comic book art style. High contrast, desaturated tones. 2D illustration. NO 3D, NO text.
+> Panel 1: In the living room, Uandi is sitting up on the couch, looking slightly better. Julian stands next to him, handing him a glass of water. Uandi takes it with a grateful nod.
+> Panel 2: Julian walks into the workshop door, holding two Corona beer bottles. He hands one bottle to Ian who is sitting at the computer desk, and Julian takes a sip from his own bottle, grinning.
+> Panel 3: Close-up of Julian telling a joke with a sarcastic, mocking gesture. Ian and Uandi are laughing in the background, a moment of warm relief.
+> Panel 4: Close-up of the computer screen in the workshop showing the red spikes flattening down into a calm green baseline.
+> Panel 5: Uandi, looking much better and smiling, pulls the suction sensors off his forehead and arms, leaving the wires hanging.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 25 (Plano General):** Zona industrial gris bajo el puente de Brooklyn, cielo naranja al atardecer. Contenedores y calles agrietadas con vapor.
-* **Viñeta 26 (Plano Medio):** Ian camina con un escáner portátil prototipo; Uandi lo acompaña con su campera abierta y remera Kappa, dejando ver sus Runas Cinéticas en ambos brazos.
-* **Viñeta 27 (Plano Detalle):** La pantalla digital del escáner prototipo volviéndose loca con líneas de estática.
-* **Viñeta 28 (Primer Plano):** Uandi tenso, mirando hacia la autopista elevada.
-* **Viñeta 29 (Plano Picado):** Un camión pesado que transporta vigas de acero patinando descontrolado sobre una mancha brillante en el paso elevado.
+* **Viñeta 18 (Plano Americano):** En el living. Uandi se incorpora en el sillón sintiéndose un poco mejor; Julián le entrega un vaso de agua que Uandi recibe agradecido.
+* **Viñeta 18b (Plano Medio):** Julián va al taller con dos botellas de cerveza Corona en la mano; le ofrece una a Ian en su escritorio y él mismo le da un trago a la suya, con una media sonrisa relajada.
+* **Viñeta 18c (Plano Corto):** Julián gesticula mientras dice algo burlón e ingenioso. De fondo, Ian y Uandi se ríen, disipando la tensión acumulada.
+* **Viñeta 18d (Plano Detalle):** La pantalla del taller muestra que las lecturas electromagnéticas han bajado por completo, estabilizándose en una línea horizontal verde.
+* **Viñeta 18e (Plano Medio):** Uandi, ya recuperado y con mejor color, se despega los chupetes de la frente y de los brazos, dejándolos a un lado.
 
 ---
 
-**Personajes:** Ian, Uandi
-
-### PÁGINA 7: La Caída del Acero
-
+### PÁGINA 4.8: La Heladera y la Salida
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; high action contrast. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: The heavy flatbed truck crashes violently against the highway guardrail. Chains snap and break like thin threads under the impact.
-> Panel 2: Wide shot. Three massive, multi-ton steel beams fall off the highway overpass, plunging down towards the construction area below.
-> Panel 3: Close-up of Ian looking straight up. His face is illuminated by a cold light, his eyes wide in absolute, paralyzed terror.
-> Panel 4: Close-up of Uandi's face transitioning from shock to fierce determination as he prepares to move.
-> Panel 5: Low-angle dramatic shot of the giant steel beams falling through the air, casting a massive shadow directly over Ian and Uandi.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Ian**
-> - **Uandi**
+> Official comic book page layout, multi-panel grid. Modern American dark sci-fi comic book art style. High contrast, desaturated tones. 2D illustration. NO 3D, NO text.
+> Panel 1: Inside the base kitchen/living area. Close-up of Ian's hand setting down an empty Corona beer bottle on the rustic wooden table.
+> Panel 2: Uandi is standing by the open old refrigerator in the background, looking inside. The pale cold light of the fridge glows on his face. The shelves are empty except for some half-empty jars. Uandi has a disappointed look.
+> Panel 3: Ian is putting on his dark grey hooded jacket, looking back at Uandi. Uandi is closing the fridge door, speaking over his shoulder.
+> Panel 4: Ian and Uandi are walking towards the main door, wearing their hooded jackets. In the background, Julian is sitting back comfortably on the large leather couch, holding a remote control. The glowing CRT TV screen in front of him shows a soccer/football match with a green pitch.
+> Panel 5: Close-up of Julian sitting on the couch, staring at the TV with complete disinterest, waving a hand dismissively without looking at them.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 30 (Plano de Acción):** El camión impacta el guardarraíl, rompiéndose las cadenas que sujetaban las vigas.
-* **Viñeta 31 (Plano General):** Las vigas caen al vacío desde la autopista hacia la zona de construcción inferior.
-* **Viñeta 32 (Primer Plano):** Ian mira hacia arriba con terror absoluto, paralizado por la inminente caída.
-* **Viñeta 33 (Primer Plano):** El rostro de Uandi apretando los dientes, reaccionando instintivamente.
-* **Viñeta 34 (Plano Contrapicado):** Las inmensas vigas de acero cayendo directamente sobre ellos, proyectando su sombra fatal.
+* **Viñeta 18f (Plano Detalle):** Primer plano de la mano de Ian apoyando la botella vacía de cerveza Corona sobre la mesa rústica de madera de la base.
+* **Viñeta 18g (Plano Medio):** Uandi frente a la vieja heladera abierta en la cocina, revisando su interior. La luz fría interna ilumina su rostro, mostrando estantes casi desiertos.
+* **Viñeta 18h (Plano Medio):** Uandi cierra la heladera y habla de espaldas, mientras Ian se pone su campera gris con capucha, respondiéndole con un gesto de cabeza.
+* **Viñeta 18i (Plano General):** Ian y Uandi avanzan hacia la puerta de salida abrigados con sus capuchas. De fondo, Julián se acomoda en el amplio sillón de cuero frente al televisor de tubo, sintonizando un partido de fútbol con la pantalla brillando en verde.
+* **Viñeta 18j (Primer Plano):** Julián desde el sillón, con la vista fija en la tele, levantando la mano en un gesto de desinterés despectivo y sarcasmo, sin molestarse en mirarlos.
 
 ---
 
-**Personajes:** Ian, Uandi
-
-### PÁGINA 8: La Decisión de Uandi
-
+### PÁGINA 5: La Caminata
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; electric red-hot neon energy details. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: Uandi tackles Ian hard to the side, sending them both tumbling toward the dirt.
-> Panel 2: One of the falling steel beams strikes a metal scaffold pole, ricocheting and changing its trajectory to fall directly towards Uandi and Ian on the ground.
-> Panel 3: Uandi scrambles to his feet, stepping in front of Ian. He crosses his muscular forearms (both arms showing tensed Runas Cinéticas) in front of his face, ready to block the impact.
-> Panel 4: Close-up of Uandi's eyes glowing with a red hue. The Runas Cinéticas on both of his arms glow brilliantly with hot volcanic red neon light, absorbing the incoming kinetic pressure.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Ian**
-> - **Uandi**
+> Official comic book page layout, multi-panel grid. Modern American dark sci-fi comic book art style. Rainy night, desaturated urban autumn tones, mist and wet streets. 2D illustration. NO 3D, NO text.
+> Panel 1: Ian and Uandi walking side by side down a wet, dark Brooklyn street under a cold autumn drizzle, wearing heavy jackets with hoods. The mood is quiet and serious.
+> Panel 2: Close-up of Uandi looking at his large hands, talking with a thoughtful and slightly worried expression. Ian walks beside him, listening intently.
+> Panel 3: Ian points forward as he talks, warning Uandi, while Uandi tries to laugh it off, gesturing towards a small grocery store with a neon sign down the street.
+> Panel 4: They turn a corner, entering a darker area directly under a massive, rusty construction scaffolding and a tall crane that looms overhead in the foggy sky.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 35 (Plano Medio):** Uandi empuja a Ian en un tacle rápido para apartarlo de la trayectoria de caída.
-* **Viñeta 36 (Acción):** Una viga rebota contra un andamio y se desvía, cayendo directa hacia donde cayeron.
-* **Viñeta 37 (Plano Americano):** Uandi se interpone y cruza los brazos en "X" delante de su cara para proteger a Ian, exponiendo las Runas Cinéticas en sus brazos.
-* **Viñeta 38 (Primer Plano):** Los ojos de Uandi brillando con luz roja, y las Runas Cinéticas en ambos brazos resplandeciendo en un tono rojo incandescente.
+* **Viñeta 19 (Plano Medio Largo):** Ian y Uandi caminan uno al lado del otro de noche bajo una fría llovizna otoñal por las calles grises de Brooklyn. Visten camperas con capuchas y el ambiente es silencioso.
+* **Viñeta 20 (Primer Plano):** Uandi se mira las manos con sospecha mientras camina, explicándole a Ian la extraña vibración que sintió bajo la piel. Ian lo escucha con rostro serio y ceño fruncido.
+* **Viñeta 21 (Plano Corto):** Ian le habla con severidad, advirtiéndole del peligro cuántico que vio en los monitores. Uandi intenta restarle importancia sonriendo, señalando un almacén iluminado con un cartel de neón al final de la calle.
+* **Viñeta 21b (Plano General):** Doblan una esquina, adentrándose en una callejuela más oscura que pasa justo por debajo de unos andamios metálicos oxidados de una obra en construcción. Arriba, en el cielo brumoso, una gran grúa sostiene una carga de vigas.
 
 ---
 
-**Personajes:** Uandi, Ian
-
-### PÁGINA 9: Sobrecarga Cinética (Aegis) (Splash Dinámica)
-
+### PÁGINA 6: El Accidente de las Vigas
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, dynamic multi-panel page. One huge main panel taking up 70% of the page, with three small inset panels at the bottom. Modern American dark sci-fi comic book art style. Technical breakdown: Extreme perspective and kinetic lines inspired by Jorge Jimenez, visceral heavy inking by Greg Capullo, organic body language by Sara Pichelli. Color palette of desaturated urban tones and explosive volcanic red neon highlights. 2D illustration. NO 3D, NO text.
-> 
-> Main Panel (Large): The massive steel beam slams violently directly into Uandi's crossed forearms, bending and folding around his arms. Uandi is in Overload Mode: the Runas Cinéticas on both of his arms glow with an intense, burning volcanic red light. Thick steam/vapor emanates from his skin pores due to extreme stress, and the concrete floor under his boots cracks in a deep spiderweb pattern, melting and warping due to thermal distortion.
-> Inset Panel 1 (Small): Close-up of Uandi's boots sinking and cracking the concrete floor under the heavy load and intense heat.
-> Inset Panel 2 (Small): Close-up of Ian on the ground, shielding his eyes from the intense red volcanic glare and hot steam.
-> Inset Panel 3 (Small): Close-up of Uandi's glowing red runic patterns on both arms slowly fading back to normal.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Uandi**
-> - **Ian**
+> Official comic book page layout, multi-panel grid of 6 panels with irregular diagonal borders. Modern American dark sci-fi comic book art style. Highly detailed, high-contrast desaturated colors. 2D illustration. NO 3D, NO text.
+> Panel 1: High-angle shot of a dark construction site in Brooklyn under a cold autumn drizzle. Rusty iron structures and green protective netting are visible against the cloudy sky.
+> Panel 2: Extreme close-up of a heavy crane pulley aloft. A thick steel cable is under extreme tension, with metal strands dramatically snapping and spraying tiny sparks.
+> Panel 3 (Irregular panel with sharp diagonal borders): The steel cable snaps completely with a violent whip-like motion, sending a spray of rain droplets and small metal fragments flying.
+> Panel 4: A bundle of three massive steel I-beams slides off a wooden platform, plunging straight down in a steep diagonal trajectory.
+> Panel 5 (Extreme close-up, cliffhanger shot): Ian's eyes wide behind his thick glasses, completely frozen in paralyzed horror. The massive, dark reflection of the falling steel beams is clearly visible on his lenses.
+> Panel 6 (Action panel with broken borders): Uandi leaps forward to push Ian away. Uandi's robust leg and boot break through the lower panel border, physically popping out into the white gutter of the comic page.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 39 (Plano de Impacto - Panel Principal):** La viga de acero choca directo contra los brazos cruzados de Uandi y se dobla. Uandi está en **Modo Sobrecarga**: las Runas Cinéticas brillan en rojo volcánico vivo, emana vapor denso por sus poros y el concreto bajo sus botas se quiebra y deforma por la distorsión térmica.
-* **Viñeta 40 (Plano Detalle - Inset 1):** Las botas de Uandi quebrando el concreto por el peso y la distorsión térmica.
-* **Viñeta 41 (Plano Detalle - Inset 2):** Ian en el suelo cubriéndose ante el resplandor rojo y el vapor caliente.
-* **Viñeta 42 (Plano Detalle - Inset 3):** Las Runas Cinéticas de ambos brazos volviendo a la normalidad mientras disipan la estática cinética.
+* **Viñeta 22 (Plano General Picado):** Vista desde lo alto de la obra en construcción de noche, con la lluvia cayendo en diagonal sobre los andamios y las lonas.
+* **Viñeta 23 (Plano Detalle):** Primer plano extremo del cable de acero de la grúa; la tensión excesiva hace que los hilos metálicos se corten uno tras otro despidiendo chispas.
+* **Viñeta 24 (Viñeta irregular diagonal - Plano Medio Corto):** El cable se corta con un latigazo violento, esparciendo gotas de lluvia en el aire. El borde del panel está inclinado en diagonal para acentuar el dinamismo.
+* **Viñeta 24b (Plano Picado Dinámico):** Las tres pesadas vigas de acero se deslizan y caen en picada libre hacia la vereda.
+* **Viñeta 24c (Primer Plano Extremo - Acercamiento de Suspenso / Cliffhanger):** Rostro de Ian mirando hacia arriba congelado por el pánico, con la lente de sus anteojos reflejando nítidamente la silueta metálica gigante que cae sobre él.
+* **Viñeta 25 (Plano de Acción con Elemento Sobresaliente):** Uandi reacciona por puro instinto, saltando hacia adelante para empujar a Ian. El pie izquierdo de Uandi y su bota militar rompen el marco inferior de la viñeta, sobresaliendo físicamente hacia la calle blanca del cómic.
 
 ---
 
-**Personajes:** Ian, Uandi
-
-### PÁGINA 10: Fibras Musculares
-
+### PÁGINA 7: El Clímax del Poder (Splash Page / Aegis)
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; desaturated tones and fading red/orange highlights. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: The massive steel beam, now bent in half, falls harmlessly to the ground next to them.
-> Panel 2: Uandi collapses to his knees on the cracked concrete, panting heavily, both of his arms smoking slightly with hot steam, his skin looking red and hot.
-> Panel 3: Ian gets up, brushing dust off his dark gray hoodie, staring at Uandi with a mix of shock and intense scientific curiosity.
-> Panel 4: Medium shot. Ian helps Uandi stand up, talking to him while pointing at the bent steel beam. Uandi looks exhausted and stares at his runic arms.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Ian**
-> - **Uandi**
+> Official comic book page layout, dynamic layout. One huge main panel with irregular, jagged borders, with three small inset panels at the bottom. Modern American dark sci-fi comic book art style. Visceral paper textures; color palette of desaturated urban tones and explosive volcanic red-hot neon highlights. 2D illustration. NO 3D, NO text.
+> Main Panel (Large, broken border): The massive steel beam slams violently directly into Uandi's crossed robust forearms. The steel beam bends and deforms around his arms, absorbing the kinetic impact. Uandi's Runas Cinéticas on his muscular arms glow with a hot volcanic red light. Steam and heat wave ripples emanate from his skin. The bent tip of the steel beam and the volcanic steam blast break through the outer frame of the page, popping out into the margins.
+> Inset Panel 1 (Small): Close-up of Uandi's boots cracking the pavement under the pressure.
+> Inset Panel 2 (Small): Close-up of the bent, warped steel beam falling harmlessly to the wet ground.
+> Inset Panel 3 (Small, extreme close-up): Ian's face on the ground, staring in disbelief with wide eyes and mouth open.
+> --no 3d, cgi, photorealistic, text
 
-* **Viñeta 43 (Plano Medio):** La viga doblada a la mitad cae a un lado de los chicos.
-* **Viñeta 44 (Plano Corto):** Uandi cae de rodillas exhausto, con sus brazos emanando vapor caliente y la piel enrojecida.
-* **Viñeta 45 (Plano Americano):** Ian se incorpora y mira la viga doblada y luego a Uandi, con cara de asombro.
-* **Viñeta 46 (Plano Medio Largo):** Ian ayuda a Uandi a levantarse mientras le explica su teoría sobre la absorción de la energía cinética directa en sus fibras musculares.
+* **Viñeta 26 (Splash Page Irregular - Panel Principal con Elemento Sobresaliente):** La viga de acero impacta en los antebrazos cruzados de Uandi y se dobla. Las runas de Uandi brillan en rojo vivo, emanando vapor térmico. La viga de acero deformada y la onda de vapor caliente rompen los bordes externos de la viñeta, sobresaliendo de los límites de la página en un efecto 3D visceral.
+* **Viñeta 27 (Plano Detalle - Inset 1):** El calzado de Uandi quebrando el asfalto por---
+
+### PÁGINA 7.5: El Peso del Metal
+> [!TIP]
+> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
+> Official comic book page layout, multi-panel grid of 6 panels with irregular diagonal borders. Modern American dark sci-fi comic book art style. Highly detailed, high-contrast desaturated colors, volcanic red highlights. 2D illustration. NO 3D, NO text.
+> Panel 1 (Action panel with broken border): Uandi stands upright under the rain, with the massive bent steel I-beam draped over his back and shoulders like a giant yoke. His skin is hot, venting white steam. The glowing red Runas Cinéticas on his arms shine intensely. The steel beam and the white steam break out of the panel border.
+> Panel 2 (Extreme close-up): Close-up of the contact point where the steel beam rests against Uandi's shoulder skin. The heavy steel is heating up, glowing with a bright orange/yellow thermal heat at the points of contact.
+> Panel 3: Uandi shrugs his robust shoulders, easily letting the massive steel beam slide off his back.
+> Panel 4 (Action panel with broken border): The steel beam slams violently onto the wet pavement. The asphalt shatters, flying fragments and water droplets break through the panel frame in a 3D pop-out.
+> Panel 5 (High angle shot): High-angle view from the top of the scaffolding looking down. Three construction workers in yellow hard hats are staring down with wide eyes, completely confused and terrified.
+> Panel 6 (Extreme close-up, cliffhanger shot): Close-up of Uandi staring at his hands in disbelief, then turning his head to look at Ian with deep intrigue and wonder.
+> --no 3d, photorealistic, cgi, text
+
+* **Viñeta 29b (Plano General con Elemento Sobresaliente):** Uandi de pie bajo la lluvia con la enorme viga doblada en su espalda como si fuera un yugo. El vapor denso de su piel y sus runas rojas en los brazos brillan intensamente, rompiendo los límites superiores del panel.
+* **Viñeta 29c (Plano Detalle / Primer Plano Extremo):** La viga de metal calentándose en los puntos donde hace contacto con la piel de los hombros de Uandi, volviéndose incandescente en un color amarillo-naranja brillante.
+* **Viñeta 29d (Plano Medio Corto):** Con un simple movimiento de hombros y total facilidad, Uandi deja caer la viga hacia atrás.
+* **Viñeta 29e (Plano Detalle con Elemento Sobresaliente):** La viga impacta contra el asfalto mojado, rompiéndolo y esparciendo fragmentos de piedra y agua que vuelan fuera de la viñeta en 3D.
+  * **EFECTO DE SONIDO:** ¡CLANG-BOOM!
+* **Viñeta 29f (Plano Picado General):** Vista desde lo alto de los andamios. Tres obreros con cascos amarillos miran hacia abajo completamente desconcertados y asustados, sin entender qué acaba de pasar.
+* **Viñeta 29g (Primer Plano Extremo - Cliffhanger):** Uandi se mira las palmas de las manos con incredulidad, y luego levanta la vista hacia Ian con una mezcla de intriga y desconcierto.
+  * **UANDI:** —Ian... ¿qué carajo soy ahora?—
 
 ---
 
-## ACTO 3: Fragmentación en Hell's Kitchen (Páginas 11 - 15)
-
-**Personajes:** Julián, Matones de la Mafia
-
-### PÁGINA 11: Lluvia en Hell's Kitchen
-
+### PÁGINA 8: Retorno en Silencio
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; rainy night, desaturated tones, red and blue neon highlights. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: Wide shot of Hell's Kitchen under heavy pouring rain at night. The dark alleyways are lit by the flickering red and blue neon lights of a shady gambling club.
-> Panel 2: Julián (slender, lean build, short hair with a clean fade on the sides, a neat trim beard, no glasses, sharp facial features) kicks open the back door of the club, walking out with a broad, confident grin, counting a thick stack of $100 bills and stuffing them into his black leather jacket which is worn over a navy blue crewneck sweater.
-> Panel 3: Wide shot. Three large, menacing mob enforcers in dark coats step out from the shadows of the alley behind Julián, blocking his path.
-> Panel 4: Low-angle shot of the alley. It is blocked by rusty dumpsters and iron fences, leaving Julián trapped with no way out.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Julián** (Esbelto, chaqueta de cuero negra, suéter azul marino debajo, corte fade, barba prolija, sin anteojos)
-> - **Matones de la Mafia**
+> Official comic book page layout, multi-panel grid of 4 panels with irregular borders. Modern American dark sci-fi comic book art style. Wet night, desaturated tones. 2D illustration. NO 3D, NO text.
+> Panel 1: Ian and Uandi walking side by side down the dark, rainy Brooklyn streets. Both have their hands deep in their pockets, hoods pulled up, in absolute silence. Inset close-up of Uandi's forearms: the glowing red runes fade, turning back into cold, imperceptible scars under his skin.
+> Panel 2: They push open the back metal door of the base, sliding inside quietly.
+> Panel 3: From the dark hallway, they look into the living room. Julian is still sitting on the leather couch, completely absorbed in the soccer game on the CRT TV.
+> Panel 4 (Extreme close-up, cliffhanger shot): Ian's face with a finger pressed to his lips in a sharp "shh" gesture, his eyes expressing warnings and worry.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 47 (Plano General):** Hell's Kitchen bajo lluvia torrencial de noche. Callejones oscuros iluminados por neón de un club clandestino.
-* **Viñeta 48 (Plano Medio):** Julián sale pateando la puerta trasera del local, sonriendo y contando un fajo de billetes. Se aprecia su aspecto físico: esbelto, con fade, barba y sin anteojos, con su campera de cuero negra.
-* **Viñeta 49 (Plano General):** Tres matones corpulentos con sobretodos negros salen a su encuentro desde la oscuridad.
-* **Viñeta 50 (Plano Picado):** El callejón bloqueado por contenedores de basura y rejas, sin salida para Julián.
+* **Viñeta 30 (Plano Americano con Inserto de Primer Plano):** Ian y Uandi caminan de regreso bajo la lluvia en absoluto silencio, con las capuchas puestas. Uandi se mira el antebrazo izquierdo, donde las runas volcánicas se apagan y vuelven a ser cicatrices oscuras y frías.
+* **Viñeta 31 (Plano Medio):** Empujan la puerta trasera de chapa de la base de Dumbo, entrando con cautela para no hacer ruido.
+* **Viñeta 32 (Plano General Interno):** Desde la penumbra del pasillo, ven a Julián tirado en el sillón de espaldas, sumergido en el partido de fútbol de la TV de tubo.
+* **Viñeta 33 (Primer Plano Extremo - Cliffhanger):** Ian hace el gesto de silencio con el dedo índice pegado a los labios, mirándolo fijamente con ojos de advertencia.
 
 ---
 
-**Personajes:** Julián, Matón Líder
-
-### PÁGINA 12: La Navaja y el Truco
-
+### PÁGINA 9: Uandi a Escondidas
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; rainy night, desaturated tones, blue and red neon highlights. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: Close-up of the lead thug's hand opening a gleaming chrome switchblade with a sharp motion. Raindrops splatter on the metal blade.
-> Panel 2: Close-up of the lead thug's scarred eye under his dark coat collar, staring maliciously.
-> Panel 3: Julián raises his hands in a defensive gesture, his smirk still on his face but a cold sweat drop runs down his cheek.
-> Panel 4: Close-up of Julián's hand, his fingers starting to twitch with small, erratic red and blue static sparks.
-> Panel 5: Medium shot. Julián talks to the thugs with a cocky grin, attempting to stall them with his hands raised.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Julián**
-> - **Matón Líder**
+> Official comic book page layout, multi-panel grid of 6 panels with irregular diagonal borders. Modern American dark sci-fi comic book art style. Dark garage setting, single source of light. 2D illustration. NO 3D, NO text.
+> Panel 1: Uandi walks alone into the dark garage/patio area of the base.
+> Panel 2: Uandi approaches an old, broken down sedan car sitting on flat tires.
+> Panel 3: Uandi gently places his hand on the dusty hood of the car, looking thoughtful.
+> Panel 4 (Irregular panel with low angle): Uandi places his hand under the front bumper of the car, his robust muscles tensing.
+> Panel 5 (Action panel with broken border): Uandi lifts the entire front of the car off the ground with a single hand, his Runas Cinéticas glowing a faint red. The car's front bumper breaks through the bottom panel frame, popping out into the gutter in a 3D effect.
+> Panel 6 (Extreme close-up, cliffhanger shot): Close-up of Uandi's face, sweating heavily but smiling in disbelief as he holds the car.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 51 (Plano Detalle):** El líder de los matones abriendo una navaja cromada bajo la lluvia.
-* **Viñeta 52 (Primer Plano):** Los ojos con cicatriz del matón, mirándolo fijamente.
-* **Viñeta 53 (Plano Medio Corto):** Julián levanta las manos tratando de calmar la situación, con una gota de sudor frío.
-* **Viñeta 54 (Plano Detalle):** Los dedos de Julián parpadeando con chispas de estática analógica azul y roja.
-* **Viñeta 55 (Plano Medio):** Julián sonriendo de lado, intentando ganar tiempo con sus palabras.
+* **Viñeta 34 (Plano General):** Uandi camina solo hacia el garaje de la base de noche, rodeado de herramientas viejas.
+* **Viñeta 35 (Plano Medio):** Se acerca a un viejo sedán abandonado cubierto de polvo.
+* **Viñeta 35b (Plano Medio Corto):** Uandi apoya su mano suavemente sobre el capó polvoriento del auto, pensativo.
+* **Viñeta 36 (Viñeta Irregular en Contrapicado):** Coloca su mano izquierda bajo el paragolpes delantero, flexionando las rodillas.
+* **Viñeta 37 (Plano General con Elemento Sobresaliente):** Uandi levanta la parte delantera del auto con una sola mano. El paragolpes del auto y la mano de Uandi rompen la viñeta por debajo, sobresaliendo físicamente del panel en 3D.
+* **Viñeta 37b (Primer Plano Extremo - Cliffhanger):** Rostro de Uandi sudando frío, con una mueca de incredulidad y asombro mientras sostiene el auto en el aire.
 
 ---
 
-**Personajes:** Julián, Matón Líder
-
-### PÁGINA 13: Desfase Cuántico
-
+### PÁGINA 10: El Enganche de Julián
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown: Extreme perspective and kinetic lines by Jorge Jimenez, organic body expressions by Sara Pichelli. Gritty paper textures; desaturated tones, bright cian and magenta neon highlights. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: The lead thug lunges forward violently, slashing his switchblade towards Julián's chest.
-> Panel 2: Action shot. Julián's body suddenly splits and doubles into three blurry, shaking red-and-blue analog television static copies (Ecos de estática), like double vision. The thug's knife slices clean through the empty air of the central copy.
-> Panel 3: The thug stumbles forward in confusion, his face twisted in disbelief as he passes through the blurry static copy.
-> Panel 4: Medium shot. All three copies of Julián touch their heads in perfect sync, their expressions matching.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Julián**
-> - **Matón Líder**
+> Official comic book page layout, multi-panel grid of 4 panels with irregular borders. Modern American dark sci-fi comic book art style. Cinematic pacing. 2D illustration. NO 3D, NO text.
+> Panel 1: The heavy sheet metal door of the garage swings open. Julian stands in the doorway holding a soda can, looking with a raised brow. Uandi has the car lifted with one arm, his face showing a mix of surprise and strain.
+> Panel 2 (Action panel with broken border): Startled, Uandi drops the car. The front of the sedan slams down with a crash. The dust cloud and debris explode outward, breaking the panel frame in a 3D pop-out.
+> Panel 3: Uandi quickly leans against the car's hood, trying to look casual, sweating and hiding his steaming arm. Julian walks closer.
+> Panel 4 (Extreme close-up, cliffhanger shot): Close-up of Julian's face illuminated by the harsh phone light, looking at Uandi with absolute deadpan, sarcastic eyes.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 56 (Plano de Acción):** El matón lanza un estocazo rápido con la navaja hacia Julián.
-* **Viñeta 57 (Efecto Glitch):** El cuerpo de Julián se desfasa en tres réplicas borrosas de estática analógica azul y roja (Ecos); el cuchillo pasa de largo a través de la estática.
-* **Viñeta 58 (Plano Medio):** El matón tropieza hacia adelante confundido, atravesando la imagen de estática.
-* **Viñeta 59 (Plano Medio Largo):** Las tres copias de Julián se mueven de forma sincronizada, tocándose la cabeza a la vez.
+* **Viñeta 38 (Plano General):** La puerta del garaje se abre de golpe y Julián aparece parado en el umbral con una lata en la mano. Uandi tiene el coche levantado con un brazo
+* **Viñeta 39 (Acción con Elemento Sobresaliente):** Uandi suelta el auto asustado, cayendo el vehículo con un golpe brutal. La onda expansiva de polvo y las astillas de madera de los tacos rompen la cuadrícula de la viñeta, desbordándose en 3D.
+* **Viñeta 40 (Plano Americano):** Uandi disimula apoyado en el capó mientras esconde su brazo izquierdo humeante, sudando frío. Julián se acerca tomando de la lata.
+* **Viñeta 41 (Primer Plano Extremo - Cliffhanger):** Julián le apunta a la cara a Uandi con la linterna del celular; la luz dura dibuja sombras marcadas en el rostro de Julián, quien lo mira con absoluto cinismo.
 
 ---
 
-**Personajes:** Julián, Matones de la Mafia
+## ACTO 2: Clandestinidad y Cortocircuito (Páginas 11 - 20)
 
-### PÁGINA 14: Combate Glitch
-
+### PÁGINA 11: El Timbón de Hell's Kitchen
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; desaturated tones, electric red and blue neon highlights. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: The other two thugs attack with heavy iron pipes, swinging wildly at the different copies of Julián.
-> Panel 2: Julián runs, his movement leaving a trailing path of double static images. The thugs' pipes strike static copies that explode into simple blue and red static dust.
-> Panel 3: Julián is cornered against the brick wall, frantically raising his hands and conjuring playing cards of pure, sparking red and blue static energy from his fingers.
-> Panel 4: Close-up of Julián's fingers summoning the cards made of glowing red-and-blue static electricity, buzzing with power.
-> Panel 5: Julián throws the conjured deck of glowing energy cards into the air towards the three thugs charging at him.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Julián**
-> - **Matones de la Mafia**
+> Official comic book page layout, multi-panel grid of 6 panels with irregular diagonal borders. Modern American dark sci-fi comic book art style. Shady illegal poker den. 2D illustration. NO 3D, NO text.
+> Panel 1: Julian walks out of the base, telling Ian he's going to Madison Square Garden to watch the Knicks.
+> Panel 2: Julian walks down a dark, wet street under flickering neon signs in Manhattan.
+> Panel 3: Julian enters a smoky, dim basement poker den in Hell's Kitchen filled with tough criminals. A few players wear subtle pins or patches with the Vanguard logo (a stylized crest).
+> Panel 4: Julian sits at the card table, receiving his cards, smiling.
+> Panel 5: Julian sitting at the card table, with a mountain of chips in front of him, smiling smugly as he mocks the angry players.
+> Panel 6 (Extreme close-up, cliffhanger shot): Close-up of Julian's smug face as his hand places down the winning cards (royal flush) dramatically, reflecting his arrogance.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 60 (Plano de Acción):** Los otros dos matones atacan con caños de hierro.
-* **Viñeta 61 (Acción):** Julián se mueve dejando un rastro de estática analógica duplicada; los golpes deshacen sus copias en simples chispas rojas y azules.
-* **Viñeta 62 (Plano Medio):** Julián contra la pared de ladrillos levanta las manos, conjurando naipes de pura energía estática brillante azul y roja.
-* **Viñeta 63 (Plano Detalle):** La estática inestable materializando las cartas en sus dedos en un brillo de chispas rojas y azules.
-* **Viñeta 64 (Plano Medio):** Julián lanza los naipes de energía al aire hacia los matones.
+* **Viñeta 42 (Plano Medio):** Julián saliendo de la base saludando con la mano, mintiendo con su excusa.
+* **Viñeta 42b (Plano General):** Julián camina por las calles mojadas de Hell's Kitchen bajo carteles de neón.
+* **Viñeta 43 (Plano General):** El sótano clandestino en Hell's Kitchen, con humo de cigarrillo y tipos pesados jugando a las cartas, algunos con sutiles parches con el logo de Vanguard.
+* **Viñeta 43b (Plano Medio):** Julián se acomoda en la mesa recibiendo sus cartas con expresión divertida.
+* **Viñeta 44 (Plano Americano):** Julián en la mesa de póker, con una pila enorme de fichas y billetes frente a él, sonriendo con soberbia.
+* **Viñeta 45 (Primer Plano Extremo - Cliffhanger):** Julián baja las cartas ganadoras (Escalera Real) con un gesto de sus dedos. Sus ojos fijos y burlones miran directo al lector en un plano muy cerrado.
 
 ---
 
-**Personajes:** Julián, Matones de la Mafia
-
-### PÁGINA 15: Explosión Digital (Wildcard) (Splash Dinámica)
-
+### PÁGINA 12: La Emboscada
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, dynamic multi-panel page. One huge main panel taking up 70% of the page, with three small inset panels at the bottom. Modern American dark sci-fi comic book art style. Technical breakdown: Extreme perspective and kinetic lines inspired by Jorge Jimenez, visceral heavy inking by Greg Capullo, organic body language by Sara Pichelli. Gritty paper textures; color palette of desaturated tones and explosive cian and magenta neon contrast highlights. 2D illustration. NO 3D, NO text.
-> 
-> Main Panel (Large): The energy cards detonate simultaneously in a powerful flash of red-and-blue television static and a kinetic shockwave of wind, blowing the thugs backward into garbage bins.
-> Inset Panel 1 (Small): Close-up of the alleyway streetlights exploding due to the massive static power surge.
-> Inset Panel 2 (Small): Close-up of Julián shielding his face with his arm, the red and blue static glow reflecting in his eyes.
-> Inset Panel 3 (Small): The three thugs lying unconscious, tangled in trash containers and surrounded by fading red and blue static sparks.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Julián**
-> - **Matones de la Mafia**
+> Official comic book page layout, multi-panel grid of 4 panels with irregular diagonal slash borders. Modern American dark sci-fi comic book art style. Rainy night, dark alley. 2D illustration. NO 3D, NO text.
+> Panel 1: Julian exits the back door of the poker den into a dark alley under the heavy rain, smiling and counting a thick stack of bills.
+> Panel 2 (Action panel with broken border): A massive thug steps out from behind a dumpster blocking his way, while another blocks from behind flipping a switchblade. The silver metal blade breaks through the diagonal frame border, sticking out in 3D.
+> Panel 3: Julian backs up against the brick wall, his cocky smile vanishing, hands raised in a defensive posture.
+> Panel 4 (Extreme close-up, cliffhanger shot): Close-up of Julian's wide, panicked eyes as digital chromatic aberration (cyan/magenta glitch noise) begins to distort his face.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 65 (Plano de Impacto - Panel Principal):** Las cartas estallan en una ráfaga de estática analógica roja y azul y viento expansivo, mandando a los matones contra la basura.
-* **Viñeta 66 (Plano Detalle - Inset 1):** Las bombillas del callejón reventando por la sobrecarga de estática eléctrica.
-* **Viñeta 67 (Plano Detalle - Inset 2):** Julián cubriéndose la cara, con sus ojos reflejando el destello estático rojo y azul.
-* **Viñeta 68 (Plano Detalle - Inset 3):** Los tres matones inconscientes tirados entre chispas de estática apagándose y basura.
+* **Viñeta 46 (Plano Medio con Plano Corto):** Julián sale al callejón lluvioso y oscuro, guardando los billetes en su campera. Se detiene sonriendo al contar el fajo de billetes.
+* **Viñeta 47 (Viñeta Irregular con Elemento Sobresaliente):** Matones le bloquean el paso. Uno de ellos hace brillar una navaja automática cromada; la punta de la navaja sobresale del marco diagonal de la viñeta en 3D.
+* **Viñeta 48 (Plano Medio Corto):** Julián retrocede acorralado contra la pared de ladrillos, perdiendo la pose.
+* **Viñeta 49 (Primer Plano Extremo - Cliffhanger):** Los ojos de Julián abiertos con pánico; la estática digital glitch roja y azul comienza a distorsionar su rostro con aberración cromática.
 
 ---
 
-## ACTO 4: Sobrecarga Crítica en la Terraza (Páginas 16 - 20)
-
-**Personajes:** Uandi, Julián, Ian
-
-### PÁGINA 16: La Terraza de Brooklyn
-
+### PÁGINA 13: Manifestación Glitch
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; desaturated tones, cian and electric gold neon accents. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: Wide shot of the rooftop terrace of the Brooklyn bunker at night. The rain has stopped, but the sky remains heavy. In the distance, Manhattan is a dark silhouette with trembling lights.
-> Panel 2: Uandi sits on a concrete block, wrapped in a blanket, shivering slightly and looking exhausted and hot, drinking from a water bottle.
-> Panel 3: Julián paces back and forth like a caged lion, his hands still twitching with small red and blue static pixels.
-> Panel 4: Ian climbs up the roof hatch carrying his digital tablet and wearing a prototype GhostLens tactical eyepiece (glowing monocle/eyewear), which projects cold data charts onto his face.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Uandi**
-> - **Julián**
-> - **Ian**
+> Official comic book page layout, multi-panel grid of 6 panels with irregular jagged borders. Modern American dark sci-fi comic book art style. Kinetic action. Color palette of rainy dark blues and electric magenta/cyan chromatic aberrations. 2D illustration. NO 3D, NO text.
+> Panel 1 (Action panel with broken border): Thug swings a fist at Julian's face. The thug's heavy fist breaks out of the panel borders, punching toward the reader in a 3D pop-out effect.
+> Panel 2: Julian's body suddenly splits and shifts into three shaking, glitchy double static copies.
+> Panel 3: The thug's fist passes right through the pixelated air of the central copy (lag effect).
+> Panel 4: The thug stumbles forward in confusion through the static copy.
+> Panel 5: Julian runs out of the alley, gasping for breath, half of his face still pixelated with glitch static.
+> Panel 6 (Extreme close-up, cliffhanger shot): Close-up of Julian's face as he reaches the avenue, staring at his hands which are still flickering with digital static.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 69 (Plano General Nocturno):** Terraza del búnker en Brooklyn. Silueta lejana de Manhattan bajo cielo cargado.
-* **Viñeta 70 (Plano Americano):** Uandi sentado con una manta sobre los hombros, tomando agua. Se ven sus brazos tatuados.
-* **Viñeta 71 (Plano Medio):** Julián camina ansioso, con las manos tiritando en chispas de estática analógica.
-* **Viñeta 72 (Plano Medio):** Ian asoma por la escotilla de la terraza cargando su tablet iluminada y portando su ocular táctico prototipo (GhostLens) en el ojo.
+* **Viñeta 50 (Plano Corto con Elemento Sobresaliente):** El matón lanza un puñetazo directo al rostro de Julián. El puño del matón rompe la viñeta, proyectándose hacia afuera en 3D.
+* **Viñeta 51 (Viñeta Irregular - Efecto Glitch):** El cuerpo de Julián se desfasa en tres copias de estática analógica.
+* **Viñeta 51b (Plano Detalle):** El golpe pasa a través del aire pixelado con lag visual.
+* **Viñeta 52 (Plano Medio):** El matón tropieza confundido cruzando la estática.
+* **Viñeta 53 (Plano Medio Corto):** Julián escapa corriendo hacia la avenida; la mitad de su rostro sigue distorsionada por píxeles y lag cuántico.
+* **Viñeta 53b (Primer Plano Extremo - Cliffhanger):** Julián llega a la avenida y se mira la mano izquierda con terror; esta parpea con estática digital cian y magenta.
 
 ---
 
-**Personajes:** Julián, Ian, Uandi
-
-### PÁGINA 17: Explicación de los Síntomas
-
+### PÁGINA 14: El Guiso y la Cuchara
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; desaturated tones, cian and gold highlights. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: Julián approaches Ian, gesturing wildly with his hands, describing his duplication.
-> Panel 2: Close-up of Julián's face, wide-eyed and frantic as he talks to Ian.
-> Panel 3: Uandi looks up from the concrete block, eyes bloodshot, speaking with a serious and weary expression.
-> Panel 4: Close-up of Uandi's hands, the Runas Cinéticas on both of his arms still showing faint, warm red glowing traces.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Julián**
-> - **Ian**
-> - **Uandi**
+> Official comic book page layout, multi-panel grid of 4 panels. Modern American dark sci-fi comic book art style. Cozy but tense base kitchen. 2D illustration. NO 3D, NO text.
+> Panel 1: Inside the base kitchen. Uandi is standing by the stove, trying to heat up the metal pot containing stew.
+> Panel 2: Close-up of Uandi's robust hand holding a metal spoon. As he tries to stir, his hand bends and crushes the spoon into a ball of metal. Uandi looks at the crushed spoon with frustration.
+> Panel 3: Uandi throws the ruined spoon into the sink with a loud metal clang. Leans against the kitchen counter, shoulders venting a subtle white steam.
+> Panel 4 (Extreme close-up, cliffhanger shot): Close-up of Uandi's forehead and tensed eyebrows; sweat drops run down his face, and his pupils reflect a burning volcanic red heat.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 73 (Plano Medio Largo):** Julián se planta frente a Ian gesticulando exageradamente.
-* **Viñeta 74 (Primer Plano):** Rostro de Julián contando con pánico cómo se multiplicó.
-* **Viñeta 75 (Plano Medio):** Uandi levanta la vista con los ojos inyectados en sangre, relatando el choque con la viga.
-* **Viñeta 76 (Plano Detalle):** Las manos de Uandi en reposo, con las Runas Cinéticas en ambos brazos temblando con débiles rastros rojos.
+* **Viñeta 54 (Plano General):** Uandi en la cocina calentando una olla con guiso.
+* **Viñeta 55 (Plano Detalle con Plano Corto):** La mano de Uandi doblando y aplastando la cuchara de metal como plastilina. Uandi contempla la cuchara destruida con enojo y frustración.
+* **Viñeta 57 (Plano Medio):** Uandi arroja la cuchara al fregadero (¡CLANG!) y se apoya contra la mesada, con sus hombros humeando levemente.
+* **Viñeta 57c (Primer Plano Extremo - Cliffhanger):** Acercamiento muy cerrado de la frente y cejas tensas de Uandi; gotas de sudor corren y sus ojos brillan con calor rojo volcánico latente.
 
 ---
 
-**Personajes:** Ian, Julián, Uandi
-
-### PÁGINA 18: El Diagnóstico Cuántico
-
+### PÁGINA 15: Sobrecarga Térmica
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; desaturated tones, cian and gold highlights. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: Ian stands in front of them, showing them the screen of his digital tablet, wearing his prototype GhostLens eyepiece.
-> Panel 2: Close-up of the tablet screen showing simple heat maps and energy wave graphs.
-> Panel 3: Ian points a finger at Julián and Uandi, explaining the diagnosis with a grave and warnings-filled look.
-> Panel 4: Medium shot of the three of them. A heavy silence falls over the terrace under the starry, cloudy night.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Ian**
-> - **Julián**
-> - **Uandi**
+> Official comic book page layout, multi-panel grid of 6 panels. Modern American dark sci-fi comic book art style. Volcanic thermal energy effects. 2D illustration. NO 3D, NO text.
+> Panel 1: Uandi's skin begins to glow a faint red.
+> Panel 2: Close-up of Uandi's muscular arm, Runas Cinéticas glowing hot.
+> Panel 3: Thick white steam begins venting from his robust shoulders and arms.
+> Panel 4 (Action panel with broken border): Uandi grabs the pot with his bare hands; the metal pot warps and deforms under his grip. The distorted handle of the pot breaks through the panel frame, popping out in 3D.
+> Panel 5: The stew inside the pot starts boiling violently and splashing due to the extreme heat.
+> Panel 6 (Extreme close-up, cliffhanger shot): Extreme close-up of Uandi's face. His features are distorted by thermal distortion waves, and steam leaks directly from his gritted teeth.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 77 (Plano Americano):** Ian les muestra la pantalla de la tablet a Julián y Uandi, portando su ocular táctico GhostLens.
-* **Viñeta 78 (Plano Detalle):** Gráficos simples de ondas de energía en la tablet vinculando los picos de poder.
-* **Viñeta 79 (Plano Medio):** Ian apuntándolos con la tableta, dándoles la cruda realidad de su sobrecarga molecular y degradación.
-* **Viñeta 80 (Plano General):** Los tres amigos en silencio en la terraza bajo el cielo nocturno.
+* **Viñeta 58 (Plano Medio):** La piel de Uandi se pone incandescente.
+* **Viñeta 58b (Plano Detalle):** Las runas cinéticas en su brazo izquierdo brillan en rojo vivo.
+* **Viñeta 58c (Plano Corto):** Columnas de vapor espeso brotan de sus poros y hombros.
+* **Viñeta 59 (Plano Detalle con Elemento Sobresaliente):** Uandi aferra la olla con las manos desnudas; el metal se deforma. Las asas de la olla deformadas se salen del borde del panel en 3D.
+* **Viñeta 60 (Plano Corto):** El guiso empieza a hervir salvajemente, salpicando por el calor extremo de sus manos.
+* **Viñeta 61 (Primer Plano Extremo - Cliffhanger):** Rostro de Uandi distorsionado por las ondas de calor y vapor saliendo de sus dientes apretados en una mueca de furia pura.
 
 ---
 
-**Personajes:** Ian, Julián, Uandi, Comandante R.E.G.U.L.A.R., Soldados de Vanguard
-
-### PÁGINA 19: Las Fuerzas de Vanguard
-
+### PÁGINA 16: El Quiebre
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; deep dark urban atmosphere, cian neon highlights. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: A massive beam of light from giant searchlights sweeps across the industrial alleyways a few blocks away.
-> Panel 2: The three guys look over the terrace railing, peering down toward the docks.
-> Panel 3: POV shot through Ian's GhostLens tactical eyepiece, showing soldiers in heavy black and gold armor cordoning off a street, highlighted in simple green digital grids.
-> Panel 4: Close-up of the commander in charge: Commander R.E.G.U.L.A.R., wearing heavy tactical exo-armor and a solid glowing blue visor.
-> Panel 5: Commander R.E.G.U.L.A.R. gestures with his cybernetic arm, commanding his troops in the street under the searchlights.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Ian**
-> - **Julián**
-> - **Uandi**
-> - **Comandante R.E.G.U.L.A.R.** (Exo-uniforme militar pesado, visor azul sólido, brazo robótico)
+> Official comic book page layout, multi-panel grid of 4 panels with irregular diagonal borders. Modern American dark sci-fi comic book art style. Tension build-up. 2D illustration. NO 3D, NO text.
+> Panel 1: Ian runs into the kitchen from the workshop, his GhostLens tactical eyepiece activated. In the background, Julian walks in from the main door looking relaxed.
+> Panel 2: Julian walks up behind Uandi, placing a hand on his steaming muscular shoulder.
+> Panel 3: Close-up of Uandi's face turning around; his features are distorted by primal rage and bloodshot red eyes. Julian's smile freezes as he realizes the danger.
+> Panel 4 (Action panel with broken border - Cliffhanger): Uandi raises both hands, ready to push Julian. Uandi's hands and the venting white steam break through the side borders of the panel, overlapping the gutter in 3D.
+> --no 3d, photorealistic, cgi, text
 
-* **Viñeta 81 (Plano General):** Reflectores gigantescos barriendo el callejón industrial a lo lejos.
-* **Viñeta 82 (Plano Americano):** Los chicos se asoman por la baranda de la terraza para mirar.
-* **Viñeta 83 (Plano POV):** Imagen del visor táctico de Ian: soldados de VANGUARD de negro y dorado acordonando la zona con vehículos, remarcados con cuadrículas verdes.
-* **Viñeta 84 (Primer Plano):** El Comandante R.E.G.U.L.A.R. con su exo-armadura y visor azul brillante.
-* **Viñeta 85 (Plano Medio):** El Comandante ordenando a sus soldados activar la red de estasis molecular.
+* **Viñeta 62 (Plano Americano con Plano Medio):** Ian entra de su taller con su ocular GhostLens encendido, mientras Julián regresa de la calle, distraído y relajado.
+* **Viñeta 64 (Plano Corto):** Julián se acerca a Uandi y le apoya la mano en el hombro humeante con una sonrisa burlona.
+* **Viñeta 65 (Primer Plano Extremo):** Uandi se da vuelta hacia Julián con el rostro desencajado por la furia y las pupilas rojas. Julián borra su sonrisa ante la hostilidad de Uandi.
+* **Viñeta 65c (Plano de Acción con Elemento Sobresaliente - Cliffhanger):** Uandi levanta los brazos cargados de vapor acumulado. Las manos y las nubes de vapor caliente se superponen a los bordes de la viñeta en 3D.
 
 ---
 
-**Personajes:** Don Vanguard, Uandi, Julián, Ian, Soldados de Vanguard
-
-### PÁGINA 20: Sobrecarga Cinética (Aegis Climax)
-
+### PÁGINA 17: El Empujón / La Mesa Rota
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
-> 
-> Official comic book page layout, dynamic multi-panel page. Modern American dark sci-fi comic book art style. Technical breakdown: Extreme perspectives by Jorge Jimenez, heavy inking by Greg Capullo, organic body changes by Sara Pichelli. Gritty paper textures; high quality, dark luxury, red and cian neon reflections. 2D illustration. NO 3D, NO text.
-> 
-> Panel 1: Inside a luxurious, cold penthouse office in Lower Manhattan. Don Vanguard (Alexander Vance, a large man in a gray Oxford suit) stands looking at the city, with floating holographic screens showing heat maps of Brooklyn.
-> Panel 2: Action shot on the rooftop. Vanguard soldiers breach the roof hatch violently, tactical drones humming and sweep lights blinding the boys.
-> Panel 3: Julián (slender, fade, no glasses) looks panicked and summons red and blue static energy cards, ready to fight. Ian raises his tablet, his GhostLens displaying critical thermal alerts next to him.
-> Panel 4: Uandi throws off his jacket with rage. The Runas Cinéticas on his chest and arms boil with an intense, burning red-hot volcanic energy. Thicks clouds of hot steam and vapor erupt from his body.
-> Panel 5 (Large Climax Panel): Uandi enters his Sobrecarga Cinética state. His body bulk and muscle mass expand massively, and his skin turns a deep glowing red color due to the raw kinetic heat. His eyes glow a solid crimson color. He has lost all judgment, roaring in a blind, violent obsession to protect his friends in front of the advancing Vanguard soldiers.
-> 
-> --no 3d, cgi, photorealistic, text, speech bubbles
-> 
-> **Personajes a subir al chat:**
-> - **Don Vanguard** (Alexander Vance: de contextura imponente, traje de tres piezas gris Oxford, anillo de diamante negro)
-> - **Uandi** (En Sobrecarga Cinética: musculatura expandida masivamente, piel de color rojo incandescente, ojos carmesí, emitiendo vapor denso)
-> - **Julián**
-> - **Ian**
+> Official comic book page layout, multi-panel grid of 6 panels with irregular diagonal slash borders. Modern American dark sci-fi comic book art style. Kinetic force, destructive impact. 2D illustration. NO 3D, NO text.
+> Panel 1: Uandi shoves Julian back with massive kinetic force.
+> Panel 2: Julian flies through the air across the living room, his face filled with shock.
+> Panel 3: Julian crashes violently into the heavy wooden table in the center of the base.
+> Panel 4: The wooden table breaks apart in a shower of splinters and fragments of wood.
+> Panel 5: The framed dusty group photo of the team with Sofi is launched into the air.
+> Panel 6 (Action panel with broken border, cliffhanger shot): The frame slams onto the concrete floor, its glass front shattering. Shards of glass and the flying frame break through the bottom border of the page, popping out in 3D.
+> --no 3d, photorealistic, cgi, text
+
+* **Viñeta 66 (Plano de Acción):** Uandi empuja a Julián con una fuerza descomunal.
+* **Viñeta 67 (Plano Medio):** Julián sale volando por el aire a través del living, atónito.
+* **Viñeta 68 (Acción):** Julián impacta contra la mesa de madera rústica de la base.
+* **Viñeta 68b (Plano Detalle):** La mesa se destroza en astillas y fragmentos.
+* **Viñeta 68c (Plano Detalle):** La foto enmarcada de Sofi sale volando en el aire.
+* **Viñeta 69 (Plano General con Elemento Sobresaliente - Cliffhanger):** La foto se estrella contra el suelo, rompiéndose el vidrio. Los fragmentos de vidrio rotos y el marco vuelan rompiendo el borde inferior de la viñeta, cayendo en 3D sobre el margen.
+
+---
+
+### PÁGINA 18: Combate de Mutaciones
+> [!TIP]
+> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
+> Official comic book page layout, multi-panel grid of 4 panels with irregular borders. Modern American dark sci-fi comic book art style. High action. 2D illustration. NO 3D, NO text.
+> Panel 1: Ian dashes out of the room towards the workshop in panic. In the background, giant, glowing red Uandi vents steam and advances menacingly towards Julian on the floor.
+> Panel 2 (Action panel with broken border): Julian, filled with anger on the floor, grabs a broken wooden board from the table. The board flashes with blue and red glitch energy in his hands, and the glitch static extends out of the panel borders in 3D.
+> Panel 3: Julian throws the glitching board at Uandi, cutting Uandi's shoulder.
+> Panel 4 (Extreme close-up, cliffhanger shot): Close-up of the cut regenerating instantly on Uandi's shoulder, skin closing with a red volcanic simmer and steam rising from the scar.
+> --no 3d, photorealistic, cgi, text
+
+* **Viñeta 70 (Plano Medio con Plano Americano):** Ian corre desesperado hacia el taller. Uandi (gigante y rojo) avanza pesadamente hacia Julián, quien está en el suelo.
+* **Viñeta 72 (Plano Corto con Elemento Sobresaliente):** Julián toma un listón de madera roto de la mesa; este se carga de estática glitch analógica que se desborda en 3D de la viñeta.
+* **Viñeta 73 (Acción con Plano Detalle):** Julián le revolea el madero a Uandi, hiriéndole el hombro. Se aprecia la herida sangrante.
+* **Viñeta 74 (Primer Plano Extremo - Cliffhanger):** La herida se cierra y se sella instantáneamente bajo un resplandor rojizo y siseo de vapor.
+
+---
+
+### PÁGINA 19: El Fierro de Energía y la Cura
+> [!TIP]
+> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
+> Official comic book page layout, multi-panel grid of 6 panels with irregular borders. Modern American dark sci-fi comic book art style. Climax action. Color palette includes glowing gold/purple energy highlights. 2D illustration. NO 3D, NO text.
+> Panel 1 (Action panel with broken border): Julian stands up, adrenaline pumping. In his right hand, he materializes a bent pipe made of pure, sparking blue and red glitch energy. The sparking energy breaks the panel frames in 3D.
+> Panel 2: Julian raises the pipe, glitch sparks crackling in blue and red.
+> Panel 3: Ian runs back into the living room, holding a glass test tube glowing with gold and purple quantum energy inside.
+> Panel 4: Ian throws the test tube like a baseball straight at Uandi's chest.
+> Panel 5: Close-up of the glass tube flying through the air towards Uandi's chest.
+> Panel 6 (Action panel with broken border, cliffhanger shot): The glass tube shatters on Uandi's chest, releasing an explosive cloud of golden electricity and purple glowing mist. The electric sparks and purple smoke break out of the panel frame in 3D.
+> --no 3d, photorealistic, cgi, text
+
+* **Viñeta 75 (Plano Americano con Elemento Sobresaliente):** Julián se levanta, materializando en su mano un fierro de pura energía glitch roja y azul que sobresale y rompe los marcos laterales.
+* **Viñeta 75b (Plano Medio):** Julián empuña el fierro con fuerza, con chispas glitch zumbando.
+* **Viñeta 76 (Plano Medio):** Ian irrumpe de vuelta en el living sosteniendo el tubo con energía dorada y púrpura.
+* **Viñeta 77 (Acción):** Ian arroja el tubo con fuerza directo a Uandi.
+* **Viñeta 77b (Plano Detalle):** Trayectoria del tubo de ensayo volando hacia el pecho de Uandi.
+* **Viñeta 78 (Plano Corto con Elemento Sobresaliente - Cliffhanger):** El tubo estalla contra el pecho de Uandi, liberando electricidad dorada y una nube púrpura que desborda el panel en 3D.
+
+---
+
+### PÁGINA 20: El Cierre y el Clon de Estática
+> [!TIP]
+> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
+> Official comic book page layout, multi-panel grid of 4 panels. Modern American dark sci-fi comic book art style. Cool-down and final twist. 2D illustration. NO 3D, NO text.
+> Panel 1: Uandi breathes in the golden/purple energy. His red skin cools down, his muscle mass returns to normal, and he collapses onto the floor. Julian's glitch energy pipe dissolves.
+> Panel 2: Ian looks at Julian in shock, asking a question. Julian looks at his empty hand, completely in blank.
+> Panel 3: Uandi scratches his head on the floor, speaking. Ian walks over to help Uandi sit up.
+> Panel 4 (Large panel with broken border, final twist): While Ian and Julian stare at each other processing the trauma, in the foreground, a glitchy, semi-transparent double copy of Julian approaches the ruined pot. The glitch copy of Julian breaks through the front gutter of the page, sticking out into the foreground in a 3D pop-out effect, eating the stew.
+> --no 3d, photorealistic, cgi, text
+
+* **Viñeta 79 (Plano Corto con Plano Medio):** Uandi inhala la energía, se enfría y cae desplomado al piso. El fierro glitch de Julián se disuelve.
+* **Viñeta 81 (Plano Corto):** Ian le pregunta qué era eso; Julián se mira la mano vacía en blanco.
+* **Viñeta 81b (Plano Medio con Plano Corto):** Uandi se rasca la cabeza y habla.
+* **Viñeta 81c (Plano Corto):** Ian se acerca y le tiende la mano a Uandi para ayudarlo a reincorporarse.
+* **Viñeta 82 (Plano General con Elemento Sobresaliente - Viñeta Final de Cierre):** En primer plano, una copia exacta de estática glitch de Julián se acerca a la olla destruida, come un bocado del guiso y tira un chiste. Este clon glitch rompe el borde frontal de la viñeta, sobresaliendo hacia adelante en un efecto 3D que lo coloca en el margen del cómic.

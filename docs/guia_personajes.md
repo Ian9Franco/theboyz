@@ -7,7 +7,7 @@ Sofi (Ropa de Viaje): Sofi, a 25-year-old woman with curly dark hair up in a mes
 
 Ian: Ian, a 25-year-old man with textured wavy brown hair, wearing black multi-layered glasses, a dark gray hoodie, and dark jeans with green sneakers.
 
-Uandi: Uandi, a muscular man with curly dark hair, wearing round glasses, a tight short-sleeve dark tactical t-shirt, and dark military cargo pants with black boots.
+Uandi: Uandi, a muscular man with curly dark hair, wearing round glasses, a tight short-sleeve dark tactical t-shirt, dark military cargo pants, and black boots. His left arm is covered in a full blackwork sleeve tattoo, and his right arm has NO sleeve, only a solid black armband around his biceps.
 
 Julián: Julián, a man with short wavy dark hair, a neat beard and mustache, wearing a dark navy blue crewneck sweater and black pants with dark boots.
 

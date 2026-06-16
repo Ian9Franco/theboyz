@@ -194,7 +194,7 @@ Bottom: Matching tactical cargo pants made of dark gray ripstop technical fabric
 
 Footwear: High-top black military combat boots made of leather and technical canvas, tightly laced to the top.
 
-Key Accessories: * A highly detailed, dark blackwork/surrealist full-sleeve tattoo that completely covers his left arm from the shoulder down to the wrist.
+Key Accessories: * A highly detailed, dark blackwork/surrealist full-sleeve tattoo that completely covers his left arm from the shoulder down to the wrist. His right arm has NO sleeve tattoo, only a single solid black armband tattoo around his biceps.
 
 A heavy-duty black canvas tactical belt with a quick-release tactical buckle.
 
@@ -224,7 +224,7 @@ Dynamic stance: He is almost always depicted crouching, leaning, or winding up, 
 Julián (Julián, 27, slender skinny build, dark navy blue sweater, full beard) is looking visibly angry and frustrated, gesturing intensely at Sofi. In the background, Jaz (Jaz, 25, black turtleneck
 
 
-Uandi (average normal build, wearing a short-sleeve dark asphalt gray t-shirt, showing a simple solid black armband tattoo around his left biceps)
+Uandi (average normal build, wearing a short-sleeve dark asphalt gray t-shirt, showing a highly detailed dark blackwork full-sleeve tattoo on his left arm, and only a simple solid black armband tattoo around his right biceps)
 
 portada:
 A professional, high-end comic book cover layout and commercial print design. 

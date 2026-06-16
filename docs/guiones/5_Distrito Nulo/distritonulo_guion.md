@@ -2,211 +2,274 @@
 
 ---
 
-## ACTO 1: La Ciudad Anomalía (Páginas 1 - 5)
+## ACTO 1: Las Secuelas del Viaje (Páginas 1 - 10)
 
 ### PÁGINA 1
-* **Viñeta 1 (Plano General Panorámico):** Nueva York nocturna, pero distópica y sucia. Los rascacielos de Manhattan están envueltos en una niebla verdosa. En el cielo, las nubes tormentosas se mueven en círculos concéntricos perfectos, desafiando la física.
-  * **TEXTO DE ENCUADRE:** "Nueva York no duerme. Tampoco respira. Está atrapada en un zumbido que nadie más puede escuchar."
-* **Viñeta 2 (Plano Detalle):** Los carteles publicitarios de Times Square parpadean con una estática roja intensa de fondo, con patrones de interferencia de televisión analógica.
-* **Viñeta 3 (Plano Detalle):** Vista del cielo nocturno donde se aprecia en detalle cómo las nubes tormentosas forman una espiral geométrica concéntrica y antinatural.
-* **Viñeta 4 (Plano Medio):** La entrada de un callejón oscuro y cubierto de basura a nivel de calle. Vapor blanco denso y pesado brota de una rejilla de alcantarilla bajo una farola con luz verdosa.
-* **Viñeta 5 (Plano Detalle):** La bombilla de la farola del callejón estalla de repente, soltando chispas de estática analógica de color cian y azul que se desvanecen en el aire húmedo.
-  * **EFECTO DE SONIDO:** ¡ZZZ-ZAP!
+* **Viñeta 1 (Plano General Panorámico):** Vista panorámica de un Brooklyn otoñal y de noche bajo una fría llovizna. La silueta de los rascacielos de Manhattan se desdibuja al fondo entre la niebla grisácea y húmeda.
+  * **TEXTO DE ENCUADRE:** "El viaje de vuelta siempre es el más largo. Pero esta vez, Nueva York no se siente como casa."
+* **Viñeta 2 (Plano Medio):** Un auto sedan negro avanza por la autopista mojada y brillante, volviendo del aeropuerto JFK. Sus neumáticos levantan estelas de agua que salpican bajo las tenues luces de los postes de la autopista.
+* **Viñeta 3 (Plano Detalle):** En el espejo retrovisor del auto se reflejan los rostros cansados de los tres muchachos: Uandi al volante con la mirada cansada fija en el camino, Ian a su lado en el asiento del acompañante y Julián recostado en el asiento trasero. Un silencio denso y pesado envuelve el habitáculo.
+* **Viñeta 4 (Plano Medio):** Julián mira melancólicamente a través del vidrio mojado de la ventana del auto, con el reflejo de las gotas de lluvia y las luces de la autopista deslizándose sobre su cara, sumido en sus propios pensamientos.
 
 ---
 
 ### PÁGINA 2 (Etapa 1 — El regreso tuvo consecuencias)
-* **Viñeta 6 (Plano General):** Los muelles de Brooklyn, oxidados y abandonados. Un subte de las líneas viejas pasa rugiendo por las vías elevadas, soltando chispas de un color azul eléctrico antinatural.
-  * **EFECTO DE SONIDO:** ¡RUMBLE!
-* **Viñeta 7 (Plano General Interno):** El interior de la base de Dumbo. Un amplio almacén industrial. Sobre un estante de madera rústica, descansa una foto enmarcada del grupo completo, incluyendo a Sofi, cubierta por una fina capa de polvo. En un monitor secundario sobre la mesa de trabajo, se reproduce en bucle con distorsión estática una videollamada perdida de Sofi desde Tokio.
-* **Viñeta 8 (Plano Medio):** Uandi (robusto, de hombros anchos, pelo enrulado y lentes redondos) está sentado sobre una caja de madera. Tiene el rostro pálido y perlado de sudor, y presiona con fuerza una botella de agua fría contra su frente para mitigar el dolor.
-* **Viñeta 9 (Plano Detalle):** Uandi se baja el cuello de su remera Kappa, dejando ver unas marcas rojas bajo la piel que palpitan levemente en un tono apagado, pareciendo quemaduras químicas.
-* **Viñeta 10 (Primer Plano):** Uandi habla con voz temblorosa, mirando a Ian con preocupación genuina.
-  * **UANDI:** —Ian, esto no baja. La fiebre me está matando. Y estas marcas... se sienten como si tuviera algo vivo quemándome debajo de la piel. No volvimos bien de ese lugar, te lo digo yo.—
+* **Viñeta 5 (Plano Medio):** En el interior del auto en movimiento. Uandi (robusto, con rulos castaños muy tupidos, lentes de marco redondo y negro y una barba corta de pocos días) maneja concentrado y cansado. Ian (de contextura delgada, pelo castaño ondulado, lentes de marco marrón grueso y buzo con capucha gris) se gira levemente hacia el asiento del acompañante para hablar con seriedad.
+  * **IAN:** —Al menos Sofi llegó bien a Tokio, che. Se lo merecía después de todo el bardo con el colapso del portal.
+* **Viñeta 6 (Plano Medio):** Ian se acomoda las gafas de marco grueso con un ademán de frustración y continúa hablando con tono serio y pensativo.
+  * **IAN:** —Todavía no puedo creer que se haya querido quedar en este universo. Estaba decidida a conocer la Tierra antes de... ya sabés. De que no quede nada.
+* **Viñeta 7 (Primer Plano):** Julián (delgado pero atlético, corte fade muy prolijo, barba de una semana bien recortada, suéter azul marino) gesticula con sus manos desde el asiento trasero, intentando romper la pesadez del ambiente con su tono irónico habitual.
+  * **JULIÁN:** —Sofi está bien, che. Salvó su pellejo y ahora se va a comer sushi al otro lado del charco. Dejen de maquinar, boludos, que nos salió redonda.
+* **Viñeta 8 (Plano Detalle / Flashback):** Una pequeña viñeta con bordes difusos y estilizados que muestra un fogonazo de recuerdo: la desintegración molecular en partículas de estática dorada y púrpura del Universo 5458.
+  * **TEXTO DE ENCUADRE:** "El Universo 5458 se deshizo en silencio. Un mundo entero borrado por un error cuántico."
+* **Viñeta 8b (Plano Corto):** De repente, Uandi aprieta el volante de cuero con excesiva fuerza, soltando un quejido áspero de dolor. Gotas de sudor frío le brotan en la frente. Ian se da vuelta hacia él alarmado, señalándole la autopista indicando que falta poco.
+  * **UANDI:** —¡Ah...! Mierda, me pegó un calorazo de golpe... Siento que me quemo por dentro, boludo.
+  * **IAN:** —¡Uandi! Bancá un poco, ya estamos a unas cuadras. Aguantá.
 
 ---
 
-### PÁGINA 3 (Etapa 2 — Algo está mal)
-* **Viñeta 11 (Plano Americano):** Al otro lado de la base, Julián (esbelto, pelo corto con fade, barba prolija, sin anteojos) está tirado en un sillón de cuero desfondado. Viste un suéter azul marino y se presiona las sienes con fuerza, gimiendo de dolor por una migraña masiva.
-* **Viñeta 12 (Plano POV):** Vista desde los ojos de Julián. El entorno de la base se muestra doble, con una fuerte aberración cromática azul y roja y parpadeos de interferencia digital.
-* **Viñeta 13 (Plano Medio):** Julián se incorpora con dificultad, frotándose los ojos.
-  * **JULIÁN:** —Yo estoy viendo doble, Bub. Y las luces... siento que la lluvia hace cortocircuito directamente en mis ojos. Creo que me estoy volviendo loco o el hotel nos pegó una malaria interdimensional.—
-* **Viñeta 14 (Plano General):** Ian (pelo castaño, lentes de marco negro, buzo hoodie gris) está de espaldas, sepultado bajo una pared de doce monitores que muestran mapas topográficos e interfaces en verde matrix. Se da la vuelta lentamente en su silla.
-* **Viñeta 15 (Primer Plano):** Ian se saca las gafas y se frota el tabique con frustración. El reflejo de los monitores parpadea en sus ojos.
-  * **IAN:** —No es malaria, Julián. Pero sí nos trajimos una enfermedad de ese lugar. La realidad acá afuera se está desgarrando como papel mojado, y las lecturas electromagnéticas de la base están registrando picos que no tienen sentido físico.—
+### PÁGINA 3 (La Llegada a la Base)
+* **Viñeta 9 (Plano General):** El auto se detiene frente a la entrada de chapa de la base de Dumbo, un almacén industrial herrumbroso bajo la enorme sombra de la estructura del puente de Manhattan. A través del parabrisas, vemos a Uandi apoyar la frente exhausta directamente sobre el volante.
+* **Viñeta 10 (Plano Medio):** Uandi baja a duras penas del auto apoyándose pesado contra el marco de la puerta. Ian lo sostiene con fuerza por el brazo para aguantar su peso. Julián avanza unos pasos más adelante de espaldas, cargando su mochila en un hombro y volviendo la cabeza hacia ellos con cierta distracción.
+* **Viñeta 11 (Plano Medio Interno):** Adentro de la base, en el sector del living. Julián camina directo al sillón de cuero gastado y arroja su campera sobre él. De fondo, Uandi entra tambaleándose con el rostro pálido y sudoroso, sosteniéndose tembloroso de una columna de metal estructural.
+* **Viñeta 12 (Primer Plano):** Ian se acerca rápidamente a Uandi, mirándolo con preocupación extrema y colocándole una mano en su hombro humeante.
+  * **IAN:** —Uandi, estás temblando de fiebre, boludo. Y tenés la piel hirviendo de verdad.
+* **Viñeta 13 (Plano Medio):** Ian guía con cuidado al robusto Uandi hacia la zona del living, sosteniéndoselo con suavidad.
+  * **IAN:** —Vení, sentate en el living. Te voy a conectar los sensores para medir qué carajo está pasando con tu temperatura.
 
 ---
 
-### PÁGINA 4 (Etapa 3 — Primera evidencia imposible)
-* **Viñeta 16 (Plano Medio):** Uandi exhala un suspiro caliente y se levanta para intentar limpiar el desorden del almacén. Camina hacia un pesado bloque de hormigón colapsado que obstruye una cañería.
-* **Viñeta 17 (Plano Corto):** Uandi sujeta el bloque por los costados y tira con fuerza. Sus músculos se tensan al extremo.
-* **Viñeta 18 (Acción):** De repente, las marcas rojas bajo la piel de sus brazos brillan intensamente en un rojo incandescente vivo. El aire a su alrededor se distorsiona por el calor.
-* **Viñeta 19 (Acción):** Uandi suelta un alarido de dolor y suelta el bloque. El pesado bloque de hormigón choca contra el suelo levantando polvo.
-  * **EFECTO DE SONIDO:** ¡THOOM!
-* **Viñeta 20 (Plano Medio Largo):** Uandi retrocede aturdido, sacudiendo sus manos y sosteniéndose los brazos, de los cuales brota una tenue estela de vapor caliente.
-  * **UANDI:** —¡Mierda! ¡Se prendieron fuego! ¿Vieron eso? Les juro que no hice nada, solo quise levantar el bloque...—
+### PÁGINA 4 (Los Exámenes en la Base)
+* **Viñeta 14 (Plano General):** En el living de la base. Julián está sentado cómodamente en el único y amplio sillón de cuero. Ian entra sosteniendo a Uandi del brazo, que se encuentra muy débil pero bien consciente. Ian, parado frente al sillón, le hace un gesto urgente y cortante a Julián para que se levante y le deje el lugar. Julián se levanta de mala gana refunfuñando.
+  * **IAN:** —¡Salí de ahí, Julián! Levantate del sillón, necesito acostar a Uandi ya.
+  * **JULIÁN:** —Pará, loco, recién me siento. Qué mala onda...
+* **Viñeta 15 (Plano Medio):** Uandi está sentado recostado en el sillón de cuero, respirando pesado. Ian, de pie frente a él en el piso, le coloca con cuidado los sensores de succión biométricos (electrodos de chupete) en la frente y en los brazos desnudos, con los cables colgando hacia el piso. Julián observa a un lado de pie con curiosidad y los brazos cruzados.
+  * **JULIÁN:** —¿Qué le ponés, che? ¿Eso te mide la presión o es para robarle cable a los yankis?
+* **Viñeta 16 (Plano Medio):** Ian corre de prisa hacia el taller del fondo de la base, acomodándose frente a su escritorio rodeado de doce monitores encendidos en interfaces oscuras.
+* **Viñeta 17 (Plano Detalle):** La pantalla principal de la computadora muestra las lecturas biométricas de Uandi, detallando picos y ondas caóticas rojas sumamente anormales que se disparan en los gráficos cuánticos.
+* **Viñeta 17b (Primer Plano):** Rostro de Ian desencajado por el terror y el shock, con las lentes de sus anteojos reflejando el fulgor caótico y rojo de las pantallas del monitor.
+  * **IAN:** —(Susurrando en shock) No, no puede ser... esto no es una gripe común. Es la firma cuántica del portal en sus células...
 
 ---
 
-### PÁGINA 5 (El diagnóstico y el Giro)
-* **Viñeta 21 (Plano Corto):** Julián, sobresaltado por el estruendo del hormigón, deja caer por accidente un mazo de cartas común que tenía en la mano.
-* **Viñeta 22 (Efecto Glitch):** A mitad de camino del suelo, una de las cartas se congela en el aire. Comienza a parpadear violentamente con estática analógica roja y azul (efecto glitch de televisión) y se disuelve silenciosamente en píxeles.
-* **Viñeta 23 (Plano Medio):** Julián y Uandi miran fijamente el espacio vacío donde estaba la carta, completamente paralizados y pálidos. Julián señala el lugar con un dedo tembloroso.
-  * **JULIÁN:** —¿Che... vos viste eso? Decime que vos también lo viste.—
-* **Viñeta 24 (Plano General):** Ian gira bruscamente su silla para ver las pantallas principales. Los monitores muestran picos críticos que coinciden al milisegundo con la desintegración de la carta y el pulso térmico de Uandi. Ian se saca las gafas, pálido.
-  * **IAN:** —El portal... el portal no nos trajo de vuelta.—
-  * **JULIÁN:** —¿Cómo que no? Si estamos acá, Ian.—
-  * **IAN:** —Creo que una parte de ese universo vino con nosotros. Habita en nuestros cuerpos.—
+### PÁGINA 4.5 (Recuperación y Cervezas)
+* **Viñeta 18 (Plano Americano):** De regreso en el living. Uandi se reincorpora en el sillón con un semblante un poco más recuperado y mejor color de piel. Julián está a su lado entregándole un vaso de agua fría, el cual Uandi toma agradecido con un gesto de cabeza.
+  * **JULIÁN:** —Tomá, gordo, metele agua que estás seco. Casi te vas al lobby.
+  * **UANDI:** —Gracias, che. Se me está pasando un poco...
+* **Viñeta 18b (Plano Medio):** Julián entra al taller de Ian sosteniendo dos botellas de cerveza Corona heladas. Le ofrece una a Ian en su silla de trabajo y Julián le da un trago a la suya con una media sonrisa tranquila.
+  * **JULIÁN:** —Tomate una Corona, sabelotodo. Así te relajás un toque, que tenés una cara de bardo que asusta.
+* **Viñeta 18c (Plano Corto):** Julián gesticula de forma graciosa e ingeniosa, buscando desdramatizar. Al fondo de la viñeta, Ian y Uandi sonríen y se ríen levemente, sintiendo un cálido alivio doméstico.
+  * **JULIÁN:** —Che, si Uandi estira la pata por esta gripe interdimensional, me pido su campera táctica. A mí me va a quedar más facherita.
+* **Viñeta 18d (Plano Detalle):** Primer plano de la pantalla del monitor en el taller, donde los picos rojos ruidosos finalmente bajan y se estabilizan en una línea verde lisa y horizontal.
+* **Viñeta 18e (Plano Medio):** Uandi, con mejor semblante, se arranca los cables y chupetes de la frente y de los brazos desnudos, dejándolos sobre el sillón.
+  * **UANDI:** —Listo, ya fue. Me siento diez puntos ahora. Ian, apagá esa máquina que me da dolor de cabeza.
 
 ---
 
-## ACTO 2: La Batería Cinética (Páginas 6 - 10)
+### PÁGINA 4.8 (La Heladera Vacía)
+* **Viñeta 18f (Plano Detalle):** Un primer plano de la mano de Ian apoyando con suavidad su botella de cerveza Corona vacía sobre la mesa rústica de madera de la base.
+  * **EFECTO DE SONIDO:** ¡CLINK!
+* **Viñeta 18g (Plano Medio):** Uandi frente a la heladera vieja y abierta de la cocina. La luz pálida del electrodoméstico le da de lleno en la cara, revelando estantes casi vacíos salvo por unos pocos frascos de conserva vacíos. Uandi tiene un gesto de clara decepción.
+  * **UANDI:** —Che, en esta heladera no hay una mierda. Ni un cacho de queso de la semana pasada.
+* **Viñeta 18h (Plano Medio):** Uandi cierra la heladera de un golpe de espaldas. A un lado, Ian se pone su campera con capucha gris texturizada y le responde mirándolo de reojo.
+  * **IAN:** —Vamos al chino de la esquina a comprar carne y verduras. Hacemos un guiso caliente, a ver si con eso recuperás fuerzas.
+* **Viñeta 18i (Plano General):** Ian y Uandi avanzan hacia la puerta trasera de chapa abrigados con sus capuchas. Al fondo de la escena, Julián se acomoda de forma displicente en el amplio sillón de cuero frente al televisor de tubo CRT, que sintoniza un partido de fútbol con la pantalla brillando en tonos verdosos.
+  * **UANDI:** —Julián, vamos a comprar para cenar. ¿Querés algo?
+* **Viñeta 18j (Primer Plano):** Julián desde el sillón, con la vista fija en la televisión, levantando despectivamente la mano libre en un gesto de desinterés absoluto e ironía, sin dignarse a mirarlos.
+  * **JULIÁN:** —Sí, papá, vayan tranquilos. Si cae la infantería de Vanguard, les digo que se sienten a ver el partido y los esperen con unos mates. Traigan alfajores si les queda cambio.
+
+---
+
+### PÁGINA 5 (La Caminata Bajo la Lluvia)
+* **Viñeta 19 (Plano Medio Largo):** Ian y Uandi caminan de noche bajo la llovizna otoñal por las calles oscuras de Brooklyn. Ambos van encapuchados y en silencio, metiendo las manos en sus camperas.
+* **Viñeta 20 (Primer Plano):** Uandi se mira la mano izquierda con sospecha mientras camina bajo las luces urbanas, con expresión preocupada. Ian camina a su lado escuchándolo con seriedad.
+  * **UANDI:** —Ian... te juro que cuando me agarró la fiebre sentí una vibración rara bajo la piel. Como si mis marcas tuvieran electricidad. No le digas nada a Julián, se va a perseguir al pedo.
+* **Viñeta 21 (Plano Corto):** Ian le habla con severidad señalando hacia adelante, advirtiéndole con rostro serio, mientras Uandi intenta restarle importancia sonriendo y señalando con la cabeza la luz de neón de un chino al fondo de la calle.
+  * **IAN:** —Es lo que vi en las pantallas, Uandi. Tus células están reteniendo energía inestable. Tenemos que hacer más pruebas. Esto no es joda.
+  * **UANDI:** —Tranca, che. Seguro es por el viaje. Apuremos que cierra el chino y me muero de hambre.
+* **Viñeta 21b (Plano General):** Ambos doblan la esquina en silencio, adentrándose en una calle lateral muy oscura. El sendero pasa directamente por debajo de unos andamios metálicos oxidados de una obra en construcción. Por encima de ellos, en el cielo brumoso y cargado, se recorta la silueta gigantesca de una grúa que sostiene una pesada carga de vigas.
 
 ### PÁGINA 6
-* **Viñeta 25 (Plano General):** Debajo del puente de Brooklyn. Una zona industrial gris, con andamios de construcción, contenedores de carga y calles agrietadas por donde sale vapor. El cielo nocturno del atardecer tiene un tono naranja sucio.
-* **Viñeta 26 (Plano Medio):** Ian camina sosteniendo un escáner electromagnético portátil prototipo con pantalla verde. Uandi lo acompaña, vistiendo su remera Kappa técnica debajo de una campera oscura abierta, sus brazos tatuados a la vista con sus Runas Cinéticas, mirando a su alrededor con cautela.
-* **Viñeta 27 (Plano Detalle):** La pantalla del escáner digital prototipo de Ian empieza a fallar. Las lecturas parpadean con líneas de estática analógica.
-  * **EFECTO DE SONIDO:** ¡BEEP-BEEP-BEEP!
-  * **IAN:** —Esto no tiene sentido... la densidad del aire acá es tres veces mayor. Es como caminar bajo el agua.—
-* **Viñeta 28 (Primer Plano):** Uandi se detiene, tensando la mandíbula al escuchar un chillido metálico proveniente del paso elevado de la autopista arriba de ellos.
-* **Viñeta 29 (Plano Picado):** En el paso elevado, un camión de remolque de gran tonelaje cargado con enormes vigas de acero estructural patina sobre un gran charco de aceite brillante y extraño, perdiendo el control.
+* **Viñeta 22 (Plano General Picado):** Plano panorámico desde lo alto de la obra en construcción de Brooklyn. La lluvia otoñal cae con fuerza bajo el viento, mojando los andamios metálicos y haciendo flamear las lonas verdes.
+* **Viñeta 23 (Plano Detalle):** Primer plano extremo del cable de acero de la grúa en la altura. El metal está trenzado al límite de su resistencia, y varios hilos gruesos se cortan de golpe despidiendo un arco de chispas naranjas bajo el agua.
+* **Viñeta 24 (Viñeta irregular diagonal - Plano Medio Corto):** El cable se corta con un latigazo veloz, arqueándose en el aire. Los bordes de esta viñeta están cortados en una diagonal pronunciada que rompe la verticalidad de la página.
+  * **EFECTO DE SONIDO:** ¡CLANG-TANG!
+* **Viñeta 24b (Plano Picado Dinámico):** Tres pesadas vigas de acero estructural, amarradas entre sí, se deslizan fuera de la plataforma de la grúa y caen al vacío en una trayectoria diagonal directa sobre la vereda.
+* **Viñeta 24c (Primer Plano Extremo - Acercamiento de Suspenso / Cliffhanger):** Rostro de Ian en un encuadre sumamente cerrado. Mira hacia el cielo paralizado por el terror. En la lente izquierda de sus anteojos se refleja con nitidez la silueta de las vigas que descienden hacia él.
+  * **IAN:** —¡U-Uandi!—
+* **Viñeta 25 (Plano de Acción con Elemento Sobresaliente):** Uandi se lanza hacia adelante cruzando sus antebrazos. El pie izquierdo de Uandi y su bota táctica rompen el límite inferior de la viñeta, sobresaliendo de forma tridimensional hacia el espacio blanco entre paneles.
+  * **EFECTO DE SONIDO:** ¡SHUFFF!
 
 ---
 
 ### PÁGINA 7
-* **Viñeta 30 (Plano de Acción):** El camión choca violentamente contra el guardarraíl de la autopista elevada. Las cadenas de acero que sujetan las vigas se rompen en el acto.
-  * **EFECTO DE SONIDO:** ¡CRASH!
-* **Viñeta 31 (Plano General):** Las vigas de acero macizo caen al vacío desde la autopista, precipitándose directo hacia la zona de construcción inferior donde se encuentran Ian y Uandi.
-* **Viñeta 32 (Primer Plano):** Ian levanta la vista hacia el cielo, completamente paralizado por la enorme sombra del acero que se le viene encima. Sus ojos se abren en terror.
-* **Viñeta 33 (Primer Plano):** Uandi reacciona con una expresión feroz, su rostro tenso y decidido mientras se prepara para actuar.
-* **Viñeta 34 (Plano Contrapicado):** Las pesadas vigas de acero caen a gran velocidad hacia ellos, tapando el cielo naranja sucio y proyectando una sombra mortal sobre las figuras de los dos jóvenes.
+* **Viñeta 26 (Splash Page Irregular - Panel Principal con Elemento Sobresaliente):** Una gran viñeta que ocupa casi toda la página con bordes dentados. La viga de acero golpea con violencia contra los antebrazos cruzados en "X" de Uandi y se dobla a su alrededor en forma de "U". Sus Runas Cinéticas en el brazo izquierdo brillan en un rojo volcánico incandescente y despiden vapor denso. La punta de la viga doblada y las ondas de choque térmico rompen el marco del panel y sobresalen de los límites externos de la página en un impactante efecto 3D.
+  * **EFECTO DE SONIDO:** ¡KRAAA-BOOM!
+* **Viñeta 27 (Plano Detalle - Inset 1):** Las suelas de las botas de Uandi hundiéndose en el asfalto que se quiebra en forma de telaraña por la tremenda disipación cinética.
+* **Viñeta 28 (Plano Detalle - Inset 2):** La viga de acero deformada cae al suelo con un ruido seco metálico, quedando inerte sobre el asfalto mojado.
+  * **EFECTO DE SONIDO:** ¡CLANG!
+* **Viñeta 29 (Primer Plano Extremo - Inset 3 / Cliffhanger):** Ian está tirado en el suelo, con el rostro cubierto de polvo de obra y llovizna. Mira a Uandi con los ojos muy abiertos, con la boca abierta en shock y un absoluto estado de incredulidad.
+  * **IAN:** —Uandi... vos... vos frenaste el golpe... con tus brazos...
+
+---
+
+### PÁGINA 7.5
+* **Viñeta 29b (Plano General con Elemento Sobresaliente):** Uandi se mantiene erguido bajo la lluvia, con la enorme viga doblada sobre su espalda y hombros como si fuera un yugo. El vapor denso de su piel y sus runas rojas en los brazos brillan intensamente, rompiendo los límites superiores del panel.
+* **Viñeta 29c (Plano Detalle / Primer Plano Extremo):** La viga de metal calentándose en los puntos donde hace contacto con la piel de los hombros de Uandi, volviéndose incandescente en un color amarillo-naranja brillante.
+* **Viñeta 29d (Plano Medio Corto):** Con un simple movimiento de hombros y total facilidad, Uandi deja caer la viga hacia atrás.
+* **Viñeta 29e (Plano Detalle con Elemento Sobresaliente):** La viga impacta contra el asfalto mojado, rompiéndolo y esparciendo fragmentos de piedra y agua que vuelan fuera de la viñeta en 3D hacia el lector.
+  * **EFECTO DE SONIDO:** ¡CLANG-BOOM!
+* **Viñeta 29f (Plano Picado General):** Vista desde lo alto de los andamios. Tres obreros con cascos amarillos miran hacia abajo completamente desconcertados y asustados, sin entender qué acaba de pasar.
+* **Viñeta 29g (Primer Plano Extremo - Cliffhanger):** Uandi se mira las palmas de las manos con incredulidad, y luego levanta la vista hacia Ian con una mezcla de intriga y desconcierto.
+  * **UANDI:** —Ian... ¿qué carajo soy ahora?—
 
 ---
 
 ### PÁGINA 8
-* **Viñeta 35 (Plano Medio):** Uandi taclea a Ian hacia un lado con fuerza, haciéndolos rodar por el suelo de tierra y concreto.
-* **Viñeta 36 (Acción):** Una de las pesadas vigas rebota contra un andamio metálico, alterando su trayectoria y dirigiéndose directamente a aplastarlos donde cayeron.
-* **Viñeta 37 (Plano Americano):** Uandi se levanta con rapidez y se interpone entre el acero que cae y Ian. Cruza sus brazos en una "X" frente a su rostro para recibir el impacto, exponiendo las Runas Cinéticas en ambos brazos.
-* **Viñeta 38 (Primer Plano):** Los ojos de Uandi se iluminan con un destello rojo sólido. Las Runas Cinéticas de ambos brazos brillan en un rojo incandescente vivo y ardiente, y las venas de su cuello se marcan por la extrema absorción de energía cinética.
+* **Viñeta 30 (Plano Americano con Inserto de Primer Plano):** Ian y Uandi caminan de regreso bajo la lluvia por las calles oscuras de Brooklyn. Van en absoluto silencio, con las manos metidas en los bolsillos y las capuchas de sus camperas calzadas hasta los ojos. En el inserto de primer plano, Uandi se mira el antebrazo izquierdo; las runas rojas bajo su piel se han apagado por completo, volviendo a ser cicatrices grises y frías.
+* **Viñeta 31 (Plano Medio):** Empujan la puerta trasera de chapa de la base de Dumbo y entran con extrema cautela para no hacer ruido metálico.
+  * **EFECTO DE SONIDO:** (Suave) shhh...
+* **Viñeta 32 (Plano General Interno):** Desde la oscuridad del pasillo de entrada, ven a Julián sentado en el amplio sillón de cuero gastado del living, de espaldas, iluminado por el parpadeo verde y azul de la TV de tubo que transmite el partido de fútbol.
+* **Viñeta 33 (Primer Plano Extremo - Cliffhanger):** Ian pone su dedo índice contra sus labios con un gesto firme de silencio, clavando sus ojos serios en Uandi.
+  * **IAN:** —(Susurrando apenas audible) Shh, callate. Julián no puede enterarse de esto. Si sabe que tu cuerpo reacciona así, se va a volver loco de la paranoia. Guardemos el secreto por ahora.—
 
 ---
 
 ### PÁGINA 9
-* **Viñeta 39 (Plano de Impacto - Panel Principal de Gran Tamaño):** La viga de acero impacta a toda velocidad directamente contra los antebrazos cruzados de Uandi. Sus músculos se expanden y ganan una masa y densidad descomunal y la viga de acero se dobla y deforma sobre sus brazos. Uandi entra en **Modo Sobrecarga**: libera un calor extremo, emana vapor denso por sus poros debido a la rabia y el estrés, y las Runas Cinéticas de ambos brazos brillan con un intenso rojo incandescente. El concreto bajo sus botas se quiebra en un patrón de telaraña y se deforma por la distorsión térmica. El choque provoca una onda expansiva de aire que levanta polvo y hace estallar los vidrios cercanos.
-  * **EFECTO DE SONIDO:** ¡KABOOM!
-* **Viñeta 40 (Plano Detalle - Panel Inset 1):** Las botas de Uandi se hunden en el suelo, agrietando el concreto bajo sus pies en un patrón profundo de telaraña por la inmensa presión y el calor generado.
-* **Viñeta 41 (Plano Detalle - Panel Inset 2):** Ian en el suelo, cubriéndose el rostro con el brazo ante el resplandor rojo volcánico y la nube de polvo levantada.
-* **Viñeta 42 (Plano Detalle - Panel Inset 3):** Las Runas Cinéticas de ambos brazos de Uandi van perdiendo brillo lentamente, disipando la estática cinética hasta volver a la normalidad.
+* **Viñeta 34 (Plano General):** Uandi sale solo al patio trasero y garaje de la base, iluminado únicamente por una bombilla desnuda y parpadeante que cuelga de un cable. El piso está lleno de repuestos oxidados y chatarra.
+* **Viñeta 35 (Plano Medio):** Uandi se para frente a un viejo sedán abandonado sobre tacos de madera que junta polvo en un rincón del garaje.
+* **Viñeta 35b (Plano Medio Corto):** Uandi apoya su mano suavemente sobre el capó polvoriento del auto, pensativo.
+* **Viñeta 36 (Viñeta Irregular en Contrapicado):** Uandi flexiona las rodillas, con el panel cortado en un ángulo contrapicado dinámico, y coloca su mano izquierda debajo del paragolpes metálico del sedán. Sus marcas rúnicas empiezan a emitir un tenue resplandor rojo.
+* **Viñeta 37 (Plano General de Acción con Elemento Sobresaliente):** Uandi levanta la parte delantera del auto medio metro sobre el suelo con una sola mano. El paragolpes de hierro y su mano rompen el borde inferior del panel, sobresaliendo físicamente hacia la calle de la página.
+  * **UANDI:** —(Para sí mismo, asombrado) No puede ser... peso pluma...
+* **Viñeta 37b (Primer Plano Extremo - Cliffhanger):** Rostro de Uandi sudando frío, con una mueca de incredulidad y asombro mientras sostiene el auto en el aire.
 
 ---
 
 ### PÁGINA 10
-* **Viñeta 43 (Plano Medio):** La viga de acero cae a un costado, doblada en forma de U. Las partículas de luz de los tatuajes terminan de apagarse.
-* **Viñeta 44 (Plano Corto):** Uandi cae de rodillas en el concreto agrietado, jadeando exhausto. Ambos brazos emiten un tenue vapor caliente y la piel bajo los tatuajes se muestra caliente y enrojecida.
-* **Viñeta 45 (Plano Americano):** Ian se levanta sacudiéndose el polvo de su buzo gris, mirando primero el acero deformado y luego a Uandi con una mezcla de conmoción y fascinación científica.
-* **Viñeta 46 (Plano Medio Largo):** Ian ayuda a Uandi a ponerse en pie. Uandi se mira los brazos con runas aturdido mientras Ian habla apuntando a la viga.
-  * **IAN:** —Uandi... tu masa corporal no pudo haber desviado esa energía cinética. Absorbiste el impacto directamente en tus fibras musculares y lo desviaste con tus runas... te convertiste en un jodido escudo.—
+* **Viñeta 38 (Plano General):** Repentinamente, la puerta de chapa que conecta al patio se abre con un fuerte chirrido. Julián está parado en el umbral sosteniendo una lata de gaseosa, mirándolo de reojo con expresión burlona.
+  * **EFECTO DE SONIDO:** ¡CREEEAK!
+* **Viñeta 39 (Acción con Elemento Sobresaliente):** Uandi se asusta y suelta el auto de golpe. El sedán cae al concreto con un impacto brutal. La nube de polvo del suelo y los pedazos de tacos de madera rotos estallan rompiendo el borde del panel, saltando fuera de la viñeta en 3D.
+  * **EFECTO DE SONIDO:** ¡THOOM-BANG!
+* **Viñeta 40 (Plano Americano):** Uandi se apoya de espaldas contra el capó del auto intentando disimular y tapar su brazo humeante, sudando frío y con una sonrisa forzada. Julián se acerca lentamente dando un sorbo a su lata, metiendo la mano libre en su campera de cuero.
+  * **UANDI:** —¡Julián! Qué hacés, che... qué linda noche, ¿no?—
+* **Viñeta 41 (Primer Plano Extremo - Cliffhanger):** Julián saca su celular y le apunta directo al rostro a Uandi con la linterna. Las sombras de la luz dura recortan el rostro de Julián en un primer plano cerrado lleno de cinismo.
+  * **JULIÁN:** —Che, si querías buscar la moneda que se te cayó abajo del auto, usá la linterna del celu, no seas tan fantasma. Dale, que el guiso no se hace solo y tengo un hambre de linyera.—
 
 ---
 
-## ACTO 3: Fragmentación en Hell's Kitchen (Páginas 11 - 15)
+## ACTO 2: Clandestinidad y Cortocircuito (Páginas 11 - 20)
 
 ### PÁGINA 11
-* **Viñeta 47 (Plano General):** Hell's Kitchen bajo una lluvia torrencial nocturna. Los callejones oscuros están iluminados por los neones rojos y azules de un garito de apuestas clandestinas.
-* **Viñeta 48 (Plano Medio):** Julián sale pateando la puerta trasera del local. Tiene una sonrisa confiada mientras cuenta un fajo grueso de billetes de cien dólares, guardándolos en su campera de cuero negra sobre su suéter azul marino. Se observa su contextura esbelta, fade y barba prolija (sin anteojos).
-* **Viñeta 49 (Plano General):** Tres tipos corpulentos y amenazantes con sobretodos oscuros salen detrás de él desde las sombras del callejón, bloqueándole el paso. Son matones de la mafia local.
-* **Viñeta 50 (Plano Picado):** El callejón se ve cerrado y estrecho, bloqueado al fondo por botes de basura desbordados y rejas metálicas cerradas. Julián está atrapado.
+* **Viñeta 42 (Plano Medio):** Julián se pone su campera de cuero en la entrada de la base, saludando con la mano a Ian que lo mira desconfiado.
+  * **JULIÁN:** —Me voy un toque a Manhattan, che. Tengo entradas para ver a los Knicks en el Madison con un pibe de la facu. No me esperen despiertos.—
+* **Viñeta 42b (Plano General):** Julián camina por las veredas mojadas de Hell's Kitchen bajo carteles de neón parpadeantes.
+* **Viñeta 43 (Plano General):** Julián entra en un sótano clandestino de Hell's Kitchen. Hay humo de cigarrillo y luz baja sobre las mesas. Al fondo, dos hombres pesados con camperas de abrigo oscuras muestran el logotipo circular de Vanguard bordado en el pecho.
+* **Viñeta 43b (Plano Medio):** Julián se sienta en la mesa recibiendo sus cartas, con expresión divertida y confiada.
+* **Viñeta 44 (Plano Americano):** Julián en la mesa de póker, con una pila enorme de fichas y billetes frente a él, sonriendo con soberbia ante la mirada furiosa de los maleantes.
+  * **JULIÁN:** —¿Qué hacés jugando al póker acá con estos yankis pesados, boludo? Pensé que tenían más nivel. ¿Quién reparte ahora?—
+* **Viñeta 45 (Primer Plano Extremo - Cliffhanger):** Plano muy cerrado de las manos de Julián abriendo y colocando sus cartas (Escalera Real) en la mesa con un ademán arrogante. Julián mira a sus rivales directo a los ojos.
+  * **JULIÁN:** —Ups. Mala mía, muchachos. Parece que me llevo la caja.—
 
 ---
 
 ### PÁGINA 12
-* **Viñeta 51 (Plano Detalle):** La mano del matón líder saca una navaja automática cromada, abriéndola con un clic seco. Las gotas de lluvia golpean el metal afilado.
+* **Viñeta 46 (Plano Medio con Plano Corto):** Julián sale por la puerta trasera del póker a un callejón oscuro y lluvioso de Hell's Kitchen, guardándose fajos de billetes en los bolsillos de su campera de cuero. Se detiene un momento sonriendo al contar el fajo de billetes en la calle.
+* **Viñeta 47 (Viñeta Irregular con Elemento Sobresaliente):** De repente, un matón gigante con el pin de Vanguard bloquea su camino, mientras otros dos maleantes salen de la sombra cortándole la salida contraria. Uno de ellos abre una navaja automática cromada; la punta de la navaja sobresale en 3D del marco diagonal inclinado de la viñeta.
   * **EFECTO DE SONIDO:** ¡CLIC!
-* **Viñeta 52 (Primer Plano):** El rostro del líder de los matones, mostrando una cicatriz cruzando su ojo izquierdo y una expresión cruel bajo la lluvia.
-  * **MATÓN:** —Jugaste muy lindo con los dados, pibe. Ahora vas a dejar el efectivo en el piso y tus dientes en el cordón.—
-* **Viñeta 53 (Plano Medio Corto):** Julián levanta las manos de manera pacífica, pero su sonrisa se mantiene, ocultando una gota de sudor frío en su rostro.
-* **Viñeta 54 (Plano Detalle):** Las manos levantadas de Julián comienzan a parpadear con pequeñas chispas de estática analógica de color azul y rojo.
-* **Viñeta 55 (Plano Medio):** Julián habla tratando de calmar el ambiente, mientras su cuerpo comienza a acumular adrenalina.
-  * **JULIÁN:** —Muchachos, podemos arreglar esto. ¿Qué tal un truco de magia? Miren mi mano derecha...—
+  * **LÍDER VANGUARD:** —Se te terminó el descanso, pibito. Dejá la guita en el piso antes de que te abramos la campera de cuero a las malas.—
+* **Viñeta 48 (Plano Medio Corto):** Julián retrocede hasta chocar contra la pared de ladrillos húmeda. Levanta las manos disimulando el pánico, pero sus dedos empiezan a temblar.
+  * **JULIÁN:** —Epa, muchachos, no da para tanto. ¿No prefieren un truco de cartas? Miren bien mi mano...—
+* **Viñeta 49 (Primer Plano Extremo - Cliffhanger):** Acercamiento muy cerrado a los dedos de Julián; chispas de estática analógica cian y magenta titilan erráticamente sobre su piel con aberración cromática.
 
 ---
 
 ### PÁGINA 13
-* **Viñeta 56 (Plano de Acción):** El matón líder se lanza hacia adelante con rabia, tirando un estocazo rápido con su navaja directo al pecho de Julián.
-* **Viñeta 57 (Efecto Glitch):** El cuerpo de Julián se desfasa de repente en tres réplicas idénticas de estática analógica azul y roja (como una imagen de televisión doble y temblorosa). La navaja del matón atraviesa el espacio vacío de la réplica del medio con un efecto de lag visual.
+* **Viñeta 50 (Plano Corto con Elemento Sobresaliente):** El líder de los matones se lanza con furia, tirando un puñetazo hacia el rostro de Julián. El puño del matón y la mano rota de Julián rompen los marcos de la viñeta, sobresaliendo hacia el lector en 3D.
+* **Viñeta 51 (Viñeta Irregular - Efecto Glitch):** El cuerpo de Julián se desfasa en tres copias de estática glitch que parpadean.
+* **Viñeta 51b (Plano Detalle):** La navaja pasa de largo a través del aire pixelado con lag visual. Los bordes de la viñeta se ven rotos por el glitch cuántico.
   * **EFECTO DE SONIDO:** ¡FZZZT!
-* **Viñeta 58 (Plano Medio):** El matón tropieza hacia adelante desconcertado, habiendo atravesado lo que parecía una imagen de estática.
-* **Viñeta 59 (Plano Medio Largo):** Las tres versiones de Julián en el callejón se mueven en sincronía exacta, llevándose las manos a la cabeza al mismo tiempo.
-  * **JULIÁN (TRES VOCES SUPERPUESTAS):** —¡Uandi, no me vas a creer lo loco que se ve esto desde acá dentro!—
+* **Viñeta 52 (Plano Medio):** El matón tropieza hacia adelante cruzando la imagen de estática con total confusión en su cara.
+* **Viñeta 53 (Plano Medio Corto):** Julián corre desesperado hacia la avenida principal; la mitad de su rostro sigue distorsionada por estática digital y desfase molecular mientras jadea asustado.
+  * **JULIÁN:** —(Jadeando) Qué carajo... qué carajo fue eso...—
+* **Viñeta 53b (Primer Plano Extremo - Cliffhanger):** Julián llega a la avenida y se mira la mano izquierda con terror; esta parpadea con estática digital cian y magenta.
 
 ---
 
-### PÁGINA 14
-* **Viñeta 60 (Plano de Acción):** Los otros dos matones se lanzan al ataque con caños de hierro. Julián intenta esquivarlos de manera desordenada.
-* **Viñeta 61 (Acción):** Julián corre de espaldas dejando un rastro de siluetas duplicadas de estática. Los cañazos de los matones impactan contra sus réplicas, que se deshacen en chispas de estática roja y azul con un efecto de fotogramas caídos.
-* **Viñeta 62 (Plano Medio):** Julián queda arrinconado contra la pared del fondo del callejón. Con desesperación, levanta las manos y conjura de la nada naipes de pura estática y chispas de energía roja y azul eléctrica de sus dedos.
-* **Viñeta 63 (Plano Detalle):** La energía estática inestable materializando las cartas en sus dedos en un brillo de chispas rojas y azules que zumban violentamente.
-* **Viñeta 64 (Plano Medio):** Julián arroja los naipes de energía al aire con fuerza, hacia los tres hombres que lo acorralan.
-  * **JULIÁN:** —¡Cortesía de la casa!—
+### PÁGINA 14 (El Guiso y la Cuchara)
+* **Viñeta 54 (Plano General):** En la penumbra de la cocina de la base de Dumbo, iluminada solo por un tubo fluorescente parpadeante. Uandi está de pie junto a la cocina oxidada, revolviendo con concentración una olla de metal abollada con guiso. La atmósfera se siente pesada y calurosa a su alrededor.
+* **Viñeta 55 (Plano Detalle con Plano Corto):** Un primer plano de su robusta mano derecha aferrando una cuchara de metal común. La cuchara se deforma como si fuera de plastilina bajo el simple apriete de sus dedos tensos. Uandi mira la cuchara aplastada y doblada en un bollo informe con ojos de pura frustración y miedo.
+  * **UANDI:** —No... otra vez no. No puedo controlar esta mierda...
+* **Viñeta 57 (Plano Medio):** Uandi arroja la cuchara deformada con rabia contenida. Esta golpea con un sonido metálico violento el fregadero de acero inoxidable. Él se apoya de espaldas contra la mesada húmeda, respirando de manera entrecortada. Un sutil y denso vapor blanco comienza a emanar de la costura de sus hombros y de su cuello.
+  * **EFECTO DE SONIDO:** ¡CLANG!
+* **Viñeta 57c (Primer Plano Extremo - Cliffhanger):** Encuadre macro sumamente cerrado centrado en su frente arrugada y sus pobladas cejas oscuras. Gruesas gotas de sudor corren por su sien. Detrás de sus lentes redondos de marco negro, el iris de sus ojos oscuros empieza a brillar con un peligroso e intenso color rojo volcánico latente.
 
 ---
 
-### PÁGINA 15
-* **Viñeta 65 (Plano de Impacto - Panel Principal de Gran Tamaño):** Las cartas de energía suspendidas en el aire estallan al mismo tiempo en una salva de estática. Es un estallido potente de ruido de televisión analógica y una onda expansiva de viento que empuja a los matones contra los contenedores de basura.
-  * **EFECTO DE SONIDO:** ¡BOOOM DIGITAL!
-* **Viñeta 66 (Plano Detalle - Panel Inset 1):** Las farolas de todo el callejón estallan al mismo tiempo debido a la sobrecarga de la explosión de estática.
-* **Viñeta 67 (Plano Detalle - Panel Inset 2):** Julián cubriéndose la cara con el antebrazo, con los ojos reflejando el destello estático rojo y azul.
-* **Viñeta 68 (Plano Detalle - Panel Inset 3):** Los tres matones tirados en el suelo, inconscientes y cubiertos de basura, rodeados por pequeñas chispas de estática apagándose.
+### PÁGINA 15 (La Sobrecarga Térmica)
+* **Viñeta 58 (Plano Medio):** La temperatura en la cocina sube de golpe. La piel del torso y los hombros de Uandi comienza a tomar un tono rojo incandescente bajo su remera negra básica.
+* **Viñeta 58b (Plano Detalle):** Primer plano cerrado de su brazo izquierdo. Las Runas Cinéticas que cubren su manga de tatuajes se encienden como lava derretida, brillando con un fulgor volcánico que se trasluce en la oscuridad de la cocina.
+* **Viñeta 58c (Plano Corto):** Vapor denso y blanco brota a chorros de los poros de su cuello y hombros, silbando al contacto con el aire húmedo de la base. Su silueta empieza a difuminarse tras la cortina de calor.
+* **Viñeta 59 (Plano Detalle con Elemento Sobresaliente):** Uandi, completamente fuera de sí, sujeta las asas metálicas de la olla hirviendo directamente con las palmas desnudas. El metal se deforma instantáneamente, hundiéndose bajo sus dedos. Una de las asas dobladas y aplastadas sobresale físicamente rompiendo el borde lateral inferior del panel en un relieve 3D tridimensional.
+  * **EFECTO DE SONIDO:** ¡CRUNCH-SISS!
+* **Viñeta 60 (Plano Corto):** El guiso dentro de la olla abollada empieza a burbujear y hervir a una velocidad salvaje, despidiendo salpicaduras calientes y densas nubes de vapor aromático debido al calor extremo transferido directamente por las manos incandescentes de Uandi.
+* **Viñeta 61 (Primer Plano Extremo - Cliffhanger):** Primer plano extremo del rostro de Uandi, visto a través de ondas de calor que distorsionan visualmente el espacio de la viñeta. Su boca está abierta mostrando sus dientes apretados, con vapor brotando de sus labios en un rugido de dolor y furia animal que anticipa el descontrol.
 
 ---
 
-## ACTO 4: Sobrecarga Crítica en la Terraza (Páginas 16 - 20)
-
-### PÁGINA 16
-* **Viñeta 69 (Plano General Nocturno):** La terraza de la base de Dumbo en Brooklyn. La lluvia ha parado, pero el cielo sigue cargado de nubes negras. Al fondo, Manhattan parece una silueta oscura con luces parpadeantes.
-* **Viñeta 70 (Plano Americano):** Uandi está sentado sobre un bloque de concreto, con una manta sobre los hombros, temblando levemente mientras toma agua de una botella. Se le aprecian los tatuajes en sus dos brazos.
-* **Viñeta 71 (Plano Medio):** Julián camina de un lado a otro como un león enjaulado, sus manos todavía tiritan con pequeños espasmos de píxeles y chispas de estática analógica azul y roja.
-* **Viñeta 72 (Plano Medio):** Ian sube por la escotilla de la terraza cargando su tablet táctil y portando un ocular prototipo (GhostLens) en el ojo, que proyectos gráficos de dispersión cuántica sobre su rostro serio.
-
----
-
-### PÁGINA 17
-* **Viñeta 73 (Plano Medio Largo):** Julián intercepta a Ian en la terraza, gesticulando de manera exagerada con sus manos aún inestables.
-  * **JULIÁN:** —¡Ian, te juro por mi vieja que me multipliqué! Había tres de mí. Sentí cómo el espacio se abría. Casi me desintegro en el aire, boludo.—
-* **Viñeta 74 (Primer Plano):** Rostro de Julián denotando pánico real e incomprensión ante lo vivido.
-* **Viñeta 75 (Plano Medio):** Uandi levanta la vista, con los ojos inyectados en sangre por el esfuerzo de la densificación.
-  * **UANDI:** —A mí se me vino una viga encima... y la frené con los brazos, Julián. Sentí el impacto en los huesos, pero no me rompió nada. Es como si mis músculos se hubieran expandido al extremo y mis runas hubieran absorbido el golpe.—
-* **Viñeta 76 (Plano Detalle):** Primer plano de las manos de Uandi sobre sus rodillas, con las Runas Cinéticas en ambos brazos temblando con débiles rastros rojos que se apagan.
+### PÁGINA 16 (El Quiebre)
+* **Viñeta 62 (Plano Americano con Plano Medio):** Ian entra corriendo desde el taller con su tablet en una mano y el visor GhostLens encendido en su ojo izquierdo, el cual proyecta gráficos de advertencia de color naranja sobre su rostro alarmado. Por la puerta principal de la base, entra Julián, caminando despacio y relajado con las manos en los bolsillos de su campera de cuero, totalmente distraído.
+  * **IAN:** —¡Uandi! ¡Salí de ahí, estás entrando en sobrecarga crítica! ¡Se te van a agrietar las runas!
+  * **JULIÁN:** —Che, qué bardo que armaron acá adentro... ¿qué están haciendo, un sauna con guiso?
+* **Viñeta 64 (Plano Corto):** Julián se acerca con paso relajado por detrás y le apoya una mano en el hombro a Uandi, que está de espaldas despidiendo un vapor denso. Julián tiene una sonrisa burlona y sobradora en el rostro.
+  * **JULIÁN:** —¿Qué hacés, gordo? ¿Te dio calor cocinar o qué...?
+* **Viñeta 65 (Primer Plano Extremo):** Uandi se gira violentamente hacia Julián. Su rostro está completamente transformado por una furia ciega e irracional, sus ojos brillan en un carmesí sólido. Al ver esa expresión salvaje y letal, la sonrisa de Julián se congela al instante y sus ojos se abren con sorpresa y alarma.
+* **Viñeta 65c (Plano de Acción con Elemento Sobresaliente - Cliffhanger):** Uandi levanta con brusquedad sus robustos brazos cubiertos de runas incandescentes y vapor, listos para golpear. Sus enormes palmas abiertas y las ráfagas de vapor caliente rompen los límites del marco del panel, proyectándose tridimensionalmente hacia el espacio entre viñetas.
 
 ---
 
-### PÁGINA 18
-* **Viñeta 77 (Plano Americano):** Ian se para frente a ellos y les muestra la tablet de frente, con su ocular prototipo GhostLens encendido.
-* **Viñeta 78 (Plano Detalle):** La pantalla de la tablet detalla una correlación exacta entre los picos de poder de ambos y las anomalías de energía de la zona.
-* **Viñeta 79 (Plano Medio):** Ian apunta a ambos con la tablet, mirándolos con suma gravedad.
-  * **IAN:** —No son superpoderes, muchachos. La energía residual del hotel los está sobrecargando. Están enfermos. Tu cuerpo, Uandi, está absorbiendo y guardando demasiada fuerza física; si no la descargás, tus runas se van a agrietar hasta colapsar. Y vos, Julián, tus moléculas se están desfasando e inestabilizando como una señal de televisión vieja; si abusás del desfase, vas a perder cohesión molecular para siempre. No es un don, es una sobrecarga.—
-* **Viñeta 80 (Plano General):** Los tres muchachos en silencio absoluto en la terraza, procesando el peligro.
-  * **IAN:** —Si no controlamos esto, sus cuerpos van a colapsar físicamente o desintegrarse. No es un don, es una sobrecarga.—
+### PÁGINA 17 (La Mesa Rota)
+* **Viñeta 66 (Plano de Acción):** Uandi empuja con salvajismo a Julián directamente en el pecho. La disipación cinética acumulada en sus runas se libera con un estallido de presión que deforma el aire.
+  * **EFECTO DE SONIDO:** ¡SLAM-CRASH!
+* **Viñeta 67 (Plano Medio):** Julián es despedido hacia atrás a gran velocidad, flotando por el aire del living de la base con una expresión de absoluto shock y desconcierto en su cara.
+* **Viñeta 68 (Acción):** El cuerpo de Julián choca con violencia en diagonal contra la mesa de madera rústica que está en el centro de la base.
+* **Viñeta 68b (Plano Detalle):** Primer plano de la mesa de madera partiéndose al medio bajo el impacto físico. Listones de madera vieja crujen y saltan desprendiendo astillas en todas direcciones.
+* **Viñeta 68c (Plano Detalle):** Entre la lluvia de astillas, la vieja y gastada foto enmarcada del grupo (donde se distingue a Sofi junto a ellos) vuela por los aires girando sobre sí misma.
+* **Viñeta 69 (Plano General con Elemento Sobresaliente - Cliffhanger):** El portarretratos se estrella contra el suelo de hormigón. El vidrio del marco estalla en mil pedazos. El marco roto, la foto gastada y los afilados fragmentos de vidrio quebrados rompen el límite inferior de la viñeta, sobresaliendo tridimensionalmente en 3D hacia el lector en la base blanca del cómic.
+  * **TEXTO DE ENCUADRE:** "Se rompe el refugio. Se rompe el recuerdo."
 
 ---
 
-### PÁGINA 19
-* **Viñeta 81 (Plano General):** De repente, un haz de luz de reflectores gigantescos de helitácticos barre los callejones industriales a unas cuadras de distancia en los muelles.
-  * **EFECTO DE SONIDO:** ¡WHOOSH!
-* **Viñeta 82 (Plano Americano):** Los chicos se asoman rápidamente a la baranda de la terraza, mirando con tensión hacia la zona de los muelles.
-* **Viñeta 83 (Plano POV):** A través del visor táctico (GhostLens) de Ian. Soldados con armaduras pesadas negras y doradas de VANGUARD acordonan un callejón entero, bloqueando las calles con vehículos blindados, todo remarcado por una retícula verde.
-* **Viñeta 84 (Primer Plano):** En la calle de abajo se distingue a un oficial imponente con exo-uniforme militar blindado pesado y un visor de luz azul sólido: el Comandante R.E.G.U.L.A.R.
-* **Viñeta 85 (Plano Medio):** El Comandante R.E.G.U.L.A.R. habla con voz distorsionada y fría, dando directivas a sus hombres con su brazo cibernético táctico.
-  * **COMANDANTE R.E.G.U.L.A.R.:** —Establezcan la red de estasis molecular en este cuadrante. Las lecturas de inestabilidad física se originaron cerca de los muelles. Rastreen todo. No dejen que la anomalía se propague.—
+### PÁGINA 18 (Combate de Mutaciones)
+* **Viñeta 70 (Plano Medio con Plano Americano):** De fondo, Ian corre con pánico hacia las puertas metálicas de su taller. En primer plano, Uandi (cuya masa muscular ha crecido de forma masiva, con la piel roja y humeante de ira) avanza con pasos lentos y pesados hacia Julián, quien yace en el suelo entre las maderas rotas.
+  * **IAN:** —¡Tengo que buscar el remanente! ¡Julián, aguantalo un segundo!
+* **Viñeta 72 (Plano Corto con Elemento Sobresaliente):** Julián, con la cara raspada y llena de bronca, estira el brazo y aferra un pesado listón de madera roto de la mesa. En cuanto lo toca, el listón se imbuye de una violenta estática analógica de color rojo y azul neón. El madero cargado de chispas glitch y distorsión sobresale del borde del panel hacia el lector en un efecto 3D.
+* **Viñeta 73 (Acción con Plano Detalle):** Julián le arroja el listón imbuido con fuerza. El madero describe una parábola y golpea de lleno el hombro derecho de Uandi, abriéndole un corte sangrante del que brota sangre oscura.
+  * **EFECTO DE SONIDO:** ¡SHUFFF!
+* **Viñeta 74 (Primer Plano Extremo - Cliffhanger):** Primer plano extremo del corte en el hombro de Uandi. Bajo un destello de luz roja volcánica y un siseo metálico de vapor térmico, la carne se junta y la herida se sella por completo en un segundo, dejando solo una cicatriz lisa.
 
 ---
 
-### PÁGINA 20
-* **Viñeta 86 (Plano General):** Despacho lujoso, penumbroso y frío en la cima de un rascacielos en el bajo Manhattan. Alexander Vance (Don Vanguard) está parado de espaldas frente a un enorme ventanal, contemplando la silueta de Nueva York. Pantallas holográficas flotan a su lado mostrando mapas térmicos inestables de Brooklyn.
-  * **DON VANGUARD (CAPCIÓN DE VOZ EN OFF):** —Comandante... las firmas cuánticas de los sujetos Alfa y Beta siguen activas en el área de Brooklyn. Son la clave para nuestro próximo despliegue. Encuéntrenlos de inmediato, antes de que ellos mismos descubran lo que llevan en la sangre.—
-* **Viñeta 87 (Plano de Acción):** En la terraza de la base de Dumbo. Tropas de asalto de VANGUARD irrumpen violentamente desde la escotilla de acceso y descendiendo por cables. Drones de asalto zumban en el aire y los reflectores de los helicópteros los ciegan por completo.
-* **Viñeta 88 (Plano Medio):** Julián (delgado, fade, suéter azul) con pánico conjura cartas de estática roja y azul de sus dedos. Ian levanta su tablet y GhostLens, registrando picos térmicos críticos y vibraciones cuánticas insoportables al lado de él.
-* **Viñeta 89 (Plano Americano):** Uandi se saca la campera con rabia. Las Runas Cinéticas en su torso y brazos hierven en un color rojo vivo incandescente, emanando densas nubes de vapor caliente hacia el aire frío de la noche.
-* **Viñeta 90 (Primer Plano / Gran Viñeta de Cierre):** Uandi entra en el Modo Sobrecarga Cinética. Su musculatura crece y se expande de forma masiva, y su piel se vuelve de un color rojo incandescente por la energía acumulada. Sus ojos brillan en un carmesí sólido. Ha perdido el juicio por completo, rugiendo en un instinto de protección violento y ciego frente a las tropas de Vanguard.
-  * **TEXTO DE ENCUADRE DE CIERRE:** "El poder no es un don. Es una infección... y nos va a consumir a todos."
-  * **CORTE A NEGRO**
+### PÁGINA 19 (El Fierro de Energía y la Cura)
+* **Viñeta 75 (Plano Americano con Elemento Sobresaliente):** Julián se pone de pie con agilidad, lleno de adrenalina. En su mano derecha comienza a materializar, a partir de estática analógica parpadeante, un fierro largo y doblado de pura energía glitch azul y roja que zumba con estridencia. El fierro de energía y sus chispas eléctricas rompen la viñeta, sobresaliendo de los marcos laterales.
+  * **JULIÁN:** —¡¿Qué te pasa, pedazo de forro?! ¡Querés bardo, vamos a darnos!
+* **Viñeta 75b (Plano Medio):** Julián adopta una pose defensiva sosteniendo el fierro de estática con las dos manos, con la cara distorsionada a medias por el glitch cuántico y chispas de estática analógica azul/roja.
+* **Viñeta 76 (Plano Medio):** Ian vuelve a aparecer de golpe en la puerta del taller, agitando el brazo. En su mano lleva un tubo de ensayo sellado que resplandece intensamente con una mezcla de electricidad cuántica dorada y una densa niebla púrpura del Universo 5458.
+* **Viñeta 77 (Acción):** Ian arrojando el tubo de ensayo con fuerza, con la pose de un lanzador de béisbol, apuntando directamente al pecho de Uandi que avanza rugiendo.
+  * **IAN:** —¡Uandi, respirá esto! ¡Tomá!
+* **Viñeta 77b (Plano Detalle):** El tubo de ensayo gira en el aire en cámara lenta, cruzando la distancia hacia el pecho de Uandi, con la energía dorada y púrpura fluyendo salvajemente en su interior de cristal.
+* **Viñeta 78 (Plano Corto con Elemento Sobresaliente - Cliffhanger):** El tubo de cristal choca contra el pecho de Uandi y estalla. Se libera una explosión eléctrica dorada mezclada con gas púrpura brillante que envuelve su torso. Las chispas y la nube cuántica desbordan el borde inferior de la viñeta, cubriendo el margen en un espectacular efecto 3D.
+  * **EFECTO DE SONIDO:** ¡CRASH-FZZZT!
+
+---
+
+### PÁGINA 20 (El Cierre y el Clon de Estática)
+* **Viñeta 79 (Plano Corto con Plano Medio):** Uandi inhala la mezcla de electricidad dorada y gas púrpura. Su piel roja se enfría al instante, su musculatura se desinfla hasta volver a su tamaño normal y cae de espaldas sobre el suelo de concreto, exhausto y suspirando. El fierro de energía glitch en la mano de Julián se disuelve en el aire en una estela de píxeles cian y magenta que se apagan.
+* **Viñeta 81 (Plano Corto):** Ian se acerca corriendo a Julián y lo toma por los hombros para revisarlo, con cara de pánico total. Julián se mira la palma de la mano vacía, temblando, en completo estado de desconcierto y shock.
+  * **IAN:** —Julián... ¿qué fue eso? Tus manos... tu cara... parpadeabas.
+  * **JULIÁN:** —No... no sé, che. Sentí que me apagaba. No sé.
+* **Viñeta 81b (Plano Medio):** Uandi, acostado de espaldas en el suelo con los lentes torcidos en la cara, se rasca la cabeza con cansancio. Ian se inclina y le tiende la mano para ayudarlo a reincorporarse lentamente entre los escombros de la mesa.
+  * **UANDI:** —Uh... qué dolor de cabeza, boludo... Che, ¿qué le pasó al guiso?
+* **Viñeta 82 (Plano General con Elemento Sobresaliente - Viñeta Final de Cierre):** Mientras Ian ayuda a Uandi a sentarse y ambos miran a Julián con preocupación, en el primer plano inmediato, una réplica exacta de estática glitch translúcida y semi-transparente de Julián se acerca a la olla abollada sobre la cocina, mete los dedos en el guiso frío, se los lleva a la boca y tira una humorada con cinismo. Este clon glitch rompe el marco frontal inferior de la viñeta, sobresaliendo tridimensionalmente hacia el margen del cómic.
+  * **CLON DE JULIÁN:** —Che, le falta sal, pero zafa.
+  * **TEXTO DE ENCUADRE DE CIERRE:** — FIN DEL PILOTO —
