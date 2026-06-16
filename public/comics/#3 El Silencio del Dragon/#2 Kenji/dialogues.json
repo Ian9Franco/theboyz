@@ -281,22 +281,32 @@
     "10": {
       "panels": [
         {
-          "focusY": 0.46,
+          "focusY": 0.15,
           "dialogue": [
-            { "text": "To the hotel in Shinjuku, please. (Al hotel en Shinjuku, por favor).", "size": "small", "posX": 40, "posY": 0, "tailX": 20, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
-            { "text": "Oh, English? tourist? Welcome to Tokyo. (¿Oh, inglés? ¿Turista? Bienvenida a Tokyo).", "size": "small", "posX": 30, "posY": 20, "tailX": 50, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
-            { "text": "Su acento era perfecto, demasiado amigable. Pero había un patrón en sus ojos... y en ese tatuaje que intentaba esconder bajo el cuello de la camisa.", "style": "caption", "size": "small", "posX": 30, "posY": 30, "tailX": 50, "tailY": 61, "tailWidth": 6, "tailCurvature": -22, "width": 205, "fontSize": 8, "borderRadius": 7 }
+            { "text": "Shinjuku no hoteru made onegaishimasu. (Al hotel en Shinjuku, por favor).", "size": "small", "posX": 50, "posY": 5, "tailX": 20, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Oya, Aruzenchin kara? Kankōkyaku? Yōkoso Tōkyō e. (¿Oh, Argentina? ¿Turista? Bienvenida a Tokyo).", "size": "small", "posX": 35, "posY": 30, "tailX": 50, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Su acento era perfecto, demasiado amigable. Pero había un patrón en sus ojos... y en ese tatuaje que intentaba esconder bajo el cuello de la camisa.", "style": "caption", "size": "small", "posX": 10, "posY": 0, "tailX": 50, "tailY": 61, "tailWidth": 6, "tailCurvature": -22, "width": 205, "fontSize": 8, "borderRadius": 7 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 40 }
+          ],
+          "hideUntilReached": false
+        },
+        {
+          "focusY": 0.45,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 40, "w": 100, "h": 36 }
           ]
         },
         {
-          "focusY": 0.4,
-          "dialogue": []
-        },
-        {
-          "focusY": 0.6,
+          "focusY": 0.7,
           "dialogue": [
-            { "text": "Excuse me... this isn't the way to Shinjuku. (Disculpe... este no es el camino a Shinjuku).", "size": "small", "posX": 65, "posY": 60, "tailX": 40, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
-            { "text": "Short cut. Don't worry, tourist. (Atajo. No se preocupe, turista).", "size": "small", "posX": 85, "posY": 70, "tailX": 65, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+            { "text": "Sumimasen… koko wa Shinjuku e no michide wa arimasen (Disculpe... este no es el camino a Shinjuku).", "size": "small", "posX": 65, "posY": 60, "tailX": 40, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Chikamichida yo. Shinpaishinaide, kankōkyaku-san. (Atajo. No se preocupe, turista).", "size": "small", "posX": 95, "posY": 80, "tailX": 65, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 73, "w": 100, "h": 28 }
           ]
         }
       ]
@@ -322,6 +332,9 @@
           "dialogue": [
             { "text": "¡¡¡No te muevas si no querés que sea peor!!!", "size": "small", "posX": 70, "posY": 60, "tailX": 65, "tailY": 75, "tailWidth": 6, "tailCurvature": 68, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "Escuché el bombeo de su sangre subir. Sé exactamente hacia dónde va a mover el brazo antes de que lo haga.", "style": "caption", "size": "small", "posX": 35, "posY": 70, "tailX": 35, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 195, "fontSize": 8, "borderRadius": 18, "customBg": "#f5e642", "customColor": "#000000" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 55, "w": 100, "h": 47 }
           ]
         }
       ]
@@ -331,8 +344,8 @@
         {
           "focusY": 0.4,
           "dialogue": [
-            { "text": "¡¿Pero qué carajo...?! ¡¿Cómo viste eso?!", "size": "small", "posX": 25, "posY": 45, "tailX": 55, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
-            { "text": "Tenías razón, Ian... Este mundo es un caos total. Pero acaban de darse cuenta de que yo no soy ninguna presa fácil.", "size": "small", "posX": 50, "posY": 75, "tailX": 30, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 155, "fontSize": 9, "borderRadius": 18 }
+            { "text": "Ittai dō iu kotoda…?! Dō yatte sore o mita nda? !(¡¿Pero qué carajo...?! ¡¿Cómo viste eso?!)", "size": "small", "posX": 25, "posY": 45, "tailX": 55, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Tenías razón, Julian... Este mundo es un caos total. Pero acaban de darse cuenta de que yo no soy ninguna presa fácil.", "size": "small", "posX": 50, "posY": 75, "tailX": 30, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 155, "fontSize": 9, "borderRadius": 18 }
           ]
         }
       ]
@@ -342,19 +355,25 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "Escapé corriendo entre callejones oscuros, perdida en una ciudad que no conozco y bajo un agua que no paraba de castigar. Hasta que vi esa luz.", "size": "small", "posX": 35, "posY": 25, "tailX": 30, "tailY": 20, "tailWidth": 4, "tailCurvature": -64, "width": 175, "fontSize": 8, "borderRadius": 5 },
+            { "text": "Escapé corriendo entre callejones oscuros, perdida en una ciudad que no conozco y bajo un agua que no paraba de castigar. Hasta que vi esa luz.", "size": "small", "posX": 45, "posY": 0, "tailX": 30, "tailY": 20, "tailWidth": 4, "tailCurvature": -64, "width": 175, "fontSize": 8, "borderRadius": 5 },
             { "text": "¡Ting-ting!", "size": "small", "posX": 85, "posY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 3, "tail": "none", "customBg": "#f5e642", "customColor": "#000000" }
           ],
           "sound": "/sounds/campana.mp3",
           "soundConfig": {
             "volume": 0.75,
             "playbackRate": 2
-          }
+          },
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 32 }
+          ]
         },
         {
           "focusY": 0.43,
           "dialogue": [
-            { "text": "¡Irasshaimase! ¡Buenas noches! Pasá rápido, muchacha, que te vas a congelar ahí afuera con esa tormenta.", "size": "small", "posX": 35, "posY": 30, "tailX": 55, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
+            { "text": "¡Irasshaimase! ¡Buenas noches! Pasá rápido, muchacha, que te vas a congelar ahí afuera con esa tormenta.", "size": "small", "posX": 85, "posY": 35, "tailX": 55, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 31, "w": 100, "h": 21 }
           ]
         },
         {
@@ -362,12 +381,18 @@
           "dialogue": [
             { "text": "Mi nombre es Kenji, Sentate acá cerca de las ollas, el vapor te va a revivir. ", "size": "small", "posX": 35, "posY": 75, "tailX": 30, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "Gracias Kenji", "size": "small", "posX": 55, "posY": 75, "tailX": 65, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 51, "w": 100, "h": 48 }
           ]
         },
         {
           "focusY": 0.65,
           "dialogue": [
             { "text": "Primero comé esto. Invita la casa. Un buen ramen caliente cura cualquier bardo que traigas de la calle.", "size": "small", "posX": 85, "posY": 95, "tailX": 110, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 80, "w": 100, "h": 21 }
           ]
         }
       ]
@@ -375,35 +400,47 @@
     "14": {
       "panels": [
         {
-          "focusY": 0.3,
+          "focusY": 0.15,
           "dialogue": [
             { "text": "¡¿De Argentina?! ¡No te lo puedo creer! ¡La tierra del más grande! ¡Messi! ¡Yo soy fanático total, miro todos los partidos a la madrugada!", "size": "small", "posX": 55, "posY": 0, "tailX": 35, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 205, "fontSize": 8, "borderRadius": 18 },
-            { "text": "¡¿Posta?! Sí, soy de allá... Qué locura encontrar esto en la otra punta del mundo.", "size": "small", "posX": 50, "posY": 25, "tailX": 75, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+            { "text": "¡¿Posta?! Sí, soy de allá... Qué locura encontrar esto en la otra punta del mundo.", "size": "small", "posX": 100, "posY": 20, "tailX": 75, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 43 }
           ]
         },
         {
-          "focusY": 0.4,
+          "focusY": 0.35,
           "dialogue": [
-            { "text": "Jajaja, te juro que es lo último que esperaba ver esta noche. Qué grande.", "size": "small", "posX": 85, "posY": 35, "tailX": 60, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+            { "text": "Jajaja, te juro que es lo último que esperaba ver esta noche. Qué grande.", "size": "small", "posX": 95, "posY": 35, "tailX": 60, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "...pero antes de llegar acá, el taxista que me traía del tren intentó dormirme con una jeringa en un callejón. Tuve que golpearlo para poder bajarme.", "speaker": "Sofi", "size": "small", "posX": 95, "posY": 55, "tailX": 105, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 8, "borderRadius": 18 }
+            { "text": "...pero antes de llegar acá, el taxista que me traía del tren intentó dormirme con una jeringa en un callejón. Tuve que golpearlo para poder bajarme.", "speaker": "Sofi", "size": "small", "posX": 85, "posY": 50, "tailX": 105, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 42, "w": 100, "h": 17 }
           ]
         },
         {
-          "focusY": 0.6,
+          "focusY": 0.55,
           "dialogue": [
-            { "text": "Escuchame bien, muchacha. Ese tipo del tatuaje del dragón pertenece al \"Clan Kurogane\". Es una banda mafiosa de la Yakuza que viene ganando terreno acá.", "size": "small", "posX": 55, "posY": 55, "tailX": 45, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 9, "borderRadius": 18 },
-            { "text": "Son tipos sumamente peligrosos y despiadados, especialmente con los extranjeros. Si te atacaron a vos, es porque están buscando algo específico", "size": "small", "posX": 10, "posY": 55, "tailX": 35, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 }
+            { "text": "Escuchame bien, muchacha. Ese tipo del tatuaje del dragón pertenece al \"Clan Kurogane\". Es una banda mafiosa de la Yakuza que viene ganando terreno acá.", "size": "small", "posX": 10, "posY": 50, "tailX": 35, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Son tipos sumamente peligrosos y despiadados, especialmente con los extranjeros. Si te atacaron a vos, es porque están buscando algo específico", "size": "small", "posX": -10, "posY": 60, "tailX": 35, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 56, "w": 100, "h": 21 }
           ]
         },
         {
-          "focusY": 0.52,
+          "focusY": 0.85,
           "dialogue": [
-            { "text": "El búnker de Brooklyn quedó demasiado lejos. Acabo de aterrizar en Tokyo... y sin querer, ya me metí en una guerra que no es mía.", "size": "small", "posX": 50, "posY": 80, "tailX": 50, "tailY": 67, "tailWidth": 6, "tailCurvature": -22, "width": 560, "fontSize": 8, "borderRadius": 6, "customBg": "#f5e642", "customColor": "#000000" }
+            { "text": "El búnker de Brooklyn quedó demasiado lejos. Acabo de aterrizar en Tokyo... y sin querer, ya me metí en una guerra que no es mía.", "size": "small", "posX": 55, "posY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 560, "fontSize": 8, "borderRadius": 6, "customBg": "#f5e642", "customColor": "#000000", "tail": "none" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 75, "w": 100, "h": 26 }
           ]
         }
       ]
