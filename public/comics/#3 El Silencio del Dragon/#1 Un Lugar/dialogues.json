@@ -751,6 +751,24 @@
         "fadeIn": 1000,
         "fadeOut": 1000
       }
+    },
+    {
+      "id": "track-1781570237640-w4uyt",
+      "layer": "music",
+      "src": "/sounds/terremoto.mp3",
+      "startPageKey": "5",
+      "startPanelIdx": 1,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "6"
+      },
+      "soundConfig": {
+        "volume": 0.6,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
     }
   ]
 }
