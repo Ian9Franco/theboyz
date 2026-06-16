@@ -274,13 +274,18 @@
             { "text": "Skyline de Jaz en NY", "size": "small", "posX": 20, "posY": 30, "tailWidth": 6, "tailCurvature": -46, "width": 150, "fontSize": 8, "borderRadius": 0, "tail": "none" }
           ],
           "hideUntilReached": false,
-          "duration": 3
+          "duration": 3,
+          "zoomRects": [
+            { "x": 0, "y": 28, "w": 100, "h": 34 }
+          ]
         },
         {
           "focusY": 0.82,
-          "dialogue": [],
+          "dialogue": [
+            { "text": "mi momento..", "size": "small", "posX": 90, "posY": 75, "tailX": 50, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
           "zoomRects": [
-            { "x": 0, "y": 27, "w": 100, "h": 76 }
+            { "x": 0, "y": 64, "w": 100, "h": 35 }
           ],
           "duration": 2,
           "hideUntilReached": false
@@ -327,6 +332,16 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 55, "w": 100, "h": 47 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/vidrio roto.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.3,
+                "playbackRate": 1
+              }
+            }
           ]
         }
       ]
@@ -712,6 +727,25 @@
       },
       "soundConfig": {
         "volume": 0.5,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1781569273946-gmf4l",
+      "layer": "music",
+      "src": "/sounds/Good Morning New Yorkers.mp3",
+      "startPageKey": "7",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "panelEnd",
+        "pageKey": "8",
+        "panelIdx": 0
+      },
+      "soundConfig": {
+        "volume": 0.45,
         "playbackRate": 1,
         "loop": true,
         "fadeIn": 1000,

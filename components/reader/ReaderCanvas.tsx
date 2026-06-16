@@ -442,16 +442,16 @@ export function ReaderCanvas({
       {/* Tap instructions / Next Page overlay in Reader Mode */}
       {mode === "read" && zoomedOut && !showAllDialogues && (
         <div
-          className="absolute inset-0 flex flex-col items-center justify-end pb-12 gap-4 z-40 pointer-events-none"
+          className="absolute inset-0 flex flex-col items-center justify-end pb-8 sm:pb-12 gap-3 sm:gap-4 z-40 pointer-events-none"
           style={{ background: "linear-gradient(to top, rgba(10,10,15,0.85) 0%, transparent 60%)" }}
         >
           {/* Review / Control Row */}
-          <div className="flex gap-3 px-4 mb-2 pointer-events-auto" onClick={(e) => e.stopPropagation()}>
+          <div className="flex gap-2 sm:gap-3 px-4 mb-1 pointer-events-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => {
                 resetPage(pageIdx);
               }}
-              className="px-4 py-2 border-2 border-white bg-black/60 text-white font-[var(--font-bangers)] tracking-wide hover:bg-white hover:text-black transition-colors rounded text-sm uppercase shadow-lg"
+              className="px-3 py-1.5 sm:px-4 sm:py-2 border-2 border-white bg-black/60 text-white font-[var(--font-bangers)] tracking-wide hover:bg-white hover:text-black transition-colors rounded text-xs sm:text-sm uppercase shadow-lg"
             >
               🔄 Volver a ver
             </button>
@@ -466,30 +466,41 @@ export function ReaderCanvas({
           </div>
 
           {/* Navigation Row */}
-          <div className="flex gap-3 flex-wrap justify-center px-4 pointer-events-auto" onClick={(e) => e.stopPropagation()}>
+          <div className="flex gap-2 sm:gap-3 flex-wrap justify-center px-4 pointer-events-auto" onClick={(e) => e.stopPropagation()}>
             {pageIdx > 0 && (
-              <button onClick={() => resetPage(pageIdx - 1)} className="btn btn-dark text-lg">
-                ← Página anterior
+              <button 
+                onClick={() => resetPage(pageIdx - 1)} 
+                className="btn btn-dark text-xs sm:text-base md:text-lg px-3 py-2 sm:px-5 sm:py-3 shadow-md"
+              >
+                ← <span className="hidden sm:inline">Página</span> Anterior
               </button>
             )}
             {!isLastPage ? (
-              <button onClick={() => resetPage(pageIdx + 1)} className="btn btn-magenta text-xl">
-                Siguiente página →
+              <button 
+                onClick={() => resetPage(pageIdx + 1)} 
+                className="btn btn-magenta text-sm sm:text-lg md:text-xl px-4 py-2 sm:px-6 sm:py-3.5 shadow-md"
+              >
+                Siguiente <span className="hidden sm:inline">Página</span> →
               </button>
             ) : nextChapter ? (
-              <Link href={`/chapters/${nextChapter.id}`} className="btn btn-magenta text-xl">
+              <Link 
+                href={`/chapters/${nextChapter.id}`} 
+                className="btn btn-magenta text-sm sm:text-lg md:text-xl px-4 py-2 sm:px-6 sm:py-3.5 shadow-md"
+              >
                 {nextChapter.title} →
               </Link>
             ) : (
-              <Link href="/" className="btn btn-magenta text-xl">
-                ¡Fin del capítulo! → Inicio
+              <Link 
+                href="/" 
+                className="btn btn-magenta text-sm sm:text-lg md:text-xl px-4 py-2 sm:px-6 sm:py-3.5 shadow-md"
+              >
+                Fin del capítulo →
               </Link>
             )}
           </div>
         </div>
       )}
 
-      {/* Canvas Floating Editor Controls (Editor Mode only) */}
       {mode === "edit" && (
         <div className="absolute top-4 right-4 z-50 flex flex-col gap-3 pointer-events-auto">
           <button
