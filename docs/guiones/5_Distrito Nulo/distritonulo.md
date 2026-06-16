@@ -1,38 +1,40 @@
 # 📖 Guion del Piloto: El Despertar de los Dioses (Nueva York: Distrito Nulo)
 
----
-
-## ACTO 1: La Ciudad Anomalía (Páginas 1 - 5)
+---## ACTO 1: La Ciudad Anomalía (Páginas 1 - 5)
 
 ### PÁGINA 1
 * **Viñeta 1 (Plano General Panorámico - Página Completa):** Nueva York nocturna, pero distópica y sucia. Los rascacielos de Manhattan están envueltos en una niebla verdosa. En el cielo, las nubes tormentosas se mueven en círculos concéntricos perfectos, desafiando la física. Los carteles de Times Square parpadean con estática roja de fondo.
   * **TEXTO DE ENCUADRE:** "Nueva York no duerme. Tampoco respira. Está atrapada en un zumbido que nadie más puede escuchar."
 
-### PÁGINA 2
+### PÁGINA 2 (Etapa 1 — El regreso tuvo consecuencias)
 * **Viñeta 2 (Plano Medio):** Los muelles de Brooklyn, oxidados y abandonados. Un subte de las líneas viejas pasa rugiendo por las vías elevadas, soltando chispas de un color azul eléctrico antinatural.
-* **Viñeta 3 (Plano General Interno):** El interior de la base de Dumbo. Un amplio almacén industrial con paredes de ladrillo visto, cables pelados, pantallas holográficas y monitores viejos de tubo catódico. Uandi está sin remera, sudando a mares, intentando levantar un bloque macizo de hormigón colapsado para liberar una cañería.
-* **Viñeta 4 (Plano Corto):** Los músculos de Uandi están tensos, las venas de su cuello marcadas. Pero no es solo esfuerzo físico; hay una vibración dorada casi imperceptible bajo su piel.
-* **Viñeta 5 (Primer Plano):** De golpe, los ojos de Uandi se abren con dolor. Se le cae el bloque de hormigón de las manos. ¡THOOM! (Efecto de sonido pesado al caer al suelo). Uandi se agarra las sienes, mareado, con la respiración entrecortada. El sonido del subte exterior se escucha amplificado en su cabeza como un taladro.
+* **Viñeta 3 (Plano General Interno):** El interior de la base de Dumbo. Un amplio almacén industrial. En un estante de madera, destaca una foto enmarcada y algo gastada del grupo completo (incluyendo a Sofi). En un monitor secundario sobre la mesa de trabajo, se reproduce en bucle un mensaje de voz o una videollamada perdida de Sofi desde Tokio, con interferencia estática.
+* **Viñeta 4 (Plano Corto):** Uandi está sentado en una caja de madera, pálido y sudando frío. Presiona una botella de agua helada contra su frente, temblando levemente.
+* **Viñeta 5 (Primer Plano):** Uandi se baja un poco el cuello de la remera, revelando unas extrañas marcas rojas que parecen quemaduras o parásitos latentes moviéndose lentamente bajo su piel.
+  * **UANDI:** —Ian, esto no baja. La fiebre me está matando. Y estas marcas... se sienten como si tuviera algo vivo quemándome debajo de la piel. No volvimos bien de ese lugar, te lo digo yo.—
 
-### PÁGINA 3
-* **Viñeta 6 (Plano Americano):** Al otro lado de la base, Julián está tirado en un sillón de cuero desfondado. Tiene los pies sobre una mesa de madera mugrienta y está haciendo trucos de magia con un mazo de cartas gastado. Las cartas vuelan entre sus manos con una fluidez sobrehumana.
-* **Viñeta 7 (Plano Detalle):** Julián lanza una carta (el As de Picas) hacia el techo con un movimiento rápido de muñeca.
-* **Viñeta 8 (Acción / Efecto Glitch):** A mitad de camino, la carta se congela en el aire. No cae. Empieza a parpadear violentamente en colores magenta y cian, dejando una estela pixelada. ¡ZZZ-ZAP! (Sonido de cortocircuito digital).
-* **Viñeta 9 (Plano Medio):** La carta estalla silenciosamente en un código binario brillante y desaparece, dejando un pequeño agujero chamuscado y humeante en el techo de concreto. Julián se incorpora en el sillón, con una sonrisa de lado, aunque sus ojos muestran pura intriga.
-  * **JULIÁN:** —Che... o el dealer me vendió cartas con plutonio, o el aire de Brooklyn se puso denso de verdad.—
+### PÁGINA 3 (Etapa 2 — Algo está mal)
+* **Viñeta 6 (Plano Americano):** Al otro lado de la base, Julián está tirado en un sillón de cuero desfondado, con su suéter azul marino. Se agarra la cabeza con ambas manos, con los ojos apretados por una migraña insoportable.
+* **Viñeta 7 (Primer Plano):** Julián abre los ojos; su punto de vista muestra una aberración cromática severa y visión doble (el entorno parpadea y se desfasa en tonos azul y rojo).
+  * **JULIÁN:** —Yo estoy viendo doble, Bub. Y las luces... siento que la lluvia hace cortocircuito directamente en mis ojos. Creo que me estoy volviendo loco o el hotel nos pegó una malaria interdimensional.—
+* **Viñeta 8 (Plano Medio):** Ian está de espaldas, rodeado por doce monitores que muestran mapas topográficos e interfaces en verde matrix. Se da la vuelta cansado, apuntándoles con un lápiz óptico.
+  * **IAN:** —No es malaria, Julián. Pero sí nos trajimos una enfermedad de ese lugar. La realidad acá afuera se está desgarrando como papel mojado, y las lecturas electromagnéticas de la base están registrando picos que no tienen sentido físico.—
 
-### PÁGINA 4
-* **Viñeta 10 (Plano General):** Ian ignora el chiste. Está de espaldas a ellos, sepultado bajo una muralla de doce monitores que parpadean en verde matrix. En las pantallas se ven escaneos topográficos de Nueva York superpuestos con mapas fractales que no corresponden a este mundo.
-* **Viñeta 11 (Primer Plano):** Ian se saca los anteojos y se frota la raíz de la nariz con frustración. El reflejo de los códigos dimensionales corre por los cristales de sus anteojos apoyados en la mesa.
-* **Viñeta 12 (Plano Medio):** Ian gira bruscamente en su silla, apuntándolos con una lapicera táctil. Su rostro denota un cansancio peligroso.
-  * **IAN:** —¿Se pueden tomar esto en serio por cinco minutos? Ya pasaron meses desde lo del hotel infinito que casi nos borra de la existencia. Meses desde que nos despedimos todos de Sofi en el aeropuerto antes de su vuelo a Seúl. Y mírennos ahora... ustedes jugando a los X-Men de cabotaje.—
+### PÁGINA 4 (Etapa 3 — Primera evidencia imposible)
+* **Viñeta 9 (Acción):** Uandi exhala un suspiro caliente y se levanta para ayudar a acomodar el depósito. Intenta mover un pesado bloque de hormigón colapsado que obstruye una cañería.
+* **Viñeta 10 (Plano Corto):** Al forzar la carga, las marcas rojas bajo la piel de los brazos de Uandi se encienden de golpe en un rojo incandescente vivo. Uandi suelta un quejido de dolor y sorpresa por la repentina reacción térmica.
+* **Viñeta 11 (Acción):** El bloque de hormigón cae al suelo levantando una nube de polvo. ¡THOOM! Uandi retrocede asustado, sosteniéndose los brazos, de los cuales emana un vapor caliente.
+  * **UANDI:** —¡Mierda! ¡Se prendieron fuego! ¿Vieron eso? Les juro que no hice nada, solo quise levantar el bloque...—
 
-### PÁGINA 5
-* **Viñeta 13 (Plano Americano):** Uandi se apoya contra una columna, todavía pálido, secándose el sudor con una toalla. Julián se acerca a Ian, mirando de reojo las pantallas.
-  * **UANDI:** —Ian, no estamos jodiendo. El dolor de cabeza está empeorando. Siento la vibración del subte en los dientes.—
-* **Viñeta 14 (Plano Detalle Monitor):** La pantalla principal muestra un mapa calórico de Manhattan. El "Distrito Nulo" parpadea en un rojo oscuro, expandiéndose hacia Brooklyn como una infección.
-* **Viñeta 15 (Plano Medio Largo):** Ian se pone de pie, cruzándose de brazos, mirando las lecturas. La atmósfera de la base es claustrofóbica.
-  * **IAN:** —No es el subte, Uandi. Son las secuelas de los Backrooms de hace meses. La realidad acá afuera se está desgarrando como papel mojado, y temo que el colapso cuántico se nos metió adentro. Hay que salir a medir la estática exterior antes de que la ciudad nos trague enteros. Muevan el culo.—
+### PÁGINA 5 (El diagnóstico y el Giro)
+* **Viñeta 12 (Plano Corto):** Julián, sobresaltado por el estruendo del bloque, deja caer el mazo de cartas común que tenía en la mano.
+* **Viñeta 13 (Efecto Glitch):** A mitad de camino del suelo, una de las cartas se congela en el aire. Comienza a parpadear violentamente con estática analógica roja y azul y se desintegra silenciosamente en píxeles.
+* **Viñeta 14 (Plano Medio):** Julián y Uandi miran el espacio vacío donde estaba la carta, completamente mudos. Julián señala el techo temblando levemente.
+  * **JULIÁN:** —¿Che... vos viste eso? Decime que vos también lo viste.—
+* **Viñeta 15 (Plano Medio Largo):** Ian gira bruscamente su silla frente a los monitores principales, donde los gráficos muestran picos críticos que coinciden al milisegundo con la desintegración de la carta y el pulso térmico de Uandi. Ian se saca las gafas, pálido.
+  * **IAN:** —El portal... el portal no nos trajo de vuelta.—
+  * **JULIÁN:** —¿Cómo que no? Si estamos acá, Ian.—
+  * **IAN:** —Creo que una parte de ese universo vino con nosotros. Habita en nuestros cuerpos.—
 
 ---
 

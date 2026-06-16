@@ -4,6 +4,8 @@
 
 ## ACTO 1: La Ciudad Anomalía (Páginas 1 - 5)
 
+**Personajes:** Ninguno (Entorno / Nueva York)
+
 ### PÁGINA 1: La Ciudad y la Estática
 
 > [!TIP]
@@ -28,7 +30,9 @@
 
 ---
 
-### PÁGINA 2: La Base de Dumbo y las Runas de Uandi
+**Personajes:** Uandi, Sofi (en foto/monitor de fondo)
+
+### PÁGINA 2: La Base de Dumbo y los Síntomas de Uandi
 
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
@@ -37,10 +41,10 @@
 > Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown: Explosive energy, extreme perspectives, inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; color palette of desaturated tones and electric red-hot neon contrast highlights. 2D illustration. NO 3D, NO text.
 > 
 > Panel 1: Wide shot of the rusty, abandoned Brooklyn docks. An old subway train passes over elevated tracks, throwing off bright electrical blue sparks.
-> Panel 2: Inside the Dumbo Base, a spacious industrial warehouse with exposed brick walls, tall windows, exposed wiring, computer servers, and old CRT monitors. Uandi (an imposing, muscular athletic young man with dark curly hair and round wire-rimmed glasses, wearing a Kappa technical t-shirt, sweating heavily) is struggling to lift a massive concrete block to clear a pipe. Both of his arms are covered in scar-like tribal/geometric tattoo patterns (Runas Cinéticas).
-> Panel 3: Close-up of Uandi's tensed muscular arms and shoulders. The Runas Cinéticas on both arms glow for the first time with a hot, red-hot volcanic energy under his skin, radiating heat waves.
-> Panel 4: Uandi drops the concrete block heavily. The block slams onto the floor, raising dust.
-> Panel 5: Close-up of Uandi clutching his temples in intense pain, eyes closed, breathing heavily with a look of sensory overload and suffocating heat.
+> Panel 2: Inside the Dumbo Base, a spacious industrial warehouse with exposed brick walls, exposed wiring, computer servers, and old CRT monitors. On a wooden shelf, a dusty framed group photo of the characters (including a young woman, Sofi). On a secondary CRT monitor, a fuzzy, static-filled video message of Sofi plays in a loop.
+> Panel 3: Uandi (an imposing, muscular athletic young man with dark curly hair and round wire-rimmed glasses, wearing a Kappa technical t-shirt, sweating heavily and looking pale) is sitting on a wooden crate, shivering, holding a cold plastic water bottle to his forehead.
+> Panel 4: Close-up of Uandi pulling down his t-shirt collar to check his shoulder. Under his skin, faint red tribal/geometric tattoo patterns (Runas Cinéticas) glow dimly with a hot, red-hot volcanic energy, resembling chemical burns or parasitic tracks.
+> Panel 5: Close-up of Uandi looking anxious and talking with a worried expression, eyes wide.
 > 
 > --no 3d, cgi, photorealistic, text, speech bubbles, digital gradients
 > 
@@ -48,14 +52,16 @@
 > - **Uandi** (Porte físico imponente, musculoso, remera Kappa técnica, lentes redondos, tatuajes/runas en ambos brazos)
 
 * **Viñeta 6 (Plano General):** Los muelles oxidados de Brooklyn. Un vagón de subte pasa sobre las vías elevadas soltando chispas de color azul eléctrico.
-* **Viñeta 7 (Plano General Interno):** El interior de la base de Dumbo. Uandi, muy musculoso y sudando, con su remera Kappa técnica y lentes redondos, intenta levantar un pesado bloque de hormigón. Se ven sus Runas Cinéticas (cicatrices/tatuajes) en ambos brazos.
-* **Viñeta 8 (Plano Detalle):** Los brazos de Uandi tensos, con las Runas Cinéticas de ambos brazos encendiéndose por primera vez en un tono rojo incandescente bajo su piel.
-* **Viñeta 9 (Acción):** El bloque cae al suelo levantando polvo con un impacto pesado.
-* **Viñeta 10 (Primer Plano):** Uandi tomándose las sienes con dolor, exhausto, sintiendo un calor sofocante y fatiga extrema.
+* **Viñeta 7 (Plano General Interno):** El interior de la base de Dumbo. Al fondo, una foto de grupo enmarcada y con polvo sobre un estante, y en una pantalla secundaria, una videollamada de Sofi con estática desde Tokio.
+* **Viñeta 8 (Plano Medio):** Uandi sentado en una caja de madera, sudando y pálido, presionando una botella de agua fría contra su frente.
+* **Viñeta 9 (Plano Detalle):** Uandi se baja el cuello de la remera y muestra las marcas rojas bajo su piel, palpitando tenuemente como quemaduras.
+* **Viñeta 10 (Primer Plano):** Uandi hablando con voz preocupada, asumiendo que algo no anda bien tras regresar del hotel.
 
 ---
 
-### PÁGINA 3: Las Cartas Glitch de Julián
+**Personajes:** Julián, Ian
+
+### PÁGINA 3: Los Síntomas de Julián e Ian
 
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
@@ -63,82 +69,92 @@
 > 
 > Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; color palette of desaturated tones and electric red and blue static highlights. 2D illustration. NO 3D, NO text.
 > 
-> Panel 1: Inside the Dumbo Base. Julián (a slender, lean young man, short hair with a clean fade on the sides, a neat trim beard, no glasses, sharp facial features, wearing a navy blue crewneck sweater) is lying back on a worn leather couch, playing with a single card made of glowing red-and-blue static electricity.
-> Panel 2: Close-up of Julián's hands performing a smooth card trick, a card of glowing red-and-blue static energy flying between his fingers.
-> Panel 3: Close-up of a card of glowing static energy frozen in mid-air halfway to the ceiling.
-> Panel 4: The energy card glitches, flickering and shaking like a double-exposed analog television image with red and blue static trails.
-> Panel 5: The card disintegrates into a small burst of electric sparks, leaving a small charred hole in the concrete ceiling above.
-> Panel 6: Julián sits up on the couch, a cocky smirk on his face, but his eyes show deep intrigue and alertness.
+> Panel 1: Inside the Dumbo Base. Julián (a slender, lean young man, short hair with a clean fade on the sides, a neat trim beard, no glasses, sharp facial features, wearing a navy blue crewneck sweater) is lying back on a worn leather couch, holding his head with both hands in intense pain, eyes squeezed shut.
+> Panel 2: Point of View of Julián looking at the base, showing severe double vision and chromatic aberration with magenta and cyan color fringes and digital television noise.
+> Panel 3: Julián sits up on the couch, rubbing his eyes, looking exhausted and speaking.
+> Panel 4: Ian (a young man with textured wavy brown hair, wearing black-rimmed glasses, a dark gray hoodie) is seen from behind, sitting in front of a massive wall of twelve monitors flashing with green matrix-like code. He rubs the bridge of his nose in deep frustration, his glasses lying on the desk.
+> Panel 5: Ian spins his chair around, pointing a digital tablet stylus pen towards Julián, his face looking exhausted and warnings-filled.
 > 
 > --no 3d, cgi, photorealistic, text, speech bubbles, digital gradients
 > 
 > **Personajes a subir al chat:**
 > - **Julián** (Esbelto, pelo corto con fade, barba prolija, sin anteojos, suéter azul marino)
+> - **Ian** (Cabello castaño ondeado, gafas de marco negro, buzo hoodie gris)
 
-* **Viñeta 11 (Plano Americano):** Julián tirado en un sillón de cuero desfondado, jugando con una sola carta hecha de estática y chispas eléctricas rojas y azules. Su rostro es afilado, con fade y barba, y no lleva lentes.
-* **Viñeta 12 (Plano Detalle):** Las manos de Julián haciendo piruetas con la carta de energía estática azul y roja.
-* **Viñeta 13 (Acción):** La carta de energía se detiene y queda flotando inerte a mitad de camino del techo.
-* **Viñeta 14 (Efecto Glitch):** La carta parpadea de forma violenta con un efecto de televisión descompuesta (estática temblorosa roja y azul).
-* **Viñeta 15 (Acción):** La carta se disuelve en chispas de estática y se evapora, dejando una marca quemada en el techo.
-* **Viñeta 16 (Plano Medio):** Julián se incorpora en el sillón con una sonrisa ladeada y expresión intrigada.
+* **Viñeta 11 (Plano Americano):** Julián tirado en el sillón de cuero desfondado, sosteniéndose la cabeza con fuerza por una migraña.
+* **Viñeta 12 (Plano POV):** Visión distorsionada de Julián, con aberración cromática roja/azul y visión doble de la base de Dumbo.
+* **Viñeta 13 (Plano Medio):** Julián sentándose, frotándose los ojos con cara de fatiga extrema.
+* **Viñeta 14 (Plano General):** Ian de espaldas, sepultado bajo los doce monitores de código verde matrix, frotándose el puente de la nariz.
+* **Viñeta 15 (Plano Medio):** Ian girando la silla y hablándoles con gravedad, sosteniendo un lápiz óptico.
 
 ---
 
-### PÁGINA 4: La Frustración de Ian
+**Personajes:** Uandi, Ian
+
+### PÁGINA 4: El Accidente de Uandi
 
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
 > *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
 > 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; desaturated tones, matrix green monitor reflections. 2D illustration. NO 3D, NO text.
+> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; desaturated tones, red neon highlights. 2D illustration. NO 3D, NO text.
 > 
-> Panel 1: Ian (a young man with textured wavy brown hair, wearing black-rimmed glasses, a dark gray hoodie) is seen from behind, sitting in front of a massive wall of twelve monitors flashing with green matrix-like code and geographical scans.
-> Panel 2: Close-up of Ian rubbing the bridge of his nose in deep frustration. His glasses lie on the desk in front of him, reflecting the green data lines from the monitors.
-> Panel 3: Ian spins his chair around quickly, pointing a digital tablet stylus pen towards Julián and Uandi, his face looking exhausted and angry. Julián (slender, neat fade, trim beard, no glasses) and Uandi (muscular, dark curly hair, round glasses) listen.
-> Panel 4: Medium shot. Ian stands in front of Julián and Uandi, lecturing them. The background is filled with the cold glow of the computer monitors.
+> Panel 1: Uandi walks over to help tidy the warehouse, reaching down to move a massive concrete block blocking a pipe.
+> Panel 2: Close-up of Uandi's muscular arms grasping the heavy concrete block, his muscles tensing.
+> Panel 3: Suddenly, the tribal red marks (Runas Cinéticas) under the skin of both of his arms flare up in an intense, hot volcanic red-hot glow, radiating heat waves and distorting the air.
+> Panel 4: Uandi screams in pain, letting go of the concrete block in a reflex spasm.
+> Panel 5: The concrete block slams onto the floor, raising a cloud of dust. Uandi backing away in terror, clutching his forearms which are smoking slightly.
 > 
 > --no 3d, cgi, photorealistic, text, speech bubbles, digital gradients
 > 
 > **Personajes a subir al chat:**
+> - **Uandi** (Porte físico imponente, musculoso, remera Kappa técnica, lentes redondos, tatuajes/runas en ambos brazos)
 > - **Ian** (Cabello castaño ondeado, gafas de marco negro, buzo hoodie gris)
-> - **Julián**
-> - **Uandi**
 
-* **Viñeta 17 (Plano General):** Ian de espaldas, rodeado por doce monitores que muestran mapas topográficos y códigos en verde brillante.
-* **Viñeta 18 (Primer Plano):** Ian frotándose la raíz de la nariz con cansancio. Sus anteojos en la mesa reflejan la matriz verde de la pantalla.
-* **Viñeta 19 (Plano Medio):** Ian gira la silla y les apunta con una lapicera digital. Se ve el contraste entre Julián (esbelto, sin lentes, barba, fade) y Uandi (musculoso, con anteojos redondos, pelo enrulado).
-* **Viñeta 20 (Plano Medio Largo):** Ian parado frente a ellos en la base, gesticulando mientras les recrimina los meses perdidos y la partida de Sofi.
+* **Viñeta 17 (Plano Medio):** Uandi se levanta e intenta mover un bloque de hormigón colapsado del almacén.
+* **Viñeta 18 (Plano Corto):** Los brazos de Uandi aferrando el bloque, con los músculos en máxima tensión.
+* **Viñeta 19 (Acción):** De repente, las marcas rojas bajo su piel se encienden en un rojo incandescente vivo.
+* **Viñeta 20 (Acción):** Uandi suelta el bloque de golpe por un espasmo. El hormigón cae al suelo levantando polvo (¡THOOM!).
+* **Viñeta 21 (Plano Medio Largo):** Uandi retrocede aturdido, tomándose los brazos humeantes y mirando con terror sus marcas.
 
 ---
 
-### PÁGINA 5: El Distrito Nulo y el Encargo
+**Personajes:** Julián, Uandi, Ian
+
+### PÁGINA 5: El Glitch de la Carta y el Giro
 
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
 > *Copia el siguiente bloque de texto, adjunta las imágenes de los personajes y envíaselo a la IA para ilustrar la página:*
 > 
-> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; desaturated tones, red and cian neon accents. 2D illustration. NO 3D, NO text.
+> Official comic book page layout, multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American dark sci-fi comic book art style. Technical breakdown inspired by Jorge Jimenez, Greg Capullo, Sara Pichelli, and Lee Garbett. Gritty paper textures; desaturated tones, red and blue neon accents. 2D illustration. NO 3D, NO text.
 > 
-> Panel 1: Uandi is leaning against a brick column in the Dumbo Base, pale and sweating, wearing his Kappa technical t-shirt, wiping his forehead with a small towel. The Runas Cinéticas on both of his arms are faintly visible as dark marks.
-> Panel 2: Julián walks over to Ian's desk, looking curiously over Ian's shoulder at the glowing screens.
-> Panel 3: Close-up of the main computer monitor displaying a heat map of New York. A region labeled "NULL DISTRICT" flashes in deep red, expanding from Manhattan toward Brooklyn like an infection.
-> Panel 4: Ian stands with his arms crossed, his face serious and dark, explaining the quantum reading to Uandi and Julián who listen with concern.
+> Panel 1: Julián, startled by the concrete block crash, drops a deck of ordinary playing cards.
+> Panel 2: Close-up of a single playing card falling. Halfway to the floor, it freezes in mid-air, defying gravity.
+> Panel 3: The card glitches, shaking and flickering with intense red and blue analog television static.
+> Panel 4: The card disintegrates into a cloud of cyan and magenta pixels and vanishes completely.
+> Panel 5: Julián and Uandi stare in shock at the empty air, Julián pointing with a trembling finger.
+> Panel 6: Ian turns to his main computer monitor, which displays massive energy graphs peaking at the exact moment of the card glitch. He looks pale, taking off his glasses.
 > 
 > --no 3d, cgi, photorealistic, text, speech bubbles
 > 
 > **Personajes a subir al chat:**
-> - **Ian**
-> - **Uandi**
-> - **Julián**
+> - **Ian** (Cabello castaño ondeado, gafas de marco negro, buzo hoodie gris)
+> - **Julián** (Esbelto, pelo corto con fade, barba prolija, sin anteojos, suéter azul marino)
+> - **Uandi** (Porte físico imponente, musculoso, remera Kappa técnica, lentes redondos, tatuajes/runas en ambos brazos)
 
-* **Viñeta 21 (Plano Americano):** Uandi apoyado contra una columna de ladrillos de la base, pálido, secándose el sudor con una toalla. Se aprecian los tatuajes en ambos brazos.
-* **Viñeta 22 (Plano Medio):** Julián se acerca a Ian y observa la pantalla principal de reojo.
-* **Viñeta 23 (Plano Detalle Monitor):** Mapa térmico en pantalla con el Distrito Nulo parpadeando en rojo, expandiéndose hacia Brooklyn.
-* **Viñeta 24 (Plano Medio Largo):** Ian de pie, cruzado de brazos frente a sus dos amigos, dándoles la orden de salir a medir la estática.
+* **Viñeta 22 (Plano Corto):** Julián se asusta por el estruendo y deja caer un mazo de naipes comunes.
+* **Viñeta 23 (Efecto Glitch):** Una de las cartas se congela inerte a mitad de camino del suelo.
+* **Viñeta 24 (Plano Detalle):** La carta parpadea de forma violenta con estática analógica roja y azul.
+* **Viñeta 25 (Acción):** La carta se disuelve silenciosamente en píxeles y desaparece.
+* **Viñeta 26 (Plano Medio):** Julián y Uandi atónitos, mirando el espacio vacío; Julián señala asustado.
+* **Viñeta 27 (Plano General):** Ian gira frente a sus monitores que registran picos de energía simultáneos al glitch de la carta, sacándose los anteojos con el rostro pálido.
 
 ---
 
 ## ACTO 2: La Batería Cinética (Páginas 6 - 10)
+
+**Personajes:** Ian, Uandi
 
 ### PÁGINA 6: La Anomalía bajo el Puente
 
@@ -168,6 +184,8 @@
 
 ---
 
+**Personajes:** Ian, Uandi
+
 ### PÁGINA 7: La Caída del Acero
 
 > [!TIP]
@@ -196,6 +214,8 @@
 
 ---
 
+**Personajes:** Ian, Uandi
+
 ### PÁGINA 8: La Decisión de Uandi
 
 > [!TIP]
@@ -222,6 +242,8 @@
 
 ---
 
+**Personajes:** Uandi, Ian
+
 ### PÁGINA 9: Sobrecarga Cinética (Aegis) (Splash Dinámica)
 
 > [!TIP]
@@ -247,6 +269,8 @@
 * **Viñeta 42 (Plano Detalle - Inset 3):** Las Runas Cinéticas de ambos brazos volviendo a la normalidad mientras disipan la estática cinética.
 
 ---
+
+**Personajes:** Ian, Uandi
 
 ### PÁGINA 10: Fibras Musculares
 
@@ -276,6 +300,8 @@
 
 ## ACTO 3: Fragmentación en Hell's Kitchen (Páginas 11 - 15)
 
+**Personajes:** Julián, Matones de la Mafia
+
 ### PÁGINA 11: Lluvia en Hell's Kitchen
 
 > [!TIP]
@@ -301,6 +327,8 @@
 * **Viñeta 50 (Plano Picado):** El callejón bloqueado por contenedores de basura y rejas, sin salida para Julián.
 
 ---
+
+**Personajes:** Julián, Matón Líder
 
 ### PÁGINA 12: La Navaja y el Truco
 
@@ -330,6 +358,8 @@
 
 ---
 
+**Personajes:** Julián, Matón Líder
+
 ### PÁGINA 13: Desfase Cuántico
 
 > [!TIP]
@@ -355,6 +385,8 @@
 * **Viñeta 59 (Plano Medio Largo):** Las tres copias de Julián se mueven de forma sincronizada, tocándose la cabeza a la vez.
 
 ---
+
+**Personajes:** Julián, Matones de la Mafia
 
 ### PÁGINA 14: Combate Glitch
 
@@ -384,6 +416,8 @@
 
 ---
 
+**Personajes:** Julián, Matones de la Mafia
+
 ### PÁGINA 15: Explosión Digital (Wildcard) (Splash Dinámica)
 
 > [!TIP]
@@ -412,6 +446,8 @@
 
 ## ACTO 4: Sobrecarga Crítica en la Terraza (Páginas 16 - 20)
 
+**Personajes:** Uandi, Julián, Ian
+
 ### PÁGINA 16: La Terraza de Brooklyn
 
 > [!TIP]
@@ -438,6 +474,8 @@
 * **Viñeta 72 (Plano Medio):** Ian asoma por la escotilla de la terraza cargando su tablet iluminada y portando su ocular táctico prototipo (GhostLens) en el ojo.
 
 ---
+
+**Personajes:** Julián, Ian, Uandi
 
 ### PÁGINA 17: Explicación de los Síntomas
 
@@ -466,6 +504,8 @@
 
 ---
 
+**Personajes:** Ian, Julián, Uandi
+
 ### PÁGINA 18: El Diagnóstico Cuántico
 
 > [!TIP]
@@ -492,6 +532,8 @@
 * **Viñeta 80 (Plano General):** Los tres amigos en silencio en la terraza bajo el cielo nocturno.
 
 ---
+
+**Personajes:** Ian, Julián, Uandi, Comandante R.E.G.U.L.A.R., Soldados de Vanguard
 
 ### PÁGINA 19: Las Fuerzas de Vanguard
 
@@ -522,6 +564,8 @@
 * **Viñeta 85 (Plano Medio):** El Comandante ordenando a sus soldados activar la red de estasis molecular.
 
 ---
+
+**Personajes:** Don Vanguard, Uandi, Julián, Ian, Soldados de Vanguard
 
 ### PÁGINA 20: Sobrecarga Cinética (Aegis Climax)
 

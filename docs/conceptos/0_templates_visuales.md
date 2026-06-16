@@ -10,6 +10,7 @@ Usa estas descripciones en inglés para alimentar a los generadores de imágenes
 *   **Cabello:** `neatly styled rich textured dark brown wavy hair, voluminous top with natural flow, clean-cut sides`
 *   **Rostro:** `expressive light brown eyes, light skin tone, no facial hair, strong jawline with three-quarter facial definition, wearing round black-rimmed glasses with a multi-layered frame`
 *   **Ropa:** `dark charcoal grey pullover hoodie showing detailed fabric texture, or a simple black or brown crewneck t-shirt, tailored black slim-fit jeans, brown sneakers with white soles`
+*   **Cuerpo:** `slender and athletic build, 178 cm tall`
 *   **Accesorios:** `wearing a sleek modern digital smartwatch on his wrist, optionally holding a modern black smartphone`
 
 ### Jaz
@@ -21,7 +22,7 @@ Usa estas descripciones en inglés para alimentar a los generadores de imágenes
 ### Julián
 *   **Cabello:** `short curly black hair with voluminous styled curls on top and a clean skin-fade on the sides and back`
 *   **Rostro:** `alert and focused dark brown eyes, light skin tone, neatly trimmed short black beard and mustache (medium stubble)`
-*   **Cuerpo:** `slender and athletic build, 185 cm tall`
+*   **Cuerpo:** `slender and athletic build, 178 cm tall`
 *   **Ropa:** `dark navy blue long-sleeve crewneck sweater showing worn cotton texture and ribbed collar/cuffs, black slim-fit pants, dark brown leather lace-up combat boots`
 
 ### Sofi
@@ -33,16 +34,18 @@ Usa estas descripciones en inglés para alimentar a los generadores de imágenes
 ### Uandi
 *   **Cabello:** `thick textured curly dark brown hair with high volume on top and a clean skin-fade on the sides and back`
 *   **Rostro:** `intense dark eyes with focused gaze, light skin tone, round black wire-framed glasses, short neat beard and mustache`
-*   **Cuerpo y Tatuajes:** `highly muscular and athletic build, left arm fully covered in a detailed black ink sleeve tattoo (featuring swords, mandalas, leaves, and geometric patterns), right arm is completely clean`
+*   **Cuerpo y Tatuajes:** `highly muscular and athletic build, left arm fully covered in a detailed black ink sleeve tattoo (featuring swords, mandalas, leaves, and geometric patterns), right arm is completely clean, 170 cm tall`
 *   **Ropa:** `tight-fitting dark grey/navy blue compression short-sleeve t-shirt with a small white Kappa logo on the center of the chest, matching dark grey cargo pants, black tactical belt with buckle, black lace-up combat boots`
 
 ### Volvo
 *   **Cabello:** `short spiky dark brown hair styled dynamically upwards and forward`
+*   **Cuerpo:** `slender and athletic build, 180 cm tall`
 *   **Rostro:** `piercing light blue-green eyes, thick expressive dark eyebrows, light skin tone, strong jawline with a full short beard and mustache`
 *   **Ropa:** `plain orange crewneck short-sleeve t-shirt, optional brown tactical utility chest rig/harness, dark green/grey cargo pants with side pockets and knee panels, brown canvas tactical belt with multiple leather gear pouches on the sides and back, brown leather combat boots`
 
 ### Mati (Universo Base)
 *   **Cabello:** `short neat black hair combed to the side, cleanly parted and swept to the right`
+*   **Cuerpo:** `slender and athletic build, 178 cm tall`
 *   **Rostro:** `warm friendly smile with expressive dimples on his cheeks, warm tan/medium skin tone, unobstructed brown eyes, no facial hair`
 *   **Ropa:** `dark grey tactical bomber jacket with a stand-up collar, vertical chest zipper pocket, and left sleeve zipper pocket, dark olive green crewneck ribbed sweater underneath, khaki-brown cargo pants with side pockets, grey sneakers with white soles`
 
