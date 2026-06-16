@@ -215,15 +215,8 @@
         {
           "focusY": 0.6,
           "dialogue": [
-            { "text": "Ugh, Cuidate, loca... Mandá mensajes cuando llegues, no seas colgada.", "size": "small", "posX": 5, "posY": 70, "tailX": 30, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Ugh, Cuidate, loca... Mandá mensajes cuando llegues, no seas colgada.", "size": "small", "posX": -5, "posY": 65, "tailX": 30, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "Buen viaje, Sofi. Si algún ponja te hace bardo, me avisás y viajo a surtirlo, ¿dale?", "size": "small", "posX": 95, "posY": 55, "tailX": 80, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 135, "fontSize": 8, "borderRadius": 18 }
-          ]
-        },
-        {
-          "focusY": 0.7,
-          "dialogue": [
-            { "text": "Gracias por todo,... Por rescatarme ese día y por darme una oportunidad acá.", "size": "small", "posX": 30, "posY": 95, "tailX": 15, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
-            { "text": "No tenés nada que agradecer", "size": "small", "posX": 50, "posY": 75, "tailX": 45, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
           ]
         }
       ]
@@ -232,7 +225,6 @@
       "panels": [
         {
           "dialogue": [
-            { "text": "Nuevo diálogo", "size": "small", "posX": 50, "posY": null, "tailX": 50, "tailY": null, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "Y ahí se fue. Sola hacia lo desconocido. Dejando atrás el eco de su pasado... para empezar a escribir su propia historia.", "style": "caption", "size": "small", "posX": 50, "posY": 0, "tailX": 30, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 220, "fontSize": 8, "borderRadius": 3, "customBg": "#f5e642", "customColor": "#000000" }
           ],
           "focusY": null
