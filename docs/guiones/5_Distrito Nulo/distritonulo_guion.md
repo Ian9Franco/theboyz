@@ -213,18 +213,32 @@
 * **Viñeta 59 (Plano Detalle con Elemento Sobresaliente):** Uandi, completamente fuera de sí, sujeta las asas metálicas de la olla hirviendo directamente con las palmas desnudas. El metal se deforma instantáneamente, hundiéndose bajo sus dedos. Una de las asas dobladas y aplastadas sobresale físicamente rompiendo el borde lateral inferior del panel en un relieve 3D tridimensional.
   * **EFECTO DE SONIDO:** ¡CRUNCH-SISS!
 * **Viñeta 60 (Plano Corto):** El guiso dentro de la olla abollada empieza a burbujear y hervir a una velocidad salvaje, despidiendo salpicaduras calientes y densas nubes de vapor aromático debido al calor extremo transferido directamente por las manos incandescentes de Uandi.
-* **Viñeta 61 (Primer Plano Extremo - Cliffhanger):** Primer plano extremo del rostro de Uandi, visto a través de ondas de calor que distorsionan visualmente el espacio de la viñeta. Su boca está abierta mostrando sus dientes apretados, con vapor brotando de sus labios en un rugido de dolor y furia animal que anticipa el descontrol.
+* **Viñeta 61 (Primer Plano Extremo):** Primer plano extremo del rostro de Uandi, visto a través de ondas de calor que distorsionan visualmente el espacio de la viñeta. Su boca está abierta mostrando sus dientes apretados, con vapor brotando de sus labios en un rugido de dolor y furia animal que anticipa el descontrol.
+* **Viñeta 61b (Plano Detalle con Elemento Sobresaliente - Cliffhanger):** Uandi, incapaz de soportar el dolor por el calor acumulado en las asas, abre bruscamente sus manos incandescentes. La olla de metal abollada cae de golpe y se estrella contra el suelo de concreto, volcando el guiso caliente en una gran salpicadura humeante. La olla deformada y el guiso derramado rompen el borde inferior de la viñeta, sobresaliendo en 3D hacia el lector.
+  * **EFECTO DE SONIDO:** ¡CLANG-SPLASH!
 
 ---
 
 ### PÁGINA 16 (El Quiebre)
-* **Viñeta 62 (Plano Americano con Plano Medio):** Ian entra corriendo desde el taller con su tablet en una mano y el visor GhostLens encendido en su ojo izquierdo, el cual proyecta gráficos de advertencia de color naranja sobre su rostro alarmado. Por la puerta principal de la base, entra Julián, caminando despacio y relajado con las manos en los bolsillos de su campera de cuero, totalmente distraído.
-  * **IAN:** —¡Uandi! ¡Salí de ahí, estás entrando en sobrecarga crítica! ¡Se te van a agrietar las runas!
-  * **JULIÁN:** —Che, qué bardo que armaron acá adentro... ¿qué están haciendo, un sauna con guiso?
-* **Viñeta 64 (Plano Corto):** Julián se acerca con paso relajado por detrás y le apoya una mano en el hombro a Uandi, que está de espaldas despidiendo un vapor denso. Julián tiene una sonrisa burlona y sobradora en el rostro.
+* **Viñeta 62a (Primer Plano - Reacción Auditiva):** Ian en su taller, sentado frente a los monitores encendidos. Su cabeza se gira bruscamente hacia la puerta a causa del ruido brutal del golpe de la olla (el ¡CLANG-SPLASH! de la página anterior). Su ocular GhostLens ya está activo, proyectando gráficos de alerta naranja que tiñen su rostro con una luz de emergencia.
+  * **IAN:** —(Para sí mismo, horrorizado) Mierda. Se le fue.
+* **Viñeta 62b (Plano Corto):** Julián abre con una mano la puerta de chapa de la base desde el exterior, asomando la cabeza con curiosidad y una ceja levantada. En su expresión no hay miedo, solo extrañeza.
+  * **JULIÁN:** —¿Qué cayó? ¿Tocaron la olla sin querer o...?
+* **Viñeta 63 (Plano General):** Plano abierto de la cocina desde la entrada. Uandi está de espaldas, su silueta enorme y roja casi irreconocible entre las densas columnas de vapor blanco que lo rodean. Lo más perturbador: su remera negra básica está chamuscándose en los hombros, el tejido se crispa y oscurece en contacto directo con el calor que irradia su propia piel incandescente. El guiso se ha desparramado por el piso. Ian detiene su paso instintivamente. Julián, a su lado, deja de caminar.
+  * **IAN:** —(Muy bajo, sin moverse) No te muevas.
+* **Viñeta 63b (Plano Detalle con Elemento Sobresaliente):** Primer plano de la remera negra de Uandi quemándose en el área de los hombros. El tejido se desgarra y carboniza sin llamas, consumido por el calor interno de su piel volcánica. Los bordes chamuscados de la tela se salen del marco de la viñeta hacia el margen de la página en 3D.
+  * **EFECTO DE SONIDO:** (Sutil) ...sssss...
+* **Viñeta 63c (Plano Americano - Perspectiva de Ian):** Ian avanza con cautela hacia la cocina, dejando a Julián atrás. Julián lo observa unos pasos más atrás, con los brazos cruzados y una media sonrisa de suficiencia que esconde cierta incomodidad que no se admite a sí mismo.
+  * **IAN:** —Uandi. Soy Ian. Escuchame. Necesito que respires hondo y te alejes de la hornalla, ¿dale?
+* **Viñeta 64 (Plano Corto):** Julián se adelanta por encima del hombro de Ian con paso relajado, ignorando la advertencia implícita. Se acerca a Uandi por la espalda con una sonrisa sobradora y burlona, en el gesto instintivo de restarle dramatismo a todo.
+  * **IAN:** —(Tenso, en voz baja) Julián, no. No lo toques.
+  * **JULIÁN:** —(Ya en movimiento, sin hacerle caso) Tranqui, Ian, lo conozco desde el jardín de infantes...
+* **Viñeta 64b (Plano Corto con Plano Detalle):** La mano de Julián se apoya con confianza en el hombro de Uandi. El contacto con su piel incandescente es inmediato: el cuero negro de la manga de la campera de Julián emite un pequeño siseo y un hilo de humo fino al tocarla.
   * **JULIÁN:** —¿Qué hacés, gordo? ¿Te dio calor cocinar o qué...?
-* **Viñeta 65 (Primer Plano Extremo):** Uandi se gira violentamente hacia Julián. Su rostro está completamente transformado por una furia ciega e irracional, sus ojos brillan en un carmesí sólido. Al ver esa expresión salvaje y letal, la sonrisa de Julián se congela al instante y sus ojos se abren con sorpresa y alarma.
-* **Viñeta 65c (Plano de Acción con Elemento Sobresaliente - Cliffhanger):** Uandi levanta con brusquedad sus robustos brazos cubiertos de runas incandescentes y vapor, listos para golpear. Sus enormes palmas abiertas y las ráfagas de vapor caliente rompen los límites del marco del panel, proyectándose tridimensionalmente hacia el espacio entre viñetas.
+  * **EFECTO DE SONIDO:** (Sutil) ...sssss...
+* **Viñeta 65 (Plano Sobre el Hombro - Cliffhanger):** El momento se congela. Plano desde detrás del hombro de Uandi, mirando hacia atrás sobre él. La cabeza de Uandi gira lentamente, apenas unos grados. Por el ángulo, se puede ver el perfil de su mejilla y la curva de su mandíbula tensa. Su ojo, perfectamente visible en el contraluz del vapor, brilla en carmesí sólido y sin pupila. En el fondo del plano, Julián está inmóvil con la mano aún apoyada, su sonrisa congelada a medias. Ian, más atrás, tiene los ojos muy abiertos.
+* **Viñeta 65c (Primer Plano Extremo - Cierre de Página):** Rostro de Julián en plano muy cerrado. Su sonrisa de suficiencia se ha disuelto en una mueca de pura confusión. No hay miedo, hay desconcierto genuino: la expresión de alguien que no entiende todavía la magnitud de lo que está frente a él, y no lo va a entender hasta que sea tarde.
+  * **JULIÁN:** —(Frunciendo el ceño levemente) ...Oi, ¿gordo?
 
 ---
 

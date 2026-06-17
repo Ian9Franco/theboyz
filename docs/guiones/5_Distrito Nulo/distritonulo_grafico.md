@@ -346,12 +346,13 @@
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
 > Official comic book page layout, multi-panel grid of 6 panels. Modern American dark sci-fi comic book art style. Volcanic thermal energy effects. 2D illustration. NO 3D, NO text.
-> Panel 1: Uandi's skin begins to glow a faint red.
-> Panel 2: Close-up of Uandi's muscular arm, Runas Cinéticas glowing hot.
-> Panel 3: Thick white steam begins venting from his robust shoulders and arms.
-> Panel 4 (Action panel with broken border): Uandi grabs the pot with his bare hands; the metal pot warps and deforms under his grip. The distorted handle of the pot breaks through the panel frame, popping out in 3D.
+> Panel 1: Uandi's skin begins to glow. 
+> Panel 2: Close-up of Uandi's muscular arm, Runas Cinéticas glowing hot. 
+> Panel 3: Thick white steam begins venting from his robust shoulders and arms. 
+> Panel 4: Uandi grabs the pot with his bare hands; the metal pot warps and deforms under his grip. 
 > Panel 5: The stew inside the pot starts boiling violently and splashing due to the extreme heat.
-> Panel 6 (Extreme close-up, cliffhanger shot): Extreme close-up of Uandi's face. His features are distorted by thermal distortion waves, and steam leaks directly from his gritted teeth.
+> Panel 6 (Extreme close-up): Extreme close-up of Uandi's face. His features are distorted by thermal distortion waves, and steam leaks directly from his gritted teeth.
+> Panel 7 (Action panel with broken border, cliffhanger shot): The dented metal pot falls and slams onto the concrete floor, spilling the hot stew in a steaming splash. The metal pot and the liquid splash break through the bottom border in a 3D pop-out.
 > --no 3d, photorealistic, cgi, text
 
 * **Viñeta 58 (Plano Medio):** La piel de Uandi se pone incandescente.
@@ -359,98 +360,253 @@
 * **Viñeta 58c (Plano Corto):** Columnas de vapor espeso brotan de sus poros y hombros.
 * **Viñeta 59 (Plano Detalle con Elemento Sobresaliente):** Uandi aferra la olla con las manos desnudas; el metal se deforma. Las asas de la olla deformadas se salen del borde del panel en 3D.
 * **Viñeta 60 (Plano Corto):** El guiso empieza a hervir salvajemente, salpicando por el calor extremo de sus manos.
-* **Viñeta 61 (Primer Plano Extremo - Cliffhanger):** Rostro de Uandi distorsionado por las ondas de calor y vapor saliendo de sus dientes apretados en una mueca de furia pura.
+* **Viñeta 61 (Primer Plano Extremo):** Rostro de Uandi distorsionado por las ondas de calor y vapor saliendo de sus dientes apretados en una mueca de furia pura.
+* **Viñeta 61b (Plano Detalle con Elemento Sobresaliente - Cliffhanger):** Uandi suelta la olla de metal deformada debido al dolor del calor acumulado. Esta cae pesadamente y se estrella contra el suelo de concreto, volcando el guiso caliente en una gran salpicadura humeante. La olla abollada y el guiso desparramado rompen el borde inferior de la viñeta en 3D.
+  * **EFECTO DE SONIDO:** ¡CLANG-SPLASH!
 
 ---
 
 ### PÁGINA 16: El Quiebre
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> Official comic book page layout, multi-panel grid of 4 panels with irregular diagonal borders. Modern American dark sci-fi comic book art style. Tension build-up. 2D illustration. NO 3D, NO text.
-> Panel 1: Ian runs into the kitchen from the workshop, his GhostLens tactical eyepiece activated. In the background, Julian walks in from the main door looking relaxed.
-> Panel 2: Julian walks up behind Uandi, placing a hand on his steaming muscular shoulder.
-> Panel 3: Close-up of Uandi's face turning around; his features are distorted by primal rage and bloodshot red eyes. Julian's smile freezes as he realizes the danger.
-> Panel 4 (Action panel with broken border - Cliffhanger): Uandi raises both hands, ready to push Julian. Uandi's hands and the venting white steam break through the side borders of the panel, overlapping the gutter in 3D.
-> --no 3d, photorealistic, cgi, text
+> Official comic book page layout, full-page design with NO gutters or white margins, panels separated by sharp irregular diagonal slash cuts. Modern American dark sci-fi comic book art style. Tension escalation — slow horror, body horror detail, dramatic reveal. Color palette: matte black warehouse concrete, fluorescent amber and sickly orange GhostLens glow, deep red volcanic skin heat, dense white steam, charred dark fabric. 2D illustration. NO 3D render, NO text.
+> Panel 1 (Tight close-up): Ian inside his workshop, facing monitors. His head snaps sideways toward the doorway. His GhostLens tactical monocle projects sharp orange alert graphics across his alarmed face. The orange glow is the only light source on one half of his face.
+> Panel 2 (Medium close-up): Julian opens the corrugated metal warehouse door from the outside with one hand, peering in with a raised eyebrow. Casual. Curious. Not afraid.
+> Panel 3 (Wide establishing shot from the doorway): The whole kitchen visible from a distance. Uandi's back is to the camera — enormous, red-skinned, silhouetted inside a thick column of billowing white steam. His black crew-neck t-shirt is visibly scorching and charring at the shoulders, the fabric darkening and crumbling in the heat radiating from his own skin. Spilled stew steams on the cracked concrete floor. In the foreground, Ian and Julian stand frozen side by side.
+> Panel 4 (Extreme close-up with broken border, body horror detail): Extreme close-up of the fabric of Uandi's black t-shirt scorching at the shoulder — the weave crisping and shredding without flame, consumed by internal thermal energy. The charred fabric edge breaks through the panel border in a 3D pop-out.
+> Panel 5 (Medium shot from behind Ian): Ian advances cautiously toward Uandi. Julian lingers two steps behind, arms crossed, half-smirking.
+> Panel 6 (Medium close-up, two-shot): Julian steps forward past Ian, hand already moving toward Uandi's shoulder. Ian is visible behind him, tense, eyes wide, arm outstretched to stop him.
+> Panel 7 (Close-up with detail insert): Julian's hand lands on Uandi's shoulder. The black leather sleeve of Julian's jacket immediately produces a thin curl of smoke where it contacts Uandi's incandescent skin.
+> Panel 8 (Over-the-shoulder cliffhanger, slow-motion beat): Shot from directly behind Uandi's massive shoulder. His head rotates only a few degrees back — barely turning. But through the gap between his shoulder and jaw, partially obscured by steam: one eye is visible, burning a solid, pupil-less crimson red. In the deep background, Julian stands with his hand still on Uandi's shoulder, smile half-frozen. Ian, further back, has both eyes wide open.
+> Panel 9 (Extreme close-up — page closer): Tight close-up on Julian's face. His smirk has dissolved. No fear — just genuine bewilderment. The face of someone who doesn't yet understand the magnitude of what's in front of him. And won't, until it's too late.
+> --no 3d, photorealistic, cgi, text, speech bubbles, wet, rain, reflection, moisture
 
-* **Viñeta 62 (Plano Americano con Plano Medio):** Ian entra de su taller con su ocular GhostLens encendido, mientras Julián regresa de la calle, distraído y relajado.
-* **Viñeta 64 (Plano Corto):** Julián se acerca a Uandi y le apoya la mano en el hombro humeante con una sonrisa burlona.
-* **Viñeta 65 (Primer Plano Extremo):** Uandi se da vuelta hacia Julián con el rostro desencajado por la furia y las pupilas rojas. Julián borra su sonrisa ante la hostilidad de Uandi.
-* **Viñeta 65c (Plano de Acción con Elemento Sobresaliente - Cliffhanger):** Uandi levanta los brazos cargados de vapor acumulado. Las manos y las nubes de vapor caliente se superponen a los bordes de la viñeta en 3D.
+* **Viñeta 62a (Primer Plano - Reacción Auditiva):** Ian en su taller, frente a los monitores, girando la cabeza bruscamente hacia la puerta al escuchar el golpe de la olla. El ocular GhostLens proyecta alertas naranja sobre su rostro.
+  * **IAN:** —(Para sí mismo) Mierda. Se le fue.
+* **Viñeta 62b (Plano Corto):** Julián abre la puerta de chapa de la base desde afuera con una mano, asomando la cabeza con curiosidad y una ceja levantada.
+  * **JULIÁN:** —¿Qué cayó? ¿Tocaron la olla sin querer o...?
+* **Viñeta 63 (Plano General):** Vista desde la entrada a la cocina. Uandi de espaldas, enorme y rojo, envuelto en vapor blanco espeso. Su remera negra se chamusca y carboniza en los hombros por el calor interno de su piel. El guiso derramado humea en el suelo. Ian y Julián, en primer plano, se detienen.
+  * **IAN:** —(Muy bajo) No te muevas.
+* **Viñeta 63b (Plano Detalle con Elemento Sobresaliente):** Primer plano del tejido de la remera negra de Uandi quemándose en los hombros. Los bordes chamuscados rompen el borde del panel en 3D.
+  * **EFECTO DE SONIDO:** (Sutil) ...sssss...
+* **Viñeta 63c (Plano Americano):** Ian avanza con cautela hacia la cocina, Julián queda atrás con los brazos cruzados y media sonrisa.
+  * **IAN:** —Uandi. Soy Ian. Respirá hondo y alejate de la hornalla, ¿dale?
+* **Viñeta 64 (Plano Corto):** Julián se adelanta ignorando a Ian, caminando relajado hacia Uandi por la espalda.
+  * **IAN:** —(Tenso, bajo) Julián. No lo toques.
+  * **JULIÁN:** —(Sin hacerle caso) Tranqui, Ian, lo conozco desde el jardín de infantes...
+* **Viñeta 64b (Plano Corto con Plano Detalle):** La mano de Julián se apoya en el hombro de Uandi. El cuero de su campera emite un siseo y un hilo de humo fino al contacto con la piel ardiente.
+  * **JULIÁN:** —¿Qué hacés, wachin? ¿Te dio calor cocinar o qué...?
+  * **EFECTO DE SONIDO:** (Sutil) ...sssss...
+* **Viñeta 65 (Plano Sobre el Hombro - Cliffhanger):** Desde detrás del hombro de Uandi. Su cabeza gira apenas unos grados. A través del contraluz del vapor, un ojo visible brilla carmesí sólido sin pupila. Julián en el fondo, mano aún apoyada. Ian más atrás, ojos muy abiertos.
+* **Viñeta 65c (Primer Plano Extremo - Cierre de Página):** Rostro de Julián en plano muy cerrado. La sonrisa de suficiencia se disuelve en desconcierto genuino. No hay miedo. Hay alguien que todavía no entiende.
+  * **JULIÁN:** —(Frunciendo el ceño levemente) ..., ¿uandi?
 
 ---
 
-### PÁGINA 17: El Empujón / La Mesa Rota
+### PÁGINA 17: La Mesa Rota (Splash)
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> Official comic book page layout, multi-panel grid of 6 panels with irregular diagonal slash borders. Modern American dark sci-fi comic book art style. Kinetic force, destructive impact. 2D illustration. NO 3D, NO text.
-> Panel 1: Uandi shoves Julian back with massive kinetic force.
-> Panel 2: Julian flies through the air across the living room, his face filled with shock.
-> Panel 3: Julian crashes violently into the heavy wooden table in the center of the base.
-> Panel 4: The wooden table breaks apart in a shower of splinters and fragments of wood.
-> Panel 5: The framed dusty group photo of the team with Sofi is launched into the air.
-> Panel 6 (Action panel with broken border, cliffhanger shot): The frame slams onto the concrete floor, its glass front shattering. Shards of glass and the flying frame break through the bottom border of the page, popping out in 3D.
-> --no 3d, photorealistic, cgi, text
+> Official comic book page layout, full-page design with NO gutters or white margins, panels separated by sharp irregular diagonal slash cuts. Modern American dark sci-fi comic book art style. Explosive kinetic force, structural destruction, emotional weight. Color palette: matte black concrete, hot orange-red thermal glow, natural wood splinter brown, dusty warm photo tones, cold concrete grey. 2D illustration. NO 3D render, NO text.
+> Panel 1 (Wide action panel with broken border): Uandi, enormous and radiating intense orange-red heat from his skin, extends both open palms forward in a massive kinetic release. A visible shockwave — a distortion ring of compressed air and white steam — radiates from his palms outward. The shockwave and Uandi's glowing runic tattoos break through the left and right panel borders in a 3D pop-out.
+> Panel 2 (Dynamic diagonal wide shot): Julian is launched backward through the air horizontally across the warehouse living space, arms flung wide, eyes wide in absolute disbelief. Motion blur trails his body and clothing. His dark leather jacket flares behind him mid-flight.
+> Panel 3 (Extreme action wide): Julian's body crashes diagonally into the heavy rustic wooden table at the center of the base. The impact is enormous — the table bends, cracks, and collapses under the kinetic impact. Wooden boards and splinters burst in all directions.
+> Panel 4 (Extreme close-up with broken border): Extreme close-up of the center of the wooden table splintering at the point of impact — thick wooden boards splitting and cracking apart, flying fragments and shards of rough timber erupting outward. Wood splinters break through the right panel border in a 3D pop-out.
+> Panel 5 (Close-up detail insert): Through the shower of wood fragments, a dusty old framed group photo (showing the silhouette of a young woman among the group) is launched spinning into the air, tumbling end over end.
+> Panel 6 (Wide shot with broken border — cliffhanger): The framed photograph slams onto the cracked concrete floor. The glass front of the frame shatters outward in all directions. The cracked frame, the faded photograph inside it, and jagged glass fragments burst through the bottom border of the panel, falling into the white gutter of the page in a 3D pop-out. A caption box overlays the corner.
+> --no 3d, photorealistic, cgi, text, speech bubbles, wet, rain, reflection, moisture
 
-* **Viñeta 66 (Plano de Acción):** Uandi empuja a Julián con una fuerza descomunal.
-* **Viñeta 67 (Plano Medio):** Julián sale volando por el aire a través del living, atónito.
-* **Viñeta 68 (Acción):** Julián impacta contra la mesa de madera rústica de la base.
-* **Viñeta 68b (Plano Detalle):** La mesa se destroza en astillas y fragmentos.
-* **Viñeta 68c (Plano Detalle):** La foto enmarcada de Sofi sale volando en el aire.
-* **Viñeta 69 (Plano General con Elemento Sobresaliente - Cliffhanger):** La foto se estrella contra el suelo, rompiéndose el vidrio. Los fragmentos de vidrio rotos y el marco vuelan rompiendo el borde inferior de la viñeta, cayendo en 3D sobre el margen.
+* **Viñeta 66 (Plano de Acción con Elemento Sobresaliente):** Uandi extiende ambas palmas liberando la descarga cinética acumulada en sus runas. Una onda de choque visible — anillo de aire comprimido y vapor blanco — irradia desde sus palmas. Las runas y la onda de presión rompen los bordes laterales del panel en 3D.
+  * **EFECTO DE SONIDO:** ¡SLAM-CRASH!
+* **Viñeta 67 (Plano Dinámico Diagonal):** Julián vuela horizontalmente por el aire a través del living de la base, brazos abiertos, ojos en shock absoluto. Motion blur en su cuerpo y campera de cuero flameando.
+* **Viñeta 68 (Plano de Acción Extremo):** El cuerpo de Julián impacta en diagonal contra la mesa rústica del centro. La mesa se dobla, cruje y colapsa bajo el impacto. Astillas y listones de madera estallan en todas direcciones.
+* **Viñeta 68b (Primer Plano con Elemento Sobresaliente):** Primer plano de la mesa de madera partiéndose en el punto de impacto. Los listones gruesos se quiebran y fragmentos de madera bruta vuelan hacia fuera. Las astillas rompen el borde lateral del panel en 3D.
+* **Viñeta 68c (Plano Detalle - Insert):** Entre la lluvia de fragmentos de madera, la vieja foto enmarcada del grupo (donde se distingue la silueta de Sofi) vuela girando sobre sí misma hacia el aire.
+* **Viñeta 69 (Plano General con Elemento Sobresaliente - Cliffhanger):** El portarretratos se estrella contra el suelo de hormigón. El vidrio del marco estalla hacia afuera en todas direcciones. El marco roto, la foto gastada y los fragmentos afilados de vidrio rompen el borde inferior del panel, cayendo en 3D sobre el margen blanco del cómic.
+  * **TEXTO DE ENCUADRE:** "Se rompe el refugio. Se rompe el recuerdo."
 
 ---
 
 ### PÁGINA 18: Combate de Mutaciones
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> Official comic book page layout, multi-panel grid of 4 panels with irregular borders. Modern American dark sci-fi comic book art style. High action. 2D illustration. NO 3D, NO text.
-> Panel 1: Ian dashes out of the room towards the workshop in panic. In the background, giant, glowing red Uandi vents steam and advances menacingly towards Julian on the floor.
-> Panel 2 (Action panel with broken border): Julian, filled with anger on the floor, grabs a broken wooden board from the table. The board flashes with blue and red glitch energy in his hands, and the glitch static extends out of the panel borders in 3D.
-> Panel 3: Julian throws the glitching board at Uandi, cutting Uandi's shoulder.
-> Panel 4 (Extreme close-up, cliffhanger shot): Close-up of the cut regenerating instantly on Uandi's shoulder, skin closing with a red volcanic simmer and steam rising from the scar.
-> --no 3d, photorealistic, cgi, text
+> Official comic book page layout, full-page design with NO gutters or white margins, panels separated by sharp irregular diagonal cuts. Modern American dark sci-fi comic book art style. High-tension power confrontation, sci-fi energy effects. Color palette: matte black, electric cyan and magenta analog glitch static, deep orange-red thermal glow, dense white steam, raw wood and concrete debris. 2D illustration. NO 3D render, NO text.
+> Panel 1 (Wide two-shot): Ian sprints out of the warehouse living area toward the metal workshop doors in a full panic, looking back over his shoulder. In the background, enormous Uandi — skin intensely glowing orange-red, radiating visible heat waves and thick white steam — advances with slow, heavy, deliberate steps toward Julian, who lies among the debris of the broken table.
+> Panel 2 (Extreme close-up with broken border): Julian on the debris-covered concrete floor, jaw set in anger, reaches out and grabs a heavy broken wooden board from the shattered table. The instant his hand closes around the wood, the board ignites with a crackling surge of cyan and magenta analog glitch static — a geometric digital distortion pattern radiating up the length of the wood. The glitch energy and distortion pattern break through the left and top panel borders in a 3D pop-out.
+> Panel 3 (Wide action diagonal shot): Julian hurls the glitch-charged board like a javelin at Uandi. The board cuts through the air, trailing cyan/magenta static sparks, and connects with Uandi's right shoulder with a sharp kinetic impact.
+  * **EFECTO DE SONIDO:** ¡SHUFFF!
+> Panel 4 (Extreme close-up, cliffhanger — filter-safe): Extreme close-up of Uandi's right shoulder at the point of impact. A faint line marks where the board struck — but in the same instant, it seals: the skin surface closes smooth, driven by a rapid pulse of orange-red thermal energy radiating outward from the mark. Steam exhales from the skin surface. The glowing thermal pulse breaks through the bottom panel border in a 3D pop-out.
+> --no 3d, photorealistic, cgi, text, speech bubbles, wet, rain, reflection, moisture
 
-* **Viñeta 70 (Plano Medio con Plano Americano):** Ian corre desesperado hacia el taller. Uandi (gigante y rojo) avanza pesadamente hacia Julián, quien está en el suelo.
-* **Viñeta 72 (Plano Corto con Elemento Sobresaliente):** Julián toma un listón de madera roto de la mesa; este se carga de estática glitch analógica que se desborda en 3D de la viñeta.
-* **Viñeta 73 (Acción con Plano Detalle):** Julián le revolea el madero a Uandi, hiriéndole el hombro. Se aprecia la herida sangrante.
-* **Viñeta 74 (Primer Plano Extremo - Cliffhanger):** La herida se cierra y se sella instantáneamente bajo un resplandor rojizo y siseo de vapor.
+* **Viñeta 70 (Plano General - Dos Personajes):** Ian sale corriendo hacia el taller mirando atrás. En el fondo, Uandi (enorme, piel roja incandescente, vapor denso) avanza con pasos pesados y lentos hacia Julián, quien está entre los escombros de la mesa en el suelo.
+  * **IAN:** —¡Tengo que buscar el remanente! ¡Julián, aguantalo un segundo!
+* **Viñeta 72 (Primer Plano Extremo con Elemento Sobresaliente):** Julián en el suelo entre los escombros, mandíbula apretada, agarra un listón de madera roto. En el instante del contacto, el madero se carga de estática analógica cian y magenta — distorsión geométrica que sube por la madera. El glitch y la estática rompen los bordes del panel en 3D.
+* **Viñeta 73 (Plano de Acción Diagonal):** Julián lanza el listón cargado de glitch como una jabalina. Este corta el aire dejando una estela de estática cian/magenta e impacta en el hombro derecho de Uandi.
+  * **EFECTO DE SONIDO:** ¡SHUFFF!
+* **Viñeta 74 (Primer Plano Extremo - Cliffhanger):** Primer plano extremo del hombro derecho de Uandi en el punto de impacto. Una línea leve marca el contacto — y en ese mismo instante se sella: la superficie de la piel se cierra lisa, impulsada por un pulso rápido de energía térmica roja que irradia hacia afuera. Vapor se exhala de la piel. El pulso térmico brillante rompe el borde inferior del panel en 3D.
 
 ---
 
 ### PÁGINA 19: El Fierro de Energía y la Cura
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> Official comic book page layout, multi-panel grid of 6 panels with irregular borders. Modern American dark sci-fi comic book art style. Climax action. Color palette includes glowing gold/purple energy highlights. 2D illustration. NO 3D, NO text.
-> Panel 1 (Action panel with broken border): Julian stands up, adrenaline pumping. In his right hand, he materializes a bent pipe made of pure, sparking blue and red glitch energy. The sparking energy breaks the panel frames in 3D.
-> Panel 2: Julian raises the pipe, glitch sparks crackling in blue and red.
-> Panel 3: Ian runs back into the living room, holding a glass test tube glowing with gold and purple quantum energy inside.
-> Panel 4: Ian throws the test tube like a baseball straight at Uandi's chest.
-> Panel 5: Close-up of the glass tube flying through the air towards Uandi's chest.
-> Panel 6 (Action panel with broken border, cliffhanger shot): The glass tube shatters on Uandi's chest, releasing an explosive cloud of golden electricity and purple glowing mist. The electric sparks and purple smoke break out of the panel frame in 3D.
-> --no 3d, photorealistic, cgi, text
+> Official comic book page layout, full-page design with NO gutters or white margins, panels separated by sharp irregular diagonal cuts. Modern American dark sci-fi comic book art style. Confrontation peak — sci-fi energy weapons, high-speed throw, quantum impact explosion. Color palette: electric cyan and magenta glitch energy, warm gold and deep violet quantum energy, orange-red thermal glow, matte black warehouse interior. 2D illustration. NO 3D render, NO text.
+> Panel 1 (Low-angle medium shot with broken border): Julian rises from the ground with raw determination, facing Uandi. His right arm extends forward — from his palm, a solid bar of pure crackling glitch energy materializes: jagged, bent, buzzing with arcing blue and red static distortion. The energy weapon extends out of the right panel border and the bottom-right corner in a 3D pop-out.
+> Panel 2 (Medium close-up): Julian grips the glitch energy bar with both hands in a combat stance, face half-pixelated with cyan/magenta analog static distortion, arcing glitch sparks casting light across his features.
+> Panel 3 (Dynamic medium shot with broken border): Uandi, enormous and glowing, advances toward Julian, arms wide. Julian holds the glitch bar raised — a standoff shot between the two. The heat distortion waves from Uandi's body break through the top panel border in 3D.
+> Panel 4 (Wide medium shot — interruption): Ian bursts back through the metal workshop door, skidding to a stop with one arm raised. In his raised hand: a sealed glass test tube glowing internally with swirling gold electricity and dense violet luminescent mist from Universe 5458. The gold-violet glow from the tube illuminates Ian's face.
+> Panel 5 (Action panel — Ian throwing): Ian in full throwing motion — arm swung back, body torqued like a baseball pitcher — releasing the glowing test tube directly at Uandi's chest. His face is focused, determined.
+  * **IAN:** —¡Uandi, respirá esto! ¡Tomá!
+> Panel 6 (Extreme close-up with broken border — cliffhanger): The glass test tube, spinning through the air in slow motion close-up, its gold and violet quantum energy visibly churning and swirling inside the sealed glass, aimed at Uandi's chest. The glowing tube and its energy aura break through the bottom panel border in a 3D pop-out.
+> --no 3d, photorealistic, cgi, text, speech bubbles, wet, rain, reflection, moisture
 
-* **Viñeta 75 (Plano Americano con Elemento Sobresaliente):** Julián se levanta, materializando en su mano un fierro de pura energía glitch roja y azul que sobresale y rompe los marcos laterales.
-* **Viñeta 75b (Plano Medio):** Julián empuña el fierro con fuerza, con chispas glitch zumbando.
-* **Viñeta 76 (Plano Medio):** Ian irrumpe de vuelta en el living sosteniendo el tubo con energía dorada y púrpura.
-* **Viñeta 77 (Acción):** Ian arroja el tubo con fuerza directo a Uandi.
-* **Viñeta 77b (Plano Detalle):** Trayectoria del tubo de ensayo volando hacia el pecho de Uandi.
-* **Viñeta 78 (Plano Corto con Elemento Sobresaliente - Cliffhanger):** El tubo estalla contra el pecho de Uandi, liberando electricidad dorada y una nube púrpura que desborda el panel en 3D.
+* **Viñeta 75 (Plano Bajo con Elemento Sobresaliente):** Julián se levanta del suelo con determinación. Su brazo derecho se extiende hacia adelante; desde la palma materializa un bastón de energía glitch sólida — irregular, doblado, zumbando en azul y rojo. El arma de energía sale del borde derecho y la esquina inferior del panel en 3D.
+  * **JULIÁN:** —¡¿Qué te pasa, pedazo de forro?! ¡Querés bardo, vamos a darnos!
+* **Viñeta 75b (Plano Medio Cerrado):** Julián empuña el fierro de glitch con ambas manos en pose de combate. Su cara está semi-pixelada por la distorsión analógica cian/magenta. Chispas arcos de glitch iluminan sus rasgos.
+* **Viñeta 75c (Plano General Dinámico con Elemento Sobresaliente):** Standoff: Uandi enorme y rojo avanzando con brazos abiertos. Julián con el fierro de glitch en alto frente a él. Las ondas de distorsión térmica de Uandi rompen el borde superior del panel en 3D.
+* **Viñeta 76 (Plano Medio con Interrupción):** Ian irrumpe por la puerta del taller, deteniéndose en seco con un brazo en alto. En su mano un tubo de ensayo sellado resplandece con electricidad dorada y niebla violeta del Universo 5458. El brillo del tubo ilumina su rostro.
+* **Viñeta 77 (Plano de Acción - Lanzamiento):** Ian en pleno movimiento de lanzamiento — brazo hacia atrás, cuerpo en torsión — soltando el tubo brillante directo al pecho de Uandi.
+  * **IAN:** —¡Uandi, respirá esto! ¡Tomá!
+* **Viñeta 77b (Primer Plano Extremo con Elemento Sobresaliente - Cliffhanger):** El tubo de ensayo gira en el aire en cámara lenta. La energía dorada y violeta churning adentro del vidrio sellado es visible en detalle extremo. El tubo y su aura rompen el borde inferior del panel en 3D.
 
 ---
+🃏 PÁGINA 19.1: El Despertar del Glitch (Página Nueva)
+[!TIP]
+PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):
+Official comic book page layout, full-page design with NO gutters or white margins, panels separated by sharp irregular diagonal cuts. Modern American dark sci-fi comic book art style. Character power-up, intense transformation, smug confidence, energy materialization. Color palette: electric cyan and magenta glitch energy, neon blue static, matte black warehouse concrete, cold shadows. 2D illustration. NO 3D render, NO text.
 
+Panel 1 (Medium shot): Julian slowly rises from the debris of the wooden table. He is bruised but completely unbothered, wiping dust from his dark leather jacket with a relaxed, dangerous calm.
+
+Panel 2 (Extreme close-up — Cliffhanger beat): Focus on Julian's hands. Aggressive lines of glowing cyan and magenta glitch energy sparks begin to crackle and wrap around his fingers, buzzing with analog static distortion.
+
+Panel 3 (Close-up): Julian’s face, tight shot on his mouth. He wears a cocky, one-sided half-smirk. No fear at all, just pure smug confidence and thrill for the fight.
+
+Panel 4 (Extreme close-up): A tight shot on Julian’s eyes. His irises are glowing with a brilliant, intense neon blue energy light, completely consumed by the electric glitch power.
+
+Panel 5 (Wide action panel with broken border — Page closer): Julian fully materializes a solid bar of pure crackling glitch energy from his palm. The weapon is jagged, bent, unstable, and vibrating with heavy blue and red static distortion. Julian holds it tight in a combat stance. The energy weapon and its bright sparks break through the bottom-right corner of the panel in a 3D pop-out.
+
+--no 3d, photorealistic, cgi, text, speech bubbles, wet, rain, reflection, moisture, blood, gore, wounds, burns
+
+Guion en Español (Página 19.1)
+Viñeta 74a (Plano Medio): Julián se levanta lentamente de entre los escombros de la mesa de madera. Está sacudiéndose el polvo de su campera de cuero con una calma relajada y peligrosa.
+
+Viñeta 74b (Primer Plano Extremo - Beat de Transición): Foco en las manos de Julián. Líneas agresivas de chispas de energía glitch cian y magenta empiezan a brotar y envolver sus dedos, zumbando con distorsión estática analógica.
+
+Viñeta 74c (Plano Detalle): Rostro de Julián, toma cerrada en su boca. Dibuja una sonrisa burlona de un solo lado, sobradora. No hay miedo en él, solo la adrenalina de la pelea.
+
+Viñeta 74d (Primer Plano Extremo): Toma cerrada en los ojos de Julián. Sus iris brillan ahora con un color azul eléctrico brillante y cegador, completamente poseídos por el poder del glitch.
+
+Viñeta 75 (Plano de Acción con Elemento Sobresaliente): Desde la palma de su mano, Julián materializa por completo el fierro de energía glitch sólida: una barra irregular, doblada, inestable y zumbando en estática azul y roja. Julián lo empuña con fuerza en pose de combate. El arma de energía y sus chispas rompen la esquina inferior derecha del panel en 3D.
+
+JULIÁN: —¡¿Qué te pasa, pedazo de forro?! ¡Querés bardo, vamos a darnos!
+
+---
+⚔️ PÁGINA 19.1: La Calma Antes de la Tormenta (Página Nueva)
+[!TIP]
+PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):
+Official comic book page layout, full-page design with NO gutters or white margins, panels separated by sharp irregular diagonal cuts. Modern American dark sci-fi comic book art style. Maximum psychological tension, cinematic standoff, intense eye contact. Color palette: blinding volcanic orange-red glow, electric cyan and magenta glitch energy, matte black warehouse concrete shadow, cold grey mist. 2D illustration. NO 3D render, NO text.
+
+Panel 1 (Wide atmospheric shot): Standoff scene inside the dark warehouse. Uandi and Julian stand perfectly still, staring each other down, separated by the splintered remains of the heavy wooden table on the floor. Neither is in an exaggerated action pose; they are just standing straight, frozen in absolute tension. Heavy heat distortion waves rise from Uandi on the left, while neon blue static sparks rain from Julian on the right.
+
+Panel 2 (Medium close-up — Uandi): Uandi’s upper body and face. His massive volcanic-red chest is bare, completely covered in bright orange-red glowing runic tattoos. His expression is one of uncontrolled, animalistic fury. Behind his glowing white-hot glasses, his eyes burn crimson with no pupils. Dense white steam vents from his jaw.
+
+Panel 3 (Medium shot — Julian): Julian standing tall, completely charged with power. He holds his fully materialized glitch energy bar vertically by his side like a weapon — it is a long, jagged, bent rod of solid blue and red analog static energy. His dark leather jacket ripples with neon blue sparks.
+
+Panel 4 (Extreme close-up — Julian’s Cliffhanger face): Tight close-up on Julian's face. His irises glow a brilliant, intense neon blue. Despite the terrifying monster in front of him, he wears his signature cocky, mocking one-sided smirk. Pure confidence and arrogance.
+
+Panel 5 (Extreme close-up with broken border — Page closer): Super tight cinematic horizontal split-screen panel showing only their eyes. The top half shows Uandi’s burning crimson, pupil-less eyes full of rage. The bottom half shows Julian’s piercing, bright neon blue eyes filled with mockery. The diagonal cut separating their eyes breaks through the right page margin in a 3D pop-out.
+
+--no 3d, photorealistic, cgi, text, speech bubbles, wet, rain, reflection, moisture, blood, gore, wounds, burns
+
+Guion en Español (Página 19.3)
+Viñeta 75d (Plano General Atmosférico): El living de la base sumido en un silencio ensordecedor. Uandi y Julián se miran fijamente, parados uno frente al另otro, separados únicamente por los listones astillados de la mesa rota en el suelo. No hay poses raras ni de ataque; están simplemente de pie, rígidos, acumulando poder. Del lado izquierdo, el aire se deforma por el calor de Uandi; del lado derecho, chispas de estática caen del cuerpo de Julián.
+
+Viñeta 75e (Plano Medio - Uandi): Plano de Uandi de la cintura para arriba. Su imponente torso rojo está al descubierto, con las runas cinéticas titilando en su máximo esplendor. Su rostro es la viva imagen de la rabia descontrolada; la mandíbula apretada y sus ojos brillando en un carmesí sólido y furioso tras los lentes. Columnas de vapor blanco suben a sus costados.
+
+Viñeta 75f (Plano Medio - Julián): Julián parado con total soltura, cargado de energía estática. Sostiene a su costado el fierro completo de glitch: una barra larga, doblada e irregular de energía pura que zumba en azul y rojo. La energía del arma ilumina las paredes de hormigón.
+
+Viñeta 75g (Primer Plano Extremo - Cliffhanger de Julián): Primer plano cerrado en el rostro de Julián. Sus ojos brillan con ese azul eléctrico nítido, pero lo que domina la viñeta es su típica sonrisa burlona de un solo lado. Está totalmente sobrado, disfrutando la tensión.
+
+Viñeta 75h (Primer Plano Extremo Doble con Elemento Sobresaliente - Cierre de Página): Una viñeta dividida por un corte diagonal salvaje que muestra solo las miradas de ambos en un duelo de ojos. Arriba, los ojos rojo carmesí de Uandi inyectados en furia asesina; abajo, los ojos azul brillante de Julián fijos y burlones. La línea diagonal que separa ambos mundos de energía rompe el margen derecho de la página en 3D.
+
+TEXTO DE ENCUADRE: Un segundo antes del impacto. Nadie va a dar el brazo a torcer.
+---
+🃏 PÁGINA 19.2: El Despertar del Glitch (Página Nueva)
+[!TIP]
+PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):
+Official comic book page layout, full-page design with NO gutters or white margins, panels separated by sharp irregular diagonal cuts. Modern American dark sci-fi comic book art style. Character power-up, intense transformation, smug confidence, energy materialization. Color palette: electric cyan and magenta glitch energy, neon blue static, matte black warehouse concrete, cold shadows. 2D illustration. NO 3D render, NO text.
+
+Panel 1 (Medium shot): Julian slowly rises from the debris of the wooden table. He is bruised but completely unbothered, wiping dust from his dark leather jacket with a relaxed, dangerous calm.
+
+Panel 2 (Extreme close-up — Cliffhanger beat): Focus on Julian's hands, . Aggressive lines of glowing cyan and magenta glitch energy sparks begin to crackle and wrap around his fingers, buzzing with analog static distortion.
+
+Panel 3 (Close-up): Julian’s face, tight shot on his mouth. He wears a cocky, one-sided half-smirk. No fear at all, just pure smug confidence and thrill for the fight.
+
+Panel 4 (Extreme close-up): A tight shot on Julian’s eyes. His irises are glowing with a brilliant, intense neon blue energy light, completely consumed by the electric glitch power.
+
+Panel 5 (Wide action panel with broken border — Page closer): Julian fully materializes a solid bar of pure crackling glitch energy from his palm. The weapon is jagged, bent, unstable, and vibrating with heavy blue and red static distortion. Julian holds it tight in a combat stance. The energy weapon and its bright sparks break through the bottom-right corner of the panel in a 3D pop-out.
+
+--no 3d, photorealistic, cgi, text, speech bubbles, wet, rain, reflection, moisture, blood, gore, wounds, burns
+
+Guion en Español (Página 19.1)
+Viñeta 74a (Plano Medio): Julián se levanta lentamente de entre los escombros de la mesa de madera. Está sacudiéndose el polvo de su campera de cuero con una calma relajada y peligrosa.
+
+Viñeta 74b (Primer Plano Extremo - Beat de Transición): Foco en las manos de Julián. Líneas agresivas de chispas de energía glitch cian y magenta empiezan a brotar y envolver sus dedos, zumbando con distorsión estática analógica.
+
+Viñeta 74c (Plano Detalle): Rostro de Julián, toma cerrada en su boca. Dibuja una sonrisa burlona de un solo lado, sobradora. No hay miedo en él, solo la adrenalina de la pelea.
+
+Viñeta 74d (Primer Plano Extremo): Toma cerrada en los ojos de Julián. Sus iris brillan ahora con un color azul eléctrico brillante y cegador, completamente poseídos por el poder del glitch.
+
+Viñeta 75 (Plano de Acción con Elemento Sobresaliente): Desde la palma de su mano, Julián materializa por completo el fierro de energía glitch sólida: una barra irregular, doblada, inestable y zumbando en estática azul y roja. Julián lo empuña con fuerza en pose de combate. El arma de energía y sus chispas rompen la esquina inferior derecha del panel en 3D.
+
+JULIÁN: —¡¿Qué te pasa, pedazo de forro?! ¡Querés bardo, vamos a darnos!
+
+🧪 PÁGINA 19.3: El Choque e Interrupción (El Resto)
+[!TIP]
+PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):
+Official comic book page layout, full-page design with NO gutters or white margins, panels separated by sharp irregular diagonal cuts. Modern American dark sci-fi comic book art style. High-stakes standoff, desperate interruption, sci-fi energy weapon throw. Color palette: electric cyan and magenta glitch energy, orange-red thermal volcanic glow, warm gold and deep violet quantum energy mist, matte black interior. 2D illustration. NO 3D render, NO text.
+
+Panel 1 (Medium shot): Julian grips the jagged glitch energy bar with both hands, face partially pixelated with analog static distortion. Arcing glitch sparks cast contrasting cyan and magenta light across his features as he braces for impact.
+
+Panel 2 (Dynamic wide shot with broken border): Standoff. Uandi, enormous and glowing red, advances like a roaring monster with arms wide open. Julian stands his ground with the glitch bar raised high, ready to strike. Extreme heat distortion waves from Uandi's body break through the top panel border in 3D, warping the air.
+
+Panel 3 (Wide medium shot — Interruption): The metal workshop door bursts open. Ian runs back into the room, skidding to a sharp stop with one arm raised high. In his hand, a sealed glass test tube glows intensely with swirling gold electricity and a dense violet luminescent mist. The vibrant gold-violet light strongly illuminates Ian's frantic face.
+
+Panel 4 (Action panel): Ian in full pitching motion — arm swung far back, body torqued — launching the glowing quantum test tube directly at Uandi's massive chest. Ian's face is a mask of pure focus and desperation.
+
+Panel 5 (Extreme close-up with broken border — Page cliffhanger): The glass test tube spinning through the air in a dramatic slow-motion close-up. Inside the sealed glass, the gold and violet quantum energy churns violently, aimed directly at Uandi's incandescent chest. The glowing tube and its brilliant energy aura burst through the bottom panel border into the white gutter in a 3D pop-out.
+
+--no 3d, photorealistic, cgi, text, speech bubbles, wet, rain, reflection, moisture, blood, gore, wounds, burns
+
+Guion en Español (Página 19.2)
+Viñeta 75b (Plano Medio Cerrado): Julián empuña el fierro de glitch con ambas manos, listo para el choque. Su cara está semi-pixelada por la distorsión analógica cian/magenta, y los arcos eléctricos iluminan con tonos fríos sus rasgos desafiantes.
+
+Viñeta 75c (Plano General Dinámico con Elemento Sobresaliente): El enfrentamiento inminente. Uandi, enorme y rojo, avanza rugiendo con los brazos abiertos. Julián lo espera con el fierro de glitch en alto. Las ondas de distorsión térmica que emanan de Uandi son tan intensas que rompen el borde superior del panel en 3D.
+
+Viñeta 76 (Plano Medio con Interrupción): La puerta de chapa del taller se abre de golpe. Ian irrumpe en el living, frenando en seco con un brazo en alto. En su mano, sostiene un tubo de ensayo sellado que resplandece con electricidad dorada y una densa niebla violeta del Universo 5458. El brillo místico ilumina su rostro desesperado.
+
+Viñeta 77 (Plano de Acción - Lanzamiento): Ian realiza un movimiento de lanzamiento explosivo —brazo hacia atrás, cuerpo en torsión de pitcher— soltando el tubo brillante directo hacia el centro del pecho de Uandi.
+
+IAN: —¡Uandi, respirá esto! ¡Tomá!
+
+Viñeta 77b (Primer Plano Extremo con Elemento Sobresaliente - Cliffhanger): El tubo de ensayo corta el aire girando en cámara lenta. Se ve en detalle extremo cómo la energía dorada y violeta se revuelve con violencia dentro del vidrio sellado, directo hacia el coloso en llamas. El tubo y su aura rompen el borde inferior del panel en un impacto 3D hacia el lector.
+---
 ### PÁGINA 20: El Cierre y el Clon de Estática
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> Official comic book page layout, multi-panel grid of 4 panels. Modern American dark sci-fi comic book art style. Cool-down and final twist. 2D illustration. NO 3D, NO text.
-> Panel 1: Uandi breathes in the golden/purple energy. His red skin cools down, his muscle mass returns to normal, and he collapses onto the floor. Julian's glitch energy pipe dissolves.
-> Panel 2: Ian looks at Julian in shock, asking a question. Julian looks at his empty hand, completely in blank.
-> Panel 3: Uandi scratches his head on the floor, speaking. Ian walks over to help Uandi sit up.
-> Panel 4 (Large panel with broken border, final twist): While Ian and Julian stare at each other processing the trauma, in the foreground, a glitchy, semi-transparent double copy of Julian approaches the ruined pot. The glitch copy of Julian breaks through the front gutter of the page, sticking out into the foreground in a 3D pop-out effect, eating the stew.
-> --no 3d, photorealistic, cgi, text
+> Official comic book page layout, full-page design with NO gutters or white margins, panels separated by sharp irregular diagonal cuts. Modern American dark sci-fi comic book art style. Emotional cooldown, quiet aftermath, surreal final twist. Color palette: deep matte black, warm amber workshop lighting, residual violet and gold energy wisps, analog cyan/magenta ghost static, cracked concrete floor. 2D illustration. NO 3D render, NO text.
+> Panel 1 (Wide medium shot): Uandi inhales the cloud of golden electricity and violet quantum mist released from the shattered tube. As he breathes it in, the intense orange-red glow of his skin fades rapidly — cooling back to his normal dark brown complexion. His enlarged muscle mass deflates back to normal proportions. He sinks backward and collapses gently onto the concrete floor, eyes closing in exhaustion. In Julian's hand, the glitch energy bar flickers and dissolves into a scatter of cyan and magenta pixels that fade into the air.
+> Panel 2 (Medium close-up, two-shot): Ian steps toward Julian, eyes wide with complex emotion — relief, disbelief, concern. He stares at Julian and asks something. Julian, standing still, stares at his own open right palm — the hand that was holding the glitch bar — in complete blankness. His expression is not fear or triumph. It is a person confronting something about himself he didn't know was there.
+> Panel 3 (Medium close-up — Ian and Uandi): Ian crouches beside Uandi on the floor among the debris. Uandi scratches the back of his head with one hand, eyes half-open, glasses askew. Ian reaches down and extends his hand to help Uandi sit up.
+  * **UANDI:** —Uh... qué dolor de cabeza, boludo... Che, ¿qué le pasó al guiso?
+> Panel 4 (Wide shot, broken border — FINAL TWIST): Wide establishing shot of the whole warehouse interior — Ian helping Uandi sit up among the wreckage, Julian standing apart looking at his hand. The lighting is low and warm — the aftermath of everything. But in the extreme foreground of the panel, almost between the reader and the page: a semi-transparent glitch double of Julian materializes, rendered in flickering cyan/magenta analog static — same clothes, same posture, but translucent and slightly pixelated. This ghost copy of Julian approaches the ruined, dented pot on the kitchen floor, dips two fingers into the cold spilled stew, and brings them to his mouth. The glitch copy's arm and torso break through the front border of the panel, protruding forward in a 3D pop-out into the white gutter — as if existing between the comic page and the reader.
+> --no 3d, photorealistic, cgi, text, speech bubbles, wet, rain, reflection, moisture
 
-* **Viñeta 79 (Plano Corto con Plano Medio):** Uandi inhala la energía, se enfría y cae desplomado al piso. El fierro glitch de Julián se disuelve.
-* **Viñeta 81 (Plano Corto):** Ian le pregunta qué era eso; Julián se mira la mano vacía en blanco.
-* **Viñeta 81b (Plano Medio con Plano Corto):** Uandi se rasca la cabeza y habla.
-* **Viñeta 81c (Plano Corto):** Ian se acerca y le tiende la mano a Uandi para ayudarlo a reincorporarse.
-* **Viñeta 82 (Plano General con Elemento Sobresaliente - Viñeta Final de Cierre):** En primer plano, una copia exacta de estática glitch de Julián se acerca a la olla destruida, come un bocado del guiso y tira un chiste. Este clon glitch rompe el borde frontal de la viñeta, sobresaliendo hacia adelante en un efecto 3D que lo coloca en el margen del cómic.
+* **Viñeta 79 (Plano Medio - Enfriamiento):** Uandi inhala la nube dorada y violeta. Su piel roja se enfría rápidamente volviendo a su tono normal. Su masa muscular se desinfla. Cae hacia atrás y se desploma sobre el suelo de concreto con los ojos cerrados. El fierro de glitch en la mano de Julián parpadea y se disuelve en píxeles cian y magenta que se apagan en el aire.
+* **Viñeta 80 (Plano Medio Cerrado - Dos Personajes):** Ian se acerca a Julián con los ojos muy abiertos — alivio, incredulidad, preocupación mezclados. Le hace una pregunta. Julián mira fijamente su palma derecha abierta, en un blanco absoluto. No es miedo ni triunfo — es alguien confrontando algo de sí mismo que no sabía que existía.
+  * **IAN:** —Julián... ¿qué fue eso? Tus manos... tu cara... parpadeabas.
+  * **JULIÁN:** —No... no sé, che. Sentí que me apagaba. No sé.
+* **Viñeta 81 (Plano Corto - Ian y Uandi):** Ian se agacha junto a Uandi entre los escombros. Uandi se rasca la cabeza con los lentes torcidos. Ian le extiende la mano para ayudarlo a sentarse.
+  * **UANDI:** —Uh... qué dolor de cabeza, boludo... Che, ¿qué le pasó al guiso?
+* **Viñeta 82 (Plano General con Elemento Sobresaliente - Viñeta Final de Cierre):** Vista amplia del interior de la base — Ian ayudando a Uandi entre los escombros, Julián parado aparte mirando su mano. Iluminación baja y cálida de posguerra. Pero en el primer plano extremo de la viñeta, casi entre el lector y la página: una réplica semi-transparente de glitch de Julián se materializa en estática analógica cian/magenta — misma ropa, misma postura, pero translúcida y pixelada. Este clon se acerca a la olla abollada en el suelo de la cocina, hunde dos dedos en el guiso frío derramado y se los lleva a la boca. El brazo y el torso del clon rompen el borde frontal de la viñeta, sobresaliendo hacia adelante en 3D hacia el lector.
+  * **CLON DE JULIÁN:** —Che, le falta sal, pero zafa.
+  * **TEXTO DE ENCUADRE DE CIERRE:** — FIN DEL PILOTO —

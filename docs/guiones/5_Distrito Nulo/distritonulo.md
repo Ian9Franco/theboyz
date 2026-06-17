@@ -79,6 +79,15 @@
 * **Viñeta 33 (Primer Plano Extremo - Cliffhanger):** Ian hace el gesto de silencio con el dedo índice en sus labios, mirándolo con ojos de advertencia.
   * **IAN:** —(Susurrando) Shh, callate. Julián no puede enterarse de esto. Si sabe que tu cuerpo reacciona así, se va a volver loco de la paranoia. Guardemos el secreto por ahora.—
 
+### PÁGINA 8.5 (Entrando a la Base)
+* **Viñeta 33b (Plano General):** Ian y Uandi entran silenciosamente a la base y cierran la puerta a sus espaldas con cuidado. En primer plano, Julián está recostado en el sillón de cuero tomando una cerveza Corona con la mirada clavada en el partido de fútbol.
+* **Viñeta 33c (Primer Plano):** De repente, el celular de Julián vibra sobre el apoyabrazos. Él estira la mano y lo agarra, iluminándose el rostro con el brillo de la pantalla.
+* **Viñeta 33d (Plano Detalle):** Primer plano de la pantalla del celular. Se ve cómo Julián le escribe un mensaje a un contacto desconocido.
+  * **JULIÁN (EN PANTALLA):** "¿que sale?"
+* **Viñeta 33e (Plano General):** Uandi se desliza con cautela hacia la puerta interna del garaje de la base, vigilando de reojo que Julián no lo vea. Julián sigue de espaldas en el sillón con el celular en la mano y el partido de fondo en la TV.
+* **Viñeta 33f (Plano Medio):** Ian deja su morral a un costado y sube las escaleras hacia su habitación, con la mirada fija en su tablet.
+* **Viñeta 33g (Plano Medio Corto - Cliffhanger):** Julián se levanta de un tirón del sillón, guarda el celular en el bolsillo de su campera de cuero y camina con paso firme hacia la puerta de salida de la base.
+
 ### PÁGINA 9 (Uandi a Escondidas)
 * **Viñeta 34 (Plano General):** Uandi camina solo hacia el garaje de la base de noche, rodeado de herramientas viejas y repuestos oxidados.
 * **Viñeta 35 (Plano Medio):** Se acerca a un viejo sedán abandonado cubierto de polvo.
@@ -98,35 +107,61 @@
 * **Viñeta 41 (Primer Plano Extremo - Cliffhanger):** Julián saca su celular y le apunta directo al rostro a Uandi con la linterna. Las sombras de la luz dura recortan el rostro de Julián, quien lo mira con absoluto cinismo.
   * **JULIÁN:** —Che, si querías buscar la moneda que se te cayó abajo del auto, usá la linterna del celu, no seas tan fantasma. Dale, que el guiso no se hace solo y tengo un hambre de linyera.—
 
-### PÁGINA 11 (El Timbón de Hell's Kitchen)
-* **Viñeta 42 (Plano Medio):** Julián se pone su campera de cuero en la entrada de la base, saludando con la mano a Ian que lo mira desconfiado.
-  * **JULIÁN:** —Me voy un toque a Manhattan, che. Tengo entradas para ver a los Knicks en el Madison con un pibe de la facu. No me esperen despiertos.—
-* **Viñeta 42b (Plano General):** Julián camina por las veredas mojadas de Hell's Kitchen bajo carteles de neón parpadeantes.
-* **Viñeta 43 (Plano General):** Julián entra en un sótano clandestino de póker en Hell's Kitchen. Al fondo, dos hombres pesados con camperas de abrigo oscuras muestran el logotipo circular de Vanguard en el pecho.
-* **Viñeta 43b (Plano Medio):** Julián se sienta en la mesa recibiendo sus cartas, con expresión divertida.
-* **Viñeta 44 (Plano Americano):** Julián en la mesa de póker, con una pila enorme de fichas y billetes frente a él, sonriendo con soberbia ante los maleantes.
+### PÁGINA 10.5 (El Cuchillo Doblado)
+* **Viñeta 41b (Plano Medio):** Julián entra nuevamente al living de la base tras su charla con Uandi en el garaje, cerrando la puerta. Se le ve relajado, con su cinismo de siempre y para nada sorprendido de lo que vio.
+* **Viñeta 41c (Plano Medio):** Julián camina hacia el living y se tira con desgano en el sillón de cuero.
+* **Viñeta 41d (Plano Corto):** Su teléfono vibra en su mano. Julián lo mira de inmediato y escribe de nuevo a un contacto desconocido. En la pantalla se puede leer el mensaje: "¿que sale?".
+* **Viñeta 41e (Plano Corto):** Julián levanta la vista del celular y mira de reojo a Uandi, que pasa junto a él cargando las bolsas de compras directo hacia la cocina.
+* **Viñeta 41f (Plano Medio):** Uandi está en la cocina preparando una tabla de madera y comenzando a picar vegetales (cebolla y morrón) para hacer la cena.
+* **Viñeta 41g (Plano General):** Julián se levanta del sillón con el celular en la mano, de espaldas a la cocina, con el partido de fútbol de fondo en la TV. Le avisa a Uandi de manera displicente que va a salir.
+  * **JULIÁN:** —Me voy un toque a Manhattan, che. Tengo entradas para ver a los Knicks en el Madison con un pibe de la facu. No me esperen despiertos.
+* **Viñeta 41h (Primer Plano Extremo - Cliffhanger):** Uandi, de espaldas, sigue cortando verduras ignorando por completo el aviso de Julián. Sin embargo, en primer plano extremo vemos que el cuchillo de cocina se ha doblado en forma de "L" en sus manos por la fuerza involuntaria de su agarre. Uandi mira el metal deformado con sudor frío y una profunda expresión de terror por no poder controlar su cuerpo.
+
+### PÁGINA 11 (Salida a Manhattan)
+* **Viñeta 42 (Plano Medio):** Julián sale por la puerta de chapa de la base de Dumbo hacia la calle oscura. Se sube el cuello de la campera de cuero bajo la llovizna fría. En el umbral de la base, Ian lo ve salir desde lejos con una mirada desconfiada y suspicaz.
+* **Viñeta 42b (Plano General):** Julián camina apurado por las veredas mojadas de Brooklyn hacia la estación de metro, perdiéndose en la noche.
+
+### PÁGINA 11.5 (El Camino al Sótano)
+* **Viñeta 42c (Plano Medio Largo):** Julián camina bajo las luces parpadeantes de neón de Hell's Kitchen. Lleva el celular en la mano derecha, mirando la pantalla con insistencia a ver si le contestan.
+* **Viñeta 42d (Plano Medio):** Dobla por una esquina sombría y entra a un callejón estrecho y húmedo, lejos del tránsito.
+* **Viñeta 42e (Plano Medio):** Julián llega ante una puerta de metal despintada en el callejón. Un seguridad robusto, encapuchado y con cara de pocos amigos le bloquea el paso de brazos cruzados.
+* **Viñeta 42f (Plano Detalle):** La mano de Julián desliza discretamente un par de billetes de cien dólares doblados en la palma del seguridad encapuchado.
+* **Viñeta 42g (Plano Corto):** El seguridad encapuchado guarda el dinero de mala gana y se corre a un lado, revelando una entrada con escaleras de hormigón que descienden en penumbra.
+
+### PÁGINA 11.8 (La Mesa de Póker)
+* **Viñeta 43 (Plano General):** Julián baja las escaleras y entra a un sótano clandestino de Hell's Kitchen. El lugar está envuelto en una nube densa de humo de cigarrillo y luz baja. Al fondo se ve una mesa de póker redonda donde varios maleantes y tipos de aspecto peligroso juegan bajo una lámpara colgante que oscila levemente.
+* **Viñeta 43b (Plano Medio):** Julián se acerca a la mesa con una sonrisa de suficiencia, metiendo las manos en su campera de cuero.
+  * **JULIÁN:** —¿Hay lugar para uno más, muchachos? O prefieren seguir jugando entre ustedes para no pasar vergüenza.
+* **Viñeta 43c (Plano Medio):** Julián se sienta en la silla libre de la mesa. Los maleantes de su alrededor lo observan con caras de pocos amigos y miradas amenazantes.
+* **Viñeta 43d (Plano Detalle):** Las manos del crupier reparten las cartas con destreza sobre el paño verde desgastado.
+* **Viñeta 43e (Primer Plano Extremo - Cliffhanger):** Julián levanta apenas las esquinas de sus cartas con los dedos, mirándolas fijamente.
+* **Viñeta 43f (Primer Plano Extremo - Cliffhanger):** Julián mira de reojo a sus rivales con una mirada rápida, evaluándolos.
+* **Viñeta 43g (Primer Plano Extremo - Cliffhanger):** Un primer plano muy cerrado de Julián mostrando una sonrisa pícara y arrogante de un solo lado (smirk).
+
+### PÁGINA 12 (La Escalera Real)
+* **Viñeta 44 (Plano Americano):** Julián en la mesa de póker, con una pila enorme de fichas y billetes frente a él que arrastra hacia su lado, sonriendo con soberbia ante la mirada furiosa de los maleantes.
   * **JULIÁN:** —¿Qué hacés jugando al póker acá con estos yankis pesados, boludo? Pensé que tenían más nivel. ¿Quién reparte ahora?—
-* **Viñeta 45 (Primer Plano Extremo - Cliffhanger):** Plano muy cerrado de las manos de Julián abriendo y colocando sus cartas (Escalera Real) en la mesa con un ademán arrogante. Mira a sus rivales con suficiencia.
+* **Viñeta 45 (Primer Plano Extremo):** Plano muy cerrado de las manos de Julián abriendo y colocando sus cartas (Escalera Real) en la mesa con un ademán arrogante. Mira a sus rivales directo a los ojos.
   * **JULIÁN:** —Ups. Mala mía, muchachos. Parece que me llevo la caja.—
 
-### PÁGINA 12 (La Emboscada)
-* **Viñeta 46 (Plano Medio con Plano Corto):** Julián sale al callejón oscuro y lluvioso de Hell's Kitchen, guardando billetes en su campera de cuero. Se detiene sonriendo al contar el fajo de billetes.
+### PÁGINA 12.5 (La Salida y la Emboscada)
+* **Viñeta 45b (Plano Medio):** Julián, de pie junto a la mesa de juego, estira el brazo para agarrar su campera de cuero negro, que estaba colgada en el respaldo de la silla. Se la empieza a poner con calma mientras sonríe burlón hacia los oponentes derrotados.
+* **Viñeta 46 (Plano Medio con Plano Corto):** Julián sale por la puerta trasera del póker a un callejón oscuro y lluvioso de Hell's Kitchen, guardándose fajos de billetes en los bolsillos de su campera de cuero. Se detiene un momento sonriendo al contar el fajo de billetes en la calle.
 * **Viñeta 47 (Viñeta Irregular con Elemento Sobresaliente):** Matones le bloquean el paso. Uno de ellos abre una navaja automática cromada; la punta de la navaja sobresale en 3D del marco diagonal de la viñeta.
   * **EFECTO DE SONIDO:** ¡CLIC!
   * **LÍDER VANGUARD:** —Se te terminó el descanso, pibito. Dejá la guita en el piso antes de que te abramos la campera de cuero a las malas.—
 * **Viñeta 48 (Plano Medio Corto):** Julián retrocede hasta chocar contra la pared de ladrillos húmeda. Levanta las manos disimulando el pánico.
   * **JULIÁN:** —Epa, muchachos, no da para tanto. ¿No prefieren un truco de cartas? Miren bien mi mano...—
-* **Viñeta 49 (Primer Plano Extremo - Cliffhanger):** Acercamiento muy cerrado a los dedos de Julián; chispas de estática analógica cian y magenta titilan erráticamente sobre su piel con aberración cromática.
+* **Viñeta 49 (Primer Plano Extremo - Cliffhanger):** Los ojos de Julián abiertos con pánico; la estática digital glitch roja y azul (aberración cromática) comienza a distorsionar su rostro y a titilar sobre sus dedos.
 
 ### PÁGINA 13 (Manifestación Glitch)
-* **Viñeta 50 (Plano Corto con Elemento Sobresaliente):** El líder de los matones se lanza con furia, tirando un puñetazo hacia el rostro de Julián. El puño rompe el marco de la viñeta, sobresaliendo hacia el lector en 3D.
-* **Viñeta 51 (Viñeta Irregular - Efecto Glitch):** El cuerpo de Julián se desfasa en tres copias de estática glitch parpadeante.
-* **Viñeta 51b (Plano Detalle):** La navaja pasa de largo a través del aire pixelado con lag visual.
+* **Viñeta 50 (Plano Corto con Elemento Sobresaliente):** El líder de los matones se lanza con furia, tirando un puñetazo cargado con todo su peso hacia el rostro de Julián. El puño rompe el marco diagonal de la viñeta, sobresaliendo hacia el lector en 3D.
+* **Viñeta 51 (Viñeta Irregular - Efecto Glitch):** El puño del matón impacta en el rostro de Julián. Sin embargo, al hacer contacto, la imagen de Julián parpadea con una ráfaga de estática analógica de color cian y magenta, revelando que el golpe atravesó un remanente vacío de pura energía glitch. El puño y la navaja atraviesan la cabeza pixelada sin tocar nada sólido, con un lag cuántico zumbante.
   * **EFECTO DE SONIDO:** ¡FZZZT!
-* **Viñeta 52 (Plano Medio):** El matón tropieza hacia adelante cruzando la imagen de estática con total confusión en su rostro.
-* **Viñeta 53 (Plano Medio Corto):** Julián corre desesperado hacia la avenida principal; la mitad de su rostro sigue distorsionada por estática digital y lag molecular.
+* **Viñeta 52 (Plano General):** El matón tropieza hacia adelante por el propio impulso de su golpe, cruzando a través del remanente de estática que se desvanece en el aire con total confusión en su rostro. En el fondo, en una perspectiva profunda del callejón, el verdadero Julián corre desesperado hacia la salida, mirando hacia atrás por encima de su hombro con los ojos abiertos en absoluto estado de shock e incredulidad.
+* **Viñeta 53 (Plano Medio Corto):** Julián llega a la avenida principal y se oculta detrás de la esquina de un edificio, apoyando su espalda contra el concreto. Jadea exhausto, intentando comprender qué carajo acaba de ocurrir.
   * **JULIÁN:** —(Jadeando) Qué carajo... qué carajo fue eso...—
-* **Viñeta 53b (Primer Plano Extremo - Cliffhanger):** Julián llega a la avenida y se mira la mano izquierda con terror; esta parpadea con estática digital cian y magenta.
+* **Viñeta 53b (Primer Plano Extremo - Cliffhanger):** Julián levanta su mano izquierda frente a sus ojos con terror; los dedos parpadean erráticamente con estática digital cian y magenta, desfasándose por un segundo del plano físico.
 
 ### PÁGINA 14 (El Guiso y la Cuchara)
 * **Viñeta 54 (Plano General):** En la cocina de la base, Uandi calienta una olla con guiso sobre la hornalla de la cocina.
@@ -143,16 +178,30 @@
 * **Viñeta 59 (Plano Detalle con Elemento Sobresaliente):** Uandi aferra la olla con las manos desnudas; el metal se deforma. Las asas de la olla deformadas se salen del borde del panel en 3D.
   * **EFECTO DE SONIDO:** ¡CRUNCH-SISS!
 * **Viñeta 60 (Plano Corto):** El guiso empieza a hervir salvajemente, salpicando por el calor extremo de sus manos.
-* **Viñeta 61 (Primer Plano Extremo - Cliffhanger):** Rostro de Uandi distorsionado por las ondas de calor y vapor saliendo de su boca abierta con los dientes apretados en una mueca de furia pura.
+* **Viñeta 61 (Primer Plano Extremo):** Rostro de Uandi distorsionado por las ondas de calor y vapor saliendo de su boca abierta con los dientes apretados en una mueca de furia pura.
+* **Viñeta 61b (Plano Detalle con Elemento Sobresaliente - Cliffhanger):** Uandi suelta la olla de metal deformada por el calor insoportable. Esta se estrella contra el suelo de concreto, volcando el guiso caliente en una gran salpicadura humeante. La olla abollada y el guiso derramado rompen el borde inferior de la viñeta en 3D.
+  * **EFECTO DE SONIDO:** ¡CLANG-SPLASH!
 
 ### PÁGINA 16 (El Quiebre)
-* **Viñeta 62 (Plano Americano con Plano Medio):** Ian entra de su taller con su ocular GhostLens encendido, registrando el calor crítico. Julián regresa de la calle, distraído y relajado.
-  * **IAN:** —¡Uandi! ¡Salí de ahí, estás entrando en sobrecarga crítica! ¡Se te van a agrietar las runas!—
-  * **JULIÁN:** —Che, qué bardo que armaron acá adentro... ¿qué están haciendo, un sauna con guiso?—
-* **Viñeta 64 (Plano Corto):** Julián se acerca y le toca el hombro humeante a Uandi para cargarlo.
-  * **JULIÁN:** —¿Qué hacés, gordo? ¿Te dio calor cocinar o qué...?—
-* **Viñeta 65 (Primer Plano Extremo):** Uandi se da vuelta hacia Julián con el rostro deformado por la ira y los ojos brillando en rojo. Julián borra su sonrisa de inmediato.
-* **Viñeta 65c (Plano de Acción con Elemento Sobresaliente - Cliffhanger):** Uandi levanta sus robustos brazos cargados de vapor. Las manos y el vapor caliente rompen el marco de la viñeta, sobresaliendo en 3D.
+* **Viñeta 62a (Primer Plano - Reacción Auditiva):** Ian en su taller, frente a los monitores. Su cabeza se gira bruscamente hacia la puerta por el ruido de la olla cayendo. El ocular GhostLens proyecta alertas naranjas en su rostro.
+  * **IAN:** —(Para sí mismo) Mierda. Se le fue.
+* **Viñeta 62b (Plano Corto):** Julián abre la puerta de la base desde afuera con una mano, asomando la cabeza curioso.
+  * **JULIÁN:** —¿Qué cayó? ¿Tocaron la olla sin querer o...?
+* **Viñeta 63 (Plano General):** Plano abierto de la cocina. Uandi está de espaldas, enorme y rojo, envuelto en columnas de vapor denso. Lo más perturbador: su remera negra está chamuscándose en los hombros, carbonizándose en contacto con su propia piel incandescente. El guiso derramado humea en el suelo. Ian se detiene. Julián deja de caminar.
+  * **IAN:** —(Muy bajo) No te muevas.
+* **Viñeta 63b (Plano Detalle con Elemento Sobresaliente):** Primer plano del tejido de la remera negra de Uandi quemándose en los hombros. Los bordes chamuscados rompen el marco de la viñeta en 3D.
+  * **EFECTO DE SONIDO:** (Sutil) ...sssss...
+* **Viñeta 63c (Plano Americano):** Ian avanza con cautela hacia la cocina, dejando a Julián atrás.
+  * **IAN:** —Uandi. Soy Ian. Escuchame. Respirá hondo y alejate de la hornalla, ¿dale?
+* **Viñeta 64 (Plano Corto):** Julián se adelanta ignorando la advertencia de Ian, caminando relajado hacia Uandi.
+  * **IAN:** —(Tenso, bajo) Julián. No lo toques.
+  * **JULIÁN:** —(Sin hacerle caso) Tranqui, Ian, lo conozco desde el jardín de infantes...
+* **Viñeta 64b (Plano Corto con Plano Detalle):** La mano de Julián se apoya en el hombro de Uandi. El cuero de su campera emite un siseo y un hilo de humo fino al contacto con la piel ardiente.
+  * **JULIÁN:** —¿Qué hacés, gordo? ¿Te dio calor cocinar o qué...?
+  * **EFECTO DE SONIDO:** (Sutil) ...sssss...
+* **Viñeta 65 (Plano Sobre el Hombro - Cliffhanger):** Desde detrás del hombro de Uandi. Su cabeza gira apenas unos grados. El ojo de Uandi, visible en el contraluz del vapor, brilla carmesí sólido. Julián, en el fondo, sigue con la mano apoyada y la sonrisa a medias. Ian, más atrás, tiene los ojos muy abiertos.
+* **Viñeta 65c (Primer Plano Extremo - Cierre de Página):** Rostro de Julián en plano muy cerrado. Su sonrisa de suficiencia se disuelve en desconcierto genuino. No hay miedo. Hay alguien que todavía no entiende.
+  * **JULIÁN:** —(Frunciendo el ceño) ...Oi, ¿gordo?
 
 ### PÁGINA 17 (La Mesa Rota)
 * **Viñeta 66 (Plano de Acción):** Uandi empuja a Julián con una fuerza descomunal en el pecho.
