@@ -27,14 +27,34 @@
 * **Viñeta 7 (Plano Detalle):** Ian se encierra en su taller con su computadora y múltiples monitores. Ejecuta el examen y ve con espanto gráficos con picos cuánticos/electromagnéticos caóticos en sangre, idénticos a los del portal.
   * **IAN:** —(Asustado) No... esto no es una gripe... Es la firma cuántica del portal en sus células.
 
-### PÁGINA 4.5 (La Recuperación)
-* **Viñeta 7b (Plano Medio):** Uandi se reincorpora sintiéndose mejor; Julián le da un vaso de agua. Julián entra al taller con dos botellas de cerveza Corona y le convida una a Ian.
-* **Viñeta 7c (Plano Corto):** Julián bromea sobre quedarse con la campera de Uandi si se muere, haciéndolos reír a todos. Las lecturas en la pantalla del taller bajan y se normalizan en una línea verde. Uandi se quita los cables.
-  * **JULIÁN:** —Che, si Uandi estira la pata por esta gripe, me pido su campera táctica.
+### PÁGINA 4.2 (Hidratación y Tensión)
+* **Viñeta 7b (Plano Medio):** Julián en la cocina de la base. Se le ve abriendo la heladera vieja, buscando unas botellas de cerveza Corona y agarrando una jarra de agua. Lanza un comentario humorístico en voz alta. De fondo, a lo lejos en el sillón del living, se observa a Uandi sentado con los electrodos biométricos de succión colocados.
+  * **JULIÁN:** —¡Che, sabelotodo! ¿Uandi toma agua o le damos de la canilla para ver si brilla en la oscuridad?
+* **Viñeta 7c (Plano Medio):** Julián le entrega un vaso de agua (servido de la jarra) a Uandi, quien está en el sillón y lo recibe con un gesto de cabeza agradecido pero cansado.
+  * **JULIÁN:** —Tomá, gordo, metele agua que estás seco. Casi te vas al lobby.
+  * **UANDI:** —Gracias, che. Se me está pasando un poco...
+* **Viñeta 7d (Plano Medio):** Julián entra al taller del fondo sosteniendo dos botellas de cerveza Corona. Le ofrece una a Ian y él se queda con la otra. Ian está en su escritorio, tenso y muy preocupado, mirando fijamente las pantallas que muestran los gráficos en un preocupante color rojo.
+  * **JULIÁN:** —Tomate una Corona, genio. Así bajás un cambio, que tenés una cara de estreñido que asusta.
+
+### PÁGINA 4.5 (Estabilización y Alivio)
+* **Viñeta 7e (Plano Detalle):** Primer plano de la pantalla en el taller, donde Ian observa con angustia cómo los gráficos biométricos de Uandi siguen marcando picos y anomalías en color rojo intenso.
+* **Viñeta 7f (Plano Detalle):** La misma pantalla en otra viñeta. Los picos empiezan a descender y a calmarse, y el color de las métricas pasa de rojo a un tono naranja de alerta moderada. Ian lo mira fijamente con ceño fruncido, conteniendo el aliento.
+* **Viñeta 7g (Plano Medio):** Ian mira la pantalla que ahora muestra las métricas completamente estabilizadas en una línea verde horizontal y tranquila. Ian exhala un suspiro largo de alivio y sonríe, relajando los hombros. Julián levanta su Corona brindando con Ian en el taller.
+  * **JULIÁN:** —Viste, te dije que era una gripe de mierda. Che, si Uandi estira la pata por esta gripe interdimensional, me pido su campera táctica. A mí me va a quedar más facherita.
+* **Viñeta 7h (Plano Medio):** En el living. Uandi, sentado en el sillón de cuero y viéndose mucho mejor, sonríe al escuchar el chiste de Julián desde el taller y se quita los electrodos de la frente y de los brazos, dejándolos caer con los cables colgando.
+  * **UANDI:** —Listo, ya fue. Me siento diez puntos ahora. Ian, apagá esa máquina que me da dolor de cabeza.
+
+### PÁGINA 4.7 (El Partido y el Vacío)
+* **Viñeta 7i (Plano Medio):** Uandi se levanta del sillón (tras haberse quitado los electrodos) y camina con paso aún algo pesado hacia la cocina de la base.
+* **Viñeta 7j (Plano Medio):** Julián se tira cómodamente en el amplio sillón de cuero con su botella de cerveza Corona, enciende la TV de tubo CRT con el control remoto y le habla a Ian en el taller.
+  * **JULIÁN:** —¡Che, Ian! Vení que ya arranca el partido. Dejá de perseguirte con las pantallitas.
+* **Viñeta 7k (Plano Medio):** Ian sale del taller con su cerveza Corona en la mano y se sienta en el sillón al lado de Julián, respirando con alivio.
+* **Viñeta 7l (Plano General):** Uandi está en la cocina frente a la heladera vieja y abierta, con la luz fría iluminándolo. Habla de espaldas hacia el living; Ian se gira en el sillón para mirarlo. Al lado, Julián mira fijo el televisor con gesto de bronca y cara de pocos amigos al ver que metieron un gol en contra en el partido.
+  * **UANDI:** —Che, en esta heladera no hay una mierda. Ni un cacho de queso de la semana pasada.
 
 ### PÁGINA 4.8 (La Heladera y la Salida)
-* **Viñeta 7d (Plano Detalle):** Ian deja su cerveza vacía sobre la mesa rústica. Uandi abre la vieja heladera de la cocina, la revisa y ve que está vacía; le dice a Ian que hay que ir a comprar carne y verduras al chino para la cena.
-* **Viñeta 7e (Plano General):** Ambos se abrigan con sus camperas y capuchas para salir. Julián se tira cómodamente en el sillón de cuero a ver un partido de fútbol en la tele y les responde con total desinterés y sarcasmo cuando le avisan que se van.
+* **Viñeta 7m (Plano Detalle):** Ian deja su cerveza vacía sobre la mesa rústica. Uandi cierra la heladera vieja, y le dice a Ian que hay que ir a comprar carne y verduras al chino para la cena.
+* **Viñeta 7n (Plano General):** Ambos se abrigan con sus camperas y capuchas para salir. Julián sigue tirado en el sillón frente al partido y les responde con desinterés y sarcasmo cuando le avisan que se van.
   * **JULIÁN:** —Sí, papá, vayan tranquilos. Si cae la infantería de Vanguard, les digo que se sienten a ver el partido y los esperen con unos mates.
 
 ### PÁGINA 5 (La Caminata)

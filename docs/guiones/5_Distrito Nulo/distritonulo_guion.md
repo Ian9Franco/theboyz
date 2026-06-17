@@ -52,30 +52,47 @@
 
 ---
 
-### PÁGINA 4.5 (Recuperación y Cervezas)
-* **Viñeta 18 (Plano Americano):** De regreso en el living. Uandi se reincorpora en el sillón con un semblante un poco más recuperado y mejor color de piel. Julián está a su lado entregándole un vaso de agua fría, el cual Uandi toma agradecido con un gesto de cabeza.
+### PÁGINA 4.2 (Hidratación y Tensión)
+* **Viñeta 17c (Plano Medio):** En la cocina de la base. Julián está abriendo la heladera vieja, sacando un par de botellas de cerveza Corona y agarrando una jarra de agua. Lanza un comentario cómico al living para intentar aliviar el ambiente. Al fondo, a través del marco de la puerta de la cocina, se ve a Uandi sentado en el sillón de cuero con los electrodos biométricos de succión pegados en los brazos y en la frente.
+  * **JULIÁN:** —¡Che, sabelotodo! ¿Uandi toma agua o le damos de la canilla para ver si brilla en la oscuridad?
+* **Viñeta 17d (Plano Medio):** En el living de la base. Julián le entrega un vaso de agua fresca (servida de la jarra) a Uandi. Uandi lo toma con manos temblorosas y le da un trago largo, agradeciendo con un gesto de cabeza cansado.
   * **JULIÁN:** —Tomá, gordo, metele agua que estás seco. Casi te vas al lobby.
   * **UANDI:** —Gracias, che. Se me está pasando un poco...
-* **Viñeta 18b (Plano Medio):** Julián entra al taller de Ian sosteniendo dos botellas de cerveza Corona heladas. Le ofrece una a Ian en su silla de trabajo y Julián le da un trago a la suya con una media sonrisa tranquila.
+* **Viñeta 17e (Plano Americano):** Julián entra al taller con dos botellas de cerveza Corona heladas. Le extiende una a Ian, quien está sentado frente a su escritorio rodeado de monitores. Ian sigue extremadamente preocupado, con la vista fija en las pantallas del taller que muestran los gráficos en un preocupante color rojo brillante.
   * **JULIÁN:** —Tomate una Corona, sabelotodo. Así te relajás un toque, que tenés una cara de bardo que asusta.
-* **Viñeta 18c (Plano Corto):** Julián gesticula de forma graciosa e ingeniosa, buscando desdramatizar. Al fondo de la viñeta, Ian y Uandi sonríen y se ríen levemente, sintiendo un cálido alivio doméstico.
-  * **JULIÁN:** —Che, si Uandi estira la pata por esta gripe interdimensional, me pido su campera táctica. A mí me va a quedar más facherita.
-* **Viñeta 18d (Plano Detalle):** Primer plano de la pantalla del monitor en el taller, donde los picos rojos ruidosos finalmente bajan y se estabilizan en una línea verde lisa y horizontal.
-* **Viñeta 18e (Plano Medio):** Uandi, con mejor semblante, se arranca los cables y chupetes de la frente y de los brazos desnudos, dejándolos sobre el sillón.
+
+---
+
+### PÁGINA 4.5 (Estabilización y Alivio)
+* **Viñeta 18 (Plano Corto):** En el taller, primer plano de las pantallas mostrando las lecturas de Uandi en picos cuánticos caóticos y de un color rojo intenso. La luz roja ilumina el rostro de Ian, quien observa las lecturas con angustia y el ceño muy fruncido.
+  * **IAN:** —(Susurrando para sí mismo, tenso) Sigue demasiado inestable...
+* **Viñeta 18b (Plano Detalle):** Primer plano de la pantalla. Los picos electromagnéticos y las anomalías de energía empiezan a calmarse, y el color de las métricas pasa de un rojo vivo a un tono naranja de alerta moderada. Ian contiene la respiración, observando con suma atención.
+* **Viñeta 18c (Plano Medio):** Ian frente a la pantalla, que finalmente muestra las líneas totalmente estables y en un color verde brillante. Ian suspira aliviado y relaja los hombros con una pequeña sonrisa. A su lado en el taller, Julián levanta su botella de Corona con una media sonrisa relajada, chocándola suavemente con la de Ian.
+  * **JULIÁN:** —Viste, te dije que era una gripe de mierda. Che, si Uandi estira la pata por esta gripe interdimensional, me pido su campera táctica. A mí me va a quedar más facherita.
+  * **IAN:** —(Sonriendo levemente, chocando la cerveza) Sos insoportable, Julián.
+* **Viñeta 18d (Plano Americano):** En el living. Uandi, sentado en el sillón de cuero gastado y viéndose mucho mejor y con color de piel normal, sonríe al escuchar la voz de Julián desde el taller. Empieza a retirarse los sensores de chupete biométricos de la frente y de los brazos descubiertos, dejándolos caer sobre el sillón mientras sonríe con alivio.
   * **UANDI:** —Listo, ya fue. Me siento diez puntos ahora. Ian, apagá esa máquina que me da dolor de cabeza.
 
 ---
 
-### PÁGINA 4.8 (La Heladera Vacía)
+### PÁGINA 4.7 (El Partido y el Vacío)
+* **Viñeta 18e (Plano Medio):** Uandi se levanta del sillón de cuero gastado del living, estirándose tras haberse quitado los electrodos de chupete biométricos. Se le ve cansado pero recuperado, caminando con paso lento pero firme hacia la cocina en el fondo de la base.
+* **Viñeta 18e2 (Plano Medio):** Julián se tira cómodamente en el amplio sillón de cuero, sosteniendo su botella de cerveza Corona helada. Agarra el control remoto de la mesa y enciende la TV de tubo CRT, sintonizando la transmisión de un partido de fútbol con la pantalla brillando en verde. Se da vuelta un poco para gritarle a Ian en el taller.
+  * **JULIÁN:** —¡Che, Ian! Vení que ya arranca el partido. Dejá de perseguirte con las pantallitas.
+* **Viñeta 18e3 (Plano Medio):** Ian sale por la puerta del taller con su cerveza Corona en la mano y se sienta en el sillón al lado de Julián. Ambos amigos se recuestan juntos frente a la televisión, Ian tomando un sorbo largo de su botella y respirando con alivio.
+* **Viñeta 18e4 (Plano General):** Uandi está en la cocina de la base, de pie frente a la heladera vieja y abierta. La luz fría interna ilumina su rostro, mostrando estantes casi desiertos salvo por un par de frascos vacíos. Uandi habla de espaldas al living; Ian, sentado en el sillón de cuero, gira la cabeza hacia atrás para mirarlo y responderle. Al lado, Julián tiene la botella de Corona en la mano y mira fijamente el partido de la tele con gesto de bronca y cara de pocos amigos porque en la pantalla se ve claramente que acaban de anotar un gol en contra.
+  * **UANDI:** —Che, en esta heladera no hay una mierda. Ni un cacho de queso de la semana pasada.
+
+---
+
+### PÁGINA 4.8 (La Heladera y la Salida)
 * **Viñeta 18f (Plano Detalle):** Un primer plano de la mano de Ian apoyando con suavidad su botella de cerveza Corona vacía sobre la mesa rústica de madera de la base.
   * **EFECTO DE SONIDO:** ¡CLINK!
-* **Viñeta 18g (Plano Medio):** Uandi frente a la heladera vieja y abierta de la cocina. La luz pálida del electrodoméstico le da de lleno en la cara, revelando estantes casi vacíos salvo por unos pocos frascos de conserva vacíos. Uandi tiene un gesto de clara decepción.
-  * **UANDI:** —Che, en esta heladera no hay una mierda. Ni un cacho de queso de la semana pasada.
-* **Viñeta 18h (Plano Medio):** Uandi cierra la heladera de un golpe de espaldas. A un lado, Ian se pone su campera con capucha gris texturizada y le responde mirándolo de reojo.
+* **Viñeta 18g (Plano Medio):** Uandi cierra la puerta de la heladera de un golpe de espaldas. A un lado, Ian se pone su campera con capucha gris texturizada, subiéndose el cierre mientras le responde mirándolo de reojo.
   * **IAN:** —Vamos al chino de la esquina a comprar carne y verduras. Hacemos un guiso caliente, a ver si con eso recuperás fuerzas.
-* **Viñeta 18i (Plano General):** Ian y Uandi avanzan hacia la puerta trasera de chapa abrigados con sus capuchas. Al fondo de la escena, Julián se acomoda de forma displicente en el amplio sillón de cuero frente al televisor de tubo CRT, que sintoniza un partido de fútbol con la pantalla brillando en tonos verdosos.
+* **Viñeta 18h (Plano General):** Ian y Uandi avanzan hacia la puerta trasera de chapa de salida de la base abrigados con sus capuchas. Al fondo de la escena, Julián sigue cómodamente tirado en el amplio sillón de cuero de espaldas, con el partido de fútbol de fondo en la televisión de tubo CRT.
   * **UANDI:** —Julián, vamos a comprar para cenar. ¿Querés algo?
-* **Viñeta 18j (Primer Plano):** Julián desde el sillón, con la vista fija en la televisión, levantando despectivamente la mano libre en un gesto de desinterés absoluto e ironía, sin dignarse a mirarlos.
+* **Viñeta 18i (Primer Plano):** Julián desde el sillón, con la vista fija en la televisión, levantando la mano libre en un gesto de desinterés absoluto e ironía, despidiéndolos sin molestarse en mirarlos.
   * **JULIÁN:** —Sí, papá, vayan tranquilos. Si cae la infantería de Vanguard, les digo que se sienten a ver el partido y los esperen con unos mates. Traigan alfajores si les queda cambio.
 
 ---

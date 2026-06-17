@@ -97,22 +97,53 @@
 
 ---
 
-### PÁGINA 4.5: Recuperación y Cervezas
+### PÁGINA 4.2: Hidratación y Tensión
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
 > Official comic book page layout, multi-panel grid. Modern American dark sci-fi comic book art style. High contrast, desaturated tones. 2D illustration. NO 3D, NO text.
-> Panel 1: In the living room, Uandi is sitting up on the couch, looking slightly better. Julian stands next to him, handing him a glass of water. Uandi takes it with a grateful nod.
-> Panel 2: Julian walks into the workshop door, holding two Corona beer bottles. He hands one bottle to Ian who is sitting at the computer desk, and Julian takes a sip from his own bottle, grinning.
-> Panel 3: Close-up of Julian telling a joke with a sarcastic, mocking gesture. Ian and Uandi are laughing in the background, a moment of warm relief.
-> Panel 4: Close-up of the computer screen in the workshop showing the red spikes flattening down into a calm green baseline.
-> Panel 5: Uandi, looking much better and smiling, pulls the suction sensors off his forehead and arms, leaving the wires hanging.
+> Panel 1: Inside the base kitchen. Julian (slender, fade haircut, navy blue crewneck sweater) is opening an old refrigerator, taking out two Corona beer bottles and holding a glass water pitcher. In the background, visible through the kitchen doorway in the living room, Uandi is sitting on the leather couch with round suction biometric electrodes attached to his head and arms.
+> Panel 2: In the living room, Julian is handing a glass of water to Uandi who is sitting on the couch, looking weak but grateful.
+> Panel 3: Julian enters the workshop, holding two Corona beer bottles. He hands one to Ian who is sitting at the computer desk. Ian looks very worried, staring at the computer screens.
 > --no 3d, photorealistic, cgi, text
 
-* **Viñeta 18 (Plano Americano):** En el living. Uandi se incorpora en el sillón sintiéndose un poco mejor; Julián le entrega un vaso de agua que Uandi recibe agradecido.
-* **Viñeta 18b (Plano Medio):** Julián va al taller con dos botellas de cerveza Corona en la mano; le ofrece una a Ian en su escritorio y él mismo le da un trago a la suya, con una media sonrisa relajada.
-* **Viñeta 18c (Plano Corto):** Julián gesticula mientras dice algo burlón e ingenioso. De fondo, Ian y Uandi se ríen, disipando la tensión acumulada.
-* **Viñeta 18d (Plano Detalle):** La pantalla del taller muestra que las lecturas electromagnéticas han bajado por completo, estabilizándose en una línea horizontal verde.
-* **Viñeta 18e (Plano Medio):** Uandi, ya recuperado y con mejor color, se despega los chupetes de la frente y de los brazos, dejándolos a un lado.
+* **Viñeta 17c (Plano Medio):** En la cocina de la base. Julián está abriendo la heladera vieja, sacando un par de botellas de cerveza Corona y agarrando una jarra de agua. Lanza un comentario al living. Al fondo, a través de la puerta de la cocina, se ve a Uandi sentado en el sillón de cuero con los sensores biométricos de succión puestos en los brazos y la frente.
+* **Viñeta 17d (Plano Medio):** En el living. Julián le entrega un vaso con agua a Uandi. Uandi lo recibe con un gesto de agradecimiento cansado, incorporándose un poco en el sillón.
+* **Viñeta 17e (Plano Americano):** Julián entra al taller del fondo sosteniendo las dos cervezas Corona. Le extiende una a Ian, quien está en su silla frente al escritorio de monitores. Ian sigue sumamente preocupado, con la vista fija en las pantallas del taller que muestran los gráficos en rojo.
+
+---
+
+### PÁGINA 4.5: Estabilización y Alivio
+> [!TIP]
+> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
+> Official comic book page layout, multi-panel grid. Modern American dark sci-fi comic book art style. High contrast, desaturated tones. 2D illustration. NO 3D, NO text.
+> Panel 1: Close-up of the computer screens in the workshop, displaying biometric charts of Uandi. The lines and spikes on the screen are glowing bright red, indicating unstable quantum metrics. Ian is looking at them with a tense, worried expression.
+> Panel 2: Close-up of the computer screen showing the biometric charts. The spikes are starting to settle, and the color on the screens has shifted from red to a warning orange/yellow.
+> Panel 3: Inside the workshop, Ian is looking at the screen which now shows a flat, calm green line. Ian looks relieved, with a slight smile. Julian is standing next to him, raising his Corona beer bottle in a toast. They are both holding their beers.
+> Panel 4: In the living room, Uandi is sitting up on the leather couch, smiling and looking much better. He is pulling the biometric suction electrodes off his arms and forehead, leaving the wires hanging.
+> --no 3d, photorealistic, cgi, text
+
+* **Viñeta 18 (Plano Corto):** En el taller, primer plano de las pantallas mostrando las lecturas de Uandi en picos altos y de un color rojo intenso. La luz roja ilumina el rostro de Ian, quien observa la pantalla con gran preocupación.
+* **Viñeta 18b (Plano Detalle):** La misma pantalla en primer plano. Los picos electromagnéticos empiezan a bajar y el color de las métricas pasa de rojo a un tono naranja de alerta moderada.
+* **Viñeta 18c (Plano Medio):** Ian frente a la pantalla, que ahora muestra las líneas completamente planas y en color verde. Ian exhala un suspiro de alivio y relaja los hombros. A su lado, Julián levanta su botella de Corona brindando con él en el taller para descomprimir.
+* **Viñeta 18d (Plano Americano):** En el living. Uandi está sentado en el sillón de cuero, con mejor color de piel y una sonrisa en el rostro al escuchar a Julián. Se está quitando los sensores de chupete biométricos de los brazos y la frente, dejándolos colgando.
+
+---
+
+### PÁGINA 4.7: El Partido y el Vacío
+> [!TIP]
+> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
+> Official comic book page layout, multi-panel grid. Modern American dark sci-fi comic book art style. High contrast, desaturated tones. 2D illustration. NO 3D, NO text.
+> Visual Continuity Rule: The base living room has a single, large, wide dark brown leather couch. An old CRT TV on a low stand is positioned directly in front of the couch (facing the couch). The camera is always positioned in front of the couch (straight-on frontal view of the couch, never profile/side view). The TV is visually positioned in the foreground on the right side of the frame, angled towards the couch, so we see its screen and side facing the boys (the TV is not next to the couch facing the camera).
+> Panel 1: Inside the base living room. Uandi (robust, round glasses, short trimmed beard) stands up from the large, wide dark brown leather couch and walks slowly towards the kitchen doorway. Straight-on front view of the couch.
+> Panel 2: Julian (slender, fade haircut) is sitting comfortably back on the same large, wide dark brown leather couch, holding a Corona beer bottle. He points a remote control forward. The CRT TV is in the foreground on the right side of the frame, angled towards the couch, showing a green soccer field. Julian looks back towards the workshop doorway, calling out. Straight-on front view of the couch.
+> Panel 3: Ian (slender, thick glasses, grey hoodie) comes out of the workshop and sits down next to Julian on the same large, wide dark brown leather couch. Ian is also holding a Corona beer bottle. The two friends sit side by side on the couch, facing the camera. The CRT TV is in the foreground on the right, angled towards the couch. Straight-on front view of the couch.
+> Panel 4: In the kitchen, Uandi stands in front of the open old refrigerator. The pale cold light from the open fridge illuminates his face, showing empty shelves inside. Uandi is speaking over his shoulder. In the foreground, Ian and Julian are sitting side by side on the same large, wide dark brown leather couch, looking forward. Ian turns his head back to look at Uandi in the kitchen. Julian, next to him, looks very angry/annoyed, holding his beer. The CRT TV is in the foreground on the right, showing a goal (gol) being scored on the screen. Straight-on front view of the couch.
+> --no 3d, photorealistic, cgi, text
+
+* **Viñeta 18e (Plano Medio):** Uandi se levanta del único y amplio sillón de cuero marrón de la base (habiendo dejado a un lado los electrodos biométricos) y se dirige hacia la cocina. El sillón se muestra de frente en plano frontal directo (nunca de perfil o costado).
+* **Viñeta 18e2 (Plano Medio):** Julián se recuesta cómodamente en el mismo sillón de cuero marrón (visto de frente en plano frontal directo). Sintoniza el partido de fútbol usando el control remoto. El televisor de tubo CRT está situado enfrente del sillón, visible en primer plano a la derecha de la viñeta y angulado hacia el sillón para que la pantalla quede a la vista. Julián le grita a Ian hacia el taller.
+* **Viñeta 18e3 (Plano Medio):** Ian sale del taller y se sienta en el sillón junto a Julián. Ambos están sentados lado a lado, de frente al lector (plano frontal directo del sillón), sosteniendo sendas botellas de cerveza Corona. El televisor sigue al frente a la derecha en primer plano.
+* **Viñeta 18e4 (Plano General):** Uandi está parado frente a la heladera abierta de la cocina en el fondo a la izquierda. En primer plano, los chicos están sentados de frente al lector en el sillón de cuero marrón; Ian gira la cabeza hacia atrás para responderle a Uandi. A la derecha de la viñeta, el televisor de tubo CRT (al frente y angulado hacia el sillón) muestra un gol en la pantalla, y Julián mira con gesto de bronca y enojado.
 
 ---
 
@@ -120,18 +151,17 @@
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
 > Official comic book page layout, multi-panel grid. Modern American dark sci-fi comic book art style. High contrast, desaturated tones. 2D illustration. NO 3D, NO text.
+> Visual Continuity Rule: The base living room features a single, large, wide dark brown leather couch. An old CRT TV on a low stand is positioned directly in front of the couch (facing the couch). The camera is always positioned directly in front of the couch (straight-on frontal view, never profile). The TV is visually positioned in the foreground on the right side of the frame, angled towards the couch, so we see its screen and side facing the boys (the TV is not next to the couch facing the camera).
 > Panel 1: Inside the base kitchen/living area. Close-up of Ian's hand setting down an empty Corona beer bottle on the rustic wooden table.
-> Panel 2: Uandi is standing by the open old refrigerator in the background, looking inside. The pale cold light of the fridge glows on his face. The shelves are empty except for some half-empty jars. Uandi has a disappointed look.
-> Panel 3: Ian is putting on his dark grey hooded jacket, looking back at Uandi. Uandi is closing the fridge door, speaking over his shoulder.
-> Panel 4: Ian and Uandi are walking towards the main door, wearing their hooded jackets. In the background, Julian is sitting back comfortably on the large leather couch, holding a remote control. The glowing CRT TV screen in front of him shows a soccer/football match with a green pitch.
-> Panel 5: Close-up of Julian sitting on the couch, staring at the TV with complete disinterest, waving a hand dismissively without looking at them.
+> Panel 2: Uandi is closing the old refrigerator door, looking back over his shoulder. Ian is putting on his dark grey hooded jacket.
+> Panel 3: Ian and Uandi are walking towards the main door, wearing their hooded jackets. In the background, Julian is sitting back comfortably on the same large, wide dark brown leather couch, holding a remote control. The TV screen in front of him on the right is glowing. Straight-on front view of the couch.
+> Panel 4: Close-up of Julian sitting on the same large, wide dark brown leather couch, staring at the TV on the right, waving a hand dismissively without looking at them. Straight-on front view of the couch.
 > --no 3d, photorealistic, cgi, text
 
 * **Viñeta 18f (Plano Detalle):** Primer plano de la mano de Ian apoyando la botella vacía de cerveza Corona sobre la mesa rústica de madera de la base.
-* **Viñeta 18g (Plano Medio):** Uandi frente a la vieja heladera abierta en la cocina, revisando su interior. La luz fría interna ilumina su rostro, mostrando estantes casi desiertos.
-* **Viñeta 18h (Plano Medio):** Uandi cierra la heladera y habla de espaldas, mientras Ian se pone su campera gris con capucha, respondiéndole con un gesto de cabeza.
-* **Viñeta 18i (Plano General):** Ian y Uandi avanzan hacia la puerta de salida abrigados con sus capuchas. De fondo, Julián se acomoda en el amplio sillón de cuero frente al televisor de tubo, sintonizando un partido de fútbol con la pantalla brillando en verde.
-* **Viñeta 18j (Primer Plano):** Julián desde el sillón, con la vista fija en la tele, levantando la mano en un gesto de desinterés despectivo y sarcasmo, sin molestarse en mirarlos.
+* **Viñeta 18g (Plano Medio):** Uandi cierra la puerta de la heladera de un golpe, hablando de espaldas, mientras Ian se coloca su campera gris texturizada con capucha y se la cierra.
+* **Viñeta 18h (Plano General):** Ian y Uandi avanzan abrigados con sus capuchas hacia la puerta trasera de salida de la base. De fondo, se observa el sillón de cuero de frente en plano frontal directo con Julián sentado en él, y el televisor enfrente de él a la derecha de la viñeta encendido.
+* **Viñeta 18i (Primer Plano):** Julián en el sillón de cuero marrón (visto de frente en plano frontal directo), con la vista clavada en la tele al frente a la derecha, levantando la mano libre en un gesto de desinterés absoluto y sarcasmo, despidiéndolos sin mirarlos.
 
 ---
 
