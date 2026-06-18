@@ -15,38 +15,79 @@
 * **Viñeta 6 (Plano Medio):** Mati corre detrás de él, estirando el brazo y gritando con desesperación, intentando alcanzarlo para explicarle lo sucedido.
   * **MATI:** —¡Volvo, pará! ¡No es lo que parece, dejame explicarte!—
 * **Viñeta 7 (Acción / Intervención):** De la nada, el Supercamionero se interpone en el camino de Mati para frenar la persecución y evitar que lastime a su amigo.
-* **Viñeta 8 (Plano Medio):** Mati, con la presión hirviendo en su pecho y cegado por la desesperación de no perder a Volvo, extiende su mano y desata una ráfaga inestable de energía púrpura pura.
+* **Viñeta 8 (Plano Medio):** Mati, con la presión hirviendo en su pecho y cegado por la desesperación de no perder a Volvo, Le dispara a supercamionero.
 
 ### PÁGINA 3
 * **Viñeta 9 (Plano General):** El Supercamionero sale despedido hacia atrás por el impacto de energía, cayendo inconsciente sobre el pavimento mojado del muelle.
 * **Viñeta 10 (Plano Medio):** Volvo, al ver al camionero en el piso, entra en pánico total y saca de su campera una pistola dimensional experimental parpadeante.
 * **Viñeta 11 (Acción):** Volvo dispara al aire abriendo un portal dimensional rasgado y lleno de estática glitch, y se arroja en su interior sin dudarlo.
-* **Viñeta 12 (Plano General):** Mati corre y salta estirando los dedos, pero el portal se cierra con un crujido un milisegundo antes de que pueda tocarlo. Mati queda tirado solo en el muelle frío, sumido en la culpa.
+* **Viñeta 12 (Plano General):** Mati corre y salta estirando los dedos, pero el portal se cierra con un crujido un milisegundo antes de que pueda tocarlo. Mati queda tirado solo en el muelle frío, sumido en la culpa, con el supercamionero a sus pies.
 
 ---
 
 ## ACTO 2: La Mentira y el Reflejo (Páginas 4 - 5)
 
-### PÁGINA 4
-* **Viñeta 13 (Plano General):** De vuelta en la base de Brooklyn en el presente. Mati está barriendo con desgana los vidrios de un vaso roto contra el suelo del taller, con la mirada vacía.
-* **Viñeta 14 (Plano Medio):** Julián entra al taller con una toalla al cuello y observa a Mati detenidamente antes de hacerle la pregunta que más teme.
-  * **JULIÁN:** —Che, ¿y Volvo? ¿No venía con vos, Mati?—
-* **Viñeta 15 (Primer Plano):** Mati limpia los vidrios rotos con la suela del pie, esquivando la mirada de Julián y respondiendo con una frialdad y calma ensayadas.
-  * **MATI:** —No. No lo vi. Ni idea dónde está.—
-* **Viñeta 16 (Plano Medio):** Julián se encoge de hombros y se da la vuelta. Mati suelta la escoba y camina lentamente hacia el baño de la base, con la respiración entrecortada.
+PÁGINA 4: El día después
+Viñeta 13 (Plano Medio Corto): Continuidad inmediata del final del acto anterior. Mati entra de golpe por la puerta de la base, con la respiración agitada y los ojos bien abiertos por la preocupación tras escuchar el estruendo desde afuera.
 
-### PÁGINA 5
-* **Viñeta 17 (Plano Medio):** En el baño, Mati abre la canilla de agua fría a fondo y se moja la cara con desesperación, apoyando los puños sobre el lavamanos de metal.
-* **Viñeta 18 (Primer Plano):** Mati se mira en el espejo agrietado. Se refriega los párpados con fuerza porque siente un calor insoportable que le quema las órbitas oculares por dentro.
-* **Viñeta 19 (Plano Detalle):** Cuando abre los ojos en el espejo, vemos que sus pupilas parpadean sutilmente con un filamento de fuego púrpura inestable y radiactivo.
-* **Viñeta 20 (Plano Americano):** Asustado por el reflejo, Mati sacude la cabeza, se coloca la capucha de su campera bomber y sale de la base a paso rápido hacia las calles lluviosas para intentar enfriar su mente.
+MATI: —¿¡Qué pasó!? ¡Escuché un quilombo desde la call...!—
 
+Viñeta 14 (Plano General): Mati se detiene al ver la escena. Uandi está en el suelo, Ian lo está ayudando a levantarse tomándolo del brazo, y Julián observa de pie a un costado. En el piso, los restos de la mesa y la televisión destruida dominan el centro del taller. Al ver que todos están físicamente bien, la tensión en el rostro de Mati se afloja y esboza una sonrisa aliviada.
+
+MATI: —Menos mal... Pensé que se estaban matando. ¿Qué carajos le pasó a la tele?—
+
+Viñeta 15 (Plano Detalle / Elipsis): Una escoba juntando astillas de madera y plástico del suelo, seguido de una bolsa de consorcio llenándose. El plano nos muestra que el tiempo pasó y ya es de día; la luz de la mañana entra débilmente por los ventanales sucios del taller.
+
+PÁGINA 5: Magia y Realidades
+Viñeta 16 (Plano Medio): Julián está tirado cuan largo es en el sofá de la base. Con una mano detrás de la nuca, usa la otra para lanzar cartas al aire que flotan y giran de manera antinatural, envueltas en un destello estático de energía azul y cian.
+
+Viñeta 17 (Plano Medio Corto): Mati, con un trapo en el hombro tras terminar de limpiar, se queda estupefacto mirando las cartas flotantes. Se gira hacia Ian, buscando una explicación lógica.
+
+MATI: —Che, Ian... ¿Qué carajos es eso? ¿Cómo mierda hace eso con las cartas?—
+
+Viñeta 18 (Plano Medio): Antes de que Ian pueda articular una respuesta, Julián interrumpe desde el sillón con una sonrisa sobradora y la mirada fija en sus naipes fosforescentes.
+
+JULIÁN: —Se llama talento, Mati. Algunos nacemos con estilo, otros... bueno, otros barren el piso.—
+
+Viñeta 19 (Plano Americano): Julián atrapa todas las cartas en el aire de un solo movimiento, haciendo que la energía cian se apague, y se incorpora del sofá con una postura más seria, mirándolos a ambos.
+
+JULIÁN: —Aunque el estilo no paga las cuentas. Tenemos que hablar de cómo vamos a movernos ahora.—
+
+PÁGINA 6: Ilusiones y Preguntas Incómodas
+Viñeta 20 (Plano Medio): Desde el fondo, Uandi asoma la cabeza desde la cocina sosteniendo un mate. Le hace un gesto a Julián para que se acerque. Ian, cruzado de brazos en medio del taller vacío, interrumpe con tono de preocupación financiera.
+
+UANDI: —Juli, vení que el agua ya está. Dejalos un toque.—
+
+IAN: —Pará, antes de que se pongan a tomar mate... Tenemos un problema grave. No nos queda un peso y hay que comprar una mesa y una tele nueva ya mismo. No podemos laburar así.—
+
+Viñeta 21 (Plano General): Julián, sin caminar hacia la cocina, sonríe de costado y simplemente señala con el pulgar hacia la pesada puerta del garaje de la base.
+
+Viñeta 22 (Plano Americano / Dinámico): De la sombra de la puerta del garaje emergen tres copias exactas de Julián. No son humanas; están compuestas puramente de una energía vibrante azul y magenta que distorsiona el aire a su alrededor. Los clones empiezan a levantar cajas pesadas y a ordenar herramientas como si nada.
+
+Viñeta 23 (Plano Medio): Todos se quedan mudos, mirando el despliegue de poder. Uandi, sorprendido pero manteniendo la calma mientras le pasa el mate a Julián, se gira casualmente hacia Mati, que se quedó estático en un rincón.
+
+UANDI: —Loco, esto es tremendo... Che, Mati, hablando de ayuda... ¿Y Volvo? ¿No venía con vos?—
+
+PÁGINA 7: El Quiebre de Mati
+Viñeta 24 (Primer Plano): La pregunta cae como una bomba. Mati se tensa por completo, la sangre se le congela y sus ojos se desvían de la mirada de Uandi, fijos en el suelo estropeado.
+
+MATI: —No... No, yo... ni idea. No lo vi. Se debe haber quedado... por ahí.—
+
+Viñeta 25 (Plano Medio): Julián se encoge de hombros, restándole importancia mientras toma un sorbo de mate. Mati, sin esperar a que le repregunten, suelta el trapo que tenía en la mano y camina a paso rápido y rígido hacia el baño de la base. Se nota que apenas puede respirar.
+
+Viñeta 26 (Plano Medio): Ya adentro del baño, Mati abre la canilla de agua fría a fondo. Se moja la cara con desesperación, apoyando los puños con fuerza sobre el lavamanos de metal para no caerse.
+
+Viñeta 27 (Primer Plano): Se mira en el espejo agrietado del baño. Se refriega los párpados con brutalidad; siente un calor insoportable, como si tuviera brasas quemándole las órbitas oculares por dentro.
+
+Viñeta 28 (Plano Detalle): Al separar las manos y abrir los ojos frente al espejo, vemos el horror en su rostro: sus pupilas parpadean sutilmente, encendidas por un filamento de fuego púrpura, inestable y radiactivo.
+
+Viñeta 29 (Plano Americano): Preso del pánico por su propio reflejo, Mati sacude la cabeza con fuerza, se calza la capucha de su campera bomber para taparse y sale del baño directo a la puerta principal, perdiéndose en las calles lluviosas de Brooklyn para intentar enfriar la mente antes de volverse loco.
 ---
 
 ## ACTO 3: La Explosión de Queens (Páginas 6 - 7)
 
 ### PÁGINA 6
-* **Viñeta 21 (Plano General):** Queens bajo una lluvia persistente y fría. Mati camina solo por las veredas vacías, hundiéndose en la culpa por haber ahuyentado a Volvo y haberle mentido al grupo.
+* **Viñeta 21 (Plano General):** Queens. Mati camina, es un dia lluvioso y frio, el esta hundiéndose en la culpa por haber ahuyentado a Volvo y haberle mentido al grupo.
 * **Viñeta 22 (Plano Medio):** En un callejón oscuro, una patrulla blindada de R.E.G.U.L.A.R. tiene arrinconados a tres jóvenes del barrio con las manos sobre una persiana metálica.
 * **Viñeta 23 (Plano Americano):** Uno de los mercenarios blindados de Vanguard nota la presencia de Mati y le apunta directamente a la cara con la potente linterna táctica de su rifle.
   * **SOLDADO VANGUARD:** —¡Toque de queda, flaco! Manos arriba y al piso.—
@@ -64,7 +105,7 @@
 
 ### PÁGINA 8
 * **Viñeta 29 (Plano Americano):** Mati está de rodillas en el suelo del callejón bajo la lluvia de Queens, tapándose los ojos con las manos desnudas, temblando por el dolor de las quemaduras.
-* **Viñeta 30 (Plano General):** Mati camina a tientas en la oscuridad de la noche, apoyándose en las paredes de chapa para no caer, ocultándose en las sombras de los edificios.
+* **Viñeta 30 (Plano General):** Mati camina a tientas en la oscuridad de la noche, apoyándose en las paredes de chapa para no caer, ocultándose en las sombras de los edificios. pero se ve el violeta reflejado en las paredes.
 * **Viñeta 31 (Plano General Interno):** Madrugada en la base de Brooklyn. Ian está solo en su escritorio bajo la luz de una lámpara, soldando con precisión las placas de sus primeros guanteletes verdes.
 * **Viñeta 32 (Acción):** La puerta del búnker se abre de golpe. Mati entra tropezando, con la campera bomber quemada y tapándose la cara ensangrentada, respirando con dificultad.
   * **MATI:** —Ian... ayudame. No puedo ver. Me quema, me quema por dentro...—

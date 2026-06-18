@@ -270,3 +270,52 @@ Opción 2: El "Kinético Oscuro" (Acción Brutal)
 Este prompt prioriza la energía de Jiménez y la oscuridad de Capullo, usando a Pichelli/Garbett para mantener la anatomía correcta y la página legible.
 
 "Official comic book page layout, chaotic dynamic multi-panel grid, professional graphic novel format. White panel borders, aggressive non-uniform layout. Modern American heroic art style. Technical breakdown: Explosive energy, extreme perspectives, and manga-influenced lines of movement inspired by Jorge Jimenez. Visceral textures, brutalist rendering, heavy inking, and atmospheric darkness inspired by Greg Capullo. Clean facial features and fluent body language to balance the intensity inspired by Sara Pichelli. Elegant stilyzation and narrative clarity inspired by Lee Garbett. Flat digital colors with gritty overlay textures, palette of deep desaturated tones mixed with electric neon contrast highlights. 2D illustration, sharp focus. NO 3D render, NO photorealism, NO text, NO speech bubbles."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+guion:Act como un arquitecto narrativo y guionista de cómics especializado en narrativa sistémica, alta fidelidad conceptual y tramas de ritmo pausado y maduro (slow-burn). Tu objetivo es estructurar el guion de una página de cómic independiente basándote en las siguientes directrices de escritura:
+
+[FILOSOFÍA NARRATIVA Y CONSTRUCCIÓN DE MUNDO]
+- Enfoque de arriba hacia abajo (Top-Down): La historia no se mueve por caprichos individuales, sino por las dinámicas e inevitabilidades de un "sistema" mayor (político, tecnológico, social o geopolítico). El entorno debe sentirse denso, vivo y regido por reglas macroeconómicas o de ciencia ficción rígida.
+- Optimismo Trágico: El tono debe balancear la inmensidad y frialdad de las fuerzas macro que controlan el mundo con el núcleo profundamente humano, cálido y vulnerable de los protagonistas que intentan mantener la esperanza.
+
+[RITMO Y ESTRUCTURA DE LA PÁGINA]
+- Descompresión Metódica (Slow-Burn): Prioriza la tensión intelectual, el debate ideológico y las interacciones cotidianas sobre la acción física inmediata. Dedica espacio a la normalidad, los silencios y los diálogos domésticos para que, cuando la acción o la tragedia ocurran, tengan un peso masivo y ganado.
+- Yuxtaposición de Escalas: Estructura la página conectando lo inmenso con lo íntimo. Puedes intercalar viñetas de grandes conceptos abstractos (ej. diagramas de poder, informes de corporaciones, decisiones globales) con viñetas paralelas de personajes lidiando con consecuencias mundanas en su día a día (conversaciones en una cocina, el taller o la oficina).
+
+[DIRECTRICES DE DIÁLOGO Y VIÑETADO]
+- Diálogos Cerebrales y Maduros: Los personajes hablan con una elocuencia reflexiva, analítica y contenida. Evita las explicaciones exageradas o los gritos melodramáticos. El subtexto es clave: los personajes a menudo ocultan sus verdaderas intenciones o emociones bajo debates racionales.
+- Micro-Reacciones Silenciosas: Diseña viñetas específicas para capturar el lenguaje corporal, micro-expresiones de fatiga o el enfoque en objetos cotidianos que cobren un significado simbólico pesado (un reloj, una taza, una herramienta en el suelo), permitiendo que el silencio narre tanto como las palabras.
+- Simetría y Orden: Diseña la distribución de viñetas buscando un orden estructural limpio (estructuras fijas, rejillas simétricas) que refleje control, rompiendo este patrón rítmico solo en momentos de colapso argumental o revelaciones masivas.
+
+
+
+
+
+
+
+
+art:
+A professional indie comic book page layout featuring an authentic, hand-drawn and inked artistic style. The visual identity balances high-fidelity human realism and mature comic book illustration, strictly avoiding 3D-render styles, video game concept art sheen, or digital gradients.
+
+[ARTISTIC STYLE SPECIFICATIONS]
+- Line Art & Ink: Definitive, visible, and sharp hand-drawn line art. High-contrast comic book inking with heavy, organic ink brush strokes and expressive lineweight. Deep, solid blacks (chiaroscuro) define forms, clothing folds, muscular anatomy, and urban environments. Use of traditional hatching, cross-hatching, and ink splatters for texture, completely rejecting smooth digital airbrushing.
+- Character Design: Grounded and mature realism rendered through comic illustration. Faces are deeply expressive with visible ink-drawn textures, wrinkles, and micro-expressions that convey weariness or tension. Costumes and clothing feature realistic textiles, tactile gear, creases, and modern, functional designs drawn with distinct flat-color planes and hard shadow edges rather than 3D volume modeling.
+- Color Palette & Texturing: A sophisticated, cinematic comic book coloring style dominated by desaturated tones, deep indigos, cold blues, and muted earth tones, contrasted sharply by vibrant accent colors (like hot pinks, electric oranges, or neon yellows). The coloring uses flat colors, subtle cel-shading, and matte textures mimicking traditional paper and print halftone or comic book color-flats, avoiding glowing metallic sheen or glossy plastic reflections.
+- Lighting: High-contrast urban lighting represented through stark black ink shadows, harsh backlighting, and rim lighting to separate illustrated figures from dark, textured backgrounds.
+
+[STORYTELLING & PANEL STRUCTURE]
+- Layout & Composition: A clean panel grid separated by solid black borders. The page design alternates between tight, intimate close-ups that focus on silent character tension, and wide, dynamic cinematic angles with a low camera perspective to maximize the scale of action.
+- Systemic Elements: Integration of abstract technical elements directly into the comic flow, such as clean minimalist diagrams, technical schematics, or structural blueprints that blend seamlessly with the narrative backgrounds as 2D graphic overlays.
+- Kinetic Motion: Action sequences feature high-velocity framing, sharp perspective lines, and traditional comic impact effects like detailed hand-drawn debris, speed lines, smoke, and dust. Sound effects are bold, stylized, and integrated into the panel environment, interacting naturally with the characters and backgrounds.
