@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { HeroSection } from "@/components/home/HeroSection";
-import { NewsTicker } from "@/components/home/NewsTicker";
 import { SagaBlock } from "@/components/home/SagaBlock";
 import { CharacterRoster } from "@/components/home/CharacterRoster";
 import { ImageLightbox } from "@/components/home/CharacterModal/ImageLightbox";
@@ -35,7 +34,6 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <HeroSection />
-      <NewsTicker sagas={sagasList} />
       <section id="sagas" className="py-20 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto flex flex-col gap-16">
           {loading ? (

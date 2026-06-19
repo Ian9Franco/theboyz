@@ -95,7 +95,9 @@ export default function ChapterPage() {
   }, [id, fetchChapterData]);
 
   const displayPages = (chapterData?.cover && chapterData?.pages)
-    ? [chapterData.cover, ...chapterData.pages]
+    ? (chapterData.cover === chapterData.pages[0]
+       ? chapterData.pages
+       : [chapterData.cover, ...chapterData.pages])
     : (chapterData?.pages || []);
 
   // Load more pages automatically in Lightbox (vista grande)

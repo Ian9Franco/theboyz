@@ -226,6 +226,10 @@ Julián (Julián, 27, slender skinny build, dark navy blue sweater, full beard) 
 
 Uandi (average normal build, wearing a short-sleeve dark asphalt gray t-shirt, showing a highly detailed dark blackwork full-sleeve tattoo on his left arm, and only a simple solid black armband tattoo around his right biceps)
 
+
+
+
+
 portada:
 A professional, high-end comic book cover layout and commercial print design. 
 

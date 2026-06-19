@@ -5,6 +5,26 @@ import path from "path";
 
 export const dynamic = "force-dynamic";
 
+function validateAccess(request: NextRequest, chapterId: string): boolean {
+  const masterPassword = process.env.PREVIEW_PASSWORD || "spiderman1999";
+  const headerPass = request.headers.get("x-editor-password");
+  const cookiePass = request.cookies.get("preview_password")?.value;
+  const providedPassword = headerPass || cookiePass;
+
+  if (!providedPassword) return false;
+  if (providedPassword === masterPassword) return true;
+
+  const sagas = getDynamicSagas();
+  for (const saga of sagas) {
+    if (saga.chapters.some((ch) => ch.id === chapterId)) {
+      if (saga.password && providedPassword === saga.password) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
 export async function POST(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
@@ -12,10 +32,8 @@ export async function POST(
   try {
     const { id } = await params;
 
-    // Validate editor password
-    const editorPassword = request.headers.get("x-editor-password");
-    const masterPassword = process.env.PREVIEW_PASSWORD;
-    if (editorPassword !== masterPassword) {
+    // Validate access
+    if (!validateAccess(request, id)) {
       return NextResponse.json({ error: "Unauthorized: Invalid editor password" }, { status: 401 });
     }
 

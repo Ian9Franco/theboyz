@@ -135,9 +135,10 @@ export function CinematicReader({
   // Mode selection: "read" or "edit"
   const [mode, setMode] = useState<"read" | "edit">("read");
 
-  // Dynamic pages list: prepends the episode cover in read mode
+  // Dynamic pages list: prepends the episode cover in read mode only if it's a separate cover file
   const pages = React.useMemo(() => {
-    return (mode === "read" && cover) ? [cover, ...rawPages] : rawPages;
+    const hasExplicitCover = cover && cover !== rawPages[0];
+    return (mode === "read" && hasExplicitCover) ? [cover, ...rawPages] : rawPages;
   }, [mode, cover, rawPages]);
 
   // Comic Reader States
