@@ -4,6 +4,7 @@
   "description": "Una historia picante donde los pibes se mandan una tras otra.",
   "color": "#e8185a",
   "status": "draft",
+  "password": "mati",
   "order": 2,
   "cinematic": true,
   "proximamente": false

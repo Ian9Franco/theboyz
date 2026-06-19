@@ -240,7 +240,7 @@ export function validatePreviewAccess(request: NextRequest, sagaId?: string): bo
     return false;
   }
 
-  const masterPassword = process.env.PREVIEW_PASSWORD || "hush2026";
+  const masterPassword = process.env.PREVIEW_PASSWORD || "spiderman1999";
   if (providedPassword === masterPassword) {
     return true;
   }
