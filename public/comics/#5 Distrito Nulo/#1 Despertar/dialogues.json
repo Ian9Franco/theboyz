@@ -1,0 +1,448 @@
+{
+  "pages": {
+    "1": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "Nueva York tiene memoria larga", "style": "caption", "size": "small", "posX": 50, "posY": 0, "tailX": 50, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 345, "fontSize": 10, "borderRadius": 0, "customBg": "#f5e642", "customColor": "#000000" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 28 }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "No te olvida.", "style": "caption", "size": "small", "posX": 50, "posY": 30, "tailX": 50, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 10, "borderRadius": 0, "customBg": "#f5e642", "customColor": "#000000" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 28, "w": 100, "h": 25 }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 53, "w": 100, "h": 47 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "El viaje de vuelta siempre es el más largo", "style": "caption", "size": "small", "posX": 20, "posY": 75, "tailX": 50, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 360, "fontSize": 9, "borderRadius": 0, "customBg": "#f5e642", "customColor": "#000000" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 70, "w": 100, "h": 30 }
+          ],
+          "hideUntilReached": false
+        }
+      ]
+    },
+    "2": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "no me siento nada bien", "style": "whisper", "size": "small", "posX": 75, "posY": 0, "tailX": 55, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "—Sofi llegó bien.", "size": "small", "posX": 60, "posY": 50, "tailX": 35, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "—Todavía no puedo creer que se haya querido quedar en este universo. Estaba decidida a conocer la Tierra antes de... ya sabés. De que no quede nada.", "size": "small", "posX": 0, "posY": 40, "tailX": 40, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            { "text": "—Sofi está bien,. Se Salvó y ahora se va a comer sushi al otro lado del charco. ", "size": "small", "posX": 85, "posY": 60, "tailX": 55, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Dejen de maquinar, boludos, que nos salió redonda.", "size": "small", "posX": 15, "posY": 60, "tailX": 40, "tailY": 65, "tailWidth": 12, "tailCurvature": 44, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "El Universo 5458 se deshizo en silencio. Un mundo entero borrado por un error cuántico.", "style": "caption", "size": "small", "posX": 100, "posY": 75, "tailX": 50, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 0, "customBg": "#f5e642", "customColor": "#000000", "fontFamily": "bangers" },
+            { "text": "—¡Ah...! Mierda, me pegó un calorazo de golpe... Siento que me quemo por dentro, boludo.", "speaker": "Uandi", "size": "small", "posX": 70, "posY": 95, "tailX": 70, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "fontFamily": "bungee" },
+            { "text": "—¡Uandi! Bancá un poco, ya estamos a unas cuadras. Aguantá.", "size": "small", "posX": 45, "posY": 100, "tailX": 50, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Este pelotudo no tiene ni obra social", "size": "small", "posX": 0, "posY": 90, "tailX": 10, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 67, "y": 69, "w": 34, "h": 31 }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 26, "w": 100, "h": 20 }
+          ],
+          "hideUntilReached": false
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            { "text": "bua, voy a ver el doparti", "style": "whisper", "size": "small", "posX": 95, "posY": 55, "tailX": 65, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "uhg", "size": "small", "posX": 50, "posY": 45, "tailX": 30, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "—Uandi, estás temblando de fiebre, boludo. Y tenés la piel hirviendo de verdad.", "size": "small", "posX": 50, "posY": 55, "tailX": 30, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "—Vení, sentate en el living. Te voy a conectar los sensores para medir qué carajo está pasando con tu temperatura.", "size": "small", "posX": 75, "posY": 85, "tailX": 45, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "—Vení, sentate en el living. Te voy a conectar los sensores para medir qué carajo está pasando con tu temperatura.", "size": "small", "posX": 50, "posY": 25, "tailX": 60, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": " —Pará, loco, recién me siento.", "size": "small", "posX": 40, "posY": 0, "tailX": 20, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 32 }
+          ],
+          "hideUntilReached": false
+        },
+        {
+          "focusY": 0.45,
+          "dialogue": [
+            { "text": "—¿Qué le ponés, eu? ¿Eso te mide la presión o es para robarle cable a los vecinos?", "size": "small", "posX": 100, "posY": 40, "tailX": 85, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "hideUntilReached": false,
+          "zoomRects": [
+            { "x": 0, "y": 30, "w": 100, "h": 32 }
+          ]
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 60, "w": 100, "h": 40 }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [
+            { "text": "No, no puede ser... esto no es una gripe común. Es la firma cuántica del portal en sus células...", "style": "whisper", "size": "small", "posX": 80, "posY": 100, "tailX": 60, "tailY": 95, "tailWidth": 20, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 79, "w": 100, "h": 21 }
+          ],
+          "hideUntilReached": true
+        }
+      ]
+    },
+    "5": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "—¡eh, wachin! ¿Uandi toma agua o le damos de la lechita para ver si brilla en la oscuridad?", "size": "small", "posX": 60, "posY": 5, "tailX": 40, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 38 }
+          ]
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            { "text": "—Tomá, metele agua que estás seco. Casi te vas al lobby.", "size": "small", "posX": 45, "posY": 35, "tailX": 30, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "gracias juli", "size": "small", "posX": 85, "posY": 45, "tailX": 65, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.75,
+          "dialogue": [
+            { "text": "que onda? la queda?", "size": "small", "posX": 40, "posY": 70, "tailX": 25, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": " —Tomate una fresca. Así te relajás un toque, que tenés una cara de bardo que asusta.", "size": "small", "posX": 20, "posY": 95, "tailX": 25, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "no-- no puede ser..", "style": "whisper", "size": "small", "posX": 80, "posY": 70, "tailX": 65, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "fontFamily": "bangers" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 67, "w": 100, "h": 34 }
+          ],
+          "hideUntilReached": false
+        }
+      ]
+    },
+    "6": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "tendria que..\nno.. es muy peligroso", "size": "small", "posX": 55, "posY": 20, "tailX": 40, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 24 }
+          ]
+        },
+        {
+          "focusY": 0.35,
+          "dialogue": [
+            { "text": "MIRA EU, ESTA CAMBIANDO EL COLOR", "speaker": "Julián", "size": "small", "posX": 15, "posY": 35, "tailX": -15, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 24, "w": 100, "h": 18 }
+          ]
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            { "text": "—Viste, te dije que era una gripe de mierda. Si Uandi estira la pata por esta gripe interdimensional, me pido su campera táctica. A mí me va a quedar más facherita.", "size": "small", "posX": 100, "posY": 50, "tailX": 75, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": " —Listo, ya fue. Me siento diez puntos ahora. Ian, apagá esa máquina que me dio hambre", "size": "small", "posX": 80, "posY": 85, "tailX": 50, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": " —Che, en esta heladera no hay una mierda. Ni un cacho de queso de la semana pasada.", "size": "small", "posX": 90, "posY": 15, "tailX": 70, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "ian vamo a comprar?", "size": "small", "posX": 105, "posY": 35, "tailX": 65, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "—Vamos al chino de la esquina a comprar carne y verduras. Hacemos un guiso caliente, a ver si con eso recuperás fuerzas.", "size": "small", "posX": 50, "posY": 30, "tailX": 30, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": [
+            { "text": "—¡Che, Ian! Vení que ya arranco el partido.", "size": "small", "posX": 95, "posY": 75, "tailX": 65, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "voy al chino con el uandiola", "size": "small", "posX": 45, "posY": 75, "tailX": 25, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "me chupa un huevo", "size": "small", "posX": 60, "posY": 95, "tailX": 40, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 75, "w": 100, "h": 25 }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 26 }
+          ],
+          "hideUntilReached": false
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "—Ian... te juro que cuando me agarró la fiebre sentí una vibración rara bajo la piel. Como si mis marcas tuvieran electricidad. No le digas nada a Julián, se va a perseguir al pedo.", "size": "small", "posX": 60, "posY": 25, "tailX": 40, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            { "text": " —Es lo que vi en las pantallas, Uandi. Tus células están reteniendo energía inestable. Tenemos que hacer más pruebas. Esto no es joda.", "size": "small", "posX": 5, "posY": 65, "tailX": 30, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": " —Tranca, . Seguro es por el viaje. Apuremos que cierra el chino y me muero de hambre.", "size": "small", "posX": 100, "posY": 70, "tailX": 60, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 71, "w": 100, "h": 29 }
+          ]
+        }
+      ]
+    },
+    "9": {
+      "panels": [
+        {
+          "focusY": 0.1,
+          "dialogue": [
+            { "text": "¡CLANG-TANG!", "style": "sfx", "size": "small", "posX": 85, "posY": 15, "tailX": 60, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 25 }
+          ]
+        },
+        {
+          "focusY": 0.3,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 24, "w": 100, "h": 12 }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 35, "w": 100, "h": 24 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "—¡U-Uandi!—", "size": "small", "posX": 5, "posY": 80, "tailX": 20, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 59, "w": 100, "h": 41 }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "panels": [
+        {
+          "focusY": 0.4,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 71 }
+          ],
+          "hideUntilReached": false
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "¡KRAAA-BOOM!", "style": "sfx", "size": "small", "posX": 35, "posY": 95, "tailX": 50, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "—Uandi... vos... vos frenaste el golpe... con tus brazos...", "size": "small", "posX": 105, "posY": 90, "tailX": 85, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "11": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "—Ian... ¿v-viste eso?—", "size": "small", "posX": 75, "posY": 10, "tailX": 70, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "12": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "las runas rojas bajo su piel se han apagado por completo, volviendo a ser cicatrices grises y frías.", "style": "caption", "size": "small", "posX": 60, "posY": 25, "tailX": 50, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 145, "fontSize": 9, "borderRadius": 0, "customBg": "#f5e642", "customColor": "#000000" }
+          ]
+        },
+        {
+          "focusY": 0.45,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.65,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "Shh, callate. Julián no puede enterarse de esto. Si sabe que tu cuerpo reacciona así, se va a volver loco de la paranoia. Guardemos el secreto por ahora.—", "size": "small", "posX": 95, "posY": 95, "tailX": 65, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "13": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "trajeron papitas?", "size": "small", "posX": 90, "posY": 30, "tailX": 60, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            { "text": "bzzz", "size": "small", "posX": 35, "posY": 55, "tailX": 25, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "quien chota...", "size": "small", "posX": 90, "posY": 45, "tailX": 80, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "este se piensa que soy boludo", "style": "thought", "size": "small", "posX": 80, "posY": 95, "tailX": 55, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "14": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 25 }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 25, "w": 100, "h": 25 }
+          ]
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 48, "w": 100, "h": 16 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "No puede ser... peso pluma...", "size": "small", "posX": 105, "posY": 95, "tailX": 80, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 63, "w": 100, "h": 38 }
+          ]
+        }
+      ]
+    },
+    "15": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.45,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.65,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": []
+        }
+      ]
+    }
+  }
+}

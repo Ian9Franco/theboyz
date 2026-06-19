@@ -6,13 +6,13 @@
  */
 
 import { NextRequest, NextResponse } from "next/server";
-import { getDynamicSagas, parsePrefix } from "@/lib/serverData";
+import { getDynamicSagas, parsePrefix, getAssetsComicsDir } from "@/lib/serverData";
 import fs from "fs";
 import path from "path";
 
 export const dynamic = "force-dynamic";
 
-const ASSETS_COMICS_DIR = path.join(process.cwd(), "..", "the-boyz-comic", "comics");
+const ASSETS_COMICS_DIR = getAssetsComicsDir();
 
 function validateAccess(request: NextRequest): boolean {
   const masterPassword = process.env.PREVIEW_PASSWORD || "spiderman1999";

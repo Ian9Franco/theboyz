@@ -1,8 +1,34 @@
 const fs = require('fs');
 const path = require('path');
 
-const SOURCE_DIR = path.resolve('D:/.CodeProjects/the-boyz-comic/comics');
-const DEST_DIR = path.join(__dirname, '..', 'public', 'comics');
+const projectRoot = path.join(__dirname, "..");
+
+function getSiblingRoot(root) {
+  const possibleNames = ["the-boyz-comic", "theboyz-comic-v1", "theboyz-comic"];
+  for (const name of possibleNames) {
+    const p = path.join(root, "..", name);
+    if (fs.existsSync(p)) {
+      return p;
+    }
+  }
+  try {
+    const parentDir = path.join(root, "..");
+    const files = fs.readdirSync(parentDir);
+    for (const file of files) {
+      if (file.toLowerCase().includes("the-boyz-comic") || file.toLowerCase().includes("theboyz-comic")) {
+        const p = path.join(parentDir, file);
+        if (fs.statSync(p).isDirectory()) {
+          return p;
+        }
+      }
+    }
+  } catch (e) {}
+  return path.join(root, "..", "the-boyz-comic");
+}
+
+const siblingRoot = getSiblingRoot(projectRoot);
+const SOURCE_DIR = path.join(siblingRoot, 'comics');
+const DEST_DIR = path.join(projectRoot, 'public', 'comics');
 
 if (!fs.existsSync(SOURCE_DIR)) {
   console.error(`❌ El repositorio de assets no existe en: ${SOURCE_DIR}`);
@@ -131,8 +157,16 @@ function syncDirectories(srcDir, destDir, depth = 0) {
         fs.rmSync(destPath, { recursive: true, force: true });
         console.log(`🗑️ Eliminado directorio huérfano: ${path.relative(DEST_DIR, destPath)}`);
       } else {
-        fs.unlinkSync(destPath);
-        console.log(`🗑️ Eliminado archivo huérfano: ${path.relative(DEST_DIR, destPath)}`);
+        const ext = path.extname(destItem).toLowerCase();
+        if (ext === '.json') {
+          // Si el JSON existe en la Web pero no en Assets, es un archivo nuevo creado por el editor
+          // (ej. dialogues.json). Lo copiamos a Assets en lugar de eliminarlo.
+          fs.copyFileSync(destPath, srcPath);
+          console.log(`🔄 Copiado JSON nuevo a Assets (Evitando eliminación): ${path.relative(DEST_DIR, destPath)}`);
+        } else {
+          fs.unlinkSync(destPath);
+          console.log(`🗑️ Eliminado archivo huérfano: ${path.relative(DEST_DIR, destPath)}`);
+        }
       }
     }
   }

@@ -1,8 +1,33 @@
 const { spawn } = require("child_process");
 const path = require("path");
+const fs = require("fs");
 
 const projectRoot = path.join(__dirname, "..");
-const siblingRoot = path.join(projectRoot, "..", "the-boyz-comic");
+
+function getSiblingRoot(root) {
+  const possibleNames = ["the-boyz-comic", "theboyz-comic-v1", "theboyz-comic"];
+  for (const name of possibleNames) {
+    const p = path.join(root, "..", name);
+    if (fs.existsSync(p)) {
+      return p;
+    }
+  }
+  try {
+    const parentDir = path.join(root, "..");
+    const files = fs.readdirSync(parentDir);
+    for (const file of files) {
+      if (file.toLowerCase().includes("the-boyz-comic") || file.toLowerCase().includes("theboyz-comic")) {
+        const p = path.join(parentDir, file);
+        if (fs.statSync(p).isDirectory()) {
+          return p;
+        }
+      }
+    }
+  } catch (e) {}
+  return path.join(root, "..", "the-boyz-comic");
+}
+
+const siblingRoot = getSiblingRoot(projectRoot);
 
 console.log("🚀 Iniciando servidores de desarrollo para ambos proyectos...\n");
 

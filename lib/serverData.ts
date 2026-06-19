@@ -262,3 +262,26 @@ export function validatePreviewAccess(request: NextRequest, sagaId?: string): bo
 
   return false;
 }
+
+export function getAssetsComicsDir(): string {
+  const possibleNames = ["the-boyz-comic", "theboyz-comic-v1", "theboyz-comic"];
+  for (const name of possibleNames) {
+    const p = path.join(process.cwd(), "..", name, "comics");
+    if (fs.existsSync(p)) {
+      return p;
+    }
+  }
+  try {
+    const parentDir = path.join(process.cwd(), "..");
+    const files = fs.readdirSync(parentDir);
+    for (const file of files) {
+      if (file.toLowerCase().includes("the-boyz-comic") || file.toLowerCase().includes("theboyz-comic")) {
+        const p = path.join(parentDir, file, "comics");
+        if (fs.existsSync(p)) {
+          return p;
+        }
+      }
+    }
+  } catch (e) {}
+  return path.join(process.cwd(), "..", "the-boyz-comic", "comics");
+}

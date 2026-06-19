@@ -161,6 +161,10 @@ export async function GET(
       const dialoguesPath = path.join(comicsDir, actualSagaFolder, actualChFolder, "dialogues.json");
       if (fs.existsSync(dialoguesPath)) {
         return JSON.parse(fs.readFileSync(dialoguesPath, "utf-8"));
+      } else {
+        const defaultDialogues = { pages: {} };
+        fs.writeFileSync(dialoguesPath, JSON.stringify(defaultDialogues, null, 2), "utf-8");
+        return defaultDialogues;
       }
     } catch (e) {
       console.error("Error reading dialogues.json:", e);
