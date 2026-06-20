@@ -1,11 +1,12 @@
 {
   "title": "Distrito Nulo",
   "tagline": "Nuevas facciones. Nuevos territorios. La ciudad se parte en dos.",
-  "description": "En una Nueva York oscura y amenazada por colapsos dimensionales, Ian intenta descifrar las anomalías de los Backrooms mientras sus amigos, Uandi y Julián, descubren con pánico que la radiación multiversal de su última misión está mutando sus células, despertando en ellos poderes inestables —un escudo cinético invisible y alteraciones de estática digital— que se activan por puro instinto de supervivencia. Mientras el grupo intenta procesar el shock de estas mutaciones en su búnker de Brooklyn, la organización mercenaria Vanguard aprovecha el caos para tomar militarmente el control de la ciudad, forzando a Ian a asumir una resolución sombría: descifrar el sistema detrás de este caos celular y frenar la invasión antes de que se les agote el tiempo.",
+  "description": "Meses después de sobrevivir al colapso dimensional del hotel y de despedir a Sofi rumbo a Tokio, los efectos secundarios de la alteración cuántica comienzan a manifestarse como una anomalía biológica en Uandi y Julián en una Nueva York hostil y decadente",
   "color": "#e8185a",
-  "status": "draft",
+  "status": "published",
   "order": 5,
   "password": "nulo",
   "cinematic": true,
+  "nuevo": true,
   "proximamente": false
 }

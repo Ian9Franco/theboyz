@@ -6,6 +6,6 @@
   "status": "published",
   "password": "hush",
   "cinematic": true,
-  "nuevo": true,
+  "nuevo": false,
   "proximamente": false
 }

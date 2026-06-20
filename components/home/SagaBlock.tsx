@@ -33,6 +33,7 @@ export function SagaBlock({
   const [isClient, setIsClient] = useState(false);
   const [unlockAll, setUnlockAll] = useState(false);
   const [showChapters, setShowChapters] = useState(false);
+  const [showDescription, setShowDescription] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -123,9 +124,19 @@ export function SagaBlock({
                 <h2 className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-none tracking-wider mb-2 text-[#0a0a0f]">
                   {saga.title}
                 </h2>
-                <div className="font-sans text-xs sm:text-sm text-gray-600 leading-relaxed max-w-xs">
+                <div 
+                  className={`font-sans text-xs sm:text-sm text-gray-600 leading-relaxed max-w-xs transition-all duration-300 mt-2 ${
+                    showDescription ? "block" : "hidden lg:block"
+                  }`}
+                >
                   {saga.description}
                 </div>
+                <button
+                  onClick={() => setShowDescription(!showDescription)}
+                  className="lg:hidden text-[10px] font-sans font-bold underline hover:no-underline text-gray-500 mt-2 tracking-wide uppercase cursor-pointer"
+                >
+                  {showDescription ? "Ocultar Sinopsis ▲" : "Leer Sinopsis ▼"}
+                </button>
               </div>
             </div>
 
@@ -223,7 +234,7 @@ export function SagaBlock({
             />
             
             {/* Main content split */}
-            <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-stretch w-full relative z-10">
+            <div className="flex flex-col lg:flex-row gap-6 items-center lg:items-stretch w-full relative z-10">
               {saga.cover && (
                 <div 
                   className="relative shrink-0 w-40 sm:w-44 aspect-[3/4] border-4 border-[#0a0a0f] overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_rgba(10,10,15,1)] group cursor-zoom-in self-center"
@@ -237,9 +248,9 @@ export function SagaBlock({
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 via-transparent to-transparent pointer-events-none" />
                 </div>
               )}
-              <div className="flex-1 flex flex-col justify-between items-center sm:items-start text-center sm:text-left py-1">
+              <div className="flex-1 flex flex-col justify-between items-center lg:items-start text-center lg:text-left py-1">
                 <div>
-                  <div className="flex items-center gap-2 mb-2 justify-center sm:justify-start">
+                  <div className="flex items-center gap-2 mb-2 justify-center lg:justify-start">
                     <img 
                       src="/comic-book.webp" 
                       alt="Saga Icon" 
@@ -258,6 +269,150 @@ export function SagaBlock({
                   <h2
                     className="font-[var(--font-bangers)] text-2xl sm:text-4xl leading-none tracking-wider mb-2 text-[#0a0a0f]"
                     style={{ textShadow: `2px 2px 0 rgba(15, 32, 66, 0.15)` }}
+                  >
+                    {saga.title}
+                  </h2>
+                  <div className="font-sans text-xs sm:text-sm text-gray-700 leading-relaxed max-w-md">
+                    {saga.description}
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => setShowChapters(!showChapters)}
+                  className="font-[var(--font-bangers)] text-sm tracking-wider px-5 py-2.5 border-2 border-[#0a0a0f] uppercase transition-all shadow-[3px_3px_0_#0a0a0f] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#0a0a0f] cursor-pointer flex items-center gap-2 mt-4"
+                  style={{ 
+                    background: saga.color, 
+                    color: getTextColor(saga.color)
+                  }}
+                >
+                  <img 
+                    src={buttonIconSrc} 
+                    alt="Boom" 
+                    className={`w-4 h-4 object-contain transition-transform duration-300 ${showChapters ? "rotate-45" : ""}`} 
+                  />
+                  {showChapters ? "Ocultar Episodios" : "Ver Episodios"}
+                </button>
+              </div>
+            </div>
+
+            {/* Chapters list inside collapsible accordion */}
+            <AnimatePresence>
+              {showChapters && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                  animate={{ opacity: 1, height: "auto", marginTop: 24 }}
+                  exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden relative z-10 w-full"
+                >
+                  <div className="border-t-2 border-dashed border-[#0a0a0f]/20 pt-6">
+                    <div className="flex items-center gap-2 mb-4">
+                      <img 
+                        src="/comic-page.webp" 
+                        alt="Page" 
+                        className="w-5 h-5 object-contain" 
+                      />
+                      <h4 className="font-[var(--font-bangers)] text-lg tracking-wider text-[#0a0a0f]">
+                        EPISODIOS DISPONIBLES
+                      </h4>
+                      <div className="h-[1px] flex-1 bg-[#0a0a0f]/10" />
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
+                      {saga.chapters.map((chapter: any, ci: number) => {
+                        let isLocked = false;
+                        if (isClient && !unlockAll) {
+                          if (ci === 0) {
+                            isLocked = false;
+                          } else {
+                            isLocked = !readChapters.includes(saga.chapters[ci - 1].id);
+                          }
+                        }
+                        return (
+                          <ChapterCard
+                            key={chapter.id}
+                            chapter={chapter}
+                            sagaId={saga.id}
+                            sagaColor={saga.color}
+                            index={ci}
+                            isLocked={isLocked}
+                            sagaCover={saga.cover}
+                          />
+                        );
+                      })}
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div 
+          className="border-4 border-[#0a0a0f] relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn"
+          style={{
+            boxShadow: `8px 8px 0 ${colorSecondary}`,
+            background: `white`
+          }}
+        >
+          <div className="p-6 sm:p-8 relative z-10 flex flex-col justify-between">
+            {/* Halftone pop-art subtle background pattern */}
+            <div
+              className="absolute inset-0 pointer-events-none opacity-[0.03]"
+              style={{
+                backgroundImage: "radial-gradient(circle, #0f2042 1.5px, transparent 1.5px)",
+                backgroundSize: "10px 10px",
+              }}
+            />
+            
+            {/* Main content split */}
+            <div className="flex flex-col lg:flex-row gap-6 items-center lg:items-stretch w-full relative z-10">
+              {saga.cover && (
+                <div 
+                  className="relative shrink-0 w-40 sm:w-44 aspect-[3/4] border-4 border-[#0a0a0f] overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_rgba(10,10,15,1)] group cursor-zoom-in self-center"
+                  onClick={() => onCoverClick?.(getComicPageUrl(saga.cover))}
+                >
+                  <img 
+                    src={getComicPageUrl(saga.cover)} 
+                    alt={`Portada de la saga ${saga.title}`} 
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 via-transparent to-transparent pointer-events-none" />
+                </div>
+              )}
+              <div className="flex-1 flex flex-col justify-between items-center lg:items-start text-center lg:text-left py-1">
+                <div>
+                  <div className="flex items-center gap-2 mb-2 justify-center lg:justify-start">
+                    <img 
+                      src="/comic-book.webp" 
+                      alt="Saga Icon" 
+                      className="w-5 h-5 object-contain" 
+                    />
+                    <span
+                      className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-black"
+                      style={{ background: saga.color, color: getTextColor(saga.color) }}
+                    >
+                      SAGA
+                    </span>
+                    {/* Badge de color secundario si se define en saga.json */}
+                    {saga.color_secondary && (
+                      <span
+                        className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-black"
+                        style={{
+                          background: saga.color_secondary,
+                          color: getTextColor(saga.color_secondary),
+                          boxShadow: `1px 1px 0 ${saga.color_secondary}88`
+                        }}
+                      >
+                        ALT
+                      </span>
+                    )}
+                  </div>
+                  <h2
+                    className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-none tracking-wider mb-2 text-[#0a0a0f]"
+                    style={{ textShadow: `2px 2px 0 rgba(10, 10, 15, 0.05)` }}
                   >
                     {saga.title}
                   </h2>

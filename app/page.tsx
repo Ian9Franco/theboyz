@@ -76,13 +76,22 @@ export default function Home() {
 
                     return (
                       <div className="flex flex-col gap-24">
-                        {/* 2-column grid: Nuevos (left) | Proximamente (right) */}
-                        {(nuevoSagas.length > 0 || proximamenteSagas.length > 0) && (
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                            {/* Column: Nuevos */}
-                            {nuevoSagas.length > 0 ? (
+                        {/* 2-column grid: Nuevos + Historias Pasadas (left) | Proximamente (right) */}
+                        {(nuevoSagas.length > 0 || proximamenteSagas.length > 0 || otherOfficialSagas.length > 0) && (
+                          <div className="grid grid-cols-2 gap-4 sm:gap-8 items-start">
+                            {/* Column: Nuevos y Pasados */}
+                            {nuevoSagas.length > 0 || otherOfficialSagas.length > 0 ? (
                               <div className="flex flex-col gap-8">
                                 {nuevoSagas.map((saga) => (
+                                  <SagaBlock
+                                    key={saga.id}
+                                    saga={saga}
+                                    index={sagasList.findIndex((s) => s.id === saga.id)}
+                                    onCoverClick={(url) => setLightboxSaga({ url, title: saga.title })}
+                                    isFeatured={true}
+                                  />
+                                ))}
+                                {[...otherOfficialSagas].reverse().map((saga) => (
                                   <SagaBlock
                                     key={saga.id}
                                     saga={saga}
@@ -112,25 +121,6 @@ export default function Home() {
                             ) : (
                               <div />
                             )}
-                          </div>
-                        )}
-
-                        {otherOfficialSagas.length > 0 && (
-                          <div className="flex flex-col gap-16">
-                            {[...otherOfficialSagas].reverse().map((saga) => {
-                              const fullIndex = sagasList.findIndex((s) => s.id === saga.id);
-                              const prevSaga = fullIndex > 0 ? sagasList[fullIndex - 1] : null;
-                              return (
-                                <SagaBlock
-                                  key={saga.id}
-                                  saga={saga}
-                                  index={fullIndex}
-                                  prevSaga={prevSaga}
-                                  onCoverClick={(url) => setLightboxSaga({ url, title: saga.title })}
-                                  isFeatured={false}
-                                />
-                              );
-                            })}
                           </div>
                         )}
                       </div>
