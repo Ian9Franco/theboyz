@@ -1206,7 +1206,7 @@
         {
           "focusY": 0.1,
           "dialogue": [
-            { "text": "¡¿Qué te pasa, no hablas?!", "size": "small", "posX": 95, "posY": 0, "tailX": 85, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "#424ef5", "customColor": "#000000", "textColor": "#fe2020" }
+            { "text": "Mirá el desastre que estás haciendo...", "size": "small", "posX": 110, "posY": 10, "tailX": 85, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18, "customBg": "#2832b8", "customColor": "#000000", "textColor": "#fe1010" }
           ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 30 }
@@ -1214,9 +1214,7 @@
         },
         {
           "focusY": 0.6,
-          "dialogue": [
-            { "text": "asi me gustan.. asustadas", "size": "small", "posX": 25, "posY": 55, "tailX": 55, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18, "customBg": "#1a47ff", "customColor": "#000000", "textColor": "#ff2e2e" }
-          ],
+          "dialogue": [],
           "zoomRects": [
             { "x": 0, "y": 30, "w": 100, "h": 35 }
           ]
