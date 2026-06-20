@@ -184,6 +184,47 @@ export function EditorAudioTracks({
 
   const handleFormChange = <K extends keyof TrackFormState>(key: K, val: TrackFormState[K]) => {
     setForm((prev) => ({ ...prev, [key]: val }));
+
+    // Dynamically update active form preview settings if playing
+    if (previewingId === "__form_preview__" && previewAudioRef.current) {
+      if (key === "volume") {
+        const v = val as number;
+        previewAudioRef.current.volume = v * v;
+      } else if (key === "playbackRate") {
+        previewAudioRef.current.playbackRate = val as number;
+      }
+    }
+  };
+
+  const handlePreviewFormTrack = () => {
+    if (!form.src) return;
+    const tempTrack: AudioTrack = {
+      id: "__form_preview__",
+      layer: form.layer,
+      src: form.src,
+      startPageKey: form.startPageKey,
+      startPanelIdx: form.startPanelIdx,
+      soundConfig: {
+        volume: form.volume,
+        playbackRate: form.playbackRate,
+        loop: form.loop,
+        fadeIn: form.fadeIn,
+        fadeOut: form.fadeOut,
+        delay: form.delay,
+        startTime: form.startTime,
+      },
+    };
+    if (previewingId === "__form_preview__") {
+      stopPreview();
+    } else {
+      playPreview(tempTrack);
+    }
+  };
+
+  const closeForm = () => {
+    stopPreview();
+    setShowForm(false);
+    setEditingId(null);
   };
 
   const handleSaveTrack = () => {
@@ -212,8 +253,7 @@ export function EditorAudioTracks({
     } else {
       onUpdate([...audioTracks, newTrack]);
     }
-    setShowForm(false);
-    setEditingId(null);
+    closeForm();
   };
 
   const handleDeleteTrack = (trackId: string) => {
@@ -339,7 +379,7 @@ export function EditorAudioTracks({
                 </span>
                 <button
                   type="button"
-                  onClick={() => { setShowForm(false); setEditingId(null); }}
+                  onClick={closeForm}
                   className="text-[10px] text-zinc-500 hover:text-zinc-800"
                 >
                   ✕ Cancelar
@@ -375,16 +415,31 @@ export function EditorAudioTracks({
               {/* Sound selector */}
               <div className="flex flex-col gap-1">
                 <label className="text-[9px] font-bold text-zinc-600 uppercase tracking-wider">Sonido</label>
-                <select
-                  value={form.src}
-                  onChange={(e) => handleFormChange("src", e.target.value)}
-                  className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
-                >
-                  <option value="">-- Seleccioná un archivo --</option>
-                  {availableSounds.map((s) => (
-                    <option key={s.path} value={s.path}>{s.name}</option>
-                  ))}
-                </select>
+                <div className="flex gap-2">
+                  <select
+                    value={form.src}
+                    onChange={(e) => handleFormChange("src", e.target.value)}
+                    className="flex-1 text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                  >
+                    <option value="">-- Seleccioná un archivo --</option>
+                    {availableSounds.map((s) => (
+                      <option key={s.path} value={s.path}>{s.name}</option>
+                    ))}
+                  </select>
+                  {form.src && (
+                    <button
+                      type="button"
+                      onClick={handlePreviewFormTrack}
+                      className={`text-[8px] font-bold px-2.5 py-1 rounded border transition-all ${
+                        previewingId === "__form_preview__"
+                          ? "bg-green-600 text-white border-green-700 shadow-inner"
+                          : "bg-green-500 hover:bg-green-600 text-white border-green-700"
+                      }`}
+                    >
+                      {previewingId === "__form_preview__" ? "⏸ Detener" : "▶ Preview"}
+                    </button>
+                  )}
+                </div>
               </div>
 
               {/* Start position */}
@@ -572,7 +627,7 @@ export function EditorAudioTracks({
                 </button>
                 <button
                   type="button"
-                  onClick={() => { setShowForm(false); setEditingId(null); }}
+                  onClick={closeForm}
                   className="text-[9px] font-bold px-3 py-1.5 rounded border bg-zinc-100 text-zinc-600 border-zinc-300 hover:bg-zinc-200 transition-all"
                 >
                   Cancelar

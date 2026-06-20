@@ -229,6 +229,11 @@ export function CinematicReader({
       const saved = localStorage.getItem("reader_text_scale");
       if (saved) {
         setTextScale(parseFloat(saved));
+      } else {
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+          setTextScale(1.2);
+        }
       }
       const savedAutoplay = localStorage.getItem("reader_autoplay");
       if (savedAutoplay !== null) {
@@ -384,7 +389,8 @@ export function CinematicReader({
             (p.dialogue && p.dialogue.length > 0) ||
             p.zoomRect ||
             (p.zoomRects && p.zoomRects.length > 0) ||
-            p.sound
+            p.sound ||
+            (p.sounds && p.sounds.length > 0)
         )
       : currentPageData.panels || [];
 
@@ -435,6 +441,29 @@ export function CinematicReader({
     };
   }, [panelIdx, pageIdx, mode, activePanel]);
 
+  // Gather and memoize all sounds config for this panel with stable dependencies
+  const soundsToPlay = useMemo((): PanelSound[] => {
+    const list: PanelSound[] = [];
+    if (!activePanel) return list;
+    if (activePanel.sounds && Array.isArray(activePanel.sounds) && activePanel.sounds.length > 0) {
+      list.push(...activePanel.sounds);
+    } else if (activePanel.sound) {
+      list.push({
+        sound: activePanel.sound,
+        soundStartTime: activePanel.soundStartTime,
+        soundEndTime: activePanel.soundEndTime,
+        soundConfig: activePanel.soundConfig,
+      });
+    }
+    return list;
+  }, [
+    activePanel?.sound,
+    activePanel?.soundStartTime,
+    activePanel?.soundEndTime,
+    JSON.stringify(activePanel?.soundConfig),
+    JSON.stringify(activePanel?.sounds),
+  ]);
+
   // Play sound effect(s) when panel changes
   useEffect(() => {
     // 1. Stop all currently playing panel audios
@@ -444,28 +473,13 @@ export function CinematicReader({
     });
     activePanelAudiosRef.current = [];
 
-    if (mode !== "read" || !activePanel) return;
-
-    // 2. Gather all sounds config for this panel
-    const soundsToPlay: PanelSound[] = [];
-    if (activePanel.sounds && Array.isArray(activePanel.sounds) && activePanel.sounds.length > 0) {
-      soundsToPlay.push(...activePanel.sounds);
-    } else if (activePanel.sound) {
-      soundsToPlay.push({
-        sound: activePanel.sound,
-        soundStartTime: activePanel.soundStartTime,
-        soundEndTime: activePanel.soundEndTime,
-        soundConfig: activePanel.soundConfig,
-      });
-    }
-
-    if (soundsToPlay.length === 0) return;
+    if (mode !== "read" || soundsToPlay.length === 0) return;
 
     const activeAudios: HTMLAudioElement[] = [];
     const timersToClear: NodeJS.Timeout[] = [];
     const intervalsToClear: NodeJS.Timeout[] = [];
 
-    // 3. Start each sound
+    // 2. Start each sound
     soundsToPlay.forEach((soundItem) => {
       if (!soundItem.sound) return;
 
@@ -486,7 +500,7 @@ export function CinematicReader({
       const targetVolume = volume * volume; // log curve
 
       audio.currentTime = soundStartTime;
-      audio.volume = 0; // Start at 0 if fadeIn is set, else set to targetVolume
+      audio.volume = fadeIn > 0 ? 0 : targetVolume; // Direct correct initialization
       audio.playbackRate = playbackRate;
       audio.loop = loop;
 
@@ -499,7 +513,12 @@ export function CinematicReader({
 
       const playWithDelay = () => {
         try {
-          audio.play();
+          const playPromise = audio.play();
+          if (playPromise !== undefined) {
+            playPromise.catch((error) => {
+              console.error("Error playing audio item:", error);
+            });
+          }
 
           // Set end time if specified
           if (soundEndTime !== undefined) {
@@ -529,8 +548,6 @@ export function CinematicReader({
               }
             }, stepDuration);
             intervalsToClear.push(fadeInInterval);
-          } else {
-            audio.volume = targetVolume;
           }
 
           // Fade out effect (before audio ends based on duration config)
@@ -568,7 +585,7 @@ export function CinematicReader({
             }
           }
         } catch (error) {
-          console.error("Error playing audio item:", error);
+          console.error("Error playing audio item (sync):", error);
         }
       };
 
@@ -591,7 +608,7 @@ export function CinematicReader({
       timersToClear.forEach((t) => clearTimeout(t));
       intervalsToClear.forEach((i) => clearInterval(i));
     };
-  }, [panelIdx, pageIdx, mode, activePanel?.sound, activePanel?.soundConfig, activePanel?.soundStartTime, activePanel?.soundEndTime, activePanel?.sounds]);
+  }, [panelIdx, pageIdx, mode, soundsToPlay]);
 
   // ─── Multi-span Audio Track Engine ───────────────────────────────────────
 
@@ -685,6 +702,8 @@ export function CinematicReader({
     }, stepDuration);
   };
 
+  const tracksListString = JSON.stringify(localDialogues.audioTracks || []);
+
   /**
    * Main multi-track playback effect.
    * Fires on every panel/page change and on track list changes.
@@ -726,7 +745,12 @@ export function CinematicReader({
 
         const doPlay = () => {
           try {
-            audio.play();
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+              playPromise.catch((err) => {
+                console.error("[AudioTrack] Error playing track playback promise:", track.id, err);
+              });
+            }
 
             // Fade-in effect
             if (fadeIn > 0) {
@@ -753,7 +777,7 @@ export function CinematicReader({
               }, 100);
             }
           } catch (err) {
-            console.error("[AudioTrack] Error playing track", track.id, err);
+            console.error("[AudioTrack] Error playing track (sync)", track.id, err);
             activeTracks.delete(track.id);
           }
         };
@@ -777,7 +801,7 @@ export function CinematicReader({
         activeTracks.delete(trackId);
       }
     });
-  }, [panelIdx, pageIdx, mode, localDialogues.audioTracks, isPositionInTrackRange, pages]);
+  }, [panelIdx, pageIdx, mode, tracksListString, isPositionInTrackRange, pages]);
 
   // Stop ALL multi-span tracks when leaving read mode
   useEffect(() => {

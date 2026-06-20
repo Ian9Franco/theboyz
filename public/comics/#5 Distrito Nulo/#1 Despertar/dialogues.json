@@ -317,13 +317,24 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 25 }
-          ]
+          ],
+          "sounds": []
         },
         {
           "focusY": 0.3,
           "dialogue": [],
           "zoomRects": [
             { "x": 0, "y": 24, "w": 100, "h": 12 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/whip.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.45,
+                "playbackRate": 1
+              }
+            }
           ]
         },
         {
@@ -355,10 +366,10 @@
           "hideUntilReached": false,
           "sounds": [
             {
-              "sound": "/sounds/roca.mp3",
+              "sound": "/sounds/crash2.mp3",
               "soundStartTime": 0,
               "soundConfig": {
-                "volume": 0.4,
+                "volume": 0.3,
                 "playbackRate": 1
               }
             }
@@ -814,6 +825,16 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 32, "w": 100, "h": 30 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/beam3.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.45,
+                "playbackRate": 0.6
+              }
+            }
           ]
         },
         {
@@ -836,7 +857,8 @@
           "dialogue": [
             { "text": "que mierda tiene en las manos??", "size": "small", "posX": 75, "posY": 25, "tailX": 70, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "PARA PIBE!", "size": "small", "posX": 65, "posY": 0, "tailX": 80, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
-          ]
+          ],
+          "sounds": []
         },
         {
           "focusY": 0.4,
@@ -845,6 +867,16 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 28, "w": 100, "h": 21 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/beam.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.4,
+                "playbackRate": 1
+              }
+            }
           ]
         },
         {
@@ -905,6 +937,16 @@
           "dialogue": [],
           "zoomRects": [
             { "x": 0, "y": 30, "w": 100, "h": 25 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/olla.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.25,
+                "playbackRate": 1
+              }
+            }
           ]
         },
         {
@@ -969,11 +1011,20 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "RAAAAAH", "style": "scream", "size": "small", "posX": 90, "posY": 30, "tailX": 70, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18, "customBg": "#fe2a2a" },
             { "text": "AAAAAGH", "size": "small", "posX": 90, "posY": 40, "tailX": 85, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 58 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/The Incredible Hulk Roar.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.5,
+                "playbackRate": 1
+              }
+            }
           ]
         },
         {
@@ -983,6 +1034,16 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 57, "w": 100, "h": 44 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/crash.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.3,
+                "playbackRate": 1
+              }
+            }
           ]
         }
       ]
@@ -1040,6 +1101,16 @@
           "hideUntilReached": false,
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 43 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sacudir ropa.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.7,
+                "playbackRate": 1
+              }
+            }
           ]
         },
         {
@@ -1056,6 +1127,16 @@
           "dialogue": [],
           "zoomRects": [
             { "x": 0, "y": 67, "w": 100, "h": 34 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/beam4.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.4,
+                "playbackRate": 2.7
+              }
+            }
           ]
         }
       ]
@@ -1147,6 +1228,16 @@
           "focusY": 0.25,
           "dialogue": [
             { "text": "AAAAAAAAAAAAH", "style": "scream", "size": "small", "posX": 95, "posY": 30, "tailX": 60, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "#ff4d4d" }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/botellita.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.45,
+                "playbackRate": 0.8
+              }
+            }
           ]
         },
         {
@@ -1203,7 +1294,8 @@
           "focusY": 0.15,
           "dialogue": [
             { "text": "Esta rico al final", "size": "small", "posX": 90, "posY": 25, "tailX": 65, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
-          ]
+          ],
+          "sounds": []
         },
         {
           "focusY": 0.6,
@@ -1211,7 +1303,8 @@
             { "text": "ese.. sos vos?", "size": "small", "posX": 30, "posY": 35, "tailX": 25, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "que carajos estoy viendo", "size": "small", "posX": 65, "posY": 40, "tailX": 50, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "*desaparece*", "style": "caption", "size": "small", "posX": 95, "posY": 50, "tailX": 50, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "#f5e642", "customColor": "#000000" }
-          ]
+          ],
+          "sounds": []
         },
         {
           "focusY": 0.85,
@@ -1221,6 +1314,16 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 59, "w": 100, "h": 42 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/roca.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.4,
+                "playbackRate": 1
+              }
+            }
           ]
         }
       ]
@@ -1248,7 +1351,7 @@
     {
       "id": "track-1781911003971-ywxtj",
       "layer": "music",
-      "src": "/sounds/lluvia.mp3",
+      "src": "/sounds/lluvia2.mp3",
       "startPageKey": "3",
       "startPanelIdx": 0,
       "stopTrigger": {
@@ -1274,7 +1377,7 @@
         "pageKey": "7"
       },
       "soundConfig": {
-        "volume": 0.3,
+        "volume": 0.2,
         "playbackRate": 1,
         "loop": true,
         "fadeIn": 1000,
@@ -1320,7 +1423,7 @@
     {
       "id": "track-1781932985549-05w1k",
       "layer": "music",
-      "src": "/sounds/lluvia.mp3",
+      "src": "/sounds/lluvia2.mp3",
       "startPageKey": "8",
       "startPanelIdx": 0,
       "stopTrigger": {
@@ -1356,7 +1459,7 @@
     {
       "id": "track-1781933222280-m7ge4",
       "layer": "music",
-      "src": "/sounds/lluvia.mp3",
+      "src": "/sounds/lluvia2.mp3",
       "startPageKey": "17",
       "startPanelIdx": 0,
       "stopTrigger": {
@@ -1380,6 +1483,61 @@
       "stopTrigger": {
         "type": "pageEnd",
         "pageKey": "35"
+      },
+      "soundConfig": {
+        "volume": 0.35,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1781973320385-rtkuo",
+      "layer": "sfx",
+      "src": "/sounds/metal tension.mp3",
+      "startPageKey": "8",
+      "startPanelIdx": 3,
+      "stopTrigger": {
+        "type": "panelEnd",
+        "pageKey": "9",
+        "panelIdx": 1
+      },
+      "soundConfig": {
+        "volume": 0.4,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1781974995845-vly1x",
+      "layer": "music",
+      "src": "/sounds/hirviendo.mp3",
+      "startPageKey": "27",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "28"
+      },
+      "soundConfig": {
+        "volume": 0.45,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1781975570824-iplaq",
+      "layer": "music",
+      "src": "/sounds/fuego.mp3",
+      "startPageKey": "28",
+      "startPanelIdx": 2,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "29"
       },
       "soundConfig": {
         "volume": 0.25,

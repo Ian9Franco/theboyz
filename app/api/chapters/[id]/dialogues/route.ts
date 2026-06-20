@@ -86,7 +86,7 @@ export async function POST(
         const panels = pgData.panels || [];
         const hasDialogues = panels.some((p: any) => p.dialogue && p.dialogue.length > 0);
         const hasCustomZoom = panels.some((p: any) => p.zoomRect || (p.zoomRects && p.zoomRects.length > 0));
-        const hasCustomSound = panels.some((p: any) => p.sound || p.soundConfig);
+        const hasCustomSound = panels.some((p: any) => p.sound || p.soundConfig || (p.sounds && p.sounds.length > 0));
         const hasCustomDuration = panels.some((p: any) => p.duration !== undefined);
         
         // A page is considered default/unedited if it has exactly 3 panels, no dialogues, no custom zoom rects, no sounds, no durations, and focusY close to defaults
