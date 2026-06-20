@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import type { DialogueLine } from "./DialogueBubble";
-import type { AudioTrack, Dialogues, PanelSound } from "./CinematicReader";
+import type { AudioTrack, Dialogues, PanelSound } from "./audioPlayer";
 import { EditorTabSettings } from "./EditorTabSettings";
 import { EditorTabPanels } from "./EditorTabPanels";
 import { EditorTabDialogues } from "./EditorTabDialogues";

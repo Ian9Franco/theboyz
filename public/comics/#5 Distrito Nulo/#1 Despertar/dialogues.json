@@ -1010,9 +1010,6 @@
             { "text": "-ju..   julian! ", "size": "small", "posX": 80, "posY": 25, "tailX": 70, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "¿LE dio calor cocinar o qué...?", "size": "small", "posX": 5, "posY": 30, "tailX": 20, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "No te muevas!", "size": "small", "posX": 95, "posY": 30, "tailX": 85, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
-          ],
-          "zoomRects": [
-            { "x": 0, "y": 0, "w": 100, "h": 22 }
           ]
         },
         {
@@ -1022,7 +1019,7 @@
             { "text": "uuu la concha de tu madre me quemaste", "size": "small", "posX": 95, "posY": 45, "tailX": 85, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
-            { "x": 0, "y": 20, "w": 100, "h": 41 }
+            { "x": 0, "y": 41, "w": 100, "h": 21 }
           ]
         },
         {

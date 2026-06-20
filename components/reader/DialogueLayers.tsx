@@ -1,0 +1,404 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { DialogueBubble, getBubbleStyles } from "./DialogueBubble";
+import { PanelStop, Dialogues } from "./audioPlayer";
+import {
+  buildTailPath,
+  estimateBubbleSize,
+  findTargetBubble,
+  getEffectiveIndexes,
+} from "./readerUtils";
+
+interface DialogueLayersProps {
+  mode: "read" | "edit";
+  localDialogues: Dialogues;
+  showAllDialogues: boolean;
+  zoomedOut: boolean;
+  containerSize: { w: number; h: number };
+  imgWidth: number;
+  imgHeight: number;
+  imgLeft: number;
+  imgTop: number;
+  currentPanels: PanelStop[];
+  activePanel: PanelStop;
+  panelIdx: number;
+  activeReadingBubbleIdx: number;
+  bubbleOffsets: Record<string, { x: number; y: number }>;
+  draggedBubbleKey: string | null;
+  textScale: number;
+  isPageChanging: boolean;
+  activePanelIdx: number;
+  activeBubbleIdx: number | null;
+  setActivePanelIdx: (idx: number) => void;
+  setActiveBubbleIdx: (idx: number | null) => void;
+  handleBubblePointerDown: (e: React.PointerEvent, key: string) => void;
+  handleBubblePointerMove: (e: React.PointerEvent, key: string) => void;
+  handleBubblePointerUp: (e: React.PointerEvent, key: string) => void;
+  handleDragEnd: (info: any, pIdx: number, bIdx: number) => void;
+  handleTailTargetDragEnd: (info: any, pIdx: number, bIdx: number) => void;
+}
+
+export function DialogueLayers({
+  mode,
+  localDialogues,
+  showAllDialogues,
+  zoomedOut,
+  containerSize,
+  imgWidth,
+  imgHeight,
+  imgLeft,
+  imgTop,
+  currentPanels,
+  activePanel,
+  panelIdx,
+  activeReadingBubbleIdx,
+  bubbleOffsets,
+  draggedBubbleKey,
+  textScale,
+  isPageChanging,
+  activePanelIdx,
+  activeBubbleIdx,
+  setActivePanelIdx,
+  setActiveBubbleIdx,
+  handleBubblePointerDown,
+  handleBubblePointerMove,
+  handleBubblePointerUp,
+  handleDragEnd,
+  handleTailTargetDragEnd,
+}: DialogueLayersProps) {
+  const settings = localDialogues.settings || {};
+  const clearReadDialogues = settings.clearReadDialogues ?? true;
+  const appearanceAnimation = settings.appearanceAnimation ?? "spring";
+  const fadeOutAnimation = settings.fadeOutAnimation ?? "fade";
+  const dialogueDepth = settings.dialogueDepth ?? 2;
+
+  const centeredLeft = (containerSize.w - imgWidth) / 2;
+  const centeredTop = (containerSize.h - imgHeight) / 2;
+  const shiftX = imgLeft - centeredLeft;
+  const shiftY = imgTop - centeredTop;
+
+  if (mode === "read") {
+    const parallaxFactor = dialogueDepth * 0.08;
+    const parallaxX = shiftX * parallaxFactor;
+    const parallaxY = shiftY * parallaxFactor;
+
+    const panelsToRender =
+      showAllDialogues || zoomedOut
+        ? currentPanels
+        : !clearReadDialogues
+        ? currentPanels.slice(0, panelIdx + 1)
+        : [activePanel];
+
+    return (
+      <>
+        {panelsToRender.flatMap((panel: PanelStop, pIndex: number) => {
+          const dialogueList = panel.dialogue || [];
+          const effectiveIndexes = getEffectiveIndexes(dialogueList, imgWidth, imgHeight, imgLeft, imgTop);
+
+          return dialogueList.map((line, i) => {
+            const posX = line.posX ?? 50;
+            const posY = line.posY ?? panel.focusY * 100;
+
+            const bubbleKey = `${pIndex}-${i}`;
+            const offset = bubbleOffsets[bubbleKey] || { x: 0, y: 0 };
+
+            const bubbleLeft = imgLeft + (posX / 100) * imgWidth + parallaxX + offset.x;
+            const bubbleTop = imgTop + (posY / 100) * imgHeight + parallaxY + offset.y;
+            const targetX = line.tailX !== undefined ? imgLeft + (line.tailX / 100) * imgWidth : null;
+            const targetY = line.tailY !== undefined ? imgTop + (line.tailY / 100) * imgHeight : null;
+            const effIdx = showAllDialogues || zoomedOut ? 0 : effectiveIndexes[i] ?? i;
+
+            const isTargetOfAny = dialogueList.some((otherLine, otherIdx) => {
+              if (otherIdx === i) return false;
+              if (otherLine.tailX === undefined || otherLine.tailY === undefined) return false;
+              const target = findTargetBubble(
+                otherLine.tailX,
+                otherLine.tailY,
+                dialogueList,
+                otherIdx,
+                imgWidth,
+                imgHeight,
+                imgLeft,
+                imgTop
+              );
+              return target && target.index === i;
+            });
+
+            let elasticTailNode = null;
+            if (targetX !== null && targetY !== null && line.tail !== "none") {
+              const { bgColor } = getBubbleStyles(line);
+              const target = findTargetBubble(
+                line.tailX!,
+                line.tailY!,
+                dialogueList,
+                i,
+                imgWidth,
+                imgHeight,
+                imgLeft,
+                imgTop
+              );
+
+              let finalTargetX = targetX - bubbleLeft;
+              let finalTargetY = targetY - bubbleTop;
+
+              if (target) {
+                const targetLine = target.line;
+                const targetPosX = targetLine.posX ?? 50;
+                const targetPosY = targetLine.posY ?? panel.focusY * 100;
+
+                const targetKey = `${pIndex}-${target.index}`;
+                const targetOffset = bubbleOffsets[targetKey] || { x: 0, y: 0 };
+                const targetLeft = imgLeft + (targetPosX / 100) * imgWidth + parallaxX + targetOffset.x;
+                const targetTop = imgTop + (targetPosY / 100) * imgHeight + parallaxY + targetOffset.y;
+
+                const bx = targetLeft - bubbleLeft;
+                const by = targetTop - bubbleTop;
+                const dist = Math.sqrt(bx * bx + by * by);
+
+                if (dist > 0.01) {
+                  const targetSize = estimateBubbleSize(targetLine);
+                  const t = 1 / Math.sqrt((bx / targetSize.halfW) ** 2 + (by / targetSize.halfH) ** 2);
+
+                  const edgeX = bx - bx * t;
+                  const edgeY = by - by * t;
+
+                  finalTargetX = edgeX + (bx / dist) * 10;
+                  finalTargetY = edgeY + (by / dist) * 10;
+                }
+              }
+
+              const d = buildTailPath(0, 0, finalTargetX, finalTargetY, line);
+              if (d) {
+                elasticTailNode = (
+                  <svg
+                    className="absolute pointer-events-none overflow-visible"
+                    style={{ left: "50%", top: "50%", zIndex: 0 }}
+                  >
+                    <path d={d} fill={bgColor} stroke="none" strokeWidth={0} />
+                  </svg>
+                );
+              }
+            }
+
+            return (
+              <div
+                key={`read-bub-${pIndex}-${i}`}
+                onPointerDown={(e) => handleBubblePointerDown(e, bubbleKey)}
+                onPointerMove={(e) => handleBubblePointerMove(e, bubbleKey)}
+                onPointerUp={(e) => handleBubblePointerUp(e, bubbleKey)}
+                onPointerCancel={(e) => handleBubblePointerUp(e, bubbleKey)}
+                className={`absolute select-none ${
+                  draggedBubbleKey === bubbleKey
+                    ? "cursor-grabbing z-[100] pointer-events-auto"
+                    : "cursor-grab pointer-events-auto hover:scale-[1.015]"
+                }`}
+                style={{
+                  left: bubbleLeft,
+                  top: bubbleTop,
+                  transform: "translate(-50%, -50%)",
+                  width: "max-content",
+                  zIndex: draggedBubbleKey === bubbleKey ? 100 : isTargetOfAny ? 29 : 30,
+                  transition:
+                    !isPageChanging && draggedBubbleKey !== bubbleKey
+                      ? "all 400ms cubic-bezier(0.25, 1, 0.5, 1)"
+                      : "none",
+                  touchAction: "none",
+                }}
+              >
+                <DialogueBubble
+                  line={line}
+                  index={effIdx}
+                  elasticTailNode={elasticTailNode}
+                  instant={showAllDialogues || zoomedOut}
+                  appearanceAnimation={appearanceAnimation}
+                  fadeOutAnimation={fadeOutAnimation}
+                  depth={dialogueDepth}
+                  textScale={textScale}
+                />
+              </div>
+            );
+          });
+        })}
+      </>
+    );
+  }
+
+  return (
+    <>
+      {currentPanels.flatMap((panel: PanelStop, pIdx: number) => {
+        const dialogueList = panel.dialogue || [];
+        return dialogueList.map((line, bIdx) => {
+          const isActive = activePanelIdx === pIdx && activeBubbleIdx === bIdx;
+          const posX = line.posX ?? 50;
+          const posY = line.posY ?? panel.focusY * 100;
+          const bubbleLeft = imgLeft + (posX / 100) * imgWidth;
+          const bubbleTop = imgTop + (posY / 100) * imgHeight;
+          const targetX = line.tailX !== undefined ? imgLeft + (line.tailX / 100) * imgWidth : null;
+          const targetY = line.tailY !== undefined ? imgTop + (line.tailY / 100) * imgHeight : null;
+
+          const isTargetOfAny = dialogueList.some((otherLine, otherIdx) => {
+            if (otherIdx === bIdx) return false;
+            if (otherLine.tailX === undefined || otherLine.tailY === undefined) return false;
+            const target = findTargetBubble(
+              otherLine.tailX,
+              otherLine.tailY,
+              dialogueList,
+              otherIdx,
+              imgWidth,
+              imgHeight,
+              imgLeft,
+              imgTop
+            );
+            return target && target.index === bIdx;
+          });
+
+          let elasticTailNode = null;
+          if (targetX !== null && targetY !== null && line.tail !== "none") {
+            const { bgColor } = getBubbleStyles(line);
+            const target = findTargetBubble(
+              line.tailX!,
+              line.tailY!,
+              dialogueList,
+              bIdx,
+              imgWidth,
+              imgHeight,
+              imgLeft,
+              imgTop
+            );
+
+            let finalTargetX = targetX - bubbleLeft;
+            let finalTargetY = targetY - bubbleTop;
+
+            if (target) {
+              const targetLine = target.line;
+              const targetPosX = targetLine.posX ?? 50;
+              const targetPosY = targetLine.posY ?? panel.focusY * 100;
+              const targetLeft = imgLeft + (targetPosX / 100) * imgWidth;
+              const targetTop = imgTop + (targetPosY / 100) * imgHeight;
+
+              const bx = targetLeft - bubbleLeft;
+              const by = targetTop - bubbleTop;
+              const dist = Math.sqrt(bx * bx + by * by);
+
+              if (dist > 0.01) {
+                const targetSize = estimateBubbleSize(targetLine);
+                const t = 1 / Math.sqrt((bx / targetSize.halfW) ** 2 + (by / targetSize.halfH) ** 2);
+
+                const edgeX = bx - bx * t;
+                const edgeY = by - by * t;
+
+                finalTargetX = edgeX + (bx / dist) * 10;
+                finalTargetY = edgeY + (by / dist) * 10;
+              }
+            }
+
+            const d = buildTailPath(0, 0, finalTargetX, finalTargetY, line);
+            if (d) {
+              elasticTailNode = (
+                <svg
+                  className="absolute pointer-events-none overflow-visible"
+                  style={{ left: "50%", top: "50%", zIndex: 0 }}
+                >
+                  <path d={d} fill={bgColor} stroke="none" strokeWidth={0} />
+                </svg>
+              );
+            }
+          }
+
+          return (
+            <React.Fragment key={`edit-bub-container-${pIdx}-${bIdx}`}>
+              <motion.div
+                key={`edit-bub-${pIdx}-${bIdx}-${posX}-${posY}`}
+                drag={isActive}
+                dragMomentum={false}
+                dragElastic={0}
+                onDragEnd={(_, info) => handleDragEnd(info, pIdx, bIdx)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActivePanelIdx(pIdx);
+                  setActiveBubbleIdx(bIdx);
+                }}
+                className="absolute pointer-events-auto cursor-move"
+                style={{
+                  left: bubbleLeft,
+                  top: bubbleTop,
+                  x: 0,
+                  y: 0,
+                  translateX: "-50%",
+                  translateY: "-50%",
+                  width: "max-content",
+                  zIndex: isActive ? 48 : isTargetOfAny ? 39 : 40,
+                }}
+              >
+                <div
+                  className={`transition-all ${
+                    isActive
+                      ? "outline-dashed outline-2 outline-[#e8185a] outline-offset-3 drop-shadow-lg"
+                      : "opacity-95 hover:opacity-100"
+                  }`}
+                >
+                  {isActive && (
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#e8185a] text-white font-mono text-[10px] px-1.5 py-0.5 rounded shadow whitespace-nowrap">
+                      X:{posX}% Y:{posY}%
+                    </div>
+                  )}
+                  <DialogueBubble
+                    line={line}
+                    index={0}
+                    elasticTailNode={elasticTailNode}
+                    instant={true}
+                    appearanceAnimation={appearanceAnimation}
+                    fadeOutAnimation={fadeOutAnimation}
+                    depth={dialogueDepth}
+                    textScale={textScale}
+                  />
+                </div>
+              </motion.div>
+
+              {isActive && line.tail !== "none" && line.tailX !== undefined && line.tailY !== undefined && (() => {
+                const targetX2 = imgLeft + (line.tailX / 100) * imgWidth;
+                const targetY2 = imgTop + (line.tailY / 100) * imgHeight;
+                const isInBubble = !!findTargetBubble(
+                  line.tailX,
+                  line.tailY,
+                  panel.dialogue || [],
+                  bIdx,
+                  imgWidth,
+                  imgHeight,
+                  imgLeft,
+                  imgTop
+                );
+                return (
+                  <motion.div
+                    key={`edit-anchor-${pIdx}-${bIdx}-${line.tailX}-${line.tailY}`}
+                    drag
+                    dragMomentum={false}
+                    dragElastic={0}
+                    onDragEnd={(_, info) => handleTailTargetDragEnd(info, pIdx, bIdx)}
+                    className="absolute z-50 pointer-events-auto cursor-crosshair"
+                    style={{
+                      left: targetX2,
+                      top: targetY2,
+                      x: 0,
+                      y: 0,
+                      translateX: "-50%",
+                      translateY: "-50%",
+                    }}
+                  >
+                    <div className="w-8 h-8 flex items-center justify-center">
+                      <div
+                        className={`w-3.5 h-3.5 rounded-full border-2 border-white shadow-[0_0_10px_rgba(96,165,250,0.9)] ${
+                          isInBubble ? "bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.9)]" : "bg-blue-400"
+                        }`}
+                      />
+                    </div>
+                  </motion.div>
+                );
+              })()}
+            </React.Fragment>
+          );
+        });
+      })}
+    </>
+  );
+}

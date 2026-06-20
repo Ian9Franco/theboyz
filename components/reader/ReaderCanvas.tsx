@@ -3,7 +3,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import type { PanelStop } from "./CinematicReader";
+import type { PanelStop } from "./audioPlayer";
 import { ReaderZoomControls } from "./ReaderZoomControls";
 import { getComicPageUrl } from "./readerUtils";
 

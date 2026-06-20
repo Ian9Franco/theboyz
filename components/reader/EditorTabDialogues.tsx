@@ -2,7 +2,7 @@
 
 import React from "react";
 import type { DialogueLine } from "./DialogueBubble";
-import type { PanelStop as PanelConfig } from "./CinematicReader";
+import type { PanelStop as PanelConfig } from "./audioPlayer";
 import { EditorBubbleVisualsForm } from "./editor/EditorBubbleVisualsForm";
 import { EditorBubbleLayoutForm } from "./editor/EditorBubbleLayoutForm";
 import { EditorBubbleTailForm } from "./editor/EditorBubbleTailForm";

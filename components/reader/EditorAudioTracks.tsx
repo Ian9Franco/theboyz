@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import type { AudioTrack, AudioTrackStopTrigger, Dialogues } from "./CinematicReader";
+import type { AudioTrack, AudioTrackStopTrigger, Dialogues } from "./audioPlayer";
 import { getPageKeyFromUrl } from "./readerUtils";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -76,6 +76,7 @@ function describeTrigger(trigger?: AudioTrackStopTrigger): string {
     case "panelEnd":   return `Al salir de pág ${trigger.pageKey}, viñeta ${trigger.panelIdx + 1}`;
     case "pageStart":  return `Al comenzar pág ${trigger.pageKey}`;
     case "pageEnd":    return `Al terminar pág ${trigger.pageKey}`;
+    default:           return "";
   }
 }
 
@@ -131,9 +132,28 @@ export function EditorAudioTracks({
     const config = track.soundConfig || {};
     const audio = new Audio(track.src);
     const volume = config.volume ?? 1;
-    audio.volume = volume * volume;
-    audio.playbackRate = config.playbackRate ?? 1;
-    audio.currentTime = config.startTime ?? 0;
+    const targetVolume = volume * volume;
+    const playbackRate = config.playbackRate ?? 1;
+    const startTime = config.startTime ?? 0;
+
+    audio.volume = targetVolume;
+    audio.playbackRate = playbackRate;
+
+    if (startTime > 0) {
+      if (audio.readyState >= 1) {
+        audio.currentTime = startTime;
+      } else {
+        audio.addEventListener("loadedmetadata", () => {
+          audio.currentTime = startTime;
+        }, { once: true });
+      }
+    }
+
+    audio.addEventListener("playing", () => {
+      audio.volume = targetVolume;
+      audio.playbackRate = playbackRate;
+    }, { once: true });
+
     previewAudioRef.current = audio;
     setPreviewingId(track.id);
     audio.play().catch(console.error);

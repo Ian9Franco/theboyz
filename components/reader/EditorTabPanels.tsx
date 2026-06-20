@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import type { PanelConfig } from "./DialogueEditorPanel";
-import type { PanelSound } from "./CinematicReader";
+import type { PanelSound } from "./audioPlayer";
 
 /**
  * WaveformVisualizer Component

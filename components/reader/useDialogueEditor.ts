@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import type { DialogueLine } from "./DialogueBubble";
-import type { Dialogues, PageData, PanelStop as PanelConfig, ChapterSettings } from "./CinematicReader";
+import type { Dialogues, PageData, PanelStop as PanelConfig, ChapterSettings, AudioTrack } from "./audioPlayer";
 
 interface UseDialogueEditorProps {
   dialogues: Dialogues | null;
@@ -203,7 +203,7 @@ export function useDialogueEditor({
    * Replaces the entire audioTracks array in localDialogues.
    * Supports undo like all other state mutations.
    */
-  const handleUpdateAudioTracks = (tracks: import("./CinematicReader").AudioTrack[]) => {
+  const handleUpdateAudioTracks = (tracks: AudioTrack[]) => {
     setUndoStack((prev) => [...prev.slice(-49), JSON.parse(JSON.stringify(localDialogues))]);
     setLocalDialogues((prev) => ({
       ...prev,
