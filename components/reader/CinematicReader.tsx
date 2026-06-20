@@ -499,8 +499,20 @@ export function CinematicReader({
       const soundEndTime = soundItem.soundEndTime || undefined;
       const targetVolume = volume * volume; // log curve
 
-      audio.currentTime = soundStartTime;
-      audio.volume = fadeIn > 0 ? 0 : targetVolume; // Direct correct initialization
+      // Wait for metadata to load before setting currentTime to avoid browser resets/errors
+      if (soundStartTime > 0) {
+        if (audio.readyState >= 1) {
+          audio.currentTime = soundStartTime;
+        } else {
+          audio.addEventListener("loadedmetadata", () => {
+            audio.currentTime = soundStartTime;
+          }, { once: true });
+        }
+      } else {
+        audio.currentTime = 0;
+      }
+      
+      audio.volume = fadeIn > 0 ? 0 : targetVolume;
       audio.playbackRate = playbackRate;
       audio.loop = loop;
 
@@ -513,6 +525,32 @@ export function CinematicReader({
 
       const playWithDelay = () => {
         try {
+          // Listen to the playing event to reliably enforce initial volume & start the fade-in interval
+          audio.addEventListener("playing", () => {
+            audio.playbackRate = playbackRate;
+
+            if (fadeIn > 0) {
+              audio.volume = 0;
+              const fadeInSteps = 50;
+              const stepDuration = fadeIn / fadeInSteps;
+              const volumePerStep = targetVolume / fadeInSteps;
+              let currentStep = 0;
+
+              const fadeInInterval = setInterval(() => {
+                if (currentStep < fadeInSteps) {
+                  audio.volume = Math.min(targetVolume, audio.volume + volumePerStep);
+                  currentStep++;
+                } else {
+                  audio.volume = targetVolume;
+                  clearInterval(fadeInInterval);
+                }
+              }, stepDuration);
+              intervalsToClear.push(fadeInInterval);
+            } else {
+              audio.volume = targetVolume;
+            }
+          }, { once: true });
+
           const playPromise = audio.play();
           if (playPromise !== undefined) {
             playPromise.catch((error) => {
@@ -529,25 +567,6 @@ export function CinematicReader({
               }
             }, 100);
             intervalsToClear.push(checkInterval);
-          }
-
-          // Fade in effect
-          if (fadeIn > 0) {
-            const fadeInSteps = 50;
-            const stepDuration = fadeIn / fadeInSteps;
-            const volumePerStep = targetVolume / fadeInSteps;
-            let currentStep = 0;
-
-            const fadeInInterval = setInterval(() => {
-              if (currentStep < fadeInSteps) {
-                audio.volume = Math.min(targetVolume, audio.volume + volumePerStep);
-                currentStep++;
-              } else {
-                audio.volume = targetVolume;
-                clearInterval(fadeInInterval);
-              }
-            }, stepDuration);
-            intervalsToClear.push(fadeInInterval);
           }
 
           // Fade out effect (before audio ends based on duration config)
@@ -737,7 +756,20 @@ export function CinematicReader({
         const targetVolume = volume * volume;
 
         const audio = new Audio(track.src);
-        audio.currentTime = startTime;
+        
+        // Wait for metadata to load before setting currentTime to avoid browser resets/errors
+        if (startTime > 0) {
+          if (audio.readyState >= 1) {
+            audio.currentTime = startTime;
+          } else {
+            audio.addEventListener("loadedmetadata", () => {
+              audio.currentTime = startTime;
+            }, { once: true });
+          }
+        } else {
+          audio.currentTime = 0;
+        }
+
         audio.playbackRate = playbackRate;
         audio.loop = loop;
         audio.volume = fadeIn > 0 ? 0 : targetVolume;
@@ -745,24 +777,34 @@ export function CinematicReader({
 
         const doPlay = () => {
           try {
+            // Listen to the playing event to reliably enforce initial volume & start the fade-in interval
+            audio.addEventListener("playing", () => {
+              audio.playbackRate = playbackRate;
+
+              if (fadeIn > 0) {
+                audio.volume = 0;
+                const steps = 40;
+                const stepDuration = fadeIn / steps;
+                const volStep = targetVolume / steps;
+                let s = 0;
+                const interval = setInterval(() => {
+                  s++;
+                  audio.volume = Math.min(targetVolume, audio.volume + volStep);
+                  if (s >= steps) {
+                    audio.volume = targetVolume;
+                    clearInterval(interval);
+                  }
+                }, stepDuration);
+              } else {
+                audio.volume = targetVolume;
+              }
+            }, { once: true });
+
             const playPromise = audio.play();
             if (playPromise !== undefined) {
               playPromise.catch((err) => {
                 console.error("[AudioTrack] Error playing track playback promise:", track.id, err);
               });
-            }
-
-            // Fade-in effect
-            if (fadeIn > 0) {
-              const steps = 40;
-              const stepDuration = fadeIn / steps;
-              const volStep = targetVolume / steps;
-              let s = 0;
-              const interval = setInterval(() => {
-                s++;
-                audio.volume = Math.min(targetVolume, audio.volume + volStep);
-                if (s >= steps) { audio.volume = targetVolume; clearInterval(interval); }
-              }, stepDuration);
             }
 
             // Stop at endTime if defined

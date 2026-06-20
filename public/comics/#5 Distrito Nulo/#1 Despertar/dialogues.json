@@ -1377,10 +1377,10 @@
         "pageKey": "7"
       },
       "soundConfig": {
-        "volume": 0.2,
+        "volume": 0.15,
         "playbackRate": 1,
         "loop": true,
-        "fadeIn": 1000,
+        "fadeIn": 3900,
         "fadeOut": 1000
       }
     },
@@ -1431,7 +1431,7 @@
         "pageKey": "12"
       },
       "soundConfig": {
-        "volume": 0.2,
+        "volume": 0.25,
         "playbackRate": 1,
         "loop": true,
         "fadeIn": 1000,
@@ -1449,10 +1449,10 @@
         "pageKey": "13"
       },
       "soundConfig": {
-        "volume": 0.05,
+        "volume": 0.1,
         "playbackRate": 1,
         "loop": true,
-        "fadeIn": 1000,
+        "fadeIn": 3000,
         "fadeOut": 1000
       }
     },
