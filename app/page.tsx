@@ -12,6 +12,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [showClassic, setShowClassic] = useState(false);
   const [lightboxSaga, setLightboxSaga] = useState<{ url: string; title: string } | null>(null);
+  const [isUpcomingExpanded, setIsUpcomingExpanded] = useState(false);
 
   useEffect(() => {
     const load = () => {
@@ -76,12 +77,20 @@ export default function Home() {
 
                     return (
                       <div className="flex flex-col gap-24">
-                        {/* 2-column grid: Nuevos + Historias Pasadas (left) | Proximamente (right) */}
+                        {/* 2-column flex row: Nuevos + Historias Pasadas (left) | Proximamente (right) */}
                         {(nuevoSagas.length > 0 || proximamenteSagas.length > 0 || otherOfficialSagas.length > 0) && (
-                          <div className="grid grid-cols-2 gap-4 sm:gap-8 items-start">
+                          <div className={`flex flex-row items-start w-full relative transition-all duration-300 ${
+                            isUpcomingExpanded ? "gap-0 md:gap-8" : "gap-4 sm:gap-8"
+                          }`}>
                             {/* Column: Nuevos y Pasados */}
                             {nuevoSagas.length > 0 || otherOfficialSagas.length > 0 ? (
-                              <div className="flex flex-col gap-8">
+                              <div 
+                                className={`flex flex-col gap-8 transition-all duration-300 ${
+                                  isUpcomingExpanded 
+                                    ? "w-0 overflow-hidden opacity-0 shrink-0 pointer-events-none md:w-auto md:opacity-100 md:pointer-events-auto" 
+                                    : "flex-1"
+                                } md:flex-1`}
+                              >
                                 {nuevoSagas.map((saga) => (
                                   <SagaBlock
                                     key={saga.id}
@@ -107,7 +116,7 @@ export default function Home() {
                             
                             {/* Column: Proximamente */}
                             {proximamenteSagas.length > 0 ? (
-                              <div className="flex flex-col gap-8">
+                              <div className={`flex flex-col gap-8 transition-all duration-300 ${isUpcomingExpanded ? "flex-1 w-full" : "w-auto"} md:flex-1`}>
                                 {proximamenteSagas.map((saga) => (
                                   <SagaBlock
                                     key={saga.id}
@@ -115,6 +124,8 @@ export default function Home() {
                                     index={sagasList.findIndex((s) => s.id === saga.id)}
                                     onCoverClick={(url) => setLightboxSaga({ url, title: saga.title })}
                                     isFeatured={true}
+                                    isCollapsed={!isUpcomingExpanded}
+                                    onToggleCollapse={() => setIsUpcomingExpanded(!isUpcomingExpanded)}
                                   />
                                 ))}
                               </div>

@@ -20,13 +20,17 @@ export function SagaBlock({
   index, 
   prevSaga,
   onCoverClick,
-  isFeatured = false
+  isFeatured = false,
+  isCollapsed = false,
+  onToggleCollapse
 }: { 
   saga: any; 
   index: number; 
   prevSaga?: any;
   onCoverClick?: (coverUrl: string) => void;
   isFeatured?: boolean;
+  isCollapsed?: boolean;
+  onToggleCollapse?: () => void;
 }) {
   const isEven = index % 2 === 0;
   const [readChapters, setReadChapters] = useState<string[]>([]);
@@ -69,15 +73,23 @@ export function SagaBlock({
   if (isProximamente) {
     return (
       <div 
-        className="border-4 border-dashed border-[#0a0a0f]/60 relative overflow-hidden rounded-lg opacity-90 transition-opacity hover:opacity-100 flex flex-row items-stretch h-full animate-fadeIn"
+        onClick={() => { if (isCollapsed && typeof window !== 'undefined' && window.innerWidth < 768) onToggleCollapse?.(); }}
+        className={`border-4 border-dashed border-[#0a0a0f]/60 relative overflow-hidden rounded-lg opacity-90 transition-all duration-300 flex flex-row items-stretch h-full animate-fadeIn ${
+          isCollapsed ? "w-12 sm:w-14 md:w-full cursor-pointer md:cursor-default select-none md:select-text" : "w-full"
+        }`}
         style={{
-          boxShadow: `8px 8px 0 #475569`,
+          boxShadow: isCollapsed ? `4px 4px 0 #475569` : `8px 8px 0 #475569`,
           background: `repeating-linear-gradient(45deg, #f8fafc, #f8fafc 10px, #f1f5f9 10px, #f1f5f9 20px)`
         }}
       >
         {/* Vertical Left Banner for proximamente */}
         <div 
-          className="w-12 sm:w-14 bg-yellow-400 border-r-4 border-black flex items-center justify-center shrink-0 select-none relative"
+          onClick={() => { if (!isCollapsed && typeof window !== 'undefined' && window.innerWidth < 768) onToggleCollapse?.(); }}
+          className={`w-12 sm:w-14 bg-yellow-400 flex items-center justify-center shrink-0 select-none relative ${
+            isCollapsed 
+              ? "border-r-0 md:border-r-4 md:border-black" 
+              : "cursor-pointer hover:bg-yellow-300 transition-colors border-r-4 border-black"
+          }`}
         >
           <span 
             className="font-[var(--font-bangers)] text-lg sm:text-xl text-black uppercase tracking-widest whitespace-nowrap block"
@@ -85,9 +97,14 @@ export function SagaBlock({
           >
             PRÓXIMAMENTE
           </span>
+          {isCollapsed && (
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-black font-bold text-sm animate-pulse md:hidden">
+              ◀
+            </div>
+          )}
         </div>
 
-        <div className="flex-1 p-6 sm:p-8 flex flex-col justify-between h-full relative z-10">
+        <div className={isCollapsed ? "hidden md:flex flex-1 p-6 sm:p-8 flex-col justify-between h-full relative z-10" : "flex-1 p-6 sm:p-8 flex flex-col justify-between h-full relative z-10"}>
           {/* Main content stack */}
           <div className="flex flex-col gap-6 items-center justify-between h-full w-full relative z-10">
             <div className="flex flex-col items-center text-center w-full">
