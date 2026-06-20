@@ -317,6 +317,38 @@
 
 ---
 
+PÁGINA 12: El Titiritero de la Noche
+[!TIP]
+PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):
+Official comic book page layout, multi-panel grid of 6 panels. Modern American dark sci-fi comic book art style. Dimly lit illegal poker den in Hell's Kitchen.
+Panel 1: Julian is standing by his poker chair, smoothly taking off his black leather jacket and draping it over the backrest of the chair, looking smug.
+Panel 2: In the background shadows behind Julian's table, a tall, extraordinarily attractive man with sharp facial features and short dark hair is watching him. His eyes subtly flash with a faint, deep red glow in the dark.
+Panel 3: The elegant man (Lucifer Morningstar, looking like Tom Ellis from Netflix's Lucifer) stands up from the shadows. He wears an impeccable bespoke dark three-piece suit, no tie, with the top buttons of his black dress shirt undone. He walks past the poker table with an amused, superior expression.
+Panel 4: Lucifer stands at the wooden bar counter, leaning casually, ordering a Manhattan cocktail from a barmaid with a magnetic, charming smile.
+Panel 5: Close up on Julian's poker table. The barmaid leans in and whispers into Julian's ear, placing the Manhattan cocktail next to his chips.
+Panel 6: Julian turns his head to look back at the bar; Lucifer is leaning against the counter, holding his own drink, looking directly at Julian with a playful, teasing, and sophisticated smile.
+--no 3d, photorealistic, cgi, text
+
+Viñeta 45b (Plano Medio): Al llegar a la mesa que le fue asignada, Julián se toma un segundo antes de sentarse. Con total parsimonia y una sonrisa de suficiencia, se quita la campera de cuero negra y la deja caer con cancha sobre el respaldo de su silla. Los otros jugadores pesados de la mesa lo miran de reojo, fastidiados por su exceso de confianza.
+
+Viñeta 46 (Plano General): Julián se sienta y la partida comienza. El ambiente del bar clandestino está cargado de humo de cigarrillo. Sin embargo, en el fondo, camuflado entre la densa oscuridad y los matones de Vanguard que vigilan el lugar, se distingue una silueta alta y elegante. En medio de la penumbra de esa esquina, dos sutiles puntos rojos brillantes (sus ojos) observan fijamente cómo Julián se acomoda en la mesa.
+
+Viñeta 47 (Plano Americano): El hombre misterioso sale de las sombras revelando su apariencia. Es extraordinariamente atractivo, de pelo corto oscuro, barba de un par de días perfectamente recortada y un aire sofisticado. Viste un traje a medida oscuro e impecable, con la camisa negra abierta en el cuello, sin corbata. Pasa caminando justo por detrás de la silla de Julián (donde cuelga la campera de cuero) con las manos en los bolsillos y una sonrisa que esconde aburrimiento. Habla en voz alta, con un acento refinado, buscando captar la atención de Julián.
+
+LUCIFER: —Qué aburrido es ganar cuando la contraparte ni siquiera sabe sostener las cartas... Le quita toda la gracia al juego, ¿no te parece?—
+
+Viñeta 48 (Plano Medio): Sin detenerse a esperar una respuesta, se dirige directamente a la barra de madera gastada del lugar, manteniendo esa postura relajada y provocadora. Una camarera se le acerca rápidamente, visiblemente intimidada y atraída por su magnética presencia.
+
+LUCIFER: —Un Manhattan, por favor. Con mucho hielo. Y prepará otro igual para el caballero de la racha de suerte.—
+
+Viñeta 49 (Plano Medio Corto): Volvemos a la mesa de póker. Mientras el croupier reparte una nueva mano, la camarera se inclina sutilmente al lado de Julián. Apoya un elegante vaso de cristal con el cóctel Manhattan sobre el paño verde, justo al lado de su montaña de fichas, y le habla al oído. Julián arquea una ceja, intrigado.
+
+CAMARERA: (Susurrando) —Aquel tipo de la barra... dice que esto va a cuenta suya. No me especificó qué quiere a cambio.—
+
+Viñeta 50 (Plano General / Plano Contraplano): Julián gira la cabeza por encima del hombro para mirar hacia la barra. Al fondo, Lucifer Morningstar está apoyado de espaldas a la barra, sosteniendo su propio vaso. Al cruzar miradas con Julián a la distancia, alza su trago en un brindis silencioso y le dedica una sonrisa pícara, seductora y enigmática, como si ya supiera el final de toda la historia. Abajo, en la mesa, las cartas vuelven a caer: el juego de póker continúa con normalidad.
+
+
+
 ### PÁGINA 12: La Emboscada
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
@@ -333,27 +365,112 @@
 * **Viñeta 49 (Primer Plano Extremo - Cliffhanger):** Los ojos de Julián abiertos con pánico; la estática digital glitch roja y azul comienza a distorsionar su rostro con aberración cromática.
 
 ---
+PÁGINA 13: Humo y Fichas
+[!TIP]
+PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):
+Official comic book page layout, multi-panel grid of 5 panels. Modern American dark sci-fi comic book art style. Dimly lit illegal poker den.
+Panel 1: Julian blinks, looking at the empty wooden bar counter where the elegant man was standing a second ago. Only a napkin remains.
+Panel 2: Julian turns back to his poker table, taking a sip from the Manhattan cocktail, a thoughtful but intrigued smirk on his face.
+Panel 3: Close up on the poker table as a new hand is dealt. Julian confidently shuffles his chips with one hand, looking at his new cards.
+Panel 4: Julian leaning forward at the table, aggressively pushing a massive stack of poker chips into the center, intimidating the other players.
+Panel 5: Julian laughing out loud, raking in a massive pile of cash and chips, completely dominant, while the other criminal players look furious.
+--no 3d, photorealistic, cgi, text
+
+Viñeta 51 (Plano Medio Corto): En continuidad inmediata, Julián parpadea desconcertado. En una fracción de segundo, la barra donde estaba Lucifer está completamente vacía. No hay rastro del hombre del traje impecable; solo quedó el vaso vacío de su trago sobre la madera gastada. Julián frunce el ceño, buscando con la mirada entre la gente del bar, pero el tipo se esfumó como si fuera humo.
+
+Viñeta 52 (Plano Medio): Julián regresa la atención a su mesa. Se acomoda en la silla, agarra el Manhattan que le invitaron y le da un sorbo largo, saboreándolo. Aunque la desaparición le dejó una intriga tremenda dando vueltas en la cabeza, decide ignorarlo por el momento. Una sonrisa competitiva vuelve a dibujarse en su rostro mientras mira al croupier.
+
+JULIÁN: —Bueno, basta de misterios... ¿Quién baraja? Miren que les voy a sacar hasta las ganas de volver a abrir este antro.—
+
+Viñeta 53 (Plano Detalle / Secuencia rápida): El ritmo del juego se acelera en las siguientes manos. Vemos un plano cerrado de los dedos de Julián jugueteando con las fichas, haciéndolas tintinear con una velocidad pasmosa, mientras las cartas caen sobre el paño verde. El ambiente se vuelve más denso, el humo de los cigarrillos flota alrededor y los rivales empiezan a sudar frío.
+
+Viñeta 54 (Plano Americano): Julián redobla la apuesta. Con un gesto canchero, empuja dos torres gigantes de fichas rojas y negras hacia el centro de la mesa, obligando a los tipos pesados de Vanguard a decidir si arriesgan todo lo que les queda o se bajan. Su mirada es puramente desafiante.
+
+JUGADOR DE VANGUARD: —Este pibe nos está delirando... No puede tener tanta suerte.—
+
+JULIÁN: —No es suerte, gordo. Es que leo tu cara como si fuera un libro de cuentos. ¿Vas a poner la plata o te vas a ir a llorar?—
+
+Viñeta 55 (Plano General): Julián estalla en una carcajada limpia mientras vuelve a arrastrar una marea de billetes, fajos y fichas hacia su lado de la mesa. Los otros jugadores se levantan de las sillas, insultando por lo bajo y completamente derrotados. Julián está en su salsa, el rey indiscutido de la noche de Hell's Kitchen, sin imaginarse que el juego recién empieza.
+
+
+
+PÁGINA 12: La Emboscada en Hell's Kitchen
+[!TIP]
+PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):
+Official comic book page layout, multi-panel grid of 6 panels with irregular diagonal slash borders. Modern American dark sci-fi comic book art style. Rainy night in New York, dark alley.
+Panel 1: Julian standing up at the poker table, smoothly putting his black leather jacket back on, looking proud.
+Panel 2: Julian pushing the heavy exit door open, walking out into a dark, rainy alley, looking down with a smug smile as he counts a thick stack of hundred-dollar bills.
+Panel 3: In the rainy street background, far from the alley, a classic black Lincoln Continental 1966 car is parked under a flickering streetlamp. A blurry silhouette of a man inside is visible, but neither Julian nor the man notice each other. A subtle cameo.
+Panel 4: At the alley door, the beefy bouncer from the poker den stands in the shadows, subtly making hand signals to dark figures hidden further down the alley. Julian is completely oblivious, still looking at his money.
+Panel 5: Deep in the dark, wet alley, two massive silhouettes of thugs step out from behind concrete pillars and dumpsters, starting to stalk Julian from behind.
+Panel 6 (Action panel with broken border): The two thugs block Julian's path. One of them flips open a chrome switchblade; the silver metal blade dramatically breaks through the diagonal frame border of the panel. Julian's eyes wide in sudden surprise.
+--no 3d, photorealistic, cgi, text
+
+Viñeta 56 (Plano Medio): De vuelta en la mesa de póker. Julián, con una sonrisa de absoluta victoria, se pone la campera de cuero negra que había dejado en el respaldo. Mientras se acomoda el cuello, ladea la cabeza mirando a sus oponentes derrotados con superioridad. En sus manos ya tiene el fajo enorme de dólares que acaba de ganar.
+
+Viñeta 57 (Plano Americano): Julián empuja la pesada puerta trasera del antro y sale al exterior. Es una noche cerrada y la lluvia cae con fuerza sobre el callejón de Hell's Kitchen. Él camina completamente abstraído de su entorno, con la cabeza gacha y una sonrisa soberbia, contando los billetes de cien dólares uno por uno con el pulgar.
+
+Viñeta 58 (Plano General - Cameo): La cámara se aleja y abre el plano hacia la avenida principal que cruza al fondo del callejón. Estacionado bajo la luz parpadeante de una bombilla urbana, se alcanza a ver el brillo húmedo del imponente Lincoln Continental de 1966 negro de Lucifer. Entre las gotas de lluvia en el parabrisas se intuye su silueta en el asiento del conductor. Es una coincidencia puramente visual: Julián no mira hacia la calle, y Lucifer tampoco lo ve a él; el auto arranca y se pierde en el tráfico de la noche neoyorquina.
+
+Viñeta 59 (Plano Medio Corto / Tensión): En el umbral de la puerta del bar, el patovica de la entrada observa la espalda de Julián mientras este se aleja por el callejón. Con una mirada cómplice y fría, el seguridad levanta una mano y le hace una seña rápida con los dedos a la oscuridad del fondo. En el primer plano, Julián sigue caminando de espaldas, totalmente ajeno, guardando la plata en los bolsillos internos de su campera.
+
+Viñeta 60 (Plano General / Sombras): Desde la penumbra del callejón, detrás de unos contenedores de basura oxidados y columnas de hormigón, emergen dos siluetas macizas de matones. Se mueven de forma coordinada y silenciosa bajo la lluvia, empezando a rodear y acechar a Julián, recortándose como depredadores contra las paredes de ladrillo visto.
+
+Viñeta 61 (Viñeta Irregular con Elemento Sobresaliente - Cliffhanger): ¡La trampa se cierra! Los matones le bloquean el paso de golpe saliendo de la oscuridad. Uno de ellos, un tipo enorme con parches de Vanguard en su ropa, hace brillar una navaja automática cromada con un "¡CLICK!" metálico. La punta afilada de la navaja rompe el marco diagonal de la viñeta, sobresaliendo físicamente de la estructura del cómic. Julián frena en seco; su sonrisa de suficiencia desaparece al instante y sus ojos se abren con sorpresa al verse acorralado.
+
+
 
 ### PÁGINA 13: Manifestación Glitch
-> [!TIP]
-> **PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):**
-> Official comic book page layout, multi-panel grid of 6 panels with irregular jagged borders. Modern American dark sci-fi comic book art style. Kinetic action. Color palette of rainy dark blues and electric magenta/cyan chromatic aberrations. 2D illustration. NO 3D, NO text.
-> Panel 1 (Action panel with broken border): Thug swings a fist at Julian's face. The thug's heavy fist breaks out of the panel borders, punching toward the reader in a 3D pop-out effect.
-> Panel 2: Julian's body suddenly splits and shifts into three shaking, glitchy double static copies.
-> Panel 3: The thug's fist passes right through the pixelated air of the central copy (lag effect).
-> Panel 4: The thug stumbles forward in confusion through the static copy.
-> Panel 5: Julian runs out of the alley, gasping for breath, half of his face still pixelated with glitch static.
-> Panel 6 (Extreme close-up, cliffhanger shot): Close-up of Julian's face as he reaches the avenue, staring at his hands which are still flickering with digital static.
-> --no 3d, photorealistic, cgi, text
+PROMPT MODIFICADO PARA EVITAR FILTROS (PÁGINA 13):
+Official comic book page layout, multi-panel grid of 5 panels with dynamic, slanted black borders. Modern American dark sci-fi comic book art style. Kinetic action scene in a rainy, dark alley.
+Panel 1: An aggressive opponent rushes forward to strike. Julian stands in his path, looking confident and smiling.
+Panel 2: The strike connects, but Julian's body instantly bursts into a bright cloud of glowing electric blue and magenta energy trails.
+Panel 3: Two identical, solid physical copies of Julian emerge from the energy cloud. The real Julian looks down at his own glowing hands with wide eyes, a look of pure shock and disbelief on his face, surprised by his own power.
+Panel 4: One of Julian's clones picks up a stray metallic pipe from the ground; the pipe instantly ignites, completely charged with bright, crackling electric blue energy.
+Panel 5: The clone swings the energy-charged pipe, delivering a dynamic strike to the opponent, causing an explosive burst of magenta sparks upon impact.
+--no 3d render, photorealistic, cgi, text
 
-* **Viñeta 50 (Plano Corto con Elemento Sobresaliente):** El matón lanza un puñetazo directo al rostro de Julián. El puño del matón rompe la viñeta, proyectándose hacia afuera en 3D.
-* **Viñeta 51 (Viñeta Irregular - Efecto Glitch):** El cuerpo de Julián se desfasa en tres copias de estática analógica.
-* **Viñeta 51b (Plano Detalle):** El golpe pasa a través del aire pixelado con lag visual.
-* **Viñeta 52 (Plano Medio):** El matón tropieza confundido cruzando la estática.
-* **Viñeta 53 (Plano Medio Corto):** Julián escapa corriendo hacia la avenida; la mitad de su rostro sigue distorsionada por píxeles y lag cuántico.
-* **Viñeta 53b (Primer Plano Extremo - Cliffhanger):** Julián llega a la avenida y se mira la mano izquierda con terror; esta parpea con estática digital cian y magenta.
+Viñeta 62 (Plano Medio Corto / Bordes Negros Gruesos): El primer oponente se le viene encima con furia para meterle un viaje limpio. Julián se planta, cruzado de brazos y con su clásica sonrisa soberbia, creyendo que la tiene re clara.
 
+Viñeta 63 (Plano Medio - Destello de Energía): El golpe impacta de lleno, pero el cuerpo de Julián estalla en una ráfaga cegadora de estelas de energía azul eléctrico y magenta. La sonrisa desaparece del aire; solo queda luz pura disipándose bajo la lluvia. El rival trastabilla hacia adelante, habiendo golpeado la nada misma.
+
+Viñeta 64 (Plano General - El Quiebre de Pose): La energía se condensa y se divide de golpe. Ahora hay dos clones físicos rodeando al tipo, pero en el centro, el Julián original reaparece y se le desarma la pose por completo. Se mira los brazos y las manos, que todavía desprenden chispas, con los ojos abiertos como platos y una expresión de genuino shock. No tenía idea de que podía hacer eso.
+
+JULIÁN: (Para sí mismo, estupefacto) —Pará... ¿eso lo hice yo?—
+
+Viñeta 65 (Plano Detalle): Uno de sus clones (que parece actuar por puro instinto de defensa) se agacha y agarra un caño metálico tirado en el suelo mojado. Apenas lo toca, una corriente de energía azul eléctrico trepa por el metal, envolviéndolo en un aura incandescente superintensa.
+
+Viñeta 66 (Plano Americano / Acción): Mientras el Julián real sigue recalculando en el fondo, el clon avanza con fluidez y le da un golpe tremendo al rival en las costillas con el caño cargado. El impacto es seco y genera una explosión de destellos magenta que saca al tipo de la viñeta.
+
+
+
+PÁGINA 13.5: Forjando la Victoria
+[!TIP]
+PROMPT PARA DIBUJAR ESTA PÁGINA (MIDJOURNEY / DALL-E 3):
+Official comic book page layout, multi-panel grid of 5 panels with thick, sharp black borders and irregular slanted frames. Modern American dark sci-fi comic book art style. Heavy rain at night. 2D illustration. NO 3D render, NO text.
+Panel 1: The second thug runs forward. Julian's clone raises an open hand, and a solid, glowing knuckles-duster made of pure magenta light materializes around his fist.
+Panel 2 (Action panel with broken border): Julian's clone punches the second thug square in the jaw. The thug's head and the explosive electric blue and magenta sparks violently shatter and break OUT of the black panel frame, overlapping into the gutters.
+Panel 3: The two Julian clones turn into glowing energy smoke and dissolve back into the original Julian, who smoothly adjusts the collar of his black leather jacket under the heavy rain.
+Panel 4 (Dynamic vertical panel): Julian walks away down the alley. Close-up on his hand; his fingers, flickering with bright electric blue sparks, extend outside the lower border of the black panel.
+Panel 5 (Large widescreen panel at the bottom): Julian steps out onto the bright, neon-lit main avenue of Manhattan. His arrogant, smiling face slightly overlaps the top black border of the panel, looking back at the dark alley with complete confidence.
+--no 3d render, photorealistic, cgi, text
+
+Viñeta 67 (Plano Medio Corto / Líneas Negras Gruesas): El segundo matón intenta vengar a su compañero y arremete desde atrás con furia. El otro clon de Julián se da vuelta con total elegancia y levanta la mano abierta. En el aire, flotando alrededor de sus nudillos, filamentos de luz magenta densa y sólida se entrelazan rápidamente hasta materializar una manopla de energía pura. La viñeta tiene bordes negros bien gruesos y diagonales.
+
+Viñeta 68 (Viñeta Irregular - EFECTO 3D SOBRESALIENTE): ¡PUM! El clon le encaja un directo limpio en la mandíbula al delincuente. La manopla materializada descarga toda la potencia estática. El impacto es tan violento que la cabeza del matón saliendo despedida hacia atrás y una lluvia de chispas azul eléctrico rompen físicamente el marco negro de la viñeta, invadiendo el espacio en blanco (el gutter) entre los paneles. El tipo queda fuera de combate en el piso.
+
+Viñeta 69 (Plano Americano): Con la amenaza neutralizada, los dos clones se deshacen en un humo lumínico que regresa flotando hacia el cuerpo del Julián original. Él, parado en medio de los matones caídos bajo la tormenta, se acomoda con calma el cuello de su campera de cuero. Esta viñeta es un recuadro limpio, haciendo bajar la tensión de la acción.
+
+Viñeta 70 (Plano Detalle Vertical - EFECTO 3D SOBRESALIENTE): Mientras camina hacia la salida del callejón, Julián abre y cierra la mano izquierda. Entre sus dedos todavía bailan chispas remanentes de energía azul. En la composición del dibujo, sus dedos y las chispas eléctricas sobresalen por debajo de la línea negra inferior de la viñeta, como si el poder no pudiera contenerse dentro del recuadro. Su expresión es de pura fascinación.
+
+JULIÁN: (Para sí mismo, sonriendo) —La verdad... cada día me gusto más.—
+
+Viñeta 71 (Plano General Ancho / Efecto de Superposición): Julián sale finalmente del callejón oscuro y pisa la vereda de la avenida principal de Manhattan, bañada por los reflejos de los carteles de neón bajo la lluvia. Se da la vuelta un segundo para mirar el pasillo que dejó atrás. En esta viñeta panorámica, el perfil de su rostro con esa sonrisa soberbia e indestructible sobresale levemente por encima del marco negro superior, dándole todo el protagonismo y cerrando la secuencia con el ego por las nubes.
 ---
+
+
+
+
 
 ### PÁGINA 14: El Guiso y la Cuchara
 > [!TIP]
