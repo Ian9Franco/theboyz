@@ -766,6 +766,16 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 73, "w": 100, "h": 29 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/navaja.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.5,
+                "playbackRate": 1.8
+              }
+            }
           ]
         }
       ]
@@ -782,12 +792,32 @@
           "focusY": 0.25,
           "dialogue": [
             { "text": " —Lindo intento—", "size": "small", "posX": 90, "posY": 20, "tailX": 75, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/piña.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.4,
+                "playbackRate": 1
+              }
+            }
           ]
         },
         {
           "focusY": 0.4,
           "dialogue": [
             { "text": "¡KRAANG!]", "style": "sfx", "size": "small", "posX": 45, "posY": 35, "tailX": 50, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/contracosas.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.25,
+                "playbackRate": 1
+              }
+            }
           ]
         },
         {
@@ -1072,20 +1102,21 @@
           ]
         },
         {
-          "focusY": 0.65,
+          "focusY": 0.55,
           "dialogue": [
-            { "text": "y encima..", "size": "small", "posX": 10, "posY": 70, "tailX": 10, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "#4248f5", "customColor": "#000000", "textColor": "#ff4d4d" },
-            { "text": "no cocinó una mierda", "size": "small", "posX": 50, "posY": 45, "tailX": 35, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#4542f5", "customColor": "#000000", "textColor": "#fe3434" },
+            { "text": "y encima..", "size": "small", "posX": 5, "posY": 45, "tailX": 10, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "#4248f5", "customColor": "#000000", "textColor": "#ff4d4d" },
+            { "text": "no cocinó una mierda", "size": "small", "posX": 45, "posY": 45, "tailX": 35, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#4542f5", "customColor": "#000000", "textColor": "#fe3434" },
             { "text": "¡SHUFFF!", "style": "caption", "size": "small", "posX": 70, "posY": 50, "tailX": 60, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 0, "customBg": "#f5e642", "customColor": "#000000" }
-          ],
-          "zoomRects": [
-            { "x": 0, "y": 65, "w": 100, "h": 36 }
           ]
         },
         {
-          "focusY": 0.8,
+          "focusY": 0.85,
           "dialogue": [
             { "text": "mmhmr", "size": "small", "posX": 40, "posY": 75, "tailX": 60, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "#f54242", "customColor": "#000000" }
+          ],
+          "hideUntilReached": true,
+          "zoomRects": [
+            { "x": 0, "y": 67, "w": 100, "h": 33 }
           ]
         }
       ]
@@ -1107,7 +1138,7 @@
               "sound": "/sounds/sacudir ropa.mp3",
               "soundStartTime": 0,
               "soundConfig": {
-                "volume": 0.7,
+                "volume": 1,
                 "playbackRate": 1
               }
             }
@@ -1488,8 +1519,8 @@
         "volume": 0.35,
         "playbackRate": 1,
         "loop": true,
-        "fadeIn": 1000,
-        "fadeOut": 1000
+        "fadeIn": 5000,
+        "fadeOut": 3100
       }
     },
     {
