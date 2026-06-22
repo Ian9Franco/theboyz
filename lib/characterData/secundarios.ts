@@ -247,5 +247,35 @@ export const secundarios: CharacterDetail[] = [
       crisis: 'Muerte del mentor: Su deceso a manos del Clan Kurogane marca un punto sin retorno, forzando el despertar total de Hush.',
       stats: { fuerza: 4, inteligencia: 7, carisma: 8, suerte: 6, combate: 4, defensa: 5, especialVal: 5 }
     }
+  },
+  {
+    id: 'magnus',
+    name: 'Magnus',
+    category: 'independientes',
+    isSecondary: true,
+    image: '/personajes/SECUNDARIOS/Independientes/Magnus/magnus_ficha.webp',
+    fullBody: '/personajes/SECUNDARIOS/Independientes/Magnus/magnus.webp',
+    color: '#991b1b',
+    role: 'El Señor del Metal / Antihéroe Pragomático',
+    visualCode: 'Elegante gabardina/capa negra con forro carmesí oscuro, casco magnético estilizado y acorazado, cabello y barba canosos',
+    perfil: [
+      'Superviviente del sistema: Descubrió cómo manipular los campos magnéticos de la Tierra tras sufrir experimentos corporativos.',
+      'Antihéroe pragmático: Detesta el monopolio corporativo de Don Vanguard y considera a Phobos un demente peligroso.',
+      'Aliado por conveniencia: Ayuda a los chicos únicamente cuando sus objetivos se alinean para erradicar el control institucional.'
+    ],
+    crisis: 'Invalidez magnética: En entornos sin materiales ferrosos o campos magnéticos naturales, su capacidad ofensiva se reduce.',
+    stats: { fuerza: 6, inteligencia: 8, carisma: 8, suerte: 5, combate: 8, defensa: 8, especialVal: 9 },
+    especialLabel: 'Magnetismo Alfa',
+    powers: {
+      role: 'El Señor del Metal',
+      habilidades: [
+        'Control Magnético: Manipula aleaciones metálicas a gran escala, arrancando vigas de edificios, desviando balas o aplastando tanques.',
+        'Escudo de Inducción: Genera un campo de fuerza electromagnético personal que detiene proyectiles y deforma ataques de energía.',
+        'Casco Acorazado: Yelmo metálico especial diseñado específicamente para anular ataques y lecturas psíquicas.'
+      ],
+      significa: 'El veterano del magnetismo. Un antihéroe que dobla el metal y los campos magnéticos para proteger a los suyos.',
+      crisis: 'Aislamiento de Metal: En entornos completamente desprovistos de materiales ferrosos u orgánicos con magnetismo, su poder ofensivo disminuye drásticamente.',
+      stats: { fuerza: 7, inteligencia: 9, carisma: 9, suerte: 6, combate: 9, defensa: 10, especialVal: 10 }
+    }
   }
 ];

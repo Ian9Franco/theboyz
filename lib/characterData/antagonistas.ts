@@ -187,5 +187,65 @@ export const antagonistas: CharacterDetail[] = [
     crisis: 'Purga química: Si se cortan o sabotean las mangueras de metatoxina, su sistema colapsa regresando a su estado base tosco y vulnerable.',
     stats: { fuerza: 11, inteligencia: 10, carisma: 8, suerte: 6, combate: 9, defensa: 10, especialVal: 10 }
   }
+},
+{
+  id: 'apex',
+  name: 'Apex',
+  category: 'antagonistas',
+  isSecondary: true,
+  image: '/personajes/Antagonistas/APEX/apex_ficha.webp',
+  fullBody: '/personajes/Antagonistas/APEX/apex.webp',
+  color: '#475569',
+  role: 'El Proyecto Estabilizado / Operativo de Gobierno',
+  visualCode: 'Traje táctico de polímero gris militar, chaleco táctico ligero con arneses y fundas de armas, rostro descubierto con expresión fría',
+  perfil: [
+    'El agente definitivo: Creado por agencias secretas usando una muestra de la metatoxina confiscada a Phobos, refinada en la Fórmula Apex.',
+    'Suero estabilizado: No causa deformidades físicas ni psicosis; se asimila a nivel celular para crear al soldado perfecto.',
+    'Mente profesional: Corre por su sistema optimizando su tiempo de reacción, memoria muscular y procesamiento táctico de manera fría y profesional.'
+  ],
+  crisis: 'Sobrecarga táctica: Al depender de cálculos geométricos lógicos, los eventos puramente caóticos o cuánticos desestabilizan su estrategia.',
+  stats: { fuerza: 7, inteligencia: 8, carisma: 5, suerte: 6, combate: 9, defensa: 7, especialVal: 8 },
+  especialLabel: 'Fórmula Apex',
+  powers: {
+    role: 'El Soldado Perfecto',
+    habilidades: [
+      'Cálculo Geométrico: Su mente procesa instantáneamente ángulos y trayectorias, garantizando una precisión infalible en combate a distancia.',
+      'Fisiología Optimizada: Asimilación celular de la toxina que le otorga agilidad, velocidad de reacción y reflejos sobrehumanos.',
+      'Mente de Acero: Mantiene una frialdad absoluta que lo hace inmune a manipulaciones psicológicas o pánico en el campo de batalla.'
+    ],
+    significa: 'El operativo definitivo del gobierno. Un combatiente de precisión quirúrgica e inmunidad mental total.',
+    crisis: 'Sobrecarga de Datos: Si es bombardeado por estímulos o variables caóticas que escapan a los cálculos lógicos, su procesamiento táctico se ralentiza.',
+    stats: { fuerza: 8, inteligencia: 9, carisma: 5, suerte: 6, combate: 10, defensa: 8, especialVal: 9 }
+  }
+},
+{
+  id: 'maker',
+  name: 'Maker',
+  category: 'antagonistas',
+  isSecondary: false,
+  image: '/personajes/Antagonistas/MAKER/maker_ficha.webp',
+  fullBody: '/personajes/Antagonistas/MAKER/maker.webp',
+  color: '#0f172a',
+  role: 'El Creador Elástico / Anomalía Mutante Científica',
+  visualCode: 'Traje de polímero oscuro ceñido, casco alargado de alta tecnología que expande y contiene su masa elástica',
+  perfil: [
+    'Anatomía maleable: Antiguo genetista obsesionado con la metatoxina que mutó su cuerpo hasta volver su estructura celular completamente líquida y elástica.',
+    'Pulcritud futurista: A diferencia de otros mutantes toscos, viste un diseño limpio, futurista y minimalista para ocultar su carencia de huesos y órganos fijos.',
+    'Supercomputadora viva: Puede estirar su propio cráneo o crear lóbulos temporales adicionales para procesar información a nivel de supercomputadora.'
+  ],
+  crisis: 'Inestabilidad térmica: El calor extremo derrite su cohesión celular, mientras que el frío extremo congela sus tejidos volviéndolo frágil.',
+  stats: { fuerza: 6, inteligencia: 10, carisma: 6, suerte: 5, combate: 7, defensa: 8, especialVal: 9 },
+  especialLabel: 'Elasticidad Cerebral',
+  powers: {
+    role: 'La Anomalía Biológica',
+    habilidades: [
+      'Maleabilidad Anatómica: Estira, aplana y contorsiona su cuerpo de formas físicamente imposibles para esquivar ataques o apresar objetivos a distancia.',
+      'Expansión Cerebral: Modifica la estructura de su cráneo para generar masa cerebral adicional, procesando datos a nivel de supercomputadora.',
+      'Anatomía Líquida: Carece de órganos y huesos fijos, lo que le permite regenerarse y deslizarse a través de espacios reducidos.'
+    ],
+    significa: 'El intelectual mutable. Un villano pulcro y futurista que combina elasticidad anatómica absoluta con un procesamiento cerebral supercomputador.',
+    crisis: 'Temperatura Extrema: El calor intenso licúa su estructura celular perdiendo cohesión, mientras que el frío extremo cristaliza sus tejidos elásticos.',
+    stats: { fuerza: 7, inteligencia: 11, carisma: 7, suerte: 5, combate: 9, defensa: 10, especialVal: 10 }
+  }
 }
 ];
