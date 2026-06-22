@@ -55,7 +55,7 @@ En el día a día y misiones urbanas, Julián mantiene su perfil bajo y callejer
 ### 🚀 Misiones Complejas (Traje Cósmico "Wildcard")
 Cuando Los Pibes tienen que saltar a misiones espaciales, interdimensionales o de escala cósmica, el kit de Julián se actualiza por completo con tecnología diseñada para la supervivencia y el combate de alta densidad:
 
-*   **La Bomber Roja (Estilo Star-Lord):** Una campera de cuero técnico reforzado de color rojo borravino o carmesí, con cierres descentrados y solapas mecánicas. Es de un diseño entallado pero ágil. El contraste en viñetas es brutal: cuando activa su energía glitch, las chispas azules y rojas de sus constructos hacen juego con el color de la campera, generando un impacto visual hiperdinámico.
+*   **La Bomber Roja:** Una campera de cuero técnico reforzado de color rojo borravino o carmesí, con cierres descentrados y solapas mecánicas. Es de un diseño entallado pero ágil. El contraste en viñetas es brutal: cuando activa su energía glitch, las chispas azules y rojas de sus constructos hacen juego con el color de la campera, generando un impacto visual hiperdinámico.
 *   **El Casco/Máscara de Conducción:** Un casco colapsable que cubre su rostro, fuertemente inspirado en el de Star-Lord. Tiene dos funciones clave:
     1.  **Supervivencia:** Le permite respirar en atmósferas hostiles, el vacío del espacio o zonas contaminadas por energía cuántica.
     2.  **Asistencia de Apuntado HUD:** Las ópticas del casco brillan con una luz azul analógica. Le dan un HUD (pantalla de interfaz) en tiempo real que calcula las trayectorias de sus Naipes de Energía y la distancia exacta para detonar sus Ecos, compensando la falta de gravedad o la distorsión del entorno espacial.

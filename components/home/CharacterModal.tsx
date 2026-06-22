@@ -97,11 +97,12 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     // Add other suit images dynamically (excluding default, ficha, combat, etc.)
     Object.entries(suitImgObj).forEach(([key, val]) => {
       if (key !== "default" && key !== "ficha" && key !== "combat" && val && typeof val === "string") {
+        if (key === "archor") return; // Completely hide Vesper Archor from the details modal
         const labelMap: Record<string, string> = {
           ficha2: "Ficha 2",
           fichaAlt: "Ficha Alt",
           alt: char.id === "ian" ? "Traje" : "Alt",
-          archor: unlockAll ? "Archor" : "???",
+          archor: "Archor",
           mk3: "Mark III",
           mk3_alt: "Mark III Alt",
           mkl: "Mark L",

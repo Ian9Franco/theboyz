@@ -41,3 +41,41 @@
 ## 📝 Plantilla de Prompt de Apariencia (Inglés)
 
 *   **Aspecto:** `A massive two-meter-tall corporate kingpin (Don Vanguard) under a tailored three-piece Oxford grey suit, wearing a black diamond ring.`
+
+---
+
+# 👿 Phobos (El Ventrílocuo de los Backrooms)
+
+*   **Categoría:** Antagonista Principal / Mente Maquiavélica.
+*   **Origen:** Anteriormente conocido como Glitch. Manipulador absoluto que opera desde la sombra de los Backrooms, obsesionado con diseñar el "Teatro del Trauma" para quebrar psicológicamente a sus presas.
+*   **Poder Principal:** *Estática Analógica y Control de Frecuencia.*
+*   **Estética Visual:** Visera ciega de metal y cuero remachado con cables expuestos hacia atrás, gabardina larga de lona negra desgastada, postura teatral y una sonrisa grotesca desfigurada.
+
+---
+
+## 🖼️ Recursos Visuales
+
+### Ilustración General (Turnaround):
+![Phobos](../../public/personajes/Antagonistas/Phobos/phobos.webp)
+
+### Ficha de Personaje:
+![Phobos Ficha](../../public/personajes/Antagonistas/Phobos/phobos_ficha.webp)
+
+---
+
+# 👿 Gorgon (El Gigante de Metatoxina)
+
+*   **Categoría:** Antagonista Secundario / Fuerza Bruta Inteligente.
+*   **Origen:** Experimento humano de Phobos. Sometido a cirugías invasivas para instalarle puertos y mangueras con metatoxina verde en cabeza, espalda y brazos.
+*   **Poder Principal:** *Dualidad Cognitiva (Fuerza Colosal / Intelecto Mutado).*
+*   **Estética Visual:** Titán de musculatura masiva, chaleco de cuero oscuro rasgado, pantalones tácticos y botas militares. Cabellera oscura peinada hacia atrás y un respirador táctico pesado permanente sobre su boca.
+
+---
+
+## 🖼️ Recursos Visuales
+
+### Ilustración General (Sheet Guide):
+![Gorgon](../../public/personajes/Antagonistas/Gorgon/gorgon.png)
+
+### Ficha de Personaje:
+![Gorgon Ficha](../../public/personajes/Antagonistas/Gorgon/gorgon_ficha.webp)

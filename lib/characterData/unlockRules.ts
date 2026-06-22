@@ -31,10 +31,11 @@ export const UNLOCK_RULES: Record<string, string[]> = {
 
   // Antagonistas
   don: ['never-unlocked'],
-  glitch: ['never-unlocked'],
+  phobos: ['never-unlocked'],
   shinjuro: ['Kenji'], // Se desbloquea al terminar #2 Kenji de Hush: El Silencio del Dragón
   balthazar: ['never-unlocked'],
   comandante: ['never-unlocked'],
+  gorgon: ['never-unlocked'],
 
   // Entidades
   krillor: ['never-unlocked'],

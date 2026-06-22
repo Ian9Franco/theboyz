@@ -52,7 +52,7 @@ async function walkDir(dir) {
       await walkDir(fullPath);
     } else {
       const ext = path.extname(entry.name).toLowerCase();
-      if (['.png', '.jpg', '.jpeg'].includes(ext)) {
+      if (['.png', '.jpg', '.jpeg', '.avif'].includes(ext)) {
         if (PROTECTED_ASSETS.includes(entry.name.toLowerCase()) && !fullPath.includes('comics') && !fullPath.includes('personajes')) continue;
         
         stats.found++;

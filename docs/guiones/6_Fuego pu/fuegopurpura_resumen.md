@@ -1,75 +1,61 @@
-# 📑 Resumen Ejecutivo: Fuego Púrpura (Los Pecados de Brooklyn)
+# RESUMEN NARRATIVO — FUEGO PÚRPURA (Parte 1: "La Señal")
 
-**De:** Oficina de Desarrollo Creativo y Producción  
-**Para:** Equipo de Guionistas, Diseñadores y Artistas  
-**Proyecto:** Saga Fuego Púrpura (Piloto: Los Pecados de Brooklyn)  
+Este documento contiene la sinopsis y el desglose de acontecimientos de la **Parte 1** del cómic **Fuego Púrpura (Los Pecados de Brooklyn)**, perteneciente a la saga **Distrito Nulo**.
 
----
-
-## 1. Premisa y Logline
-* **Logline:** Tras descubrir en secreto que se está comunicando con versiones alternativas de sí mismo, Mati (Snapfire) desata una persecución que termina con la huida dimensional de su amigo Volvo y el descontrol de un poder abrasador e inestable. Consumido por la culpa y las mentiras, Mati deberá enfrentarse a los mercenarios de VANGUARD en Queens antes de que su propio fuego púrpura calcine su cuerpo y le arrebate la vista de forma permanente.
-* **Tono:** Ciencia ficción oscura, thriller psicológico urbano, acción visceral, drama de culpa y transformación física.
-* **Temática Principal:** El peso de los secretos y la traición entre amigos; el poder destructivo de la culpa manifestado como una energía radiactiva incontrolable; y la necesidad de contención física y mental ante el ca## 2. Resumen Estructurado por Actos
-
-### Acto 1: El Punto de No Retorno (Páginas 1 - 5)
-* **Objetivo:** Establecer la traición inicial, la huida de Volvo, el pánico de Mati y el primer incidente violento contra el Supercamionero que fractura la confianza del grupo.
-* **Puntos Clave:**
-  - **Pág. 1 (La Constante de Decaimiento):** Mati se comunica holográficamente en la base con sus variantes interdimensionales sobre el decaimiento de su estabilidad cuántica. En los fondos se integran planos técnicos vectoriales. Volvo lo descubre desde la entrada y queda paralizado.
-  - **Pág. 2 (El Ruido en el Sistema):** Volvo tropieza con una llave inglesa revelando su presencia. Al verse descubierto, huye y acusa a Mati de negociar su cuarentena con el multiverso. Mati disipa los hologramas y lo persigue con argumentos racionales sobre termodinámica.
-  - **Pág. 3 (Las Leyes de la Cacería):** Persecución tensa bajo la lluvia constante entre laberintos de enormes contenedores de acero oxidado en los muelles de Brooklyn. Volvo teme la propagación ambiental del virus cuántico; Mati corre tras él intentando evitar un colapso en la pistola dimensional.
-  - **Pág. 4 (La Fuerza de Contención):** El colosal Supercamionero cromado se interpone en el muelle para proteger a Volvo. Fija sus xenones azules sobre Mati y le advierte que la seguridad de la base de Dumbo es la única constante que defiende, declarando su cuarentena inmediata.
-  - **Pág. 5 (La Tragedia Térmica):** Cegado por la presión física ocular, Mati ataca con una ráfaga descontrolada de plasma violeta fundiendo el hombro del Supercamionero. Volvo abre un portal glitch cian/magenta y huye. Mati queda de rodillas bajo la lluvia.
-
-### Acto 2: La Mentira y el Reflejo (Páginas 6 - 9)
-* **Objetivo:** Mostrar la reintegración de Mati con el grupo, la introducción del bardo doméstico tras los eventos de *Distrito Nulo*, la manifestación del poder de Julián y el descubrimiento del fuego púrpura en el cuerpo de Mati.
-* **Puntos Clave:**
-  - **Pág. 6 (El día después):** Mati entra a la base intentando ocultar su agotamiento. Encuentra a Uandi en el piso frotándose la sien tras una sobrecarga y a Ian ayudándolo. La mesa de madera y la gran tele de tubo están destruidas. Mati barre en silencio para limpiar la escena.
-  - **Pág. 7 (El Estilo de la Estática):** Julián descansa en el sofá haciendo flotar naipes rodeados de estática cian y azul de escala cuántica. Ian le explica a Mati que es una alteración electromagnética local. Julián presume sobre la eficiencia de su poder.
-  - **Pág. 8 (Clones y Cuarentenas):** Uandi ceba mate y Ian se preocupa por la falta de presupuesto para repuestos. Tres clones de estática azul/magenta de Julián limpian el taller. Uandi pregunta casualmente por el paradero de Volvo.
-  - **Pág. 9 (El Reflejo Degenerativo):** Mati miente diciendo que no sabe nada de él. Se encierra en el baño, se moja la cara y ve filamentos de fuego púrpura radiactivo en sus pupilas agrietadas. Se calza la capucha bomber y huye silencioso hacia la lluvia.
-
-### Acto 3: La Explosión de Queens (Páginas 10 - 11)
-* **Objetivo:** Retratar la confrontación de Mati con la patrulla de Vanguard y el estallido descontrolado de su fuego púrpura que lo deja ciego.
-* **Puntos Clave:**
-  - **Pág. 10 (Ley Marcial en Queens):** Mati deambula bajo el toque de queda en Queens intentando enfriar sus órbitas. Se topa con mercenarios de Vanguard acorralando jóvenes. Un soldado le apunta con linterna; Mati pierde el control físico y rompe su visor.
-  - **Pág. 11 (La Dispersión Térmica - Splash Page):** Otro soldado lo derriba al barro. La presión ocular de Mati explota: una onda descontrolada de plasma violeta de alta densidad destruye ladrillos y revienta el blindaje de la patrulla, dejándolo ciego e inerme.
-
-### Acto 4: Contención y Resignación (Páginas 12 - 14)
-* **Objetivo:** Resolver el clímax físico mediante la fabricación del Visor Táctico y sembrar la paranoia cuántica en Ian.
-* **Puntos Clave:**
-  - **Pág. 12 (El Regreso del Vector):** Mati camina a tientas en su ceguera hasta Brooklyn. Entra a la base tropezando y quemado, pidiendo ayuda a Ian, quien trabajaba soldando sus primeros guanteletes de metal verde.
-  - **Pág. 13 (La Construcción del Filtro):** Ian examina las córneas quemadas de Mati. A toda velocidad, suelda filamentos de cobre en lentes de polímero balístico y le ajusta el Visor Táctico en las sienes, aislando el espectro violeta tras la luz roja del cristal.
-  - **Pág. 14 (La Inevitabilidad Cuántica):** Mati recupera la visión roja filtrada. Ian cuestiona el origen ambiental del poder, ya que Mati no cruzó el portal del hotel. Mati calla ante su reflejo. Ian vuelve a pintar su primer guantelete de verde brillante, entendiendo que el cambio del sistema se está propagando de forma horizontal y debe prepararse.
+- **Páginas:** 35
+- **Estado:** Resumen basado en Borrador v1 (Guion completo de 35 páginas)
 
 ---
 
-## 3. Fichas de Personajes y Mecánicas de Poder
+## 👥 Personajes y su Estado en esta Parte
 
-### 🎯 Mati / "Snapfire" (La Batería Térmica)
-* **Diseño Visual:** Rostro afable, sonriente y muy expresivo, destacando unos hoyuelos muy marcados en las mejillas ("expressive dimples"). Cabello muy oscuro, corto pero con volumen moderado en la parte superior, peinado de lado de forma relajada y prolija. Piel cálida en un tono marrón claro/bronceado. Viste una campera táctica estilo bomber de color gris oscuro/negro ("tactical jacket"), que incluye un bolsillo con cierre en la manga izquierda. Debajo lleva un suéter o remera de cuello redondo en tono verde oliva apagado. Pantalón cargo color caqui/marrón claro con bolsillos laterales y puños elásticos ajustados en los tobillos (estilo jogger). Zapatillas deportivas en tonos gris claro y blanco. A partir de la Página 11, lleva un Visor Táctico industrial que cubre sus ojos, con cables conductores expuestos hacia las sienes y un cristal polarizado rojo.
-* **Mecánica de Poder:** Fuego Púrpura Radiactivo. Emite ráfagas de plasma violeta de alta densidad directamente a través de sus ojos. Este fuego tiene propiedades termonucleares y cuánticas: calienta el metal hasta fundirlo instantáneamente, agrieta el concreto y pulveriza el ladrillo.
-* **El Costo / Limitación:** Daño ocular degenerativo. Su cuerpo no está biológicamente diseñado para canalizar esta energía sin filtrar. Usar el poder sin contención quema sus retinas, produce dolor insoportable y ceguera temporal o permanente.
-* **Rigidez de Continuidad:** Mati no cruzó el portal del hotel interdimensional en *Distrito Nulo*. La aparición de su poder indica que la alteración cuántica se está propagando de forma ambiental u horizontal por Nueva York, afectando incluso a quienes no estuvieron expuestos de forma directa.
-
-### 🏎️ Volvo
-* **Diseño Visual:** Estructura flaca pero fibrosa, hombros anchos, brazos desarrollados con venas visibles y cuello grueso. Piel clara. Cabello castaño, peinado hacia arriba con textura en picos desordenados (spiky hair) en la parte superior y los costados más cortos. Expresión severa, intensa y muy concentrada, con el entrecejo marcado, cejas pobladas y ojos claros de mirada penetrante. Barba completa y tupida, bien recortada. Viste una remera básica de manga corta en color naranja vibrante, pantalón táctico cargo de color gris oscuro/verdoso con costuras reforzadas, cinturón utilitario grueso de color marrón/oliva con pouches modulares, y botas de combate de cuero marrón.
-* **Herramienta Clave:** Pistola Dimensional. Un dispositivo experimental parpadeante que abre portales rasgados cargados de estática analógica para viajar entre realidades.
-* **Rigidez de Continuidad:** Volvo escapa del Universo 616 (Tierra principal) tras presenciar la traición de Mati y el ataque al Supercamionero. Su paradero actual es desconocido, operando como un cabo suelto que conoce la verdad sobre Mati.
-
-### 🚛 Supercamionero (Supertrucker)
-* **Diseño Visual:** Complexión colosal, hipermusculosa y masiva (tanque). Rostro cibernético compuesto por metal y placas de cromo pulido brillante con mandíbula pesada y rígida. Ojos que brillan en azul eléctrico. No tiene cabello y viste una gorra clásica de chofer de cromo pulido con insignia de estrella dorada. Lleva una armadura pesada de cromo pulido que emula la musculatura, con dos grandes faros de xenón circulares emitiendo luz azul en el pecho, hombreras masivas iluminadas, cinturón de cuero negro con hebilla dorada circular de estrella y una larga capa de lona roja rasgada. Empuña una colosal llave cruz de plasma con energía azul en sus extremos.
-* **Rigidez de Continuidad:** Es atacado por Mati en los muelles de Brooklyn y queda inconsciente. Su condición posterior es incierta.
-
-### 🔬 Ian, 🛡️ Uandi y 🃏 Julián
-* *Basados en las especificaciones de Distrito Nulo.*
-* En este piloto, Ian demuestra su capacidad de adaptación tecnológica construyendo el Visor Táctico de Mati en minutos y comenzando el desarrollo de sus propios guanteletes verdes para no quedarse atrás en el bardo. Julián muestra un control más consciente de su energía glitch, usando clones para ordenar la base.
+1. **Mati / Snapfire (Protagonista):** Cargado de culpa por mentir a su grupo. Su cuerpo sufre una degradación cuántica que intenta solucionar a espaldas de los demás mediante variantes de otros universos. Sus ojos colapsan liberando explosiones de energía violeta, dejándolo temporalmente ciego hasta que Ian le fabrica un visor especial de polímero rojo.
+2. **Volvo:** Descubre las transmisiones secretas de Mati. Ante el miedo de que el "virus cuántico" contamine su propia realidad por contacto ambiental, decide huir a través de un portal utilizando su Pistola Dimensional.
+3. **Supercamionero:** El colosal guardián cromado de la base. Intenta retener a Mati en los muelles para forzar su cuarentena, pero es neutralizado accidentalmente por el primer estallido ocular de Mati (quien le derrite el hombro izquierdo).
+4. **Ian:** Actúa como el ancla técnica y protector del grupo. Es quien sospecha de Mati al inicio, quien le construye el visor rojo para devolverle la vista y quien deduce el patrón de operaciones encubiertas de Vanguard.
+5. **Uandi / Aegis:** Aún debilitado físicamente tras la sobrecarga ocurrida en *Distrito Nulo*. Es el soporte cotidiano del grupo en la base.
+6. **Julián / Wildcard:** Muestra un mayor dominio de sus naipes flotantes rodeados de estática cian. Aporta clones translúcidos para las tareas del taller. Se enoja con Mati por ocultarles la verdad bajo la excusa de "protegerlos".
+7. **Glitch (Antagonista Indirecto):** Hacker nihilista que opera desde una sala de servidores subterránea. Filtra la señal cuántica de Mati en Times Square para exponer las mentiras corporativas de Vanguard.
+8. **Don Vanguard (Alexander Vance - Antagonista):** Alcalde de Nueva York y líder supremo del crimen organizado. Ordena la movilización de su brazo policial privado ante la anomalía de Times Square.
+9. **Comandante R.E.G.U.L.A.R. (Antagonista):** Jefe táctico de los V.O.P.S. Dirige la contención en Times Square y decide retirar a sus tropas tras presenciar la explosión cuántica de Mati, tras confirmar que ya ha obtenido los datos que necesitaba.
 
 ---
 
-## 4. Reglas del Lore de Fuego Púrpura
+## 🎬 Estructura de Acontecimientos por Actos
 
-| Elemento | Manifestación en la Historia | Impacto Visual en el Cómic |
-| --- | --- | --- |
-| **Fuego Púrpura** | Energía radiactiva de origen cuántico. No requiere oxígeno y funde la materia física. | Color violeta denso, brillante y sobresaturado. Distorsiona el aire por calor extremo y deja una estela morada. |
-| **Visor Táctico** | Dispositivo con lentes de polímero balístico y filamentos conductores que disipan la radiación ocular de Mati. | Estética industrial y de prototipo. Cables expuestos adheridos a las sienes y un brillo carmesí en el cristal. |
-| **Portales Dimensionales** | Fisuras cuánticas abiertas con tecnología experimental. | Bordes desgarrados compuestos de estática glitch con lag visual, que se cierran con un crujido. |
+### 📍 Acto 0 — "Lo Que Ya Pasó" (Páginas 1 a 6)
+*   **La Advertencia Multiversal:** En su taller privado en la base de Dumbo, Mati se comunica en secreto con tres de sus variantes (Mati Prime, Mati Warden y Mati Gladiador). Estos le advierten que su firma cuántica está en un decaimiento severo y que su realidad colapsará en seis semanas a menos que entre en cuarentena inmediata.
+*   **La Ruptura del Secreto:** Volvo espía la conversación y entra en pánico al enterarse del virus cuántico y de las variantes inestables. Teme por la seguridad del universo local y huye hacia los muelles de Brooklyn bajo la lluvia.
+*   **El Accidente en los Muelles:** Mati persigue a Volvo. En el camino, el Supercamionero corta el paso de ambos exigiendo la cuarentena de Mati. Ante la tensión, Volvo abre un portal con su Pistola Dimensional y escapa. En ese instante, la presión ocular de Mati colapsa: dispara accidentalmente un haz de plasma violeta que derrite el hombro del Supercamionero, dejándolo fuera de combate. Mati huye del lugar cargando con el peso del silencio.
+
+### 📍 Acto 1 — "La Reintegración" (Páginas 7 a 14)
+*   **El Retorno y la Mentira:** A la mañana siguiente, Mati regresa a la base de Dumbo fingiendo normalidad. Trae facturas para desayunar, pero Ian nota que sus zapatillas están llenas del barro oscuro de los muelles. Mati miente diciendo que no sabe nada de Volvo.
+*   **Los Ojos Agrietados:** En la intimidad del baño, Mati descubre con horror que sus pupilas se están agrietando y despiden filamentos de fuego violeta radiactivo. Agobiado por la culpa y el miedo a contagiar a sus amigos por "contacto ambiental", decide huir a Manhattan en busca del anonimato de Times Square.
+*   **La Intercepción:** Paralelamente, en su búnker de servidores, el hacker **Glitch** intercepta la señal cuántica residual de Mati mientras espía las redes de Vanguard. Al notar que Vanguard vigila a ese muchacho, Glitch decide hackear las pantallas de la ciudad para proyectar la transmisión original de Mati y sus variantes, desatando el caos.
+
+### 📍 Acto 2 — "La Transmisión" (Páginas 15 a 26)
+*   **Exposición en Times Square:** El rostro de Mati y su conversación con las variantes aparecen en bucle en todas las pantallas gigantes de Times Square y en los noticieros de televisión.
+*   **La Cacería de los V.O.P.S.:**
+    *   Uandi, Julián e Ian ven la transmisión horrorizados desde la base.
+    *   Don Vanguard ve la señal desde su rascacielos y ordena al Comandante R.E.G.U.L.A.R. desplegar a los soldados tácticos V.O.P.S. para contener la anomalía cuántica.
+*   **La Segunda Explosión y la Ceguera:** En medio del gentío de Times Square, los civiles reconocen a Mati como un "raro". Los V.O.P.S. lo acorralan y lo tiran al asfalto. El pánico desborda de nuevo el poder de Mati, provocando una colosal **explosión radial violeta** (Splash Page) que destroza las pantallas gigantes cercanas, agrieta el asfalto y noquea a los soldados. Tras el estallido, Mati queda completamente ciego. R.E.G.U.L.A.R. ordena la retirada de sus tropas: ya tiene la información de campo que necesitaba.
+
+### 📍 Acto 3 — "La Contención" (Páginas 27 a 35)
+*   **El Retorno a Tientas:** Mati regresa a Brooklyn caminando a tientas por el puente durante horas, guiándose solo por el tacto de las paredes.
+*   **El Visor Rojo:** En la base de Dumbo, Ian examina a Mati y detecta quemaduras de segundo grado en sus córneas. Construye un visor especial con filamentos de cobre y polímero balístico polarizado. Al colocárselo, Mati recupera la vista, aunque ahora percibe todo bajo un persistente filtro rojo.
+*   **La Confesión Grupal:** Sentados en círculo, Mati confiesa toda la verdad: la huida de Volvo, el ataque accidental al Supercamionero y la degeneración de su firma cuántica. Explica que les ocultó todo para no contagiarlos. Julián se molesta al ver que Mati repitió el mismo patrón de "protección individualista" que tanto critican, pero el grupo finalmente lo apoya.
+*   **Los Cabos Sueltos y el Cliffhanger:**
+    *   Al día siguiente, Alexander Vance (Don Vanguard) da una rueda de prensa restando importancia al suceso como un "fallo eléctrico".
+    *   Ian descubre que Vanguard lleva meses usando a los V.O.P.S. para cazar "raros" y que ya tiene perfiles de Uandi, Julián, Mati e Ian, ubicándolos en Brooklyn.
+    *   Ian cree que la base está segura porque Glitch no conoce su ubicación física. Sin embargo, la última viñeta del cómic muestra a Glitch en su guarida localizando la firma cuántica de Mati directamente en **Dumbo**, cerrando con la frase: *"¿Así que en Dumbo? Interesante."*
+
+---
+
+## 🔑 Puntos Clave de Lore y Conexiones para Futuras Partes
+
+- **V.O.P.S. (Vanguard Operational Police Security):** Es una fuerza de seguridad de élite privatizada que opera bajo el amparo de la alcaldía. Don Vanguard la utiliza para capturar individuos cuánticos (raros).
+- **El Visor de Snapfire:** Nace como una prótesis de contención médica construida por Ian. Los lentes rojos no son estéticos; filtran la radiación violeta de sus córneas dañadas.
+- **La Amenaza Tripartita:** El grupo ahora está en el radar de tres fuerzas distintas:
+  1. **Don Vanguard / V.O.P.S.:** Los quieren capturar para su control institucional.
+  2. **Glitch:** Conoce su ubicación física en Dumbo y busca exponerlos para sembrar el caos contra Vanguard.
+  3. **La Degradación Cuántica:** El cuerpo de Mati sigue consumiéndose por su inestabilidad dimensional.

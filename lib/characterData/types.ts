@@ -59,5 +59,6 @@ export interface CharacterDetail {
   incognito?: boolean;
   displayName?: string;
   displayColor?: string;
+  loreNote?: string;
   extras?: Record<string, string>;
 }

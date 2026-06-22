@@ -10,12 +10,12 @@ export const antagonistas: CharacterDetail[] = [
     fullBody: '/personajes/Antagonistas/DON/Don.webp',
     altImage: '/personajes/Antagonistas/DON/Don_alt.webp',
     color: '#1f2937',
-    role: 'Líder del Crimen / Kingpin Moderno',
-    visualCode: 'Traje de tres piezas gris Oxford, anillo con diamante negro',
+    role: 'Alcalde de Nueva York / Kingpin Institucional',
+    visualCode: 'Trajes de sastre impecables a medida, anillo de diamante negro, físico imponente',
     perfil: [
-      'Titán corporativo: Unió a las familias de la mafia en un monopolio criminal eficiente. Mide dos metros de altura.',
-      'Pragmatismo de negocios: Prefiere asfixiar legal y financieramente a sus rivales antes de destruirlos físicamente.',
-      'Estilo sofisticado: Oficina blindada en rascacielos y trajes a medida que ocultan su masiva masa muscular.'
+      'Poder dual: Alcalde electo de Nueva York y líder real del crimen organizado. Unificó las familias bajo un monopolio corporativo usando la alcaldía como escudo legal perfecto.',
+      'Pragmatismo institucional: Prefiere asfixiar a sus rivales mediante ordenanzas, embargos y burocracia antes de recurrir a la violencia, que delega en R.E.G.U.L.A.R.',
+      'Estilo de estadista: Se mueve entre conferencias de prensa y reuniones de cúpula criminal con la misma naturalidad. Sus trajes a medida ocultan una masa muscular que nadie en la ciudad debería subestimar.'
     ],
     crisis: 'Aversión al caos: Las variables estocásticas e irracionales desestabilizan su monopolio financiero calculador.',
     stats: { fuerza: 9, inteligencia: 9, carisma: 8, suerte: 6, combate: 8, defensa: 8, especialVal: 7 },
@@ -33,33 +33,34 @@ export const antagonistas: CharacterDetail[] = [
     }
   },
   {
-    id: 'glitch',
-    name: 'Glitch',
+    id: 'phobos',
+    name: 'Phobos',
     category: 'antagonistas',
     isSecondary: true,
-    image: '/personajes/Antagonistas/Glitch/Glitch.webp',
-    fullBody: '/personajes/Antagonistas/Glitch/Glitch.webp',
-    color: '#f43f5e',
-    role: 'Anarquista de Frecuencia / Saboteador',
-    visualCode: 'Máscara de gas con pantalla de error, chaqueta de cuero con parches magnéticos',
+    image: '/personajes/Antagonistas/PHOBOS/phobos_ficha.webp',
+    fullBody: '/personajes/Antagonistas/PHOBOS/phobos.webp',
+    altImage: '/personajes/Antagonistas/PHOBOS/alt.webp',
+    color: '#334155',
+    role: 'El Joker de los Backrooms / Estratega de Frecuencia',
+    visualCode: 'Visera ciega de metal y cuero remachado, cables de cobre expuestos hacia atrás, gabardina de lona negra muy larga',
     perfil: [
-      'Terrorista de código: Genio informático nihilista que ve la sociedad como un software con errores que debe formatearse.',
-      'Teatralidad destructiva: Transmite secretos íntimos de héroes en pantallas gigantes para divertirse con el caos resultante.',
-      'Estética de desguace: Cables expuestos en su chaqueta y modulador de voz distorsionado por estática digital.'
+      'Mente maquiavélica: Un estratega brillante que diseña planes meticulosos para aislar a sus víctimas en el laberinto. Controla totalmente la situación y prefiere el "Teatro del Trauma" antes que los combates directos.',
+      'Lenguaje corporal teatral: Su postura fría y apática esconde a un actor de teatro macabro durante la cacería, realizando movimientos exagerados e inclinando la cabeza ante una sinfonía inaudible.',
+      'Firma de distorsión: Su presencia deforma la realidad circundante con estática analógica y ruido blanco. Cuando sonríe con muecas maníacas grotescas, la interferencia visual quiebra la cordura de sus presas.'
     ],
-    crisis: 'Inestabilidad mental: Su mente caótica sufre brotes psicóticos que sabotean su propio equipamiento de hackeo.',
-    stats: { fuerza: 4, inteligencia: 9, carisma: 6, suerte: 5, combate: 5, defensa: 4, especialVal: 8 },
-    especialLabel: 'Error de Código',
+    crisis: 'Inestabilidad mental: Sus brotes psicóticos y obsesión con la agonía ajena pueden distraerlo de variables imprevistas en su plan.',
+    stats: { fuerza: 5, inteligencia: 10, carisma: 6, suerte: 5, combate: 6, defensa: 5, especialVal: 9 },
+    especialLabel: 'Teatro del Trauma',
     powers: {
-      role: 'Anarquista Urbano',
+      role: 'El Titiritero de los Backrooms',
       habilidades: [
-        'Distorsión Digital: Sabotea frecuencias de radio, sensores y HUDs tácticos, induciendo fallos visuales y de lectura.',
-        'Bomba de Ruido: Dispositivo acústico que emite estática destructiva para incapacitar sentidos.',
-        'Ecos de Glitch: Proyecta hologramas pixelados parpadeantes para confundir la trayectoria de las armas enemigas.'
+        'Cámara de Agonía: Su visera ciega de metal transmite en vivo el sufrimiento de sus presas, dándole información táctica instantánea del entorno.',
+        'Distorsión de Entorno: Genera líneas de interferencia de televisión vieja y ruido blanco analógico que bloquean señales y quiebran la orientación de sus objetivos.',
+        'Transmisión Forzada: Hackea y secuestra frecuencias y pantallas de la ciudad para reproducir transmisiones distorsionadas y sembrar pánico social.'
       ],
-      significa: 'El saboteador del orden. Desestabiliza redes urbanas y comunicaciones mediante la disrupción digital.',
-      crisis: 'Frecuencia analógica: Sus hackeos requieren sistemas digitales; frecuencias analógicas o mecánicas lo anulan.',
-      stats: { fuerza: 5, inteligencia: 10, carisma: 7, suerte: 6, combate: 6, defensa: 5, especialVal: 9 }
+      significa: 'El director del laberinto. Desestabiliza la cordura mediante la teatralidad y el control absoluto del trauma visual.',
+      crisis: 'Señal analógica: Su equipamiento y visera dependen de frecuencias electromagnéticas analógicas; una interferencia cuántica o de plasma anula su visión.',
+      stats: { fuerza: 5, inteligencia: 10, carisma: 7, suerte: 6, combate: 7, defensa: 6, especialVal: 10 }
     }
   },
   {
@@ -125,36 +126,66 @@ export const antagonistas: CharacterDetail[] = [
   },
 
   {
-    id: 'comandante',
-    name: 'Comandante R.E.G.U.L.A.R.',
-    category: 'antagonistas',
-    isSecondary: true,
-    image: '/personajes/Antagonistas/REGULAR/R.E.G.U.L.A.R.webp',
-    fullBody: '/personajes/Antagonistas/REGULAR/R.E.G.U.L.A.R.webp',
-    altImage: '/personajes/Antagonistas/REGULAR/R.E.G.U.L.A.R_cosmic.webp',
-    overloadImage: '/personajes/Antagonistas/REGULAR/R.E.G.U.L.A.R_cosmic.webp',
-    color: '#ef4444',
-    role: 'Líder de los V.O.P.S. / Antagonista',
-    visualCode: 'Uniforme militar pesado blindado, visor de luz azul sólido',
-    perfil: [
-      'Supremo de la fuerza policial: Jefe absoluto de una corporación interdimensional corrupta encargada de imponer un orden artificial en el multiverso.',
-      'Limpiador de anomalías: Su misión es erradicar cualquier variable, libre albedrío o alteración de la realidad que amenace el statu quo del sistema central.',
-      'Estilo de opresión blindada: Exo-uniforme táctico militar pesado con líneas de luces azules de estasis, casco hermético y un modulador de voz distorsionado.'
+  id: 'comandante',
+  name: 'Comandante R.E.G.U.L.A.R.',
+  category: 'antagonistas',
+  isSecondary: true,
+  image: '/personajes/Antagonistas/REGULAR/R.E.G.U.L.A.R.webp',
+  fullBody: '/personajes/Antagonistas/REGULAR/R.E.G.U.L.A.R.webp',
+  altImage: '/personajes/Antagonistas/REGULAR/R.E.G.U.L.A.R_cosmic.webp',
+  overloadImage: '/personajes/Antagonistas/REGULAR/R.E.G.U.L.A.R_cosmic.webp',
+  color: '#ef4444',
+  role: 'Jefe de los V.O.P.S. / Brazo Armado de Vanguard',
+  visualCode: 'Uniforme táctico blindado negro y azul, visor de luz azul sólido, modulador de voz',
+  perfil: [
+    'Supersoldado institucional: Jefe operativo de los V.O.P.S., la fuerza policial de élite privatizada que Don Vanguard controla desde la alcaldía de Nueva York bajo fachada de seguridad pública.',
+    'Cazador de raros: Su unidad tiene mandato encubierto de identificar, contener y neutralizar a individuos con alteraciones cuánticas en la ciudad. Opera con total impunidad institucional.',
+    'Estilo de opresión blindada: Exo-uniforme táctico militar negro mate con líneas de luces azules de estasis, casco hermético con visor sellado y modulador de voz que distorsiona sus órdenes en frecuencia de radio.'
+  ],
+  crisis: 'Parálisis doctrinaria: La rigidez de su protocolo lo bloquea cuando enfrenta tácticas caóticas o improvisadas que escapan a sus manuales de contención táctica.',
+  loreNote: 'Versión terrenal. Su versión cósmica — líder de una corporación interdimensional — corresponde a una escala narrativa futura de la saga, cuando la amenaza de los V.O.P.S. trascienda Nueva York.',
+  stats: { fuerza: 7, inteligencia: 8, carisma: 5, suerte: 4, combate: 9, defensa: 9, especialVal: 7 },
+  especialLabel: 'Estasis',
+  powers: {
+    role: 'Jefe Táctico V.O.P.S.',
+    habilidades: [
+      'Red de Contención: Dispara redes de energía azul que inmovilizan y suprimen físicamente a individuos con alteraciones cuánticas activas.',
+      'Escudo Repulsor Antidisturbios: Deflector táctico pesado que absorbe impactos frontales y los devuelve como ondas de choque cinético.',
+      'Protocolo de Neutralización: Coordina a su unidad de V.O.P.S. en formaciones de cerco que cortan las rutas de escape y aíslan al objetivo.'
     ],
-    crisis: 'Parálisis doctrinaria: La rigidez de su protocolo militar lo bloquea estratégicamente cuando se enfrenta a tácticas puramente caóticas, absurdas o improvisadas que escapan a sus manuales de contención.',
-    stats: { fuerza: 6, inteligencia: 8, carisma: 5, suerte: 4, combate: 8, defensa: 9, especialVal: 7 },
-    especialLabel: 'Estasis',
-    powers: {
-      role: 'Líder Supremo de V.O.P.S.',
-      habilidades: [
-        'Red de Estasis Molecular: Dispara redes de energía azul cohesiva que ralentizan drásticamente la energía cinética y las moléculas del objetivo atrapado.',
-        'Escudo de Gravedad Repulsora: Deflector antidisturbios pesado que absorbe los impactos frontales y los devuelve comprimidos en ondas de choque cinético.',
-        'Desfasaje Glitch: Capacidad técnica de su traje para desmaterializar su estructura atómica temporalmente, permitiéndole atravesar obstáculos sólidos y muros.'
-      ],
-      significa: 'Jefe táctico de control absoluto. Inmoviliza las amenazas mediante la supresión física y vulnera perímetros defensivos desfasando su propia materia.',
-      crisis: 'Dependencia de red: Sus sistemas defensivos y su escudo repulsor están sincronizados con la red satelital central de la corporación. Un desorden imprevisto o interferencia electromagnética severa anula su capacidad de despliegue.',
-      stats: { fuerza: 8, inteligencia: 9, carisma: 6, suerte: 5, combate: 10, defensa: 10, especialVal: 9 }
-    }
-  },
-
+    significa: 'El puño institucional. Ejecuta la agenda encubierta de Don Vanguard con impunidad legal, convirtiendo la persecución de raros en operativo policial rutinario.',
+    crisis: 'Dependencia de red: Sus sistemas están sincronizados con la central de V.O.P.S. Una interferencia electromagnética severa degrada su capacidad táctica.',
+    stats: { fuerza: 8, inteligencia: 9, carisma: 6, suerte: 5, combate: 10, defensa: 10, especialVal: 8 }
+  }
+},
+{
+  id: 'gorgon',
+  name: 'Gorgon',
+  category: 'antagonistas',
+  isSecondary: true,
+  image: '/personajes/Antagonistas/Gorgon/gorgon_ficha.webp',
+  fullBody: '/personajes/Antagonistas/Gorgon/gorgon.png',
+  color: '#15803d',
+  role: 'El Gigante de Metatoxina / Ejecutor Mutado',
+  visualCode: 'Respirador táctico pesado, mangueras industriales en cabeza y brazos, chaleco de cuero oscuro rasgado',
+  perfil: [
+    'Experimento y lacayo: Sometido a cirugías invasivas por Phobos el Ventrílocuo para instalarle puertos y mangueras, convirtiéndolo en el contenedor de su metatoxina verde.',
+    'Estado Base (El Ejecutor): Sin el químico en sus venas, es un gigante tosco, encorvado y pesado que actúa como un letal pero predecible ariete de fuerza bruta.',
+    'Estado Alterado (El Intelecto): Bajo la toxina, sus venas brillan de verde neón y sus músculos se expanden. Su intelecto se enciende volviéndolo hiperinteligente, sádico y refinado.'
+  ],
+  crisis: 'Dualidad cognitiva: En su estado base es predecible y tosco; en su estado alterado florece un intelecto refinado que odia su sumisión y planea rebelarse de Phobos.',
+  stats: { fuerza: 10, inteligencia: 4, carisma: 5, suerte: 5, combate: 8, defensa: 9, especialVal: 6 },
+  especialLabel: 'Metatoxina',
+  powers: {
+    role: 'El Intelecto Mutado',
+    habilidades: [
+      'Carga de Toxina: Bombea metatoxina verde para expandir su musculatura y encender su sistema nervioso.',
+      'Hiperreflexia Refinada: En estado mutado, predice trayectorias y diseña tácticas analíticas crueles en milisegundos.',
+      'Embate Sísmico: Descarga su colosal fuerza física amplificada contra el suelo para desestabilizar el entorno.'
+    ],
+    significa: 'El titán cerebral. Una fuerza imparable cuyo mayor peligro no es la musculatura mutada, sino la mente calculadora que despierta el químico.',
+    crisis: 'Purga química: Si se cortan o sabotean las mangueras de metatoxina, su sistema colapsa regresando a su estado base tosco y vulnerable.',
+    stats: { fuerza: 11, inteligencia: 10, carisma: 8, suerte: 6, combate: 9, defensa: 10, especialVal: 10 }
+  }
+}
 ];

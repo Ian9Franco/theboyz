@@ -1,7 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Zap, ZapOff } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
+import { conceptArts } from "@/lib/characterData/conceptArts";
+import { ImageLightbox } from "./ImageLightbox";
 
 interface CharacterInfoPanelProps {
   char: any;
@@ -51,6 +54,13 @@ export function CharacterInfoPanel({
   unlockAll,
   handlePowersModeToggle,
 }: CharacterInfoPanelProps) {
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const [showAlts, setShowAlts] = useState(false);
+
+  useEffect(() => {
+    setShowAlts(false);
+  }, [char.id]);
+
   const isPibe =
     char.category === "pibes" ||
     ["ian", "jaz", "julian", "mati", "uandi", "volvo", "sofi"].includes(char.id);
@@ -307,6 +317,88 @@ export function CharacterInfoPanel({
             </div>
           </div>
 
+          {/* ── Concept Arts section (for Pibes in both views) ── */}
+          {isPibe && (conceptArts[char.id] || []).length > 0 && (() => {
+            const charConcepts = conceptArts[char.id] || [];
+            const hasAlts = charConcepts.some((c) => c.isAlt);
+            const altCount = charConcepts.filter((c) => c.isAlt).length;
+            const visibleConcepts = showAlts ? charConcepts : charConcepts.filter((c) => !c.isAlt);
+
+            return (
+              <div
+                style={{ borderColor: isPowersMode ? `${vibrantAccent}33` : "#e2e8f0" }}
+                className="border-t pt-4 flex flex-col gap-3 flex-shrink-0 animate-fade-in"
+              >
+                <div className="flex items-center justify-between">
+                  <h4 className={`font-[var(--font-bangers)] text-xs tracking-wider ${isPowersMode ? "text-white" : "text-[#0a0a0f]"}`}>
+                    CONCEPT ARTS & GALERÍA:
+                  </h4>
+                  {hasAlts && (
+                    <button
+                      onClick={() => setShowAlts(!showAlts)}
+                      style={{
+                        backgroundColor: showAlts ? (isPowersMode ? vibrantAccent : accent) : (isPowersMode ? "#1f2937" : "#f1f5f9"),
+                        color: showAlts ? getTextColor(isPowersMode ? vibrantAccent : accent) : (isPowersMode ? "#ffffff" : "#0f172a"),
+                        borderColor: showAlts ? (isPowersMode ? vibrantAccent : accent) : "#0a0a0f",
+                        boxShadow: "2.5px 2.5px 0 #000",
+                      }}
+                      className="px-2.5 py-0.5 border-2 font-[var(--font-bangers)] text-[10px] tracking-wider uppercase transition-all hover:scale-105 active:scale-95 flex items-center gap-1 active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#000] cursor-pointer"
+                    >
+                      <span>OLD</span>
+                      <span className="text-[8px] opacity-75">({altCount})</span>
+                    </button>
+                  )}
+                </div>
+                {visibleConcepts.length > 0 ? (
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {visibleConcepts.map((item, idx) => (
+                      <div
+                        key={idx}
+                        onClick={() => setLightboxImage(item.path)}
+                        style={{
+                          borderColor: item.isAlt ? (isPowersMode ? `${vibrantAccent}55` : `${accent}55`) : (isPowersMode ? "rgba(255,255,255,0.1)" : "rgba(10,10,15,0.1)"),
+                        }}
+                        className="group relative aspect-[3/4] border-2 bg-slate-100 dark:bg-black/40 rounded overflow-hidden cursor-pointer hover:scale-[1.03] transition-all duration-300 animate-fade-in"
+                      >
+                        {/* Image */}
+                        <img
+                          src={item.path}
+                          alt={item.name}
+                          loading="lazy"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        
+                        {/* Badge */}
+                        {item.isAlt && (
+                          <span
+                            style={{
+                              backgroundColor: vibrantAccent,
+                              color: getTextColor(vibrantAccent),
+                            }}
+                            className="absolute top-1 right-1 text-[7px] sm:text-[8px] font-[var(--font-bangers)] tracking-wide px-1 py-0.5 border border-black shadow-[1px_1px_0_#000]"
+                          >
+                            ALT
+                          </span>
+                        )}
+
+                        {/* Gradient Overlay & Name */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
+                          <span className="font-[var(--font-bangers)] text-[9px] sm:text-[10px] tracking-wider text-white leading-tight uppercase">
+                            {item.name}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className={`text-center py-4 border-2 border-dashed rounded ${isPowersMode ? "border-gray-700/50" : "border-gray-300"}`}>
+                    <span className={`font-[var(--font-marker)] text-xs uppercase ${isPowersMode ? "text-gray-400" : "text-gray-500"}`}>Sin diseños base</span>
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+
           {/* ── Detalles toggle button (only for Pibes) ── */}
           {isPibe && (
             <div className="pt-2 mt-auto pb-2 sm:pb-0 flex-shrink-0">
@@ -336,6 +428,16 @@ export function CharacterInfoPanel({
           )}
         </>
       )}
+
+      <AnimatePresence>
+        {lightboxImage && (
+          <ImageLightbox
+            src={lightboxImage}
+            alt="Concept Art"
+            onClose={() => setLightboxImage(null)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
