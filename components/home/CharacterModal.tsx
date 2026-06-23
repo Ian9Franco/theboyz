@@ -40,26 +40,9 @@ function getDarkBgColor(hexColor: string) {
 }
 
 export function CharacterModal({ char, onClose }: { char: any; onClose: () => void }) {
-  const [selectedImageId, setSelectedImageId] = useState<string>("default");
-  const [isPowersMode, setIsPowersMode] = useState(false);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const [imgFullscreen, setImgFullscreen] = useState(false);
-  const [unlockAll, setUnlockAll] = useState(false);
-
   const isPibe =
     char.category === "pibes" ||
     ["ian", "jaz", "julian", "mati", "uandi", "volvo", "sofi"].includes(char.id);
-
-  // 1. Gather available images for Standard Mode (or for non-pibe characters)
-  const standardImages: { id: string; label: string; src: string }[] = [];
-  if (char.fullBody || char.image) {
-    standardImages.push({ id: "default", label: "Normal", src: char.fullBody || char.image });
-  }
-  if (char.altImage) {
-    const isRegular = char.id === "comandante";
-    const label = isRegular ? "Cósmico" : "Alt";
-    standardImages.push({ id: "alt", label, src: char.altImage });
-  }
 
   // Closeup mapping (only for Pibes with _FACE closeups)
   const closeUpMap: Record<string, string> = {
@@ -71,16 +54,50 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     uandi: "/personajes/LosPibes/CLOSEUP/UANDI_FACE.webp",
     volvo: "/personajes/LosPibes/CLOSEUP/VOLVO_FACE.webp",
   };
-  const closeUpPath = char.closeUp || closeUpMap[char.id];
-  if (closeUpPath) {
-    standardImages.push({ id: "closeup", label: "Closeup", src: closeUpPath });
-  }
 
-  if (!isPibe && char.fichaImage) {
-    standardImages.push({ id: "ficha", label: "Ficha", src: char.fichaImage });
-  }
-  if (!isPibe && char.overloadImage && char.overloadImage !== char.altImage) {
-    standardImages.push({ id: "concept", label: "Concept", src: char.overloadImage });
+  // 1. Gather available images for Standard Mode (or for non-pibe characters)
+  const standardImages: { id: string; label: string; src: string }[] = [];
+
+  if (isPibe) {
+    if (char.fullBody || char.image) {
+      standardImages.push({ id: "default", label: "Normal", src: char.fullBody || char.image });
+    }
+    if (char.altImage) {
+      const isRegular = char.id === "comandante";
+      const label = isRegular ? "Cósmico" : "Alt";
+      standardImages.push({ id: "alt", label, src: char.altImage });
+    }
+    const closeUpPath = char.closeUp || closeUpMap[char.id];
+    if (closeUpPath) {
+      standardImages.push({ id: "closeup", label: "Closeup", src: closeUpPath });
+    }
+  } else {
+    // Non-Pibes: check if they have a distinct ficha and cover (portada)
+    const hasFicha = char.image && char.fullBody && char.image !== char.fullBody;
+
+    if (hasFicha) {
+      // Ficha goes first so it is shown by default
+      standardImages.push({ id: "ficha", label: "Ficha", src: char.image });
+      standardImages.push({ id: "portada", label: "Portada", src: char.fullBody });
+    } else {
+      const mainSrc = char.fullBody || char.image;
+      if (mainSrc) {
+        standardImages.push({ id: "default", label: "Normal", src: mainSrc });
+      }
+    }
+
+    if (char.altImage) {
+      const isRegular = char.id === "comandante";
+      const label = isRegular ? "Cósmico" : "Alt";
+      standardImages.push({ id: "alt", label, src: char.altImage });
+    }
+
+    if (char.fichaImage && !standardImages.some((img) => img.src === char.fichaImage)) {
+      standardImages.push({ id: "ficha_extra", label: "Ficha Extra", src: char.fichaImage });
+    }
+    if (char.overloadImage && char.overloadImage !== char.altImage && !standardImages.some((img) => img.src === char.overloadImage)) {
+      standardImages.push({ id: "concept", label: "Concept", src: char.overloadImage });
+    }
   }
 
   // 2. Gather available images for Detalles Mode (only for pibes)
@@ -120,6 +137,14 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     }
   }
 
+  const [selectedImageId, setSelectedImageId] = useState<string>(() => {
+    return standardImages.length > 0 ? standardImages[0].id : "default";
+  });
+  const [isPowersMode, setIsPowersMode] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [imgFullscreen, setImgFullscreen] = useState(false);
+  const [unlockAll, setUnlockAll] = useState(false);
+
   // Decide current active images array based on mode
   const currentImagesList = isPibe
     ? isPowersMode
@@ -153,7 +178,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
 
   // Reset modal state when switching characters
   useEffect(() => {
-    setSelectedImageId("default");
+    setSelectedImageId(standardImages.length > 0 ? standardImages[0].id : "default");
     setIsPowersMode(false);
   }, [char.id]);
 
@@ -195,7 +220,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
       setIsTransitioning(true);
       setTimeout(() => {
         setIsPowersMode(false);
-        setSelectedImageId("default");
+        setSelectedImageId(standardImages.length > 0 ? standardImages[0].id : "default");
         setIsTransitioning(false);
       }, 500);
     }
@@ -262,7 +287,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
             }
           `}</style>
           <div className={`modal-img-panel absolute inset-0 flex justify-center overflow-hidden ${
-            selectedImageId !== "default" && selectedImageId !== "alt" ? "items-center" : "items-end"
+            selectedImageId !== "default" && selectedImageId !== "alt" && selectedImageId !== "portada" ? "items-center" : "items-end"
           }`}>
             {isLocked ? (
               <div className="absolute inset-0 flex items-center justify-center">
@@ -281,7 +306,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                 title="Click para ver completo"
                 onClick={() => setImgFullscreen(true)}
                 className={`w-full h-full object-contain p-1 sm:p-2 lg:p-4 transition-all duration-500 cursor-zoom-in ${
-                  selectedImageId !== "default" && selectedImageId !== "alt" ? "object-center" : "object-center sm:object-bottom"
+                  selectedImageId !== "default" && selectedImageId !== "alt" && selectedImageId !== "portada" ? "object-center" : "object-center sm:object-bottom"
                 } ${isPowersMode ? "brightness-110" : ""}`}
                 style={{
                   filter: isPowersMode

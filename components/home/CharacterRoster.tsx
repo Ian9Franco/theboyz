@@ -148,14 +148,8 @@ export function CharacterRoster() {
       window.removeEventListener("unlockAllChanged", checkUnlock);
     };
   }, []);  const getCardImage = (char: any) => {
-    const isPibe = char.category === 'pibes' || ['ian', 'jaz', 'julian', 'mati', 'uandi', 'volvo', 'sofi'].includes(char.id);
-    if (!isPibe) {
-      if (char.category === 'locaciones') return char.image;
-      if (char.fichaImage) return char.fichaImage;
-      if (char.id !== 'comandante' && char.altImage) return char.altImage;
-      if (char.powers?.suitImages?.ficha) return char.powers.suitImages.ficha;
-    }
-    return char.image;
+    if (char.category === 'locaciones') return char.image;
+    return char.fullBody || char.image;
   };
 
   const characters = getComputedCharacters(readChapters, isClient, unlockAll).filter(
