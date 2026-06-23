@@ -155,5 +155,101 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "path": "/personajes/GUIAS/boyz/WILDCARD/alt/old_alt.webp",
       "isAlt": true
     }
+  ],
+  "apex": [
+    {
+      "name": "Apex Alt",
+      "path": "/personajes/GUIAS/antagonistas/Apex/apex_alt.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Apex Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Apex/Apex_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "don": [
+    {
+      "name": "Don Vanguard",
+      "path": "/personajes/GUIAS/antagonistas/Don Vanguard/don vanguard.webp",
+      "isAlt": false
+    }
+  ],
+  "gorgon": [
+    {
+      "name": "Gorgon Ficha",
+      "path": "/personajes/GUIAS/antagonistas/Gorgon/gorgon_ficha.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Gorgon Sheet Altjpeg",
+      "path": "/personajes/GUIAS/antagonistas/Gorgon/Gorgon_sheet_altjpeg.webp",
+      "isAlt": false
+    }
+  ],
+  "maker": [
+    {
+      "name": "Maker Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Maker/Maker_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Maker Sheet Alt",
+      "path": "/personajes/GUIAS/antagonistas/Maker/Maker_sheet_alt.webp",
+      "isAlt": false
+    }
+  ],
+  "phobos": [
+    {
+      "name": "Alt",
+      "path": "/personajes/GUIAS/antagonistas/Phobos/alt.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Phobos",
+      "path": "/personajes/GUIAS/antagonistas/Phobos/phobos.webp",
+      "isAlt": false
+    }
+  ],
+  "comandante": [
+    {
+      "name": "R.e.g.u.l.a.r Y Los V.o.p.s",
+      "path": "/personajes/GUIAS/antagonistas/R.E.G.U.L.A.R/R.E.G.U.L.A.R y los V.O.P.S.webp",
+      "isAlt": false
+    }
+  ],
+  "victor": [
+    {
+      "name": "Victor Alt Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Victor/victor_alt_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Victor Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Victor/Victor_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Victor Sheet Alt",
+      "path": "/personajes/GUIAS/antagonistas/Victor/Victor_sheet_alt.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Victor Sheet Alt2",
+      "path": "/personajes/GUIAS/antagonistas/Victor/Victor_sheet_alt2.webp",
+      "isAlt": false
+    }
+  ],
+  "valery": [
+    {
+      "name": "Valery Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Valery/Valery_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Valery Sheet Alt",
+      "path": "/personajes/GUIAS/Secundarios/Valery/Valery_sheet_alt.webp",
+      "isAlt": false
+    }
   ]
 };

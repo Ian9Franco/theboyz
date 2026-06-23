@@ -1,12 +1,28 @@
-# 🎨 Arte y Prompts Visuales de Phobos
+# 🎨 Arte y Prompts Visuales de Phobos (El Arquitecto del Pánico)
 
 ## 🎨 Aspecto y Estética Visual
 
-* **Estética General:** Un hombre maduro, de complexión delgada, aspecto demacrada y piel extremadamente pálida por los años sin sol en el laberinto. Viste una gabardina de lona negra muy larga y gastada, remendada toscamente con alambres, cintas y componentes analógicos expuestos. Su lenguaje corporal es impredecible: pasa de una apatía encorvada y pesada a movimientos rápidos, teatrales y espasmódicos, inclinando la cabeza ante una sinfonía inaudible.
-* **La Visera Ciega:** Visera ciega de metal y cuero remachado, cables de cobre expuestos hacia atrás que se conectan de forma demencial a su cabeza. Cubre completamente sus ojos, dejando expuestos su nariz y su mandíbula humana con barba de varios días.
-* **El Rostro y la Sonrisa:** Su rostro solo se deforma cuando decide sonreír: una mueca maníaca, maquiavélica y grotesca que estira sus facciones de forma antinatural, acompañada por estática analógica y ruido blanco que deforma la realidad a su alrededor.
+* **Estética General:** Delgadez militar y rígida. Su postura y lenguaje corporal cambian drásticamente entre dos estados: la rigidez de un bloque de hielo táctico y los movimientos exagerados y fluidos de un verdugo teatral.
+* **El Rostro y la Eterna Mueca:** Piel con tono pálido ceniciento artificial, textura de porcelana agrietada. Su rostro permanece estático en una sonrisa tensa, fija y exagerada; una expresión de alegría maníaca que nunca llega a sus ojos.
+* **El Visor de Aleación:** Sobre sus sienes y cubriendo completamente sus ojos, lleva un visor angular de hierro oscuro pulido con pinchos geométricos agresivos.
+* **Indumentaria (Estilo Táctico / Restricción):** Gabardina larga de cuero negro balístico y pesado, reforzada con múltiples correas de sujeción, hebillas cromadas y un cuello alto rígido que enmarca su rostro. Evoca la estética de una camisa de fuerza militar.
+* **Mascotas:** Arrastra a dos Hounds (masas biomecánicas de filamentos de cables negros y estructuras angulares de sabuesos semi-humanoides) con pesadas cadenas de hierro oxidado.
 
-## 📝 Plantilla de Prompt de Apariencia (Inglés)
+---
 
-* **Aspecto:** `A cinematic gritty portrait of a cynical and deranged 45-year-old human villain named Phobos, weathered face, messy graying dark hair. He wears a custom industrial blind visor made of dark riveted metal and leather with exposed copper wires wrapping around the back of his head, leaving his human mouth and jawline fully exposed with a five-day beard. He is wearing a tattered, heavy very long black canvas street overcoat with duct tape and hanging wires. Psychological thriller aesthetic, dark and raw cinematic lighting, hyper-realistic --ar 16:9`
-* **Cuando sonríe:** `A cinematic gritty portrait of Phobos, his human mouth is twisted into a wide, terrifying, grossly exaggerated manic grin that stretches his face layout, showing rows of teeth, subtle reality glitch and analog static distortion around his head, hyper-realistic --ar 16:9`
+## 🚀 Prompts Optimizados para Generación (Midjourney / DALL-E 3)
+
+### 1. Ficha Técnica (Datasheet):
+```text
+Character design datasheet of an intensely gaunt tactical mastermind villain named Phobos. ROSTRO: pale ash-grey cracked skin, a grotesque and permanent jagged grin etched into his scarred lips, spiked dark alloy crown visor fused to temples. FÍSICO: gaunt and rigid military frame. VESTIMENTA: heavy black leather ballistic trenchcoat with restraint straps, silver buckles, high collar. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+```
+
+### 2. Phobos Estático (El Monolito Frío):
+```text
+Character model sheet, turnaround, multiple views. Phobos, gaunt rigid tactical mastermind, pale ash-grey skin, lips scarred into a flat cold expression. Wearing a spiked angular dark alloy visor covering his eyes, long black ballistic leather trenchcoat with restraint straps and buckles, high stiff collar. Premium indie graphic novel style, hand-drawn ink line art, chiaroscuro, flat cel-shading, white background --no 3d, rendering, text, photorealism
+```
+
+### 3. Phobos y los Hounds (Mascotas Biomecánicas):
+```text
+Phobos, gaunt tactical mastermind in black leather trenchcoat with restraint straps, spiked dark alloy visor covering eyes. He stands rigidly holding rusted iron chains connected to two biomechanical Hounds made of black cable filaments and sharp angular skeletal hound-like structures. Premium indie graphic novel style, hand-drawn ink line art, chiaroscuro, flat cel-shading, white background --no 3d, rendering, text, photorealism
+```

@@ -1,14 +1,27 @@
-# 🎨 Arte y Prompts Visuales de Gorgon
+# 🎨 Arte y Prompts Visuales de Gorgon (El titán de la Metatoxina)
 
 ## 🎨 Aspecto y Estética Visual
 
-* **Estética General:** Un coloso musculoso de dos metros y medio de altura. Su cuerpo muestra cicatrices de cirugías invasivas donde se le injertaron puertos de metal. Lleva un respirador táctico pesado que cubre su boca y nariz, y un chaleco de cuero oscuro rasgado y botas de combate reforzadas.
-* **Mangueras e Inyecciones:** Mangueras industriales gruesas corren desde un tanque en su espalda hacia su cabeza, cuello y brazos.
-* **Estado Base vs Mutado:**
-  * **Estado Base:** Postura pesada y ligeramente encorvada, venas apagadas, mirada vacía y tosca.
-  * **Estado Mutado:** Postura erguida e intimidante, músculos hipertrofiados hinchados al límite, y venas que brillan con un verde neón radioactivo fluorescente a través de su piel y mangueras.
+* **Estética General:** Un titán de proporciones militares, con una postura encorvada y masiva en estado base, que se yergue con una postura aristocrática, fría y amenazante cuando su intelecto despierta.
+* **El Sistema de Conducción:** Arnés táctico de sujeción industrial integrado a su espalda y cuello. De este arnés nacen mangueras de polímero reforzado que canalizan el compuesto hacia sus sienes y brazos, evitando menciones a cirugías o carne expuesta.
+* **El Respirador de Filtrado:** Lleva una máscara blindada o respirador industrial pesado que cubre la mitad inferior de su rostro y emite sonido neumático constante.
+* **Luminiscencia Química:** Al activarse, las mangueras reforzadas y una red geométrica de venas tácticas a lo largo de sus brazos y sienes se encienden con un brillo verde neón fluorescente, marcando el flujo de la metatoxina.
+
+---
 
 ## 📝 Plantilla de Prompt de Apariencia (Inglés)
 
-* **Estado Base:** `A cinematic gritty portrait of a massive, 2.5-meter-tall hulking brute villain named Gorgon, scarred pale skin, wearing a heavy tactical respirator mask over his mouth and nose, industrial black hoses connected to ports in his neck and arms, wearing a tattered dark leather vest. Dark cyberpunk laboratory setting, raw cinematic lighting, hyper-realistic --ar 16:9`
-* **Estado Mutado:** `A cinematic gritty portrait of a massive 2.5-meter-tall hulking brute villain named Gorgon in mutated state, veins glowing with intense neon green bio-chemical liquid, muscles heavily expanded, neon green fluid pulsing through transparent industrial hoses connected to his neck and head, wearing a tattered dark leather vest, dramatic glowing lighting, cybernetic laboratory, hyper-realistic --ar 16:9`
+### 1. Ficha Técnica (Datasheet):
+```text
+Character design datasheet of a colossal tactical brute named Gorgon. ROSTRO: heavy tactical respirator mask covering his nose and mouth, sharp brow. FÍSICO: massive 2.5-meter-tall hulking military build, thick veins, tactical restraint harness on back and neck with reinforced polymer hoses running to arms and temples, pulsing with glowing neon green liquid. VESTIMENTA: tattered dark leather tactical vest, worn cargo pants, heavy military boots. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+```
+
+### 2. Estado Base (El Ejecutor):
+```text
+Character model sheet, turnaround, multiple views. Gorgon, a massive 2.5-meter-tall hulking tactical brute in base state, heavy hunched posture, blank cold eyes. Wearing a heavy industrial respirator mask over mouth, tactical restraint harness on back and neck with empty unlit polymer hoses, tattered dark leather tactical vest. Premium indie graphic novel style, hand-drawn ink line art, chiaroscuro, flat cel-shading, white background --no 3d, rendering, text, photorealism
+```
+
+### 3. Estado Mutado (El Intelecto Despierto):
+```text
+Character model sheet, turnaround, multiple views. Gorgon in mutated state, towering and commanding military posture, sharp calculating eyes. Veins along arms and temples glowing with intense neon green bio-chemical liquid, muscles expanded. Neon green fluid pulsing through reinforced polymer hoses connected to his tactical harness, wearing a tattered dark leather tactical vest. Premium indie graphic novel style, hand-drawn ink line art, chiaroscuro, flat cel-shading, white background --no 3d, rendering, text, photorealism
+```

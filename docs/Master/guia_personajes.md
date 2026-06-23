@@ -1,8 +1,4 @@
 
-prompt para crear la sheet de aspecto de personaje:
-
-Character model sheet, reference turnaround, comic book character design sheet. Same hand-inked comic art style as the established house style — clean organic ink line defining all form and volume, flat hard-edged cel-shading, color is flat and secondary to the line. Three views of the same character on a single sheet: front view, three-quarter view, and side profile view, full body, neutral standing pose, arms relaxed, no dynamic action. Plain flat neutral grey or white background, no scenery, no props, no environment. Flat, even, neutral studio lighting — no dramatic shadows, no colored lighting, no backlighting, no rim light, no atmospheric effects. Accurate true-to-reference skin tone rendered as a flat color block with hard-edge shading only, NOT a warm amber/sepia wash. Precise, consistent facial features, hairstyle, body proportions and outfit matching the reference image exactly. NO 3D render, NO photorealism, NO photographic specular highlights, NO airbrushed gradients, NO color grading filter, NO background, NO text, NO labels, NO speech bubbles, NO panel borders, NO watermark.
-
 
 
 
@@ -146,6 +142,79 @@ Character model sheet, reference turnaround, comic book character design sheet. 
 
 > **Prompt:**
 > `Character model sheet, comic book character design sheet, reference turnaround. Modern American heroic comic art style, hand-inked line work — clean organic ink lines define all form and volume, color is flat and secondary to the line. Plain flat solid white background, no scenery, no environment, no text, no panel borders. [ART STYLE & TECHNICAL BREAKDOWN] - INKING: Clean organic line art and highly detailed tactical gear inking inspired by Sara Pichelli, combined with dense ink rendering, heavy black masses, and high-contrast chiaroscuro shadows inspired by Greg Capullo. - COLORING: Flat, hard-edged cel-shading with distinct color blocks per object — entirely matte black and deep charcoal grey. True-to-character clean human skin tones. No airbrushed gradients, no photorealism. - CHARACTER: A formidable, lean, and tightly muscled 38-year-old male government operative named "Apex". He has a full head of short-cropped jet-black hair and a thick, dark, well-groomed beard with no grey hairs. His face is intense and sharp, marked by a single vertical tactical scar running over his left eye. He wears a heavy-duty, streamlined tactical combat suit entirely matte black, with reinforced armor plating, utility belts, thigh holsters, and a black commando vest. The suit features no symbols, no skull designs, just functional military black. The sheet includes the following six views layout: [FULL-BODY POSES] 1. A professional full-body readiness pose (Tactical Gear): Apex stands in a calm, balanced neutral stance. His face is completely bare and unmasked, showcasing his dark beard, short black hair, and the sharp scar over his left eye. He is holding a matte-black tactical assault rifle with attached silencer in one hand. Hand-inked style. 2. A dynamic full-body action pose (Battle-Damaged CQC): captured mid-combat stance, showing dramatic foreshortening. He wears an alternative battle-worn version of his full ballistic mask, which is deeply fractured, cracked, and split open from heavy combat wear, revealing half of his highly intense, deeply enraged face and dark beard underneath. Both eyes remain strictly enclosed behind the mask's cracked, white-tinted tactical lenses. He is wielding twin black military combat knives in a reverse grip. 3. A dynamic full-body tactical assault pose (Stealth Kit): advancing forward with precision and speed, showing kinetic composition inspired by Jorge Jimenez. He is wearing the pristine, full-coverage, intimidating matte-black ballistic mask that completely obscures his entire face. He is aiming a high-tech tactical black handgun forward with both hands. Hand-inked style. [CLOSE-UP PORTRAITS] 4. A prominent close-up portrait of his bare face (Unmasked View): direct front angle focusing on his rugged, unmasked features. He has a solid jet-black beard and hair with no grey, intense cold eyes, and a prominent dark ink scar over his left eye. No visors, no eyepatches. Heavy black ink contrast. 5. A detailed close-up portrait (Pristine Full Ballistic Mask): focusing on the full, intimidating ballistic mask from a three-quarter angle. The mask is a single, sleek matte-black plate with no features, just subtle ventilation slots and two menacing, narrow eye slits. High-contrast chiaroscuro shadows inspired by Greg Capullo. 6. A detailed close-up portrait (Battle-Damaged Mask View): direct front angle focusing on his alternative worn mask layout. The full-coverage matte-black mask is broken, heavily scratched, and split open by heavy impact lines, showcasing half of his tattered, highly angry facial expression and dark beard beneath, while his eyes remain protected behind the shattered white lenses of the tactical mask. Expressive facial inking. [RESTRICTIONS] NO 3D render, NO photorealistic rendering, NO blood, NO open wounds, NO eyepatches, NO grey hair, NO green glowing veins, NO tubes, NO smooth airbrushed gradients, NO color-grade filter, NO symbols, NO skull designs, NO background scenery.`
+
+---
+
+### 👿 PHOBOS (El Arquitecto del Pánico)
+* **Rostro y Cabello:** Rostro con piel de tono pálido, ceniciento y artificial, con textura de porcelana agrietada. Su boca permanece estática en una sonrisa tensa, fija y exagerada que nunca llega a sus ojos. Lleva un visor angular de hierro oscuro pulido con pinchos geométricos agresivos que cubre completamente sus ojos.
+* **Físico:** Delgadez militar, rígida y erguida. Mantiene una postura monolítica y fría.
+* **Vestimenta y Accesorios:** Gabardina larga de cuero negro balístico y pesado, reforzada con múltiples correas de sujeción, hebillas cromadas y cuello alto rígido que evoca una camisa de fuerza. Arrastra a dos Hounds (masas biomecánicas de cables negros y estructuras caninas/humanoides) con pesadas cadenas de hierro oxidado.
+
+#### Prompt de Generación
+
+> **Prompt:**
+> `Character design datasheet of an intensely gaunt tactical mastermind villain named Phobos. ROSTRO: pale ash-grey cracked skin, a grotesque and permanent jagged grin etched into his scarred lips, spiked dark alloy crown visor fused to temples. FÍSICO: gaunt and rigid military frame. VESTIMENTA: heavy black leather ballistic trenchcoat with restraint straps, silver buckles, high collar. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles`
+
+---
+
+### 🔬 MAKER (El Creador Elástico)
+* **Rostro y Cabello:** Rostro liso, frío y analítico. Mandíbula angulosa y delgada. Ojos fríos y sin pestañas visibles. Su cabeza está cubierta por un casco de alta tecnología liso y pulido que se extiende de manera alargada hacia atrás para albergar su cerebro expandido. Completamente calvo bajo el casco.
+* **Físico:** Silueta esbelta, alargada y de postura extremadamente erguida. Carece de huesos rígidos, lo que le da una fluidez imperceptible.
+* **Vestimenta:** Mono de compresión táctico de polímero oscuro mate con costuras geométricas limpias. El casco metálico pulido se conecta de manera hermética con el cuello del traje.
+
+#### Prompt de Generación
+
+> **Prompt:**
+> `Character design datasheet of a slender futuristic mastermind villain named Maker. ROSTRO: clean cold jawline exposed under an elongated high-tech helmet that extends smoothly backwards to contain an expanded cranium. FÍSICO: slender and tall athletic frame, elongated clean silhouette. VESTIMENTA: form-fitting dark polymer compression bodysuit with minimalist clean geometric lines. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles`
+
+---
+
+### 👿 GORGON (El titán de la Metatoxina)
+* **Rostro y Cabello:** Rostro tosco e imponente. Lleva una máscara de respirador industrial pesado que cubre la mitad inferior de su rostro y emite sonido neumático constante. Su mirada es fría y calculadora cuando está alterado, y vacía en su estado base.
+* **Físico:** Coloso descomunal de 2.5 metros de altura. Postura encorvada y masiva en estado base, que se yergue con una postura imponente y militar cuando su intelecto despierta.
+* **Vestimenta y Accesorios:** Chaleco de cuero oscuro grueso y rasgado, pantalones militares grises desgastados y botas tácticas pesadas. Lleva un arnés táctico de sujeción industrial en la espalda y el cuello, del cual nacen mangueras de polímero reforzado conectadas a sus sienes y brazos que brillan de verde neón al activarse la metatoxina.
+
+#### Prompt de Generación
+
+> **Prompt:**
+> `Character design datasheet of a colossal tactical brute named Gorgon. ROSTRO: heavy tactical respirator mask covering his nose and mouth, sharp brow. FÍSICO: massive 2.5-meter-tall hulking military build, thick veins, tactical restraint harness on back and neck with reinforced polymer hoses running to arms and temples, pulsing with glowing neon green liquid. VESTIMENTA: tattered dark leather tactical vest, worn cargo pants, heavy military boots. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles`
+
+---
+
+### 🤝 CARMILLA NOCTURNA (La Matriarca Vampira)
+* **Rostro y Cabello:** Facciones de óvalo gótico alargado y angular. Pómulos altos y mejillas sutilmente hundidas. Ojos felinos, rasgados y de mirada fría e hipnótica. Cejas rectas y finas. Labios definidos con un arco de cupido marcado y colmillos retráctiles expuestos. Cabello largo castaño-rubio peinado hacia atrás (saciada) o cabello blanco puro y largo en batalla (hambrienta). Piel de color blanco porcelana.
+* **Físico:** Femenino, alto, esbelto y de cintura plana y estrecha, con gran agilidad felina.
+* **Vestimenta y Accesorios:** Abrigo militar victoriano ajustado de color rojo carmesí brillante con botones dorados y cuello alto, guantes largos de cuero negro y una pesada capa militar de terciopelo negro.
+
+#### Prompt de Generación
+
+> **Prompt:**
+> `Character design datasheet of a gothic female vampire named Carmilla Nocturna. ROSTRO: gothic elongated angular face, high cheekbones, pale porcelain skin, swept-back hair, fangs. FÍSICO: tall slender athletic body, narrow waist. VESTIMENTA: rich blood-crimson Victorian military coat with gold buttons and high collar, sweeping heavy black velvet commander's mantle, long black leather gloves. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles`
+
+---
+
+### 🤝 KHIONE FROST (La General del Hielo)
+* **Rostro y Cabello:** Rostro ancho y de mandíbula cuadrada de rasgos afroamericanos marcados. Ojos de mirada serena y analítica en reposo, que brillan en color verde esmeralda al activarse su crio-ira. Cejas gruesas y rectas. Labios muy carnosos. Piel de tono oscuro profundo que contrasta espectacularmente con su larga cabellera de color blanco puro.
+* **Físico:** Femenino, muy alto y musculoso, inspirado en Jade Cargill, con hombros poderosos, abdominales tallados y cintura estrecha.
+* **Vestimenta y Accesorios:** Mono de compresión táctico verde bosque oscuro con costuras angulares negras, cinturón utilitario, guantes tácticos de cuero verde oscuro y botas de combate pesadas. Sin capas ni mantos.
+
+#### Prompt de Generación
+
+> **Prompt:**
+> `Character design datasheet of a powerful African-American female general named Khione Frost. ROSTRO: broad square face, wide jaw, full lips, glowing emerald green eyes, long flowing pure white hair. FÍSICO: tall, highly toned and muscular build, defined shoulders and abs, deep dark skin tone. VESTIMENTA: forest-green tactical compression jumpsuit with sharp black accents, tactical gloves, heavy combat boots. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles`
+
+---
+
+### 🤝 VALERY (La Soberana del Grimorio)
+* **Rostro y Cabello:** Estructura facial con la fisonomía sofisticada y elegante de estructura heart-shaped (pómulos altos, nariz recta y delgada, ojos almendrados y labios con arco de cupido marcado), cejas arqueadas y elegantes. Cabello castaño cobrizo abundante y peinado en ondas suaves. Ojos de color marrón cálido detrás de lentes de carey marrón.
+* **Físico:** Complexión esbelta, delgada y de constitución académica/sedentaria (brazos y piernas delgados, sin definición muscular).
+* **Vestimenta y Accesorios:** Vestido midi de corte bohemio con estampado botánico apagado, cárdigan de punto largo y holgado de color tierra, y botas cortas de cuero marrón. Carga un libro antiguo encuadernado en cuero oscuro (grimorio) del cual emana una masa de filamentos de tinta negra viva.
+
+#### Prompt de Generación
+
+> **Prompt:**
+> `Character design datasheet of a sophisticated arcane scholar named Valery. ROSTRO: heart-shaped face, high cheekbones, arched brows, warm brown eyes, wearing round tortoiseshell glasses, long chestnut-brown wavy hair. FÍSICO: slender delicate build, soft non-athletic frame. VESTIMENTA: bohemian patterned midi dress, oversized knit cardigan, carrying an ancient dark leather spellbook with floating fluid black ink tendrils. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles`
+
 
 
 

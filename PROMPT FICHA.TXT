@@ -1,0 +1,396 @@
+# 📝 FICHAS TÉCNICAS Y PROMPTS DE GENERACIÓN (COMPLETO)
+Este archivo contiene la descripción técnica, lore, estadísticas y prompts de generación (optimizados con formato "Character design datasheet" para Midjourney/DALL-E 3) de los antagonistas y secundarios principales.
+
+---
+
+## 👿 1. PHOBOS (El Arquitecto del Pánico)
+
+# 👿 Ficha de Diseño de Personaje: Phobos (El Arquitecto del Pánico)
+
+* **Categoría:** Antagonista Principal / Mente Maestra Táctica.
+* **Inspiración:** Thriller psicológico, horror industrial, privación sensorial táctica.
+
+### 👤 Perfil General
+"La moralidad es un error de cálculo... un límite artificial que yo ya he superado."
+* **Arquetipo:** Genio táctico corrompido, depredador psicológico, estratega implacable libre de empatía.
+
+### 📊 Estadísticas y Atributos (Ficha Técnica)
+* **Rol:** Mente Maestra / Torturador Psicológico.
+* **Fórmula de Combate / Stats:**
+  * Fuerza: 6
+  * Inteligencia: 10 (Genio absoluto y analítico)
+  * Carisma: 6 (Manipulación fría)
+  * Suerte: 5
+  * Combate: 7 (Estilo militar y punzante)
+  * Defensa: 6
+  * Especial (Geometría del Trauma): 10
+* **Crisis / Debilidad (Arrogancia Absoluta):** Su convicción de que la esperanza y la ética son fallas lógicas lo lleva a subestimar los sacrificios irracionales que los héroes están dispuestos a hacer por los demás.
+
+### ⏳ Origen: El Proyecto "Phobos"
+Originalmente, él era el estratega y científico militar más brillante del gobierno, encargado de desarrollar un suero experimental diseñado para suprimir el miedo y optimizar la eficiencia neuronal de los soldados en combate. En un accidente de laboratorio —o quizás en un acto de autosacrificio calculado—, se expuso voluntariamente al Compuesto Alfa original en su estado más puro y concentrado.
+
+El químico no eliminó el miedo de su sistema; en su lugar, extirpó por completo su capacidad de sentir empatía, liberando un sadismo absoluto mientras dejaba su intelecto táctico intacto e hiperdesarrollado. Al ver el monstruo que habían creado, el gobierno clausuró el proyecto y selló los archivos, pero ya era tarde: el científico había muerto, y en su lugar nació Phobos, el Arquitecto del Pánico.
+
+### ⚡ Habilidades y Control de Entorno
+* **Aparato de Frecuencia de Risa:** Su risa maníaca no es solo un rasgo psicológico; está modulada por los implantes neurológicos y el daño del químico en sus cuerdas vocales. Emite una frecuencia acústica sutil que altera el sistema nervioso de quienes la escuchan, provocando náuseas, desorientación espacial y ataques de pánico involuntarios.
+* **El Diseñador de Dilemas:** Su mayor habilidad es la guerra psicológica. Gracias a su mente militar, no ataca al azar; diseña escenarios y trampas donde sus objetivos se ven obligados a tomar decisiones éticamente devastadoras. Su sadismo radica en ver cómo la mente de sus presas se quiebra por pura lógica.
+* **Tránsito Liminal:** Capaz de usar las esquinas y los espacios liminales de los Backrooms como un nexo táctico personal. Desaparece de la realidad tridimensional y reaparece de forma impredecible en los puntos ciegos de sus víctimas.
+* **Estilo de Combate Purgante:** Cuando se ve forzado al combate físico, no pelea como un monstruo salvaje, sino con una precisión quirúrgica e industrial. Utiliza herramientas de restricción, cables de tensión pesados y hojas de aleación oscura.
+
+### 🎨 Aspecto y Estética Visual
+* **Aspecto Físico:** De una delgadez militar y rígida. Su piel tiene un tono pálido, ceniciento y artificial, como la porcelana agrietada. Su rostro permanece estático en una sonrisa tensa, fija y exagerada; una expresión de alegría maníaca que nunca llega a sus ojos.
+* **Indumentaria (Estilo Táctico / Restricción):** Viste una gabardina larga de cuero negro balístico y pesado, reforzada con múltiples correas de sujeción, hebillas cromadas y un cuello alto rígido que enmarca su rostro. Evoca la estética de una camisa de fuerza militar.
+* **El Visor de Aleación:** Sobre sus sienes y cubriendo completamente sus ojos, lleva un visor angular de hierro oscuro pulido con pinchos geométricos agresivos.
+
+### 👥 Las Mascotas: Los Hounds
+Las dos figuras que Phobos arrastra rígidamente mediante pesadas cadenas de hierro oxidado son Hounds extraídos de las profundidades de los Backrooms:
+* Son masas imponentes y biomecánicas compuestas por filamentos de cables negros y estructuras angulares que imitan la silueta de sabuesos semi-humanoides.
+* Bajo sus órdenes directas, emiten silbidos industriales y alarmas distorsionadas que paralizan a los objetivos, cazando con una sincronización mecánica perfecta junto a su amo.
+
+### 🎯 Motivación: ¿Qué es lo que busca?
+* **La Ecuación de la Caída:** Romper sistemáticamente a los individuos más incorruptibles del mundo, demostrando a través de planes fríamente calculados que la moralidad es solo una debilidad de diseño.
+* **El Teatro de la Crueldad:** Rediseñar la sociedad bajo sus propios términos. Para Phobos, el colapso del orden social y las risas histéricas de quienes pierden la cordura son el único estado de evolución lógica para la humanidad.
+
+### 🎭 Comportamiento y Personalidad
+* **El Monolito Frío:** Mientras planifica o da órdenes, es una figura de hielo. Mantiene una postura militar, rígida y silenciosa. Es el estratega perfecto que observa los acontecimientos desde las sombras, calculando cada variable física y psicológica.
+* **El Verdugo Teatral:** Al ejecutar la fase final de su caza, su lenguaje corporal cambia. Adopta posturas ligeramente inclinadas, exageradas y fluidas. Su sonrisa fija se vuelve el centro de atención mientras desata su risa de frecuencia, disfrutando de la caída de su presa con la satisfacción de un artista que ve terminada su obra maestra.
+
+### 🚀 Prompt de Generación (Datasheet)
+```text
+Character design datasheet of an intensely gaunt tactical mastermind villain named Phobos. ROSTRO: pale ash-grey cracked skin, a grotesque and permanent jagged grin etched into his scarred lips, spiked dark alloy crown visor fused to temples. FÍSICO: gaunt and rigid military frame. VESTIMENTA: heavy black leather ballistic trenchcoat with restraint straps, silver buckles, high collar. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+```
+
+---
+
+ 👿 2. MAKER (El Creador Elástico)
+
+Character design datasheet of a slender futuristic mastermind villain named Maker. ROSTRO: clean cold jawline exposed under an elongated high-tech helmet that extends smoothly backwards to contain an expanded cranium. FÍSICO: slender and tall athletic frame, elongated clean silhouette. VESTIMENTA: form-fitting dark polymer compression bodysuit with minimalist clean geometric lines. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+
+# 👿 Ficha de Diseño de Personaje: Maker (El Creador Elástico / Anomalía Mutante Científica)
+
+* **Categoría:** Antagonista Principal / Anomalía Mutante Científica.
+* **Inspiración:** Evolución transhumanista, biotecnología sin límites y elasticidad cerebral.
+
+### 👤 Perfil General
+"La carne humana es un borrador muy burdo... y yo he venido a reescribirla."
+* **Arquetipo:** Científico transhumanista obsesionado, intelectual elástico, frío y analítico sin moral.
+
+### 📊 Estadísticas y Atributos (Ficha Técnica)
+* **Rol:** El Creador Elástico / Anomalía Mutante Científica.
+* **Fórmula de Combate / Stats (Estado Base):**
+  * Fuerza: 6
+  * Inteligencia: 10
+  * Carisma: 6
+  * Suerte: 5
+  * Combate: 7
+  * Defensa: 8
+  * Especial (Elasticidad Cerebral): 9
+* **Stats Amplificados (Poderes Activos):**
+  * Fuerza: 7 | Inteligencia: 11 | Carisma: 7 | Suerte: 5 | Combate: 9 | Defensa: 10 | Especial: 10
+* **Crisis / Debilidad:** Inestabilidad térmica: El calor extremo derrite su cohesión celular perdiendo toda forma y volviéndolo líquido, mientras que el frío extremo congela sus tejidos, transformándolo en una estatua rígida y sumamente frágil que se quiebra con facilidad.
+
+### ⏳ Origen
+Maker era originalmente un brillante y meticuloso genetista de la corporación. Su obsesión con la metatoxina verde de Phobos lo llevó a cruzar todos los límites éticos. Al ver que no podía controlar los efectos psicóticos de la toxina en sujetos externos, decidió experimentar en su propio cuerpo mediante ingeniería genética y micro-implantes. El resultado fue una alteración biológica completa: su estructura celular se volvió líquida y elástica a nivel subatómico, perdiendo por completo sus huesos, tendones y órganos rígidos. Ahora, se considera a sí mismo el pináculo de la evolución humana.
+
+### ⚡ Habilidades y Mutación Anatómica
+* **Maleabilidad Celular Absoluta:** Su cuerpo carece de masa sólida fija. Puede estirar sus extremidades a decenas de metros, aplanar su torso para deslizarse por grietas mínimas, y esquivar ataques doblando su cuerpo en ángulos físicamente imposibles.
+* **Expansión Cerebral y Lóbulos Extra:** Para procesar datos complejos en tiempo real o analizar amenazas durante el combate, es capaz de deformar la parte trasera de su cráneo de manera controlada para generar lóbulos cerebrales adicionales de carne viva. Esto eleva su capacidad de procesamiento mental a niveles de supercomputadora.
+* **Regeneración Líquida:** Al no tener órganos vitales fijos, las heridas punzantes y los cortes físicos simplemente atraviesan su masa celular, la cual se vuelve a cohesionar de forma instantánea.
+
+### 🎨 Aspecto y Estética Visual
+* **Aspecto Físico:** De silueta extremadamente esbelta, alargada y erguida. Ojos fríos de color azul pálido, sin cejas ni pestañas visibles, y una mandíbula angulosa y pulida. Su piel es lisa y carece de vello corporal.
+* **Indumentaria:** Un mono de compresión táctico negro mate de alta resistencia con costuras geométricas limpias. Su cabeza está cubierta por un casco alargado de diseño futurista y aerodinámico en color gris oscuro mate que expande y contiene su masa cerebral de forma limpia.
+
+### 🎯 Motivación: ¿Qué es lo que busca?
+* **Evolución Forzada:** Convertir a la población en seres maleables libres de las limitaciones físicas tradicionales (enfermedad, envejecimiento, fracturas óseas), sin importar cuántos miles mueran en el proceso de asimilación molecular.
+* **Conocimiento Absoluto:** Analizar la energía cuántica y cinemática de los Pibes para integrarla en su propio código biológico y alcanzar la inmortalidad perfecta.
+
+### 🎭 Comportamiento y Personalidad
+* **El Académico Gélido:** Mantiene siempre una postura impecable y un tono de voz extremadamente educado y pausado. No muestra ira, alegría ni pánico. Trata los combates y las torturas como simples experimentos de laboratorio y recopilación de datos de variables físicas.
+
+### 🚀 Prompt de Generación (Datasheet)
+```text
+Character design datasheet of a slender futuristic mastermind villain named Maker. ROSTRO: clean cold jawline exposed under an elongated high-tech helmet that extends smoothly backwards to contain an expanded cranium. FÍSICO: slender and tall athletic frame, elongated clean silhouette. VESTIMENTA: form-fitting dark polymer compression bodysuit with minimalist clean geometric lines. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+```
+
+---
+
+## 👿 3. GORGON (El titán de la Metatoxina)
+
+Character design datasheet of a colossal tactical brute named Gorgon. ROSTRO: heavy tactical respirator mask covering his nose and mouth, sharp brow. FÍSICO: massive 2.5-meter-tall hulking military build, thick veins, tactical restraint harness on back and neck with reinforced polymer hoses running to arms and temples, pulsing with glowing neon green liquid. VESTIMENTA: tattered dark leather tactical vest, worn cargo pants, heavy military boots. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+
+# 👿 Ficha de Diseño de Personaje: Gorgon (El titán de la Metatoxina)
+
+* **Categoría:** Antagonista Secundario / Rival Interno.
+* **Inspiración:** Bane (Absolute DC), thriller de conspiración militar, guerra fría mental.
+
+### 👤 Perfil General
+* **En Estado Base:** *"[Gruñidos de pesadez y respiración mecánica e industrial]"*.
+* **En Estado Alterado:** *"Phobos cree que me controla porque me dio la llave de mi propia jaula... pero olvida que una mente perfecta siempre encuentra la forma de abrir el candado."*
+* **Arquetipo:** El gigante encadenado, el genio prisionero de su propia fuerza, el ejecutor resentido.
+
+### 📊 Estadísticas y Atributos (Ficha Técnica)
+* **Rol:** Ejecutor Táctico Mutado / Fuerza de Choque.
+* **Fórmula de Combate / Stats (Estado Base):**
+  * Fuerza: 10
+  * Inteligencia: 4 (Tosco, reactivo y pesado)
+  * Carisma: 4
+  * Suerte: 5
+  * Combate: 8
+  * Defensa: 9
+  * Especial (Metatoxina Durmiente): 6
+* **Crisis / Debilidad (La Trampa del Olvido):** Al regresar a su estado base, Gorgon olvida los detalles finos de sus planes de rebelión, quedando a merced de Phobos hasta la siguiente dosis.
+
+### ⚡ El Estado Alterado (El Intelecto Despierto)
+Cuando la metatoxina inunda su sistema, no solo su cuerpo se expande; su cerebro se hiperconecta, convirtiéndolo en un erudito táctico que desprecia la locura de Phobos y busca su propia libertad.
+
+* **Stats Amplificados (Estado Alterado):**
+  * Fuerza: 11 (Poder devastador)
+  * Inteligencia: 10 (Genio analítico y calculador)
+  * Carisma: 8 (Presencia imponente y comandante)
+  * Suerte: 6
+  * Combate: 10 (Precisión marcial perfecta)
+  * Defensa: 10
+  * Especial (Sobrecarga Cognitiva): 10
+
+* **La Paradoja de la Toxina (Dinámica con Phobos):** Ambos saben que están atrapados. Phobos necesita la fuerza y el brillo táctico de Gorgon para sus planes a gran escala; Gorgon necesita el suministro químico de Phobos para mantener su genio. Cuando está lúcido, Gorgon altera registros, sabotea suministros y deja pistas ocultas para su "yo del futuro" antes de que el químico se evapore y vuelva a ser un lacayo dócil. Phobos lo sabe, lo vigila como quien juega al ajedrez con una bomba de tiempo, y disfruta el reto.
+
+### ⚡ Habilidades en Combate Táctico
+* **Inyección de Comando:** Activa de forma neumática el flujo del químico, generando una expansión muscular masiva y un encendido neuronal instantáneo.
+* **Análisis Predictivo de Impacto:** En estado alterado, Gorgon no golpea a ciegas; calcula los puntos de tensión estructural del entorno o los puntos débiles del oponente en milisegundos, logrando una eficiencia destructiva perfecta.
+* **Supresión Física Industrial:** Utiliza su imponente masa para someter y asfixiar el entorno mediante impactos de choque y control de área.
+
+### 🎨 Aspecto y Estética Visual
+* **Estética General:** Un titán de proporciones militares, con una postura encorvada y masiva en estado base, que se yergue con una postura aristocrática, fría y amenazante cuando su intelecto despierta.
+* **El Sistema de Conducción:** Arnés táctico de sujeción industrial integrado a su espalda y cuello. De este arnés nacen mangueras de polímero reforzado que canalizan el compuesto hacia sus terminales nerviosas.
+* **El Respirador de Filtrado:** Lleva una máscara blindada o respirador industrial pesado que cubre la mitad inferior de su rostro, ocultando su expresión y emitiendo un sonido de escape neumático constante.
+* **Luminiscencia Química:** Al activarse, las mangueras reforzadas y una red geométrica de venas tácticas a lo largo de sus brazos y sienes se encienden con un brillo verde neón fluorescente, marcando el flujo de la metatoxina.
+
+### 🎯 Motivación: ¿Qué es lo que busca?
+* **La Emancipación Química:** Su meta absoluta (solo cuando está lúcido) es sintetizar una versión permanente de la metatoxina que le permita conservar su inteligencia de forma indefinida, libre de la dependencia y el control de Phobos.
+* **El Sabotaje Silencioso:** Utilizar las misiones que Phobos le encomienda para avanzar su propia agenda, manipulando los resultados desde adentro sin que el "Arquitecto del Pánico" pueda comprobar su traición de forma directa.
+
+### 🎭 Comportamiento y Personalidad
+* **La Bestia Sumisa (Base):** Gruñe, ataca ciegamente bajo las órdenes directas de sus captores y muestra una total apatía.
+* **El Aristócrata de la Crueldad (Mutado):** Habla con una elocuencia aterradora, adopta una postura erguida y elegante a pesar de su tamaño, y se deleita en la manipulación psicológica de sus enemigos antes de aplastarlos.
+
+### 🚀 Prompt de Generación (Datasheet)
+```text
+Character design datasheet of a colossal tactical brute named Gorgon. ROSTRO: heavy tactical respirator mask covering his nose and mouth, sharp brow. FÍSICO: massive 2.5-meter-tall hulking military build, thick veins, tactical restraint harness on back and neck with reinforced polymer hoses running to arms and temples, pulsing with glowing neon green liquid. VESTIMENTA: tattered dark leather tactical vest, worn cargo pants, heavy military boots. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+```
+
+---
+
+## 👿 4. APEX (El Operativo Estabilizado)
+
+Character design datasheet of an elite tactical military operative named Apex. ROSTRO: intense cold expression, sharp features, short-cropped black hair, vertical scar running over his left eye. FÍSICO: lean muscular athletic build, broad shoulders. VESTIMENTA: matte black tactical compression bodysuit, low-profile slate-grey chest armor plates, tactical combat gear harness, utility belt with pouches and thigh holsters. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+
+# 👿 Ficha de Diseño de Personaje: Apex (El Proyecto Estabilizado / Operativo del Gobierno)
+
+* **Categoría:** Antagonista / Antihéroe / Operativo del Gobierno.
+* **Inspiración:** Supersoldados militares, precisión balística y geometría táctica.
+
+### 👤 Perfil General
+"No es personal. Es solo que la trayectoria de mi bala y tu cabeza están destinadas a cruzarse."
+* **Arquetipo:** Agente táctico definitivo, frío, profesional, inmune al pánico.
+
+### 📊 Estadísticas y Atributos (Ficha Técnica)
+* **Rol:** El Proyecto Estabilizado / Operativo de Gobierno.
+* **Fórmula de Combate / Stats:**
+  * Fuerza: 7
+  * Inteligencia: 8
+  * Carisma: 5
+  * Suerte: 6
+  * Combate: 9
+  * Defensa: 7
+  * Especial (Fórmula Apex): 8
+* **Stats Amplificados (Poderes Activos):**
+  * Fuerza: 8 | Inteligencia: 9 | Carisma: 5 | Suerte: 6 | Combate: 10 | Defensa: 8 | Especial: 9
+* **Crisis / Debilidad:** Sobrecarga de Datos: Al depender de cálculos geométricos lógicos y flujos ordenados, los eventos de naturaleza cuántica, caótica o anomalías interdimensionales sin reglas físicas constantes ralentizan su procesamiento táctico y desestabilizan su puntería.
+
+### ⏳ Origen
+Tras los catastróficos incidentes causados por la metatoxina verde de Phobos en Nueva York, agencias secretas del gobierno confiscaron una muestra del compuesto químico. Científicos militares lograron sintetizar una variante molecularmente estable: la Fórmula Apex. El suero fue inyectado en su mejor operativo de campo. A diferencia de Gorgon, la toxina se asimiló limpiamente a nivel celular sin causar deformaciones físicas ni locura, optimizando su fisiología y conexiones neuronales al límite humano.
+
+### ⚡ Habilidades y Optimización Celular
+* **Cálculo Geométrico Balístico:** Su cerebro procesa de forma instantánea trayectorias, ángulos de rebote, velocidad del viento y gravedad. Es capaz de disparar a través de reflejos en espejos o cimientos para acertar objetivos fuera de su línea de visión directa.
+* **Fisiología Optimizada:** Velocidad de reacción, reflejos y agilidad sobrehumanos que le permiten esquivar disparos cercanos o combatir cuerpo a cuerpo a velocidades de parpadeo.
+* **Inmunidad Mental:** Su mente de acero es totalmente inmune a alucinaciones de pánico, manipulación psicológica o control mental debido a la estabilización de su corteza prefrontal por la Fórmula Apex.
+
+### 🎨 Aspecto y Estética Visual
+* **Aspecto Físico:** Un hombre de 38 años de rasgos afilados, mandíbula cuadrada, cabello negro muy corto estilo militar y una barba tupida y bien cuidada. Una cicatriz vertical marcada cruza su ojo izquierdo. Mirada fría y cansada.
+* **Indumentaria:** Un traje de compresión táctico negro mate de alta resistencia, con placas de armadura ligera de polímero gris pizarra en el pecho y hombros. Cinturón táctico utilitario, arneses de pecho y fundas rígidas para armas en los muslos.
+
+### 🎯 Motivación: ¿Qué es lo que busca?
+* **Cumplimiento del Deber:** Contener y neutralizar cualquier amenaza cuántica o anomalía mutante que ponga en peligro la seguridad nacional, incluyendo a los Pibes y a los esbirros de Phobos. Es un profesional que cumple órdenes sin cuestionar la moralidad de sus superiores.
+
+### 🎭 Comportamiento y Personalidad
+* **El Profesional Imperturbable:** Extremadamente pragmático, lacónico y directo. No se burla de sus oponentes ni muestra arrogancia. En combate es eficiente, silencioso y letal, buscando siempre la forma más rápida y limpia de terminar la misión.
+
+### 🚀 Prompt de Generación (Datasheet)
+```text
+Character design datasheet of an elite tactical military operative named Apex. ROSTRO: intense cold expression, sharp features, short-cropped black hair, vertical scar running over his left eye. FÍSICO: lean muscular athletic build, broad shoulders. VESTIMENTA: matte black tactical compression bodysuit, low-profile slate-grey chest armor plates, tactical combat gear harness, utility belt with pouches and thigh holsters. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+```
+
+---
+
+## 🤝 5. CARMILLA NOCTURNA (La Matriarca Vampira)
+
+Character design datasheet of a gothic female vampire named Carmilla Nocturna. ROSTRO: gothic elongated angular face, high cheekbones, pale porcelain skin, swept-back hair, fangs. FÍSICO: tall slender athletic body, narrow waist. VESTIMENTA: rich blood-crimson Victorian military coat with gold buttons and high collar, sweeping heavy black velvet commander's mantle, long black leather gloves. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+
+# 🤝 Ficha de Diseño de Personaje: Carmilla Nocturna (La Matriarca Vampira / La Reina de las Sombras)
+
+* **Categoría:** Personaje Secundario / Reina Vampiro / Aliada Ocasional.
+* **Inspiración:** Vampirismo clásico, elegancia gótica victoriana e inestabilidad vital.
+
+### 👤 Perfil General
+"He visto imperios caer en el polvo de la Corriente... y tú te crees especial por brillar un poco."
+* **Arquetipo:** Soberana gótica, predadora de las sombras, aliada pragmática de elegancia letal.
+
+### 📊 Estadísticas y Atributos (Ficha Técnica)
+* **Rol:** Reina Vampiro / Matriarca de las Sombras.
+* **Fórmula de Combate / Stats (Estado Saciado):**
+  * Fuerza: 8
+  * Inteligencia: 9
+  * Carisma: 8
+  * Suerte: 6
+  * Combate: 9
+  * Defensa: 7
+  * Especial (El Enjambre): 8
+* **Stats (Estado Hambriento):**
+  * Fuerza: 10 (Feral) | Inteligencia: 5 | Carisma: 2 | Suerte: 4 | Combate: 8 | Defensa: 6 | Especial: 9
+* **Crisis / Debilidad:** Dependencia de sangre vital: Si pasa demasiado tiempo sin drenar energía o sangre, envejece físicamente de golpe hasta los 50 años, perdiendo el control de su intelecto y convirtiéndose en una bestia salvaje y errática que ataca a cualquiera.
+
+### ⏳ Origen
+Carmilla es la matriarca de un antiguo linaje vampírico que ha habitado las zonas ocultas y los pliegues de la Corriente dimensional durante siglos. Ha gobernado sus tierras con puño de hierro y una elegancia implacable. Su alianza con los Pibes es estrictamente utilitaria: considera que los Backrooms y las aberraciones alquímicas de Phobos arruinan el ecosistema de la Corriente y envenenan la "cosecha" de la cual su especie se alimenta.
+
+### ⚡ Habilidades y Metamorfosis de Sombras
+* **El Enjambre (The Swarm State):** En combate, puede disolver instantáneamente partes de su cuerpo y su gran capa de terciopelo en una densa nube de murciélagos hechos de sombras y bruma de tinta negra. Esto le permite esquivar ataques físicos, reubicarse en el campo de batalla y atravesar barreras sólidas.
+* **Atributos Predatorios:** Garras retráctiles que cortan el metal táctico y colmillos capaces de inyectar veneno paralizante. Agilidad felina que le permite caminar por techos y paredes de forma silenciosa.
+* **Drenaje Vital:** Absorbe la energía cinética y la vitalidad de sus víctimas mediante el contacto directo de su piel o mordeduras, restaurando su juventud e intelecto instantáneamente.
+
+### 🎨 Aspecto y Estética Visual
+* **Aspecto Físico:** Facciones de óvalo gótico alargado, pómulos altos, mejillas sutilmente hundidas y labios definidos con arco de cupido marcado. Piel blanco porcelana pura.
+  * **Saciada (25 años):** Cabello largo castaño-rubio peinado pulcramente hacia atrás. Expresión magnética y controlada.
+  * **Hambrienta (50 años):** Rostro demacrado, arrugado e inhumano, cabello blanco puro y desordenado. Expresión de ira desorbitada.
+* **Indumentaria:** Un abrigo militar victoriano ajustado de color rojo carmesí brillante con botones dorados y cuello alto, guantes largos de cuero negro y una gran capa militar de terciopelo negro sobre sus hombros.
+
+### 🎯 Motivación: ¿Qué es lo que busca?
+* **Preservación del Ecosistema Multiversal:** Mantener el flujo de mundos limpio de infecciones cuánticas o metatoxinas de Phobos que destruyan la esencia vital de la cual se alimentan los suyos.
+* **Poder de Linaje:** Consolidar su dominio sobre las sombras de la Corriente.
+
+### 🎭 Comportamiento y Personalidad
+* **La Monarca Cínica:** Arrogante, refinada, manipuladora y con un desprecio absoluto por la vida humana ordinaria. Solo respeta a aquellos que demuestran una voluntad de hierro o un intelecto a la altura del suyo (como Ian o Maker).
+
+### 🚀 Prompt de Generación (Datasheet)
+```text
+Character design datasheet of a gothic female vampire named Carmilla Nocturna. ROSTRO: gothic elongated angular face, high cheekbones, pale porcelain skin, swept-back hair, fangs. FÍSICO: tall slender athletic body, narrow waist. VESTIMENTA: rich blood-crimson Victorian military coat with gold buttons and high collar, sweeping heavy black velvet commander's mantle, long black leather gloves. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+```
+
+---
+
+## 🤝 6. KHIONE FROST (La General del Hielo)
+
+Character design datasheet of a powerful African-American female general named Khione Frost. ROSTRO: broad square face, wide jaw, full lips, glowing emerald green eyes, long flowing pure white hair. FÍSICO: tall, highly toned and muscular build, defined shoulders and abs, deep dark skin tone. VESTIMENTA: forest-green tactical compression jumpsuit with sharp black accents, tactical gloves, heavy combat boots. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+
+# 🤝 Ficha de Diseño de Personaje: Khione Frost (La General del Hielo / El Escudo del Norte)
+
+* **Categoría:** Personaje Secundario / General / Aliada.
+* **Inspiración:** Fuerza física de nivel olímpico, crio-ira y resistencia nórdica militar.
+
+### 👤 Perfil General
+"Soy la tormenta que congela tus venas... y el escudo que tu fuego jamás podrá derretir."
+* **Arquetipo:** Líder militar implacable, guardiana protectora de rasgos de piedra y crio-ira destructiva.
+
+### 📊 Estadísticas y Atributos (Ficha Técnica)
+* **Rol:** General de la Corriente Helada / Guardiana Táctica.
+* **Fórmula de Combate / Stats (Estado Normal):**
+  * Fuerza: 8
+  * Inteligencia: 7
+  * Carisma: 7
+  * Suerte: 5
+  * Combate: 9
+  * Defensa: 8
+  * Especial (Crio-Ira): 8
+* **Stats Amplificados (Poderes Activos):**
+  * Fuerza: 10 | Inteligencia: 8 | Carisma: 7 | Suerte: 5 | Combate: 10 | Defensa: 10 | Especial: 9
+* **Crisis / Debilidad:** Calor Absoluto y sobrecalentamiento interno: Su crio-ira depende del mantenimiento de una baja temperatura interna. Si es expuesta a fuentes térmicas de plasma o fuego concentrado por mucho tiempo, su fuerza colapsa y entra en un estado de fatiga extrema.
+
+### ⏳ Origen
+Khione es una experimentada general militar nacida en los sectores helados y anómalos de la Corriente exterior. Habiendo liderado guarniciones enteras contra oleadas de criaturas de los Backrooms, desarrolló una resistencia física y mental inquebrantable. Su vida en condiciones extremas moldeó su rostro en una máscara inexpresiva de disciplina. Se unió a los Pibes para evitar que las facciones criminales de Vanguard colapsen los pilares que mantienen aislados los sectores helados de la Corriente.
+
+### ⚡ Habilidades y Crio-Ira
+* **Crio-Ira Destructiva (Glacial Rage):** Al desatar su ira en combate, su temperatura corporal desciende a bajo cero. Sus ojos brillan en verde esmeralda y su piel en hombros, nudillos y antebrazos se cubre de cristales de hielo denso y afilado que actúan como nudilleras y armadura natural.
+* **Fuerza Glacial (Glacial Uplift):** Su fuerza muscular se multiplica, permitiéndole arrancar vigas de acero, escombros industriales o placas de concreto congeladas del entorno para usarlas como armas de impacto devastadoras.
+* **Escudo de Escarcha:** Condensa la humedad del aire instantáneamente para generar muros de hielo denso capaces de absorber ráfagas de proyectiles tácticos.
+
+### 🎨 Aspecto y Estética Visual
+* **Aspecto Físico:** Femenino, muy alta y de musculatura imponente (inspirada en Jade Cargill), con hombros poderosos, abdominales tallados y cintura estrecha. Piel de tono oscuro profundo que resalta con su cabello blanco puro largo y ondulado. Rostro cuadrado y de mandíbula firme.
+* **Indumentaria:** Mono de compresión táctico en color verde bosque oscuro con costuras angulares negras, guantes tácticos de cuero verde oscuro y botas militares pesadas. Sin capas ni tecnologías superfluas.
+
+### 🎯 Motivación: ¿Qué es lo que busca?
+* **Orden Militar en el Caos:** Mantener las fronteras de los sectores helados libres de invasores e incursiones de bandas criminales corporativas, asegurando la supervivencia de sus tropas y refugiados.
+
+### 🎭 Comportamiento y Personalidad
+* **El Muro de Piedra:** Extremadamente seria, inexpresiva y estoica. Rara vez alza la voz, prefiriendo que la contundencia de sus actos hable por ella. Posee un sentido del honor militar inquebrantable y protege ferozmente a sus aliados.
+
+### 🚀 Prompt de Generación (Datasheet)
+```text
+Character design datasheet of a powerful African-American female general named Khione Frost. ROSTRO: broad square face, wide jaw, full lips, glowing emerald green eyes, long flowing pure white hair. FÍSICO: tall, highly toned and muscular build, defined shoulders and abs, deep dark skin tone. VESTIMENTA: forest-green tactical compression jumpsuit with sharp black accents, tactical gloves, heavy combat boots. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+```
+
+---
+
+## 🤝 7. VALERY (La Soberana del Grimorio)
+
+Character design datasheet of a sophisticated arcane scholar named Valery. ROSTRO: heart-shaped face, high cheekbones, arched brows, warm brown eyes, wearing round tortoiseshell glasses, long chestnut-brown wavy hair. FÍSICO: slender delicate build, soft non-athletic frame. VESTIMENTA: bohemian patterned midi dress, oversized knit cardigan, carrying an ancient dark leather spellbook with floating fluid black ink tendrils. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+
+# 🤝 Ficha de Diseño de Personaje: Valery (La Soberana del Grimorio)
+
+* **Categoría:** Personaje Independiente / Antiheroína / Bruja de la Tinta Primordial.
+* **Inspiración:** Grimorios antiguos, pactos de sangre, magia de tinta y fisonomía heart-shaped sofisticada.
+
+### 👤 Perfil General
+"La historia está escrita con tinta... pero yo controlo la tinta que escribe la historia."
+* **Conexión Especial con Vesper (Atracción en la Sombra):** Se cruzan en secreto en los rincones más oscuros del reino. Valery conoce su identidad, pero lo llama despectivamente Vesper, mofándose de su empeño por jugar a ser el salvador. Entre ellos hay una tensión magnética, un deseo intelectual y físico que nunca se concreta porque sus almas operan bajo leyes distintas: él usa la magia de forma ordenada (runas y ecuaciones); ella abraza el caos de las fuerzas prohibidas.
+* **Arquetipo:** El genio rebelde de las artes oscuras, la erudita que ascendió mediante magia prohibida, la antiheroína pragmática.
+
+### 📊 Estadísticas y Atributos (Ficha Técnica)
+* **Rol:** Hechicera de Control / Vanguardia Líquida / Fuerza Autónoma.
+* **Fórmula de Combate / Stats (Estado Humano):**
+  * Fuerza: 5
+  * Inteligencia: 10
+  * Carisma: 9
+  * Suerte: 5
+  * Combate: 8
+  * Defensa: 8
+  * Especial (Pacto del Grimorio): 10
+* **Stats Amplificados (Poderes Activos - Forma Monocromática):**
+  * Fuerza: 8 | Inteligencia: 10 | Carisma: 9 | Suerte: 5 | Combate: 8 | Defensa: 8 | Especial: 10
+* **Crisis / Debilidad (Vínculo del Libro):** Su control sobre la Tinta Viva depende por completo del grimorio antiguo de cuero oscuro. Si el libro es cerrado a la fuerza, destruido o separado de ella a gran distancia, la Tinta Viva se disuelve y ella queda vulnerable en su cuerpo humano ordinario sin defensas mágicas activas.
+
+### ⏳ Origen
+Valery era la Gran Erudita y Alquimista de la corte, encargada de descifrar los secretos de "La Corriente" (el flujo mágico del multiverso). En sus excavaciones de templos olvidados, desenterró un vestigio maldito: la Tinta Viva, el remanente líquido de una deidad muerta que contenía la historia y las leyes de realidades ya extintas. Cuando el rey intentó arrebatarle el hallazgo para usarlo como un arma de destrucción masiva, Valery demostró su verdadera naturaleza despiadada: saboteó los laboratorios reales y, mediante un ritual de transmutación de sangre, absorbió la Tinta Viva dentro de su propio cuerpo. Para evitar que la sustancia borrara su mente, encadenó el núcleo de la maldición a un grimorio antiguo de cuero oscuro. Dejó de ser una simple mortal para convertirse en la Soberana de la Tinta.
+
+### ⚡ Habilidades y Magia de Tinta
+* **Calamar de Sombras (Laceración):** Al abrir el Grimorio, la tinta brota de sus dedos y páginas en forma de espinas y látigos rígidos tan afilados como espadas de obsidiana. Puede empalar ejércitos enteros o cortar metal templado desde la distancia.
+* **Paso de Ceniza y Tinta:** Valery puede disolver su cuerpo monocromático en un charco de líquido oscuro en el suelo. En este estado, se desliza por las sombras del entorno a velocidades imposibles, burlando cualquier barrera física antes de rematerializarse detrás de su víctima.
+* **Unción Prohibida (Sinergia con Vesper):** Cuando combate al lado de Vesper, Valery puede recubrir las armas rúnicas de él con su Tinta Viva. El fluido oscuro actúa como un catalizador místico que sobrecarga las runas de Vesper con magia primordial, dándole un poder devastador que sus amigos héroes considerarían una aberración herética.
+* **Cosecha de Almas:** Cuando un enemigo cae, Valery puede usar los filamentos del libro para extraer su último aliento mágico, atrapándolo en una nueva página del Grimorio para estudiar y robar sus hechizos.
+
+### 🎨 Aspecto y Estética Visual
+* **Aspecto Físico:** Rostro con la fisionomía sofisticada y elegante de estructura heart-shaped, pómulos altos, mandíbula tapered y cejas arqueadas refinadas.
+  * **Humana (La Erudita):** Cabello ondulado castaño chocolate, lentes ovalados de carey marrón, vestido midi bohemio con patrones de plantas apagadas y un cárdigan tejido holgado. Expresión calculadora.
+  * **Forma Monocromática (La Soberana):** Se transforma en una imponente figura de cómic de fantasía oscura en blanco y negro puro. Su cabello se vuelve una corona de espinas rígidas de tinta mate y la ropa se funde en su armadura líquida con hombreras góticas y filamentos flotantes. Sus ojos marrones brillan intensamente como el único rastro de color de todo su ser.
+
+### 🎯 Motivación: ¿Qué es lo que busca?
+* **La Autonomía Absoluta frente al Destino:** Sabe que el multiverso está condenado a colapsar y considera que los humanos comunes son solo ceniza en potencia. Utiliza su grimorio para absorber la esencia y la magia de criaturas místicas poderosas, buscando reescribir su propia alma para volverse una entidad eterna.
+* **Corromper a Vesper:** Lo ve como el único hombre lo suficientemente brillante para sobrevivir. Quiere empujarlo a aceptar que para salvar el mundo primero debe reclamar el derecho a gobernarlo como un dios.
+
+### 🎭 Comportamiento y Personalidad
+* **La Erudita Calculadora (Humana):** De modales refinados y aristocráticos, paciente e intelectualmente curiosa. Habla con calma y ofrece consejos estratégicos.
+* **La Soberana del Caos (Monocromática):** Adopta una actitud de frialdad absoluta y superioridad arcana. Se deleita en el caos y el despliegue de su poder, actuando de forma implacable y carente de empatía humana.
+
+### 🚀 Prompt de Generación (Datasheet)
+```text
+Character design datasheet of a sophisticated arcane scholar named Valery. ROSTRO: heart-shaped face, high cheekbones, arched brows, warm brown eyes, wearing round tortoiseshell glasses, long chestnut-brown wavy hair. FÍSICO: slender delicate build, soft non-athletic frame. VESTIMENTA: bohemian patterned midi dress, oversized knit cardigan, carrying an ancient dark leather spellbook with floating fluid black ink tendrils. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles
+```

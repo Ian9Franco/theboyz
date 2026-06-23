@@ -88,3 +88,19 @@ Guía de estilo y reglas de escritura para estructurar guiones de páginas de c�
 * **Diálogos Cerebrales y Maduros:** Personajes expresivos con elocuencia reflexiva y contenida. La tensión se transmite a través del subtexto y lo no dicho en lugar de explicaciones teatrales o gritos.
 * **Micro-Reacciones Silenciosas:** Viñetas dedicadas a capturar el lenguaje corporal, expresiones de fatiga y planos detalle de objetos cotidianos que cargan significado simbólico (un reloj, una taza, una herramienta).
 * **Simetría y Orden:** Estructura de grilla ordenada y limpia que refleje control, rompiéndose rítmicamente solo en giros argumentales críticos o revelaciones extremas.
+
+
+
+
+#### prompt para crear la sheet de aspecto de personaje:
+
+**Character model sheet, reference turnaround, comic book character design sheet. Same hand-inked comic art style as the established house style — clean organic ink line defining all form and volume, flat hard-edged cel-shading, color is flat and secondary to the line. Three views of the same character on a single sheet: front view, three-quarter view, and side profile view, full body, neutral standing pose, arms relaxed, no dynamic action. Plain flat neutral grey or white background, no scenery, no props, no environment. Flat, even, neutral studio lighting — no dramatic shadows, no colored lighting, no backlighting, no rim light, no atmospheric effects. Accurate true-to-reference skin tone rendered as a flat color block with hard-edge shading only, NOT a warm amber/sepia wash. Precise, consistent facial features, hairstyle, body proportions and outfit matching the reference image exactly. NO 3D render, NO photorealism, NO photographic specular highlights, NO airbrushed gradients, NO color grading filter, NO background, NO text, NO labels, NO speech bubbles, NO panel borders, NO watermark.**
+
+
+
+
+#### prompt para generar las fichas:
+
+**Prompt para la imagen: Character concept design sheet of [DESCRIPCIÓN DEL PERSONAJE: Ej. a rugged man with messy black hair and a dark tech-jacket]. Premium independent comic book and graphic novel style, hand-drawn and inked, mature illustration. Strong clean linework with variable thickness, high-contrast heavy ink brushstrokes, deep black shadows, traditional cross-hatching and halftone dot textures. No 3D renders, no digital glows. Sophisticated cinematic palette with desaturated dark blues, cold indigos, and stark neon [COLOR DE ACENTO: Ej. electric pink] accents. Flat colors with hard-edge cel-shading, matte paper texture. Front view and detail view panels separated by clean black borders.**
+
+

@@ -277,5 +277,37 @@ export const secundarios: CharacterDetail[] = [
       crisis: 'Aislamiento de Metal: En entornos completamente desprovistos de materiales ferrosos u orgánicos con magnetismo, su poder ofensivo disminuye drásticamente.',
       stats: { fuerza: 7, inteligencia: 9, carisma: 9, suerte: 6, combate: 9, defensa: 10, especialVal: 10 }
     }
+  },
+  {
+    id: 'valery',
+    name: 'Valery',
+    category: 'independientes',
+    isSecondary: true,
+    image: '/personajes/SECUNDARIOS/Valery/Valery_ficha.webp',
+    fullBody: '/personajes/SECUNDARIOS/Valery/Valery.webp',
+    altImage: '/personajes/SECUNDARIOS/Valery/Valery_sheet_alt.webp',
+    color: '#1e1b4b',
+    role: 'Bruja de la Tinta Primordial / Antiheroína',
+    visualCode: 'Grimorio antiguo de cuero oscuro, vestido midi bohemio, lentes de carey',
+    perfil: [
+      'Erudita y Alquimista: Saboteó los laboratorios reales para absorber la Tinta Viva en su cuerpo, encadenando su mente a un grimorio oscuro.',
+      'Forma Monocromática: Al desatar el libro, la Tinta Viva devora la luz y el color de su entorno, transformándola en una ilustración de alto contraste.',
+      'Atracción en la Sombra: Mantiene una tensión intelectual y física secreta con Vesper, mofándose de su brújula moral e intento de ser un héroe.'
+    ],
+    crisis: 'Vínculo del Libro: Si el grimorio es cerrado, destruido o separado de ella, la Tinta Viva se disuelve y pierde sus defensas y poder mágico.',
+    stats: { fuerza: 5, inteligencia: 10, carisma: 9, suerte: 5, combate: 8, defensa: 8, especialVal: 10 },
+    especialLabel: 'Pacto del Grimorio',
+    powers: {
+      role: 'Soberana de la Tinta',
+      habilidades: [
+        'Calamar de Sombras: Lanza espinas y látigos rígidos de tinta de obsidiana desde sus manos o páginas del grimorio.',
+        'Paso de Ceniza y Tinta: Se disuelve en un charco de líquido oscuro para deslizarse por las sombras antes de materializarse.',
+        'Unción Prohibida: Recubre las runas de Vesper con Tinta Viva, catalizando su magia en un poder devastador.'
+      ],
+      significa: 'Hechicera de Control y Vanguardia Líquida. Absorbe la esencia mágica de seres caídos y controla el campo con fluidos oscuros.',
+      crisis: 'Consumo Vital: La Tinta Viva se alimenta de su propia fuerza vital, debilitando su cuerpo físico si se usa por tiempo prolongado.',
+      stats: { fuerza: 8, inteligencia: 10, carisma: 9, suerte: 5, combate: 8, defensa: 8, especialVal: 10 }
+    }
   }
 ];
+

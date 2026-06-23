@@ -1,17 +1,31 @@
 const fs = require('fs');
 const path = require('path');
 
-const GUIAS_DIR = path.join(__dirname, '..', 'public', 'personajes', 'GUIAS', 'boyz');
+const GUIAS_BASE_DIR = path.join(__dirname, '..', 'public', 'personajes', 'GUIAS');
 const OUTPUT_FILE = path.join(__dirname, '..', 'lib', 'characterData', 'conceptArts.ts');
 
+// Map directory names inside boyz, antagonistas, or Secundarios to character IDs
 const FOLDER_TO_CHAR = {
+  // Boyz
   'VESPERWING': 'ian',
   'ORACLE': 'jaz',
   'WILDCARD': 'julian',
   'SWAPFIRE': 'mati',
   'AEGIS': 'uandi',
   'VECTOR': 'volvo',
-  'HUSH': 'sofi'
+  'HUSH': 'sofi',
+  
+  // Antagonistas
+  'phobos': 'phobos',
+  'gorgon': 'gorgon',
+  'apex': 'apex',
+  'maker': 'maker',
+  'victor': 'victor',
+  'don vanguard': 'don',
+  'r.e.g.u.l.a.r': 'comandante',
+
+  // Secundarios
+  'valery': 'valery'
 };
 
 const IMAGE_EXTENSIONS = new Set(['.webp', '.png', '.jpg', '.jpeg']);
@@ -61,20 +75,28 @@ function generate() {
   console.log('Generating concept arts mapping...');
   const mapping = {};
   
-  const folders = fs.readdirSync(GUIAS_DIR, { withFileTypes: true });
-  for (const folder of folders) {
-    if (folder.isDirectory()) {
-      const charId = FOLDER_TO_CHAR[folder.name];
-      if (!charId) continue;
-      
-      const charDir = path.join(GUIAS_DIR, folder.name);
-      const urlPrefix = `/personajes/GUIAS/boyz/${folder.name}`;
-      
-      const mainImages = getImagesInDir(charDir, urlPrefix, false);
-      const altDir = path.join(charDir, 'alt');
-      const altImages = getImagesInDir(altDir, `${urlPrefix}/alt`, true);
-      
-      mapping[charId] = [...mainImages, ...altImages];
+  const categories = ['boyz', 'antagonistas', 'Secundarios'];
+  
+  for (const category of categories) {
+    const categoryDir = path.join(GUIAS_BASE_DIR, category);
+    if (!fs.existsSync(categoryDir)) continue;
+    
+    const folders = fs.readdirSync(categoryDir, { withFileTypes: true });
+    for (const folder of folders) {
+      if (folder.isDirectory()) {
+        const charKey = folder.name.toLowerCase();
+        const charId = FOLDER_TO_CHAR[folder.name] || FOLDER_TO_CHAR[charKey];
+        if (!charId) continue;
+        
+        const charDir = path.join(categoryDir, folder.name);
+        const urlPrefix = `/personajes/GUIAS/${category}/${folder.name}`;
+        
+        const mainImages = getImagesInDir(charDir, urlPrefix, false);
+        const altDir = path.join(charDir, 'alt');
+        const altImages = getImagesInDir(altDir, `${urlPrefix}/alt`, true);
+        
+        mapping[charId] = [...mainImages, ...altImages];
+      }
     }
   }
   

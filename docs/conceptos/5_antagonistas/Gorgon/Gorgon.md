@@ -1,55 +1,71 @@
-# 👿 Ficha de Diseño de Personaje: Gorgon (El Gigante de Metatoxina / Ejecutor Mutado)
+# 👿 Ficha de Diseño de Personaje: Gorgon (El titán de la Metatoxina)
 
-* **Categoría:** Antagonista Secundario.
-* **Origen:** Un colosal experimento físico sometido a cirugías invasivas por Phobos para instalarle puertos y mangueras, convirtiéndolo en el contenedor y ejecutor de su metatoxina verde.
+* **Categoría:** Antagonista Secundario / Rival Interno.
+* **Inspiración:** Bane (Absolute DC), thriller de conspiración militar, guerra fría mental.
 
-* **Modus Operandi (El Experimento y Lacayo):**
-    * **Estado Base (El Ejecutor):** Sin el químico en sus venas, es un gigante tosco, encorvado y pesado que actúa como un letal pero predecible ariete de fuerza bruta.
-    * **Estado Alterado (El Intelecto):** Bajo la toxina, sus venas brillan de verde neón y sus músculos se expanden dramáticamente. Su intelecto se enciende, transformándolo en un ser hiperinteligente, sádico y refinado.
+## 👤 Perfil General
+* **En Estado Base:** *"[Gruñidos de pesadez y respiración mecánica e industrial]"*.
+* **En Estado Alterado:** *"Phobos cree que me controla porque me dio la llave de mi propia jaula... pero olvida que una mente perfecta siempre encuentra la forma de abrir el candado."*
+* **Arquetipo:** El gigante encadenado, el genio prisionero de su propia fuerza, el ejecutor resentido.
 
 ***
 
 ## 📊 Estadísticas y Atributos (Ficha Técnica)
 
-* **Rol:** El Gigante de Metatoxina / Ejecutor Mutado
+* **Rol:** Ejecutor Táctico Mutado / Fuerza de Choque.
 * **Fórmula de Combate / Stats (Estado Base):**
   * **Fuerza:** 10
-  * **Inteligencia:** 4
-  * **Carisma:** 5
+  * **Inteligencia:** 4 (Tosco, reactivo y pesado)
+  * **Carisma:** 4
   * **Suerte:** 5
   * **Combate:** 8
   * **Defensa:** 9
-  * **Especial (Metatoxina):** 6
-* **Crisis / Debilidad:** **Dualidad cognitiva:** En su estado base es predecible y tosco; en su estado alterado florece un intelecto refinado que odia su sumisión y planea rebelarse de Phobos.
+  * **Especial (Metatoxina Durmiente):** 6
+* **Crisis / Debilidad (La Trampa del Olvido):** Al regresar a su estado base, Gorgon olvida los detalles finos de sus planes de rebelión, quedando a merced de Phobos hasta la siguiente dosis.
 
 ***
 
-## ⚡ Poderes y Habilidades Especiales (El Intelecto Mutado)
+## ⚡ El Estado Alterado (El Intelecto Despierto)
+Cuando la metatoxina inunda su sistema, no solo su cuerpo se expande; su cerebro se hiperconecta, convirtiéndolo en un erudito táctico que desprecia la locura de Phobos y busca su propia libertad.
 
-* **Significado Narrativo:** El titán cerebral. Una fuerza imparable cuyo mayor peligro no es la musculatura mutada, sino la mente calculadora que despierta el químico.
-* **Estadísticas Amplificadas (Poderes Activos - Estado Alterado):**
-  * **Fuerza:** 11 | **Inteligencia:** 10 | **Carisma:** 8 | **Suerte:** 6 | **Combate:** 9 | **Defensa:** 10 | **Especial:** 10
-* **Crisis de Poder:** **Purga química:** Si se cortan o sabotean las mangueras de metatoxina, su sistema colapsa regresando a su estado base tosco y vulnerable.
+* **Stats Amplificados (Estado Alterado):**
+  * **Fuerza:** 11 (Poder devastador)
+  * **Inteligencia:** 10 (Genio analítico y calculador)
+  * **Carisma:** 8 (Presencia imponente y comandante)
+  * **Suerte:** 6
+  * **Combate:** 10 (Precisión marcial perfecta)
+  * **Defensa:** 10
+  * **Especial (Sobrecarga Cognitiva):** 10
 
-### Habilidades:
-1. **Carga de Toxina:** Bombea metatoxina verde para expandir su musculatura y encender su sistema nervioso.
-2. **Hiperreflexia Refinada:** En estado mutado, predice trayectorias y diseña tácticas analíticas crueles en milisegundos.
-3. **Embate Sísmico:** Descarga su colosal fuerza física amplificada contra el suelo para desestabilizar el entorno.
+* **La Paradoja de la Toxina (Dinámica con Phobos):** Ambos saben que están atrapados. Phobos necesita la fuerza y el brillo táctico de Gorgon para sus planes a gran escala; Gorgon necesita el suministro químico de Phobos para mantener su genio. Cuando está lúcido, Gorgon altera registros, sabotea suministros y deja pistas ocultas para su "yo del futuro" antes de que el químico se evapore y vuelva a ser un lacayo dócil. Phobos lo sabe, lo vigila como quien juega al ajedrez con una bomba de tiempo, y disfruta el reto.
 
 ***
 
-## 🎨 Aspecto y Estética Visual
+## 🛠️ Habilidades en Combate Táctico
+* **Inyección de Comando:** Activa de forma neumática el flujo del químico, generando una expansión muscular masiva y un encendido neuronal instantáneo.
+* **Análisis Predictivo de Impacto:** En estado alterado, Gorgon no golpea a ciegas; calcula los puntos de tensión estructural del entorno o los puntos débiles del oponente en milisegundos, logrando una eficiencia destructiva perfecta.
+* **Supresión Física Industrial:** Utiliza su imponente masa para someter y asfixiar el entorno mediante impactos de choque y control de área.
 
-* **Estética General:** Un gigante imponente de musculatura sobredimensionada, postura encorvada en su estado base y erguida/amenazante en su estado mutado. Lleva un respirador táctico pesado y un chaleco de cuero oscuro rasgado que permite ver los puertos implantados.
-* **Mangueras Industriales:** Mangueras industriales conectadas directamente a su cabeza, cuello y brazos que bombean la brillante metatoxina verde a través de su cuerpo.
-* **Brillo Green Neón:** Cuando la metatoxina se activa, sus venas y las mangueras brillan intensamente con un color verde neón fluorescente.
+***
+
+## 🎨 Aspecto y Estética Visual (Optimizado para IA)
+* **Estética General:** Un titán de proporciones militares, con una postura encorvada y masiva en estado base, que se yergue con una postura aristocrática, fría y amenazante cuando su intelecto despierta.
+* **El Sistema de Conducción:** Arnés táctico de sujeción industrial integrado a su espalda y cuello. De este arnés nacen mangueras de polímero reforzado que canalizan el compuesto hacia sus terminales nerviosas, evitando términos médicos agresivos que activen filtros.
+* **El Respirador de Filtrado:** Lleva una máscara blindada o respirador industrial pesado que cubre la mitad inferior de su rostro, ocultando su expresión y emitiendo un sonido de escape neumático constante.
+* **Luminiscencia Química:** Al activarse, las mangueras reforzadas y una red geométrica de venas tácticas a lo largo de sus brazos y sienes se encienden con un brillo verde neón fluorescente, marcando el flujo de la metatoxina.
+
+***
+
+## 🎯 Motivación: ¿Qué es lo que busca?
+* **La Emancipación Química:** Su meta absoluta (solo cuando está lúcido) es sintetizar una versión permanente de la metatoxina que le permita conservar su inteligencia de forma indefinida, libre de la dependencia y el control de Phobos.
+* **El Sabotaje Silencioso:** Utilizar las misiones que Phobos le encomienda para avanzar su propia agenda, manipulando los resultados desde adentro sin que el "Arquitecto del Pánico" pueda comprobar su traición de forma directa.
 
 ***
 
 ## 🖼️ Recursos Visuales
 
 ### Ilustración Ficha:
-![Gorgon Ficha](../../../../public/personajes/Antagonistas/Gorgon/gorgon_ficha.webp)
+![Gorgon Ficha](../../../../public/personajes/Antagonistas/Gorgon/Gorgon_ficha.jpeg)
 
 ### Ilustración General (Cuerpo Completo):
-![Gorgon](../../../../public/personajes/Antagonistas/Gorgon/gorgon.png)
+![Gorgon](../../../../public/personajes/Antagonistas/Gorgon/Gorgon.png)

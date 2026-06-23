@@ -1,63 +1,78 @@
-# 👿 Ficha de Diseño de Personaje: Phobos (El Joker de los Backrooms / Estratega de Frecuencia)
+# 👿 Ficha de Diseño de Personaje: Phobos (El Arquitecto del Pánico)
 
-* **Categoría:** Antagonista Secundario.
-* **Origen:** Al igual que los chicos, fue un humano común que cayó en los Backrooms. Tras pasar años atrapado en el laberinto, sobrevivió adaptándose y manifestando una inestabilidad cuántica menor: cuando su adrenalina se dispara, sus bordes corporales y su voz sufren un "efecto glitch" (estática analógica real). Sin embargo, el costo fue la destrucción total de su psique. Regresó al mundo real completamente roto, transformado en un nihilista extremo que idolatra el caos.
+* **Categoría:** Antagonista Principal / Mente Maestra Táctica.
+* **Inspiración:** Thriller psicológico, horror industrial, privación sensorial táctica.
 
-* **Modus Operandi (El Teatro del Trauma):**
-    Su forma favorita de asesinato es el secuestro psicológico. Usando fallas de la realidad que solo él conoce, empuja a sus víctimas dentro de los Backrooms. No las mata él mismo; prefiere convertirse en un espectador invisible. Sigue a sus víctimas desde los conductos o las sombras, disfrutando de forma sádica cómo se degrada su cordura por el aislamiento y el miedo, hasta que las anomalías del lugar las devoran. Para él, ver a un humano cuerdo convertirse en un animal desesperado es el remate de su chiste.
+## 👤 Perfil General
+"La moralidad es un error de cálculo... un límite artificial que yo ya he superado."
+
+* **Arquetipo:** Genio táctico corrompido, depredador psicológico, estratega implacable libre de empatía.
 
 ***
 
 ## 📊 Estadísticas y Atributos (Ficha Técnica)
 
-* **Rol:** El Joker de los Backrooms / Estratega de Frecuencia
+* **Rol:** Mente Maestra / Torturador Psicológico.
 * **Fórmula de Combate / Stats:**
-  * **Fuerza:** 5
-  * **Inteligencia:** 10
-  * **Carisma:** 6
+  * **Fuerza:** 6
+  * **Inteligencia:** 10 (Genio absoluto y analítico)
+  * **Carisma:** 6 (Manipulación fría)
   * **Suerte:** 5
-  * **Combate:** 6
-  * **Defensa:** 5
-  * **Especial (Teatro del Trauma):** 9
-* **Crisis / Debilidad:** **Inestabilidad mental:** Sus brotes psicóticos y obsesión con la agonía ajena pueden distraerlo de variables imprevistas en su plan.
+  * **Combate:** 7 (Estilo militar y punzante)
+  * **Defensa:** 6
+  * **Especial (Geometría del Trauma):** 10
+* **Crisis / Debilidad (Arrogancia Absoluta):** Su convicción de que la esperanza y la ética son fallas lógicas lo lleva a subestimar los sacrificios irracionales que los héroes están dispuestos a hacer por los demás.
 
 ***
 
-## ⚡ Poderes y Habilidades Especiales (El Titiritero de los Backrooms)
+## ⏳ Origen: El Proyecto "Phobos"
+Originalmente, él era el estratega y científico militar más brillante del gobierno, encargado de desarrollar un suero experimental diseñado para suprimir el miedo y optimizar la eficiencia neuronal de los soldados en combate. En un accidente de laboratorio —o quizás en un acto de autosacrificio calculado—, se expuso voluntariamente al Compuesto Alfa original en su estado más puro y concentrado.
 
-* **Significado Narrativo:** El director del laberinto. Desestabiliza la cordura mediante la teatralidad y el control absoluto del trauma visual.
-* **Estadísticas Amplificadas (Poderes Activos):**
-  * **Fuerza:** 5 | **Inteligencia:** 10 | **Carisma:** 7 | **Suerte:** 6 | **Combate:** 7 | **Defensa:** 6 | **Especial:** 10
-* **Crisis de Poder:** **Señal analógica:** Su equipamiento y visera dependen de frecuencias electromagnéticas analógicas; una interferencia cuántica o de plasma anula su visión.
+El químico no eliminó el miedo de su sistema; en su lugar, extirpó por completo su capacidad de sentir empatía, liberando un sadismo absoluto mientras dejaba su intelecto táctico intacto e hiperdesarrollado. Al ver el monstruo que habían creado, el gobierno clausuró el proyecto y selló los archivos, pero ya era tarde: el científico había muerto, y en su lugar nació Phobos, el Arquitecto del Pánico.
 
-### Habilidades:
-1. **Cámara de Agonía:** Su visera ciega de metal transmite en vivo el sufrimiento de sus presas, dándole información táctica instantánea del entorno.
-2. **Distorsión de Entorno:** Genera líneas de interferencia de televisión vieja y ruido blanco analógico que bloquean señales y quiebran la orientación de sus objetivos.
-3. **Transmisión Forzada:** Hackea y secuestra frecuencias y pantallas de la ciudad para reproducir transmisiones distorsionadas y sembrar pánico social.
+***
+
+## ⚡ Habilidades y Control de Entorno
+* **Aparato de Frecuencia de Risa:** Su risa maníaca no es solo un rasgo psicológico; está modulada por los implantes neurológicos y el daño del químico en sus cuerdas vocales. Emite una frecuencia acústica sutil que altera el sistema nervioso de quienes la escuchan, provocando náuseas, desorientación espacial y ataques de pánico involuntarios.
+* **El Diseñador de Dilemas:** Su mayor habilidad es la guerra psicológica. Gracias a su mente militar, no ataca al azar; diseña escenarios y trampas donde sus objetivos se ven obligados a tomar decisiones éticamente devastadoras. Su sadismo radica en ver cómo la mente de sus presas se quiebra por pura lógica.
+* **Tránsito Liminal:** Capaz de usar las esquinas y los espacios liminales de los Backrooms como un nexo táctico personal. Desaparece de la realidad tridimensional y reaparece de forma impredecible en los puntos ciegos de sus víctimas.
+* **Estilo de Combate Purgante:** Cuando se ve forzado al combate físico, no pelea como un monstruo salvaje, sino con una precisión quirúrgica e industrial. Utiliza herramientas de restricción, cables de tensión pesados y hojas de aleación oscura.
 
 ***
 
 ## 🎨 Aspecto y Estética Visual
+* **Aspecto Físico:** De una delgadez militar y rígida. Su piel tiene un tono pálido, ceniciento y artificial, como la porcelana agrietada. Su rostro permanece estático en una sonrisa tensa, fija y exagerada; una expresión de alegría maníaca que nunca llega a sus ojos y que resulta profundamente perturbadora.
+* **Indumentaria (Estilo Táctico / Restricción):** Viste una gabardina larga de cuero negro balístico y pesado, reforzada con múltiples correas de sujeción, hebillas cromadas y un cuello alto rígido que enmarca su rostro. Evoca la estética de una camisa de fuerza militar de alta costura.
+* **El Visor de Aleación:** Sobre sus sienes y cubriendo completamente sus ojos, lleva un visor angular de hierro oscuro pulido con pinchos geométricos agresivos. Esta pieza lo priva de la vista externa, obligándolo a guiar sus movimientos mediante la percepción táctica y el sonido.
 
-* **Estética General:** Un hombre maduro (aproximadamente 45 años), de complexión delgada, piel extremadamente pálida por los años sin sol y aspecto demacrado. Viste una gabardina de lona negra muy larga y gastada, remendada toscamente con alambres, cintas y componentes analógicos expuestos. Su postura suele ser encorvada y pesada, pero se vuelve espasmódica y teatral cuando el caos comienza.
+***
 
-* **La Máscara Blindada / Visera Ciega (Utilidad Demencial y Perversa):**
-    No usa la máscara por estética ni por ocultar su identidad; es una herramienta sádica de diseño propio de metal y cuero remachado, con cables de cobre expuestos hacia atrás, que le cubre los ojos por completo. La máscara tiene dos funciones perversas conectadas directamente a su cerebro:
-    1. **Sintonía a Distancia (Cámara de Agonía):** Cuando camina por el mundo real, la visera ciega le transmite en vivo (mediante pantallas internas y audio directo a sus oídos) las transmisiones de los sensores y micrófonos que planta en los Backrooms, permitiéndole "disfrutar" de la agonía de sus víctimas atrapadas mientras simula ceguera ante la gente normal.
-    2. **Visor de Cacería:** Cuando está cara a cara con una presa, la máscara bloquea toda la luz común y sintoniza exclusivamente las frecuencias electromagnéticas del miedo y el cortisol humano. El mundo para él es negro, y sus víctimas brillan en la oscuridad según el pánico que sienten. Si la víctima se calma, él la pierde de vista; por eso les habla, se burla y genera desorden constante: necesita mantener el terror alto para poder "verlas" y cazarlas.
+## 👥 Las Mascotas: Los Hounds
+Las dos figuras que Phobos arrastra rígidamente mediante pesadas cadenas de hierro oxidado son Hounds extraídos de las profundidades de los Backrooms:
+* Son masas imponentes y biomecánicas compuestas por filamentos de cables negros y estructuras angulares que imitan la silueta de sabuesos semi-humanoides.
+* Bajo sus órdenes directas, emiten silbidos industriales y alarmas distorsionadas que paralizan a los objetivos, cazando con una sincronización mecánica perfecta junto a su amo.
 
-* **El Rostro y la Sonrisa Humana:**
-    La máscara termina justo arriba de su labio superior, dejando su boca humana y su barba de varios días completamente expuestas. Phobos no sonríe todo el tiempo; la mayor parte del tiempo mantiene una expresión fría, cansada y apática bajo el metal de la visera. **Cuando sonríe, es el momento más peligroso:** su boca se estira de una manera exageradamente grande, grotesca y antinatural. Significa que ha encontrado el "remate" del chiste, que su plan encajó a la perfección y que está a punto de desatar una violencia seca y letal, deformando la realidad circundante con estática analógica y ruido blanco.
+***
+
+## 🎯 Motivación: ¿Qué es lo que busca?
+* **La Ecuación de la Caída:** Romper sistemáticamente a los individuos más incorruptibles del mundo, demostrando a través de planes fríamente calculados que la moralidad es solo una debilidad de diseño.
+* **El Teatro de la Crueldad:** Rediseñar la sociedad bajo sus propios términos. Para Phobos, el colapso del orden social y las risas histéricas de quienes pierden la cordura son el único estado de evolución lógica para la humanidad.
+
+***
+
+## 🎭 Comportamiento y Personalidad
+* **El Monolito Frío:** Mientras planifica o da órdenes, es una figura de hielo. Mantiene una postura militar, rígida y silenciosa. Es el estratega perfecto que observa los acontecimientos desde las sombras, calculando cada variable física y psicológica.
+* **El Verdugo Teatral:** Al ejecutar la fase final de su caza, su lenguaje corporal cambia. Adopta posturas ligeramente inclinadas, exageradas y fluidas. Su sonrisa fija se vuelve el centro de atención mientras desata su risa de frecuencia, disfrutando de la caída de su presa con la satisfacción de un artista que ve terminada su obra maestra.
 
 ***
 
 ## 🖼️ Recursos Visuales
 
 ### Ilustración Ficha:
-![Phobos Ficha](../../../../public/personajes/Antagonistas/PHOBOS/phobos_ficha.webp)
+![Phobos Ficha](../../../../public/personajes/Antagonistas/Phobos/Phobos_ficha.jpeg)
 
 ### Ilustración General (Cuerpo Completo):
-![Phobos](../../../../public/personajes/Antagonistas/PHOBOS/phobos.webp)
+![Phobos](../../../../public/personajes/Antagonistas/Phobos/Phobos.png)
 
 ### Versión Alternativa:
-![Phobos Alt](../../../../public/personajes/Antagonistas/PHOBOS/alt.webp)
+![Phobos Alt](../../../../public/personajes/Antagonistas/Phobos/Phobos_alt.png)

@@ -37,30 +37,30 @@ export const antagonistas: CharacterDetail[] = [
     name: 'Phobos',
     category: 'antagonistas',
     isSecondary: true,
-    image: '/personajes/Antagonistas/PHOBOS/phobos_ficha.webp',
-    fullBody: '/personajes/Antagonistas/PHOBOS/phobos.webp',
-    altImage: '/personajes/Antagonistas/PHOBOS/alt.webp',
+    image: '/personajes/Antagonistas/Phobos/Phobos_ficha.webp',
+    fullBody: '/personajes/Antagonistas/Phobos/Phobos.webp',
+    altImage: '/personajes/Antagonistas/Phobos/Phobos_alt.webp',
     color: '#334155',
-    role: 'El Joker de los Backrooms / Estratega de Frecuencia',
-    visualCode: 'Visera ciega de metal y cuero remachado, cables de cobre expuestos hacia atrás, gabardina de lona negra muy larga',
+    role: 'El Arquitecto del Pánico / Mente Maestra Táctica',
+    visualCode: 'Gabardina de cuero negro balístico pesado con correas y hebillas, cuello rígido, visor angular de hierro oscuro con pinchos geométricos',
     perfil: [
-      'Mente maquiavélica: Un estratega brillante que diseña planes meticulosos para aislar a sus víctimas en el laberinto. Controla totalmente la situación y prefiere el "Teatro del Trauma" antes que los combates directos.',
-      'Lenguaje corporal teatral: Su postura fría y apática esconde a un actor de teatro macabro durante la cacería, realizando movimientos exagerados e inclinando la cabeza ante una sinfonía inaudible.',
-      'Firma de distorsión: Su presencia deforma la realidad circundante con estática analógica y ruido blanco. Cuando sonríe con muecas maníacas grotescas, la interferencia visual quiebra la cordura de sus presas.'
+      'Genio táctico corrompido: Originalmente el científico militar más brillante del gobierno. Se expuso voluntariamente al Compuesto Alfa original, eliminando su empatía y liberando un sadismo absoluto.',
+      'El monolito frío: Mientras planifica, mantiene una rigidez militar silenciosa y una boca plana sin sonrisa, calculando variables físicas y psicológicas diez pasos por delante de todos.',
+      'El verdugo teatral: Al ejecutar su caza, adopta posturas exageradas, inclinadas y fluidas. Su sonrisa fija de porcelana y su risa maníaca de frecuencia distorzada quiebran la cordura de sus presas.'
     ],
-    crisis: 'Inestabilidad mental: Sus brotes psicóticos y obsesión con la agonía ajena pueden distraerlo de variables imprevistas en su plan.',
-    stats: { fuerza: 5, inteligencia: 10, carisma: 6, suerte: 5, combate: 6, defensa: 5, especialVal: 9 },
-    especialLabel: 'Teatro del Trauma',
+    crisis: 'Arrogancia absoluta: Su convicción de que la esperanza y la ética son fallas lógicas lo lleva a subestimar los sacrificios irracionales que los héroes están dispuestos a hacer.',
+    stats: { fuerza: 6, inteligencia: 10, carisma: 6, suerte: 5, combate: 7, defensa: 6, especialVal: 10 },
+    especialLabel: 'Geometría del Trauma',
     powers: {
-      role: 'El Titiritero de los Backrooms',
+      role: 'El Diseñador de Dilemas',
       habilidades: [
-        'Cámara de Agonía: Su visera ciega de metal transmite en vivo el sufrimiento de sus presas, dándole información táctica instantánea del entorno.',
-        'Distorsión de Entorno: Genera líneas de interferencia de televisión vieja y ruido blanco analógico que bloquean señales y quiebran la orientación de sus objetivos.',
-        'Transmisión Forzada: Hackea y secuestra frecuencias y pantallas de la ciudad para reproducir transmisiones distorsionadas y sembrar pánico social.'
+        'Aparato de Frecuencia de Risa: Implantes neurológicos emiten una sutil frecuencia acústica a través de sus cuerdas vocales que provoca ataques de pánico y desorientación espacial.',
+        'Guerra Psicológica: Diseña escenarios y dilemas éticos devastadores donde la mente de sus presas se quiebra por pura lógica matemática.',
+        'Combate Purgante: Precisión quirúrgica militar utilizando cables de tensión pesados, herramientas de restricción y hojas de aleación oscura.'
       ],
-      significa: 'El director del laberinto. Desestabiliza la cordura mediante la teatralidad y el control absoluto del trauma visual.',
-      crisis: 'Señal analógica: Su equipamiento y visera dependen de frecuencias electromagnéticas analógicas; una interferencia cuántica o de plasma anula su visión.',
-      stats: { fuerza: 5, inteligencia: 10, carisma: 7, suerte: 6, combate: 7, defensa: 6, especialVal: 10 }
+      significa: 'El estratega del pánico. Desestabiliza la mente de sus presas y desmantela el orden social mediante la lógica de la caída.',
+      crisis: 'Sacrificio irracional: Sus planes lógicos colapsan ante actos puramente desinteresados o sacrificios irracionales que no puede computar.',
+      stats: { fuerza: 6, inteligencia: 10, carisma: 6, suerte: 5, combate: 7, defensa: 6, especialVal: 10 }
     }
   },
   {
@@ -163,29 +163,29 @@ export const antagonistas: CharacterDetail[] = [
   name: 'Gorgon',
   category: 'antagonistas',
   isSecondary: true,
-  image: '/personajes/Antagonistas/Gorgon/gorgon_ficha.webp',
-  fullBody: '/personajes/Antagonistas/Gorgon/gorgon.png',
+  image: '/personajes/Antagonistas/Gorgon/Gorgon_ficha.webp',
+  fullBody: '/personajes/Antagonistas/Gorgon/Gorgon.webp',
   color: '#15803d',
-  role: 'El Gigante de Metatoxina / Ejecutor Mutado',
-  visualCode: 'Respirador táctico pesado, mangueras industriales en cabeza y brazos, chaleco de cuero oscuro rasgado',
+  role: 'Ejecutor Táctico Mutado / Fuerza de Choque',
+  visualCode: 'Arnés táctico de sujeción industrial en espalda y cuello, mangueras de polímero reforzado a sienes y brazos, respirador industrial pesado, chaleco de cuero oscuro rasgado',
   perfil: [
-    'Experimento y lacayo: Sometido a cirugías invasivas por Phobos el Ventrílocuo para instalarle puertos y mangueras, convirtiéndolo en el contenedor de su metatoxina verde.',
-    'Estado Base (El Ejecutor): Sin el químico en sus venas, es un gigante tosco, encorvado y pesado que actúa como un letal pero predecible ariete de fuerza bruta.',
-    'Estado Alterado (El Intelecto): Bajo la toxina, sus venas brillan de verde neón y sus músculos se expanden. Su intelecto se enciende volviéndolo hiperinteligente, sádico y refinado.'
+    'Rival Interno: Esclavo resentido de Phobos. Cuando está en estado alterado, planea en secreto su emancipación y la destrucción del Arquitecto del Pánico.',
+    'Estado Base (El Ejecutor): "[Gruñidos de pesadez y respiración mecánica]". Un gigante tosco y pesado de fuerza descomunal pero mente simple.',
+    'Estado Alterado (El Intelecto): La metatoxina enciende su sistema nervioso y expande su musculatura. Se convierte en un genio militar y analítico extremadamente calculador.'
   ],
-  crisis: 'Dualidad cognitiva: En su estado base es predecible y tosco; en su estado alterado florece un intelecto refinado que odia su sumisión y planea rebelarse de Phobos.',
-  stats: { fuerza: 10, inteligencia: 4, carisma: 5, suerte: 5, combate: 8, defensa: 9, especialVal: 6 },
-  especialLabel: 'Metatoxina',
+  crisis: 'La Trampa del Olvido: Al regresar a su estado base, Gorgon pierde todo recuerdo de sus planes de rebelión y vuelve a ser dócil.',
+  stats: { fuerza: 10, inteligencia: 4, carisma: 4, suerte: 5, combate: 8, defensa: 9, especialVal: 6 },
+  especialLabel: 'Metatoxina Durmiente',
   powers: {
-    role: 'El Intelecto Mutado',
+    role: 'El Intelecto Despierto',
     habilidades: [
-      'Carga de Toxina: Bombea metatoxina verde para expandir su musculatura y encender su sistema nervioso.',
-      'Hiperreflexia Refinada: En estado mutado, predice trayectorias y diseña tácticas analíticas crueles en milisegundos.',
-      'Embate Sísmico: Descarga su colosal fuerza física amplificada contra el suelo para desestabilizar el entorno.'
+      'Inyección de Comando: Activa de forma neumática la metatoxina para expandirse físicamente e hiperconectar su cerebro.',
+      'Análisis Predictivo de Impacto: Calcula al instante los puntos de tensión del entorno y debilidades del enemigo para máxima destrucción.',
+      'Supresión Física Industrial: Controla el espacio de combate usando ondas de choque y su colosal fuerza de impacto.'
     ],
-    significa: 'El titán cerebral. Una fuerza imparable cuyo mayor peligro no es la musculatura mutada, sino la mente calculadora que despierta el químico.',
-    crisis: 'Purga química: Si se cortan o sabotean las mangueras de metatoxina, su sistema colapsa regresando a su estado base tosco y vulnerable.',
-    stats: { fuerza: 11, inteligencia: 10, carisma: 8, suerte: 6, combate: 9, defensa: 10, especialVal: 10 }
+    significa: 'El titán cerebral. Una mente brillante atrapada en un cuerpo de destrucción industrial que juega una guerra fría mental con su captor.',
+    crisis: 'Purga química: Si se cortan o sabotean las mangueras de metatoxina, su sistema colapsa de inmediato volviendo al estado base.',
+    stats: { fuerza: 11, inteligencia: 10, carisma: 8, suerte: 6, combate: 10, defensa: 10, especialVal: 10 }
   }
 },
 {

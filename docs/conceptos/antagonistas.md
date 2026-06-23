@@ -44,12 +44,12 @@
 
 ---
 
-# 👿 Phobos (El Ventrílocuo de los Backrooms)
+# 👿 Phobos (El Avatar del Pánico Primordial)
 
-*   **Categoría:** Antagonista Principal / Mente Maquiavélica.
-*   **Origen:** Anteriormente conocido como Glitch. Manipulador absoluto que opera desde la sombra de los Backrooms, obsesionado con diseñar el "Teatro del Trauma" para quebrar psicológicamente a sus presas.
-*   **Poder Principal:** *Estática Analógica y Control de Frecuencia.*
-*   **Estética Visual:** Visera ciega de metal y cuero remachado con cables expuestos hacia atrás, gabardina larga de lona negra desgastada, postura teatral y una sonrisa grotesca desfigurada.
+*   **Categoría:** Antagonista Principal / Mente Maestra.
+*   **Origen:** Filósofo y alquimista cuya cordura y carne fueron consumidas tras asomarse a un abismo de pánico primordial. Regresó al mundo físico con los ojos calcinados, como un conducto viviente de la locura.
+*   **Poder Principal:** *Aura de Distorsión Mental (Efecto Pesadilla) y Alquimia de la Desesperación.*
+*   **Estética Visual:** Delgadez esquelética, piel blanco tísico agrietada y labios desgarrados en una eterna sonrisa grotesca. Viste una túnica andrajosa asimétrica con correas de cuero negro, abrigo de lona gris deshilachado y una corona de aleación oscura y afilada incrustada en sus sienes como venda ciega. Arrastra a dos Hounds con cadenas.
 
 ---
 
