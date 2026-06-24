@@ -36,6 +36,7 @@ El químico no eliminó el miedo de su sistema; en su lugar, extirpó por comple
 * **Aparato de Frecuencia de Risa:** Su risa maníaca no es solo un rasgo psicológico; está modulada por los implantes neurológicos y el daño del químico en sus cuerdas vocales. Emite una frecuencia acústica sutil que altera el sistema nervioso de quienes la escuchan, provocando náuseas, desorientación espacial y ataques de pánico involuntarios.
 * **El Diseñador de Dilemas:** Su mayor habilidad es la guerra psicológica. Gracias a su mente militar, no ataca al azar; diseña escenarios y trampas donde sus objetivos se ven obligados a tomar decisiones éticamente devastadoras. Su sadismo radica en ver cómo la mente de sus presas se quiebra por pura lógica.
 * **Tránsito Liminal:** Capaz de usar las esquinas y los espacios liminales de los Backrooms como un nexo táctico personal. Desaparece de la realidad tridimensional y reaparece de forma impredecible en los puntos ciegos de sus víctimas.
+* **Sin Ubicación Fija:** Phobos representa el caos mismo; no tiene una guarida permanente o base fija. Se desplaza constantemente, instalándose temporalmente lo mismo en instalaciones industriales abandonadas (como fábricas de químicos oscuras y tétricas) que asaltando residencias de lujo y tomando a sus dueños de rehenes bajo amenazas de terror.
 * **Estilo de Combate Purgante:** Cuando se ve forzado al combate físico, no pelea como un monstruo salvaje, sino con una precisión quirúrgica e industrial. Utiliza herramientas de restricción, cables de tensión pesados y hojas de aleación oscura.
 
 ***
@@ -49,8 +50,9 @@ El químico no eliminó el miedo de su sistema; en su lugar, extirpó por comple
 
 ## 👥 Las Mascotas: Los Hounds
 Las dos figuras que Phobos arrastra rígidamente mediante pesadas cadenas de hierro oxidado son Hounds extraídos de las profundidades de los Backrooms:
-* Son masas imponentes y biomecánicas compuestas por filamentos de cables negros y estructuras angulares que imitan la silueta de sabuesos semi-humanoides.
-* Bajo sus órdenes directas, emiten silbidos industriales y alarmas distorsionadas que paralizan a los objetivos, cazando con una sincronización mecánica perfecta junto a su amo.
+- Son criaturas grotescas y sarnosas del tamaño de un perro mediano (no bestias gigantes). Poseen cuerpos caninos deformes y delgados, cubiertos de una suciedad pastosa y sangre seca.
+- Sus rostros son perturbadoramente humanoides, con facciones distorsionadas, cuencas oculares con ojos blanquecinos sin pupilas y bocas repletas de dientes afilados como agujas.
+- Bajo sus órdenes directas, emiten lamentos agudos distorsionados (mezcla de gritos humanos y chirridos metálicos) que paralizan a los objetivos, cazando con una ferocidad animal.
 
 ***
 

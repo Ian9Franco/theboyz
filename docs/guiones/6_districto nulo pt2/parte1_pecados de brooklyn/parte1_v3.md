@@ -339,49 +339,48 @@
 
 ---
 
-### PÁGINA 13 — "La Estación Eléctrica"
+### PÁGINA 13 — "La Fábrica de Químicos"
 **4 viñetas — efecto de capas en descenso vertical continuo**
 
-*(Nota de dirección: Las viñetas de esta página se organizan como una columna vertical que simula que la cámara atraviesa físicamente el suelo de la ciudad hasta llegar a una dimensión paralela. Las viñetas del Nivel 8 se dibujan inicialmente invertidas: el suelo en el techo y el techo en el suelo).*
+*(Nota de dirección: Las viñetas de esta página se organizan como una columna vertical que simula que la cámara desciende a través de la infraestructura del edificio industrial abandonado, desde el tejado hasta el suelo principal).*
 
-**Viñeta 1 — Grande horizontal — Capa 1: Central Park**
-*Una toma del crepúsculo cayendo sobre los prados de Central Park. El cielo se torna de un violeta y azul profundo, con farolas encendiéndose a los costados de los caminos. Familias paseando, ciclistas. Al fondo, la imponente silueta de la Quinta Avenida iluminada.*
+**Viñeta 1 — Grande horizontal — Capa 1: El Exterior de la Fábrica (Crepúsculo)**
+*Una toma exterior de la fábrica de químicos abandonada a orillas de un canal industrial al crepúsculo. El cielo se tiñe de un violeta y naranja apagado, con las siluetas oxidadas de chimeneas y conductos recortándose contra la luz moribunda. Las ventanas del edificio están rotas y oscuras.*
 
-**Viñeta 2 — Pequeña — Capa 2: Las Alcantarillas**
-*Justo debajo del césped del parque. Plano detalle del interior de una alcantarilla oscura. Ratas asustadas huyendo a toda velocidad por la superficie oxidada de una gruesa tubería metálica mientras gotea agua grisácea del hormigón.*
+**Viñeta 2 — Pequeña — Capa 2: La Claraboya Rota**
+*La cámara desciende ingresando al edificio a través de una claraboya rota de vidrio y marcos oxidados. Hilos de agua de lluvia gotean perezosamente desde las vigas de hierro carcomidas hacia el vacío de la nave industrial.*
 
-**Viñeta 3 — Mediana horizontal — Capa 3: La Tierra Profunda**
-*La cámara atraviesa estratos geológicos. Rocas compactadas, sedimentos y, incrustados en la tierra oscura, los restos fósiles gigantescos y esqueléticos de un dinosaurio (un tiranosaurio comprimido por la presión geológica).*
+**Viñeta 3 — Mediana horizontal — Capa 3: El Entramado de Tuberías**
+*La cámara baja entre pasarelas de rejilla metálica corroídas y suspendidas en el aire. Se observan enormes tanques cilíndricos abollados de almacenamiento químico, válvulas cubiertas de sarro y marañas de cables eléctricos cortados que cuelgan como lianas muertas.*
 
-**Viñeta 4 — Grande — Capa 4: El Nivel 8 (Vista Invertida/Upside-Down)**
-*La cámara rompe la roca y entra en una caverna infinita, claustrofóbica y de total oscuridad, rota únicamente por un débil brillo mineral verdoso que hace resplandecer las paredes húmedas. La física está invertida: Phobos camina por el techo de piedra (en la parte superior de la viñeta), mientras que las estalactitas y las formaciones de piedra caliza cuelgan de lo que debería ser el suelo (en la parte inferior). Es el Nivel 8 de los Backrooms: "Cave System". Agua de Almendra goteando en sentido inverso y charcos de una brea negra y viscosa flotando en la gravedad invertida.*
-*Phobos de espaldas, una silueta alta y esquelética con su abrigo deshilachado. En los charcos de brea invertidos, se insinúan formas de dedos o manos humanoides que intentan estirarse hacia el vacío.*
-**PHOBOS (de espaldas, monólogo susurrado):** "La red humana es tan ruidosa."
-**PHOBOS (de espaldas):** "Pero sus secretos... siempre flotan hacia abajo."
+**Viñeta 4 — Grande — Capa 4: El Tinglado Principal**
+*La cámara llega al suelo de la inmensa nave de la fábrica, un espacio amplio, oscuro y tétrico. Delgadas columnas de hormigón agrietadas se alzan en la penumbra. El suelo de cemento tiene grandes charcos de lodo industrial negro y residuos químicos estancados que desprenden un débil fulgor verdoso. En el centro del plano, Phobos se yergue de frente como una silueta completamente negra e indistinguible. Su cuerpo y rostro se pierden en la penumbra profunda, y solo destaca el brillo de una sonrisa gélida, filosa y teñida de tinta roja sangrienta.*
+**PHOBOS (silueta de frente, monólogo susurrado):** "La red humana es tan ruidosa."
+**PHOBOS (silueta de frente):** "Pero sus secretos... siempre flotan hacia abajo."
 
 ---
 
-### PÁGINA 14 — "La Estación Liminal"
-**5 viñetas — la rotación física y la revelación de la amenaza**
+### PÁGINA 14 — "La Nave Oscura"
+**5 viñetas — la exploración visual y la revelación de la amenaza**
 
-**Viñeta 1 — Grande — Capa 5: La Rotación de la Cámara (El Reacomodo)**
-*La cámara gira en un espiral dinámico de 180 grados. El entorno de cavernas estrechas, arcos de piedra natural y estalactitas del Nivel 8 rota hasta que la gravedad se normaliza. El eco del goteo de agua reverbera con fuerza en las paredes rocosas mientras Phobos, imperturbable en el centro y de espaldas, se acomoda a la nueva perspectiva.*
+**Viñeta 1 — Grande — La Nave Industrial (El Barrido)**
+*Un plano general del inmenso y tétrico tinglado de la fábrica. La cámara realiza un barrido lento y horizontal a través de las hileras de reactores químicos oxidados y la maquinaria industrial pesada cubierta de mugre. En medio de esta desolación, Phobos permanece inmóvil de espaldas.*
 **PHOBOS (de espaldas):** "Es hora de pescar."
 
-**Viñeta 2 — Grande — Plano general del Sistema de Cuevas**
-*Un plano general del Sistema de Cuevas del Nivel 8. Una red laberíntica de túneles rocosos y húmedos sin luz natural. El suelo de piedra irregular está salpicado por charcos negros de brea viscosa de donde surgen sutiles manos humanoides petrificadas, y charcos de Agua de Almendra mineralizada. Enormes estalagmitas bloquean el paso al fondo, y el sonido de las gotas de agua al caer resuena con un eco perturbador e infinito.*
+**Viñeta 2 — Grande — Plano general de la Fábrica**
+*Un plano general que muestra la escala monumental del espacio: tuberías corroídas cruzan por el aire, techos altos de chapa perforada y pasarelas colapsadas. El suelo está cubierto de escombros, charcos de agua estancada y químicos verdosos. El sonido del goteo resuena con un eco perturbador e infinito en las sombras del fondo.*
 **PHOBOS (de espaldas):** "La energía cuántica es tan inestable... pero tan fácil de canalizar."
 
-**Viñeta 3 — Pequeña — Plano detalle: las grietas de la cueva**
-*En las grietas de la roca y los huecos oscuros del techo de la cueva, junto a raíces secas colgantes, se ocultan arácnidos de cueva gigantescos de muchas patas y los Hounds con sus ojos blancos y brillantes acechando hambrientos.*
+**Viñeta 3 — Pequeña — Plano detalle: las sombras industriales**
+*En los huecos oscuros bajo la maquinaria corroída y detrás de los tanques de gas oxidados, se mueven los Hounds: bestias sucias del tamaño de un perro mediano, con cuerpos caninos deformes y delgados, cubiertas de mugre y lodo seco. Sus ojos blancos sin pupilas brillan fijamente en la penumbra.*
 
-**Viñeta 4 — Media — La reja de contención**
-*Bloqueando un túnel de piedra estrecho, una pesada reja de contención de hierro oxidado empotrada a presión en la roca vibra con violencia. Detrás de ella, Hounds se amontonan empujando el metal, y un eco metálico ensordecedor rebota por toda la caverna.*
+**Viñeta 4 — Media — La jaula improvisada**
+*En un rincón apartado de la fábrica, una jaula improvisada con pesadas rejillas de metal oxidado y gruesas cadenas de hierro vibra con violencia. Detrás del metal, los Hounds se amontonan rascando con sus garras y empujando desesperados.*
 **EFECTO DE SONIDO:** *CLANG CLANG*
 
-**Viñeta 5 — Grande — Capa 6: La Reja y el Hound**
-*La reja cede un centímetro. Un Hound asoma parte de su rostro esquelético y agrietado entre los barrotes oxidados, enseñando sus dientes afilados. Sus ojos blanquecinos brillan fijamente hacia adelante. En primer plano, la silueta rígida y delgada de Phobos se mantiene de espaldas, impasible ante la criatura.*
-**EFECTO DE SONIDO (Hound):** *(lamento distorsionado, una mezcla de grito humano y chirrido metálico)*
+**Viñeta 5 — Grande — La reja y la bestia**
+*La rejilla metálica cede levemente. Un Hound asoma su cabeza sarnosa entre los barretes oxidados, enseñando sus dientes afilados como agujas en una mueca feroz. Es una bestia del tamaño de un sabueso, de terrorífico rostro con rasgos grotescamente humanoides y ojos blanquecinos. En primer plano, la silueta rígida y delgada de Phobos se mantiene de espaldas, impasible ante la criatura.*
+**EFECTO DE SONIDO (Hound):** *(lamento distorsionado, una mezcla de grito humano agudo y chirrido metálico)*
 
 ---
 
@@ -389,7 +388,7 @@
 **4 viñetas — Phobos actúa en las sombras. Sin rostro visible.**
 
 **Viñeta 1 — Media — Phobos caminando**
-*Phobos camina despacio por las estrechas e infinitas galerías del Nivel 8, esquivando con paso firme los charcos de brea pegajosa y las manos humanoides que intentan brotar de ellos. Su abrigo deshilachado roza las rocas húmedas de las que brota Agua de Almendra mineralizada. Detrás de él, los Hounds encadenados avanzan encorvados y en absoluto silencio sobre la piedra, esquivando también los charcos negros.*
+*Phobos camina despacio por los pasillos estrechos entre reactores de la fábrica abandonada, esquivando con paso firme los charcos químicos verdosos. Detrás de él, los Hounds avanzan encadenados a pesadas cadenas de hierro oxidado; son criaturas deformes de tamaño canino con rostros humanoides sarnosos que se desplazan encorvados y en absoluto silencio sobre el hormigón.*
 
 **Viñeta 2 — Pequeña — Plano detalle: manos de Phobos**
 *Dedos largos, pálidos y huesudos sostienen un vial de metatoxina verde brillante. Lo hace girar despacio bajo la luz parpadeante de una bombilla colgante, antes de guardarlo en su bolsillo.*
@@ -411,7 +410,7 @@
 ---
 
 ### PÁGINA 16 — "Times Square Interrumpido"
-**4 viñetas — la transmisión. Phobos no necesita tecnología: usa los Backrooms como canal.**
+**4 viñetas — la transmisión. Hackeo de Phobos.**
 
 **Viñeta 1 — Grande — Plano general: Times Square**
 *Las pantallas enormes. El crepúsculo tardío. El cielo es de un azul índigo profundo, casi de noche, pero no del todo. La multitud. Mati entre la gente, capucha puesta, tratando de enfriarse. Todo normal.*
@@ -422,7 +421,7 @@
 **EFECTO DE SONIDO:** *BZZZT*
 
 **Viñeta 3 — Splash (1/2 página) — Las pantallas se encienden con la imagen de Mati**
-*El rostro de Mati hablando con sus variantes — enorme, en todas las pantallas de Times Square simultáneamente. La imagen tiene una distorsión particular: no es glitch digital. Es una distorsión orgánica, como si el espacio alrededor de la imagen respirara. La firma visual de Phobos.*
+*El rostro de Mati hablando con sus variantes — enorme, en todas las pantallas de Times Square simultáneamente. Las imágenes se muestran como grabaciones de seguridad y carpetas de bases de datos hackeadas de forma digital y nítida. Phobos ha irrumpido en la red municipal.*
 *Miles de personas mirando hacia arriba.*
 **EFECTO DE SONIDO:** *(la voz de Phobos saliendo de todos los parlantes de Times Square — modulada, fría, teatral)*
 **PHOBOS (parlantes):** "Nueva York. Esta transmisión es un regalo."
@@ -433,41 +432,48 @@
 
 ---
 
-### PÁGINA 17 — "Montaje: Las Cuatro Reacciones"
-**8 viñetas pequeñas en grid — simultáneas**
+### PÁGINA 16.5 — "La Revelación y el Caos"
+**5 viñetas — El pánico se desata. Mati ante su reflejo, Phobos inculpa a Vanguard y estalla la revuelta.**
 
-**Viñeta 1 — Times Square — Mati**
-*Mati levanta la vista. Ve su propia cara en diez pantallas de diez metros.*
+**Viñeta 1 — Plano medio — Un civil señalando y gritando**
+*En medio de Times Square, un civil con expresión enfurecida señala con el dedo hacia arriba, gritando en dirección a una de las pantallas gigantes. A su lado, Mati camina encapuchado.*
+**CIVIL:** "¡Miren eso! ¡Nos han estado engañando! ¡Es un fenómeno de V.O.P.S.!"
 
-**Viñeta 2 — La base, el living — Julián y Uandi**
-*Los naipes de Julián caen de sus manos. Uandi suelta el mate. Ambos mirando la tele.*
-**UANDI:** "¿Eso es—?"
-**JULIÁN:** "Sí."
+**Viñeta 2 — Plano medio corto — Mati volteándose**
+*Mati se voltea alarmado por el grito. Su rostro refleja un terror puro, susto y sorpresa absoluta mientras comienza a levantar la mirada.*
 
-**Viñeta 3 — El taller de Ian**
-*Ian frente a sus monitores. La interferencia masiva en todas las frecuencias. Su expresión: no sorpresa — cálculo inmediato.*
-**IAN:** *(solo)* "Mati."
+**Viñeta 3 — Plano general / Contrapicado — Las pantallas gigantes en los rascacielos**
+*Mati ve reflejadas sus propias imágenes y las de sus variantes en los inmensos carteles de Times Square. La potente luz blanca y azulada de las pantallas ilumina su cara atónita.*
 
-**Viñeta 4 — Oficina principal del City Hall (Casa de Gobierno) — Don Vanguard**
-*En su oficina gubernamental de techos altos y molduras históricas. Don Vanguard está de espaldas frente al ventanal gótico. Su figura es gigantesca, de una masa física colosal que impone terror. Su traje de gala gris Oxford impecable se tensa sobre sus hombros anchos. Con una de sus manos enormes, apoya un puño en el escritorio de caoba de tal manera que la madera cruje bajo la presión física. En los monitores de seguridad se ve la transmisión del rostro de Mati y el estallido del pánico civil abajo.*
+**Viñeta 4 — Plano general — Don Vanguard en las pantallas**
+*La transmisión cambia en pantalla para mostrar la ficha de Don Vanguard junto a los archivos confidenciales de V.O.P.S., inculpándolo directamente de ocultar y usar mutantes en secreto para sus propios fines políticos.*
+**PHOBOS (parlantes):** "Vanguard promete purgar a las anomalías de las calles, pero las oculta y utiliza en sus propias filas. Su salvador es un hipócrita."
 
-**Viñeta 5 — Times Square — Mati**
-*Alguien señala a Mati y después a la pantalla.*
-**PERSONA:** "Ey— ¿ese no es el del video?"
+**Viñeta 5 — Splash / Plano general caótico — El estallido del disturbio**
+*La multitud explota en ira. Se ven revueltas en las calles: personas rompiendo pantallas y vidrieras de negocios, arrojando piedras, adoquines y trozos de madera. En medio de la calzada, docenas de coches y taxis amarillos están completamente atascados, bloqueados por la marea humana descontrolada.*
 
-**Viñeta 6 — La base — Julián y Uandi**
-*La voz de Phobos sale de la tele distorsionada.*
-**PHOBOS (tele):** "...lo que su alcalde oculta."
-**JULIÁN:** *(en voz baja)* "¿Quién habla?"
+---
+### PÁGINA 17 — "La Furia de la Alcaldía"
+**6 viñetas — La oficina del City Hall. Introducción de Don Vanguard y el Comandante R.E.G.U.L.A.R.**
 
-**Viñeta 7 — El taller — Ian**
-*Ian amplía la señal. Analiza la distorsión orgánica de la imagen.*
-**IAN:** "Esto no es tecnología digital. La distorsión es... otra cosa."
+**Viñeta 1 — Detalle — Banderas en la oficina**
+*La bandera de los Estados Unidos y la del estado de Nueva York ondean levemente junto a un ventanal gótico en la oficina de la alcaldía (City Hall), bajo la luz tenue y cálida.*
 
-**Viñeta 8 — Don Vanguard en el City Hall**
-*Vanguard se da vuelta a medias. Su rostro se tensa con una mueca de ira sádica y contenida. Agarra el comunicador de seguridad con tal fuerza que sus nudillos crujen.*
-**DON VANGUARD:** "Comandante R.E.G.U.L.A.R. La chusma en la calle está perdiendo el control y mi paciencia se terminó."
-**DON VANGUARD:** "Saque a los soldados de V.O.P.S. de inmediato. Contenga a la gente a la fuerza. Limpie Times Square y traiga al fenómeno... vivo o en pedazos. No toleraré disturbios en mi ciudad."
+**Viñeta 2 — Plano detalle — Cuadros de vigilantes tachados**
+*En la pared de la oficina, retratos en blanco y negro de antiguos vigilantes y héroes urbanos. Cada cuadro tiene pintada encima una gruesa y fría línea roja que los tacha, indicando que han sido eliminados de forma sistemática.*
+
+**Viñeta 3 — Plano detalle — Vitrina de trofeos de vigilantes**
+*Una toma de detalle en primer plano de una vitrina de madera que contiene reliquias confiscadas de vigilantes: una máscara roja con diseño de telaraña y lentes blancos grandes, una capucha blindada oscura con orejas puntiagudas, una máscara táctica de tela roja y negra, y una máscara de cuero carmesí con pequeñas protuberancias en forma de cuerno. Al lado se encuentra un prototipo inactivo de armadura de combate roja y dorada experimental montada sobre un soporte. La escena se siente como un museo de vigilantes derrotados.*
+
+**Viñeta 4 — Plano detalle — La mano y el anillo de Don Vanguard**
+*Una mano enorme y pesada se apoya sobre el escritorio de caoba. En uno de los dedos lleva un anillo de sello dorado macizo con el emblema de la alcaldía. Viste la manga de un impecable traje blanco de tres piezas.*
+
+**Viñeta 5 — Plano medio largo — Don Vanguard de pie frente a la pantalla**
+*Vanguard se levanta bruscamente de su asiento detrás del escritorio de caoba. Su figura de colosal masa física está enfundada en su traje blanco impecable. Mira con rabia incontrolable una gran pantalla de plasma que transmite la señal hackeada de las pantallas de Times Square mostrando la cara de Mati.*
+**DON VANGUARD (bocadillo de grito grande):** "¡R.E.G.U.L.A.R.! ¡YA MISMO TE QUIERO ACÁ!"
+
+**Viñeta 6 — Plano medio — R.E.G.U.L.A.R. fuera de la puerta**
+*En el pasillo exterior, frente a la gran puerta doble de madera tallada de la alcaldía, el Comandante R.E.G.U.L.A.R. de pie reacciona con un susto visible y se queda tenso e inmóvil. Escucha el grito furioso que viene desde el interior, pero no se atreve a abrir la puerta todavía.*
 
 ---
 
@@ -850,14 +856,14 @@
 ---
 
 ### PÁGINA 35 — "El Titiritero en las Sombras"
-**5 viñetas — Noche, Sistema de Cuevas de los Backrooms (Nivel 8)**
+**5 viñetas — Noche, Fábrica de Químicos Abandonada**
 
-**Viñeta 1 — Grande — Pasillo de piedra del Nivel 8 (Noche)**
-*Phobos se yergue como una silueta delgada y alta en una galería estrecha del Nivel 8. A su alrededor, la cueva está salpicada de estalagmitas y charcos de brea negra con manos de alquitrán inertes. Un reflector táctico portátil de V.O.P.S., abollado y abandonado en el suelo de piedra, parpadea débilmente iluminando las gotas de Agua de Almendra que caen del techo con un eco continuo.*
+**Viñeta 1 — Grande — Nave industrial de la fábrica (Noche)**
+*Phobos se yergue como una silueta delgada y alta en el tinglado oscuro de la fábrica de químicos abandonada. A su alrededor, la maquinaria corroída y los tanques industriales se pierden en la penumbra. Un reflector táctico portátil de V.O.P.S., abollado y abandonado en el suelo de hormigón agrietado, parpadea débilmente iluminando los charcos de químicos verdosos y brea con un parpadeo continuo.*
 **EFECTO DE SONIDO:** *BZZZZT... BZZZZT...*
 
 **Viñeta 2 — Media — Phobos ante la silueta enorme de Gorgon**
-*Gorgon se alza gigantesco y descomunal al fondo de la galería estrecha, esquivando una enorme estalagmita. Su mole parece chocar con el techo bajo de piedra caliza de la cueva. En primer plano, la silueta rígida de Phobos de espaldas se impone, inmóvil ante la criatura.*
+*Gorgon se alza gigantesco y descomunal al fondo de la nave industrial, esquivando una enorme viga de acero colapsada. Su mole colosal parece rozar el techo alto y corroído de chapa y vigas. En primer plano, la silueta rígida de Phobos de espaldas se impone, inmóvil ante la criatura.*
 **PHOBOS (de espaldas):** "Vanguard ha enviado a todo su juguete de contención a los muelles del sur. Dumbo va a arder..."
 
 **Viñeta 3 — Pequeña — Plano detalle: manos de Phobos**

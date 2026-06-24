@@ -1,9 +1,13 @@
 import os
 
-target_path = r"d:\.CodeProjects\the-boys\docs\guiones\6_districto nulo pt2\parte1_pecados de brooklyn\prompts_fuego_purpura_p1.md"
+target_path = r"d:\Dev\CodeProjects\boyz\theboyz\docs\guiones\6_Districto Nulo pt2\parte1_pecados de brooklyn\prompts_fuego_purpura_p1.md"
 
 # Visual settings and character anchors
-STYLE_BASE = "Official comic book page layout, dynamic non-uniform multi-panel grid mixing wide cinematic horizontal panels with tight vertical sequential panels. Bold solid black panel borders. "
+STYLE_BASE = (
+    "Official comic book page layout, dynamic non-uniform multi-panel grid mixing wide cinematic horizontal panels "
+    "with tight vertical sequential panels. Bold solid black panel borders, thick black gutters between panels. "
+    "Solid black panel divider lines. "
+)
 
 STYLE_ARTISTICO = (
     "Modern American heroic comic art style, hand-inked line work — the ink line defines all form and volume, "
@@ -21,7 +25,7 @@ STYLE_ARTISTICO = (
     "inked texture with halftone/matte shading, emphasizing atmospheric depth and wet surface reflections."
 )
 
-TECH_RULES = "--no 3d, photorealistic, cgi, text, speech bubbles, watermarks, glossy reflections, airbrushed gradients"
+TECH_RULES = "--no 3d, photorealistic, cgi, text, speech bubbles, watermarks, glossy reflections, airbrushed gradients, white gutters, white panel borders, white divider lines"
 
 # Character Descriptions
 CHAR_MATI_PRE = (
@@ -56,9 +60,12 @@ CHAR_VOLVO = (
     "pouches, and brown leather combat boots"
 )
 CHAR_PHOBOS = (
-    "an intensely gaunt tactical mastermind villain with pale ash-grey cracked skin, a grotesque and permanent jagged grin "
-    "etched into his scarred lips, and a spiked dark alloy crown visor fused to temples, wearing a heavy black leather ballistic "
-    "trenchcoat with restraint straps, silver buckles, and a high collar"
+    "an intensely gaunt tactical commander with pale grey textured skin, an exaggerated wide grin on his lips, "
+    "and a spiked dark alloy crown visor fused to temples, wearing a heavy black leather tactical trenchcoat with buckles and a high collar"
+)
+CHAR_HOUND = (
+    "an unusual dog-sized creature, thin canine body shape, pale mask-like humanoid face, "
+    "long messy dark hair, showing an exaggerated wide grin"
 )
 CHAR_GORGON_BASE = (
     "a colossal 2.5-meter-tall hulking brute with a heavy tactical respirator mask covering his nose and mouth, a thick tactical "
@@ -71,8 +78,8 @@ CHAR_GORGON_MUTATED = (
     "hypertrophied, veins glowing neon green through his skin, surrounded by a faint green chemical mist"
 )
 CHAR_VANGUARD = (
-    "a colossal, giant-sized older man of imposing colosal physical mass and broad shoulders, with a stern, authoritative face, "
-    "wearing an impeccable dark grey Oxford three-piece suit"
+    "a colossal, giant-sized older man of imposing colossal physical mass and broad shoulders, with a stern, authoritative face, "
+    "wearing an impeccable white three-piece suit"
 )
 CHAR_REGULAR = (
     "a tactically armored military commander in sleek matte-black combat armor and a solid glowing blue-tinted tactical visor "
@@ -438,77 +445,77 @@ p12 = f"""## PÁGINA 12 — "Hacia Manhattan" (Acto 2)
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
 > {STYLE_BASE}Occasional panel bleeding — diagonal metal handrails breaking panel boundaries. {STYLE_ARTISTICO}
-> Panel 1: A wide shot of the Brooklyn Bridge during a bright, sunny afternoon. The skyline of Manhattan gleams in the background. A large crowd of pedestrians walks across, and in the middle of them, {CHAR_MATI_PRE} walks quickly with his hood up.
+> Panel 1: A wide shot of the Brooklyn Bridge during a golden hour sunset, with the sky turning warm orange and violet. The skyline of Manhattan in the background reflects the warm light. A large crowd of pedestrians walks across, and in the middle of them, {CHAR_MATI_PRE} walks quickly with his hood up.
 > Panel 2: A medium profile shot of {CHAR_MATI_PRE} walking, the shadow of his hood hiding his face, but a faint violet energy glow is visible under his eyelashes.
 > Panel 3: A medium shot inside a crowded subway car. Passengers are distracted with phones under cold fluorescent lights. {CHAR_MATI_PRE} stands near the door. In the window glass reflection, his cracked violet eyes glow abnormally.
-> Panel 4: A medium shot of {CHAR_MATI_PRE} emerging from the concrete subway stairs into Times Square, where bright sunlight mixes with massive digital advertisements.
-> Panel 5: A wide horizontal panoramic shot of Times Square under the sun. Yellow cabs, towering digital screens, and crowds of people. {CHAR_MATI_PRE} is seen from behind, walking into the dense crowd.
+> Panel 4: A medium shot of {CHAR_MATI_PRE} emerging from the concrete subway stairs into Times Square at dusk, where the orange twilight glow mixes with massive digital advertisements.
+> Panel 5: A wide horizontal panoramic shot of Times Square at dusk under a warm orange-tinted sky. Yellow cabs, towering digital screens, and crowds of people. {CHAR_MATI_PRE} is seen from behind, walking into the dense crowd.
 > {TECH_RULES}
 
 5. **VIÑETAS EN ESPAÑOL:**
-* **Viñeta 1 (Plano General):** El Puente de Brooklyn soleado repleto de gente, con Mati encapuchado caminado apresurado.
+* **Viñeta 1 (Plano General):** El Puente de Brooklyn al atardecer (golden hour) repleto de gente, con Mati encapuchado caminado apresurado.
 * **Viñeta 2 (Plano Corto Perfil):** Mati de perfil, con un destello violeta asomando bajo su capucha.
 * **Viñeta 3 (Plano Medio):** Mati parado en el metro lleno; su reflejo en el vidrio revela el brillo de sus pupilas agrietadas.
-* **Viñeta 4 (Plano Medio):** Mati subiendo las escaleras mecánicas emergiendo al torbellino de luces de Times Square.
-* **Viñeta 5 (Splash Horizontal):** Plano panorámico de Times Square con pantallas y multitudes, y Mati caminado de espaldas.
+* **Viñeta 4 (Plano Medio):** Mati subiendo las escaleras mecánicas emergiendo al torbellino de luces de Times Square al atardecer.
+* **Viñeta 5 (Splash Horizontal):** Plano panorámico de Times Square con pantallas y multitudes bajo el cielo atardecido, y Mati caminado de espaldas.
 """
 pages.append(p12)
 
 # --- PAGE 13 ---
-p13 = f"""## PÁGINA 13 — "La Estación Eléctrica" (Acto 2)
+p13 = f"""## PÁGINA 13 — "La Fábrica de Químicos" (Acto 2)
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
-   Página 13. Grilla de 4 viñetas. Dispuestas en columna vertical simulando que la cámara desciende a través de la tierra.
+   Página 13. Grilla de 4 viñetas. Dispuestas en columna vertical simulando que la cámara desciende a través de la infraestructura de la fábrica.
 2. **ANÁLISIS DE RITMO:**
-   Slow-Burn. Descenso de la superficie al Nivel 3.
+   Slow-Burn. Descenso de la superficie al tinglado principal de la fábrica.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
-   En la Viñeta 3, los huesos fósiles del dinosaurio atraviesan la roca del gutter inferior e invaden la Viñeta 4.
+   En la Viñeta 3, una tubería rota activa el gutter inferior e invade la Viñeta 4.
 
 4. **PROMPT FINAL PARA SEAART:**
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
-> {STYLE_BASE}Occasional panel bleeding — fossilized dinosaur bones breaking through rock layers and panel boundaries. {STYLE_ARTISTICO}
-> Panel 1: A wide horizontal shot of Central Park during a sunny afternoon. Families walking, cyclists, and the skyscrapers of Fifth Avenue in the background.
-> Panel 2: A close-up detail shot of a dark sewer pipe beneath the grass. Scared rats run along the wet metal as grey water drips from the concrete.
-> Panel 3: A medium horizontal shot of geological rock layers under the earth, with a compressed fossil skeleton of a massive Tyrannosaurus Rex embedded in the dark soil.
-> Panel 4: A wide shot of the electrical station in Backrooms Level 3, drawn upside-down (inverted). {CHAR_PHOBOS} stands on the ceiling (top of the panel) with his back turned. Rusted pipes hang from the floor (bottom), and puddles of water on the ceiling crackle with yellow electrical sparks.
+> {STYLE_BASE}Occasional panel bleeding — rusted steel pipes breaking through panel boundaries. {STYLE_ARTISTICO}
+> Panel 1: A wide horizontal shot of the exterior of an abandoned chemical factory next to an industrial canal at twilight. Rusty smokestacks and broken windows under a hazy orange and violet sky.
+> Panel 2: A close-up detail shot of a broken skylight on the factory roof. Drips of dirty rain water leak through corroded iron beams into the dark interior.
+> Panel 3: A medium horizontal shot of a complex maze of corroded steel pipes, rusty chemical storage tanks, and loose electrical cables hanging from the dark ceiling like vines.
+> Panel 4: A wide shot of the spacious, dark, and spooky main warehouse floor of the abandoned chemical factory. Delapidated concrete columns stand in the shadows. Large puddles of green chemical sludge and dark grime are spread on the cracked concrete floor. In the center stands a pitch-black, indistinguishable silhouette of a gaunt man facing the camera, his features completely hidden in shadow except for a sharp, jagged grin wet with bright red ink. High contrast chiaroscuro, atmospheric depth.
 > {TECH_RULES}
 
 5. **VIÑETAS EN ESPAÑOL:**
-* **Viñeta 1 (Plano General Horizontal):** Central Park en una tarde soleada con ciclistas y peatones.
-* **Viñeta 2 (Plano Detalle):** Alcantarilla oscura debajo del césped con ratas huyendo por cañerías.
-* **Viñeta 3 (Plano Medio Horizontal):** Estratos geológicos bajo la ciudad mostrando un esqueleto fósil de dinosaurio comprimido.
-* **Viñeta 4 (Plano General Invertido):** Phobos de espaldas parado en el suelo (techo de la viñeta) en el Nivel 3 de los Backrooms.
+* **Viñeta 1 (Plano General Horizontal):** El exterior de la fábrica de químicos abandonada a orillas de un canal industrial al crepúsculo.
+* **Viñeta 2 (Plano Detalle):** Claraboya rota en el tejado con lluvia filtrándose por vigas corroídas.
+* **Viñeta 3 (Plano Medio Horizontal):** Laberinto de tuberías corroídas, tanques químicos oxidados y cables sueltos colgando.
+* **Viñeta 4 (Plano General):** Tinglado principal de la fábrica de químicos amplia, oscura y tétrica con columnas y charcos verdosos, y Phobos de frente como una silueta oscura e indistinguible donde solo destaca su sonrisa filosa y roja.
 """
 pages.append(p13)
 
 # --- PAGE 14 ---
-p14 = f"""## PÁGINA 14 — "La Estación Liminal" (Acto 2)
+p14 = f"""## PÁGINA 14 — "La Nave Oscura" (Acto 2)
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
-   Página 14. Grilla de 5 viñetas. La viñeta 1 reorienta la gravedad. Las viñetas 3 y 4 son pequeñas.
+   Página 14. Grilla de 5 viñetas. La viñeta 1 muestra un barrido cinematográfico. Las viñetas 3 y 4 son pequeñas.
 2. **ANÁLISIS DE RITMO:**
-   Tensión. El despertar y acecho de los Hounds.
+   Tensión. El acecho de los Hounds en la fábrica.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
-   En la Viñeta 4, las garras del Hound rompen los barrotes oxidados de la celda y se desbordan sobre la Viñeta 5.
+   En la Viñeta 4, las garras del Hound rompen los barrotes de la jaula y se desbordan sobre la Viñeta 5.
 
 4. **PROMPT FINAL PARA SEAART:**
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
-> {STYLE_BASE}Occasional panel bleeding — monster claws breaking through rusty metal bars and panel borders. {STYLE_ARTISTICO}
-> Panel 1: A wide shot showing a camera rotation effect of the industrial corridor. The rusted pipes, brick walls, and concrete floor rotate 180 degrees to return to normal gravity. {CHAR_PHOBOS} remains standing calmly in the center, back turned.
-> Panel 2: A wide shot of the infinite liminal corridor of Backrooms Level 3. Humid atmosphere, brick walls, exposed cables, and rusted pipes. Puddles of water on the floor crackle with yellow electric sparks.
-> Panel 3: A close-up detail shot of the dark corners between transformer boxes. White, glowing eyes and hunched silhouettes of {CHAR_GORGON_BASE} are barely visible in the shadows.
-> Panel 4: A medium shot of a heavy, rusted iron gate at the end of the corridor, vibrating violently as distorted claws and dark biological shapes try to force it open.
-> Panel 5: A wide shot as the iron gate opens slightly. A horrific {CHAR_GORGON_BASE} peeks its face through, showing sharp teeth and glowing white eyes. In the foreground, the thin, rigid silhouette of {CHAR_PHOBOS} remains standing with his back turned, unmoved.
+> {STYLE_BASE}Occasional panel bleeding — thin hands breaking through rusty cage bars and panel borders. {STYLE_ARTISTICO}
+> Panel 1: A wide panning shot inside the dark, spacious main hall of the abandoned chemical factory. Corroded steel pipes, cracked concrete, and row after row of rusted chemical reactors are lost in the shadows. {CHAR_PHOBOS} remains standing calmly in the center, back turned.
+> Panel 2: A wide shot of the spooky chemical factory floor, a damp freezing atmosphere. Rusted machinery, collapsed overhead walkways, and large puddles of stagnant green chemical liquid. The sound of droplets creates ripples in the grime.
+> Panel 3: A close-up detail shot of the dark corners under the rusted tanks. Glowing white eyes of the creatures described as {CHAR_HOUND} are barely visible in the shadows.
+> Panel 4: A medium shot of a rusted iron-wire containment cage in a dark corner of the factory, vibrating violently as dark hands and thin limbs of the creatures try to force it open.
+> Panel 5: A wide shot as the cage door opens slightly. The creature described as {CHAR_HOUND} peeks its head through, showing its pale humanoid face and wide grin with white eyes. In the foreground, the thin, rigid silhouette of {CHAR_PHOBOS} remains standing with his back turned, unmoved.
 > {TECH_RULES}
 
 5. **VIÑETAS EN ESPAÑOL:**
-* **Viñeta 1 (Plano General):** Rotación en espiral de la cámara para reorientar el pasillo, con Phobos en el centro.
-* **Viñeta 2 (Plano General):** Pasillo industrial infinito con luces parpadeantes y charcos de agua electrificados.
-* **Viñeta 3 (Plano Detalle):** Esquinas oscuras mostrando ojos blancos de Hounds brillando en la penumbra.
-* **Viñeta 4 (Plano Medio):** Reja de hierro oxidado vibrando por el empuje de las criaturas al otro lado.
-* **Viñeta 5 (Plano General):** La reja cediendo y un Hound asomando su rostro. Phobos permanece de espaldas en primer plano.
+* **Viñeta 1 (Plano General):** Barrido lento por el tinglado de la fábrica con reactores oxidados, y Phobos en el centro de espaldas.
+* **Viñeta 2 (Plano General):** Interior de la fábrica de químicos abandonada con charcos de agua estancada y residuos verdosos.
+* **Viñeta 3 (Plano Detalle):** Rincones oscuros bajo la maquinaria mostrando ojos blancos de Hounds brillando en la penumbra.
+* **Viñeta 4 (Plano Medio):** Jaula de metal y cadenas en la fábrica vibrando por el empuje de las criaturas al otro lado.
+* **Viñeta 5 (Plano General):** La rejilla cediendo y un Hound de tamaño canino y rostro humanoide asomando. Phobos de espaldas.
 """
 pages.append(p14)
 
@@ -526,16 +533,16 @@ p15 = f"""## PÁGINA 15 — "El Experimento" (Acto 2)
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
 > {STYLE_BASE}Occasional panel bleeding — glowing holographic projections breaking panel borders. {STYLE_ARTISTICO}
-> Panel 1: A medium shot of {CHAR_PHOBOS} walking slowly through the brick and pipe corridors of Level 3. His tattered leather trenchcoat brushes the walls. In the dark background, quadrupeds {CHAR_GORGON_BASE} follow him with chains.
+> Panel 1: A medium shot of {CHAR_PHOBOS} walking slowly between rows of rusted chemical reactors in the factory floor. His tattered leather trenchcoat brushes the walls. In the dark background, Hounds described as {CHAR_HOUND} on heavy iron chains follow him.
 > Panel 2: A close-up of pale, thin hands holding a small glass vial containing glowing neon green liquid, spinning it slowly under a hanging lightbulb.
-> Panel 3: A wide shot of {CHAR_PHOBOS} from behind, standing in front of a spatial distortion floating in the air like a cracked mirror. The projection shows a quantum grid with a profile of {CHAR_MATI_PRE} marked as 'Compatible Nexus'.
+> Panel 3: A wide shot of {CHAR_PHOBOS} from behind, standing in front of a spatial distortion floating in the air of the chemical factory like a cracked mirror. The projection shows a quantum grid with a profile of {CHAR_MATI_PRE} marked as 'Compatible Nexus'.
 > Panel 4: A close-up profile shot of the gaunt man's jaw hidden under his hood. Only the corners of his mouth are visible, scarred and stretched upwards in a cold, calculating grin.
 > {TECH_RULES}
 
 5. **VIÑETAS EN ESPAÑOL:**
-* **Viñeta 1 (Plano Medio):** Phobos caminando en el pasillo del Nivel 3, seguido de Hounds en la oscuridad.
+* **Viñeta 1 (Plano Medio):** Phobos caminando en la fábrica de químicos, seguido de Hounds encadenados.
 * **Viñeta 2 (Plano Detalle):** Manos de Phobos haciendo girar un vial de metatoxina verde brillante.
-* **Viñeta 3 (Plano General):** Phobos frente a una distorsión que proyecta la ficha de Mati como Nexo compatible.
+* **Viñeta 3 (Plano General):** Phobos frente a una distorsión que proyecta la ficha de Mati en el aire de la fábrica.
 * **Viñeta 4 (Plano Detalle):** Mandíbula de Phobos en primer plano, sonriendo de forma gélida bajo su capucha.
 """
 pages.append(p15)
@@ -548,59 +555,85 @@ p16 = f"""## PÁGINA 16 — "Times Square Interrumpido" (Acto 3)
 2. **ANÁLISIS DE RITMO:**
    Acción / Tensión. Phobos interrumpe las transmisiones.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
-   En la Viñeta 3, la onda cuántica orgánica que sale de las pantallas se desborda y borra las líneas de separación del gutter superior.
+   En la Viñeta 3, las líneas de estática digital y código de programación de las pantallas hackeadas se desbordan y borran las líneas de separación del gutter superior.
 
 4. **PROMPT FINAL PARA SEAART:**
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
-> {STYLE_BASE}Occasional panel bleeding — waves of organic distortion breaking panel boundaries. {STYLE_ARTISTICO}
-> Panel 1: A wide shot of Times Square at night. Bright advertisement screens, crowds of people walking. In the middle of the crowd, {CHAR_MATI_PRE} walks with his hood up, looking down.
+> {STYLE_BASE}Occasional panel bleeding — digital static or flickering screen lines breaking panel boundaries. {STYLE_ARTISTICO}
+> Panel 1: A wide shot of Times Square at late twilight, blue hour, under a deep indigo and dark blue sky. The golden hour has just ended, and the dark blue sky contrasts with bright advertisement screens. Crowds of people walking. In the middle of the crowd, {CHAR_MATI_PRE} walks with his hood up, looking down.
 > Panel 2: A wide shot of Times Square. Suddenly, all the giant screens cut to absolute black. The crowd is startled, stopping to look.
-> Panel 3: A massive horizontal splash shot (1/2 page). All the giant billboard screens turn back on, displaying the face of {CHAR_MATI_PRE} talking to his variants. The image is distorted, waving organically as if the space around it is breathing. Hundreds of people in the square look up.
+> Panel 3: A massive horizontal splash shot (1/2 page). All the giant billboard screens turn back on, displaying bright high-contrast security camera footage and database files showing the face of {CHAR_MATI_PRE} talking to his variants. The digital screens cast a powerful white and cyan light. Hundreds of people in the square look up.
 > Panel 4: A medium shot of {CHAR_MATI_PRE} in the crowd. People around him are starting to point up at the screens, but he keeps his head low, not looking up yet.
 > {TECH_RULES}
 
 5. **VIÑETAS EN ESPAÑOL:**
-* **Viñeta 1 (Plano General):** Times Square de noche con Mati encapuchado y la multitud.
+* **Viñeta 1 (Plano General):** Times Square al crepúsculo tardío (hora azul) con Mati encapuchado y la multitud.
 * **Viñeta 2 (Plano General):** Apagón repentino de todas las pantallas gigantes simultáneamente.
-* **Viñeta 3 (Splash 1/2 página):** Las pantallas se encienden con el video de Mati y sus variantes, con la gente mirando arriba.
+* **Viñeta 3 (Splash 1/2 página):** Las pantallas se encienden con grabaciones de seguridad y bases de datos mostrando a Mati y sus variantes de forma digital, con la gente mirando arriba.
 * **Viñeta 4 (Plano Medio):** Civiles señalando hacia arriba mientras Mati camina entre ellos con la cabeza gacha.
 """
 pages.append(p16)
 
-# --- PAGE 17 ---
-p17 = f"""## PÁGINA 17 — "Montaje: Las Cuatro Reacciones" (Acto 3)
+# --- PAGE 16.5 ---
+p16_5 = f"""## PÁGINA 16.5 — "La Revelación y el Caos" (Acto 3)
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
-   Página 17. Grilla de 8 viñetas pequeñas en un grid simétrico 4x2.
+   Página 16.5. Grilla de 5 viñetas. La viñeta 3 es grande y vertical, y la viñeta 5 es un gran plano general horizontal en la parte inferior.
 2. **ANÁLISIS DE RITMO:**
-   Acción / Tensión. Reacciones al video revelado.
+   Acción / Tensión. El estallido de la furia civil tras revelarse la hipocresía de Vanguard.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
-   En la Viñeta 4, el puño de Don Vanguard golpeando el escritorio de caoba agrieta la madera y el efecto de impacto se desborda en el panel 8.
+   En la Viñeta 5, los escombros de las pantallas rotas e hilos de humo se desbordan cruzando el gutter inferior de la página.
 
 4. **PROMPT FINAL PARA SEAART:**
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
-> {STYLE_BASE}Occasional panel bleeding — shockwave and cracking wood effects breaking panel borders. {STYLE_ARTISTICO}
-> Panel 1: A medium shot of {CHAR_MATI_PRE} in Times Square looking up, his face illuminated by the bright violet glow of the giant screens displaying his face.
-> Panel 2: A medium shot of {CHAR_JULIAN} and {CHAR_UANDI} in the base living room. Julian's playing cards fall from his hands, and Uandi drops the mate cup, both staring at the television in shock.
-> Panel 3: A medium shot of {CHAR_IAN} in his workshop, sitting in front of his monitors, analyzing the massive interference on the screens with a focused expression.
-> Panel 4: A medium shot inside a high-ceilinged government office. {CHAR_VANGUARD} has his back turned, looking out of a gothic window. He slams one massive fist onto a mahogany desk, making the wood crack, while security monitors show the broadcast of the young man's face.
-> Panel 5: A medium shot of a citizen in Times Square pointing at {CHAR_MATI_PRE} in the crowd.
-> Panel 6: A medium shot in the base living room, the television showing the distorted face of the young man with dimples.
-> Panel 7: A close-up detail shot of {CHAR_IAN}'s screens, showing organic distortions in the signal.
-> Panel 8: A medium shot of {CHAR_VANGUARD} turning halfway around in his office, his face tight with controlled rage, holding a security communicator.
+> {STYLE_BASE}Occasional panel bleeding — debris and sparks from broken digital screens crossing panel borders. {STYLE_ARTISTICO}
+> Panel 1: A medium shot of a citizen in Times Square, face twisted in anger, pointing his finger up at a giant billboard screen. Next to him in the crowd, {CHAR_MATI_PRE} walks with his hood up.
+> Panel 2: A close-up of {CHAR_MATI_PRE} suddenly turning around, his face showing a look of pure fear, shock, and surprise.
+> Panel 3: A dramatic low-angle shot. {CHAR_MATI_PRE} is looking up at the giant digital billboard screens. His hood is down, and his face is illuminated by the bright white and cyan light of the screens displaying his face and his variants.
+> Panel 4: A wide shot focusing on the giant digital screens in Times Square displaying the official portrait of {CHAR_VANGUARD} next to confidential V.O.P.S. database logs and files, implicating him in hiding mutants.
+> Panel 5: A massive wide horizontal shot of Times Square in total chaos. An angry crowd is rioting, throwing stones, rocks, and wooden planks. Protesters are smashing low digital billboard screens and shop windows. In the middle of the street, dozens of yellow cabs and cars are completely trapped in gridlock, unable to move due to the dense crowd of protesters.
 > {TECH_RULES}
 
 5. **VIÑETAS EN ESPAÑOL:**
-* **Viñeta 1 (Plano Medio):** Mati en Times Square mira con horror las pantallas.
-* **Viñeta 2 (Plano Medio):** Julián y Uandi atónitos frente al televisor de la base.
-* **Viñeta 3 (Plano Medio):** Ian en el taller analizando la señal cuántica inestable.
-* **Viñeta 4 (Plano Americano):** Don Vanguard en su despacho gótico, furioso, apretando el escritorio.
-* **Viñeta 5 (Plano Medio):** Un peatón en Times Square señalando a Mati sospechosamente.
-* **Viñeta 6 (Plano Medio):** La televisión de la base con interferencia cuántica.
-* **Viñeta 7 (Plano Detalle):** Ian ampliando la gráfica del video con distorsión analógica.
-* **Viñeta 8 (Plano Americano):** Don Vanguard ordenando represión inmediata en Times Square.
+* **Viñeta 1 (Plano Medio):** Un peatón furioso señala hacia arriba gritando, con Mati encapuchado a su lado en la multitud.
+* **Viñeta 2 (Primer Plano):** Mati se da vuelta con cara de susto y sorpresa absoluta.
+* **Viñeta 3 (Plano Contrapicado):** Mati mirando hacia las pantallas gigantes con la capucha caída, iluminado por la luz de las pantallas que muestran sus variantes.
+* **Viñeta 4 (Plano General):** Las pantallas gigantes mostrando el retrato de Don Vanguard al lado de los archivos de V.O.P.S.
+* **Viñeta 5 (Splash Horizontal):** Times Square en caos, la multitud destrozando pantallas y vidrieras, revoleando piedras y maderas, con autos y taxis atrapados en la calle.
+"""
+pages.append(p16_5)
+
+# --- PAGE 17 ---
+p17 = f"""## PÁGINA 17 — "La Furia de la Alcaldía" (Acto 3)
+
+1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
+   Página 17. Grilla de 6 viñetas. Introducción de Don Vanguard y el Comandante R.E.G.U.L.A.R.
+2. **ANÁLISIS DE RITMO:**
+   Slow-Burn. Tensión silenciosa, revelación de poder e ira contenida que explota.
+3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
+   En la Viñeta 4, el puño o mano enorme sobre el escritorio de caoba y su manga blanca rompen el gutter inferior del panel.
+
+4. **PROMPT FINAL PARA SEAART:**
+> [!TIP]
+> **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
+> {STYLE_BASE}Occasional panel bleeding — white sleeve and massive hand breaking panel boundaries. {STYLE_ARTISTICO}
+> Panel 1: A close-up detail shot of the US flag and the New York state flag waving gently next to a tall gothic arched window inside a grand office, warm dim lighting.
+> Panel 2: A close-up detail shot of a wall inside the office displaying black-and-white portraits of former urban vigilantes and heroes. A thick, cold red paint line is painted across each portrait, crossed out.
+> Panel 3: A close-up detail shot of a wooden trophy display shelf containing confiscated vigilante relics: a red web-patterned mask with large white lenses, a dark armored cowl with pointed ears, a red-and-black tactical fabric mask, and a crimson leather mask with small horn-like protrusions. Beside them stands an inactive experimental red-and-gold powered combat armor prototype mounted on a display frame. The scene feels like a museum of defeated vigilantes.
+> Panel 4: A close-up detail shot of a massive, heavy hand resting flat on a mahogany desk. The ring finger wears a heavy gold signet ring with a city hall emblem. A clean sleeve of a white three-piece suit is visible.
+> Panel 5: A medium shot of {CHAR_VANGUARD} standing up abruptly behind his desk. He is tense with rage, mouth wide open in a shout. In the background, a large flat-screen plasma television displays the hacked broadcast of Times Square showing Mati's face.
+> Panel 6: A medium shot of {CHAR_REGULAR} standing in a wood-paneled corridor outside the grand carved double wooden doors of the office, looking startled and frozen in tension, listening to the shout from inside.
+> {TECH_RULES}
+
+5. **VIÑETAS EN ESPAÑOL:**
+* **Viñeta 1 (Plano Detalle):** La bandera de EE.UU. y de Nueva York ondeando junto a un ventanal gótico bajo luz cálida.
+* **Viñeta 2 (Plano Detalle):** Retratos en blanco y negro de antiguos vigilantes en la pared, tachados con líneas rojas de pintura.
+* **Viñeta 3 (Plano Detalle):** Vitrina de madera con reliquias confiscadas de vigilantes: una máscara roja con diseño de telaraña y lentes blancos grandes, una capucha blindada oscura con orejas puntiagudas, una máscara táctica de tela roja y negra, y una máscara de cuero carmesí con pequeñas protuberancias en forma de cuerno. Al lado se encuentra un prototipo inactivo de armadura de combate roja y dorada experimental montada sobre un soporte.
+* **Viñeta 4 (Plano Detalle):** La mano enorme de Don Vanguard con su anillo de sello dorado sobre el escritorio, vistiendo una manga de traje blanco.
+* **Viñeta 5 (Plano Americano):** Don Vanguard levantándose furioso de su asiento, vistiendo su impecable traje blanco de tres piezas, gritando con rabia frente a la pantalla de plasma gigante.
+* **Viñeta 6 (Plano Medio):** El Comandante R.E.G.U.L.A.R. asustado en el pasillo, escuchando el grito detrás de la doble puerta de madera, sin entrar.
 """
 pages.append(p17)
 
@@ -618,12 +651,12 @@ p18 = f"""## PÁGINA 18 — "La Voz en las Pantallas" (Acto 3)
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
 > {STYLE_BASE}Occasional panel bleeding — glowing data grids and signatures spilling over panel lines. {STYLE_ARTISTICO}
-> Panel 1: A dramatic low-angle shot of {CHAR_MATI_PRE} looking up at the giant billboard screens in Times Square, which are casting a strong violet glow over him and the surrounding crowd of onlookers.
-> Panel 2: A wide shot focusing on the giant digital screens in Times Square displaying medical files, security records, and the quantum signature of {CHAR_MATI_PRE}, with organic distortions.
+> Panel 1: A dramatic low-angle shot of {CHAR_MATI_PRE} looking up at the giant billboard screens in Times Square, which are casting a strong white and cyan light over him and the surrounding crowd of onlookers.
+> Panel 2: A wide shot focusing on the giant digital screens in Times Square displaying medical files, security records, and the quantum signature of {CHAR_MATI_PRE}, with digital scanlines and database framing.
 > {TECH_RULES}
 
 5. **VIÑETAS EN ESPAÑOL:**
-* **Viñeta 1 (Plano Contrapicado):** Mati mira hacia arriba con horror sus propias imágenes en Times Square.
+* **Viñeta 1 (Plano Contrapicado):** Mati mira hacia arriba con horror sus propias imágenes en Times Square, iluminado por la luz de las pantallas.
 * **Viñeta 2 (Plano General):** Las pantallas gigantes del centro urbano revelando el archivo y la ficha médica cuántica de Mati.
 """
 pages.append(p18)
@@ -994,7 +1027,7 @@ p31 = f"""## PÁGINA 31 — "La Mañana en las Noticias" (Acto 6)
 > {STYLE_BASE}{STYLE_ARTISTICO}
 > Panel 1: A wide shot of the loft living room during a sunny morning. {CHAR_UANDI} is cooking in the background, {CHAR_JULIAN} sleeps on the couch, and {CHAR_IAN} sits at a table, holding a digital tablet. The television is patched with black duct tape.
 > Panel 2: A medium shot of the television screen displaying a news anchor reporting on the Times Square incident.
-> Panel 3: A medium shot of the news broadcast showing {CHAR_VANGUARD} standing at a municipal press podium with microphones, wearing his impeccable grey suit, with US and NY flags in the background.
+> Panel 3: A medium shot of the news broadcast showing {CHAR_VANGUARD} standing at a municipal press podium with microphones, with US and NY flags in the background.
 > Panel 4: A small shot of {CHAR_IAN} looking at his tablet, his brow furrowed in deep concern.
 > {TECH_RULES}
 
@@ -1110,16 +1143,16 @@ p35 = f"""## PÁGINA 35 — "El Titiritero en las Sombras" (Acto 6)
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
 > {STYLE_BASE}Occasional panel bleeding — glowing green liquid light spilling out of panel lines. {STYLE_ARTISTICO}
-> Panel 1: A wide shot of a dark brick corridor in Level 3. {CHAR_PHOBOS} stands as a tall, gaunt silhouette under a flickering fluorescent light.
-> Panel 2: A medium shot of {CHAR_PHOBOS} from behind, standing face to face with the colossal {CHAR_GORGON_BASE} in the narrow corridor.
+> Panel 1: A wide shot of the dark, spacious abandoned chemical factory warehouse floor. {CHAR_PHOBOS} stands as a tall, gaunt silhouette under a flickering yellow light. Collapsed catwalks, rusted steel pipes, and empty chemical tanks loom in the background.
+> Panel 2: A medium shot of {CHAR_PHOBOS} from behind, standing face to face with the colossal {CHAR_GORGON_BASE} inside the dark, wide hall of the abandoned chemical factory.
 > Panel 3: A close-up detail shot of pale hands pulling a glass vial of glowing neon green chemical from a dark leather coat pocket.
 > Panel 4: A medium shot of {CHAR_PHOBOS} extending his hand, handing the glowing green vial to the massive hand of {CHAR_GORGON_BASE}.
 > Panel 5: A wide shot of the colossal brute's hand clenching over the green glowing vial. In the shadows, his eyes reflect the green light.
 > {TECH_RULES}
 
 5. **VIÑETAS EN ESPAÑOL:**
-* **Viñeta 1 (Plano General):** Phobos solo en el pasillo del Nivel 3 bajo luces parpadeantes.
-* **Viñeta 2 (Plano Medio):** Phobos de espaldas dando instrucciones al colosal Gorgon.
+* **Viñeta 1 (Plano General):** Phobos en la amplia nave de la fábrica de químicos abandonada bajo luces parpadeantes.
+* **Viñeta 2 (Plano Medio):** Phobos de espaldas dando instrucciones al colosal Gorgon en la fábrica abandonada.
 * **Viñeta 3 (Plano Detalle):** Manos de Phobos extrayendo el vial de metatoxina verde brillante.
 * **Viñeta 4 (Plano Medio):** Phobos entregándole el vial químico a Gorgon.
 * **Viñeta 5 (Plano General):** El puño de Gorgon atrapando el vial que brilla verde en la oscuridad.
@@ -1242,8 +1275,8 @@ p39 = f"""## PÁGINA 39 — "El Cliffhanger" (Acto 6)
 """
 pages.append(p39)
 
-# Save Pages 1-39 to file
+# Save all pages to file
 with open(target_path, "w", encoding="utf-8") as f:
     f.write(content + "\n\n---\n\n".join(pages))
 
-print("Created prompts file with all 39 pages.")
+print("Created prompts file with all pages.")

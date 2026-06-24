@@ -148,7 +148,8 @@
 ### 👿 PHOBOS (El Arquitecto del Pánico)
 * **Rostro y Cabello:** Rostro con piel de tono pálido, ceniciento y artificial, con textura de porcelana agrietada. Su boca permanece estática en una sonrisa tensa, fija y exagerada que nunca llega a sus ojos. Lleva un visor angular de hierro oscuro pulido con pinchos geométricos agresivos que cubre completamente sus ojos.
 * **Físico:** Delgadez militar, rígida y erguida. Mantiene una postura monolítica y fría.
-* **Vestimenta y Accesorios:** Gabardina larga de cuero negro balístico y pesado, reforzada con múltiples correas de sujeción, hebillas cromadas y cuello alto rígido que evoca una camisa de fuerza. Arrastra a dos Hounds (masas biomecánicas de cables negros y estructuras caninas/humanoides) con pesadas cadenas de hierro oxidado.
+* **Vestimenta y Accesorios:** Gabardina larga de cuero negro balístico y pesado, reforzada con múltiples correas de sujeción, hebillas cromadas y cuello alto rígido que evoca una camisa de fuerza. Arrastra con pesadas cadenas de hierro oxidado a dos Hounds: criaturas grotescas y sarnosas de tamaño canino, con cuerpos deformes y rostros de perturbadoras facciones humanoides con dientes afilados.
+* **Ubicación:** No tiene base fija. Es el caos mismo; puede vivir temporalmente en instalaciones industriales abandonadas (como fábricas de químicos oscuras y tétricas) o en residencias de lujo cuyos dueños mantiene cautivos.
 
 #### Prompt de Generación
 

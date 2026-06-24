@@ -6,7 +6,7 @@
 * **El Rostro y la Eterna Mueca:** Piel con tono pálido ceniciento artificial, textura de porcelana agrietada. Su rostro permanece estático en una sonrisa tensa, fija y exagerada; una expresión de alegría maníaca que nunca llega a sus ojos.
 * **El Visor de Aleación:** Sobre sus sienes y cubriendo completamente sus ojos, lleva un visor angular de hierro oscuro pulido con pinchos geométricos agresivos.
 * **Indumentaria (Estilo Táctico / Restricción):** Gabardina larga de cuero negro balístico y pesado, reforzada con múltiples correas de sujeción, hebillas cromadas y un cuello alto rígido que enmarca su rostro. Evoca la estética de una camisa de fuerza militar.
-* **Mascotas:** Arrastra a dos Hounds (masas biomecánicas de filamentos de cables negros y estructuras angulares de sabuesos semi-humanoides) con pesadas cadenas de hierro oxidado.
+* **Mascotas:** Arrastra con pesadas cadenas de hierro oxidado a dos Hounds: criaturas grotescas y sarnosas de tamaño canino, con cuerpos deformes y rostros de perturbadoras facciones humanoides con dientes afilados.
 
 ---
 
@@ -22,7 +22,7 @@ Character design datasheet of an intensely gaunt tactical mastermind villain nam
 Character model sheet, turnaround, multiple views. Phobos, gaunt rigid tactical mastermind, pale ash-grey skin, lips scarred into a flat cold expression. Wearing a spiked angular dark alloy visor covering his eyes, long black ballistic leather trenchcoat with restraint straps and buckles, high stiff collar. Premium indie graphic novel style, hand-drawn ink line art, chiaroscuro, flat cel-shading, white background --no 3d, rendering, text, photorealism
 ```
 
-### 3. Phobos y los Hounds (Mascotas Biomecánicas):
+### 3. Phobos y los Hounds (Mascotas Deformes):
 ```text
-Phobos, gaunt tactical mastermind in black leather trenchcoat with restraint straps, spiked dark alloy visor covering eyes. He stands rigidly holding rusted iron chains connected to two biomechanical Hounds made of black cable filaments and sharp angular skeletal hound-like structures. Premium indie graphic novel style, hand-drawn ink line art, chiaroscuro, flat cel-shading, white background --no 3d, rendering, text, photorealism
+Phobos, gaunt tactical mastermind in black leather trenchcoat with restraint straps, spiked dark alloy visor covering eyes. He stands rigidly holding rusted iron chains connected to two horrific Hounds, which are dog-sized deformed beasts with greasy hair, dirty sarnous skin, and terrifyingly humanoid faces with jagged razor-sharp teeth. Premium indie graphic novel style, hand-drawn ink line art, chiaroscuro, flat cel-shading, white background --no 3d, rendering, text, photorealism
 ```

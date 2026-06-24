@@ -49,7 +49,7 @@
 *   **Categoría:** Antagonista Principal / Mente Maestra.
 *   **Origen:** Filósofo y alquimista cuya cordura y carne fueron consumidas tras asomarse a un abismo de pánico primordial. Regresó al mundo físico con los ojos calcinados, como un conducto viviente de la locura.
 *   **Poder Principal:** *Aura de Distorsión Mental (Efecto Pesadilla) y Alquimia de la Desesperación.*
-*   **Estética Visual:** Delgadez esquelética, piel blanco tísico agrietada y labios desgarrados en una eterna sonrisa grotesca. Viste una túnica andrajosa asimétrica con correas de cuero negro, abrigo de lona gris deshilachado y una corona de aleación oscura y afilada incrustada en sus sienes como venda ciega. Arrastra a dos Hounds con cadenas.
+*   **Estética Visual:** Delgadez esquelética, piel blanco tísico agrietada y labios desgarrados en una eterna sonrisa grotesca. Viste una túnica andrajosa asimétrica con correas de cuero negro, abrigo de lona gris deshilachado y una corona de aleación oscura y afilada incrustada en sus sienes como venda ciega. Arrastra con cadenas de hierro a dos Hounds (criaturas deformes y sarnosas de tamaño canino con rostros humanoides y dientes afilados). No posee ubicación fija: se asienta en fábricas de químicos abandonadas o en penthouses de lujo asaltados.
 
 ---
 
