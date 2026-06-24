@@ -318,34 +318,34 @@
 ---
 
 ### PÁGINA 12 — "Hacia Manhattan"
-**5 viñetas — Nueva York de día, luz resplandeciente y contraste urbano**
+**5 viñetas — Nueva York al atardecer, luz dorada y contraste urbano**
 
-**Viñeta 1 — Grande — Plano general — El Puente de Brooklyn (Día)**
-*Pleno mediodía. Un cielo azul brillante y despejado sobre Nueva York. La luz del sol incide directamente sobre los rascacielos de vidrio y acero de Manhattan al fondo, haciéndolos brillar. El Puente de Brooklyn está colmado de peatones, turistas y tránsito. En medio de este mar de gente, Mati avanza a paso rápido con la capucha de su bomber gris puesta, tratando de pasar desapercibido.*
-**CAPTION (Mati):** *"Nueva York de día es una sobreexposición de luz. Millones de personas cruzándose sin detenerse..."*
+**Viñeta 1 — Grande — Plano general — El Puente de Brooklyn (Atardecer)**
+*El sol comienza a ponerse, tiñendo el cielo de tonos dorados, anaranjados y violetas. Los rascacielos de vidrio y acero de Manhattan al fondo reflejan destellos de luz cálida. El Puente de Brooklyn está colmado de peatones, turistas y tránsito. En medio de este mar de gente, Mati avanza a paso rápido con la capucha de su bomber gris puesta, tratando de pasar desapercibido.*
+**CAPTION (Mati):** *"Nueva York al atardecer es una sobreexposición de luz dorada. Millones de personas cruzándose sin detenerse..."*
 
 **Viñeta 2 — Pequeña — Perfil de Mati caminando**
 *La sombra de la capucha oculta sus ojos. Bajo el borde de la tela se dibuja un tenue pero persistente destello violeta que parpadea bajo sus pestañas.*
-**CAPTION (Mati):** *"...y es la única ciudad del mundo donde podés esconderte a plena luz del sol."*
+**CAPTION (Mati):** *"...y es la única ciudad del mundo donde podés esconderte a plena luz del crepúsculo."*
 
 **Viñeta 3 — Media — En el vagón de la línea N**
 *El metro está lleno de pasajeros absortos en sus pantallas y auriculares bajo las luces frías de la cabina. Mati está parado junto a la puerta, de espaldas a la ventana. En el reflejo del vidrio, a contraluz con el sol exterior, sus pupilas agrietadas con filamentos violetas brillan con intensidad anormal. Nadie a su alrededor se percata.*
 
 **Viñeta 4 — Media — Salida del metro en Times Square**
-*Mati sube las escaleras de cemento hacia la superficie. Al emerger, la luz del día del cielo choca y se mezcla de forma caótica con el resplandor y el parpadeo de las pantallas publicitarias masivas.*
+*Mati sube las escaleras de cemento hacia la superficie. Al emerger, la luz dorada y cálida del sol poniente choca y se mezcla de forma caótica con el resplandor y el parpadeo de las pantallas publicitarias masivas.*
 
-**Viñeta 5 — Splash horizontal angosto — Times Square de Día**
-*Plano general de Times Square bajo el sol. Rascacielos cubiertos de publicidad digital brillante, taxis amarillos circulando y una masa densa de peatones. Mati camina de espaldas en medio de la multitud. La inmensa contaminación visual del entorno es su mejor camuflaje para disimular el brillo de sus ojos.*
+**Viñeta 5 — Splash horizontal angosto — Times Square al Atardecer**
+*Plano general de Times Square al atardecer, bajo un cielo naranja encendido. Rascacielos cubiertos de publicidad digital brillante, taxis amarillos circulando y una masa densa de peatones. Mati camina de espaldas en medio de la multitud. La inmensa contaminación visual del entorno es su mejor camuflaje para disimular el brillo de sus ojos.*
 
 ---
 
 ### PÁGINA 13 — "La Estación Eléctrica"
 **4 viñetas — efecto de capas en descenso vertical continuo**
 
-*(Nota de dirección: Las viñetas de esta página se organizan como una columna vertical que simula que la cámara atraviesa físicamente el suelo de la ciudad hasta llegar a una dimensión paralela. Las viñetas del Nivel 3 se dibujan inicialmente invertidas: el suelo en el techo y el techo en el suelo).*
+*(Nota de dirección: Las viñetas de esta página se organizan como una columna vertical que simula que la cámara atraviesa físicamente el suelo de la ciudad hasta llegar a una dimensión paralela. Las viñetas del Nivel 8 se dibujan inicialmente invertidas: el suelo en el techo y el techo en el suelo).*
 
 **Viñeta 1 — Grande horizontal — Capa 1: Central Park**
-*Una toma del sol de la tarde golpeando los prados de Central Park. Familias paseando, ciclistas. Al fondo, la imponente silueta de la Quinta Avenida.*
+*Una toma del crepúsculo cayendo sobre los prados de Central Park. El cielo se torna de un violeta y azul profundo, con farolas encendiéndose a los costados de los caminos. Familias paseando, ciclistas. Al fondo, la imponente silueta de la Quinta Avenida iluminada.*
 
 **Viñeta 2 — Pequeña — Capa 2: Las Alcantarillas**
 *Justo debajo del césped del parque. Plano detalle del interior de una alcantarilla oscura. Ratas asustadas huyendo a toda velocidad por la superficie oxidada de una gruesa tubería metálica mientras gotea agua grisácea del hormigón.*
@@ -353,9 +353,9 @@
 **Viñeta 3 — Mediana horizontal — Capa 3: La Tierra Profunda**
 *La cámara atraviesa estratos geológicos. Rocas compactadas, sedimentos y, incrustados en la tierra oscura, los restos fósiles gigantescos y esqueléticos de un dinosaurio (un tiranosaurio comprimido por la presión geológica).*
 
-**Viñeta 4 — Grande — Capa 4: El Nivel 3 (Vista Invertida/Upside-Down)**
-*La cámara rompe la roca y entra a un espacio vacío... pero la física está rota. La viñeta está dibujada al revés: Phobos está parado en el suelo, pero este suelo está en la parte superior de la viñeta, y las tuberías oxidadas cuelgan desde abajo. Es el Nivel 3 de los Backrooms: "The Electrical Station". Tuberías industriales oxidadas, ladrillos húmedos expuestos y luces fluorescentes que parpadean de forma errática.*
-*Phobos de espaldas. Una silueta delgada, con un abrigo gris deshilachado y la corona-venda metálica incrustada en su nuca. A sus pies (en el techo de la viñeta), charcos de agua electrificados con arcos voltaicos amarillos y cables de alta tensión chispeando.*
+**Viñeta 4 — Grande — Capa 4: El Nivel 8 (Vista Invertida/Upside-Down)**
+*La cámara rompe la roca y entra en una caverna infinita, claustrofóbica y de total oscuridad, rota únicamente por un débil brillo mineral verdoso que hace resplandecer las paredes húmedas. La física está invertida: Phobos camina por el techo de piedra (en la parte superior de la viñeta), mientras que las estalactitas y las formaciones de piedra caliza cuelgan de lo que debería ser el suelo (en la parte inferior). Es el Nivel 8 de los Backrooms: "Cave System". Agua de Almendra goteando en sentido inverso y charcos de una brea negra y viscosa flotando en la gravedad invertida.*
+*Phobos de espaldas, una silueta alta y esquelética con su abrigo deshilachado. En los charcos de brea invertidos, se insinúan formas de dedos o manos humanoides que intentan estirarse hacia el vacío.*
 **PHOBOS (de espaldas, monólogo susurrado):** "La red humana es tan ruidosa."
 **PHOBOS (de espaldas):** "Pero sus secretos... siempre flotan hacia abajo."
 
@@ -365,18 +365,18 @@
 **5 viñetas — la rotación física y la revelación de la amenaza**
 
 **Viñeta 1 — Grande — Capa 5: La Rotación de la Cámara (El Reacomodo)**
-*La cámara gira en un espiral dinámico y continuo. El entorno de ladrillos húmedos, cables chispeantes y tuberías metálicas del Nivel 3 rota 180 grados hasta que la física se percibe normal (el suelo abajo). Phobos, siempre de espaldas en el centro, parece reacomodarse mientras las perspectivas se enderezan.*
+*La cámara gira en un espiral dinámico de 180 grados. El entorno de cavernas estrechas, arcos de piedra natural y estalactitas del Nivel 8 rota hasta que la gravedad se normaliza. El eco del goteo de agua reverbera con fuerza en las paredes rocosas mientras Phobos, imperturbable en el centro y de espaldas, se acomoda a la nueva perspectiva.*
 **PHOBOS (de espaldas):** "Es hora de pescar."
 
-**Viñeta 2 — Grande — Plano general de la Estación Eléctrica**
-*El infinito pasillo liminal de la estación eléctrica del Nivel 3. Luces fluorescentes parpadean con un zumbido eléctrico molesto. La atmósfera es húmeda, fría, industrial. Paredes de ladrillo visto con cables de alta tensión expuestos y tuberías oxidadas que gotean agua. Charcos de agua electrificados con arcos voltaicos amarillos en el suelo.*
+**Viñeta 2 — Grande — Plano general del Sistema de Cuevas**
+*Un plano general del Sistema de Cuevas del Nivel 8. Una red laberíntica de túneles rocosos y húmedos sin luz natural. El suelo de piedra irregular está salpicado por charcos negros de brea viscosa de donde surgen sutiles manos humanoides petrificadas, y charcos de Agua de Almendra mineralizada. Enormes estalagmitas bloquean el paso al fondo, y el sonido de las gotas de agua al caer resuena con un eco perturbador e infinito.*
 **PHOBOS (de espaldas):** "La energía cuántica es tan inestable... pero tan fácil de canalizar."
 
-**Viñeta 3 — Pequeña — Plano detalle: las sombras del pasillo**
-*En las esquinas oscuras del pasillo, entre los transformadores oxidados y las marañas de cables, se perciben siluetas encorvadas y ojos blanquecinos que brillan en la penumbra. Los Hounds acechan en silencio.*
+**Viñeta 3 — Pequeña — Plano detalle: las grietas de la cueva**
+*En las grietas de la roca y los huecos oscuros del techo de la cueva, junto a raíces secas colgantes, se ocultan arácnidos de cueva gigantescos de muchas patas y los Hounds con sus ojos blancos y brillantes acechando hambrientos.*
 
 **Viñeta 4 — Media — La reja de contención**
-*Al final del pasillo, una pesada puerta de barrotes de hierro oxidado vibra violentamente. Detrás de los barrotes, los Hounds se agolpan. Vemos garras y siluetas biológicas intentando forzar el metal.*
+*Bloqueando un túnel de piedra estrecho, una pesada reja de contención de hierro oxidado empotrada a presión en la roca vibra con violencia. Detrás de ella, Hounds se amontonan empujando el metal, y un eco metálico ensordecedor rebota por toda la caverna.*
 **EFECTO DE SONIDO:** *CLANG CLANG*
 
 **Viñeta 5 — Grande — Capa 6: La Reja y el Hound**
@@ -389,7 +389,7 @@
 **4 viñetas — Phobos actúa en las sombras. Sin rostro visible.**
 
 **Viñeta 1 — Media — Phobos caminando**
-*Phobos camina despacio por los pasillos oxidados y húmedos del Nivel 3. El abrigo deshilachado roza las paredes de ladrillo húmedo. Detrás de él, en las sombras, los Hounds lo siguen con las cadenas tensas, sus patas esqueléticas sin hacer ruido.*
+*Phobos camina despacio por las estrechas e infinitas galerías del Nivel 8, esquivando con paso firme los charcos de brea pegajosa y las manos humanoides que intentan brotar de ellos. Su abrigo deshilachado roza las rocas húmedas de las que brota Agua de Almendra mineralizada. Detrás de él, los Hounds encadenados avanzan encorvados y en absoluto silencio sobre la piedra, esquivando también los charcos negros.*
 
 **Viñeta 2 — Pequeña — Plano detalle: manos de Phobos**
 *Dedos largos, pálidos y huesudos sostienen un vial de metatoxina verde brillante. Lo hace girar despacio bajo la luz parpadeante de una bombilla colgante, antes de guardarlo en su bolsillo.*
@@ -414,7 +414,7 @@
 **4 viñetas — la transmisión. Phobos no necesita tecnología: usa los Backrooms como canal.**
 
 **Viñeta 1 — Grande — Plano general: Times Square**
-*Las pantallas enormes. La noche. La multitud. Mati entre la gente, capucha puesta, tratando de enfriarse. Todo normal.*
+*Las pantallas enormes. El crepúsculo tardío. El cielo es de un azul índigo profundo, casi de noche, pero no del todo. La multitud. Mati entre la gente, capucha puesta, tratando de enfriarse. Todo normal.*
 
 **Viñeta 2 — Grande — Las pantallas cortando a negro**
 *Simultáneamente. Todas. El negro absoluto por un segundo.*
@@ -850,14 +850,14 @@
 ---
 
 ### PÁGINA 35 — "El Titiritero en las Sombras"
-**5 viñetas — Noche, Estación Eléctrica de los Backrooms (Nivel 3)**
+**5 viñetas — Noche, Sistema de Cuevas de los Backrooms (Nivel 8)**
 
-**Viñeta 1 — Grande — Pasillo industrial del Nivel 3 (Noche)**
-*Phobos es una silueta alta y oscura parada en medio de los ladrillos húmedos y las tuberías oxidadas de la central eléctrica. Las luces fluorescentes parpadean con un zumbido molesto.*
+**Viñeta 1 — Grande — Pasillo de piedra del Nivel 8 (Noche)**
+*Phobos se yergue como una silueta delgada y alta en una galería estrecha del Nivel 8. A su alrededor, la cueva está salpicada de estalagmitas y charcos de brea negra con manos de alquitrán inertes. Un reflector táctico portátil de V.O.P.S., abollado y abandonado en el suelo de piedra, parpadea débilmente iluminando las gotas de Agua de Almendra que caen del techo con un eco continuo.*
 **EFECTO DE SONIDO:** *BZZZZT... BZZZZT...*
 
 **Viñeta 2 — Media — Phobos ante la silueta enorme de Gorgon**
-*Gorgon se alza gigantesco y amenazante al fondo del pasillo angosto de ladrillos, con su mole dominando el espacio. En primer plano, la silueta delgada de Phobos de espaldas permanece perfectamente erguida y rígida, dominando la perspectiva de la escena.*
+*Gorgon se alza gigantesco y descomunal al fondo de la galería estrecha, esquivando una enorme estalagmita. Su mole parece chocar con el techo bajo de piedra caliza de la cueva. En primer plano, la silueta rígida de Phobos de espaldas se impone, inmóvil ante la criatura.*
 **PHOBOS (de espaldas):** "Vanguard ha enviado a todo su juguete de contención a los muelles del sur. Dumbo va a arder..."
 
 **Viñeta 3 — Pequeña — Plano detalle: manos de Phobos**
