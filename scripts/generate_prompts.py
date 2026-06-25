@@ -35,7 +35,7 @@ CHAR_MATI_PRE = (
 )
 CHAR_MATI_VISOR = (
     "a young man with warm light-brown skin, clean-shaven face, and short parted very dark hair, "
-    "wearing an industrial tactical visor with red polarized glass and copper wires on temples, "
+    "wearing an industrial tactical visor with violet polarized glass and copper wires on temples, "
     "a scorched black tactical bomber jacket, an olive green shirt, and khaki cargo pants"
 )
 CHAR_UANDI = (

@@ -79,7 +79,7 @@
 * **Cabello:** Muy oscuro, corto, con volumen moderado en la parte superior y peinado de lado de forma relajada y prolija.
 * **Físico:** Complexión atlética regular, proporciones naturales sin musculatura exagerada.
 * **Vestimenta:** Campera táctica estilo bomber gris oscuro/negro ("tactical jacket") con un bolsillo de cierre visible en la manga izquierda. Remera o suéter de cuello redondo verde oliva apagado. Pantalón cargo estilo jogger color caqui con puños elásticos ajustados en los tobillos. Zapatillas deportivas gris claro y blanco.
-* **Equipamiento Post-Acto 3:** Visor Táctico industrial que cubre sus ojos, con cables conductores expuestos hacia las sienes y un cristal polarizado rojo.
+* **Equipamiento Post-Acto 3:** Visor Táctico industrial que cubre sus ojos, con cables conductores expuestos hacia las sienes y un cristal polarizado violeta.
 * **Mecánica Visual de Poder:** Fuego cuántico violeta radiactivo que se emite directamente desde los ojos en forma de ráfagas de alta densidad.
 
 #### Prompts de Generación
@@ -88,7 +88,7 @@
 > `Character design datasheet of a young man named Mati. ROSTRO: friendly expression, prominent dimples on cheeks, clean-shaven, warm light-brown skin. CABELLO: short parted very dark hair. VESTIMENTA: charcoal tactical bomber jacket with zipper pocket on left sleeve, olive green round-neck shirt, khaki cargo pants. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles`
 
 > **Mati (Con Visor Táctico) - Prompt:**
-> `Character design datasheet of a young man named Mati. ROSTRO: eyes covered by an industrial tactical visor with red polarized glass and copper wires on temples, warm light-brown skin. VESTIMENTA: scorched black tactical bomber jacket, olive shirt, khaki cargo pants. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles`
+> `Character design datasheet of a young man named Mati. ROSTRO: eyes covered by an industrial tactical visor with violet polarized glass and copper wires on temples, warm light-brown skin. VESTIMENTA: scorched black tactical bomber jacket, olive shirt, khaki cargo pants. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles`
 
 ---
 

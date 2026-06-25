@@ -3,7 +3,7 @@
 
 **Proyecto:** Saga Distrito Nulo
 **Cómic:** Fuego Púrpura (Los Pecados de Brooklyn)
-**Parte:** 1 de 2 | **Páginas:** 39 | **Estado:** Borrador v3
+**Parte:** 1 de 2 | **Páginas:** 42 (incluyendo 10.5, 12.5 y 16.5) | **Estado:** Borrador v3
 
 ---
 
@@ -176,7 +176,7 @@
 ---
 
 ## ACTO 1 — "Desayuno y Sombras"
-### Páginas 7 a 11
+### Páginas 7 a 11 (incluyendo 10.5)
 
 ---
 
@@ -291,6 +291,30 @@
 
 ---
 
+### PÁGINA 10.5 — "Descompresión y Sospechas"
+**5 viñetas — tensión en el living, sospecha silenciosa**
+
+**Viñeta 1 — Grande — Plano general — El living y taller**
+*Ian está concentrado en su mesa de trabajo con herramientas y la tablet en la mano. Uandi está recostado en el sillón, terminando de comer una de las medialunas de la bolsa. Al fondo, uno de los clones de estática azul de Julián limpia de forma mecánica la zona del taller, mientras el Julián real está en la otra esquina del sillón haciendo flotar naipes con desgano.*
+
+**Viñeta 2 — Media — Mati saliendo de la cocina**
+*Mati cruza el espacio común desde la cocina. Camina a paso rápido y con el cuerpo tenso, manteniendo la cabeza agachada y cubriéndose la frente y el ojo derecho con la mano izquierda.*
+
+**Viñeta 3 — Media — Julián y Mati**
+*Julián lo mira de reojo y le habla con una leve sonrisa, señalando la bolsa.*
+**JULIÁN:** "Che, te dejé una para el camino antes de que Uandi arrase con el resto, Bub. ¿Estás bien?"
+*Mati sigue de largo sin mirarlo, respondiendo con voz baja y tensa.*
+**MATI:** "Sí... Voy al baño."
+
+**Viñeta 4 — Pequeña — Plano detalle: Ian observándolo**
+*Ian ha dejado de trabajar y observa fijamente a Mati de espaldas. Sus ojos detrás de las gafas se entrecierran con preocupación y sospecha analítica, notando el temblor en los hombros de Mati.*
+
+**Viñeta 5 — Pequeña — Plano detalle: la puerta del baño**
+*La puerta metálica del baño se cierra de golpe. En la rendija, antes del cierre definitivo, se llega a ver de perfil el rostro de Mati apretando los párpados de dolor, con un finísimo hilo de vapor violeta escapando de su lagrimal derecho.*
+**EFECTO DE SONIDO:** *click*
+
+---
+
 ### PÁGINA 11 — "El Reflejo Degenerativo"
 **4 viñetas**
 
@@ -313,7 +337,7 @@
 ---
 
 ## ACTO 2 — "Las Calles de Hierro"
-### Páginas 12 a 15
+### Páginas 12 a 15 (incluyendo 12.5)
 
 ---
 
@@ -339,22 +363,33 @@
 
 ---
 
+### PÁGINA 12.5 — "La Fábrica Abandonada"
+**1 viñeta — Splash Page de ambiente y atmósfera**
+
+**Viñeta 1 — Splash Page (Página completa)**
+*Plano general del exterior de la colosal fábrica de químicos abandonada a orillas de un canal de aguas grises e inmóviles, al crepúsculo. La enorme e imponente estructura de metal y cemento carcomido se recorta contra un cielo dramático teñido de violeta, índigo y naranja. Las chimeneas oxidadas, las pasarelas exteriores colapsadas y las incontables claraboyas y ventanas rotas están sumidas en una oscuridad total. Todo en la escena evoca abandono, frío y una quietud ominosa.*
+**CAPTION (Phobos):** *"El ruido es una ilusión de los vivos."*
+**CAPTION (Phobos):** *"En el silencio es donde realmente se construyen las verdades."*
+
+---
+
 ### PÁGINA 13 — "La Fábrica de Químicos"
 **4 viñetas — efecto de capas en descenso vertical continuo**
 
-*(Nota de dirección: Las viñetas de esta página se organizan como una columna vertical que simula que la cámara desciende a través de la infraestructura del edificio industrial abandonado, desde el tejado hasta el suelo principal).*
+*(Nota de dirección: Las viñetas de esta página se organizan como una columna vertical que simula que la cámara desciende a través de la infraestructura del edificio industrial abandonado, ingresando desde el tejado hasta el suelo principal).*
 
-**Viñeta 1 — Grande horizontal — Capa 1: El Exterior de la Fábrica (Crepúsculo)**
-*Una toma exterior de la fábrica de químicos abandonada a orillas de un canal industrial al crepúsculo. El cielo se tiñe de un violeta y naranja apagado, con las siluetas oxidadas de chimeneas y conductos recortándose contra la luz moribunda. Las ventanas del edificio están rotas y oscuras.*
+**Viñeta 1 — Grande horizontal — Capa 1: La Claraboya Rota**
+*La cámara ingresa al edificio a través de una claraboya rota de vidrio y marcos oxidados en el tejado. Hilos de agua de lluvia gotean perezosamente desde las vigas de hierro carcomidas hacia el vacío de la nave industrial.*
+**EFECTO DE SONIDO:** *drip... drip...*
 
-**Viñeta 2 — Pequeña — Capa 2: La Claraboya Rota**
-*La cámara desciende ingresando al edificio a través de una claraboya rota de vidrio y marcos oxidados. Hilos de agua de lluvia gotean perezosamente desde las vigas de hierro carcomidas hacia el vacío de la nave industrial.*
+**Viñeta 2 — Mediana horizontal — Capa 2: El Entramado de Tuberías**
+*La cámara desciende entre pasarelas de rejilla metálica corroídas y suspendidas en el aire. Se observan enormes tanques cilíndricos abollados de almacenamiento químico, válvulas cubiertas de sarro y marañas de cables eléctricos cortados que cuelgan como lianas muertas en la penumbra.*
 
-**Viñeta 3 — Mediana horizontal — Capa 3: El Entramado de Tuberías**
-*La cámara baja entre pasarelas de rejilla metálica corroídas y suspendidas en el aire. Se observan enormes tanques cilíndricos abollados de almacenamiento químico, válvulas cubiertas de sarro y marañas de cables eléctricos cortados que cuelgan como lianas muertas.*
+**Viñeta 3 — Pequeña — Capa 3: Los Charcos de la Nave**
+*La cámara sigue bajando, enfocando de cerca el goteo constante sobre el suelo de la fábrica. Grandes charcos de lodo industrial negro y residuos químicos estancados que desprenden un débil y tóxico fulgor verdoso en las grietas del cemento.*
 
 **Viñeta 4 — Grande — Capa 4: El Tinglado Principal**
-*La cámara llega al suelo de la inmensa nave de la fábrica, un espacio amplio, oscuro y tétrico. Delgadas columnas de hormigón agrietadas se alzan en la penumbra. El suelo de cemento tiene grandes charcos de lodo industrial negro y residuos químicos estancados que desprenden un débil fulgor verdoso. En el centro del plano, Phobos se yergue de frente como una silueta completamente negra e indistinguible. Su cuerpo y rostro se pierden en la penumbra profunda, y solo destaca el brillo de una sonrisa gélida, filosa y teñida de tinta roja sangrienta.*
+*La cámara llega al suelo de la inmensa nave de la fábrica, un espacio amplio, oscuro y tétrico. Delgadas columnas de hormigón agrietadas se alzan en la penumbra. En el centro del plano, Phobos se yergue de frente como una silueta completamente negra e indistinguible. Su cuerpo y rostro se pierden en la penumbra profunda, y solo destaca el brillo de una sonrisa gélida, filosa y teñida de tinta roja sangrienta.*
 **PHOBOS (silueta de frente, monólogo susurrado):** "La red humana es tan ruidosa."
 **PHOBOS (silueta de frente):** "Pero sus secretos... siempre flotan hacia abajo."
 
@@ -534,21 +569,22 @@
 **5 viñetas — la acumulación de energía en la penumbra**
 
 **Viñeta 1 — Grande — El interior de la camioneta en movimiento**
-*Mati está sentado en el piso metálico y frío de la zona de carga, esposado a un caño de acero de refuerzo vertical. A su alrededor, los civiles arrestados tiemblan en la oscuridad. El camión avanza con brusquedad.*
+*El espacio interior del furgón es estrecho, seco y claustrofóbico. Mati está sentado en el piso metálico de la zona de carga, con las manos esposadas a la espalda a un caño de acero de refuerzo vertical. A su alrededor, los otros civiles arrestados, también esposados y completamente inmovilizados, tiemblan en la penumbra. El camión avanza con brusquedad.*
 
-**Viñeta 2 — Media — Ataque de pánico de Mati**
-*El encierro, el traqueteo del vehículo y la desesperación física disparan la inestabilidad de su mutación. Mati hiperventila, apretando los dientes mientras densos filamentos de fuego violeta empiezan a brotar de sus sienes.*
+**Viñeta 2 — Media — Esfuerzo de contención de Mati**
+*Mati mantiene el rostro apuntando hacia abajo, con la cabeza gacha intentando ocultar lo que le pasa. Sin embargo, a pesar de sus esfuerzos por esconderlo, un intenso y denso brillo violeta comienza a filtrarse entre sus párpados cerrados y sienes, iluminando el suelo seco bajo él. Las esposas le impiden llevarse las manos a la cara.*
 
 **Viñeta 3 — Pequeña — Plano detalle: ojos de Mati**
-*Un resplandor violeta líquido y superdenso inunda sus pupilas agrietadas. La córnea vibra bajo la presión cuántica.*
+*Mati sigue con la cabeza inclinada hacia el suelo. Sus párpados están fuertemente apretados por el dolor, pero la energía cuántica violeta se acumula de forma líquida y superdensa, escapando como finos hilos de plasma brillante por sus sienes.*
 
-**Viñeta 4 — Media — Un civil aterrorizado señala a Mati**
-*El detenido sentado junto a él retrocede en pánico, gritando con desesperación hacia la reja metálica que comunica con la cabina de los guardias.*
+**Viñeta 4 — Media — Los detenidos en pánico**
+*Los otros reclusos inmovilizados en el estrecho espacio notan el resplandor violeta en el suelo y en la cara de Mati. Uno de ellos, incapaz de moverse debido a las esposas, se estremece de terror y grita desesperado con la mirada fija en Mati hacia la rejilla de comunicación de la cabina.*
 **CIVIL ARRESTADO:** "¡Oficiales! ¡Ey! ¡Hay un mutante acá atrás! ¡Tiene los ojos encendidos! ¡Nos va a fundir!"
 
 **Viñeta 5 — Media — La cabina del furgón**
 *Los dos guardias tácticos de V.O.P.S. viajan adelante, serenos. El conductor mira por el espejo interno y se ríe junto a su compañero, ignorando la advertencia.*
 **V.O.P.S. CONDUCTOR:** "Claro que sí, fenómeno. Y yo soy Don Vanguard. ¡Cerrá la boca si no querés que la contención sea a los golpes!"
+
 
 ---
 
@@ -628,11 +664,11 @@
 **4 viñetas — el ingreso a la base**
 
 **Viñeta 1 — Grande — Entrada trasera de la base (Noche)**
-*Un auto frena derrapando frente a la puerta del taller de Dumbo. Uandi y Julián bajan del coche sosteniendo a Mati por los hombros. Mati tiene los ojos cerrados y el rostro sucio. Ian abre la puerta de chapa desde adentro.*
+*Un auto frena derrapando frente a la puerta del taller de Dumbo. Uandi y Julián bajan del coche sosteniendo a Mati por los hombros. Mati tiene los ojos cerrados, el rostro sucio y algo golpeado con algunos raspones, y la ropa un poco rota. Ian abre la puerta de chapa desde adentro.*
 **IAN:** "Entren. Rápido."
 
 **Viñeta 2 — Media — El living**
-*Uandi y Julián despiertos. La tele apagada. Los tres mirando a Mati con los ojos cerrados.*
+*Los chicos en el living de la base ayudando a Mati a sentarse. Lo observan con preocupación. Mati se ve algo golpeado, con raspones en la cara y los brazos, y la ropa un poco rota. Mantiene los ojos fuertemente cerrados.*
 **MATI:** "Necesito que alguien me ayude."
 *Pausa.*
 **MATI:** "Y después necesito contarles algo."
@@ -642,6 +678,32 @@
 
 **Viñeta 4 — Media — Ian**
 *Cierra la puerta. Su expresión: no es enojo. Es el inicio de un protocolo.*
+
+---
+
+### PÁGINA 25.5 — "La Presión Cuántica"
+**5 viñetas — El peligro inmediato de la energía de Mati**
+
+**Viñeta 1 — Media — Mati en el sillón**
+*Mati está sentado en el sillón con expresión de dolor, agarrándose las rodillas. Uandi y Julián lo observan preocupados a sus lados. Mati hace fuerza con el rostro, intentando abrir los ojos.*
+**MATI:** "No puedo estar así... Tengo que verlos, no puedo estar a ciegas..."
+**UANDI:** "Pará, Mati, no fuerces..."
+
+**Viñeta 2 — Plano detalle: el ojo de Mati entreabriéndose**
+*Mati abre apenas un milímetro sus párpados. Al instante, una chispa violenta de energía cuántica violeta sale disparada de su ojo izquierdo.*
+**EFECTO DE SONIDO:** *¡ZAP!*
+
+**Viñeta 3 — Media — Los chicos retroceden**
+*Uandi y Julián se echan hacia atrás con sorpresa y susto. Ian aparece de golpe en escena, señalando a Mati con un gesto de urgencia y deteniéndolo.*
+**IAN:** "¡No los abras! ¡No los abras, Mati! Esa energía no tiene amortiguación. Vas a reventar la base."
+**MATI:** *(apretando los párpados, adolorido)* "Me queman... Siento que me van a estallar las órbitas."
+
+**Viñeta 4 — Plano detalle — La quemadura en la mesa**
+*Una marca negra y humeante sobre la madera de la mesa ratona, justo donde impactó el pequeño rayo violeta.*
+
+**Viñeta 5 — Plano general — Ian va al taller**
+*Ian gira sobre sus talones y corre hacia el taller al fondo de la base. Uandi apoya una mano en el hombro de Mati para tranquilizarlo, mientras Mati permanece con los ojos cerrados.*
+**IAN:** "Quedate quieto y no hagas fuerza. Voy a buscar el escáner portátil. Tenemos que ver en qué frecuencia está esa energía para poder armarte un filtro táctico antes de que te derrita la cara."
 
 ---
 
