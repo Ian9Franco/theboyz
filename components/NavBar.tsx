@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { Users, BookOpen, Lock, Unlock, Menu, X } from "lucide-react";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -130,52 +131,72 @@ export default function NavBar() {
             </div>
           </div>
 
+          {/* Personajes Button */}
+          <Link
+            href="/#pibes"
+            className="font-[var(--font-bangers)] text-sm tracking-wider px-4 py-1.5 border-2 border-white/30 bg-white/5 hover:bg-white/15 hover:border-white/60 text-white/80 hover:text-white uppercase transition-all shadow-[2px_2px_0_rgba(0,0,0,0.5)] active:translate-y-0.5 active:translate-x-0.5 shrink-0 flex items-center gap-1.5"
+          >
+            <Users className="w-3.5 h-3.5" />
+            PIBES
+          </Link>
+
           {/* Leer Cómic Button */}
           <Link
             href="/#sagas"
-            className="font-[var(--font-bangers)] text-sm tracking-wider px-3.5 py-1.5 border-2 border-white bg-[#1b4332] hover:bg-[#2d6a4f] text-white uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] shrink-0"
+            className="font-[var(--font-bangers)] text-sm tracking-wider px-4 py-1.5 border-2 border-[#1b4332] bg-[#1b4332] hover:bg-[#2d6a4f] hover:border-[#2d6a4f] text-white uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] shrink-0 flex items-center gap-1.5"
           >
-            Leer Cómic →
+            <BookOpen className="w-3.5 h-3.5" />
+            LEER
           </Link>
 
           {/* Global Toggle Button */}
           <button
             onClick={toggleUnlockAll}
-            className={`font-[var(--font-bangers)] text-sm tracking-wider px-3.5 py-1.5 border-2 border-black uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] cursor-pointer shrink-0 ${
-              unlockAll 
-                ? "bg-[#6b7280] hover:bg-[#4b5563] text-white" 
-                : "bg-[#f5e642] hover:bg-[#eab308] text-black"
+            className={`font-[var(--font-bangers)] text-sm tracking-wider px-4 py-1.5 border-2 uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] cursor-pointer shrink-0 flex items-center gap-1.5 ${
+              unlockAll
+                ? "bg-[#e8185a] border-[#e8185a] text-white hover:bg-[#c0103e]"
+                : "bg-[#f5e642] border-[#f5e642] text-[#0a0a0f] hover:bg-[#eab308]"
             }`}
           >
-            {unlockAll ? "✕ Ocultar Spoilers" : "🔓 Desbloquear Todo"}
+            {unlockAll ? <Lock className="w-3.5 h-3.5" /> : <Unlock className="w-3.5 h-3.5" />}
+            <span>{unlockAll ? "SPOILERS ON" : "SPOILERS"}</span>
           </button>
         </nav>
 
-        {/* Mobile Actions (Spoiler Toggle + Leer + Hamburger) */}
-        <div className="flex md:hidden items-center gap-3">
+        {/* Mobile Actions */}
+        <div className="flex md:hidden items-center gap-2">
+          <Link
+            href="/#pibes"
+            className="p-2 border border-white/20 bg-white/5 text-white/70 transition-all active:scale-95 shrink-0"
+            title="Personajes"
+          >
+            <Users className="w-4 h-4" />
+          </Link>
           <Link
             href="/#sagas"
-            className="font-[var(--font-bangers)] text-[11px] tracking-wider px-2.5 py-1 border-2 border-white bg-[#1b4332] text-white uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] shrink-0"
+            className="p-2 border border-[#1b4332] bg-[#1b4332] text-white transition-all shadow-[1px_1px_0_#000] active:scale-95 shrink-0"
+            title="Leer Cómic"
           >
-            Leer
+            <BookOpen className="w-4 h-4" />
           </Link>
 
           <button
             onClick={toggleUnlockAll}
-            className={`font-[var(--font-bangers)] text-[11px] tracking-wider px-2.5 py-1 border-2 border-black uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] cursor-pointer ${
-              unlockAll 
-                ? "bg-[#6b7280] text-white" 
-                : "bg-[#f5e642] text-black"
+            title={unlockAll ? "Ocultar spoilers" : "Mostrar spoilers"}
+            className={`p-2 border transition-all shadow-[1px_1px_0_#000] active:scale-95 cursor-pointer shrink-0 ${
+              unlockAll
+                ? "bg-[#e8185a] border-[#e8185a] text-white"
+                : "bg-[#f5e642] border-[#f5e642] text-black"
             }`}
           >
-            {unlockAll ? "✕ Spoilers" : "🔓 Desbloquear"}
+            {unlockAll ? <Lock className="w-4 h-4" /> : <Unlock className="w-4 h-4" />}
           </button>
           
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="font-[var(--font-bangers)] text-2xl text-white border-2 border-white/20 px-3 py-1 hover:border-[#1b4332] hover:text-[#1b4332] transition-colors"
+            className="p-2 text-white border border-white/20 hover:border-[#1b4332] hover:text-[#10b981] transition-colors"
           >
-            {menuOpen ? "✕" : "☰"}
+            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
@@ -184,6 +205,13 @@ export default function NavBar() {
       {menuOpen && (
         <div style={{ background: "#13131e", borderTop: "2px solid #1b4332" }} className="md:hidden px-5 py-6 flex flex-col gap-5">
           {/* Leer Cómic Button on Mobile Dropdown */}
+          <Link
+            href="/#pibes"
+            onClick={() => setMenuOpen(false)}
+            className="w-full font-[var(--font-bangers)] text-lg text-center tracking-wider py-2.5 border-2 border-white/30 bg-transparent hover:bg-white/10 text-white uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] block"
+          >
+            — Personajes —
+          </Link>
           <Link
             href="/#sagas"
             onClick={() => setMenuOpen(false)}

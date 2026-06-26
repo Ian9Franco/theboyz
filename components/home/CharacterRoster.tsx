@@ -122,18 +122,18 @@ function getCategoryMeta(key: string) {
 }
 
 const CHARACTER_QUOTES: Record<string, string> = {
-  ian: "Pará, tengo un plan para esto. Pero primero, traeme un café.",
+  ian: " Primero, un café.",
 
   // UANDI: Cortito, al pie y con una sutil amenaza. Bien de tipo pesado.
-  uandi: "Correte. No me hagas calentar.",
+  uandi: "No me hagas calentar.",
 
   // JULIAN: Berretineo puro, sobrador y bien plantado.
-  julian: "Sos un wachín, te falta calle.",
+  julian: "Sos re wachín.",
 
   // MATI: Rework total. El típico shitpóster que te descansa con cinismo cuando el grupo está muerto.
   mati: "Qué muerto está esto, loco... A ver si con este formato reviven un poco.",
 
-  volvo: "Buenas. ¿Me extrañaron? Mentira, si nunca me fui.",
+  volvo: "Yo soy volvo",
 
   // JAZ: Mantiene las cartas, pero con una actitud re picante y cero mística cliché.
   jaz: "Ya te vi las cartas... y la verdad que estás al horno.",
@@ -241,7 +241,7 @@ export function CharacterRoster() {
   };
 
   return (
-    <section className="bg-dark-popart py-24 px-4 sm:px-6 overflow-hidden relative" style={{ borderTop: "6px solid white" }}>
+    <section id="pibes" className="bg-dark-popart py-24 px-4 sm:px-6 overflow-hidden relative" style={{ borderTop: "6px solid white" }}>
       {/* Decorative background elements */}
       <div className="absolute inset-0 speed-lines opacity-10" />
       <div

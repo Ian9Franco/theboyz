@@ -12,13 +12,13 @@ interface RadarChartProps {
   stats: StatRow[];
   color: string;
   isDark?: boolean;
+  size?: number;
 }
 
-export function RadarChart({ stats, color, isDark = true }: RadarChartProps) {
-  const size = 260;
+export function RadarChart({ stats, color, isDark = true, size = 260 }: RadarChartProps) {
   const center = size / 2;
   const maxVal = 10;
-  const r = 85; // maximum radius
+  const r = size * 0.327; // max radius scaled proportionally (~85/260)
   const N = stats.length;
 
   if (N < 3) return null; // A radar chart needs at least 3 axes
@@ -33,7 +33,7 @@ export function RadarChart({ stats, color, isDark = true }: RadarChartProps) {
     const axisY = center + r * Math.sin(angle);
     
     // Position label slightly further out
-    const labelDistance = 22;
+    const labelDistance = r * 0.26; // ~22px at 260, scales down at 180
     const labelX = center + (r + labelDistance) * Math.cos(angle);
     const labelY = center + (r + labelDistance) * Math.sin(angle);
 

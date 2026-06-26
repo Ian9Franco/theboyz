@@ -85,15 +85,15 @@ export function SagaBlock({
         {/* Vertical Left Banner for proximamente */}
         <div 
           onClick={() => { if (!isCollapsed && typeof window !== 'undefined' && window.innerWidth < 768) onToggleCollapse?.(); }}
-          className={`w-12 sm:w-14 bg-yellow-400 flex items-center justify-center shrink-0 select-none relative ${
+          className={`w-12 sm:w-14 bg-yellow-400 flex items-center justify-center shrink-0 select-none relative h-full ${
             isCollapsed 
               ? "border-r-0 md:border-r-4 md:border-black" 
               : "cursor-pointer hover:bg-yellow-300 transition-colors border-r-4 border-black"
           }`}
         >
           <span 
-            className="font-[var(--font-bangers)] text-lg sm:text-xl text-black uppercase tracking-widest whitespace-nowrap block"
-            style={{ writingMode: "vertical-lr", transform: "rotate(180deg)" }}
+            className="font-[var(--font-bangers)] text-lg sm:text-xl text-black uppercase tracking-widest whitespace-nowrap"
+            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", display: "block" }}
           >
             PRÓXIMAMENTE
           </span>
@@ -733,6 +733,73 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
   }, [sagaId, chapter.id, isLocked, chapter.cover]);
 
   if (isLocked) {
+    // Si el capítulo es draft, permitimos navegar para que aparezca el DraftLockScreen
+    const isDraftChapter = chapter.draft;
+    const cardContent = (
+      <div
+        className={`flex flex-col h-full overflow-hidden border-[3px] border-[#0a0a0f] ${isDraftChapter ? "cursor-pointer hover:scale-[1.01] transition-transform" : ""}`}
+        style={{
+          background: isDraftChapter ? "#13131e" : "#e5e5eb",
+          boxShadow: isDraftChapter ? "5px 5px 0 #e8185a" : "5px 5px 0 #0a0a0f",
+        }}
+      >
+        {/* Cover image area locked */}
+        <div
+          className="relative w-full overflow-hidden shrink-0 flex items-center justify-center"
+          style={{
+            aspectRatio: "3/4",
+            background: `repeating-linear-gradient(45deg, #13131e, #13131e 10px, #2a2a35 10px, #2a2a35 20px)`,
+          }}
+        >
+          {(chapter.cover || sagaCover) && (
+            <img
+              src={getComicPageUrl(chapter.cover || sagaCover)}
+              alt={`Portada de ${chapter.title}`}
+              className="absolute inset-0 w-full h-full object-cover object-top opacity-30 grayscale filter blur-[1px] brightness-[0.25]"
+            />
+          )}
+          <div className="absolute inset-0 speed-lines opacity-20" />
+          
+          <div className="absolute inset-0 flex flex-col items-center justify-center z-20 gap-3">
+            <div className={`w-12 h-12 rounded-full flex items-center justify-center border ${isDraftChapter ? "bg-[#e8185a]/20 border-[#e8185a]/50 text-[#e8185a]" : "bg-white/10 border-white/20 text-white/80"}`}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2.5" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+              </svg>
+            </div>
+            <span className={`font-[var(--font-bangers)] text-lg tracking-widest uppercase ${isDraftChapter ? "text-[#e8185a]" : "text-white/60"}`}>
+              {isDraftChapter ? "DRAFT" : "Bloqueado"}
+            </span>
+          </div>
+        </div>
+
+        {/* Info strip */}
+        <div className={`flex-1 p-4 flex flex-col justify-between gap-3 ${isDraftChapter ? "bg-[#0e0e16]" : "bg-[#eef0f4]"}`}>
+          <div>
+            <p className={`font-[var(--font-bangers)] text-xs tracking-[0.2em] uppercase mb-1 ${isDraftChapter ? "text-[#e8185a]/60" : "text-gray-400"}`}>
+              {saga_label(index)}
+            </p>
+            <h3 className={`font-[var(--font-bangers)] text-2xl sm:text-3xl leading-tight uppercase tracking-wide ${isDraftChapter ? "text-white/70" : "text-gray-400"}`}>
+              {chapter.title}
+            </h3>
+            <p className={`font-[var(--font-sans)] text-xs mt-1 ${isDraftChapter ? "text-[#e8185a]/70" : "text-gray-500"}`}>
+              {isDraftChapter
+                ? "Borrador — ingresá la contraseña para previsualizar."
+                : isSagaProximamente
+                  ? "Este capítulo estará disponible próximamente."
+                  : "Leé el capítulo anterior para poder desbloquear este."}
+            </p>
+          </div>
+          {isDraftChapter && (
+            <div className="text-[10px] font-[var(--font-bangers)] tracking-widest text-[#e8185a] uppercase flex items-center gap-1">
+              <span>🔑</span> Acceso con contraseña →
+            </div>
+          )}
+          {!isDraftChapter && <div className="h-1 w-12 bg-gray-300" />}
+        </div>
+      </div>
+    );
+
     return (
       <motion.div
         initial={{ opacity: 0, y: 36, scale: 0.96 }}
@@ -740,63 +807,13 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
         viewport={{ once: true, margin: "-80px" }}
         transition={{ type: "spring", stiffness: 100, damping: 15, delay: index * 0.08 }}
         whileHover={{ y: -4, scale: 1.01 }}
-        className="h-full select-none cursor-not-allowed"
+        className={`h-full ${isDraftChapter ? "" : "select-none cursor-not-allowed"}`}
       >
-        <div
-          className="flex flex-col h-full overflow-hidden border-[3px] border-[#0a0a0f]"
-          style={{
-            background: "#e5e5eb",
-            boxShadow: "5px 5px 0 #0a0a0f",
-          }}
-        >
-          {/* Cover image area locked */}
-          <div
-            className="relative w-full overflow-hidden shrink-0 flex items-center justify-center"
-            style={{
-              aspectRatio: "3/4",
-              background: `repeating-linear-gradient(45deg, #13131e, #13131e 10px, #2a2a35 10px, #2a2a35 20px)`,
-            }}
-          >
-            {(chapter.cover || sagaCover) && (
-              <img
-                src={getComicPageUrl(chapter.cover || sagaCover)}
-                alt={`Portada de ${chapter.title}`}
-                className="absolute inset-0 w-full h-full object-cover object-top opacity-30 grayscale filter blur-[1px] brightness-[0.25]"
-              />
-            )}
-            <div className="absolute inset-0 speed-lines opacity-20" />
-            
-            <div className="absolute inset-0 flex flex-col items-center justify-center z-20 gap-3">
-              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white/80 border border-white/20">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2.5" />
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-                </svg>
-              </div>
-              <span className="font-[var(--font-bangers)] text-lg text-white/60 tracking-widest uppercase">
-                Bloqueado
-              </span>
-            </div>
-          </div>
-
-          {/* Info strip */}
-          <div className="flex-1 p-4 flex flex-col justify-between gap-3 bg-[#eef0f4]">
-            <div>
-              <p className="font-[var(--font-bangers)] text-xs tracking-[0.2em] uppercase mb-1 text-gray-400">
-                {saga_label(index)}
-              </p>
-              <h3 className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-tight uppercase tracking-wide text-gray-400">
-                {chapter.title}
-              </h3>
-              <p className="font-[var(--font-sans)] text-xs text-gray-500 mt-1">
-                {isSagaProximamente 
-                  ? "Este capítulo estará disponible próximamente." 
-                  : "Leé el capítulo anterior para poder desbloquear este."}
-              </p>
-            </div>
-            <div className="h-1 w-12 bg-gray-300" />
-          </div>
-        </div>
+        {isDraftChapter ? (
+          <Link href={`/chapters/${chapter.id}`} className="block h-full">
+            {cardContent}
+          </Link>
+        ) : cardContent}
       </motion.div>
     );
   }

@@ -276,7 +276,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
 
         {/* ══════════ LEFT — image ══════════ */}
         <div
-          className="w-full h-[200px] sm:h-auto sm:w-[460px] sm:min-w-[460px] lg:w-[540px] lg:min-w-[540px] flex-shrink-0 relative border-b-4 sm:border-b-0 sm:border-r-4 border-black transition-colors duration-400"
+          className="w-full flex flex-col sm:w-[460px] sm:min-w-[460px] lg:w-[540px] lg:min-w-[540px] flex-shrink-0 border-b-4 sm:border-b-0 sm:border-r-4 border-black transition-colors duration-400"
           style={{
             backgroundColor: isPowersMode ? darkBg : "#f1f5f9",
             backgroundImage: isPowersMode
@@ -285,94 +285,93 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
             backgroundSize: "20px 20px",
           }}
         >
-          <style>{`
-            @media (min-width: 640px) {
-              .modal-img-panel { height: 100% !important; }
-            }
-          `}</style>
-          <div className={`modal-img-panel absolute inset-0 flex justify-center overflow-hidden ${
-            selectedImageId !== "default" && selectedImageId !== "alt" && selectedImageId !== "portada" ? "items-center" : "items-end"
-          }`}>
-            {isLocked ? (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="absolute inset-0 speed-lines opacity-20" />
-                <span className="font-[var(--font-bangers)] text-9xl text-white opacity-20 select-none z-10">?</span>
-                {!!char.image && (
-                  <img src={char.fullBody || char.image} alt="Locked"
-                    className="absolute inset-0 w-full h-full object-contain p-6 opacity-10 grayscale blur-sm" />
-                )}
-                <div className="absolute inset-0 bg-black/40" />
-              </div>
-            ) : currentImage ? (
-              <img
-                src={currentImage}
-                alt={isLocked ? "PRÓXIMAMENTE" : char.name}
-                title="Click para ver completo"
-                onClick={() => setImgFullscreen(true)}
-                className={`w-full h-full object-contain p-1 sm:p-2 lg:p-4 transition-all duration-500 cursor-zoom-in ${
-                  selectedImageId !== "default" && selectedImageId !== "alt" && selectedImageId !== "portada" ? "object-center" : "object-center sm:object-bottom"
-                } ${isPowersMode ? "brightness-110" : ""}`}
-                style={{
-                  filter: isPowersMode
-                    ? `drop-shadow(4px 4px 0 rgba(0,0,0,0.2)) drop-shadow(0 0 18px ${vibrantAccent})`
-                    : `drop-shadow(4px 4px 0 rgba(0,0,0,0.2))`,
-                }}
-              />
-            ) : (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-28 h-28 rounded-full border-4 border-black flex items-center justify-center"
-                  style={{ background: accent }}>
-                  <span className="font-[var(--font-bangers)] text-5xl text-white">
-                    {char.name?.[0] ?? "?"}
-                  </span>
+          {/* Image area — flex-1 so it takes all space above the button strip */}
+          <div className="relative flex-1 min-h-[260px] sm:min-h-0 overflow-hidden">
+            <div className={`absolute inset-0 flex justify-center overflow-hidden ${
+              selectedImageId !== "default" && selectedImageId !== "alt" && selectedImageId !== "portada"
+                ? "items-center"
+                : "items-start sm:items-end"
+            }`}>
+              {isLocked ? (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute inset-0 speed-lines opacity-20" />
+                  <span className="font-[var(--font-bangers)] text-9xl text-white opacity-20 select-none z-10">?</span>
+                  {!!char.image && (
+                    <img src={char.fullBody || char.image} alt="Locked"
+                      className="absolute inset-0 w-full h-full object-contain p-6 opacity-10 grayscale blur-sm" />
+                  )}
+                  <div className="absolute inset-0 bg-black/40" />
                 </div>
-              </div>
-            )}
+              ) : currentImage ? (
+                <img
+                  src={currentImage}
+                  alt={isLocked ? "PRÓXIMAMENTE" : char.name}
+                  title="Click para ver completo"
+                  onClick={() => setImgFullscreen(true)}
+                  className={`w-full h-full transition-all duration-500 cursor-zoom-in ${
+                    (selectedImageId === "portada" || selectedImageId === "default")
+                      ? "object-cover object-top sm:object-contain sm:object-bottom sm:p-2 lg:p-4"
+                      : "object-contain object-center p-1 sm:p-2 lg:p-4"
+                  } ${isPowersMode ? "brightness-110" : ""}`}
+                  style={{
+                    filter: isPowersMode
+                      ? `drop-shadow(4px 4px 0 rgba(0,0,0,0.2)) drop-shadow(0 0 18px ${vibrantAccent})`
+                      : `drop-shadow(4px 4px 0 rgba(0,0,0,0.2))`,
+                  }}
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-28 h-28 rounded-full border-4 border-black flex items-center justify-center"
+                    style={{ background: accent }}>
+                    <span className="font-[var(--font-bangers)] text-5xl text-white">
+                      {char.name?.[0] ?? "?"}
+                    </span>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* halftone overlay */}
+            <div className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-10"
+              style={{ backgroundImage: "radial-gradient(circle,#fff 1.5px,transparent 1.5px)", backgroundSize: "6px 6px" }} />
           </div>
 
-          {/* Image selection buttons for all modes / categories */}
+          {/* ── Image selector buttons — dedicated strip BELOW the image ── */}
           {!isLocked && currentImagesList.length > 1 && (
-            <div className="absolute bottom-2 left-2 z-20 flex flex-wrap gap-1.5 max-w-[90%]">
-              {currentImagesList.map((imgOpt) => {
-                const isActive = selectedImageId === imgOpt.id;
-                return (
-                  <button
-                    key={imgOpt.id}
-                    onClick={() => {
-                      if (isActive) return;
-                      setIsTransitioning(true);
-                      const tempImg = new Image();
-                      tempImg.src = imgOpt.src;
-                      tempImg.onload = () => {
-                        setSelectedImageId(imgOpt.id);
-                        setIsTransitioning(false);
-                      };
-                      tempImg.onerror = () => {
-                        setSelectedImageId(imgOpt.id);
-                        setIsTransitioning(false);
-                      };
-                    }}
-                    style={{
-                      backgroundColor: isActive ? (isPowersMode ? vibrantAccent : accent) : "#0a0a0f",
-                      color: isActive ? getTextColor(isPowersMode ? vibrantAccent : accent) : "#ffffff",
-                      borderColor: isActive ? (isPowersMode ? vibrantAccent : accent) : "#0a0a0f",
-                      boxShadow: isActive
-                        ? `0 0 10px ${isPowersMode ? vibrantAccent : accent}88`
-                        : "2px 2px 0 #000",
-                      transform: isActive ? "translate(1px, 1px)" : "none",
-                    }}
-                    className="px-2.5 py-1 border-2 font-[var(--font-bangers)] text-[10px] tracking-wider uppercase transition-all hover:scale-105 active:scale-95"
-                  >
-                    {imgOpt.label}
-                  </button>
-                );
-              })}
+            <div
+              className="flex-shrink-0 border-t-2 sm:border-t-4 border-black px-2 py-1.5"
+              style={{ backgroundColor: isPowersMode ? `${darkBg}ee` : "#e2e8f0" }}
+            >
+              <div className="flex gap-1.5 overflow-x-auto sm:overflow-x-visible sm:flex-wrap pb-0.5 sm:pb-0">
+                {currentImagesList.map((imgOpt) => {
+                  const isActive = selectedImageId === imgOpt.id;
+                  return (
+                    <button
+                      key={imgOpt.id}
+                      onClick={() => {
+                        if (isActive) return;
+                        setIsTransitioning(true);
+                        const tempImg = new Image();
+                        tempImg.src = imgOpt.src;
+                        tempImg.onload = () => { setSelectedImageId(imgOpt.id); setIsTransitioning(false); };
+                        tempImg.onerror = () => { setSelectedImageId(imgOpt.id); setIsTransitioning(false); };
+                      }}
+                      style={{
+                        backgroundColor: isActive ? (isPowersMode ? vibrantAccent : accent) : "#0a0a0f",
+                        color: isActive ? getTextColor(isPowersMode ? vibrantAccent : accent) : "#ffffff",
+                        borderColor: isActive ? (isPowersMode ? vibrantAccent : accent) : "#0a0a0f",
+                        boxShadow: isActive ? `0 0 10px ${isPowersMode ? vibrantAccent : accent}88` : "2px 2px 0 #000",
+                        transform: isActive ? "translate(1px, 1px)" : "none",
+                      }}
+                      className="px-2.5 py-1 border-2 font-[var(--font-bangers)] text-[10px] tracking-wider uppercase transition-all hover:scale-105 active:scale-95 whitespace-nowrap shrink-0"
+                    >
+                      {imgOpt.label}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           )}
-
-          {/* halftone overlay */}
-          <div className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-10"
-            style={{ backgroundImage: "radial-gradient(circle,#fff 1.5px,transparent 1.5px)", backgroundSize: "6px 6px" }} />
         </div>
 
         {/* ══════════ RIGHT — info ══════════ */}

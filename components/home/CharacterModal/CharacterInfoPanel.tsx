@@ -137,7 +137,7 @@ export function CharacterInfoPanel({
         backgroundColor: isPowersMode ? darkBg : "#ffffff",
         color: isPowersMode ? "#f8fafc" : "#0a0a0f",
       }}
-      className="flex-1 flex flex-col p-5 sm:p-8 gap-4 sm:gap-6 overflow-y-auto transition-colors duration-400"
+      className="flex-1 flex flex-col p-4 sm:p-5 gap-2 sm:gap-3 overflow-y-auto transition-colors duration-400"
     >
       {isLocked ? (
         <div className="flex-1 flex flex-col items-center justify-center text-center gap-3 flex-shrink-0">
@@ -155,50 +155,73 @@ export function CharacterInfoPanel({
         </div>
       ) : (
         <>
-          {/* ── name + role tag ── */}
-          <div className="flex flex-col gap-1 pr-8 flex-shrink-0">
-            <span
-              className="tag text-[10px] font-[var(--font-bangers)] tracking-wider px-2 py-0.5 border-2 border-black self-start"
-              style={{
-                background: isPowersMode ? vibrantAccent : accent,
-                color: getTextColor(isPowersMode ? vibrantAccent : accent),
-              }}
-            >
-              {isPibe
-                ? isPowersMode
-                  ? variantContent.variantLabel
-                    ? `${char.powers?.role?.split(" / ")[0]} — ${variantContent.variantLabel}`
-                    : char.powers?.role
-                  : char.role
-                : char.role}
-            </span>
-            <h2
-              className="font-[var(--font-bangers)] text-4xl sm:text-5xl leading-none tracking-widest flex flex-wrap items-baseline gap-x-2"
-              style={{ textShadow: isPowersMode ? `2px 2px 0 ${darkBg}, 4px 4px 0 ${vibrantAccent}` : `2px 2px 0 ${accent}` }}
-            >
-              <span>{char.name.toUpperCase()}</span>
-              {isPibe && isPowersMode && char.powers?.role && (
-                <span
-                  style={{ color: vibrantAccent }}
-                  className="text-xl sm:text-2xl font-[var(--font-marker)] tracking-normal normal-case block sm:inline"
-                >
-                  {variantContent.variantLabel
-                    ? variantContent.variantLabel.toUpperCase()
-                    : `AKA: ${char.powers.role.split(" / ")[0].toUpperCase()}`}
-                </span>
-              )}
-            </h2>
+          {/* ── name + role tag + detalles button ── */}
+          <div className="flex items-start justify-between gap-2 pr-8 flex-shrink-0">
+            <div className="flex flex-col gap-0.5 min-w-0">
+              <span
+                className="tag text-[9px] font-[var(--font-bangers)] tracking-wider px-2 py-0.5 border-2 border-black self-start"
+                style={{
+                  background: isPowersMode ? vibrantAccent : accent,
+                  color: getTextColor(isPowersMode ? vibrantAccent : accent),
+                }}
+              >
+                {isPibe
+                  ? isPowersMode
+                    ? variantContent.variantLabel
+                      ? `${char.powers?.role?.split(" / ")[0]} — ${variantContent.variantLabel}`
+                      : char.powers?.role
+                    : char.role
+                  : char.role}
+              </span>
+              <h2
+                className="font-[var(--font-bangers)] text-3xl sm:text-4xl leading-none tracking-widest flex flex-wrap items-baseline gap-x-2"
+                style={{ textShadow: isPowersMode ? `2px 2px 0 ${darkBg}, 4px 4px 0 ${vibrantAccent}` : `2px 2px 0 ${accent}` }}
+              >
+                <span>{char.name.toUpperCase()}</span>
+                {isPibe && isPowersMode && char.powers?.role && (
+                  <span
+                    style={{ color: vibrantAccent }}
+                    className="text-base sm:text-lg font-[var(--font-marker)] tracking-normal normal-case block sm:inline"
+                  >
+                    {variantContent.variantLabel
+                      ? variantContent.variantLabel.toUpperCase()
+                      : `AKA: ${char.powers.role.split(" / ")[0].toUpperCase()}`}
+                  </span>
+                )}
+              </h2>
+            </div>
+
+            {/* Inline DETALLES toggle (only for Pibes) */}
+            {isPibe && (
+              <button
+                onClick={handlePowersModeToggle}
+                title={isPowersMode ? "Vista General" : "Detalles"}
+                style={{
+                  backgroundColor: isPowersMode ? vibrantAccent : accent,
+                  color: isPowersMode ? getTextColor(vibrantAccent) : getTextColor(accent),
+                  borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
+                  boxShadow: isPowersMode ? `2px 2px 0 ${darkBg}` : "2px 2px 0 #000",
+                }}
+                className="shrink-0 mt-1 px-3 py-1.5 border-2 font-[var(--font-bangers)] text-xs tracking-wider uppercase active:translate-x-0.5 active:translate-y-0.5 transition-all flex items-center gap-1.5 hover:brightness-110"
+              >
+                {isPowersMode ? (
+                  <><ZapOff className="w-3.5 h-3.5" /><span>BASE</span></>
+                ) : (
+                  <><Zap className="w-3.5 h-3.5 fill-current" /><span>DETALLES</span></>
+                )}
+              </button>
+            )}
           </div>
 
           {/* ── profile / habilidades ── */}
           <div
             style={{ borderColor: isPowersMode ? `${vibrantAccent}33` : "#0a0a0f" }}
-            className="border-t-2 pt-2 flex flex-col gap-1 flex-shrink-0"
+            className="border-t-2 pt-1.5 flex flex-col gap-0.5 flex-shrink-0"
           >
-            <h4 className="font-[var(--font-bangers)] text-xs tracking-wider">
+            <h4 className="font-[var(--font-bangers)] text-[10px] tracking-wider">
               {isPowersMode ? "HABILIDADES:" : "PERFIL:"}
             </h4>
-            <ul className="font-sans text-xs leading-relaxed flex flex-col gap-1 pl-3 list-disc list-outside">
+            <ul className="font-sans text-[11px] leading-snug flex flex-col gap-0.5 pl-3 list-disc list-outside">
               {(isPowersMode ? variantContent.habilidades : char.perfil)
                 ?.map((item: string, idx: number) => (
                   <li key={idx}>{item}</li>
@@ -244,14 +267,14 @@ export function CharacterInfoPanel({
           {/* ── significa banner ── */}
           {((isPowersMode && variantContent.significa) || (!isPibe && char.powers?.significa)) && (
             <div
-              className="p-3 border-2 relative bg-[#13131e] mt-2 mb-1 flex-shrink-0"
+              className="p-2 border-2 relative bg-[#13131e] flex-shrink-0"
               style={{
                 borderColor: isPowersMode ? vibrantAccent : accent,
-                boxShadow: isPowersMode ? `3px 3px 0 ${vibrantAccent}` : `3px 3px 0 ${accent}`,
+                boxShadow: isPowersMode ? `2px 2px 0 ${vibrantAccent}` : `2px 2px 0 ${accent}`,
               }}
             >
               <span
-                className="font-[var(--font-marker)] text-[10px] uppercase absolute -top-3 left-3 rotate-[-1deg] border border-[#0a0a0f] px-2 py-0.5"
+                className="font-[var(--font-marker)] text-[9px] uppercase absolute -top-2.5 left-3 rotate-[-1deg] border border-[#0a0a0f] px-1.5 py-0"
                 style={{
                   backgroundColor: isPowersMode ? vibrantAccent : accent,
                   color: getTextColor(isPowersMode ? vibrantAccent : accent),
@@ -259,45 +282,48 @@ export function CharacterInfoPanel({
               >
                 {isPowersMode && variantContent.variantLabel ? variantContent.variantLabel.toUpperCase() : "SIGNIFICA:"}
               </span>
-              <p className="font-sans text-[11px] leading-snug text-white mt-1">
+              <p className="font-sans text-[10px] leading-snug text-white mt-0.5">
                 {isPowersMode ? variantContent.significa : char.powers?.significa}
               </p>
             </div>
           )}
 
-          {/* ── crisis ── */}
-          <div
-            className="border-2 p-3 relative overflow-hidden flex flex-col gap-1.5 flex-shrink-0 transition-all duration-300"
-            style={{
-              backgroundColor: isPowersMode ? "#111827" : "#fffbeb",
-              borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
-              boxShadow: isPowersMode ? `3px 3px 0 ${vibrantAccent}` : "3px 3px 0 #000",
-            }}
-          >
+          {/* ── crisis + stats en fila ── */}
+          <div className="flex gap-2 flex-shrink-0 items-stretch">
+            {/* Crisis box */}
             <div
-              className="self-start font-[var(--font-bangers)] text-[11px] tracking-wider px-2 py-0.5 border-2 uppercase"
+              className="flex-1 border-2 p-2.5 relative flex flex-col gap-1 transition-all duration-300 min-w-0"
               style={{
-                backgroundColor: isPowersMode ? vibrantAccent : "#e8185a",
-                color: isPowersMode ? getTextColor(vibrantAccent) : "white",
+                backgroundColor: isPowersMode ? "#111827" : "#fffbeb",
                 borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
+                boxShadow: isPowersMode ? `2px 2px 0 ${vibrantAccent}` : "2px 2px 0 #000",
               }}
             >
-              {isPowersMode ? "Ficha Táctica" : "En Crisis"}
+              <div
+                className="self-start font-[var(--font-bangers)] text-[10px] tracking-wider px-1.5 py-0.5 border-2 uppercase"
+                style={{
+                  backgroundColor: isPowersMode ? vibrantAccent : "#e8185a",
+                  color: isPowersMode ? getTextColor(vibrantAccent) : "white",
+                  borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
+                }}
+              >
+                {isPowersMode ? "Ficha Táctica" : "En Crisis"}
+              </div>
+              <p className="font-sans text-[11px] leading-snug">
+                {isPowersMode ? variantContent.crisis : char.powers?.crisis || char.crisis}
+              </p>
             </div>
-            <p className="font-sans text-xs sm:text-sm leading-snug">
-              {isPowersMode ? variantContent.crisis : char.powers?.crisis || char.crisis}
-            </p>
-          </div>
 
-          {/* ── stats ── */}
-          <div
-            style={{ borderColor: isPowersMode ? `${vibrantAccent}33` : "#f1f5f9" }}
-            className="border-t pt-2 flex flex-col gap-1.5 flex-shrink-0"
-          >
-            <h4 className="font-[var(--font-bangers)] text-xs tracking-wider">
-              {isLocation ? "MÉTRICAS:" : isPowersMode ? "MÉTRICAS:" : "STATS:"}
-            </h4>
-            <RadarChart stats={statRows} color={isPowersMode ? vibrantAccent : accent} isDark={isPowersMode} />
+            {/* Stats radar */}
+            <div
+              style={{ borderColor: isPowersMode ? `${vibrantAccent}33` : "#e2e8f0" }}
+              className="flex flex-col gap-0.5 flex-shrink-0 border-t-0"
+            >
+              <h4 className="font-[var(--font-bangers)] text-[10px] tracking-wider text-center">
+                {isLocation ? "MÉTRICAS" : "STATS"}
+              </h4>
+              <RadarChart stats={statRows} color={isPowersMode ? vibrantAccent : accent} isDark={isPowersMode} size={180} />
+            </div>
           </div>
 
           {/* ── Concept Arts section (for Pibes in both views) ── */}
@@ -382,33 +408,8 @@ export function CharacterInfoPanel({
             );
           })()}
 
-          {/* ── Detalles toggle button (only for Pibes) ── */}
-          {isPibe && (
-            <div className="pt-2 mt-auto pb-2 sm:pb-0 flex-shrink-0">
-              <button
-                onClick={handlePowersModeToggle}
-                style={{
-                  backgroundColor: isPowersMode ? darkBg : accent,
-                  color: isPowersMode ? vibrantAccent : getTextColor(accent),
-                  borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
-                  boxShadow: isPowersMode ? `3px 3px 0 ${vibrantAccent}` : "3px 3px 0 #000",
-                }}
-                className="w-full py-3 sm:py-2 border-3 font-[var(--font-bangers)] text-sm sm:text-base tracking-wider uppercase active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#000] transition-all flex items-center justify-center gap-2 hover:brightness-105 active:brightness-95"
-              >
-                {isPowersMode ? (
-                  <>
-                    <ZapOff className="w-5 h-5 shrink-0" />
-                    <span>VISTA GENERAL</span>
-                  </>
-                ) : (
-                  <>
-                    <Zap className="w-5 h-5 shrink-0 fill-current" />
-                    <span>DETALLES</span>
-                  </>
-                )}
-              </button>
-            </div>
-          )}
+          {/* Spacer to push concept arts down naturally */}
+          <div className="flex-1" />
         </>
       )}
 
