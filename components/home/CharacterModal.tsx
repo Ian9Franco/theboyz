@@ -39,6 +39,48 @@ function getDarkBgColor(hexColor: string) {
   return "#0f172a";
 }
 
+function getCleanImageLabel(src: string, defaultLabel: string): string {
+  if (!src) return defaultLabel;
+  const filename = src.split("/").pop()?.toLowerCase() || "";
+  const cleanName = filename.replace(/\.[^/.]+$/, ""); // remove extension
+
+  if (cleanName.includes("ficha")) {
+    if (cleanName.includes("cosmic")) return "Ficha Cosmic";
+    if (cleanName.includes("alt")) return "Ficha Alt";
+    if (cleanName.includes("ficha2")) return "Ficha Alt 1";
+    if (cleanName.includes("ficha3")) return "Ficha Alt 2";
+    return "Ficha";
+  }
+
+  if (cleanName.includes("mark") || cleanName.includes("mk")) {
+    if (cleanName.includes("3") || cleanName.includes("iii")) {
+      if (cleanName.includes("alt")) return "Mark III Alt";
+      return "Mark III";
+    }
+    if (cleanName.includes("l") || cleanName.includes("lxxxv")) {
+      return "Mark L";
+    }
+    return "Mark Suit";
+  }
+
+  if (cleanName.includes("alt")) {
+    return "Alt";
+  }
+
+  // Fallback to capitalizing words from filename
+  const cleanLabel = cleanName
+    .replace(/[_-]/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+
+  // If the clean label is a common hero or name, just call it "Portada"
+  const commonPortadas = ["vesperwing", "swapfire", "oracle", "wildcard", "aegis", "nullvector", "hush", "vector"];
+  if (commonPortadas.includes(cleanLabel.toLowerCase().replace(/\s/g, ""))) {
+    return "Portada";
+  }
+
+  return cleanLabel;
+}
+
 const CHARACTER_SOUNDS: Record<string, { open?: string; details?: string }> = {
   ian: { open: "/sounds/sfx/capa1.mp3", details: "/sounds/sfx/grapplin2.mp3" },
   uandi: { open: "/sounds/sfx/muzaproduction-metal-design-explosion-13491.mp3", details: "/sounds/sfx/The Incredible Hulk Roar.mp3" },
@@ -70,14 +112,14 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
 
   // Main Portada
   if (char.portadaImages && char.portadaImages.length > 0) {
-    standardImages.push({ id: "portada", label: "Portada", src: char.portadaImages[0] });
+    standardImages.push({ id: "portada", label: getCleanImageLabel(char.portadaImages[0], "Portada"), src: char.portadaImages[0] });
   } else if (char.image) {
     standardImages.push({ id: "portada", label: "Portada", src: char.image });
   }
 
   // Main Ficha
   if (char.fichaImages && char.fichaImages.length > 0) {
-    standardImages.push({ id: "ficha", label: "Ficha", src: char.fichaImages[0] });
+    standardImages.push({ id: "ficha", label: getCleanImageLabel(char.fichaImages[0], "Ficha"), src: char.fichaImages[0] });
   } else if (char.fichaImage) {
     standardImages.push({ id: "ficha", label: "Ficha", src: char.fichaImage });
   }
@@ -85,14 +127,16 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
   // Ficha Alts
   if (char.fichaImages && char.fichaImages.length > 1) {
     for (let i = 1; i < char.fichaImages.length; i++) {
-      standardImages.push({ id: `ficha_alt_${i}`, label: `Ficha Alt ${i}`, src: char.fichaImages[i] });
+      const src = char.fichaImages[i];
+      standardImages.push({ id: `ficha_alt_${i}`, label: getCleanImageLabel(src, `Ficha Alt ${i}`), src });
     }
   }
 
   // Portada Alts
   if (char.portadaImages && char.portadaImages.length > 1) {
     for (let i = 1; i < char.portadaImages.length; i++) {
-      standardImages.push({ id: `portada_alt_${i}`, label: `Portada ${i + 1}`, src: char.portadaImages[i] });
+      const src = char.portadaImages[i];
+      standardImages.push({ id: `portada_alt_${i}`, label: getCleanImageLabel(src, `Portada ${i + 1}`), src });
     }
   }
 
@@ -269,7 +313,11 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
         {/* ── Close ── */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 z-30 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center font-[var(--font-bangers)] text-base sm:text-lg text-white bg-[#1b4332] hover:bg-[#2d6a4f] border-2 border-black shadow-[3px_3px_0_#000] transition-all hover:-translate-x-px hover:-translate-y-px active:translate-x-0.5 active:translate-y-0.5"
+          className="absolute top-3 right-3 z-30 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center font-[var(--font-bangers)] text-base sm:text-lg border-2 border-black shadow-[3px_3px_0_#000] transition-all hover:-translate-x-px hover:-translate-y-px active:translate-x-0.5 active:translate-y-0.5"
+          style={{
+            background: vibrantAccent,
+            color: getTextColor(vibrantAccent),
+          }}
         >
           ✕
         </button>

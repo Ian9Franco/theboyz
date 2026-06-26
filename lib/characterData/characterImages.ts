@@ -14,16 +14,17 @@ export const characterImages: Record<string, CharacterImages> = {
     "portada": "/personajes/PORTADAS/Ian/vesperwing.webp",
     "portadas": [
       "/personajes/PORTADAS/Ian/vesperwing.webp",
-      "/personajes/PORTADAS/Ian/Trajes alternativos/MK3/MARK-3.webp",
-      "/personajes/PORTADAS/Ian/Trajes alternativos/MKL/MARK-L.webp",
-      "/personajes/PORTADAS/Ian/Trajes alternativos/MK3/MARK-3_ALT.webp"
+      "/personajes/PORTADAS/Ian/MARK-3.webp",
+      "/personajes/PORTADAS/Ian/MARK-L.webp",
+      "/personajes/PORTADAS/Ian/MARK-3_ALT.webp",
+      "/personajes/PORTADAS/Ian/vesperwing_alt.webp"
     ],
-    "ficha": "/personajes/FICHAS/boyz/VESPERWING/vesperwing_alt.webp",
+    "ficha": "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_Ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/boyz/VESPERWING/vesperwing_alt.webp",
-      "/personajes/FICHAS/boyz/VESPERWING/Vesperwing_Ficha.webp",
-      "/personajes/FICHAS/boyz/VESPERWING/Vesperwing_ficha2.webp",
-      "/personajes/FICHAS/boyz/VESPERWING/Vesperwing_ficha3.webp"
+      "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_Ficha.webp",
+      "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_ficha_alt.webp",
+      "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_ficha2.webp",
+      "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_ficha3.webp"
     ],
     "bodies": [
       "/personajes/FULLBODY/boyz/VESPERWING/IAN_body.webp"
@@ -35,12 +36,13 @@ export const characterImages: Record<string, CharacterImages> = {
   "jaz": {
     "portada": "/personajes/PORTADAS/Jaz/Oracle.webp",
     "portadas": [
-      "/personajes/PORTADAS/Jaz/Oracle.webp"
+      "/personajes/PORTADAS/Jaz/Oracle.webp",
+      "/personajes/PORTADAS/Jaz/JAZ.webp"
     ],
-    "ficha": "/personajes/FICHAS/boyz/ORACLE/Oracle_ficha_alt.webp",
+    "ficha": "/personajes/Fichas/Boyz/ORACLE/Oracle_Ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/boyz/ORACLE/Oracle_ficha_alt.webp",
-      "/personajes/FICHAS/boyz/ORACLE/Oracle_Ficha.webp"
+      "/personajes/Fichas/Boyz/ORACLE/Oracle_Ficha.webp",
+      "/personajes/Fichas/Boyz/ORACLE/Oracle_ficha_alt.webp"
     ],
     "bodies": [
       "/personajes/FULLBODY/boyz/ORACLE/JAZ_body.webp"
@@ -52,11 +54,13 @@ export const characterImages: Record<string, CharacterImages> = {
   "julian": {
     "portada": "/personajes/PORTADAS/Julián/Wildcard.webp",
     "portadas": [
-      "/personajes/PORTADAS/Julián/Wildcard.webp"
+      "/personajes/PORTADAS/Julián/Wildcard.webp",
+      "/personajes/PORTADAS/Julián/JULIAN.webp",
+      "/personajes/PORTADAS/Julián/JULIAN_ALT.webp"
     ],
-    "ficha": "/personajes/FICHAS/boyz/WILDCARD/Wildcard_ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/WILDCARD/Wildcard_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/boyz/WILDCARD/Wildcard_ficha.webp"
+      "/personajes/Fichas/Boyz/WILDCARD/Wildcard_ficha.webp"
     ],
     "bodies": [
       "/personajes/FULLBODY/boyz/WILDCARD/JULIAN_body.webp"
@@ -70,9 +74,9 @@ export const characterImages: Record<string, CharacterImages> = {
     "portadas": [
       "/personajes/PORTADAS/Mati/Swapfire.webp"
     ],
-    "ficha": "/personajes/FICHAS/boyz/SWAPFIRE/Swapfire_ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/SWAPFIRE/Swapfire_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/boyz/SWAPFIRE/Swapfire_ficha.webp"
+      "/personajes/Fichas/Boyz/SWAPFIRE/Swapfire_ficha.webp"
     ],
     "bodies": [],
     "closeups": [
@@ -84,9 +88,9 @@ export const characterImages: Record<string, CharacterImages> = {
     "portadas": [
       "/personajes/PORTADAS/Uandi/Aegis.webp"
     ],
-    "ficha": "/personajes/FICHAS/boyz/AEGIS/Aegis_Ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/AEGIS/Aegis_Ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/boyz/AEGIS/Aegis_Ficha.webp"
+      "/personajes/Fichas/Boyz/AEGIS/Aegis_Ficha.webp"
     ],
     "bodies": [
       "/personajes/FULLBODY/boyz/AEGIS/UANDI_body.webp"
@@ -98,11 +102,12 @@ export const characterImages: Record<string, CharacterImages> = {
   "volvo": {
     "portada": "/personajes/PORTADAS/Volvo/Null-vector.webp",
     "portadas": [
-      "/personajes/PORTADAS/Volvo/Null-vector.webp"
+      "/personajes/PORTADAS/Volvo/Null-vector.webp",
+      "/personajes/PORTADAS/Volvo/VOLVO.webp"
     ],
-    "ficha": "/personajes/FICHAS/boyz/VECTOR/NULL-VECTOR_ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/VECTOR/NULL-VECTOR_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/boyz/VECTOR/NULL-VECTOR_ficha.webp"
+      "/personajes/Fichas/Boyz/VECTOR/NULL-VECTOR_ficha.webp"
     ],
     "bodies": [
       "/personajes/FULLBODY/boyz/VECTOR/VOLVO_body.webp"
@@ -114,11 +119,14 @@ export const characterImages: Record<string, CharacterImages> = {
   "sofi": {
     "portada": "/personajes/PORTADAS/Sofi/Hush.webp",
     "portadas": [
-      "/personajes/PORTADAS/Sofi/Hush.webp"
+      "/personajes/PORTADAS/Sofi/Hush.webp",
+      "/personajes/PORTADAS/Sofi/SOFI.webp",
+      "/personajes/PORTADAS/Sofi/Hush_alt.webp",
+      "/personajes/PORTADAS/Sofi/SOFI_ALT.webp"
     ],
-    "ficha": "/personajes/FICHAS/boyz/HUSH/Hush_Ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/HUSH/Hush_Ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/boyz/HUSH/Hush_Ficha.webp"
+      "/personajes/Fichas/Boyz/HUSH/Hush_Ficha.webp"
     ],
     "bodies": [
       "/personajes/FULLBODY/boyz/HUSH/SOFI_body.webp"
@@ -128,11 +136,13 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "matapobre": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/Secundarios/Matapobres/Matapobres_ficha.webp",
+    "portada": "/personajes/PORTADAS/Matapobres/MATAPOBRES.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Matapobres/MATAPOBRES.webp"
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/Matapobres/Matapobres_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/Secundarios/Matapobres/Matapobres_ficha.webp"
+      "/personajes/Fichas/Secundarios/Matapobres/Matapobres_ficha.webp"
     ],
     "bodies": [],
     "closeups": [
@@ -140,11 +150,14 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "supertrucker": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/Secundarios/Super Camionero/Supercamionero_ficha.webp",
+    "portada": "/personajes/PORTADAS/Super Camionero/Supercamionero.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Super Camionero/Supercamionero.webp",
+      "/personajes/PORTADAS/Super Camionero/Supercamionero_alt.webp"
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/Super Camionero/Supercamionero_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/Secundarios/Super Camionero/Supercamionero_ficha.webp"
+      "/personajes/Fichas/Secundarios/Super Camionero/Supercamionero_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
@@ -158,51 +171,61 @@ export const characterImages: Record<string, CharacterImages> = {
     "closeups": []
   },
   "rylai": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/Secundarios/Crystal Maiden/Rylai_ficha.webp",
+    "portada": "/personajes/PORTADAS/Crystal Maiden/Rylai.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Crystal Maiden/Rylai.webp"
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/Crystal Maiden/Rylai_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/Secundarios/Crystal Maiden/Rylai_ficha.webp"
+      "/personajes/Fichas/Secundarios/Crystal Maiden/Rylai_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "bristleback": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/Secundarios/Bristleback/Bristleback_ficha.webp",
+    "portada": "/personajes/PORTADAS/Bristleback/Bristleback.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Bristleback/Bristleback.webp"
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/Bristleback/Bristleback_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/Secundarios/Bristleback/Bristleback_ficha.webp"
+      "/personajes/Fichas/Secundarios/Bristleback/Bristleback_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "invoker": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/Secundarios/Invoker/Invoker_ficha.webp",
+    "portada": "/personajes/PORTADAS/Invoker/Invoker.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Invoker/Invoker.webp"
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/Invoker/Invoker_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/Secundarios/Invoker/Invoker_ficha.webp"
+      "/personajes/Fichas/Secundarios/Invoker/Invoker_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "ymir": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/Secundarios/Tusk/Tusk_ficha.webp",
+    "portada": "/personajes/PORTADAS/Tusk/Tusk.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Tusk/Tusk.webp"
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/Tusk/Tusk_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/Secundarios/Tusk/Tusk_ficha.webp"
+      "/personajes/Fichas/Secundarios/Tusk/Tusk_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "kenji": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/Secundarios/Kenji Sato/Kenji_ficha.webp",
+    "portada": "/personajes/PORTADAS/Kenji Sato/Kenji.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Kenji Sato/Kenji.webp"
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/Kenji Sato/Kenji_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/Secundarios/Kenji Sato/Kenji_ficha.webp"
+      "/personajes/Fichas/Secundarios/Kenji Sato/Kenji_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
@@ -220,20 +243,24 @@ export const characterImages: Record<string, CharacterImages> = {
     "portadas": [
       "/personajes/PORTADAS/Valery/Valery.webp"
     ],
-    "ficha": "/personajes/FICHAS/Secundarios/Valery/Valery_ficha.webp",
+    "ficha": "/personajes/Fichas/Secundarios/Valery/Valery_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/Secundarios/Valery/Valery_ficha.webp"
+      "/personajes/Fichas/Secundarios/Valery/Valery_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "don": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/antagonistas/Don Vanguard/Don_ficha.webp",
+    "portada": "/personajes/PORTADAS/Don Vanguard/Don.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Don Vanguard/Don.webp",
+      "/personajes/PORTADAS/Don Vanguard/Milicia.webp",
+      "/personajes/PORTADAS/Don Vanguard/Don_alt.webp"
+    ],
+    "ficha": "/personajes/Fichas/antagonistas/Don Vanguard/Don_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/antagonistas/Don Vanguard/Don_ficha.webp",
-      "/personajes/FICHAS/antagonistas/Don Vanguard/Don_ficha_alt.webp"
+      "/personajes/Fichas/antagonistas/Don Vanguard/Don_ficha.webp",
+      "/personajes/Fichas/antagonistas/Don Vanguard/Don_ficha_alt.webp"
     ],
     "bodies": [],
     "closeups": []
@@ -244,44 +271,48 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/PORTADAS/Phobos/Phobos.webp",
       "/personajes/PORTADAS/Phobos/Phobos_alt.webp"
     ],
-    "ficha": "/personajes/FICHAS/antagonistas/Phobos/Phobos_ficha.jpeg",
+    "ficha": "/personajes/Fichas/antagonistas/Phobos/Phobos_ficha.jpeg",
     "fichas": [
-      "/personajes/FICHAS/antagonistas/Phobos/Phobos_ficha.jpeg"
+      "/personajes/Fichas/antagonistas/Phobos/Phobos_ficha.jpeg"
     ],
     "bodies": [],
     "closeups": []
   },
   "shinjuro": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/antagonistas/Shinjuro Kurogane/Shinjuro Kurogane_ficha.webp",
+    "portada": "/personajes/PORTADAS/Shinjuro Kurogane/Shinjuro Kurogane.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Shinjuro Kurogane/Shinjuro Kurogane.webp",
+      "/personajes/PORTADAS/Shinjuro Kurogane/Maleantes.webp"
+    ],
+    "ficha": "/personajes/Fichas/antagonistas/Shinjuro Kurogane/Shinjuro Kurogane_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/antagonistas/Shinjuro Kurogane/Shinjuro Kurogane_ficha.webp"
+      "/personajes/Fichas/antagonistas/Shinjuro Kurogane/Shinjuro Kurogane_ficha.webp",
+      "/personajes/Fichas/antagonistas/Shinjuro Kurogane/Clan Kurogane_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "balthazar": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/antagonistas/Balthazar Vane/Balthazar vane_ficha.webp",
+    "portada": "/personajes/PORTADAS/Balthazar Vane/Balthazar vane.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Balthazar Vane/Balthazar vane.webp"
+    ],
+    "ficha": "/personajes/Fichas/antagonistas/Balthazar Vane/Balthazar vane_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/antagonistas/Balthazar Vane/Balthazar vane_ficha.webp"
+      "/personajes/Fichas/antagonistas/Balthazar Vane/Balthazar vane_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "comandante": {
-    "portada": "/personajes/PORTADAS/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R.webp",
+    "portada": "/personajes/PORTADAS/Comandante R.E.G.U.L.A.R/Comandante R.E.G.U.L.A.R.png",
     "portadas": [
-      "/personajes/PORTADAS/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R.webp",
-      "/personajes/PORTADAS/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_cosmic.webp"
+      "/personajes/PORTADAS/Comandante R.E.G.U.L.A.R/Comandante R.E.G.U.L.A.R.png"
     ],
-    "ficha": "/personajes/FICHAS/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_concept_alt.webp",
+    "ficha": "/personajes/Fichas/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_concept_alt.webp",
-      "/personajes/FICHAS/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_concept.webp",
-      "/personajes/FICHAS/antagonistas/Comandante R.E.G.U.L.A.R/V.O.P.S_ficha.webp"
+      "/personajes/Fichas/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_ficha.webp",
+      "/personajes/Fichas/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_cosmic_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
@@ -291,16 +322,18 @@ export const characterImages: Record<string, CharacterImages> = {
     "portadas": [
       "/personajes/PORTADAS/Gorgon/Gorgon.webp"
     ],
-    "ficha": "/personajes/FICHAS/antagonistas/Gorgon/Gorgon_ficha.webp",
+    "ficha": "/personajes/Fichas/antagonistas/Gorgon/Gorgon_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/antagonistas/Gorgon/Gorgon_ficha.webp"
+      "/personajes/Fichas/antagonistas/Gorgon/Gorgon_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "apex": {
-    "portada": null,
-    "portadas": [],
+    "portada": "/personajes/PORTADAS/Apex/apex_alt.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Apex/apex_alt.webp"
+    ],
     "ficha": null,
     "fichas": [],
     "bodies": [],
@@ -315,74 +348,90 @@ export const characterImages: Record<string, CharacterImages> = {
     "closeups": []
   },
   "archon": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/deidades/ARCHON/Archon_ficha.webp",
+    "portada": "/personajes/PORTADAS/ARCHON/ARCHON.webp",
+    "portadas": [
+      "/personajes/PORTADAS/ARCHON/ARCHON.webp"
+    ],
+    "ficha": "/personajes/Fichas/deidades/ARCHON/Archon_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/deidades/ARCHON/Archon_ficha.webp",
-      "/personajes/FICHAS/deidades/ARCHON/Archon_ficha_alt.webp"
+      "/personajes/Fichas/deidades/ARCHON/Archon_ficha.webp",
+      "/personajes/Fichas/deidades/ARCHON/Archon_ficha_alt.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "azathos": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/deidades/Azathos/Azathos_ficha.webp",
+    "portada": "/personajes/PORTADAS/Azathos/Azathos.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Azathos/Azathos.webp",
+      "/personajes/PORTADAS/Azathos/Azathos_alt.webp"
+    ],
+    "ficha": "/personajes/Fichas/deidades/Azathos/Azathos_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/deidades/Azathos/Azathos_ficha.webp",
-      "/personajes/FICHAS/deidades/Azathos/Azathos_alt.webp"
+      "/personajes/Fichas/deidades/Azathos/Azathos_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "lucifer": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/deidades/Lucifer Morningstar/Lucifer_ficha.webp",
+    "portada": "/personajes/PORTADAS/Lucifer Morningstar/Lucy.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Lucifer Morningstar/Lucy.webp"
+    ],
+    "ficha": "/personajes/Fichas/deidades/Lucifer Morningstar/Lucifer_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/deidades/Lucifer Morningstar/Lucifer_ficha.webp"
+      "/personajes/Fichas/deidades/Lucifer Morningstar/Lucifer_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "mars": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/deidades/Mars/Mars_ficha.webp",
+    "portada": "/personajes/PORTADAS/Mars/Mars.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Mars/Mars.webp"
+    ],
+    "ficha": "/personajes/Fichas/deidades/Mars/Mars_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/deidades/Mars/Mars_ficha.webp"
+      "/personajes/Fichas/deidades/Mars/Mars_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "judge_null": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/entidades/Judge Null/Judge Null_ficha.webp",
+    "portada": "/personajes/PORTADAS/Judge Null/Judge Null.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Judge Null/Judge Null.webp",
+      "/personajes/PORTADAS/Judge Null/Null.webp"
+    ],
+    "ficha": "/personajes/Fichas/entidades/Judge Null/Judge Null_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/entidades/Judge Null/Judge Null_ficha.webp"
+      "/personajes/Fichas/entidades/Judge Null/Judge Null_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "malakas": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/entidades/Malakas/Malakas_ficha.webp",
+    "portada": "/personajes/PORTADAS/Malakas/Malakas.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Malakas/Malakas.webp",
+      "/personajes/PORTADAS/Malakas/Malakas_alt.webp"
+    ],
+    "ficha": "/personajes/Fichas/entidades/Malakas/Malakas_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/entidades/Malakas/Malakas_ficha.webp",
-      "/personajes/FICHAS/entidades/Malakas/Malakas_ficha_alt.webp"
+      "/personajes/Fichas/entidades/Malakas/Malakas_ficha.webp",
+      "/personajes/Fichas/entidades/Malakas/Malakas_ficha_alt.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "terrorblade": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/entidades/Terrorblade/Terrorblade_ficha.webp",
+    "portada": "/personajes/PORTADAS/Terrorblade/Terrorblade.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Terrorblade/Terrorblade.webp"
+    ],
+    "ficha": "/personajes/Fichas/entidades/Terrorblade/Terrorblade_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/entidades/Terrorblade/Terrorblade_ficha.webp"
+      "/personajes/Fichas/entidades/Terrorblade/Terrorblade_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
@@ -390,19 +439,21 @@ export const characterImages: Record<string, CharacterImages> = {
   "krillor": {
     "portada": null,
     "portadas": [],
-    "ficha": "/personajes/FICHAS/entidades/Krillor/Krillor_ficha.webp",
+    "ficha": "/personajes/Fichas/entidades/Krillor/Krillor_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/entidades/Krillor/Krillor_ficha.webp"
+      "/personajes/Fichas/entidades/Krillor/Krillor_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "balanar": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/entidades/Night Stalker/Balanar_ficha.webp",
+    "portada": "/personajes/PORTADAS/Night Stalker/Night Stalker.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Night Stalker/Night Stalker.webp"
+    ],
+    "ficha": "/personajes/Fichas/entidades/Night Stalker/Balanar_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/entidades/Night Stalker/Balanar_ficha.webp"
+      "/personajes/Fichas/entidades/Night Stalker/Balanar_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
@@ -410,74 +461,90 @@ export const characterImages: Record<string, CharacterImages> = {
   "freezer": {
     "portada": null,
     "portadas": [],
-    "ficha": "/personajes/FICHAS/entidades/Frieza/Freezer_ficha.webp",
+    "ficha": "/personajes/Fichas/entidades/Frieza/Freezer_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/entidades/Frieza/Freezer_ficha.webp"
+      "/personajes/Fichas/entidades/Frieza/Freezer_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "lion": {
-    "portada": null,
-    "portadas": [],
-    "ficha": "/personajes/FICHAS/entidades/Lion/Lion_ficha.webp",
+    "portada": "/personajes/PORTADAS/Lion/Lion.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Lion/Lion.webp"
+    ],
+    "ficha": "/personajes/Fichas/entidades/Lion/Lion_ficha.webp",
     "fichas": [
-      "/personajes/FICHAS/entidades/Lion/Lion_ficha.webp"
+      "/personajes/Fichas/entidades/Lion/Lion_ficha.webp"
     ],
     "bodies": [],
     "closeups": []
   },
   "mati_prime": {
-    "portada": null,
-    "portadas": [],
+    "portada": "/personajes/PORTADAS/Mati Prime/Mati Prime.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Mati Prime/Mati Prime.webp"
+    ],
     "ficha": null,
     "fichas": [],
     "bodies": [],
     "closeups": []
   },
   "gladiador": {
-    "portada": null,
-    "portadas": [],
+    "portada": "/personajes/PORTADAS/Mati Gladiador/Gladiador.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Mati Gladiador/Gladiador.webp"
+    ],
     "ficha": null,
     "fichas": [],
     "bodies": [],
     "closeups": []
   },
   "augusto": {
-    "portada": null,
-    "portadas": [],
+    "portada": "/personajes/PORTADAS/Mati Augusto/Augusto.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Mati Augusto/Augusto.webp"
+    ],
     "ficha": null,
     "fichas": [],
     "bodies": [],
     "closeups": []
   },
   "warden": {
-    "portada": null,
-    "portadas": [],
+    "portada": "/personajes/PORTADAS/Mati Warden/Warden.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Mati Warden/Warden.webp"
+    ],
     "ficha": null,
     "fichas": [],
     "bodies": [],
     "closeups": []
   },
   "julander": {
-    "portada": null,
-    "portadas": [],
+    "portada": "/personajes/PORTADAS/Julander/Julander.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Julander/Julander.webp"
+    ],
     "ficha": null,
     "fichas": [],
     "bodies": [],
     "closeups": []
   },
   "volvo_carnicero": {
-    "portada": null,
-    "portadas": [],
+    "portada": "/personajes/PORTADAS/Volvo Butcher/Volvo Carnicero.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Volvo Butcher/Volvo Carnicero.webp"
+    ],
     "ficha": null,
     "fichas": [],
     "bodies": [],
     "closeups": []
   },
   "a_uandi": {
-    "portada": null,
-    "portadas": [],
+    "portada": "/personajes/PORTADAS/A-Uandi/A-Uandi.webp",
+    "portadas": [
+      "/personajes/PORTADAS/A-Uandi/A-Uandi.webp"
+    ],
     "ficha": null,
     "fichas": [],
     "bodies": [],

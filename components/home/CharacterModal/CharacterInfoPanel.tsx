@@ -78,10 +78,56 @@ export function CharacterInfoPanel({
     ? char.powers?.stats
     : char.stats;
 
-  const activeVariantData =
-    isPowersMode && selectedImageId !== "default" && selectedImageId !== "ficha"
-      ? char.powers?.variantData?.[selectedImageId]
-      : null;
+  // Resolve active variant details dynamically by filename matching
+  let activeVariantData = null;
+  if (isPowersMode && char.powers?.variantData) {
+    let selectedImageSrc = "";
+    if (selectedImageId === "portada" || selectedImageId === "default") {
+      selectedImageSrc = char.portadaImages?.[0] || char.image || "";
+    } else if (selectedImageId === "ficha") {
+      selectedImageSrc = char.fichaImages?.[0] || char.fichaImage || "";
+    } else if (selectedImageId.startsWith("portada_alt_")) {
+      const idx = parseInt(selectedImageId.replace("portada_alt_", ""), 10);
+      selectedImageSrc = char.portadaImages?.[idx] || "";
+    } else if (selectedImageId.startsWith("ficha_alt_")) {
+      const idx = parseInt(selectedImageId.replace("ficha_alt_", ""), 10);
+      selectedImageSrc = char.fichaImages?.[idx] || "";
+    }
+
+    if (selectedImageSrc) {
+      const filename = selectedImageSrc.split("/").pop()?.toLowerCase() || "";
+      const cleanName = filename.replace(/\.[^/.]+$/, ""); // remove extension
+
+      const keys = Object.keys(char.powers.variantData);
+      let matchedKey: string | null = null;
+
+      // Normalization mappings
+      const normalizedFilename = cleanName
+        .replace("mark-3", "mk3")
+        .replace("mark-l", "mkl")
+        .replace("mark-iii", "mk3")
+        .replace("mark-lxxxv", "mkl")
+        .replace("_", "")
+        .replace("-", "");
+
+      for (const key of keys) {
+        const normalizedKey = key.toLowerCase().replace("_", "").replace("-", "");
+        if (normalizedFilename.includes(normalizedKey) || normalizedKey.includes(normalizedFilename)) {
+          matchedKey = key;
+          break;
+        }
+      }
+
+      if (!matchedKey) {
+        if (cleanName.includes("alt")) matchedKey = "alt";
+        else if (cleanName.includes("combat") || cleanName.includes("overlord")) matchedKey = "combat";
+      }
+
+      if (matchedKey) {
+        activeVariantData = char.powers.variantData[matchedKey];
+      }
+    }
+  }
 
   const variantContent = {
     habilidades: isArchorLocked

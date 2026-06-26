@@ -7,13 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "compress": "node scripts/convert-to-webp.js --delete",
-    "compress:preview": "node scripts/convert-to-webp.js --dry-run",
-    "compress:audio": "node scripts/compress-audio.js",
-    "sync-assets": "node scripts/sync-placeholders.js",
-    "generate:concepts": "node scripts/generate-concept-arts.js",
-    "dev:all": "node scripts/dev-all.js",
-    "publish:all": "node scripts/publish-all.js"
+    "compress": "node scripts/assets/convert-to-webp.js --delete",
+    "compress:preview": "node scripts/assets/convert-to-webp.js --dry-run",
+    "compress:audio": "node scripts/assets/compress-audio.js",
+    "sync-assets": "node scripts/deploy/sync-placeholders.js",
+    "generate:concepts": "node scripts/assets/generate-concept-arts.js",
+    "dev:all": "node scripts/deploy/dev-all.js",
+    "publish:all": "node scripts/deploy/publish-all.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",

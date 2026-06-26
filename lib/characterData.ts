@@ -24,12 +24,22 @@ const rawCharacters: CharacterDetail[] = [
 export const CHARACTER_DETAILS: CharacterDetail[] = rawCharacters.map((char) => {
   const images = characterImages[char.id];
   if (images) {
+    // portadaImages and fichaImages are STRICTLY from the generator (public/ directory).
+    // These are used as visibility gates — if empty, the character is hidden from the roster.
+    const generatedPortadas = (images.portadas && images.portadas.length > 0) ? images.portadas : [];
+    const generatedFichas   = (images.fichas   && images.fichas.length   > 0) ? images.fichas   : [];
+
+    // Display image: real portada → real ficha → hardcoded fallback (for modal, never roster gate)
+    const mainPortada = images.portada || generatedPortadas[0] || "";
+    const mainFicha   = images.ficha   || generatedFichas[0]   || char.fichaImage || (char as any).ficha || "";
+    const displayImage = mainPortada || mainFicha || char.image || char.fullBody || "";
+
     return {
       ...char,
-      image: images.portada || "",
-      fullBody: images.portada || "",
-      portadaImages: images.portadas,
-      fichaImages: images.fichas
+      image:         displayImage,
+      fullBody:      mainPortada || char.fullBody || char.image || mainFicha || "",
+      portadaImages: generatedPortadas,   // strict: only real portadas from public/
+      fichaImages:   generatedFichas,     // strict: only real fichas from public/
     };
   }
   return char;

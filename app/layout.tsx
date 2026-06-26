@@ -30,13 +30,13 @@ function Footer() {
   return (
     <footer
       className="pt-16 pb-10 px-6 overflow-hidden relative"
-      style={{ background: "#07070a", borderTop: "4px solid #1b4332" }}
+      style={{ background: "#07070a", borderTop: "4px solid #0f1b3d" }}
     >
       {/* Premium Halftone pop-art dot pattern */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.05] z-0"
         style={{
-          backgroundImage: "radial-gradient(circle, #1b4332 1.5px, transparent 1.5px)",
+          backgroundImage: "radial-gradient(circle, #0f1b3d 1.5px, transparent 1.5px)",
           backgroundSize: "14px 14px",
         }}
       />
@@ -65,7 +65,7 @@ function Footer() {
               border: "2px solid #f5e642",
               padding: "0.5rem 1.5rem",
               background: "#0a0a0f",
-              boxShadow: "3px 3px 0 #1b4332",
+              boxShadow: "3px 3px 0 #0f1b3d",
               display: "inline-block",
               borderRadius: "4px",
             }}
@@ -82,7 +82,7 @@ function Footer() {
 
         <div
           className="w-24 h-px my-4"
-          style={{ background: "rgba(27,67,50,0.3)" }}
+          style={{ background: "rgba(15,27,61,0.3)" }}
         />
         <p
           className="font-[var(--font-bangers)] text-sm tracking-[0.2em] text-gray-500"

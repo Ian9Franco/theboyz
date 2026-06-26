@@ -40,8 +40,7 @@ export const pibes: CharacterDetail[] = [
         combat: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/Vesperwing_combat.webp',
         mk3: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/MK3/MARK-3.webp',
         mk3_alt: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/MK3/MARK-3_ALT.webp',
-        mkl: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/MKL/MARK-L.webp',
-        archor: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/VESPER ARCHOR/VesperArchor.webp'
+        mkl: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/MKL/MARK-L.webp'
       },
       variantData: {
         alt: {
@@ -105,16 +104,6 @@ export const pibes: CharacterDetail[] = [
           ],
           significa: 'La respuesta de la ingeniería al tamaño colosal. Un mecha gigante pilotado para absorber daño masivo y proteger el flanco de ataque de Los Pibes.',
           crisis: 'Baja Maniobrabilidad: Su inmenso tamaño lo vuelve un objetivo lento y fácil de flanquear, requiriendo cobertura constante de velocistas y atacantes ágiles.'
-        },
-        archor: {
-          label: 'Emperor Vesper Archor (Forma Divina)',
-          habilidades: [
-            'Tejido de Causalidad: Manipula probabilidades cuánticas para anular ataques enemigos o garantizar fallas estructurales críticas en el rival.',
-            'Ráfagas de Antimateria Roja: Canaliza energía primordial de Archon en descargas destructivas que borran la materia física de la existencia.',
-            'Capa Cósmica y Runas: Armadura negra mate grabada con runas rojas brillantes y capa cósmica que fluye con materia oscura y vacío.'
-          ],
-          significa: 'El Dios estratega de Vesperia. Ian asimila la entidad cósmica Archon para gobernar las probabilidades cuánticas del universo, sacrificando el libre albedrío por la supervivencia.',
-          crisis: 'Desapego Emocional Absoluto: Al unirse a la anomalía divina, pierde toda empatía humana y ve a sus propios amigos como variables caóticas que debe resolver.'
         }
       }
     }

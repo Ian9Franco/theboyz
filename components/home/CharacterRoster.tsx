@@ -197,7 +197,9 @@ export function CharacterRoster() {
   };
 
   const characters = getComputedCharacters(readChapters, isClient, unlockAll)
-    .filter((c) => c.image && c.image !== "")
+    // A character is only shown when the generator found at least one real portada
+    // in public/PORTADAS/. Characters with only fichas/concept-arts are hidden.
+    .filter((c) => c.portadaImages && (c.portadaImages as string[]).length > 0)
     .filter((c) => {
       const term = searchTerm.toLowerCase();
       const matchesSearch =
