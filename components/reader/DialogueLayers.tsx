@@ -37,6 +37,7 @@ interface DialogueLayersProps {
   handleBubblePointerUp: (e: React.PointerEvent, key: string) => void;
   handleDragEnd: (info: any, pIdx: number, bIdx: number) => void;
   handleTailTargetDragEnd: (info: any, pIdx: number, bIdx: number) => void;
+  focusDialogue?: boolean;
 }
 
 export function DialogueLayers({
@@ -67,6 +68,7 @@ export function DialogueLayers({
   handleBubblePointerUp,
   handleDragEnd,
   handleTailTargetDragEnd,
+  focusDialogue = true,
 }: DialogueLayersProps) {
   const settings = localDialogues.settings || {};
   const clearReadDialogues = settings.clearReadDialogues ?? true;
@@ -109,6 +111,15 @@ export function DialogueLayers({
             const targetX = line.tailX !== undefined ? imgLeft + (line.tailX / 100) * imgWidth : null;
             const targetY = line.tailY !== undefined ? imgTop + (line.tailY / 100) * imgHeight : null;
             const effIdx = showAllDialogues || zoomedOut ? 0 : effectiveIndexes[i] ?? i;
+
+            // Use object reference instead of index so this is correct when
+            // clearReadDialogues=true (panelsToRender=[activePanel], pIndex always 0).
+            const isCurrentPanel = panel === activePanel;
+            const isBubbleActive =
+              !focusDialogue ||
+              showAllDialogues ||
+              zoomedOut ||
+              (isCurrentPanel && i === activeReadingBubbleIdx);
 
             const isTargetOfAny = dialogueList.some((otherLine, otherIdx) => {
               if (otherIdx === i) return false;
@@ -173,8 +184,14 @@ export function DialogueLayers({
               if (d) {
                 elasticTailNode = (
                   <svg
-                    className="absolute pointer-events-none overflow-visible"
-                    style={{ left: "50%", top: "50%", zIndex: 0 }}
+                    className="absolute pointer-events-none overflow-visible animate-none"
+                    style={{
+                      left: "50%",
+                      top: "50%",
+                      zIndex: 0,
+                      opacity: isBubbleActive ? 1.0 : 0.18,
+                      transition: "opacity 400ms cubic-bezier(0.25, 1, 0.5, 1)",
+                    }}
                   >
                     <path d={d} fill={bgColor} stroke="none" strokeWidth={0} />
                   </svg>
@@ -202,9 +219,11 @@ export function DialogueLayers({
                   zIndex: draggedBubbleKey === bubbleKey ? 100 : isTargetOfAny ? 29 : 30,
                   transition:
                     !isPageChanging && draggedBubbleKey !== bubbleKey
-                      ? "all 400ms cubic-bezier(0.25, 1, 0.5, 1)"
+                      ? "opacity 400ms cubic-bezier(0.25, 1, 0.5, 1), left 400ms cubic-bezier(0.25, 1, 0.5, 1), top 400ms cubic-bezier(0.25, 1, 0.5, 1)"
                       : "none",
                   touchAction: "none",
+                  opacity: isBubbleActive ? 1.0 : 0.18,
+                  pointerEvents: isBubbleActive ? "auto" : "none",
                 }}
               >
                 <DialogueBubble

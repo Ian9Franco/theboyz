@@ -33,6 +33,10 @@ interface ReaderTopBarProps {
   setSpeedMultiplier: (value: number) => void;
   resetPage: (idx: number) => void;
   onOpenHelp: () => void;
+  focusDialogue?: boolean;
+  setFocusDialogue?: (value: boolean) => void;
+  focusPanel?: boolean;
+  setFocusPanel?: (value: boolean) => void;
 }
 
 /**
@@ -56,6 +60,10 @@ export function ReaderTopBar({
   setSpeedMultiplier,
   resetPage,
   onOpenHelp,
+  focusDialogue = true,
+  setFocusDialogue,
+  focusPanel = true,
+  setFocusPanel,
 }: ReaderTopBarProps) {
   const [showPublish, setShowPublish] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -225,6 +233,44 @@ export function ReaderTopBar({
                           {autoplay ? "✓ Sí" : "✗ No"}
                         </button>
                       </div>
+
+                      {/* Focus Panel */}
+                      {setFocusPanel && (
+                        <div className={`flex items-center justify-between pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
+                          <span className={`font-[var(--font-bangers)] text-[10px] uppercase tracking-wider ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
+                            Enfoque Viñeta:
+                          </span>
+                          <button
+                            onClick={() => setFocusPanel(!focusPanel)}
+                            className={`font-[var(--font-bangers)] text-xs px-2.5 py-1 border transition-all rounded-sm ${
+                              focusPanel
+                                ? "bg-emerald-500 border-emerald-400 text-white"
+                                : "bg-rose-500 border-rose-400 text-white"
+                            }`}
+                          >
+                            {focusPanel ? "✓ Sí" : "✗ No"}
+                          </button>
+                        </div>
+                      )}
+
+                      {/* Focus Dialogue */}
+                      {setFocusDialogue && (
+                        <div className={`flex items-center justify-between pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
+                          <span className={`font-[var(--font-bangers)] text-[10px] uppercase tracking-wider ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
+                            Foco Diálogos:
+                          </span>
+                          <button
+                            onClick={() => setFocusDialogue(!focusDialogue)}
+                            className={`font-[var(--font-bangers)] text-xs px-2.5 py-1 border transition-all rounded-sm ${
+                              focusDialogue
+                                ? "bg-emerald-500 border-emerald-400 text-white"
+                                : "bg-rose-500 border-rose-400 text-white"
+                            }`}
+                          >
+                            {focusDialogue ? "✓ Sí" : "✗ No"}
+                          </button>
+                        </div>
+                      )}
 
                       {/* Keyboard shortcuts hint */}
                       <div className={`pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>

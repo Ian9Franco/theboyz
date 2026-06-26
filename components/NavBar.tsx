@@ -8,6 +8,8 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [sagasList, setSagasList] = useState<any[]>([]);
   const [unlockAll, setUnlockAll] = useState(false);
+  const [pilotsOpen, setPilotsOpen] = useState(false);
+  const [mobilePilotsOpen, setMobilePilotsOpen] = useState(false);
 
   useEffect(() => {
     const loadSagas = () => {
@@ -73,37 +75,65 @@ export default function NavBar() {
             {/* Dropdown Wrapper (invisible bridge) */}
             <div className="absolute top-full left-0 pt-2 hidden group-hover:flex flex-col z-50">
               <div
-                className="flex flex-col gap-4 p-4 min-w-[280px] max-w-[320px] max-h-[70vh] overflow-y-auto"
+                className="flex flex-col gap-4 p-4 min-w-[280px] max-w-[320px] max-h-[70vh] overflow-y-auto rounded-lg"
                 style={{ background: "#13131e", border: "2px solid #1b4332", boxShadow: "6px 6px 0 #1b4332" }}
               >
-                {sagasList.map((saga) => {
-                  const isClassic = saga.order < 3;
-                  return (
-                    <div key={saga.id} className="flex flex-col gap-1 border-b border-white/10 last:border-0 pb-3 last:pb-0">
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <p className="font-[var(--font-bangers)] text-sm tracking-widest text-[#f5e642] uppercase">
-                          {saga.title}
-                        </p>
-                        {isClassic && (
-                          <span 
-                            className="font-[var(--font-bangers)] text-[9px] tracking-wider bg-white/10 text-white/50 px-1 border border-white/10 select-none"
-                            style={{ transform: "rotate(-1deg)" }}
-                          >
-                            Piloto
-                          </span>
-                        )}
-                      </div>
-                      <div className="flex flex-col gap-0.5 pl-2">
-                        {saga.chapters.map((ch: any) => (
-                          <Link key={ch.id} href={`/chapters/${ch.id}`}
-                            className="font-[var(--font-bangers)] text-base tracking-wider py-1 text-white hover:text-[#0a0a0f] hover:bg-[#f5e642] transition-all block px-2 rounded-sm">
-                            <span className="text-[#1b4332] mr-2">#{ch.number}</span>{ch.title}
-                          </Link>
+                {/* Official Sagas (Canon) */}
+                {sagasList.filter(s => s.order >= 3).map((saga) => (
+                  <div key={saga.id} className="flex flex-col gap-1 border-b border-white/10 last:border-0 pb-3 last:pb-0">
+                    <div className="flex items-center gap-2 mb-0.5">
+                      <p className="font-[var(--font-bangers)] text-sm tracking-widest text-[#f5e642] uppercase">
+                        {saga.title}
+                      </p>
+                    </div>
+                    <div className="flex flex-col gap-0.5 pl-2">
+                      {saga.chapters.map((ch: any) => (
+                        <Link key={ch.id} href={`/chapters/${ch.id}`}
+                          className="font-[var(--font-bangers)] text-base tracking-wider py-1 text-white hover:text-[#0a0a0f] hover:bg-[#f5e642] transition-all block px-2 rounded-sm">
+                          <span className="text-[#1b4332] mr-2">#{ch.number}</span>{ch.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+
+                {/* Pilot Sagas (Collapsible Section) */}
+                {sagasList.some(s => s.order < 3) && (
+                  <div className="flex flex-col pt-1">
+                    <button
+                      onClick={() => setPilotsOpen(!pilotsOpen)}
+                      className="w-full flex items-center justify-between font-[var(--font-bangers)] text-sm tracking-widest text-white/50 hover:text-[#f5e642] py-2 border-t border-white/10 transition-colors cursor-pointer select-none"
+                    >
+                      <span className="flex items-center gap-1.5">
+                        <span className="text-[10px] bg-white/10 text-white/60 px-1 border border-white/10">PILOTO</span>
+                        CÓMICS ANTERIORES
+                      </span>
+                      <span className={`transition-transform duration-200 text-xs ${pilotsOpen ? "rotate-180 text-[#f5e642]" : ""}`}>
+                        ▼
+                      </span>
+                    </button>
+
+                    {pilotsOpen && (
+                      <div className="flex flex-col gap-3 mt-2 pl-1 border-l-2 border-dashed border-white/10 animate-fadeIn">
+                        {sagasList.filter(s => s.order < 3).map((saga) => (
+                          <div key={saga.id} className="flex flex-col gap-1 pb-2 last:pb-0 border-b border-white/5 last:border-0">
+                            <p className="font-[var(--font-bangers)] text-xs tracking-wider text-[#f5e642]/80 uppercase">
+                              {saga.title}
+                            </p>
+                            <div className="flex flex-col gap-0.5 pl-1.5">
+                              {saga.chapters.map((ch: any) => (
+                                <Link key={ch.id} href={`/chapters/${ch.id}`}
+                                  className="font-[var(--font-bangers)] text-sm tracking-wider py-0.5 text-white/80 hover:text-[#0a0a0f] hover:bg-[#f5e642] transition-all block px-1.5 rounded-sm">
+                                  <span className="text-[#1b4332] mr-1.5 text-xs">#{ch.number}</span>{ch.title}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
                         ))}
                       </div>
-                    </div>
-                  );
-                })}
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -232,7 +262,8 @@ export default function NavBar() {
             {unlockAll ? "✕ Ocultar Spoilers" : "🔓 Desbloquear Todo"}
           </button>
           
-          {sagasList.map((saga) => (
+          {/* Official Sagas on Mobile */}
+          {sagasList.filter(s => s.order >= 3).map((saga) => (
             <div key={saga.id}>
               <p
                 className="font-[var(--font-bangers)] text-2xl mb-2 tracking-widest"
@@ -249,6 +280,43 @@ export default function NavBar() {
               ))}
             </div>
           ))}
+
+          {/* Pilot Sagas on Mobile (Collapsible) */}
+          {sagasList.some(s => s.order < 3) && (
+            <div className="flex flex-col border-t border-white/10 pt-4">
+              <button
+                onClick={() => setMobilePilotsOpen(!mobilePilotsOpen)}
+                className="w-full flex items-center justify-between font-[var(--font-bangers)] text-xl tracking-widest text-[#f5e642] py-2 cursor-pointer select-none"
+              >
+                <span className="flex items-center gap-2">
+                  <span className="text-xs bg-white/10 text-white/60 px-1.5 py-0.5 border border-white/10">PILOTO</span>
+                  CÓMICS ANTERIORES
+                </span>
+                <span className={`transition-transform duration-200 ${mobilePilotsOpen ? "rotate-180" : ""}`}>
+                  ▼
+                </span>
+              </button>
+
+              {mobilePilotsOpen && (
+                <div className="flex flex-col gap-4 mt-3 pl-2 border-l-2 border-dashed border-white/10 animate-fadeIn">
+                  {sagasList.filter(s => s.order < 3).map((saga) => (
+                    <div key={saga.id}>
+                      <p className="font-[var(--font-bangers)] text-lg mb-1.5 tracking-wider text-white/90">
+                        {saga.title}
+                      </p>
+                      {saga.chapters.map((ch: any) => (
+                        <Link key={ch.id} href={`/chapters/${ch.id}`}
+                          onClick={() => setMenuOpen(false)}
+                          className="font-[var(--font-bangers)] text-lg tracking-wider pl-3 py-1 block text-white/60 hover:text-[#f5e642] transition-all border-l border-white/10 mb-0.5">
+                          <span className="text-[#1b4332] mr-1.5 text-sm">#{ch.number}</span>{ch.title}
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
 
           <div key="lore-mobile">
             <p

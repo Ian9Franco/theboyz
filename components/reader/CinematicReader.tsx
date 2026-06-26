@@ -117,6 +117,8 @@ export function CinematicReader({
   const [autoplay, setAutoplay] = useState<boolean>(true);
   // Dialogue speed: 0.5 = slow, 1.0 = normal, 1.5 = fast
   const [speedMultiplier, setSpeedMultiplierState] = useState<number>(1.0);
+  const [focusDialogue, setFocusDialogue] = useState<boolean>(true);
+  const [focusPanel, setFocusPanel] = useState<boolean>(true);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -136,6 +138,14 @@ export function CinematicReader({
       const savedSpeed = localStorage.getItem("reader_dialogue_speed");
       if (savedSpeed !== null) {
         setSpeedMultiplierState(parseFloat(savedSpeed));
+      }
+      const savedFocusDialogue = localStorage.getItem("reader_focus_dialogue");
+      if (savedFocusDialogue !== null) {
+        setFocusDialogue(savedFocusDialogue === "true");
+      }
+      const savedFocusPanel = localStorage.getItem("reader_focus_panel");
+      if (savedFocusPanel !== null) {
+        setFocusPanel(savedFocusPanel === "true");
       }
       const hasRead = localStorage.getItem("has_read_instructions") === "true";
       if (!hasRead) {
@@ -169,6 +179,20 @@ export function CinematicReader({
     setSpeedMultiplierState(value);
     if (typeof window !== "undefined") {
       localStorage.setItem("reader_dialogue_speed", String(value));
+    }
+  };
+
+  const handleSetFocusDialogue = (value: boolean) => {
+    setFocusDialogue(value);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("reader_focus_dialogue", String(value));
+    }
+  };
+
+  const handleSetFocusPanel = (value: boolean) => {
+    setFocusPanel(value);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("reader_focus_panel", String(value));
     }
   };
 
@@ -380,9 +404,19 @@ export function CinematicReader({
     }
   }, [panelIdx, zoomIdx, currentPanels, mode, zoomedOut, autoplay]);
 
+  // Ref to track pending dialogue-sequence timers so we can cancel them on manual tap.
+  const dialogueTimersRef = useRef<NodeJS.Timeout[]>([]);
+
   useEffect(() => {
     if (mode !== "read") return;
     setActiveReadingBubbleIdx(0);
+
+    // Clear any leftover timers from the previous panel.
+    dialogueTimersRef.current.forEach((t) => clearTimeout(t));
+    dialogueTimersRef.current = [];
+
+    // Only schedule auto-advance timers when autoplay is enabled.
+    if (!autoplay) return;
 
     const dialogueCount = activePanel?.dialogue?.length || 0;
     if (dialogueCount <= 1) return;
@@ -394,11 +428,13 @@ export function CinematicReader({
       }, i * 800);
       timers.push(timer);
     }
+    dialogueTimersRef.current = timers;
 
     return () => {
       timers.forEach((t) => clearTimeout(t));
+      dialogueTimersRef.current = [];
     };
-  }, [panelIdx, pageIdx, mode, activePanel]);
+  }, [panelIdx, pageIdx, mode, activePanel, autoplay]);
 
   // Audio Context custom hook
   useReaderAudio({
@@ -420,6 +456,7 @@ export function CinematicReader({
     zoomScale,
     activePanel,
     activeReadingBubbleIdx,
+    focusPanel,
   });
 
   const handleReaderTap = (e: React.MouseEvent) => {
@@ -462,6 +499,17 @@ export function CinematicReader({
 
     const activePanelStop = currentPanels[panelIdx];
     const rects = activePanelStop?.zoomRects || (activePanelStop?.zoomRect ? [activePanelStop.zoomRect] : []);
+
+    // If there are still unseen dialogues in the current panel, step through them
+    // on tap instead of jumping to the next panel/zoom rect.
+    const dialogueCount = activePanel?.dialogue?.length || 0;
+    if (dialogueCount > 1 && activeReadingBubbleIdx < dialogueCount - 1) {
+      // Cancel any pending auto-advance timers so we don't double-step.
+      dialogueTimersRef.current.forEach((t) => clearTimeout(t));
+      dialogueTimersRef.current = [];
+      setActiveReadingBubbleIdx((prev) => prev + 1);
+      return;
+    }
 
     if (zoomIdx < rects.length - 1) {
       setZoomIdx((prev) => prev + 1);
@@ -551,6 +599,7 @@ export function CinematicReader({
         handleBubblePointerUp={handleBubblePointerUp}
         handleDragEnd={handleDragEnd}
         handleTailTargetDragEnd={handleTailTargetDragEnd}
+        focusDialogue={focusDialogue}
       />
     );
   }, [
@@ -581,6 +630,7 @@ export function CinematicReader({
     handleBubblePointerUp,
     handleDragEnd,
     handleTailTargetDragEnd,
+    focusDialogue,
   ]);
 
   return (
@@ -603,6 +653,10 @@ export function CinematicReader({
         setSpeedMultiplier={handleSetSpeedMultiplier}
         resetPage={resetPage}
         onOpenHelp={() => setShowInstructions(true)}
+        focusDialogue={focusDialogue}
+        setFocusDialogue={handleSetFocusDialogue}
+        focusPanel={focusPanel}
+        setFocusPanel={handleSetFocusPanel}
       />
 
       <div className="flex-1 flex flex-col md:flex-row overflow-hidden w-full h-full relative">

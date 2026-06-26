@@ -74,21 +74,30 @@ export function SagaBlock({
     return (
       <div 
         onClick={() => { if (isCollapsed && typeof window !== 'undefined' && window.innerWidth < 768) onToggleCollapse?.(); }}
-        className={`border-4 border-dashed border-[#0a0a0f]/60 relative overflow-hidden rounded-lg opacity-90 transition-all duration-300 flex flex-row items-stretch h-full animate-fadeIn ${
-          isCollapsed ? "w-12 sm:w-14 md:w-full cursor-pointer md:cursor-default select-none md:select-text" : "w-full"
+        className={`border-4 border-dashed border-yellow-400/80 relative overflow-hidden rounded-lg opacity-95 transition-all duration-300 flex flex-row items-stretch min-h-[350px] animate-fadeIn ${
+          isCollapsed 
+            ? "w-12 sm:w-14 md:w-full cursor-pointer md:cursor-default select-none md:select-text pl-0 md:pl-12 md:sm:pl-14" 
+            : "w-full pl-12 sm:pl-14"
         }`}
         style={{
-          boxShadow: isCollapsed ? `4px 4px 0 #475569` : `8px 8px 0 #475569`,
-          background: `repeating-linear-gradient(45deg, #f8fafc, #f8fafc 10px, #f1f5f9 10px, #f1f5f9 20px)`
+          boxShadow: isCollapsed 
+            ? "6px 6px 0 #000, 9px 9px 0 rgba(245, 230, 66, 0.15), 0 10px 20px rgba(0,0,0,0.5)" 
+            : "10px 10px 0 #000, 14px 14px 0 rgba(245, 230, 66, 0.25), 0 20px 40px -10px rgba(245, 230, 66, 0.2)",
+          background: "#0f0f15"
         }}
       >
-        {/* Vertical Left Banner for proximamente */}
+        {/* Absolute Docked Left Banner for perfect full-height alignment */}
         <div 
-          onClick={() => { if (!isCollapsed && typeof window !== 'undefined' && window.innerWidth < 768) onToggleCollapse?.(); }}
-          className={`w-12 sm:w-14 bg-yellow-400 flex items-center justify-center shrink-0 select-none relative h-full ${
+          onClick={(e) => { 
+            if (!isCollapsed && typeof window !== 'undefined' && window.innerWidth < 768) {
+              e.stopPropagation();
+              onToggleCollapse?.(); 
+            }
+          }}
+          className={`absolute left-0 top-0 bottom-0 w-12 sm:w-14 bg-yellow-400 flex items-center justify-center shrink-0 select-none border-r-4 border-black z-20 ${
             isCollapsed 
-              ? "border-r-0 md:border-r-4 md:border-black" 
-              : "cursor-pointer hover:bg-yellow-300 transition-colors border-r-4 border-black"
+              ? "cursor-pointer" 
+              : "cursor-pointer hover:bg-yellow-300 transition-colors"
           }`}
         >
           <span 
@@ -104,32 +113,44 @@ export function SagaBlock({
           )}
         </div>
 
+        {/* Premium Gold Halftone Dots for background texture */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.07] z-0"
+          style={{
+            backgroundImage: "radial-gradient(circle, #f5e642 1.5px, transparent 1.5px)",
+            backgroundSize: "12px 12px",
+          }}
+        />
+
         <div className={isCollapsed ? "hidden md:flex flex-1 p-6 sm:p-8 flex-col justify-between h-full relative z-10" : "flex-1 p-6 sm:p-8 flex flex-col justify-between h-full relative z-10"}>
           {/* Main content stack */}
           <div className="flex flex-col gap-6 items-center justify-between h-full w-full relative z-10">
             <div className="flex flex-col items-center text-center w-full">
               {saga.cover && (
                 <div 
-                  className="relative shrink-0 w-36 sm:w-40 aspect-[3/4] border-4 border-[#0a0a0f] overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_rgba(10,10,15,1)] group cursor-zoom-in"
-                  onClick={() => onCoverClick?.(getComicPageUrl(saga.cover))}
+                  className="relative shrink-0 w-36 sm:w-40 aspect-[3/4] border-4 border-white overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_#f5e642] group cursor-zoom-in"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onCoverClick?.(getComicPageUrl(saga.cover));
+                  }}
                 >
                   <img 
                     src={getComicPageUrl(saga.cover)} 
                     alt={`Portada de la saga ${saga.title}`} 
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
                 </div>
               )}
               <div className="mt-4">
                 <div className="flex items-center gap-2 mb-2 justify-center">
                   <img 
-                    src="/comic-book.webp" 
+                    src="/comic-book-white.webp" 
                     alt="Saga Icon" 
                     className="w-5 h-5 object-contain" 
                   />
                   <span
-                    className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-black"
+                    className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-white"
                     style={{ background: saga.color, color: getTextColor(saga.color) }}
                   >
                     SAGA
@@ -138,19 +159,23 @@ export function SagaBlock({
                     EN CAMINO
                   </span>
                 </div>
-                <h2 className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-none tracking-wider mb-2 text-[#0a0a0f]">
+                <h2 className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-none tracking-wider mb-2 text-white"
+                  style={{ textShadow: "2px 2px 0 #1b4332" }}>
                   {saga.title}
                 </h2>
                 <div 
-                  className={`font-sans text-xs sm:text-sm text-gray-600 leading-relaxed max-w-xs transition-all duration-300 mt-2 ${
+                  className={`font-sans text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl transition-all duration-300 mt-2 ${
                     showDescription ? "block" : "hidden lg:block"
                   }`}
                 >
                   {saga.description}
                 </div>
                 <button
-                  onClick={() => setShowDescription(!showDescription)}
-                  className="lg:hidden text-[10px] font-sans font-bold underline hover:no-underline text-gray-500 mt-2 tracking-wide uppercase cursor-pointer"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowDescription(!showDescription);
+                  }}
+                  className="lg:hidden text-[10px] font-sans font-bold underline hover:no-underline text-yellow-400 mt-2 tracking-wide uppercase cursor-pointer"
                 >
                   {showDescription ? "Ocultar Sinopsis ▲" : "Leer Sinopsis ▼"}
                 </button>
@@ -158,13 +183,11 @@ export function SagaBlock({
             </div>
 
             <button
-              onClick={() => setShowChapters(!showChapters)}
-              className="font-[var(--font-bangers)] text-sm tracking-wider px-5 py-2.5 border-2 border-[#0a0a0f] uppercase transition-all shadow-[3px_3px_0_#0a0a0f] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#0a0a0f] cursor-pointer flex items-center gap-2 mt-4"
-              style={{ 
-                background: "#475569", 
-                color: "#ffffff",
-                borderColor: "#0f172a"
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowChapters(!showChapters);
               }}
+              className="font-[var(--font-bangers)] text-sm tracking-wider px-5 py-2.5 border-2 border-yellow-400 bg-yellow-400 hover:bg-yellow-350 text-black uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 cursor-pointer flex items-center gap-2 mt-4"
             >
               <img 
                 src="/comic-page.webp" 
@@ -185,17 +208,17 @@ export function SagaBlock({
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="overflow-hidden relative z-10 w-full"
               >
-                <div className="border-t-2 border-dashed border-[#0a0a0f]/20 pt-6">
+                <div className="border-t-2 border-dashed border-white/20 pt-6">
                   <div className="flex items-center gap-2 mb-4">
                     <img 
-                      src="/comic-page.webp" 
+                      src="/comic-page-white.webp" 
                       alt="Page" 
                       className="w-5 h-5 object-contain" 
                     />
-                    <h4 className="font-[var(--font-bangers)] text-lg tracking-wider text-[#0a0a0f]">
+                    <h4 className="font-[var(--font-bangers)] text-lg tracking-wider text-white">
                       EPISODIOS PROYECTADOS
                     </h4>
-                    <div className="h-[1px] flex-1 bg-[#0a0a0f]/10" />
+                    <div className="h-[1px] flex-1 bg-white/20" />
                   </div>
 
                   <div className="grid grid-cols-1 gap-4 items-stretch">
@@ -229,8 +252,8 @@ export function SagaBlock({
         <div 
           className="border-4 border-black relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn"
           style={{
-            boxShadow: `10px 10px 0 #2a4e8c`,
-            background: `linear-gradient(135deg, #ffffff 0%, #0f204208 100%)`
+            boxShadow: "10px 10px 0 #0a0a0f, 14px 14px 0 #2a4e8c, 0 25px 50px -12px rgba(0, 184, 212, 0.35)",
+            background: "#fbfaf7"
           }}
         >
           {/* Horizontal Banner for nuevo - un poco más grande */}
@@ -241,12 +264,12 @@ export function SagaBlock({
           </div>
 
           <div className="p-6 sm:p-8 relative z-10 flex flex-col justify-between">
-            {/* Halftone pop-art subtle background pattern */}
+            {/* Halftone pop-art highly visible background pattern */}
             <div
-              className="absolute inset-0 pointer-events-none opacity-[0.03]"
+              className="absolute inset-0 pointer-events-none opacity-[0.06] z-0"
               style={{
                 backgroundImage: "radial-gradient(circle, #0f2042 1.5px, transparent 1.5px)",
-                backgroundSize: "10px 10px",
+                backgroundSize: "12px 12px",
               }}
             />
             
@@ -289,7 +312,7 @@ export function SagaBlock({
                   >
                     {saga.title}
                   </h2>
-                  <div className="font-sans text-xs sm:text-sm text-gray-700 leading-relaxed max-w-md">
+                  <div className="font-sans text-xs sm:text-sm text-gray-800 leading-relaxed max-w-md">
                     {saga.description}
                   </div>
                 </div>
@@ -370,17 +393,17 @@ export function SagaBlock({
         <div 
           className="border-4 border-[#0a0a0f] relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn"
           style={{
-            boxShadow: `8px 8px 0 ${colorSecondary}`,
-            background: `white`
+            boxShadow: `8px 8px 0 #0a0a0f, 12px 12px 0 ${colorSecondary}, 0 25px 50px -12px ${saga.color}35`,
+            background: "#fbfaf7"
           }}
         >
           <div className="p-6 sm:p-8 relative z-10 flex flex-col justify-between">
-            {/* Halftone pop-art subtle background pattern */}
+            {/* Halftone pop-art highly visible background pattern */}
             <div
-              className="absolute inset-0 pointer-events-none opacity-[0.03]"
+              className="absolute inset-0 pointer-events-none opacity-[0.06] z-0"
               style={{
-                backgroundImage: "radial-gradient(circle, #0f2042 1.5px, transparent 1.5px)",
-                backgroundSize: "10px 10px",
+                backgroundImage: "radial-gradient(circle, #0a0a0f 1.5px, transparent 1.5px)",
+                backgroundSize: "12px 12px",
               }}
             />
             
@@ -433,7 +456,7 @@ export function SagaBlock({
                   >
                     {saga.title}
                   </h2>
-                  <div className="font-sans text-xs sm:text-sm text-gray-700 leading-relaxed max-w-md">
+                  <div className="font-sans text-xs sm:text-sm text-gray-800 leading-relaxed max-w-md">
                     {saga.description}
                   </div>
                 </div>
@@ -515,35 +538,33 @@ export function SagaBlock({
   const containerClass = isNuevo
     ? "border-4 border-black p-6 sm:p-10 relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.005]"
     : isProximamente
-      ? "border-4 border-dashed border-[#0a0a0f]/60 p-6 sm:p-10 relative overflow-hidden rounded-lg opacity-90 transition-opacity hover:opacity-100"
-      : "border-4 border-[#0a0a0f] bg-white p-6 sm:p-10 relative overflow-hidden rounded-lg";
+      ? "border-4 border-dashed border-yellow-400 bg-[#0f0f15] p-6 sm:p-10 relative overflow-hidden rounded-lg opacity-90 transition-opacity hover:opacity-100"
+      : "border-4 border-[#0a0a0f] bg-[#fbfaf7] p-6 sm:p-10 relative overflow-hidden rounded-lg";
 
   return (
     <div 
       className={containerClass}
       style={{
         boxShadow: isNuevo 
-          ? `10px 10px 0 #2a4e8c` 
+          ? "10px 10px 0 #0a0a0f, 14px 14px 0 #2a4e8c, 0 25px 50px -12px rgba(0, 184, 212, 0.35)" 
           : isProximamente 
-            ? `8px 8px 0 #475569`
-            : `8px 8px 0 ${colorSecondary}`,
-        background: isNuevo
-          ? `linear-gradient(135deg, #ffffff 0%, #0f204208 100%)`
-          : isProximamente
-            ? `repeating-linear-gradient(45deg, #f8fafc, #f8fafc 10px, #f1f5f9 10px, #f1f5f9 20px)`
-            : `white`
+            ? "10px 10px 0 #000, 14px 14px 0 rgba(245, 230, 66, 0.25), 0 20px 40px -10px rgba(245, 230, 66, 0.2)"
+            : `8px 8px 0 #0a0a0f, 12px 12px 0 ${colorSecondary}, 0 25px 50px -12px ${saga.color}35`,
+        background: isProximamente
+          ? "#0f0f15"
+          : "#fbfaf7"
       }}
     >
-      {/* Halftone pop-art subtle background pattern */}
-      {!isProximamente && (
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.03]"
-          style={{
-            backgroundImage: "radial-gradient(circle, #0f2042 1.5px, transparent 1.5px)",
-            backgroundSize: "10px 10px",
-          }}
-        />
-      )}
+      {/* Halftone pop-art highly visible background pattern */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.06] z-0"
+        style={{
+          backgroundImage: isProximamente
+            ? "radial-gradient(circle, #f5e642 1.5px, transparent 1.5px)"
+            : "radial-gradient(circle, #0a0a0f 1.5px, transparent 1.5px)",
+          backgroundSize: "12px 12px",
+        }}
+      />
 
       {/* Retro sticker/banner highlights */}
       {isNuevo && (

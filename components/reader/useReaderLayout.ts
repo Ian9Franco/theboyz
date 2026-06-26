@@ -10,6 +10,7 @@ interface UseReaderLayoutProps {
   zoomScale: number;
   activePanel: PanelStop;
   activeReadingBubbleIdx: number;
+  focusPanel?: boolean;
 }
 
 export function useReaderLayout({
@@ -21,6 +22,7 @@ export function useReaderLayout({
   zoomScale,
   activePanel,
   activeReadingBubbleIdx,
+  focusPanel = true,
 }: UseReaderLayoutProps) {
   return useMemo(() => {
     let imgWidth = 0;
@@ -37,12 +39,35 @@ export function useReaderLayout({
         imgHeight = imgSize.h * scale;
       } else {
         // Mode: "read"
-        // Always fit the entire page within the viewport to ensure it is never cropped
-        const scale = Math.min((containerSize.w * 0.95) / imgSize.w, (containerSize.h * 0.95) / imgSize.h);
-        imgWidth = imgSize.w * scale;
-        imgHeight = imgSize.h * scale;
-        imgLeft = (containerSize.w - imgWidth) / 2;
-        imgTop = (containerSize.h - imgHeight) / 2;
+        if (focusPanel && activeZoomRect && !zoomedOut) {
+          const rx = activeZoomRect.x / 100;
+          const ry = activeZoomRect.y / 100;
+          const rw = activeZoomRect.w / 100;
+          const rh = activeZoomRect.h / 100;
+
+          const cropW = imgSize.w * rw;
+          const cropH = imgSize.h * rh;
+
+          const scaleX = (containerSize.w * 0.9) / cropW;
+          const scaleY = (containerSize.h * 0.9) / cropH;
+          const fitScale = Math.max(1, Math.min(3.5, Math.min(scaleX, scaleY)));
+
+          imgWidth = imgSize.w * fitScale;
+          imgHeight = imgSize.h * fitScale;
+
+          const cropCenterX = imgSize.w * (rx + rw / 2);
+          const cropCenterY = imgSize.h * (ry + rh / 2);
+
+          imgLeft = containerSize.w / 2 - cropCenterX * fitScale;
+          imgTop = containerSize.h / 2 - cropCenterY * fitScale;
+        } else {
+          // Always fit the entire page within the viewport to ensure it is never cropped
+          const scale = Math.min((containerSize.w * 0.95) / imgSize.w, (containerSize.h * 0.95) / imgSize.h);
+          imgWidth = imgSize.w * scale;
+          imgHeight = imgSize.h * scale;
+          imgLeft = (containerSize.w - imgWidth) / 2;
+          imgTop = (containerSize.h - imgHeight) / 2;
+        }
       }
     }
 
@@ -57,5 +82,6 @@ export function useReaderLayout({
     zoomScale,
     activePanel,
     activeReadingBubbleIdx,
+    focusPanel,
   ]);
 }

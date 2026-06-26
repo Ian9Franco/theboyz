@@ -81,10 +81,10 @@ export default function LorePage() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex-1 py-3 text-center flex items-center justify-center gap-2 font-[var(--font-bangers)] text-xs sm:text-sm tracking-wider transition-all cursor-pointer ${
+                className={`flex-1 py-2 sm:py-3.5 px-3 sm:px-6 text-center flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2.5 font-[var(--font-bangers)] text-xs sm:text-sm tracking-wider transition-all border-2 cursor-pointer ${
                   active
-                    ? "bg-[#f5e642] text-[#0a0a0f] border-2 border-black shadow-[2px_2px_0_#000] translate-y-[-1px]"
-                    : "text-gray-400 hover:text-white hover:bg-white/5"
+                    ? "bg-[#f5e642] text-[#0a0a0f] border-black shadow-[2px_2px_0_#000] translate-y-[-1px]"
+                    : "text-gray-400 hover:text-white hover:bg-white/5 border-transparent"
                 }`}
               >
                 {tab.icon}
@@ -101,7 +101,7 @@ export default function LorePage() {
             <DossierTab key="dossier" unlockAll={unlockAll} readChapters={readChapters} />
           )}
           {activeTab === "timeline" && (
-            <TimelineTab key="timeline" />
+            <TimelineTab key="timeline" unlockAll={unlockAll} />
           )}
           {activeTab === "blueprints" && (
             <BlueprintsTab key="blueprints" />

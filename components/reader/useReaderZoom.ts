@@ -161,8 +161,11 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
         e.touches[0].clientY - e.touches[1].clientY
       );
       const ratio = dist / initialPinchDistRef.current;
-      const newScale = Math.max(1, Math.min(4, initialPinchScaleRef.current * ratio));
+      const newScale = Math.max(0.5, Math.min(4, initialPinchScaleRef.current * ratio));
       setZoomScale(newScale);
+      if (newScale <= 1.01) {
+        setPanOffset({ x: 0, y: 0 });
+      }
     }
   };
 
@@ -189,7 +192,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
     const zoomFactor = 0.12;
     const delta = -e.deltaY;
     const factor = delta > 0 ? 1 + zoomFactor : 1 - zoomFactor;
-    const newScale = Math.max(1, Math.min(4, zoomScale * factor));
+    const newScale = Math.max(0.5, Math.min(4, zoomScale * factor));
 
     setZoomScale(newScale);
 

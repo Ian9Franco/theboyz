@@ -30,28 +30,28 @@ function Footer() {
   return (
     <footer
       className="pt-16 pb-10 px-6 overflow-hidden relative"
-      style={{ background: "#f1f5f9", borderTop: "3px solid #1b4332" }}
+      style={{ background: "#07070a", borderTop: "4px solid #1b4332" }}
     >
-      {/* Halftone bg */}
+      {/* Premium Halftone pop-art dot pattern */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-5"
+        className="absolute inset-0 pointer-events-none opacity-[0.05] z-0"
         style={{
-          backgroundImage: "radial-gradient(circle, #0f2042 1px, transparent 1px)",
-          backgroundSize: "12px 12px",
+          backgroundImage: "radial-gradient(circle, #1b4332 1.5px, transparent 1.5px)",
+          backgroundSize: "14px 14px",
         }}
       />
 
       <div className="max-w-5xl mx-auto relative z-10 text-center flex flex-col items-center gap-6">
-        <div className="relative w-60 h-16 sm:w-72 sm:h-20 max-w-full overflow-hidden rounded-xl shadow-sm border border-[#0f2042]/10 bg-white">
+        <div className="relative w-60 h-16 sm:w-72 sm:h-20 max-w-full overflow-hidden rounded-xl shadow-[0_0_20px_rgba(27,67,50,0.2)] border border-white/10 bg-[#0a0a0f]">
           <img
             src="/logo_white.webp"
             alt="The Boyz Logo"
-            className="w-full h-full object-contain rounded-xl"
+            className="w-full h-full object-contain rounded-xl p-2"
           />
         </div>
         <p
-          className="font-[var(--font-marker)] text-lg"
-          style={{ color: "#0f2042", opacity: 0.8 }}
+          className="font-[var(--font-marker)] text-lg tracking-wider"
+          style={{ color: "#f5e642", textShadow: "2px 2px 0 rgba(0,0,0,0.8)" }}
         >
           Pronto caen más capítulos — dale que llueve
         </p>
@@ -61,10 +61,10 @@ function Footer() {
           <span
             className="font-[var(--font-bangers)] text-xs sm:text-sm tracking-[0.35em] uppercase"
             style={{
-              color: "#1b4332",
-              border: "2px solid #1b4332",
-              padding: "0.4rem 1.25rem",
-              background: "white",
+              color: "#f5e642",
+              border: "2px solid #f5e642",
+              padding: "0.5rem 1.5rem",
+              background: "#0a0a0f",
               boxShadow: "3px 3px 0 #1b4332",
               display: "inline-block",
               borderRadius: "4px",
@@ -75,26 +75,24 @@ function Footer() {
         </div>
 
         <div className="flex flex-col gap-4 text-center max-w-2xl mt-4">
-          <p className="font-sans text-sm sm:text-base text-gray-700 leading-relaxed">
-            Este proyecto surge de mi imaginación y de un flujo de trabajo que armé paso a paso: empiezo con un guion en crudo, divido la narrativa y diseño la dirección artística. El apartado visual lo normalizo con IA bajo mi total supervisión, inspirándome hoy en el talento de <strong>Sara Pichelli</strong> y <strong>Jorge Jiménez</strong>, y apuntando a futuro hacia la fuerza de <strong>Greg Capullo</strong> y <strong>Lee Garbett</strong>. Al final, todo se vuelve un tranbajo a mano: programé mi propio editor integrado para colocar meticulosamente cada globo de texto y efecto de sonido, logrando que la historia se sienta natural y orgánica mediante animaciones suaves y caracteristicas qol.
+          <p className="font-sans text-sm sm:text-base text-gray-400 leading-relaxed">
+            Este proyecto surge de mi imaginación y de un flujo de trabajo que armé paso a paso: empiezo con un guion en crudo, divido la narrativa y diseño la dirección artística. El apartado visual lo normalizo con IA bajo mi total supervisión, inspirándome hoy en el talento de <strong className="text-white">Sara Pichelli</strong> y <strong className="text-white">Jorge Jiménez</strong>, y apuntando a futuro hacia la fuerza de <strong className="text-white">Greg Capullo</strong> y <strong className="text-white">Lee Garbett</strong>. Al final, todo se vuelve un trabajo a mano: programé mi propio editor integrado para colocar meticulosamente cada globo de texto y efecto de sonido, logrando que la historia se sienta natural y orgánica mediante animaciones suaves y características QoL.
           </p>
         </div>
 
         <div
-          className="w-24 h-px"
-          style={{ background: "rgba(15,32,66,0.15)" }}
+          className="w-24 h-px my-4"
+          style={{ background: "rgba(27,67,50,0.3)" }}
         />
         <p
-          className="font-[var(--font-bangers)] text-sm tracking-[0.2em]"
-          style={{ color: "#0f2042", opacity: 0.6 }}
+          className="font-[var(--font-bangers)] text-sm tracking-[0.2em] text-gray-500"
         >
           © {new Date().getFullYear()} THE BOYZ COMICS — CREADO POR{" "}
           <a
             href="https://ian-pontorno-portfolio.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-[#1b4332] underline transition-colors font-bold"
-            style={{ color: "#0f2042" }}
+            className="hover:text-yellow-400 underline transition-colors font-bold text-gray-400"
           >
             IAN PONTORNO
           </a>
