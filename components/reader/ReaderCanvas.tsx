@@ -166,9 +166,10 @@ export function ReaderCanvas({
               userSelect: "none",
               WebkitUserSelect: "none",
               maxWidth: "none",
+              // 3B: transition specific props only, avoids width jitter on zoom change
               transition:
                 mode === "read" && !isPageChanging
-                  ? "all 400ms cubic-bezier(0.25, 1, 0.5, 1)"
+                  ? "left 400ms cubic-bezier(0.25, 1, 0.5, 1), top 400ms cubic-bezier(0.25, 1, 0.5, 1), width 400ms cubic-bezier(0.25, 1, 0.5, 1)"
                   : "none",
               boxShadow:
                 mode === "read"
@@ -347,30 +348,23 @@ export function ReaderCanvas({
                 return (
                   <motion.div
                     key={`spoiler-mask-${pIdx}-${rIdx}`}
-                    initial={{ opacity: 0 }}
+                    initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.35 }}
-                    className="absolute bg-zinc-950/95 border-2 border-zinc-900 flex flex-col items-center justify-center text-zinc-500 select-none overflow-hidden"
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                    className="absolute bg-[#0a0a0f] select-none overflow-hidden"
                     style={{
-                      left: maskLeft,
-                      top: maskTop,
-                      width: maskWidth,
-                      height: maskHeight,
+                      left: maskLeft - 1,
+                      top: maskTop - 1,
+                      width: maskWidth + 2,
+                      height: maskHeight + 2,
                       zIndex: 20,
-                      boxShadow: "inset 0 0 24px rgba(0,0,0,0.95), 0 4px 10px rgba(0,0,0,0.5)",
+                      transition:
+                        mode === "read" && !isPageChanging
+                          ? "left 400ms cubic-bezier(0.25, 1, 0.5, 1), top 400ms cubic-bezier(0.25, 1, 0.5, 1), width 400ms cubic-bezier(0.25, 1, 0.5, 1), height 400ms cubic-bezier(0.25, 1, 0.5, 1)"
+                          : "none",
                     }}
-                  >
-                    <motion.div
-                      animate={{ opacity: [0.5, 0.9, 0.5] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                      className="flex flex-col items-center gap-1.5"
-                    >
-                      <span className="font-[var(--font-bangers)] text-[10px] sm:text-xs tracking-wider text-zinc-600">
-                        🤫 VIÑETA RESERVADA
-                      </span>
-                    </motion.div>
-                  </motion.div>
+                  />
                 );
               });
             })
@@ -441,7 +435,10 @@ export function ReaderCanvas({
 
       {/* Tap instructions / Next Page overlay in Reader Mode */}
       {mode === "read" && zoomedOut && !showAllDialogues && (
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, type: "spring", stiffness: 220, damping: 24 }}
           className="absolute inset-0 flex flex-col items-center justify-end pb-8 sm:pb-12 gap-3 sm:gap-4 z-40 pointer-events-none"
           style={{ background: "linear-gradient(to top, rgba(10,10,15,0.85) 0%, transparent 60%)" }}
         >
@@ -498,7 +495,7 @@ export function ReaderCanvas({
               </Link>
             )}
           </div>
-        </div>
+        </motion.div>
       )}
 
       {mode === "edit" && (
@@ -551,14 +548,15 @@ export function ReaderCanvas({
         </div>
       )}
 
-      {/* Page Preload Overlay Mask */}
+      {/* Page Preload Overlay Mask — 1A: animated entrance + exit */}
       <AnimatePresence>
         {isPageChanging && (
           <motion.div
             key="page-preload-overlay"
             initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
             className="absolute inset-0 bg-[#0a0a0f] z-[100] flex flex-col items-center justify-center pointer-events-auto cursor-default"
             onClick={(e) => e.stopPropagation()}
           >

@@ -61,4 +61,6 @@ export interface CharacterDetail {
   displayColor?: string;
   loreNote?: string;
   extras?: Record<string, string>;
+  portadaImages?: string[];
+  fichaImages?: string[];
 }

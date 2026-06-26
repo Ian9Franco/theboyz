@@ -4,6 +4,7 @@ import React from "react";
 import { CaptionBubble } from "./bubbles/CaptionBubble";
 import { ThoughtBubble } from "./bubbles/ThoughtBubble";
 import { StandardBubble } from "./bubbles/StandardBubble";
+import { SPEAKER_COLORS } from "./bubbles/bubbleHelpers";
 
 export type DialogueLine = {
   text: string;
@@ -29,32 +30,28 @@ export type DialogueLine = {
 
 export function getBubbleStyles(line: DialogueLine) {
   const style = line.style ?? "normal";
-  let bgColor = line.customBg || "#ffffff";
-  let borderColor = line.customColor || "#0a0a0f";
-  let strokeWidth = 1.5;
+  let bgColor      = line.customBg    || "#ffffff";
+  let borderColor  = line.customColor || "#0a0a0f";
+  let strokeWidth  = 1.5;
 
   if (style === "scream") {
-    bgColor = line.customBg || "#f5e642";
+    bgColor     = line.customBg    || "#f5e642";
     borderColor = line.customColor || "#0a0a0f";
     strokeWidth = 2.5;
   } else if (style === "whisper") {
-    bgColor = line.customBg || "#ffffff";
+    bgColor     = line.customBg    || "#ffffff";
     borderColor = line.customColor || "#a1a1aa";
-    strokeWidth = 1.5;
   } else if (style === "electronic") {
-    bgColor = line.customBg || "rgba(10, 10, 15, 0.9)";
+    bgColor     = line.customBg    || "rgba(0, 240, 255, 0.07)";
     borderColor = line.customColor || "#00f0ff";
-    strokeWidth = 1.5;
   } else if (style === "caption") {
-    bgColor = line.customBg || "#ffffff";
+    bgColor     = line.customBg    || "#ffffff";
     borderColor = line.customColor || "#0a0a0f";
-    strokeWidth = 1.5;
   } else if (style === "thought") {
-    bgColor = line.customBg || "#ffffff";
+    bgColor     = line.customBg    || "#ffffff";
     borderColor = line.customColor || "#0a0a0f";
-    strokeWidth = 1.5;
   } else if (style === "sfx") {
-    bgColor = line.customBg || "transparent";
+    bgColor     = line.customBg    || "transparent";
     borderColor = line.customColor || "#0a0a0f";
     strokeWidth = 3;
   }
@@ -70,15 +67,17 @@ export function DialogueBubble({
   fadeOutAnimation,
   depth,
   textScale = 1.0,
+  speedMultiplier = 1.0,
 }: {
   line: DialogueLine;
   index: number;
   elasticTailNode?: React.ReactNode;
   instant?: boolean;
-  appearanceAnimation?: "spring" | "fade" | "slide" | "zoom";
+  appearanceAnimation?: "spring" | "fade" | "slide" | "zoom" | "pop";
   fadeOutAnimation?: "fade" | "slide" | "zoom";
   depth?: number;
   textScale?: number;
+  speedMultiplier?: number;
 }) {
   const style = line.style ?? "normal";
 
@@ -92,6 +91,7 @@ export function DialogueBubble({
         fadeOutAnimation={fadeOutAnimation}
         depth={depth}
         textScale={textScale}
+        speedMultiplier={speedMultiplier}
       />
     );
   }
@@ -107,6 +107,7 @@ export function DialogueBubble({
         fadeOutAnimation={fadeOutAnimation}
         depth={depth}
         textScale={textScale}
+        speedMultiplier={speedMultiplier}
       />
     );
   }
@@ -121,6 +122,7 @@ export function DialogueBubble({
       fadeOutAnimation={fadeOutAnimation}
       depth={depth}
       textScale={textScale}
+      speedMultiplier={speedMultiplier}
     />
   );
 }

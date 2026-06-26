@@ -26,6 +26,7 @@ interface DialogueLayersProps {
   bubbleOffsets: Record<string, { x: number; y: number }>;
   draggedBubbleKey: string | null;
   textScale: number;
+  speedMultiplier?: number;
   isPageChanging: boolean;
   activePanelIdx: number;
   activeBubbleIdx: number | null;
@@ -55,6 +56,7 @@ export function DialogueLayers({
   bubbleOffsets,
   draggedBubbleKey,
   textScale,
+  speedMultiplier = 1.0,
   isPageChanging,
   activePanelIdx,
   activeBubbleIdx,
@@ -214,6 +216,7 @@ export function DialogueLayers({
                   fadeOutAnimation={fadeOutAnimation}
                   depth={dialogueDepth}
                   textScale={textScale}
+                  speedMultiplier={speedMultiplier}
                 />
               </div>
             );
@@ -351,6 +354,7 @@ export function DialogueLayers({
                     fadeOutAnimation={fadeOutAnimation}
                     depth={dialogueDepth}
                     textScale={textScale}
+                    speedMultiplier={speedMultiplier}
                   />
                 </div>
               </motion.div>

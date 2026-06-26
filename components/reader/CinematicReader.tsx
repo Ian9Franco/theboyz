@@ -115,6 +115,8 @@ export function CinematicReader({
   const [textScale, setTextScale] = useState<number>(1.0);
   const [showInstructions, setShowInstructions] = useState(false);
   const [autoplay, setAutoplay] = useState<boolean>(true);
+  // Dialogue speed: 0.5 = slow, 1.0 = normal, 1.5 = fast
+  const [speedMultiplier, setSpeedMultiplierState] = useState<number>(1.0);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -130,6 +132,10 @@ export function CinematicReader({
       const savedAutoplay = localStorage.getItem("reader_autoplay");
       if (savedAutoplay !== null) {
         setAutoplay(savedAutoplay === "true");
+      }
+      const savedSpeed = localStorage.getItem("reader_dialogue_speed");
+      if (savedSpeed !== null) {
+        setSpeedMultiplierState(parseFloat(savedSpeed));
       }
       const hasRead = localStorage.getItem("has_read_instructions") === "true";
       if (!hasRead) {
@@ -156,6 +162,13 @@ export function CinematicReader({
     setAutoplay(value);
     if (typeof window !== "undefined") {
       localStorage.setItem("reader_autoplay", String(value));
+    }
+  };
+
+  const handleSetSpeedMultiplier = (value: number) => {
+    setSpeedMultiplierState(value);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("reader_dialogue_speed", String(value));
     }
   };
 
@@ -219,22 +232,46 @@ export function CinematicReader({
 
   useEffect(() => {
     if (!pages[pageIdx]) return;
+
+    const url = getComicPageUrl(pages[pageIdx]);
+    const img = new window.Image();
+
+    // B6 fix: if already cached, resolve synchronously without showing overlay
+    if (img.complete && img.naturalWidth > 0) {
+      setImgSize({ w: img.naturalWidth, h: img.naturalHeight });
+      setIsPageChanging(false);
+      img.src = url;
+      return;
+    }
+
     setImgSize(null);
     setIsPageChanging(true);
 
     let timer: NodeJS.Timeout;
-    const img = new window.Image();
     img.onload = () => {
       setImgSize({ w: img.naturalWidth, h: img.naturalHeight });
+      // Reduced from 1000ms to 150ms — overlay fades out fast after load
       timer = setTimeout(() => {
         setIsPageChanging(false);
-      }, 1000);
+      }, 150);
     };
-    img.src = getComicPageUrl(pages[pageIdx]);
+    img.src = url;
 
     return () => {
       if (timer) clearTimeout(timer);
     };
+  }, [pageIdx, pages]);
+
+  // 5A — Speculative preloading of adjacent pages
+  useEffect(() => {
+    if (typeof window === "undefined" || !pages.length) return;
+    const toPreload = [pageIdx - 1, pageIdx + 1, pageIdx + 2].filter(
+      (i) => i >= 0 && i < pages.length
+    );
+    toPreload.forEach((i) => {
+      const preImg = new window.Image();
+      preImg.src = getComicPageUrl(pages[i]);
+    });
   }, [pageIdx, pages]);
 
   const resetPage = useCallback((idx: number) => {
@@ -275,6 +312,48 @@ export function CinematicReader({
         )
       : currentPageData.panels || [];
   }, [mode, currentPageData.panels]);
+
+  // ── 6D: Read-mode keyboard shortcuts (placed after currentPanels declaration) ──
+  useEffect(() => {
+    if (mode !== "read") return;
+    const handleReadKey = (e: KeyboardEvent) => {
+      const tag = (e.target as HTMLElement).tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA") return;
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+
+      if (e.key === " " || e.key === "ArrowRight") {
+        e.preventDefault();
+        const activePanelStop = currentPanels[panelIdx];
+        const rects = activePanelStop?.zoomRects || (activePanelStop?.zoomRect ? [activePanelStop.zoomRect] : []);
+        if (showAllDialogues) {
+          setShowAllDialogues(false);
+        } else if (zoomedOut) {
+          if (pageIdx < pages.length - 1) resetPage(pageIdx + 1);
+        } else if (currentPanels.length === 0) {
+          if (pageIdx < pages.length - 1) resetPage(pageIdx + 1);
+          else setZoomedOut(true);
+        } else if (zoomIdx < rects.length - 1) {
+          setZoomIdx((prev) => prev + 1);
+        } else if (panelIdx < currentPanels.length - 1) {
+          setPanelIdx((prev) => prev + 1);
+        } else {
+          setZoomedOut(true);
+        }
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        if (panelIdx > 0) {
+          setPanelIdx((prev) => prev - 1);
+          setZoomIdx(0);
+        } else if (pageIdx > 0) {
+          resetPage(pageIdx - 1);
+        }
+      } else if (e.key === "a" || e.key === "A") {
+        handleSetAutoplay(!autoplay);
+      }
+    };
+    window.addEventListener("keydown", handleReadKey);
+    return () => window.removeEventListener("keydown", handleReadKey);
+  }, [mode, currentPanels, panelIdx, zoomIdx, zoomedOut, pageIdx, pages, showAllDialogues, autoplay, resetPage]);
 
   const activePanel = currentPanels[panelIdx] || { focusY: 0.5, dialogue: [] };
   const activePanelRects = activePanel
@@ -461,6 +540,7 @@ export function CinematicReader({
         bubbleOffsets={bubbleOffsets}
         draggedBubbleKey={draggedBubbleKey}
         textScale={textScale}
+        speedMultiplier={speedMultiplier}
         isPageChanging={isPageChanging}
         activePanelIdx={activePanelIdx}
         activeBubbleIdx={activeBubbleIdx}
@@ -490,6 +570,7 @@ export function CinematicReader({
     bubbleOffsets,
     draggedBubbleKey,
     textScale,
+    speedMultiplier,
     isPageChanging,
     activePanelIdx,
     activeBubbleIdx,
@@ -518,6 +599,8 @@ export function CinematicReader({
         setTextScale={handleSetTextScale}
         autoplay={autoplay}
         setAutoplay={handleSetAutoplay}
+        speedMultiplier={speedMultiplier}
+        setSpeedMultiplier={handleSetSpeedMultiplier}
         resetPage={resetPage}
         onOpenHelp={() => setShowInstructions(true)}
       />

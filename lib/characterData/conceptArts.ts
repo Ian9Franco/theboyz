@@ -7,159 +7,10 @@ export interface ConceptArtItem {
 }
 
 export const conceptArts: Record<string, ConceptArtItem[]> = {
-  "uandi": [
-    {
-      "name": "Aegis Full",
-      "path": "/personajes/GUIAS/boyz/AEGIS/aegis full.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Aegis",
-      "path": "/personajes/GUIAS/boyz/AEGIS/aegis.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Uandi",
-      "path": "/personajes/GUIAS/boyz/AEGIS/uandi.webp",
-      "isAlt": false
-    }
-  ],
-  "sofi": [
-    {
-      "name": "Hush",
-      "path": "/personajes/GUIAS/boyz/HUSH/hush.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Hush",
-      "path": "/personajes/GUIAS/boyz/HUSH/hush_.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Sofi",
-      "path": "/personajes/GUIAS/boyz/HUSH/sofi.webp",
-      "isAlt": false
-    }
-  ],
-  "jaz": [
-    {
-      "name": "Jaz",
-      "path": "/personajes/GUIAS/boyz/ORACLE/JAZ.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Oracle",
-      "path": "/personajes/GUIAS/boyz/ORACLE/ORACLE.webp",
-      "isAlt": false
-    }
-  ],
-  "mati": [
-    {
-      "name": "Mati",
-      "path": "/personajes/GUIAS/boyz/SWAPFIRE/mati.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Swapfire",
-      "path": "/personajes/GUIAS/boyz/SWAPFIRE/swapfire.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Accion",
-      "path": "/personajes/GUIAS/boyz/SWAPFIRE/alt/accion.webp",
-      "isAlt": true
-    },
-    {
-      "name": "Alt",
-      "path": "/personajes/GUIAS/boyz/SWAPFIRE/alt/alt.webp",
-      "isAlt": true
-    },
-    {
-      "name": "Use",
-      "path": "/personajes/GUIAS/boyz/SWAPFIRE/alt/use.webp",
-      "isAlt": true
-    }
-  ],
-  "volvo": [
-    {
-      "name": "Vector",
-      "path": "/personajes/GUIAS/boyz/VECTOR/vector.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Volvo",
-      "path": "/personajes/GUIAS/boyz/VECTOR/volvo.webp",
-      "isAlt": false
-    }
-  ],
-  "ian": [
-    {
-      "name": "Ian",
-      "path": "/personajes/GUIAS/boyz/VESPERWING/IAN.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Mk3",
-      "path": "/personajes/GUIAS/boyz/VESPERWING/MK3.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Vesperwing",
-      "path": "/personajes/GUIAS/boyz/VESPERWING/vesperwing.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Ian Siut",
-      "path": "/personajes/GUIAS/boyz/VESPERWING/alt/IAN_SIUT.webp",
-      "isAlt": true
-    },
-    {
-      "name": "Mk3 Spider",
-      "path": "/personajes/GUIAS/boyz/VESPERWING/alt/MK3 SPIDER.webp",
-      "isAlt": true
-    },
-    {
-      "name": "Suit Capucha",
-      "path": "/personajes/GUIAS/boyz/VESPERWING/alt/SUIT CAPUCHA.webp",
-      "isAlt": true
-    },
-    {
-      "name": "Suit",
-      "path": "/personajes/GUIAS/boyz/VESPERWING/alt/SUIT.webp",
-      "isAlt": true
-    }
-  ],
-  "julian": [
-    {
-      "name": "Julian",
-      "path": "/personajes/GUIAS/boyz/WILDCARD/julian.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Wildcard",
-      "path": "/personajes/GUIAS/boyz/WILDCARD/wildcard.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Old",
-      "path": "/personajes/GUIAS/boyz/WILDCARD/alt/old.webp",
-      "isAlt": true
-    },
-    {
-      "name": "Old Accion",
-      "path": "/personajes/GUIAS/boyz/WILDCARD/alt/old_accion.webp",
-      "isAlt": true
-    },
-    {
-      "name": "Old Alt",
-      "path": "/personajes/GUIAS/boyz/WILDCARD/alt/old_alt.webp",
-      "isAlt": true
-    }
-  ],
   "apex": [
     {
-      "name": "Apex Alt",
-      "path": "/personajes/GUIAS/antagonistas/Apex/apex_alt.webp",
+      "name": "Apex Alt Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Apex/apex_alt_sheet.webp",
       "isAlt": false
     },
     {
@@ -170,15 +21,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "don": [
     {
-      "name": "Don Vanguard",
-      "path": "/personajes/GUIAS/antagonistas/Don Vanguard/don vanguard.webp",
+      "name": "Don Vanguard Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Don Vanguard/don vanguard_sheet.webp",
       "isAlt": false
     }
   ],
   "gorgon": [
     {
-      "name": "Gorgon Ficha",
-      "path": "/personajes/GUIAS/antagonistas/Gorgon/gorgon_ficha.webp",
+      "name": "Gorgon Ficha Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Gorgon/gorgon_ficha_sheet.webp",
       "isAlt": false
     },
     {
@@ -201,42 +52,201 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "phobos": [
     {
-      "name": "Alt",
-      "path": "/personajes/GUIAS/antagonistas/Phobos/alt.webp",
+      "name": "Alt Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Phobos/alt_sheet.webp",
       "isAlt": false
     },
     {
-      "name": "Phobos",
-      "path": "/personajes/GUIAS/antagonistas/Phobos/phobos.webp",
+      "name": "Phobos Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Phobos/phobos_sheet.webp",
       "isAlt": false
     }
   ],
-  "comandante": [
+  "uandi": [
     {
-      "name": "R.e.g.u.l.a.r Y Los V.o.p.s",
-      "path": "/personajes/GUIAS/antagonistas/R.E.G.U.L.A.R/R.E.G.U.L.A.R y los V.O.P.S.webp",
+      "name": "A Uandi Sheet",
+      "path": "/personajes/GUIAS/boyz/AEGIS/A-Uandi_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Aegis Full Sheet",
+      "path": "/personajes/GUIAS/boyz/AEGIS/aegis full_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Aegis Sheet",
+      "path": "/personajes/GUIAS/boyz/AEGIS/aegis_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Uandi Sheet",
+      "path": "/personajes/GUIAS/boyz/AEGIS/uandi_sheet.webp",
       "isAlt": false
     }
   ],
-  "victor": [
+  "sofi": [
+    {
+      "name": "Hush Sheet",
+      "path": "/personajes/GUIAS/boyz/HUSH/hush_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Hush Sheet",
+      "path": "/personajes/GUIAS/boyz/HUSH/hush__sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Sofi Sheet",
+      "path": "/personajes/GUIAS/boyz/HUSH/sofi_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "jaz": [
+    {
+      "name": "Jaz Sheet",
+      "path": "/personajes/GUIAS/boyz/ORACLE/JAZ_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Oracle Sheet",
+      "path": "/personajes/GUIAS/boyz/ORACLE/ORACLE_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "mati": [
+    {
+      "name": "Mati Sheet",
+      "path": "/personajes/GUIAS/boyz/SWAPFIRE/mati_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Swapfire Sheet",
+      "path": "/personajes/GUIAS/boyz/SWAPFIRE/swapfire_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Accion Sheet",
+      "path": "/personajes/GUIAS/boyz/SWAPFIRE/alt/accion_sheet.webp",
+      "isAlt": true
+    },
+    {
+      "name": "Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/SWAPFIRE/alt/alt_sheet.webp",
+      "isAlt": true
+    },
+    {
+      "name": "Use Sheet",
+      "path": "/personajes/GUIAS/boyz/SWAPFIRE/alt/use_sheet.webp",
+      "isAlt": true
+    }
+  ],
+  "volvo": [
+    {
+      "name": "Vector Sheet",
+      "path": "/personajes/GUIAS/boyz/VECTOR/vector_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Volvo Carnicero Sheet",
+      "path": "/personajes/GUIAS/boyz/VECTOR/Volvo Carnicero_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Volvo Sheet",
+      "path": "/personajes/GUIAS/boyz/VECTOR/volvo_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "ian": [
+    {
+      "name": "Ian Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/IAN_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Mk3 Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/MK3_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Vesperwing Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/vesperwing_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Ian Siut Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/alt/IAN_SIUT_sheet.webp",
+      "isAlt": true
+    },
+    {
+      "name": "Mk3 Spider Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/alt/MK3 SPIDER_sheet.webp",
+      "isAlt": true
+    },
+    {
+      "name": "Suit Capucha Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/alt/SUIT CAPUCHA_sheet.webp",
+      "isAlt": true
+    },
+    {
+      "name": "Suit Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/alt/SUIT_sheet.webp",
+      "isAlt": true
+    }
+  ],
+  "julian": [
+    {
+      "name": "Julian Sheet",
+      "path": "/personajes/GUIAS/boyz/WILDCARD/julian_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Wildcard Sheet",
+      "path": "/personajes/GUIAS/boyz/WILDCARD/wildcard_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Old Accion Sheet",
+      "path": "/personajes/GUIAS/boyz/WILDCARD/alt/old_accion_sheet.webp",
+      "isAlt": true
+    },
+    {
+      "name": "Old Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/WILDCARD/alt/old_alt_sheet.webp",
+      "isAlt": true
+    },
+    {
+      "name": "Old Sheet",
+      "path": "/personajes/GUIAS/boyz/WILDCARD/alt/old_sheet.webp",
+      "isAlt": true
+    }
+  ],
+  "magnus": [
     {
       "name": "Victor Alt Sheet",
-      "path": "/personajes/GUIAS/antagonistas/Victor/victor_alt_sheet.webp",
+      "path": "/personajes/GUIAS/Secundarios/Magnus/victor_alt_sheet.webp",
       "isAlt": false
     },
     {
       "name": "Victor Sheet",
-      "path": "/personajes/GUIAS/antagonistas/Victor/Victor_sheet.webp",
+      "path": "/personajes/GUIAS/Secundarios/Magnus/Victor_sheet.webp",
       "isAlt": false
     },
     {
       "name": "Victor Sheet Alt",
-      "path": "/personajes/GUIAS/antagonistas/Victor/Victor_sheet_alt.webp",
+      "path": "/personajes/GUIAS/Secundarios/Magnus/Victor_sheet_alt.webp",
       "isAlt": false
     },
     {
       "name": "Victor Sheet Alt2",
-      "path": "/personajes/GUIAS/antagonistas/Victor/Victor_sheet_alt2.webp",
+      "path": "/personajes/GUIAS/Secundarios/Magnus/Victor_sheet_alt2.webp",
+      "isAlt": false
+    }
+  ],
+  "matapobre": [
+    {
+      "name": "Matapobres Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Matapobres/MATAPOBRES_sheet.webp",
       "isAlt": false
     }
   ],
@@ -249,6 +259,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Valery Sheet Alt",
       "path": "/personajes/GUIAS/Secundarios/Valery/Valery_sheet_alt.webp",
+      "isAlt": false
+    }
+  ],
+  "julander": [
+    {
+      "name": "Julander Sheet",
+      "path": "/personajes/GUIAS/voughtverse/Julander/Julander_sheet.webp",
       "isAlt": false
     }
   ]

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { ImageLightbox } from "./CharacterModal/ImageLightbox";
 import { EpicTransitionOverlay } from "./CharacterModal/EpicTransitionOverlay";
 import { CharacterInfoPanel } from "./CharacterModal/CharacterInfoPanel";
@@ -39,6 +39,16 @@ function getDarkBgColor(hexColor: string) {
   return "#0f172a";
 }
 
+const CHARACTER_SOUNDS: Record<string, { open?: string; details?: string }> = {
+  ian: { open: "/sounds/sfx/capa1.mp3", details: "/sounds/sfx/grapplin2.mp3" },
+  uandi: { open: "/sounds/sfx/muzaproduction-metal-design-explosion-13491.mp3", details: "/sounds/sfx/The Incredible Hulk Roar.mp3" },
+  julian: { open: "/sounds/sfx/repartir cartas 3.mp3", details: "/sounds/sfx/repartir cartas.mp3" },
+  volvo: { open: "/sounds/sfx/portal1.mp3", details: "/sounds/sfx/timefreeze.mp3" },
+  mati: { open: "/sounds/sfx/laser_1.mp3", details: "/sounds/sfx/laser_3.mp3" },
+  jaz: { open: "/sounds/sfx/magia1.mp3", details: "/sounds/sfx/magia4.mp3" },
+  sofi: { open: "/sounds/sfx/katana2.mp3", details: "/sounds/sfx/katana.mp3" },
+};
+
 export function CharacterModal({ char, onClose }: { char: any; onClose: () => void }) {
   const isPibe =
     char.category === "pibes" ||
@@ -55,87 +65,46 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     volvo: "/personajes/LosPibes/CLOSEUP/VOLVO_FACE.webp",
   };
 
-  // 1. Gather available images for Standard Mode (or for non-pibe characters)
+  // 1. Gather available images for Standard Mode
   const standardImages: { id: string; label: string; src: string }[] = [];
 
-  if (isPibe) {
-    if (char.fullBody || char.image) {
-      standardImages.push({ id: "default", label: "Normal", src: char.fullBody || char.image });
-    }
-    if (char.altImage) {
-      const isRegular = char.id === "comandante";
-      const label = isRegular ? "Cósmico" : "Alt";
-      standardImages.push({ id: "alt", label, src: char.altImage });
-    }
-    const closeUpPath = char.closeUp || closeUpMap[char.id];
-    if (closeUpPath) {
-      standardImages.push({ id: "closeup", label: "Closeup", src: closeUpPath });
-    }
-  } else {
-    // Non-Pibes: check if they have a distinct ficha and cover (portada)
-    const hasFicha = char.image && char.fullBody && char.image !== char.fullBody;
+  // Main Portada
+  if (char.portadaImages && char.portadaImages.length > 0) {
+    standardImages.push({ id: "portada", label: "Portada", src: char.portadaImages[0] });
+  } else if (char.image) {
+    standardImages.push({ id: "portada", label: "Portada", src: char.image });
+  }
 
-    if (hasFicha) {
-      // Ficha goes first so it is shown by default
-      standardImages.push({ id: "ficha", label: "Ficha", src: char.image });
-      standardImages.push({ id: "portada", label: "Portada", src: char.fullBody });
-    } else {
-      const mainSrc = char.fullBody || char.image;
-      if (mainSrc) {
-        standardImages.push({ id: "default", label: "Normal", src: mainSrc });
-      }
-    }
+  // Main Ficha
+  if (char.fichaImages && char.fichaImages.length > 0) {
+    standardImages.push({ id: "ficha", label: "Ficha", src: char.fichaImages[0] });
+  } else if (char.fichaImage) {
+    standardImages.push({ id: "ficha", label: "Ficha", src: char.fichaImage });
+  }
 
-    if (char.altImage) {
-      const isRegular = char.id === "comandante";
-      const label = isRegular ? "Cósmico" : "Alt";
-      standardImages.push({ id: "alt", label, src: char.altImage });
-    }
-
-    if (char.fichaImage && !standardImages.some((img) => img.src === char.fichaImage)) {
-      standardImages.push({ id: "ficha_extra", label: "Ficha Extra", src: char.fichaImage });
-    }
-    if (char.overloadImage && char.overloadImage !== char.altImage && !standardImages.some((img) => img.src === char.overloadImage)) {
-      standardImages.push({ id: "concept", label: "Concept", src: char.overloadImage });
+  // Ficha Alts
+  if (char.fichaImages && char.fichaImages.length > 1) {
+    for (let i = 1; i < char.fichaImages.length; i++) {
+      standardImages.push({ id: `ficha_alt_${i}`, label: `Ficha Alt ${i}`, src: char.fichaImages[i] });
     }
   }
 
-  // 2. Gather available images for Detalles Mode (only for pibes)
-  const detallesImages: { id: string; label: string; src: string }[] = [];
-  if (isPibe) {
-    const suitImgObj = char.powers?.suitImages || {};
-    // Prioritize Ficha first!
-    if (suitImgObj.ficha) {
-      detallesImages.push({ id: "ficha", label: "Ficha", src: suitImgObj.ficha });
-    }
-    if (suitImgObj.default || char.overloadImage) {
-      detallesImages.push({ id: "default", label: "Portada #1", src: suitImgObj.default || char.overloadImage });
-    }
-    // Add other suit images dynamically (excluding default, ficha, combat, etc.)
-    Object.entries(suitImgObj).forEach(([key, val]) => {
-      if (key !== "default" && key !== "ficha" && key !== "combat" && val && typeof val === "string") {
-        if (key === "archor") return; // Completely hide Vesper Archor from the details modal
-        const labelMap: Record<string, string> = {
-          ficha2: "Ficha 2",
-          fichaAlt: "Ficha Alt",
-          alt: char.id === "ian" ? "Traje" : "Alt",
-          archor: "Archor",
-          mk3: "Mark III",
-          mk3_alt: "Mark III Alt",
-          mkl: "Mark L",
-          ficha3: "Ficha 3",
-        };
-        const label = labelMap[key] || key.toUpperCase();
-        if (!detallesImages.some((img) => img.id === key)) {
-          detallesImages.push({ id: key, label, src: val });
-        }
-      }
-    });
-    // Fallback if empty
-    if (detallesImages.length === 0) {
-      detallesImages.push({ id: "default", label: "Normal", src: char.fullBody || char.image });
+  // Portada Alts
+  if (char.portadaImages && char.portadaImages.length > 1) {
+    for (let i = 1; i < char.portadaImages.length; i++) {
+      standardImages.push({ id: `portada_alt_${i}`, label: `Portada ${i + 1}`, src: char.portadaImages[i] });
     }
   }
+
+  // Fallback if empty
+  if (standardImages.length === 0) {
+    const fallbackSrc = char.image || char.fullBody;
+    if (fallbackSrc) {
+      standardImages.push({ id: "default", label: "Normal", src: fallbackSrc });
+    }
+  }
+
+
 
   const [selectedImageId, setSelectedImageId] = useState<string>(() => {
     return standardImages.length > 0 ? standardImages[0].id : "default";
@@ -145,12 +114,25 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
   const [imgFullscreen, setImgFullscreen] = useState(false);
   const [unlockAll, setUnlockAll] = useState(false);
 
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const playSFX = (src: string) => {
+    try {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+      const audio = new Audio(src);
+      audio.volume = 0.25; // 25% volume to be comfortable
+      audioRef.current = audio;
+      audio.play().catch((err) => console.log("Audio play blocked/failed:", err));
+    } catch (e) {
+      console.error("Audio error:", e);
+    }
+  };
+
   // Decide current active images array based on mode
-  const currentImagesList = isPibe
-    ? isPowersMode
-      ? detallesImages
-      : standardImages
-    : standardImages;
+  const currentImagesList = standardImages;
 
   // Decide which image to show
   const currentImageObj = currentImagesList.find((img) => img.id === selectedImageId) || currentImagesList[0];
@@ -173,13 +155,26 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     return () => {
       document.body.style.overflow = "";
       window.removeEventListener("unlockAllChanged", checkUnlock);
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
     };
   }, []);
 
-  // Reset modal state when switching characters
+  // Reset modal state when switching characters and play opening sound
   useEffect(() => {
     setSelectedImageId(standardImages.length > 0 ? standardImages[0].id : "default");
     setIsPowersMode(false);
+
+    const snd = CHARACTER_SOUNDS[char.id]?.open;
+    if (snd) {
+      const t = setTimeout(() => {
+        playSFX(snd);
+      }, 100);
+      return () => {
+        clearTimeout(t);
+      };
+    }
   }, [char.id]);
 
   const isLocked = char.incognito && !unlockAll;
@@ -191,7 +186,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
   const handlePowersModeToggle = () => {
     if (!isPowersMode) {
       // Transitioning to Detalles Mode
-      const targetImages = detallesImages;
+      const targetImages = standardImages;
       const targetSrc = targetImages[0]?.src || char.image;
       setIsTransitioning(true);
 
@@ -207,6 +202,9 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
           setIsPowersMode(true);
           setSelectedImageId(targetImages[0]?.id || "default");
           setIsTransitioning(false);
+          
+          const snd = CHARACTER_SOUNDS[char.id]?.details;
+          if (snd) playSFX(snd);
         }, remaining);
       };
 
@@ -214,6 +212,9 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
         setIsPowersMode(true);
         setSelectedImageId(targetImages[0]?.id || "default");
         setIsTransitioning(false);
+
+        const snd = CHARACTER_SOUNDS[char.id]?.details;
+        if (snd) playSFX(snd);
       };
     } else {
       // Transitioning back to Standard Mode
@@ -222,6 +223,9 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
         setIsPowersMode(false);
         setSelectedImageId(standardImages.length > 0 ? standardImages[0].id : "default");
         setIsTransitioning(false);
+
+        const snd = CHARACTER_SOUNDS[char.id]?.open;
+        if (snd) playSFX(snd);
       }, 500);
     }
   };

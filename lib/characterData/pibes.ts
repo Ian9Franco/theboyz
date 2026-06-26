@@ -18,7 +18,7 @@ export const pibes: CharacterDetail[] = [
       'Lealtad incondicional hacia su equipo, respaldada por una disciplina táctica impecable y un consumo crónico de café filtrado para mantener el enfoque.'
     ],
     crisis: 'Hiperenfoque analítico: Ante giros drásticos e imprevistos en el entorno, su cerebro prioriza recalcular todas las variables en milisegundos, lo que puede retrasar su respuesta inmediata en pos de la jugada perfecta.',
-    stats: { fuerza: 4, inteligencia: 6, carisma: 6, suerte: 5, combate: 3, defensa: 3, especialVal: 1 },
+    stats: { fuerza: 4, inteligencia: 9, carisma: 6, suerte: 5, combate: 3, defensa: 3, especialVal: 1 },
     especialLabel: 'Sistemas',
     powers: {
       role: 'Vesperwing / Nexo Estratégico',
@@ -30,7 +30,7 @@ export const pibes: CharacterDetail[] = [
       ],
       significa: 'El pilar estratégico del equipo. Su genialidad radica en coordinar el escenario mediante hardware de vanguardia y una lectura milimétrica del campo de batalla.',
       crisis: 'Saturación por fricción: Cuando las variables del entorno desafían la lógica planificada, su bucle analítico se ve forzado a optimizar sobre la marcha, consumiendo recursos mentales críticos.',
-      stats: { fuerza: 7, inteligencia: 10, carisma: 8, suerte: 8, combate: 8, defensa: 7, especialVal: 10 },
+      stats: { fuerza: 7, inteligencia: 11, carisma: 8, suerte: 8, combate: 8, defensa: 7, especialVal: 10 },
       suitImages: {
         default: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/vesperwing.webp',
         alt: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/vesperwing_alt.webp',
@@ -135,7 +135,7 @@ export const pibes: CharacterDetail[] = [
       'Estilo distintivo: Polera negra de cuello alto, calzas y una cabellera degradada en tonos sunset-gold que refleja la energía calurosa de su aura.'
     ],
     crisis: 'Disociación del entorno: Ante picos intensos de tensión o dolor ajeno, su mente tiende a desconectarse de la realidad física, entrando en trances meditativos involuntarios para proteger su psique.',
-    stats: { fuerza: 1, inteligencia: 6, carisma: 5, suerte: 6, combate: 2, defensa: 2, especialVal: 2 },
+    stats: { fuerza: 1, inteligencia: 6, carisma: 5, suerte: 11, combate: 2, defensa: 2, especialVal: 5 },
     especialLabel: 'Aura-Anclaje',
     powers: {
       role: 'Oracle / Enlace Dimensional',
@@ -147,7 +147,7 @@ export const pibes: CharacterDetail[] = [
       ],
       significa: 'El núcleo espiritual y protector del equipo. Su presencia cohesiona las mentes de sus aliados y erige las defensas esenciales; sin ella, el grupo opera a ciegas, fracturado y expuesto.',
       crisis: 'Fluctuación del Velo: Bajo estrés extremo, su aura pierde estabilidad, provocando micro-grietas dimensionales involuntarias a su alrededor que alteran el espacio y representan un riesgo impredecible.',
-      stats: { fuerza: 5, inteligencia: 9, carisma: 9, suerte: 10, combate: 7, defensa: 10, especialVal: 10 },
+      stats: { fuerza: 5, inteligencia: 8, carisma: 5, suerte: 12, combate: 7, defensa: 10, especialVal: 10 },
       suitImages: {
         default: '/personajes/LosPibes/FULLBODY SUIT/ORACLE/Oracle.webp',
         ficha: '/personajes/LosPibes/FULLBODY SUIT/ORACLE/Oracle_Ficha.webp',
@@ -186,7 +186,7 @@ export const pibes: CharacterDetail[] = [
       'Ancla Psicológica: Ponerse el traje cósmico le sirve como señal mental de que "la situación se fue global/multiversal", forzando a su mente ansiosa a enfocarse.'
     ],
     crisis: 'Agotamiento por sobrecarga: Si se sobreesfuerza intentando cargar objetos grandes (como autos o columnas) o inyectando demasiada energía a sus clones, sufre migrañas incapacitantes y queda indefenso.',
-    stats: { fuerza: 3, inteligencia: 7, carisma: 8, suerte: 9, combate: 6, defensa: 4, especialVal: 0 },
+    stats: { fuerza: 3, inteligencia: 4, carisma: 11, suerte: 9, combate: 6, defensa: 4, especialVal: 0 },
     especialLabel: 'Energía Pura',
     hint: 'Terminá el Capítulo 1 de Green Truck para desbloquear.',
     powers: {
@@ -199,7 +199,7 @@ export const pibes: CharacterDetail[] = [
       ],
       significa: 'El maestro del engaño y la agilidad táctica. Emplea constructos y clones de energía pura degradable para sembrar el caos y castigar al oponente sin comprometer su seguridad.',
       crisis: 'Migraña por Sobrecarga: Intentar mantener clones estables por mucho tiempo o cargar masas pesadas le genera migrañas y lo deja expuesto. Además, sus armas de energía vibran y pueden estallar en sus manos si no las descarta a tiempo.',
-      stats: { fuerza: 7, inteligencia: 8, carisma: 9, suerte: 9, combate: 9, defensa: 7, especialVal: 9 },
+      stats: { fuerza: 9, inteligencia: 8, carisma: 8, suerte: 11, combate: 9, defensa: 7, especialVal: 9 },
       suitImages: {
         default: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
         ficha: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard_ficha.webp',
@@ -248,7 +248,7 @@ export const pibes: CharacterDetail[] = [
       'Resistencia y fuerza sobrehumana: Posee una fuerza física aumentada y una densidad dérmica que detiene las balas, hiriendo su piel pero sin perforar sus órganos vitales.'
     ],
     crisis: 'Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía violeta brota sin filtro ni calibración, expandiéndose instantáneamente a todo su campo de visión y provocando destrucción masiva de área con peligro de fuego aliado.',
-    stats: { fuerza: 5, inteligencia: 6, carisma: 6, suerte: 4, combate: 5, defensa: 4, especialVal: 0 },
+    stats: { fuerza: 7, inteligencia: 6, carisma: 6, suerte: 4, combate: 6, defensa: 7, especialVal: 0 },
     especialLabel: 'Intercambio',
     hint: 'Terminá el Capítulo 3 (Worlds) de Mativerse Part 1.',
     powers: {
@@ -261,7 +261,7 @@ export const pibes: CharacterDetail[] = [
       ],
       significa: 'Mati es el primero en mandar un meme al grupo en medio de una crisis, pero también el primero en ponerse al frente cuando hay que tomar una decisión de la que depende la vida de todos. Sabe que sus ojos son una ventana al colapso multiversal, y no se permite parpadear cuando importa.',
       crisis: 'Meltdown Multiversal: Al sobrecalentarse o entrar en crisis, el rayo violeta se tiñe de rojo incandescente como fuego. Activar su poder sin visor desata una destrucción masiva y descontrolada en todo su campo de visión.',
-      stats: { fuerza: 9, inteligencia: 10, carisma: 8, suerte: 7, combate: 10, defensa: 9, especialVal: 10 },
+      stats: { fuerza: 9, inteligencia: 8, carisma: 8, suerte: 7, combate: 10, defensa: 10, especialVal: 10 },
       suitImages: {
         default: '/personajes/LosPibes/FULLBODY SUIT/SWAPFIRE/Swapfire.webp',
         ficha: '/personajes/LosPibes/FULLBODY SUIT/SWAPFIRE/Swapfire_ficha.webp',
@@ -309,7 +309,7 @@ export const pibes: CharacterDetail[] = [
       'Estilo urbano deportivo: Remera técnica ajustada de Kappa, pantalón cargo gris y lentes redondos que suavizan sutilmente sus facciones de combate.'
     ],
     crisis: 'Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo vuelve inflexible; tiende a cargar de frente contra el peligro, confiando en su resistencia física antes de evaluar rutas de evasión.',
-    stats: { fuerza: 5, inteligencia: 3, carisma: 5, suerte: 3, combate: 3, defensa: 4, especialVal: 0 },
+    stats: { fuerza: 8, inteligencia: 3, carisma: 5, suerte: 3, combate: 8, defensa: 8, especialVal: 0 },
     especialLabel: 'Carga Cinética',
     hint: 'Terminá el Capítulo 4 (No Turning Back) de Green Truck.',
     powers: {
@@ -322,7 +322,7 @@ export const pibes: CharacterDetail[] = [
       ],
       significa: 'El escudo humano. Su rol es absorber el castigo que sus aliados no pueden soportar, asimilando la violencia del campo de batalla para devolverla multiplicada.',
       crisis: 'Saturación de almacenamiento: Sus tatuajes tienen un límite de retención. Si se saturan de energía cinética y no ejecuta una descarga a tiempo, la tinta se agrieta superficialmente, liberando pulsos térmicos incontrolables.',
-      stats: { fuerza: 10, inteligencia: 6, carisma: 8, suerte: 7, combate: 9, defensa: 10, especialVal: 10 },
+      stats: { fuerza: 30, inteligencia: 5, carisma: 2, suerte: 5, combate: 20, defensa: 15, especialVal: 10 },
       suitImages: {
         default: '/personajes/LosPibes/FULLBODY SUIT/AEGIS/Aegis.webp',
         ficha: '/personajes/LosPibes/FULLBODY SUIT/AEGIS/Aegis_Ficha.webp'
@@ -358,7 +358,7 @@ export const pibes: CharacterDetail[] = [
       'Vector Suit aerodinámico: Utiliza un traje molecular flexible diseñado por Ian que evita que la fricción dimensional desintegre su cuerpo o queme su ropa al correr.'
     ],
     crisis: 'Acecho del Eco Corrupto: Correr a máxima velocidad debilita las barreras dimensionales y atrae a Reverse Volvo, quien corre justo detrás de él en el fondo de sus portales, esperando a que se canse para ocupar su lugar.',
-    stats: { fuerza: 4, inteligencia: 5, carisma: 4, suerte: 4, combate: 4, defensa: 3, especialVal: 0 },
+    stats: { fuerza: 4, inteligencia: 7, carisma: 4, suerte: 2, combate: 5, defensa: 6, especialVal: 0 },
     especialLabel: 'Disrupción',
     hint: 'Terminá el Capítulo 3 (Worlds) de Mativerse Part 1.',
     powers: {
@@ -371,7 +371,7 @@ export const pibes: CharacterDetail[] = [
       ],
       significa: 'El desborde y la movilidad absoluta. Volvo domina la velocidad a escala cuántica, convirtiendo el espacio y la materia sólida en simples puertas que puede abrir corriendo.',
       crisis: 'Acecho de Reverse Volvo: El uso de su velocidad de escape abre la puerta a su eco corrupto de estática oscura, quien le pisa los talones en el fondo de sus propios portales naranjas.',
-      stats: { fuerza: 7, inteligencia: 8, carisma: 5, suerte: 9, combate: 8, defensa: 8, especialVal: 9 },
+      stats: { fuerza: 8, inteligencia: 8, carisma: 2, suerte: 5, combate: 8, defensa: 8, especialVal: 9 },
       suitImages: {
         default: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-vector.webp',
         ficha: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/NULL-VECTOR_ficha.webp',
@@ -408,7 +408,7 @@ export const pibes: CharacterDetail[] = [
       'Estilo urbano de bloques: Campera puffer con bloques geométricos rosa y borgoña, suéter crema, bufanda abrigada y un prolijo rodete de rulos oscuros.'
     ],
     crisis: 'Inflexibilidad de criterio: Al procesar certezas sensoriales que los demás ignoran, tiende a cerrarse en sus propias conclusiones tácticas, actuando de manera unilateral y agresiva para resolver la amenaza.',
-    stats: { fuerza: 4, inteligencia: 5, carisma: 6, suerte: 5, combate: 4, defensa: 3, especialVal: 1 },
+    stats: { fuerza: 9, inteligencia: 8, carisma: 8, suerte: 2, combate: 8, defensa: 7, especialVal: 8 },
     especialLabel: 'Eco-Rango',
     hint: 'Terminá el Capítulo 2 (Casino) de Mativerse Part 1.',
     powers: {
@@ -421,7 +421,7 @@ export const pibes: CharacterDetail[] = [
       ],
       significa: 'Ve el mundo con más claridad que cualquiera con los ojos abiertos. Nada se le oculta en la oscuridad.',
       crisis: 'Sobrecarga Sensorial: Ruidos repentinos de extrema decibelia (explosiones cercanas, alarmas estridentes) la desorientan e incapacitan de dolor físico severo.',
-      stats: { fuerza: 8, inteligencia: 8, carisma: 8, suerte: 8, combate: 9, defensa: 9, especialVal: 9 },
+      stats: { fuerza: 10, inteligencia: 9, carisma: 8, suerte: 10, combate: 10, defensa: 10, especialVal: 10 },
       suitImages: {
         default: '/personajes/LosPibes/FULLBODY SUIT/HUSH/Hush.webp',
         combat: '/personajes/LosPibes/FULLBODY SUIT/HUSH/Hush_combat.webp',

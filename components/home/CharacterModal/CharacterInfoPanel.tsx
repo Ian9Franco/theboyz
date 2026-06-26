@@ -5,6 +5,7 @@ import { Zap, ZapOff } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
 import { conceptArts } from "@/lib/characterData/conceptArts";
 import { ImageLightbox } from "./ImageLightbox";
+import { RadarChart } from "./RadarChart";
 
 interface CharacterInfoPanelProps {
   char: any;
@@ -296,25 +297,7 @@ export function CharacterInfoPanel({
             <h4 className="font-[var(--font-bangers)] text-xs tracking-wider">
               {isLocation ? "MÉTRICAS:" : isPowersMode ? "MÉTRICAS:" : "STATS:"}
             </h4>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
-              {statRows.map((s, i) => (
-                <div key={i} className="flex items-center gap-1.5">
-                  <span className="w-14 text-[9px] font-[var(--font-bangers)] uppercase tracking-wider truncate shrink-0">
-                    {s.name}
-                  </span>
-                  <div className="flex-1 h-2.5 bg-gray-200 border border-black overflow-hidden flex">
-                    {Array.from({ length: 10 }).map((_, idx) => (
-                      <div
-                        key={idx}
-                        className="h-full flex-1 border-r border-black last:border-0 transition-all duration-400"
-                        style={{ backgroundColor: idx < s.val ? (isPowersMode ? vibrantAccent : accent) : "transparent" }}
-                      />
-                    ))}
-                  </div>
-                  <span className="font-[var(--font-bangers)] text-[9px] w-6 text-right shrink-0">{s.val}</span>
-                </div>
-              ))}
-            </div>
+            <RadarChart stats={statRows} color={isPowersMode ? vibrantAccent : accent} isDark={isPowersMode} />
           </div>
 
           {/* ── Concept Arts section (for Pibes in both views) ── */}

@@ -8,8 +8,9 @@ import { deidades } from "./characterData/deidades";
 import { locaciones } from "./characterData/locaciones";
 import { UNLOCK_RULES } from "./characterData/unlockRules";
 import { CharacterDetail } from "./characterData/types";
+import { characterImages } from "./characterData/characterImages";
 
-export const CHARACTER_DETAILS: CharacterDetail[] = [
+const rawCharacters: CharacterDetail[] = [
   ...pibes,
   ...secundarios,
   ...voughtverse,
@@ -19,6 +20,20 @@ export const CHARACTER_DETAILS: CharacterDetail[] = [
   ...deidades,
   ...locaciones
 ];
+
+export const CHARACTER_DETAILS: CharacterDetail[] = rawCharacters.map((char) => {
+  const images = characterImages[char.id];
+  if (images) {
+    return {
+      ...char,
+      image: images.portada || "",
+      fullBody: images.portada || "",
+      portadaImages: images.portadas,
+      fichaImages: images.fichas
+    };
+  }
+  return char;
+});
 
 export function getComputedCharacters(readChapters: string[], isClient: boolean, unlockAll: boolean = false) {
   const normalizedRead = readChapters.map(id => id.toLowerCase().trim());
