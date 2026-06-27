@@ -96,32 +96,17 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     char.category === "pibes" ||
     ["ian", "jaz", "julian", "mati", "uandi", "volvo", "sofi"].includes(char.id);
 
-  // Closeup mapping (only for Pibes with _FACE closeups)
-  const closeUpMap: Record<string, string> = {
-    ian: "/personajes/LosPibes/CLOSEUP/IAN_FACE.webp",
-    jaz: "/personajes/LosPibes/CLOSEUP/JAZ_FACE.webp",
-    julian: "/personajes/LosPibes/CLOSEUP/JULIAN_FACE.webp",
-    mati: "/personajes/LosPibes/CLOSEUP/MATI_FACE.webp",
-    sofi: "/personajes/LosPibes/CLOSEUP/SOFI_FACE.webp",
-    uandi: "/personajes/LosPibes/CLOSEUP/UANDI_FACE.webp",
-    volvo: "/personajes/LosPibes/CLOSEUP/VOLVO_FACE.webp",
-  };
-
   // 1. Gather available images for Standard Mode
   const standardImages: { id: string; label: string; src: string }[] = [];
 
   // Main Portada
   if (char.portadaImages && char.portadaImages.length > 0) {
     standardImages.push({ id: "portada", label: getCleanImageLabel(char.portadaImages[0], "Portada"), src: char.portadaImages[0] });
-  } else if (char.image) {
-    standardImages.push({ id: "portada", label: "Portada", src: char.image });
   }
 
   // Main Ficha
   if (char.fichaImages && char.fichaImages.length > 0) {
     standardImages.push({ id: "ficha", label: getCleanImageLabel(char.fichaImages[0], "Ficha"), src: char.fichaImages[0] });
-  } else if (char.fichaImage) {
-    standardImages.push({ id: "ficha", label: "Ficha", src: char.fichaImage });
   }
 
   // Ficha Alts
@@ -131,24 +116,6 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
       standardImages.push({ id: `ficha_alt_${i}`, label: getCleanImageLabel(src, `Ficha Alt ${i}`), src });
     }
   }
-
-  // Portada Alts
-  if (char.portadaImages && char.portadaImages.length > 1) {
-    for (let i = 1; i < char.portadaImages.length; i++) {
-      const src = char.portadaImages[i];
-      standardImages.push({ id: `portada_alt_${i}`, label: getCleanImageLabel(src, `Portada ${i + 1}`), src });
-    }
-  }
-
-  // Fallback if empty
-  if (standardImages.length === 0) {
-    const fallbackSrc = char.image || char.fullBody;
-    if (fallbackSrc) {
-      standardImages.push({ id: "default", label: "Normal", src: fallbackSrc });
-    }
-  }
-
-
 
   const [selectedImageId, setSelectedImageId] = useState<string>(() => {
     return standardImages.length > 0 ? standardImages[0].id : "default";
@@ -180,10 +147,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
 
   // Decide which image to show
   const currentImageObj = currentImagesList.find((img) => img.id === selectedImageId) || currentImagesList[0];
-  const isArchorLocked = selectedImageId === "archor" && !unlockAll;
-  const currentImage = isArchorLocked
-    ? "/personajes/LosPibes/FULLBODY SUIT/VESPERWING/vesperwing.webp"
-    : currentImageObj?.src;
+  const currentImage = currentImageObj?.src;
 
   useEffect(() => {
     document.body.style.overflow = "hidden";

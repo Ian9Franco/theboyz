@@ -8,7 +8,6 @@ export const locaciones: CharacterDetail[] = [
     isSecondary: true,
     image: "/personajes/Locaciones/Dumbo Base/DUMBO_BASE.webp",
     fullBody: "/personajes/Locaciones/Dumbo Base/DUMBO_BASE.webp",
-    fichaImage: "/personajes/Locaciones/Dumbo Base/DUMBO_BASE_ficha.webp",
     color: "#0ea5e9",
     role: "Refugio Subterráneo / Cuartel General",
     visualCode: "Paredes de ladrillo visto, pantallas holográficas, sillón rojo viejo, cables expuestos",

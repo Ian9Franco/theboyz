@@ -1,17 +1,49 @@
-const fs = require('fs');
+/**
+ * generate-character-images.js
+ *
+ * Scans public/personajes/PORTADAS and public/personajes/Fichas to build
+ * a fresh characterImages.ts mapping. Run this script after adding or
+ * reorganising images so that the app reflects the real folder state.
+ *
+ * Usage:
+ *   node scripts/assets/generate-character-images.js
+ *
+ * The script is also called automatically at the end of organize-personajes.js.
+ */
+
+const fs   = require('fs');
 const path = require('path');
 
-const baseDir = path.join(__dirname, '..', '..', 'public', 'personajes');
-const portadasDir = path.join(baseDir, 'PORTADAS');
-const fichasDir = path.join(baseDir, 'FICHAS');
-const fullbodyDir = path.join(baseDir, 'FULLBODY');
-const closeupDir = path.join(baseDir, 'CLOSEUP');
-const locacionesDir = path.join(baseDir, 'Locaciones');
-const charDataDir = path.join(__dirname, '..', '..', 'lib', 'characterData');
-const OUTPUT_FILE = path.join(__dirname, '..', '..', 'lib', 'characterData', 'characterImages.ts');
+// ── Paths ──────────────────────────────────────────────────────────────────
+const projectRoot  = path.join(__dirname, '..', '..');
+const baseDir      = path.join(projectRoot, 'public', 'personajes');
+const portadasDir  = path.join(baseDir, 'PORTADAS');
+// Fichas folder has mixed-case name in the actual project structure
+const fichasDir    = fs.existsSync(path.join(baseDir, 'FICHAS'))
+  ? path.join(baseDir, 'FICHAS')
+  : path.join(baseDir, 'Fichas');
+const charDataDir  = path.join(projectRoot, 'lib', 'characterData');
+const outputFile   = path.join(charDataDir, 'characterImages.ts');
 
-// 1. Load all characters from JS/TS database files (including locaciones)
-const targetFiles = [
+const imageExtensions = new Set(['.webp', '.png', '.jpg', '.jpeg', '.gif']);
+
+/**
+ * SPOILER EXCLUSIONS
+ * Any image whose filename (without extension, lowercased) contains one of
+ * these substrings will be excluded from the generated mapping.
+ * Add entries here whenever an image exists on disk but must stay hidden.
+ *
+ * Format: 'characterId:substringToExclude'  →  applies only to that character.
+ *         ':substringToExclude'             →  applies to all characters.
+ */
+const SPOILER_EXCLUSIONS = [
+  // Ian – Vesper Archor suit images are plot spoilers
+  'ian:vesperarchor',
+  'ian:vesper archor',
+];
+
+// ── Load all character IDs and names from the TS data files ────────────────
+const dataFiles = [
   'pibes.ts',
   'secundarios.ts',
   'antagonistas.ts',
@@ -19,345 +51,368 @@ const targetFiles = [
   'entidades.ts',
   'matis.ts',
   'voughtverse.ts',
-  'locaciones.ts'
 ];
 
-const charactersList = [];
+/**
+ * Minimal parser: extracts { id, name } pairs from the TypeScript data files
+ * using simple regex. Does not depend on ts-node.
+ */
+function loadCharacters() {
+  const chars = [];
 
-targetFiles.forEach((filename) => {
-  const filePath = path.join(charDataDir, filename);
-  if (!fs.existsSync(filePath)) return;
+  for (const filename of dataFiles) {
+    const filePath = path.join(charDataDir, filename);
+    if (!fs.existsSync(filePath)) continue;
 
-  const content = fs.readFileSync(filePath, 'utf8');
-  const lines = content.split('\n');
-  let currentChar = null;
+    const lines = fs.readFileSync(filePath, 'utf8').split('\n');
+    let current = null;
 
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
-    const idMatch = /^id:\s*['"`]([^'"`]+)['"`]/i.exec(line) || /^\{\s*id:\s*['"`]([^'"`]+)['"`]/i.exec(line);
-    if (idMatch) {
-      if (currentChar && currentChar.name) {
-        if (!currentChar.category) currentChar.category = filename.replace('.ts', '');
-        charactersList.push(currentChar);
+    for (const raw of lines) {
+      const line = raw.trim();
+
+      const idMatch = /^id:\s*['"`]([^'"`]+)['"`]/i.exec(line)
+        || /^\{\s*id:\s*['"`]([^'"`]+)['"`]/i.exec(line);
+
+      if (idMatch) {
+        if (current?.name) chars.push(current);
+        current = { id: idMatch[1] };
+        continue;
       }
-      currentChar = { id: idMatch[1] };
-    } else if (currentChar) {
-      const nameMatch = /^name:\s*['"`]([^'"`]+)['"`]/i.exec(line);
-      if (nameMatch) currentChar.name = nameMatch[1];
-      const categoryMatch = /^category:\s*['"`]([^'"`]+)['"`]/i.exec(line);
-      if (categoryMatch) currentChar.category = categoryMatch[1];
+
+      if (current) {
+        const nameMatch = /^name:\s*['"`]([^'"`]+)['"`]/i.exec(line);
+        if (nameMatch) current.name = nameMatch[1];
+      }
+    }
+
+    if (current?.name) chars.push(current);
+  }
+
+  return chars;
+}
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+
+/**
+ * Returns true when a filename should be excluded for a given charId.
+ * Matches against SPOILER_EXCLUSIONS entries of the form 'charId:substring'
+ * or ':substring' (global).
+ */
+function isSpoiler(charId, filename) {
+  const lowerFile = filename.toLowerCase();
+  for (const rule of SPOILER_EXCLUSIONS) {
+    const colonIdx = rule.indexOf(':');
+    const ruleId  = rule.substring(0, colonIdx).toLowerCase();
+    const substr  = rule.substring(colonIdx + 1).toLowerCase();
+    // Apply rule when it targets this specific character OR is a global rule (empty id)
+    if ((ruleId === '' || ruleId === charId.toLowerCase()) && lowerFile.includes(substr)) {
+      return true;
     }
   }
-  if (currentChar && currentChar.name) {
-    if (!currentChar.category) currentChar.category = filename.replace('.ts', '');
-    charactersList.push(currentChar);
-  }
-});
+  return false;
+}
 
-const categoryFolders = {
-  pibes: 'boyz',
-  secundarios: 'Secundarios',
-  independientes: 'Secundarios',
-  taberna_resistencia: 'Secundarios',
-  antagonistas: 'antagonistas',
-  deidades: 'deidades',
-  entidades: 'entidades',
-  matis: 'matis',
-  voughtverse: 'voughtverse',
-  locaciones: 'Locaciones'
-};
+/** Collect all image files directly inside a directory (non-recursive). */
+function listImages(dir, charId = '') {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir)
+    .filter(f => {
+      if (!imageExtensions.has(path.extname(f).toLowerCase())) return false;
+      if (charId && isSpoiler(charId, path.basename(f, path.extname(f)))) {
+        console.log(`  🙈 Spoiler excluded [${charId}]: ${f}`);
+        return false;
+      }
+      return true;
+    })
+    .sort(); // stable sort so first element is alphabetically first
+}
 
-// Hero aliases as they appear in PORTADAS/ filenames — used for sort priority
+/**
+ * Convert a filesystem path to the public URL used in Next.js.
+ * e.g. "D:\…\public\personajes\PORTADAS\Ian\foo.webp"  →  "/personajes/PORTADAS/Ian/foo.webp"
+ */
+function toPublicUrl(absPath) {
+  const publicDir = path.join(projectRoot, 'public');
+  return '/' + path.relative(publicDir, absPath).split(path.sep).join('/');
+}
+
+// ── Build the mapping ──────────────────────────────────────────────────────
+
+/**
+ * Map from character.name (lowercased, no special chars) → character id.
+ * We also build aliases from pibeAliases and common hero names.
+ */
 const pibeAliases = {
-  ian: 'VESPERWING',
-  uandi: 'AEGIS',
-  julian: 'WILDCARD',
-  volvo: 'NULL-VECTOR',
-  mati: 'SWAPFIRE',
-  jaz: 'ORACLE',
-  sofi: 'HUSH'
-};
-
-// Actual subfolder names inside Fichas/boyz/ — may differ from portada aliases
-const fichaFolderAliases = {
   ian: 'VESPERWING',
   uandi: 'AEGIS',
   julian: 'WILDCARD',
   volvo: 'VECTOR',
   mati: 'SWAPFIRE',
   jaz: 'ORACLE',
-  sofi: 'HUSH'
+  sofi: 'HUSH',
 };
 
-const IMAGE_EXTENSIONS = ['.webp', '.png', '.jpg', '.jpeg', '.gif'];
+const reverseAliases = {};
+for (const [id, alias] of Object.entries(pibeAliases)) {
+  reverseAliases[alias.toLowerCase()] = id;
+}
 
-const characterExclusions = {
-  ian: ['archor', 'spoiler', '_mk', 'vesperwing_mk', 'cosmic'],
-  mati: ['sinmati', 'portada_sin', 'mati.webp', 'mati.png', 'mati.jpg']
+// Additional name→id aliases coming from hero names in folder names
+const extraAliases = {
+  vesperwing: 'ian',
+  aegis: 'uandi',
+  wildcard: 'julian',
+  nullvector: 'volvo',
+  'null-vector': 'volvo',
+  vector: 'volvo',
+  swapfire: 'mati',
+  oracle: 'jaz',
+  hush: 'sofi',
+  lucy: 'lucifer',
+  tusk: 'ymir',
+  nightstalker: 'balanar',
+  bristleback: 'bristleback',
+  crystalmaiden: 'rylai',
+  rylai: 'rylai',
+  matapobres: 'matapobre',
+  supercamionero: 'supertrucker',
+  'supercamionero.': 'supertrucker',
 };
 
-function shouldExcludeFile(id, file) {
-  const lowerFile = file.toLowerCase();
-  
-  // Always exclude archor globally
-  if (lowerFile.includes('archor')) return true;
+function normalize(s) {
+  return s.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
 
-  const excludePatterns = characterExclusions[id.toLowerCase()] || [];
-  return excludePatterns.some(pattern => {
-    if (pattern.includes('.')) {
-      return path.basename(lowerFile) === pattern.toLowerCase();
-    }
-    return lowerFile.includes(pattern.toLowerCase());
+/**
+ * Given a folder name from PORTADAS/, try to resolve it to a character id.
+ * Returns null if unresolvable.
+ */
+function folderToCharId(folderName, characters) {
+  const normFolder = normalize(folderName);
+
+  // 1. Check extra aliases first
+  if (extraAliases[normFolder]) return extraAliases[normFolder];
+
+  // 2. Check reverse pibeAliases
+  if (reverseAliases[normFolder]) return reverseAliases[normFolder];
+
+  // 3. Try direct match against character id
+  for (const c of characters) {
+    if (normalize(c.id) === normFolder) return c.id;
+  }
+
+  // 4. Try direct match against character name
+  for (const c of characters) {
+    if (normalize(c.name) === normFolder) return c.id;
+  }
+
+  // 5. Substring match (e.g. "Mati Gladiador" → id "gladiador")
+  for (const c of characters) {
+    const normId   = normalize(c.id);
+    const normName = normalize(c.name);
+    if (normFolder.includes(normId) || normId.includes(normFolder)) return c.id;
+    if (normFolder.includes(normName) || normName.includes(normFolder)) return c.id;
+  }
+
+  return null;
+}
+
+/**
+ * Scan PORTADAS/ and return a map: charId → string[] of public URLs (sorted).
+ */
+function scanPortadas(characters) {
+  const result = {};
+
+  if (!fs.existsSync(portadasDir)) {
+    console.warn('⚠️  PORTADAS directory not found:', portadasDir);
+    return result;
+  }
+
+  const folders = fs.readdirSync(portadasDir).filter(f => {
+    return fs.statSync(path.join(portadasDir, f)).isDirectory();
   });
-}
 
-function getFilesRecursively(dir, filesList = []) {
-  if (!fs.existsSync(dir)) return filesList;
-  const items = fs.readdirSync(dir);
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      getFilesRecursively(fullPath, filesList);
+  for (const folder of folders) {
+    const charId = folderToCharId(folder, characters);
+    if (!charId) {
+      console.warn(`  ⚠️  Could not map PORTADAS folder to character: "${folder}"`);
+      continue;
+    }
+
+    const folderPath = path.join(portadasDir, folder);
+    const images = listImages(folderPath, charId).map(f => toPublicUrl(path.join(folderPath, f)));
+
+    // Keep the highest-priority (first alphabetically) image as main portada
+    if (!result[charId]) {
+      result[charId] = images;
     } else {
-      filesList.push(fullPath);
+      // If the same charId maps to multiple folders (shouldn't happen), merge
+      result[charId] = [...result[charId], ...images];
     }
   }
-  return filesList;
+
+  return result;
 }
 
-// Helper to find the actual case-sensitive path on the disk for a list of path segments
-function findActualPath(base, segments) {
-  let current = base;
-  for (const segment of segments) {
-    if (!fs.existsSync(current)) return null;
-    const items = fs.readdirSync(current);
-    const match = items.find(item => item.toLowerCase() === segment.toLowerCase());
-    if (!match) return null;
-    current = path.join(current, match);
+/**
+ * Scan Fichas/ (recursively) and return a map: charId → string[] of public URLs.
+ * Fichas are nested: Fichas/<category>/<charFolder>/<files>
+ */
+function scanFichas(characters) {
+  const result = {};
+
+  if (!fs.existsSync(fichasDir)) {
+    console.warn('⚠️  Fichas directory not found:', fichasDir);
+    return result;
   }
-  return current;
-}
 
-// Convert absolute file path to a web URL path
-function toWebPath(absolutePath) {
-  const rel = path.relative(path.join(__dirname, '..', '..', 'public'), absolutePath);
-  return '/' + rel.replace(/\\/g, '/');
-}
+  function walkFichas(dir) {
+    if (!fs.existsSync(dir)) return;
+    for (const item of fs.readdirSync(dir)) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        walkFichas(fullPath);
+      } else if (imageExtensions.has(path.extname(item).toLowerCase())) {
+        // Try to identify character from directory path
+        const rel   = path.relative(fichasDir, fullPath);
+        const parts = rel.split(path.sep);
+        // parts: [category, charFolder, file] or [charFolder, file]
+        let charId  = null;
 
-const mapping = {};
+        // Try each directory segment (skip last which is file)
+        for (let i = parts.length - 2; i >= 0; i--) {
+          const candidate = folderToCharId(parts[i], characters);
+          if (candidate) {
+            charId = candidate;
+            break;
+          }
+        }
 
-charactersList.forEach((char) => {
-  const id = char.id;
-  const category = char.category.toLowerCase();
-  
-  const charImages = {
-    portada: null,
-    portadas: [],
-    ficha: null,
-    fichas: [],
-    bodies: [],
-    closeups: []
-  };
+        if (!charId) {
+          // Fallback: try the filename without extension
+          const basename = path.basename(item, path.extname(item));
+          charId = folderToCharId(basename, characters);
+        }
 
-  if (category === 'locaciones' || char.category === 'locaciones') {
-    // Locaciones: they have cover and ficha in the same directory under Locaciones/<CharName>/
-    const locCharDir = findActualPath(baseDir, ['Locaciones', char.name]);
-    if (locCharDir && fs.existsSync(locCharDir)) {
-      const files = getFilesRecursively(locCharDir);
-      files.forEach((file) => {
-        const ext = path.extname(file).toLowerCase();
-        if (!IMAGE_EXTENSIONS.includes(ext)) return;
-        
-        const webPath = toWebPath(file);
-        const lowerName = path.basename(file).toLowerCase();
-        
-        if (lowerName.includes('ficha')) {
-          charImages.fichas.push(webPath);
+        if (charId) {
+          const filename = path.basename(item, path.extname(item));
+          if (isSpoiler(charId, filename)) {
+            console.log(`  🙈 Spoiler excluded Ficha [${charId}]: ${item}`);
+            continue;
+          }
+          const url = toPublicUrl(fullPath);
+          if (!result[charId]) result[charId] = [];
+          result[charId].push(url);
         } else {
-          charImages.portadas.push(webPath);
+          console.warn(`  ⚠️  Could not map Ficha to character: ${rel}`);
         }
-      });
-      // Sort and assign primary
-      if (charImages.portadas.length > 0) charImages.portada = charImages.portadas[0];
-      if (charImages.fichas.length > 0) charImages.ficha = charImages.fichas[0];
-    }
-  } else {
-    // Standard characters
-    const catFolderName = categoryFolders[category] || categoryFolders[category + 's'] || category;
-    
-    let charFolderName;
-    if (category === 'pibes' || char.category === 'pibes') {
-      charFolderName = fichaFolderAliases[id.toLowerCase()] || char.name.toUpperCase();
-    } else {
-      charFolderName = char.name.replace(/[\\/:*?"<>|]/g, '').replace(/\.+$/, '');
-    }
-
-    // 1. Portadas
-    const charPortadasDir = findActualPath(baseDir, ['PORTADAS', char.name.replace(/[\\/:*?"<>|]/g, '').replace(/\.+$/, '')]);
-    if (charPortadasDir && fs.existsSync(charPortadasDir)) {
-      const files = getFilesRecursively(charPortadasDir);
-      files.forEach((file) => {
-        if (shouldExcludeFile(id, file)) return;
-        const ext = path.extname(file).toLowerCase();
-        if (IMAGE_EXTENSIONS.includes(ext)) {
-          charImages.portadas.push(toWebPath(file));
-        }
-      });
-      // Try to prioritize the cleaner filename if there are multiple portadas
-      charImages.portadas.sort((a, b) => {
-        const nameA = path.basename(a).toLowerCase();
-        const nameB = path.basename(b).toLowerCase();
-        
-        const extA = path.extname(a).toLowerCase();
-        const extB = path.extname(b).toLowerCase();
-        const cleanNameA = nameA.replace(extA, '');
-        const cleanNameB = nameB.replace(extB, '');
-
-        // Suffix modifiers that demote an image from being the primary portada
-        const MODIFIERS = ['_alt', '_mk', 'spoiler', 'cosmic', 'variant', 'portada_sin', 'variantes'];
-        const hasModifierA = MODIFIERS.some(m => cleanNameA.includes(m));
-        const hasModifierB = MODIFIERS.some(m => cleanNameB.includes(m));
-
-        // For pibes: hero alias ranks FIRST (e.g. vesperwing > ian > ian_alt)
-        // For others: char name/id ranks first
-        const mainAlias = (pibeAliases[id.toLowerCase()] || '').toLowerCase();
-        const isPibe = !!mainAlias;
-
-        const isAliasA = cleanNameA === mainAlias;
-        const isAliasB = cleanNameB === mainAlias;
-        const isNameA  = cleanNameA === id.toLowerCase() || cleanNameA === char.name.toLowerCase();
-        const isNameB  = cleanNameB === id.toLowerCase() || cleanNameB === char.name.toLowerCase();
-
-        // Rank 0: exact hero alias match (Vesperwing, Oracle, etc.)
-        if (isPibe) {
-          if (isAliasA && !isAliasB) return -1;
-          if (!isAliasA && isAliasB) return 1;
-        }
-
-        // Rank 1: exact name/id match WITHOUT modifier
-        const isCleanMainA = (isAliasA || isNameA) && !hasModifierA;
-        const isCleanMainB = (isAliasB || isNameB) && !hasModifierB;
-        if (isCleanMainA && !isCleanMainB) return -1;
-        if (!isCleanMainA && isCleanMainB) return 1;
-
-        // Rank 2: any match (id or name, possibly with modifier)
-        const isMainA = isAliasA || isNameA;
-        const isMainB = isAliasB || isNameB;
-        if (isMainA && !isMainB) return -1;
-        if (!isMainA && isMainB) return 1;
-
-        // Rank 3: depth (fewer path segments = closer to root folder)
-        const depthA = a.split('/').length;
-        const depthB = b.split('/').length;
-        if (depthA !== depthB) return depthA - depthB;
-
-        // Rank 4: modifier check (demote tagged images)
-        if (hasModifierA && !hasModifierB) return 1;
-        if (!hasModifierA && hasModifierB) return -1;
-
-        // Rank 5: alphabetical
-        return nameA.localeCompare(nameB);
-      });
-      if (charImages.portadas.length > 0) charImages.portada = charImages.portadas[0];
-    }
-
-    // 2. Fichas
-    const charFichasDir = findActualPath(baseDir, ['Fichas', catFolderName, charFolderName]);
-    if (charFichasDir && fs.existsSync(charFichasDir)) {
-      const files = getFilesRecursively(charFichasDir);
-      files.forEach((file) => {
-        if (shouldExcludeFile(id, file)) return;
-        const ext = path.extname(file).toLowerCase();
-        if (IMAGE_EXTENSIONS.includes(ext)) {
-          charImages.fichas.push(toWebPath(file));
-        }
-      });
-      // Sort so that the main ficha (contains only "ficha" or cleaner name) comes first
-      charImages.fichas.sort((a, b) => {
-        const extA = path.extname(a).toLowerCase();
-        const extB = path.extname(b).toLowerCase();
-        const nameA = path.basename(a, extA).toLowerCase();
-        const nameB = path.basename(b, extB).toLowerCase();
-
-        // Ranks: lower is better (comes first)
-        const getRank = (name) => {
-          const cleanName = (pibeAliases[id.toLowerCase()] || char.name || '').toLowerCase();
-          const cleanId = id.toLowerCase();
-          
-          if (name === `${cleanId}_ficha` || name === `${cleanName}_ficha` || name === 'ficha') {
-            return 0;
-          }
-          
-          // Contains ficha but no modifier/tags/numbers
-          if (name.includes('ficha') && !name.includes('alt') && !name.includes('spoiler') && !name.includes('concept') && !name.includes('cosmic') && !name.includes('vought') && !name.includes('variant') && !/\d/.test(name)) {
-            return 1;
-          }
-          
-          // Other ficha files with modifiers
-          if (name.includes('ficha')) {
-            return 2;
-          }
-          
-          // Any other image (like MK, etc.)
-          return 3;
-        };
-
-        const rankA = getRank(nameA);
-        const rankB = getRank(nameB);
-
-        if (rankA !== rankB) {
-          return rankA - rankB;
-        }
-
-        return nameA.localeCompare(nameB);
-      });
-      if (charImages.fichas.length > 0) charImages.ficha = charImages.fichas[0];
-    }
-
-    // 3. Fullbodies
-    const charFullbodiesDir = findActualPath(baseDir, ['FULLBODY', catFolderName, charFolderName]);
-    if (charFullbodiesDir && fs.existsSync(charFullbodiesDir)) {
-      const files = getFilesRecursively(charFullbodiesDir);
-      files.forEach((file) => {
-        if (shouldExcludeFile(id, file)) return;
-        const ext = path.extname(file).toLowerCase();
-        if (IMAGE_EXTENSIONS.includes(ext)) {
-          charImages.bodies.push(toWebPath(file));
-        }
-      });
-    }
-
-    // 4. Closeups
-    const charCloseupsDir = findActualPath(baseDir, ['CLOSEUP', catFolderName, charFolderName]);
-    if (charCloseupsDir && fs.existsSync(charCloseupsDir)) {
-      const files = getFilesRecursively(charCloseupsDir);
-      files.forEach((file) => {
-        if (shouldExcludeFile(id, file)) return;
-        const ext = path.extname(file).toLowerCase();
-        if (IMAGE_EXTENSIONS.includes(ext)) {
-          charImages.closeups.push(toWebPath(file));
-        }
-      });
+      }
     }
   }
 
-  mapping[id] = charImages;
-});
+  walkFichas(fichasDir);
 
-const content = `// This file is auto-generated by scripts/generate-character-images.js. Do not edit manually.
+  // Sort each character's fichas for stable output
+  for (const id of Object.keys(result)) {
+    result[id].sort();
+  }
 
-export interface CharacterImages {
-  portada: string | null;
-  portadas: string[];
-  ficha: string | null;
-  fichas: string[];
-  bodies: string[];
-  closeups: string[];
+  return result;
 }
 
-export const characterImages: Record<string, CharacterImages> = ${JSON.stringify(mapping, null, 2)};
-`;
+// ── Main ───────────────────────────────────────────────────────────────────
 
-fs.writeFileSync(OUTPUT_FILE, content, 'utf-8');
-console.log(`Generated ${OUTPUT_FILE} successfully!`);
+function main() {
+  console.log('🔍 Loading characters from data files...');
+  const characters = loadCharacters();
+  console.log(`   Found ${characters.length} characters.`);
+
+  console.log('\n📁 Scanning PORTADAS...');
+  const portadasMap = scanPortadas(characters);
+  const portadasCount = Object.values(portadasMap).reduce((a, v) => a + v.length, 0);
+  console.log(`   Mapped ${Object.keys(portadasMap).length} characters, ${portadasCount} portadas.`);
+
+  console.log('\n📁 Scanning Fichas...');
+  const fichasMap = scanFichas(characters);
+  const fichasCount = Object.values(fichasMap).reduce((a, v) => a + v.length, 0);
+  console.log(`   Mapped ${Object.keys(fichasMap).length} characters, ${fichasCount} fichas.`);
+
+  // Build the final record: every known character gets an entry (even if empty)
+  const allIds = new Set([
+    ...characters.map(c => c.id),
+    ...Object.keys(portadasMap),
+    ...Object.keys(fichasMap),
+  ]);
+
+  const entries = {};
+  for (const id of allIds) {
+    const portadas = portadasMap[id] || [];
+    const fichas   = fichasMap[id]   || [];
+
+    // Prioritize vesperwing.webp as the default portada for ian
+    if (id === 'ian') {
+      portadas.sort((a, b) => {
+        const aIsVw = a.toLowerCase().endsWith('/vesperwing.webp');
+        const bIsVw = b.toLowerCase().endsWith('/vesperwing.webp');
+        if (aIsVw && !bIsVw) return -1;
+        if (!aIsVw && bIsVw) return 1;
+        return a.localeCompare(b);
+      });
+    }
+
+    entries[id] = {
+      portada:  portadas[0] || null,
+      portadas,
+      ficha:    fichas[0]   || null,
+      fichas,
+    };
+  }
+
+  // ── Serialise to TypeScript ──────────────────────────────────────────────
+  const lines = [
+    '// This file is auto-generated by scripts/assets/generate-character-images.js. Do not edit manually.',
+    '',
+    'export interface CharacterImages {',
+    '  portada: string | null;',
+    '  portadas: string[];',
+    '  ficha: string | null;',
+    '  fichas: string[];',
+    '}',
+    '',
+    'export const characterImages: Record<string, CharacterImages> = {',
+  ];
+
+  for (const [id, data] of Object.entries(entries).sort(([a], [b]) => a.localeCompare(b))) {
+    lines.push(`  "${id}": {`);
+    lines.push(`    "portada": ${data.portada ? `"${data.portada}"` : 'null'},`);
+    lines.push(`    "portadas": [`);
+    for (const url of data.portadas) {
+      lines.push(`      "${url}",`);
+    }
+    lines.push(`    ],`);
+    lines.push(`    "ficha": ${data.ficha ? `"${data.ficha}"` : 'null'},`);
+    lines.push(`    "fichas": [`);
+    for (const url of data.fichas) {
+      lines.push(`      "${url}",`);
+    }
+    lines.push(`    ]`);
+    lines.push(`  },`);
+  }
+
+  lines.push('};');
+  lines.push('');
+
+  const output = lines.join('\n');
+  fs.writeFileSync(outputFile, output, 'utf8');
+
+  console.log(`\n✅ Generated: lib/characterData/characterImages.ts`);
+  console.log(`   ${Object.keys(entries).length} characters total.`);
+
+  const withPortada = Object.values(entries).filter(e => e.portadas.length > 0).length;
+  const withoutPortada = Object.values(entries).filter(e => e.portadas.length === 0).length;
+  console.log(`   ✔  With portada:    ${withPortada}`);
+  console.log(`   ✖  Without portada: ${withoutPortada} (will be hidden in roster)`);
+}
+
+main();

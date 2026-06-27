@@ -11,6 +11,7 @@
     "compress:preview": "node scripts/assets/convert-to-webp.js --dry-run",
     "compress:audio": "node scripts/assets/compress-audio.js",
     "sync-assets": "node scripts/deploy/sync-placeholders.js",
+    "generate:images": "node scripts/assets/generate-character-images.js",
     "generate:concepts": "node scripts/assets/generate-concept-arts.js",
     "dev:all": "node scripts/deploy/dev-all.js",
     "publish:all": "node scripts/deploy/publish-all.js"

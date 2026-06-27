@@ -5,10 +5,8 @@ export const pibes: CharacterDetail[] = [
     id: 'ian',
     name: 'Ian',
     category: 'pibes',
-    image: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/vesperwing.webp',
-    fullBody: '/personajes/LosPibes/FULLBODY/IAN.webp',
-    altImage: '/personajes/LosPibes/ALT/IAN_ALT.webp',
-    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/vesperwing.webp',
+    image: '/personajes/PORTADAS/Ian/vesperwing.webp',
+    fullBody: '/personajes/PORTADAS/Ian/vesperwing.webp',
     color: '#0d3a2b',
     role: 'Analista táctico / inventor estratégico',
     visualCode: 'Buzo hoodie gris, lentes redondos',
@@ -31,17 +29,6 @@ export const pibes: CharacterDetail[] = [
       significa: 'El pilar estratégico del equipo. Su genialidad radica en coordinar el escenario mediante hardware de vanguardia y una lectura milimétrica del campo de batalla.',
       crisis: 'Saturación por fricción: Cuando las variables del entorno desafían la lógica planificada, su bucle analítico se ve forzado a optimizar sobre la marcha, consumiendo recursos mentales críticos.',
       stats: { fuerza: 7, inteligencia: 11, carisma: 8, suerte: 8, combate: 8, defensa: 7, especialVal: 10 },
-      suitImages: {
-        default: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/vesperwing.webp',
-        alt: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/vesperwing_alt.webp',
-        ficha: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/Vesperwing_Ficha.webp',
-        ficha2: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/Vesperwing_ficha2.webp',
-        ficha3: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/Vesperwing_ficha3.webp',
-        combat: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/Vesperwing_combat.webp',
-        mk3: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/MK3/MARK-3.webp',
-        mk3_alt: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/MK3/MARK-3_ALT.webp',
-        mkl: '/personajes/LosPibes/FULLBODY SUIT/VESPERWING/MKL/MARK-L.webp'
-      },
       variantData: {
         alt: {
           label: 'Modo Infiltración',
@@ -112,9 +99,8 @@ export const pibes: CharacterDetail[] = [
     id: 'jaz',
     name: 'Jaz',
     category: 'pibes',
-    image: '/personajes/LosPibes/FULLBODY SUIT/ORACLE/Oracle.webp',
-    fullBody: '/personajes/LosPibes/FULLBODY/JAZ.webp',
-    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/ORACLE/Oracle.webp',
+    image: '/personajes/PORTADAS/Jaz/Oracle.webp',
+    fullBody: '/personajes/PORTADAS/Jaz/Oracle.webp',
     color: '#f5e642',
     role: 'Soporte defensivo / control de campo / enlace dimensional',
     visualCode: 'Polera negra, pelo sunset-gold, lentes de gato',
@@ -134,14 +120,9 @@ export const pibes: CharacterDetail[] = [
         'Vínculo Astral Cohesivo: Entrelaza las conciencias de su equipo en una red mental unificada, compartiendo intenciones, alertas y coordenadas en tiempo real.',
         'Ascensión Etea: Capacidad de vuelo natural y fluido mediante la alteración de su propia gravedad astral, desplazándose con una ligereza supersónica casi sin esfuerzo.'
       ],
-      significa: 'El núcleo espiritual y protector del equipo. Su presencia cohesiona las mentes de sus aliados y erige las defensas esenciales; sin ella, el grupo opera a ciegas, fracturado y expuesto.',
+      significa: 'El nexo espiritual y protector del equipo. Su presencia cohesiona las mentes de sus aliados y erige las defensas esenciales; sin ella, el grupo opera a ciegas, fracturado y expuesto.',
       crisis: 'Fluctuación del Velo: Bajo estrés extremo, su aura pierde estabilidad, provocando micro-grietas dimensionales involuntarias a su alrededor que alteran el espacio y representan un riesgo impredecible.',
       stats: { fuerza: 5, inteligencia: 8, carisma: 5, suerte: 12, combate: 7, defensa: 10, especialVal: 10 },
-      suitImages: {
-        default: '/personajes/LosPibes/FULLBODY SUIT/ORACLE/Oracle.webp',
-        ficha: '/personajes/LosPibes/FULLBODY SUIT/ORACLE/Oracle_Ficha.webp',
-        fichaAlt: '/personajes/LosPibes/FULLBODY SUIT/ORACLE/Oracle_ficha_alt.webp'
-      },
       variantData: {
         full: {
           label: 'Modo Ruptura (Trascendencia Absoluta)',
@@ -161,10 +142,8 @@ export const pibes: CharacterDetail[] = [
     id: 'julian',
     name: 'Julián',
     category: 'pibes',
-    image: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
-    fullBody: '/personajes/LosPibes/FULLBODY/JULIAN.webp',
-    altImage: '/personajes/LosPibes/ALT/JULIAN_ALT.webp',
-    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
+    image: '/personajes/PORTADAS/Julián/Wildcard.webp',
+    fullBody: '/personajes/PORTADAS/Julián/Wildcard.webp',
     color: '#0a1128',
     role: 'Hostigador ágil / Distracción táctica / Daño por fricción energética',
     visualCode: 'Suéter azul marino, barba, pelo corto con fade',
@@ -189,11 +168,6 @@ export const pibes: CharacterDetail[] = [
       significa: 'El maestro del engaño y la agilidad táctica. Emplea constructos y clones de energía pura degradable para sembrar el caos y castigar al oponente sin comprometer su seguridad.',
       crisis: 'Migraña por Sobrecarga: Intentar mantener clones estables por mucho tiempo o cargar masas pesadas le genera migrañas y lo deja expuesto. Además, sus armas de energía vibran y pueden estallar en sus manos si no las descarta a tiempo.',
       stats: { fuerza: 9, inteligencia: 8, carisma: 8, suerte: 11, combate: 9, defensa: 7, especialVal: 9 },
-      suitImages: {
-        default: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard.webp',
-        ficha: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard_ficha.webp',
-        combat: '/personajes/LosPibes/FULLBODY SUIT/WILDCARD/Wildcard_combat.webp'
-      },
       variantData: {
         action: {
           label: 'Modo Acción (Traje Cósmico)',
@@ -223,9 +197,8 @@ export const pibes: CharacterDetail[] = [
     id: 'mati',
     name: 'Mati',
     category: 'pibes',
-    image: '/personajes/LosPibes/FULLBODY SUIT/SWAPFIRE/Swapfire.webp',
-    fullBody: '/personajes/LosPibes/FULLBODY/MATI.webp',
-    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/SWAPFIRE/Swapfire.webp',
+    image: '/personajes/PORTADAS/Mati/Swapfire.webp',
+    fullBody: '/personajes/PORTADAS/Mati/Swapfire.webp',
     color: '#4c1d95',
     role: 'Controlador táctico / reposicionamiento y ofensiva de fricción',
     visualCode: 'Piel bronceada, campera táctica, hoyuelos',
@@ -251,11 +224,6 @@ export const pibes: CharacterDetail[] = [
       significa: 'Mati es el primero en mandar un meme al grupo en medio de una crisis, pero también el primero en ponerse al frente cuando hay que tomar una decisión de la que depende la vida de todos. Sabe que sus ojos son una ventana al colapso multiversal, y no se permite parpadear cuando importa.',
       crisis: 'Meltdown Multiversal: Al sobrecalentarse o entrar en crisis, el rayo violeta se tiñe de rojo incandescente como fuego. Activar su poder sin visor desata una destrucción masiva y descontrolada en todo su campo de visión.',
       stats: { fuerza: 9, inteligencia: 8, carisma: 8, suerte: 7, combate: 10, defensa: 10, especialVal: 10 },
-      suitImages: {
-        default: '/personajes/LosPibes/FULLBODY SUIT/SWAPFIRE/Swapfire.webp',
-        ficha: '/personajes/LosPibes/FULLBODY SUIT/SWAPFIRE/Swapfire_ficha.webp',
-        combat: '/personajes/LosPibes/FULLBODY SUIT/SWAPFIRE/Swapfire_combat.webp'
-      },
       variantData: {
         action: {
           label: 'Modo Acción (Traje de Combate)',
@@ -285,10 +253,8 @@ export const pibes: CharacterDetail[] = [
     id: 'uandi',
     name: 'Uandi',
     category: 'pibes',
-    image: '/personajes/LosPibes/FULLBODY SUIT/AEGIS/Aegis.webp',
-    fullBody: '/personajes/LosPibes/FULLBODY/UANDI.webp',
-    altImage: '/personajes/LosPibes/ALT/UANDI_ALT.webp',
-    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/AEGIS/Aegis.webp',
+    image: '/personajes/PORTADAS/Uandi/Aegis.webp',
+    fullBody: '/personajes/PORTADAS/Uandi/Aegis.webp',
     color: '#b91c1c',
     role: 'Tanque y protector',
     visualCode: 'Remera técnica Kappa, lentes redondos, tatuajes manga en ambos brazos',
@@ -312,10 +278,6 @@ export const pibes: CharacterDetail[] = [
       significa: 'El escudo humano. Su rol es absorber el castigo que sus aliados no pueden soportar, asimilando la violencia del campo de batalla para devolverla multiplicada.',
       crisis: 'Saturación de almacenamiento: Sus tatuajes tienen un límite de retención. Si se saturan de energía cinética y no ejecuta una descarga a tiempo, la tinta se agrieta superficialmente, liberando pulsos térmicos incontrolables.',
       stats: { fuerza: 30, inteligencia: 5, carisma: 2, suerte: 5, combate: 20, defensa: 15, especialVal: 10 },
-      suitImages: {
-        default: '/personajes/LosPibes/FULLBODY SUIT/AEGIS/Aegis.webp',
-        ficha: '/personajes/LosPibes/FULLBODY SUIT/AEGIS/Aegis_Ficha.webp'
-      },
       variantData: {
         full: {
           label: 'Modo Sobrecarga Cinética',
@@ -335,9 +297,8 @@ export const pibes: CharacterDetail[] = [
     id: 'volvo',
     name: 'Volvo',
     category: 'pibes',
-    image: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-vector.webp',
-    fullBody: '/personajes/LosPibes/FULLBODY/VOLVO.webp',
-    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-vector.webp',
+    image: '/personajes/PORTADAS/Volvo/Null-vector.webp',
+    fullBody: '/personajes/PORTADAS/Volvo/Null-vector.webp',
     color: '#f95700',
     role: 'Vanguardia / Infiltración y Desborde / Movilidad Absoluta',
     visualCode: 'Remera naranja, ojos celestes, cinturón táctico',
@@ -361,11 +322,6 @@ export const pibes: CharacterDetail[] = [
       significa: 'El desborde y la movilidad absoluta. Volvo domina la velocidad a escala cuántica, convirtiendo el espacio y la materia sólida en simples puertas que puede abrir corriendo.',
       crisis: 'Acecho de Reverse Volvo: El uso de su velocidad de escape abre la puerta a su eco corrupto de estática oscura, quien le pisa los talones en el fondo de sus propios portales naranjas.',
       stats: { fuerza: 8, inteligencia: 8, carisma: 2, suerte: 5, combate: 8, defensa: 8, especialVal: 9 },
-      suitImages: {
-        default: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-vector.webp',
-        ficha: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/NULL-VECTOR_ficha.webp',
-        combat: '/personajes/LosPibes/FULLBODY SUIT/NULL-VECTOR/Null-vector.webp'
-      },
       variantData: {
         action: {
           label: 'Modo Vector Suit (Movilidad Absoluta)',
@@ -384,10 +340,8 @@ export const pibes: CharacterDetail[] = [
     id: 'sofi',
     name: 'Sofi',
     category: 'pibes',
-    image: '/personajes/LosPibes/FULLBODY SUIT/HUSH/Hush.webp',
-    fullBody: '/personajes/LosPibes/FULLBODY/SOFI.webp',
-    altImage: '/personajes/LosPibes/ALT/SOFI_ALT.webp',
-    overloadImage: '/personajes/LosPibes/FULLBODY SUIT/HUSH/Hush.webp',
+    image: '/personajes/PORTADAS/Sofi/Hush.webp',
+    fullBody: '/personajes/PORTADAS/Sofi/Hush.webp',
     color: '#06b6d4',
     role: 'Reconocimiento avanzado / duelista táctica',
     visualCode: 'Campera puffer tricolor rosa y borgoña, bufanda, rulos en rodete',
@@ -411,11 +365,6 @@ export const pibes: CharacterDetail[] = [
       significa: 'Ve el mundo con más claridad que cualquiera con los ojos abiertos. Nada se le oculta en la oscuridad.',
       crisis: 'Sobrecarga Sensorial: Ruidos repentinos de extrema decibelia (explosiones cercanas, alarmas estridentes) la desorientan e incapacitan de dolor físico severo.',
       stats: { fuerza: 10, inteligencia: 9, carisma: 8, suerte: 10, combate: 10, defensa: 10, especialVal: 10 },
-      suitImages: {
-        default: '/personajes/LosPibes/FULLBODY SUIT/HUSH/Hush.webp',
-        combat: '/personajes/LosPibes/FULLBODY SUIT/HUSH/Hush_combat.webp',
-        ficha: '/personajes/LosPibes/FULLBODY SUIT/HUSH/Hush_Ficha.webp'
-      },
       variantData: {
         combat: {
           label: 'Modo Duelista Ciega',

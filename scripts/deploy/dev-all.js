@@ -31,6 +31,52 @@ const siblingRoot = getSiblingRoot(projectRoot);
 
 console.log("🚀 Iniciando servidores de desarrollo para ambos proyectos...\n");
 
+// ── Watch & Auto-generate characterImages.ts ──────────────────────────────
+console.log("⏳ Generando mapping de imágenes inicial...");
+try {
+  require("../assets/generate-character-images.js");
+} catch (e) {
+  console.error("Error al generar imágenes iniciales:", e.message);
+}
+
+const watchDirs = [
+  path.join(projectRoot, "public", "personajes", "PORTADAS"),
+  path.join(projectRoot, "public", "personajes", "Fichas"),
+  path.join(projectRoot, "public", "personajes", "FICHAS"),
+];
+
+let debounceTimeout;
+const handleWatchChange = (eventType, filename) => {
+  // Ignore temporary/system files or generated file itself to prevent infinite loop
+  if (filename && (filename.endsWith('.ts') || filename.endsWith('.js') || filename.startsWith('.'))) return;
+  clearTimeout(debounceTimeout);
+  debounceTimeout = setTimeout(() => {
+    console.log(`\n🔄 Cambio detectado en recursos (${filename || 'archivo'}). Regenerando mapping de imágenes...`);
+    try {
+      delete require.cache[require.resolve("../assets/generate-character-images.js")];
+      require("../assets/generate-character-images.js");
+    } catch (e) {
+      console.error("Error al regenerar imágenes:", e.message);
+    }
+  }, 1000);
+};
+
+watchDirs.forEach(dir => {
+  if (fs.existsSync(dir)) {
+    try {
+      fs.watch(dir, { recursive: true }, handleWatchChange);
+      console.log(`👁️  Vigilando cambios en: ${path.relative(projectRoot, dir)}`);
+    } catch (e) {
+      try {
+        fs.watch(dir, handleWatchChange);
+        console.log(`👁️  Vigilando cambios (no recursivo) en: ${path.relative(projectRoot, dir)}`);
+      } catch (err) {}
+    }
+  }
+});
+console.log("");
+
+
 function runProcess(name, command, args, cwd) {
   const isWindows = process.platform === "win32";
   

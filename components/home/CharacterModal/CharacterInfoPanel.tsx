@@ -71,10 +71,7 @@ export function CharacterInfoPanel({
   const vibrantAccent = getVibrantColor(accent);
   const darkBg = getDarkBgColor(accent);
 
-  const isArchorLocked = selectedImageId === "archor" && !unlockAll;
-  const stats = isArchorLocked
-    ? char.stats
-    : isPowersMode
+  const stats = isPowersMode
     ? char.powers?.stats
     : char.stats;
 
@@ -83,9 +80,9 @@ export function CharacterInfoPanel({
   if (isPowersMode && char.powers?.variantData) {
     let selectedImageSrc = "";
     if (selectedImageId === "portada" || selectedImageId === "default") {
-      selectedImageSrc = char.portadaImages?.[0] || char.image || "";
+      selectedImageSrc = char.portadaImages?.[0] || "";
     } else if (selectedImageId === "ficha") {
-      selectedImageSrc = char.fichaImages?.[0] || char.fichaImage || "";
+      selectedImageSrc = char.fichaImages?.[0] || "";
     } else if (selectedImageId.startsWith("portada_alt_")) {
       const idx = parseInt(selectedImageId.replace("portada_alt_", ""), 10);
       selectedImageSrc = char.portadaImages?.[idx] || "";
@@ -130,20 +127,10 @@ export function CharacterInfoPanel({
   }
 
   const variantContent = {
-    habilidades: isArchorLocked
-      ? [
-          "Contenido Clasificado: Este registro contiene información sobre la fase final clasificada del multiverso.",
-          "Clasificado: Acceso restringido por la Iniciativa Vesperwing.",
-          "???",
-        ]
-      : activeVariantData?.habilidades ?? char.powers?.habilidades,
-    significa: isArchorLocked
-      ? "Información encriptada para evitar paradojas temporales. El destino final de Ian permanece oculto."
-      : activeVariantData?.significa ?? char.powers?.significa,
-    crisis: isArchorLocked
-      ? "Alerta de Spoiler: Los datos tácticos han sido bloqueados voluntariamente."
-      : activeVariantData?.crisis ?? char.powers?.crisis,
-    variantLabel: isArchorLocked ? "???" : activeVariantData?.label ?? null,
+    habilidades: activeVariantData?.habilidades ?? char.powers?.habilidades,
+    significa: activeVariantData?.significa ?? char.powers?.significa,
+    crisis: activeVariantData?.crisis ?? char.powers?.crisis,
+    variantLabel: activeVariantData?.label ?? null,
   };
 
   const isLocation = char.category === "locaciones";
@@ -372,8 +359,8 @@ export function CharacterInfoPanel({
             </div>
           </div>
 
-          {/* ── Concept Arts section (for Pibes in both views) ── */}
-          {isPibe && (conceptArts[char.id] || []).length > 0 && (() => {
+          {/* ── Concept Arts section (for Pibes and any other characters in both views) ── */}
+          {(conceptArts[char.id] || []).length > 0 && (() => {
             const charConcepts = conceptArts[char.id] || [];
             const hasAlts = charConcepts.some((c) => c.isAlt);
             const altCount = charConcepts.filter((c) => c.isAlt).length;

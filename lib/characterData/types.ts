@@ -8,17 +8,6 @@ export interface StatValues {
   especialVal: number;
 }
 
-export interface SuitImages {
-  default?: string;
-  alt?: string;
-  ficha?: string;
-  ficha2?: string;
-  combat?: string;
-  fichaAlt?: string;
-  archor?: string;
-  [key: string]: string | undefined;
-}
-
 export interface VariantDetail {
   label: string;
   habilidades: string[];
@@ -32,7 +21,6 @@ export interface PowersInfo {
   significa: string;
   crisis: string;
   stats: StatValues;
-  suitImages?: SuitImages;
   variantData?: Record<string, VariantDetail>;
 }
 
@@ -43,10 +31,6 @@ export interface CharacterDetail {
   isSecondary?: boolean;
   image: string;
   fullBody: string;
-  altImage?: string;
-  overloadImage?: string;
-  fichaImage?: string;
-  closeUp?: string;
   color: string;
   role: string;
   visualCode: string;

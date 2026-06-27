@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import { AnimatePresence } from "framer-motion";
 import { DialogueEditorPanel } from "./DialogueEditorPanel";
 import { ReaderTopBar } from "./ReaderTopBar";
 import { ReaderAuthModal } from "./ReaderAuthModal";
@@ -9,6 +10,7 @@ import { useReaderZoom } from "./useReaderZoom";
 import { useDialogueEditor } from "./useDialogueEditor";
 import { ReaderCanvas } from "./ReaderCanvas";
 import { EditorLeftSidebar } from "./EditorLeftSidebar";
+import { ReaderPagesSidebar } from "./ReaderPagesSidebar";
 import { DialogueLayers } from "./DialogueLayers";
 import { useReaderLayout } from "./useReaderLayout";
 import { useReaderAudio } from "./useReaderAudio";
@@ -660,6 +662,20 @@ export function CinematicReader({
       />
 
       <div className="flex-1 flex flex-col md:flex-row overflow-hidden w-full h-full relative">
+        {/* Read mode: page thumbnail sidebar (PDF-reader style) */}
+        <AnimatePresence>
+          {mode === "read" && (
+            <ReaderPagesSidebar
+              pages={pages}
+              pageIdx={pageIdx}
+              resetPage={resetPage}
+              saga={saga}
+              totalPages={pages.length}
+            />
+          )}
+        </AnimatePresence>
+
+        {/* Edit mode: full editor left sidebar */}
         {mode === "edit" && (
           <EditorLeftSidebar
             pages={pages}

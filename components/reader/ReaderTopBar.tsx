@@ -66,7 +66,6 @@ export function ReaderTopBar({
   setFocusPanel,
 }: ReaderTopBarProps) {
   const [showPublish, setShowPublish] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   // ── Keyboard shortcuts (read mode only) ──────────────────────────────────────
@@ -156,7 +155,7 @@ export function ReaderTopBar({
             {mode === "read" && (
               <div className="relative">
                 <button
-                  onClick={() => { setIsSettingsOpen(!isSettingsOpen); setIsDropdownOpen(false); }}
+                  onClick={() => setIsSettingsOpen(!isSettingsOpen)}
                   className={`${btnBase} flex items-center gap-1`}
                   title="Configuración de Lectura"
                 >
@@ -309,38 +308,6 @@ export function ReaderTopBar({
               {mode === "edit" ? "🛠️ Editor" : "📖 Lectura"}
             </button>
 
-            {/* Page selector */}
-            <div className="relative">
-              <button
-                onClick={() => { setIsDropdownOpen(!isDropdownOpen); setIsSettingsOpen(false); }}
-                className={`${btnBase} flex items-center gap-1`}
-                title="Seleccionar Página"
-              >
-                Pág {pageIdx + 1}/{totalPages}
-                <span className="text-[8px] opacity-60">▼</span>
-              </button>
-
-              {isDropdownOpen && (
-                <>
-                  <div className="fixed inset-0 z-[60]" onClick={() => setIsDropdownOpen(false)} />
-                  <div className={`absolute right-0 mt-2 w-32 max-h-64 overflow-y-auto z-[70] py-1 rounded-md no-scrollbar ${dropdownBg}`}>
-                    {Array.from({ length: totalPages }, (_, i) => (
-                      <button
-                        key={i}
-                        onClick={() => { resetPage(i); setIsDropdownOpen(false); }}
-                        className={`w-full text-left px-3 py-1.5 text-xs font-[var(--font-bangers)] tracking-wide border-b last:border-0 transition-colors ${
-                          pageIdx === i
-                            ? (isReadMode ? "bg-white/20 text-white border-white/10" : "bg-[#0a0a0f] text-white border-zinc-200")
-                            : (isReadMode ? "text-zinc-300 hover:bg-white/10 border-white/5" : "text-[#0a0a0f] hover:bg-zinc-100 border-zinc-100")
-                        }`}
-                      >
-                        Pág {i + 1}
-                      </button>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
 
             {/* Help button */}
             <button

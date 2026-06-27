@@ -91,6 +91,12 @@ export function EditorLeftSidebar({
 
   const [isOpen, setIsOpen] = useState(true);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsOpen(window.innerWidth >= 768);
+    }
+  }, []);
+
   // Fetch Sagas
   const loadSagas = () => {
     setLoadingSagas(true);
@@ -456,7 +462,7 @@ export function EditorLeftSidebar({
 
   return (
     <>
-      <div className="w-full md:w-[350px] shrink-0 bg-white border-b-3 md:border-b-0 md:border-r-3 border-[#0a0a0f] flex flex-col overflow-hidden z-40 relative" style={{ maxHeight: "calc(100vh - 64px)", height: "100%" }}>
+      <div className="absolute md:relative left-0 top-0 md:left-auto md:top-auto w-[290px] sm:w-[320px] md:w-[350px] shrink-0 bg-white border-r-3 border-[#0a0a0f] flex flex-col overflow-hidden z-[160] md:z-40 shadow-2xl md:shadow-none" style={{ maxHeight: "calc(100vh - 64px)", height: "100%" }}>
         <button onClick={() => setIsOpen(false)} className="absolute right-2 top-3 w-7 h-7 flex items-center justify-center bg-zinc-100 hover:bg-zinc-200 border-2 border-[#0a0a0f] shadow-[1px_1px_0_#0a0a0f] text-xs font-mono font-bold text-[#0a0a0f] cursor-pointer rounded transition-all active:translate-y-0.5" style={{ zIndex: 100 }}>
           ◀
         </button>

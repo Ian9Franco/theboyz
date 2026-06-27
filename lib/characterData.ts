@@ -21,29 +21,33 @@ const rawCharacters: CharacterDetail[] = [
   ...locaciones
 ];
 
-export const CHARACTER_DETAILS: CharacterDetail[] = rawCharacters.map((char) => {
-  const images = characterImages[char.id];
-  if (images) {
-    // portadaImages and fichaImages are STRICTLY from the generator (public/ directory).
-    // These are used as visibility gates — if empty, the character is hidden from the roster.
-    const generatedPortadas = (images.portadas && images.portadas.length > 0) ? images.portadas : [];
-    const generatedFichas   = (images.fichas   && images.fichas.length   > 0) ? images.fichas   : [];
+export const CHARACTER_DETAILS: CharacterDetail[] = rawCharacters
+  .map((char) => {
+    const images = characterImages[char.id];
+    if (images) {
+      const generatedPortadas = images.portadas || [];
+      const generatedFichas   = images.fichas || [];
 
-    // Display image: real portada → real ficha → hardcoded fallback (for modal, never roster gate)
-    const mainPortada = images.portada || generatedPortadas[0] || "";
-    const mainFicha   = images.ficha   || generatedFichas[0]   || char.fichaImage || (char as any).ficha || "";
-    const displayImage = mainPortada || mainFicha || char.image || char.fullBody || "";
+      // If the character doesn't have an image in PORTADAS, exclude them (except for locaciones)
+      if (char.category !== "locaciones" && generatedPortadas.length === 0) {
+        return null;
+      }
 
-    return {
-      ...char,
-      image:         displayImage,
-      fullBody:      mainPortada || char.fullBody || char.image || mainFicha || "",
-      portadaImages: generatedPortadas,   // strict: only real portadas from public/
-      fichaImages:   generatedFichas,     // strict: only real fichas from public/
-    };
-  }
-  return char;
-});
+      const mainPortada = images.portada || generatedPortadas[0] || char.image;
+      const mainFicha   = images.ficha || generatedFichas[0] || char.image || "";
+
+      return {
+        ...char,
+        // Override with strict paths from PORTADAS / Fichas
+        image:         mainPortada,
+        fullBody:      mainPortada || mainFicha,
+        portadaImages: generatedPortadas,
+        fichaImages:   generatedFichas,
+      } as CharacterDetail;
+    }
+    return null;
+  })
+  .filter((c): c is CharacterDetail => c !== null);
 
 export function getComputedCharacters(readChapters: string[], isClient: boolean, unlockAll: boolean = false) {
   const normalizedRead = readChapters.map(id => id.toLowerCase().trim());

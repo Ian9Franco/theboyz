@@ -19,6 +19,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
+  "comandante": [
+    {
+      "name": "R.e.g.u.l.a.r Y Los V.o.p.s Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R y los V.O.P.S_sheet.webp",
+      "isAlt": false
+    }
+  ],
   "don": [
     {
       "name": "Don Vanguard Sheet",
@@ -62,12 +69,14 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
-  "uandi": [
+  "a_uandi": [
     {
       "name": "A Uandi Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/A-Uandi_sheet.webp",
       "isAlt": false
-    },
+    }
+  ],
+  "uandi": [
     {
       "name": "Aegis Full Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/aegis full_sheet.webp",
@@ -147,13 +156,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     },
     {
-      "name": "Volvo Carnicero Sheet",
-      "path": "/personajes/GUIAS/boyz/VECTOR/Volvo Carnicero_sheet.webp",
-      "isAlt": false
-    },
-    {
       "name": "Volvo Sheet",
       "path": "/personajes/GUIAS/boyz/VECTOR/volvo_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "volvo_carnicero": [
+    {
+      "name": "Volvo Carnicero Sheet",
+      "path": "/personajes/GUIAS/boyz/VECTOR/Volvo Carnicero_sheet.webp",
       "isAlt": false
     }
   ],
@@ -166,6 +177,11 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Mk3 Sheet",
       "path": "/personajes/GUIAS/boyz/VESPERWING/MK3_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Vesperwing Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/vesperwing_alt_sheet.webp",
       "isAlt": false
     },
     {
@@ -247,6 +263,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Matapobres Sheet",
       "path": "/personajes/GUIAS/Secundarios/Matapobres/MATAPOBRES_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "supertrucker": [
+    {
+      "name": "Supercamionero Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Supercamionero/Supercamionero_sheet.png",
       "isAlt": false
     }
   ],

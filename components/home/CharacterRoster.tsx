@@ -327,7 +327,7 @@ export function CharacterRoster() {
               key={key} 
               className={`pt-16 ${secIndex > 0 ? "border-t-4 border-dashed border-gray-800" : ""}`}
             >
-              {key === 'matis' && (() => {
+              {key === 'matis' ? (() => {
                 const isMatisUnlocked = groupChars.some(c => !c.incognito);
                 return (
                   <div 
@@ -335,7 +335,7 @@ export function CharacterRoster() {
                     onClick={isMatisUnlocked ? () => setShowMatiLightbox(true) : undefined}
                   >
                     <img 
-                      src="/personajes/Consejo de matis/Mativariantes.webp" 
+                      src="/personajes/Fichas/matis/Matisvariantes.png" 
                       alt="Consejo de Matis Banner"
                       className={`w-full h-auto block transition-transform duration-700 ${isMatisUnlocked ? "group-hover:scale-105" : "grayscale blur-[2.5px] opacity-45"}`}
                     />
@@ -359,180 +359,182 @@ export function CharacterRoster() {
                     )}
                   </div>
                 );
-              })()}
-
-              <div className="text-center mb-16">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                >
-                  <span
-                    className="font-[var(--font-bangers)] text-sm tracking-[0.3em] uppercase mb-4 inline-block"
-                    style={{ 
-                      background: meta.badgeColor, 
-                      color: getTextColor(meta.badgeColor), 
-                      padding: "0.25rem 1rem", 
-                      border: "2px solid white" 
-                    }}
-                  >
-                    {meta.tagline}
-                  </span>
-                  <h2
-                    className="font-[var(--font-bangers)] text-5xl sm:text-7xl leading-none tracking-wider text-white"
-                    style={{ textShadow: `4px 4px 0 ${meta.borderColor}, 8px 8px 0 ${meta.shadowColor}` }}
-                  >
-                    {meta.title}
-                  </h2>
-                </motion.div>
-              </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
-                {groupChars.map((char, i) => {
-                  const cardImg = getCardImage(char);
-                  return (
+              })() : (
+                <>
+                  <div className="text-center mb-16">
                     <motion.div
-                      key={char.id}
-                      onClick={() => setSelectedChar(char)}
-                      initial={{ opacity: 0, y: 40, rotate: i % 2 === 0 ? -2 : 2 }}
-                      whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-                      viewport={{ once: true, margin: "-50px" }}
-                      transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.05 }}
-                      className="relative group bg-[#13131e] flex flex-col cursor-pointer select-none border-4 transition-colors duration-300"
-                      style={{ 
-                        borderColor: "#ffffff", 
-                        zIndex: hoveredCardId === char.id ? 40 : 10,
-                        boxShadow: char.incognito 
-                          ? "8px 8px 0 #6b7280" 
-                          : `8px 8px 0 ${char.displayColor}, 0 0 15px ${char.displayColor}2b` 
-                      }}
-                      onMouseEnter={() => setHoveredCardId(char.id)}
-                      onMouseLeave={() => setHoveredCardId(null)}
-                      onMouseMove={(e) => {
-                        const rect = e.currentTarget.getBoundingClientRect();
-                        const x = (e.clientX - rect.left) / rect.width;
-                        const y = (e.clientY - rect.top) / rect.height;
-                        setMousePos({ x, y });
-                      }}
-                      whileHover={{ 
-                        scale: 1.03, 
-                        rotate: i % 2 === 0 ? 1 : -1, 
-                        borderColor: char.incognito ? "#ffffff" : char.displayColor,
-                        boxShadow: char.incognito 
-                          ? "12px 12px 0 #6b7280" 
-                          : `12px 12px 0 ${char.displayColor}, 0 0 25px ${char.displayColor}55`,
-                        transition: { duration: 0.2 } 
-                      }}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
                     >
-                      {/* Character Dialogue Speech Bubble */}
-                      <AnimatePresence>
-                        {hoveredCardId === char.id && !char.incognito && CHARACTER_QUOTES[char.id] && (
-                          <motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0.8, x: "-50%" }}
-                            animate={{ opacity: 1, y: -45, scale: 1, x: "-50%" }}
-                            exit={{ opacity: 0, scale: 0.8, x: "-50%" }}
-                            transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                            className="absolute top-0 left-1/2 z-30 bg-white text-black border-2 border-black px-3 py-1.5 rounded-xl shadow-[4px_4px_0_#000] w-[160px] text-center"
-                          >
-                            <p className="font-[var(--font-marker)] text-[9px] leading-tight uppercase">
-                              "{CHARACTER_QUOTES[char.id]}"
-                            </p>
-                            <div className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-black" />
-                            <div className="absolute bottom-[-4px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[5px] border-t-white" />
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-
-                      <div 
-                        className="relative w-full aspect-[2/3] overflow-hidden shrink-0"
-                        style={{
-                          background: char.incognito 
-                            ? "#2a2a35" 
-                            : `radial-gradient(circle at center, ${char.displayColor}33 0%, #13131e 100%)`
-                        }}
-                      >
-                        {/* Foil Holographic Shine Overlay */}
-                        {hoveredCardId === char.id && !char.incognito && (
-                          <div 
-                            className="absolute inset-0 pointer-events-none mix-blend-color-dodge transition-opacity duration-300 opacity-60 z-20"
-                            style={{
-                              background: `radial-gradient(circle at ${mousePos.x * 100}% ${mousePos.y * 100}%, rgba(255,255,255,0.4) 0%, rgba(236,72,153,0.15) 30%, rgba(59,130,246,0.15) 60%, transparent 80%)`,
-                            }}
-                          />
-                        )}
-                        {char.incognito ? (
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="absolute inset-0 speed-lines opacity-20" />
-                            <span 
-                              className="font-[var(--font-bangers)] text-9xl text-white opacity-30 select-none z-10"
-                              style={{ textShadow: "4px 4px 0 #000" }}
-                            >
-                              ?
-                            </span>
-                            {cardImg && (
-                              <img 
-                                src={cardImg} 
-                                alt="Incógnito" 
-                                className="absolute inset-0 w-full h-full object-cover object-top opacity-20 grayscale blur-sm"
-                              />
-                            )}
-                            <div className="absolute inset-0 bg-black/50" />
-                          </div>
-                        ) : (
-                          <>
-                            {cardImg && (
-                              <img 
-                                src={cardImg} 
-                                alt={char.displayName} 
-                                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2 grayscale-[0.3] group-hover:grayscale-0"
-                              />
-                            )}
-                          </>
-                        )}
-                        
-                        {/* Comic style halftone overlay */}
-                        <div 
-                          className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-[0.15] group-hover:opacity-0 transition-opacity duration-500"
-                          style={{
-                            backgroundImage: "radial-gradient(circle, #fff 1.5px, transparent 1.5px)",
-                            backgroundSize: "6px 6px",
-                          }}
-                        />
-                      </div>
-                    
-                    <div 
-                      className="px-2 py-2.5 text-center border-t-[4px] border-white relative z-10 flex items-center justify-center overflow-hidden" 
-                      style={{ 
-                        background: char.incognito 
-                          ? "#374151" 
-                          : (char.id === 'sofi' 
-                             ? "linear-gradient(135deg, #06b6d4, #0891b2)" 
-                             : char.displayColor) 
-                      }}
-                    >
-                      <h3 
-                        className="font-[var(--font-bangers)] tracking-widest drop-shadow-md leading-none truncate w-full"
+                      <span
+                        className="font-[var(--font-bangers)] text-sm tracking-[0.3em] uppercase mb-4 inline-block"
                         style={{ 
-                          color: char.incognito ? "white" : getTextColor(char.displayColor),
-                          textShadow: char.incognito 
-                            ? "2px 2px 0 rgba(0,0,0,0.3)"
-                            : (getTextColor(char.displayColor) === '#0a0a0f' 
-                              ? "1px 1px 0 rgba(255,255,255,0.6)" 
-                              : "2px 2px 0 rgba(0,0,0,0.3)"),
-                          fontSize: "0.85rem"
+                          background: meta.badgeColor, 
+                          color: getTextColor(meta.badgeColor), 
+                          padding: "0.25rem 1rem", 
+                          border: "2px solid white" 
                         }}
                       >
-                        {char.incognito 
-                          ? "PRÓXIMAMENTE" 
-                          : (char.powers?.role 
-                              ? `${char.displayName.toUpperCase()} · ${char.powers.role.split(" / ")[0].toUpperCase()}`
-                              : char.displayName.toUpperCase())}
-                      </h3>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+                        {meta.tagline}
+                      </span>
+                      <h2
+                        className="font-[var(--font-bangers)] text-5xl sm:text-7xl leading-none tracking-wider text-white"
+                        style={{ textShadow: `4px 4px 0 ${meta.borderColor}, 8px 8px 0 ${meta.shadowColor}` }}
+                      >
+                        {meta.title}
+                      </h2>
+                    </motion.div>
+                  </div>
+
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+                    {groupChars.map((char, i) => {
+                      const cardImg = getCardImage(char);
+                      return (
+                        <motion.div
+                          key={char.id}
+                          onClick={() => setSelectedChar(char)}
+                          initial={{ opacity: 0, y: 40, rotate: i % 2 === 0 ? -2 : 2 }}
+                          whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+                          viewport={{ once: true, margin: "-50px" }}
+                          transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.05 }}
+                          className="relative group bg-[#13131e] flex flex-col cursor-pointer select-none border-4 transition-colors duration-300"
+                          style={{ 
+                            borderColor: "#ffffff", 
+                            zIndex: hoveredCardId === char.id ? 40 : 10,
+                            boxShadow: char.incognito 
+                              ? "8px 8px 0 #6b7280" 
+                              : `8px 8px 0 ${char.displayColor}, 0 0 15px ${char.displayColor}2b` 
+                          }}
+                          onMouseEnter={() => setHoveredCardId(char.id)}
+                          onMouseLeave={() => setHoveredCardId(null)}
+                          onMouseMove={(e) => {
+                            const rect = e.currentTarget.getBoundingClientRect();
+                            const x = (e.clientX - rect.left) / rect.width;
+                            const y = (e.clientY - rect.top) / rect.height;
+                            setMousePos({ x, y });
+                          }}
+                          whileHover={{ 
+                            scale: 1.03, 
+                            rotate: i % 2 === 0 ? 1 : -1, 
+                            borderColor: char.incognito ? "#ffffff" : char.displayColor,
+                            boxShadow: char.incognito 
+                              ? "12px 12px 0 #6b7280" 
+                              : `12px 12px 0 ${char.displayColor}, 0 0 25px ${char.displayColor}55`,
+                            transition: { duration: 0.2 } 
+                          }}
+                        >
+                          {/* Character Dialogue Speech Bubble */}
+                          <AnimatePresence>
+                            {hoveredCardId === char.id && !char.incognito && CHARACTER_QUOTES[char.id] && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 10, scale: 0.8, x: "-50%" }}
+                                animate={{ opacity: 1, y: -45, scale: 1, x: "-50%" }}
+                                exit={{ opacity: 0, scale: 0.8, x: "-50%" }}
+                                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                                className="absolute top-0 left-1/2 z-30 bg-white text-black border-2 border-black px-3 py-1.5 rounded-xl shadow-[4px_4px_0_#000] w-[160px] text-center"
+                              >
+                                <p className="font-[var(--font-marker)] text-[9px] leading-tight uppercase">
+                                  "{CHARACTER_QUOTES[char.id]}"
+                                </p>
+                                <div className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-black" />
+                                <div className="absolute bottom-[-4px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[5px] border-t-white" />
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+
+                          <div 
+                            className="relative w-full aspect-[2/3] overflow-hidden shrink-0"
+                            style={{
+                              background: char.incognito 
+                                ? "#2a2a35" 
+                                : `radial-gradient(circle at center, ${char.displayColor}33 0%, #13131e 100%)`
+                            }}
+                          >
+                            {/* Foil Holographic Shine Overlay */}
+                            {hoveredCardId === char.id && !char.incognito && (
+                              <div 
+                                className="absolute inset-0 pointer-events-none mix-blend-color-dodge transition-opacity duration-300 opacity-60 z-20"
+                                style={{
+                                  background: `radial-gradient(circle at ${mousePos.x * 100}% ${mousePos.y * 100}%, rgba(255,255,255,0.4) 0%, rgba(236,72,153,0.15) 30%, rgba(59,130,246,0.15) 60%, transparent 80%)`,
+                                }}
+                              />
+                            )}
+                            {char.incognito ? (
+                              <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="absolute inset-0 speed-lines opacity-20" />
+                                <span 
+                                  className="font-[var(--font-bangers)] text-9xl text-white opacity-30 select-none z-10"
+                                  style={{ textShadow: "4px 4px 0 #000" }}
+                                >
+                                  ?
+                                </span>
+                                {cardImg && (
+                                  <img 
+                                    src={cardImg} 
+                                    alt="Incógnito" 
+                                    className="absolute inset-0 w-full h-full object-cover object-top opacity-20 grayscale blur-sm"
+                                  />
+                                )}
+                                <div className="absolute inset-0 bg-black/50" />
+                              </div>
+                            ) : (
+                              <>
+                                {cardImg && (
+                                  <img 
+                                    src={cardImg} 
+                                    alt={char.displayName} 
+                                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2 grayscale-[0.3] group-hover:grayscale-0"
+                                  />
+                                )}
+                              </>
+                            )}
+                            
+                            {/* Comic style halftone overlay */}
+                            <div 
+                              className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-[0.15] group-hover:opacity-0 transition-opacity duration-500"
+                              style={{
+                                backgroundImage: "radial-gradient(circle, #fff 1.5px, transparent 1.5px)",
+                                backgroundSize: "6px 6px",
+                              }}
+                            />
+                          </div>
+                        
+                        <div 
+                          className="px-2 py-2.5 text-center border-t-[4px] border-white relative z-10 flex items-center justify-center overflow-hidden" 
+                          style={{ 
+                            background: char.incognito 
+                              ? "#374151" 
+                              : (char.id === 'sofi' 
+                                 ? "linear-gradient(135deg, #06b6d4, #0891b2)" 
+                                 : char.displayColor) 
+                          }}
+                        >
+                          <h3 
+                            className="font-[var(--font-bangers)] tracking-widest drop-shadow-md leading-none truncate w-full"
+                            style={{ 
+                              color: char.incognito ? "white" : getTextColor(char.displayColor),
+                              textShadow: char.incognito 
+                                ? "2px 2px 0 rgba(0,0,0,0.3)"
+                                : (getTextColor(char.displayColor) === '#0a0a0f' 
+                                  ? "1px 1px 0 rgba(255,255,255,0.6)" 
+                                  : "2px 2px 0 rgba(0,0,0,0.3)"),
+                              fontSize: "0.85rem"
+                            }}
+                          >
+                            {char.incognito 
+                              ? "PRÓXIMAMENTE" 
+                              : (char.powers?.role 
+                                  ? `${char.displayName.toUpperCase()} · ${char.powers.role.split(" / ")[0].toUpperCase()}`
+                                  : char.displayName.toUpperCase())}
+                          </h3>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </>
+            )}
             </div>
           );
         })}
@@ -551,7 +553,7 @@ export function CharacterRoster() {
       <AnimatePresence>
         {showMatiLightbox && (
           <BannerLightbox 
-            src="/personajes/Consejo de matis/Mativariantes.webp" 
+            src="/personajes/Fichas/matis/Matisvariantes.png" 
             alt="Consejo de Matis Banner" 
             onClose={() => setShowMatiLightbox(false)} 
           />

@@ -691,3 +691,13 @@ cleanEmptyDirsRecursively(fullbodyDir, fullbodyDir, null);
 cleanEmptyDirsRecursively(closeupDir, closeupDir, null);
 
 console.log('All tasks completed successfully.');
+
+// ==========================================
+// STEP 8: Regenerate characterImages.ts
+// ==========================================
+console.log('\n--- STEP 8: Regenerating characterImages.ts ---');
+try {
+  require('./generate-character-images.js');
+} catch (err) {
+  console.error('Error regenerating characterImages.ts:', err.message);
+}
