@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { PublishModal } from "./PublishModal";
 
 const fontLabels: Record<number, string> = {
@@ -164,123 +164,139 @@ export function ReaderTopBar({
                   <span className="text-[8px] opacity-60">▼</span>
                 </button>
 
-                {isSettingsOpen && (
-                  <>
-                    <div className="fixed inset-0 z-[60]" onClick={() => setIsSettingsOpen(false)} />
-                    <div className={`absolute left-0 mt-2 w-60 z-[70] p-3 rounded-md flex flex-col gap-3 ${dropdownBg}`}>
+                <AnimatePresence>
+                  {isSettingsOpen && (
+                    <>
+                      <motion.div
+                        key="settings-backdrop"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[60]"
+                        onClick={() => setIsSettingsOpen(false)}
+                      />
+                      <motion.div
+                        key="settings-dropdown"
+                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                        transition={{ duration: 0.15, ease: "easeOut" }}
+                        className={`absolute left-auto right-[-60px] sm:right-auto sm:left-0 mt-2 w-60 z-[70] p-3 rounded-md flex flex-col gap-3 ${dropdownBg}`}
+                      >
 
-                      {/* Font size */}
-                      <div>
-                        <span className={`block font-[var(--font-bangers)] text-[10px] uppercase tracking-wider mb-1.5 ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
-                          Tamaño de letra:
-                        </span>
-                        <div className={`flex gap-1 p-0.5 rounded ${isReadMode ? "bg-white/10" : "border border-[#0a0a0f] bg-zinc-50"}`}>
-                          {[0.85, 1.0, 1.2, 1.4].map((scale) => {
-                            const label = scale === 0.85 ? "A-" : scale === 1.0 ? "A" : scale === 1.2 ? "A+" : "A++";
-                            return (
+                        {/* Font size */}
+                        <div>
+                          <span className={`block font-[var(--font-bangers)] text-[10px] uppercase tracking-wider mb-1.5 ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
+                            Tamaño de letra:
+                          </span>
+                          <div className={`flex gap-1 p-0.5 rounded ${isReadMode ? "bg-white/10" : "border border-[#0a0a0f] bg-zinc-50"}`}>
+                            {[0.85, 1.0, 1.2, 1.4].map((scale) => {
+                              const label = scale === 0.85 ? "A-" : scale === 1.0 ? "A" : scale === 1.2 ? "A+" : "A++";
+                              return (
+                                <button
+                                  key={scale}
+                                  onClick={() => setTextScale(scale)}
+                                  className={`flex-1 h-6 flex items-center justify-center text-xs font-bold transition-all rounded font-mono ${
+                                    textScale === scale
+                                      ? (isReadMode ? "bg-white text-[#0a0a0f]" : "bg-[#0a0a0f] text-white")
+                                      : (isReadMode ? "text-white/70 hover:bg-white/15" : "hover:bg-zinc-200 text-[#0a0a0f]")
+                                  }`}
+                                >
+                                  {label}
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+
+                        {/* Dialogue speed */}
+                        <div>
+                          <span className={`block font-[var(--font-bangers)] text-[10px] uppercase tracking-wider mb-1.5 ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
+                            Velocidad de diálogos:
+                          </span>
+                          <div className={`flex gap-1 p-0.5 rounded ${isReadMode ? "bg-white/10" : "border border-[#0a0a0f] bg-zinc-50"}`}>
+                            {[0.5, 1.0, 1.5].map((speed) => (
                               <button
-                                key={scale}
-                                onClick={() => setTextScale(scale)}
-                                className={`flex-1 h-6 flex items-center justify-center text-xs font-bold transition-all rounded font-mono ${
-                                  textScale === scale
+                                key={speed}
+                                onClick={() => setSpeedMultiplier(speed)}
+                                className={`flex-1 h-6 flex items-center justify-center text-[10px] font-bold transition-all rounded ${
+                                  speedMultiplier === speed
                                     ? (isReadMode ? "bg-white text-[#0a0a0f]" : "bg-[#0a0a0f] text-white")
                                     : (isReadMode ? "text-white/70 hover:bg-white/15" : "hover:bg-zinc-200 text-[#0a0a0f]")
                                 }`}
                               >
-                                {label}
+                                {speed === 0.5 ? "🐢" : speed === 1.0 ? "⚡" : "⚡⚡"}
                               </button>
-                            );
-                          })}
+                            ))}
+                          </div>
                         </div>
-                      </div>
 
-                      {/* Dialogue speed */}
-                      <div>
-                        <span className={`block font-[var(--font-bangers)] text-[10px] uppercase tracking-wider mb-1.5 ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
-                          Velocidad de diálogos:
-                        </span>
-                        <div className={`flex gap-1 p-0.5 rounded ${isReadMode ? "bg-white/10" : "border border-[#0a0a0f] bg-zinc-50"}`}>
-                          {[0.5, 1.0, 1.5].map((speed) => (
+                        {/* Autoplay */}
+                        <div className={`flex items-center justify-between pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
+                          <span className={`font-[var(--font-bangers)] text-[10px] uppercase tracking-wider ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
+                            Auto-Avance:
+                          </span>
+                          <button
+                            onClick={() => setAutoplay(!autoplay)}
+                            className={`font-[var(--font-bangers)] text-xs px-2.5 py-1 border transition-all rounded-sm ${
+                              autoplay
+                                ? "bg-emerald-500 border-emerald-400 text-white"
+                                : "bg-rose-500 border-rose-400 text-white"
+                            }`}
+                          >
+                            {autoplay ? "✓ Sí" : "✗ No"}
+                          </button>
+                        </div>
+
+                        {/* Focus Panel */}
+                        {setFocusPanel && (
+                          <div className={`flex items-center justify-between pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
+                            <span className={`font-[var(--font-bangers)] text-[10px] uppercase tracking-wider ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
+                              Enfoque Viñeta:
+                            </span>
                             <button
-                              key={speed}
-                              onClick={() => setSpeedMultiplier(speed)}
-                              className={`flex-1 h-6 flex items-center justify-center text-[10px] font-bold transition-all rounded ${
-                                speedMultiplier === speed
-                                  ? (isReadMode ? "bg-white text-[#0a0a0f]" : "bg-[#0a0a0f] text-white")
-                                  : (isReadMode ? "text-white/70 hover:bg-white/15" : "hover:bg-zinc-200 text-[#0a0a0f]")
+                              onClick={() => setFocusPanel(!focusPanel)}
+                              className={`font-[var(--font-bangers)] text-xs px-2.5 py-1 border transition-all rounded-sm ${
+                                focusPanel
+                                  ? "bg-emerald-500 border-emerald-400 text-white"
+                                  : "bg-rose-500 border-rose-400 text-white"
                               }`}
                             >
-                              {speed === 0.5 ? "🐢" : speed === 1.0 ? "⚡" : "⚡⚡"}
+                              {focusPanel ? "✓ Sí" : "✗ No"}
                             </button>
-                          ))}
+                          </div>
+                        )}
+
+                        {/* Focus Dialogue */}
+                        {setFocusDialogue && (
+                          <div className={`flex items-center justify-between pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
+                            <span className={`font-[var(--font-bangers)] text-[10px] uppercase tracking-wider ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
+                              Foco Diálogos:
+                            </span>
+                            <button
+                              onClick={() => setFocusDialogue(!focusDialogue)}
+                              className={`font-[var(--font-bangers)] text-xs px-2.5 py-1 border transition-all rounded-sm ${
+                                focusDialogue
+                                  ? "bg-emerald-500 border-emerald-400 text-white"
+                                  : "bg-rose-500 border-rose-400 text-white"
+                              }`}
+                            >
+                              {focusDialogue ? "✓ Sí" : "✗ No"}
+                            </button>
+                          </div>
+                        )}
+
+                        {/* Keyboard shortcuts hint */}
+                        <div className={`pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
+                          <p className={`font-mono text-[9px] ${isReadMode ? "text-zinc-500" : "text-zinc-400"} leading-relaxed`}>
+                            <strong>Space / →</strong> Avanzar &nbsp;·&nbsp; <strong>←</strong> Retroceder<br />
+                            <strong>A</strong> Autoplay &nbsp;·&nbsp; <strong>?</strong> Ayuda
+                          </p>
                         </div>
-                      </div>
-
-                      {/* Autoplay */}
-                      <div className={`flex items-center justify-between pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
-                        <span className={`font-[var(--font-bangers)] text-[10px] uppercase tracking-wider ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
-                          Auto-Avance:
-                        </span>
-                        <button
-                          onClick={() => setAutoplay(!autoplay)}
-                          className={`font-[var(--font-bangers)] text-xs px-2.5 py-1 border transition-all rounded-sm ${
-                            autoplay
-                              ? "bg-emerald-500 border-emerald-400 text-white"
-                              : "bg-rose-500 border-rose-400 text-white"
-                          }`}
-                        >
-                          {autoplay ? "✓ Sí" : "✗ No"}
-                        </button>
-                      </div>
-
-                      {/* Focus Panel */}
-                      {setFocusPanel && (
-                        <div className={`flex items-center justify-between pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
-                          <span className={`font-[var(--font-bangers)] text-[10px] uppercase tracking-wider ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
-                            Enfoque Viñeta:
-                          </span>
-                          <button
-                            onClick={() => setFocusPanel(!focusPanel)}
-                            className={`font-[var(--font-bangers)] text-xs px-2.5 py-1 border transition-all rounded-sm ${
-                              focusPanel
-                                ? "bg-emerald-500 border-emerald-400 text-white"
-                                : "bg-rose-500 border-rose-400 text-white"
-                            }`}
-                          >
-                            {focusPanel ? "✓ Sí" : "✗ No"}
-                          </button>
-                        </div>
-                      )}
-
-                      {/* Focus Dialogue */}
-                      {setFocusDialogue && (
-                        <div className={`flex items-center justify-between pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
-                          <span className={`font-[var(--font-bangers)] text-[10px] uppercase tracking-wider ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
-                            Foco Diálogos:
-                          </span>
-                          <button
-                            onClick={() => setFocusDialogue(!focusDialogue)}
-                            className={`font-[var(--font-bangers)] text-xs px-2.5 py-1 border transition-all rounded-sm ${
-                              focusDialogue
-                                ? "bg-emerald-500 border-emerald-400 text-white"
-                                : "bg-rose-500 border-rose-400 text-white"
-                            }`}
-                          >
-                            {focusDialogue ? "✓ Sí" : "✗ No"}
-                          </button>
-                        </div>
-                      )}
-
-                      {/* Keyboard shortcuts hint */}
-                      <div className={`pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
-                        <p className={`font-mono text-[9px] ${isReadMode ? "text-zinc-500" : "text-zinc-400"} leading-relaxed`}>
-                          <strong>Space / →</strong> Avanzar &nbsp;·&nbsp; <strong>←</strong> Retroceder<br />
-                          <strong>A</strong> Autoplay &nbsp;·&nbsp; <strong>?</strong> Ayuda
-                        </p>
-                      </div>
-                    </div>
-                  </>
-                )}
+                      </motion.div>
+                    </>
+                  )}
+                </AnimatePresence>
               </div>
             )}
 
