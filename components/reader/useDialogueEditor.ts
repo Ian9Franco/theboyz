@@ -103,7 +103,7 @@ export function useDialogueEditor({
     updateDialoguesState(updatedPages);
   };
 
-  const handleAddBubble = (pIdx: number, defaultPosition?: { posX: number; posY: number }) => {
+  const handleAddBubble = (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle: "normal" | "caption" = "normal") => {
     const updatedPages = { ...localDialogues.pages };
     const pg = { ...currentPageData };
     const panelsCopy = [...(pg.panels || [])];
@@ -114,19 +114,21 @@ export function useDialogueEditor({
     const posY = defaultPosition ? defaultPosition.posY : Math.round(targetPanel.focusY * 100);
 
     dialoguesCopy.push({
-      text: "Nuevo diálogo",
+      text: defaultStyle === "caption" ? "Texto de la narración..." : "Nuevo diálogo",
       speaker: "",
-      style: "normal",
-      size: "small",
+      style: defaultStyle,
+      size: defaultStyle === "caption" ? "medium" : "small",
       posX,
       posY,
       tailX: posX,
       tailY: posY + 15,
       tailWidth: 6,
       tailCurvature: -22,
-      width: 120,
+      width: defaultStyle === "caption" ? 160 : 120,
       fontSize: 9,
-      borderRadius: 18,
+      borderRadius: defaultStyle === "caption" ? 4 : 18,
+      tail: defaultStyle === "caption" ? "none" : undefined,
+      fontFamily: defaultStyle === "caption" ? "sans" : undefined,
     });
 
     targetPanel.dialogue = dialoguesCopy;

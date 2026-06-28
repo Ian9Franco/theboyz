@@ -128,7 +128,7 @@ export function ReaderTopBar({
         {/* Main bar row */}
         <div className="flex items-center justify-between px-2 sm:px-4 h-14">
           {/* Left — Back + saga info */}
-          <div className="flex items-center gap-1.5 sm:gap-3">
+          <div className="flex items-center gap-1 sm:gap-3">
             <Link
               href="/"
               className={
@@ -166,7 +166,7 @@ export function ReaderTopBar({
           </div>
 
           {/* Right — controls */}
-          <div className="flex items-center gap-1.5 sm:gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
 
             {/* Mobile Zoom Controls */}
             {mode === "read" && setZoomScale && zoomScale !== undefined && (
@@ -355,16 +355,17 @@ export function ReaderTopBar({
             {mode === "edit" && (
               <button
                 onClick={() => setShowPublish(true)}
-                className="font-[var(--font-bangers)] text-xs sm:text-sm px-2.5 py-1.5 sm:px-4 sm:py-2 border-2 border-[#0a0a0f] transition-all bg-emerald-400 text-[#0a0a0f] shadow-[2px_2px_0_#0a0a0f] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0_#0a0a0f]"
+                className="font-[var(--font-bangers)] text-xs sm:text-sm px-2 sm:px-4 py-1.5 sm:py-2 border-2 border-[#0a0a0f] transition-all bg-emerald-400 text-[#0a0a0f] shadow-[2px_2px_0_#0a0a0f] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0_#0a0a0f] flex items-center justify-center gap-1"
               >
-                🚀 Publicar
+                <span>🚀</span>
+                <span className="hidden sm:inline">Publicar</span>
               </button>
             )}
 
             {/* Mode toggle */}
             <button
               onClick={handleToggleMode}
-              className={`font-[var(--font-bangers)] text-xs sm:text-sm px-2.5 py-1.5 sm:px-4 sm:py-2 transition-all ${
+              className={`font-[var(--font-bangers)] text-xs sm:text-sm px-2 sm:px-4 py-1.5 sm:py-2 transition-all flex items-center justify-center gap-1 ${
                 isReadMode
                   ? "border border-white/20 bg-white/10 hover:bg-white/20 text-white rounded-sm"
                   : mode === "edit"
@@ -372,7 +373,8 @@ export function ReaderTopBar({
                   : "bg-[#0a0a0f] text-white border-2 border-[#0a0a0f] hover:bg-zinc-800"
               }`}
             >
-              {mode === "edit" ? "🛠️ Editor" : "📖 Lectura"}
+              <span>{mode === "edit" ? "🛠️" : "📖"}</span>
+              <span className="hidden sm:inline">{mode === "edit" ? "Editor" : "Lectura"}</span>
             </button>
 
 

@@ -87,6 +87,7 @@ export function resolveFontFamily(
     case "electronic": return "ui-monospace, monospace";
     case "whisper":    return "var(--font-marker)";
     case "sfx":        return "var(--font-luckiest)";
+    case "caption":    return "var(--font-inter), sans-serif";
     default:           return "var(--font-marker)";
   }
 }
@@ -94,15 +95,26 @@ export function resolveFontFamily(
 /**
  * Resolves a DialogueLine's fontFamily to a Tailwind font class string.
  */
-export function resolveFontClass(line: DialogueLine): string {
-  switch (line.fontFamily) {
-    case "bangers":  return "font-[var(--font-bangers)]";
-    case "mono":     return "font-mono";
-    case "sans":     return "font-sans";
-    case "serif":    return "font-serif";
-    case "bungee":   return "font-[var(--font-bungee)]";
-    case "luckiest": return "font-[var(--font-luckiest)]";
-    default:         return "font-[var(--font-marker)]";
+export function resolveFontClass(line: DialogueLine, style?: string): string {
+  if (line.fontFamily) {
+    switch (line.fontFamily) {
+      case "bangers":  return "font-[var(--font-bangers)]";
+      case "mono":     return "font-mono";
+      case "sans":     return "font-sans font-bold";
+      case "serif":    return "font-serif";
+      case "bungee":   return "font-[var(--font-bungee)]";
+      case "luckiest": return "font-[var(--font-luckiest)]";
+      default:         return "font-[var(--font-marker)]";
+    }
+  }
+
+  const activeStyle = line.style || style || "normal";
+  switch (activeStyle) {
+    case "caption":    return "font-sans font-bold";
+    case "scream":     return "font-[var(--font-bangers)]";
+    case "electronic": return "font-mono";
+    case "sfx":        return "font-[var(--font-luckiest)]";
+    default:           return "font-[var(--font-marker)]";
   }
 }
 

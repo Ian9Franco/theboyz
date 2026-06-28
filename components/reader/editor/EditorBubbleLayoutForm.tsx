@@ -2,7 +2,7 @@
 
 import React from "react";
 import type { DialogueLine } from "../DialogueBubble";
-import type { PanelConfig } from "../DialogueEditorPanel";
+import type { PanelStop as PanelConfig } from "../audioPlayer";
 
 interface EditorBubbleLayoutFormProps {
   bubble: DialogueLine;
@@ -22,16 +22,16 @@ export function EditorBubbleLayoutForm({
   return (
     <div className="flex flex-col gap-3">
       {/* Bubble Dimension Sliders */}
-      <div className="flex flex-col gap-3 p-3 bg-zinc-100/50 border border-zinc-200 rounded">
+      <div className="flex flex-col gap-3 p-3 bg-[#0a0a0f] border border-white/10 rounded">
         {/* Max Width */}
         <div className="flex flex-col gap-1">
-          <div className="flex justify-between items-center text-xs font-bold text-zinc-600">
+          <div className="flex justify-between items-center text-xs font-bold text-zinc-300">
             <span>Ancho Máx: {bubble.width ? `${bubble.width}px` : "Defecto"}</span>
             {bubble.width !== undefined && (
               <button
                 type="button"
                 onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { width: undefined })}
-                className="text-[10px] text-red-500 hover:underline"
+                className="text-[10px] text-red-500 hover:text-red-400 hover:underline cursor-pointer"
               >
                 Reset
               </button>
@@ -50,13 +50,13 @@ export function EditorBubbleLayoutForm({
 
         {/* Font Size */}
         <div className="flex flex-col gap-1">
-          <div className="flex justify-between items-center text-xs font-bold text-zinc-600">
+          <div className="flex justify-between items-center text-xs font-bold text-zinc-300">
             <span>Tamaño Letra: {bubble.fontSize ? `${bubble.fontSize}px` : "Defecto"}</span>
             {bubble.fontSize !== undefined && (
               <button
                 type="button"
                 onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { fontSize: undefined })}
-                className="text-[10px] text-red-500 hover:underline"
+                className="text-[10px] text-red-500 hover:text-red-400 hover:underline cursor-pointer"
               >
                 Reset
               </button>
@@ -75,7 +75,7 @@ export function EditorBubbleLayoutForm({
 
         {/* Border Radius */}
         <div className="flex flex-col gap-1">
-          <div className="flex justify-between items-center text-xs font-bold text-zinc-600">
+          <div className="flex justify-between items-center text-xs font-bold text-zinc-300">
             <span>
               Curvatura Borde:{" "}
               {bubble.borderRadius !== undefined ? `${bubble.borderRadius}px` : "Defecto"}
@@ -84,7 +84,7 @@ export function EditorBubbleLayoutForm({
               <button
                 type="button"
                 onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { borderRadius: undefined })}
-                className="text-[10px] text-red-500 hover:underline"
+                className="text-[10px] text-red-500 hover:text-red-400 hover:underline cursor-pointer"
               >
                 Reset
               </button>
@@ -107,7 +107,7 @@ export function EditorBubbleLayoutForm({
       {/* Dialogue Text Area */}
       <div className="flex flex-col gap-1">
         <div className="flex justify-between items-center">
-          <label className="text-xs font-bold text-zinc-600">Texto:</label>
+          <label className="text-xs font-bold text-zinc-300">Texto:</label>
           <button
             type="button"
             onClick={async () => {
@@ -120,7 +120,7 @@ export function EditorBubbleLayoutForm({
                 console.error("Error al leer el portapapeles:", err);
               }
             }}
-            className="font-[var(--font-bangers)] text-[10px] bg-blue-100 hover:bg-blue-200 text-blue-600 border border-blue-300 px-2 py-0.5 rounded transition-all"
+            className="font-[var(--font-bangers)] text-[10px] bg-blue-950/40 hover:bg-blue-900/30 text-blue-300 border border-blue-900/40 px-2 py-0.5 rounded transition-all cursor-pointer"
           >
             ⚡ Auto (Pegar)
           </button>
@@ -128,22 +128,22 @@ export function EditorBubbleLayoutForm({
         <textarea
           value={bubble.text}
           onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: e.target.value })}
-          className="w-full h-20 border-2 border-[#0a0a0f] p-2 text-xs font-sans rounded bg-white text-[#0a0a0f] resize-none"
+          className="w-full h-20 border border-white/10 p-2 text-xs font-sans rounded bg-[#0a0a0f] text-white resize-none focus:outline-none focus:ring-1 focus:ring-[#e8185a]"
           placeholder="Escribí el diálogo..."
         />
       </div>
 
       {/* Position Margins Presets */}
       <div className="flex flex-col gap-1 mt-1">
-        <label className="text-xs font-bold text-zinc-600">Posición Rápida (Márgenes/Viñeta):</label>
+        <label className="text-xs font-bold text-zinc-300">Posición Rápida (Márgenes/Viñeta):</label>
         <div className="grid grid-cols-2 gap-1.5">
           <button
             type="button"
             onClick={() => {
-              const targetY = Math.round(currentPanels[activePanelIdx].focusY * 100);
+              const targetY = Math.round((currentPanels[activePanelIdx]?.focusY ?? 0.5) * 100);
               handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: -15, posY: targetY });
             }}
-            className="px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5"
+            className="px-2 py-1.5 bg-[#161622] hover:bg-[#1f1f2e] border border-white/10 text-zinc-200 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5 cursor-pointer"
           >
             <span>👈 Margen Izq.</span>
             <span className="text-[8px] text-zinc-500 font-mono">[-15%, Y]</span>
@@ -151,10 +151,10 @@ export function EditorBubbleLayoutForm({
           <button
             type="button"
             onClick={() => {
-              const targetY = Math.round(currentPanels[activePanelIdx].focusY * 100);
+              const targetY = Math.round((currentPanels[activePanelIdx]?.focusY ?? 0.5) * 100);
               handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: 115, posY: targetY });
             }}
-            className="px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5"
+            className="px-2 py-1.5 bg-[#161622] hover:bg-[#1f1f2e] border border-white/10 text-zinc-200 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5 cursor-pointer"
           >
             <span>👉 Margen Der.</span>
             <span className="text-[8px] text-zinc-500 font-mono">[115%, Y]</span>
@@ -164,7 +164,7 @@ export function EditorBubbleLayoutForm({
             onClick={() => {
               handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: 50, posY: -15 });
             }}
-            className="px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5"
+            className="px-2 py-1.5 bg-[#161622] hover:bg-[#1f1f2e] border border-white/10 text-zinc-200 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5 cursor-pointer"
           >
             <span>👆 Margen Sup.</span>
             <span className="text-[8px] text-zinc-500 font-mono">[50%, -15%]</span>
@@ -174,7 +174,7 @@ export function EditorBubbleLayoutForm({
             onClick={() => {
               handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: 50, posY: 115 });
             }}
-            className="px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5"
+            className="px-2 py-1.5 bg-[#161622] hover:bg-[#1f1f2e] border border-white/10 text-zinc-200 text-[10px] font-bold rounded text-left flex justify-between items-center transition-colors active:translate-y-0.5 cursor-pointer"
           >
             <span>👇 Margen Inf.</span>
             <span className="text-[8px] text-zinc-500 font-mono">[50%, 115%]</span>
@@ -182,10 +182,10 @@ export function EditorBubbleLayoutForm({
           <button
             type="button"
             onClick={() => {
-              const targetY = Math.round(currentPanels[activePanelIdx].focusY * 100);
+              const targetY = Math.round((currentPanels[activePanelIdx]?.focusY ?? 0.5) * 100);
               handleUpdateBubble(activePanelIdx, activeBubbleIdx, { posX: 50, posY: targetY });
             }}
-            className="col-span-2 px-2 py-1.5 bg-zinc-100 hover:bg-zinc-200 border border-[#0a0a0f] text-zinc-800 text-[10px] font-bold rounded text-center transition-colors active:translate-y-0.5"
+            className="col-span-2 px-2 py-1.5 bg-[#161622] hover:bg-[#1f1f2e] border border-white/10 text-zinc-250 text-[10px] font-bold rounded text-center transition-colors active:translate-y-0.5 cursor-pointer"
           >
             🎯 Centro de Viñeta <span className="text-zinc-500 font-mono ml-1 text-[8px]">[50%, Y]</span>
           </button>
@@ -195,7 +195,7 @@ export function EditorBubbleLayoutForm({
       {/* Manual coordinates input */}
       <div className="grid grid-cols-2 gap-2 mt-1">
         <div className="flex flex-col gap-1">
-          <label className="text-[10px] font-bold text-zinc-500">X (Ancho %):</label>
+          <label className="text-[10px] font-bold text-zinc-400">X (Ancho %):</label>
           <input
             type="number"
             min="-20"
@@ -206,11 +206,11 @@ export function EditorBubbleLayoutForm({
                 posX: Math.max(-20, Math.min(120, parseInt(e.target.value) || 0)),
               })
             }
-            className="border-2 border-[#0a0a0f] p-1.5 text-xs font-mono text-center bg-white text-[#0a0a0f]"
+            className="border border-white/10 p-1.5 text-xs font-mono text-center bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a]"
           />
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-[10px] font-bold text-zinc-500">Y (Alto %):</label>
+          <label className="text-[10px] font-bold text-zinc-400">Y (Alto %):</label>
           <input
             type="number"
             min="-20"
@@ -221,7 +221,7 @@ export function EditorBubbleLayoutForm({
                 posY: Math.max(-20, Math.min(120, parseInt(e.target.value) || 0)),
               })
             }
-            className="border-2 border-[#0a0a0f] p-1.5 text-xs font-mono text-center bg-white text-[#0a0a0f]"
+            className="border border-white/10 p-1.5 text-xs font-mono text-center bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a]"
           />
         </div>
       </div>

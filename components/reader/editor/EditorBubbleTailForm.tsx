@@ -30,9 +30,9 @@ export function EditorBubbleTailForm({
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex flex-col gap-1.5 p-2.5 bg-blue-50/50 border border-blue-200 rounded">
+      <div className="flex flex-col gap-1.5 p-2.5 bg-[#0a0a0f] border border-white/10 rounded">
         <div className="flex items-center justify-between">
-          <label className="text-[11px] font-bold text-blue-800">🗨️ Cola del globo</label>
+          <label className="text-[11px] font-bold text-zinc-300">🗨️ Cola del globo</label>
           <button
             type="button"
             onClick={() =>
@@ -44,10 +44,10 @@ export function EditorBubbleTailForm({
                   : { tail: "none", tailX: undefined, tailY: undefined }
               )
             }
-            className={`text-[10px] font-bold px-2 py-0.5 rounded border transition-all ${
+            className={`text-[10px] font-bold px-2 py-0.5 rounded border transition-all cursor-pointer ${
               isHidden
-                ? "bg-zinc-200 text-zinc-500 border-zinc-300"
-                : "bg-green-100 text-green-800 border-green-300 hover:bg-red-50 hover:text-red-700 hover:border-red-300"
+                ? "bg-zinc-800 text-zinc-400 border-white/10 hover:bg-zinc-700"
+                : "bg-red-950/40 text-red-400 border-red-900/40 hover:bg-red-900/30 hover:text-red-300"
             }`}
           >
             {isHidden ? "Sin cola" : "✓ Visible — ocultar"}
@@ -65,10 +65,10 @@ export function EditorBubbleTailForm({
                     tail: bubble.tail === "none" ? "bottom-left" : bubble.tail,
                   })
                 }
-                className={`flex-1 py-1 text-[10px] font-bold rounded border transition-all ${
+                className={`flex-1 py-1 text-[10px] font-bold rounded border transition-all cursor-pointer ${
                   !hasAnchor
-                    ? "bg-blue-600 text-white border-blue-700"
-                    : "bg-white text-zinc-600 border-zinc-300 hover:bg-zinc-50"
+                    ? "bg-[#e8185a] text-white border-[#e8185a]"
+                    : "bg-[#161622] text-zinc-300 border-white/10 hover:border-zinc-550"
                 }`}
               >
                 🔺 CSS (fija)
@@ -81,10 +81,10 @@ export function EditorBubbleTailForm({
                     tailY: Math.max(-20, Math.min(120, (bubble.posY ?? 50) + 15)),
                   })
                 }
-                className={`flex-1 py-1 text-[10px] font-bold rounded border transition-all ${
+                className={`flex-1 py-1 text-[10px] font-bold rounded border transition-all cursor-pointer ${
                   hasAnchor
-                    ? "bg-blue-600 text-white border-blue-700"
-                    : "bg-white text-zinc-600 border-zinc-300 hover:bg-zinc-50"
+                    ? "bg-[#e8185a] text-white border-[#e8185a]"
+                    : "bg-[#161622] text-zinc-300 border-white/10 hover:border-zinc-550"
                 }`}
               >
                 🔵 SVG (elástica)
@@ -97,7 +97,7 @@ export function EditorBubbleTailForm({
                 onChange={(e) =>
                   handleUpdateBubble(activePanelIdx, activeBubbleIdx, { tail: e.target.value as any })
                 }
-                className="w-full border border-zinc-300 p-1.5 text-[11px] font-mono rounded bg-white text-[#0a0a0f]"
+                className="w-full border border-white/10 p-1.5 text-[11px] font-mono rounded bg-[#161622] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a] cursor-pointer"
               >
                 <option value="none">❌ Sin cola</option>
                 <option value="bottom-left">↙ Abajo-Izquierda</option>
@@ -112,7 +112,7 @@ export function EditorBubbleTailForm({
             {hasAnchor && (
               <>
                 <div className="flex flex-col gap-1">
-                  <span className="text-[10px] text-zinc-500 font-medium">Posición rápida del ancla:</span>
+                  <span className="text-[10px] text-zinc-400 font-medium">Posición rápida del ancla:</span>
                   <div className="grid grid-cols-3 gap-1">
                     {tailPresets.map(([label, dx, dy]) => (
                       <button
@@ -124,17 +124,17 @@ export function EditorBubbleTailForm({
                             tailY: Math.max(-20, Math.min(120, (bubble.posY ?? 50) + dy)),
                           })
                         }
-                        className="py-1 text-sm font-bold bg-white hover:bg-blue-100 border border-zinc-300 hover:border-blue-400 rounded transition-all active:scale-95"
+                        className="py-1 text-sm font-bold bg-[#161622] hover:bg-[#202030] border border-white/10 hover:border-zinc-500 rounded transition-all active:scale-95 cursor-pointer text-white"
                       >
                         {label}
                       </button>
                     ))}
                   </div>
-                  <p className="text-[9px] text-zinc-400 leading-tight">
+                  <p className="text-[9px] text-zinc-500 leading-tight">
                     Arrastrá el punto azul en el lienzo para ajuste fino.
                   </p>
                 </div>
-                <div className="text-[10px] font-mono text-blue-700 bg-blue-100 rounded px-2 py-1 flex items-center justify-between">
+                <div className="text-[10px] font-mono text-zinc-300 bg-[#161622] border border-white/10 rounded px-2 py-1 flex items-center justify-between">
                   <span>Ancla: X {bubble.tailX}% Y {bubble.tailY}%</span>
                   <button
                     type="button"
@@ -144,16 +144,16 @@ export function EditorBubbleTailForm({
                         tailY: undefined,
                       })
                     }
-                    className="text-red-500 hover:underline text-[9px] ml-2"
+                    className="text-red-500 hover:text-red-400 hover:underline text-[9px] ml-2 cursor-pointer"
                   >
                     quitar
                   </button>
                 </div>
 
                 {/* Elastic Tail Styling */}
-                <div className="flex flex-col gap-2 mt-2 pt-2 border-t border-zinc-200">
+                <div className="flex flex-col gap-2 mt-2 pt-2 border-t border-white/10">
                   <div className="flex flex-col gap-1">
-                    <div className="flex justify-between items-center text-[10px] font-bold text-zinc-600">
+                    <div className="flex justify-between items-center text-[10px] font-bold text-zinc-350">
                       <span>Grosor Base: {bubble.tailWidth ?? "Auto"}</span>
                       {bubble.tailWidth !== undefined && (
                         <button
@@ -161,7 +161,7 @@ export function EditorBubbleTailForm({
                           onClick={() =>
                             handleUpdateBubble(activePanelIdx, activeBubbleIdx, { tailWidth: undefined })
                           }
-                          className="text-[9px] text-red-500 hover:underline"
+                          className="text-[9px] text-red-500 hover:text-red-400 hover:underline cursor-pointer"
                         >
                           Reset
                         </button>
@@ -178,11 +178,11 @@ export function EditorBubbleTailForm({
                           tailWidth: parseInt(e.target.value),
                         })
                       }
-                      className="w-full accent-blue-600 cursor-pointer"
+                      className="w-full accent-[#e8185a] cursor-pointer"
                     />
                   </div>
                   <div className="flex flex-col gap-1">
-                    <div className="flex justify-between items-center text-[10px] font-bold text-zinc-600">
+                    <div className="flex justify-between items-center text-[10px] font-bold text-zinc-350">
                       <span>Curvatura: {bubble.tailCurvature ?? 0}</span>
                       {bubble.tailCurvature !== undefined && (
                         <button
@@ -192,7 +192,7 @@ export function EditorBubbleTailForm({
                               tailCurvature: undefined,
                             })
                           }
-                          className="text-[9px] text-red-500 hover:underline"
+                          className="text-[9px] text-red-500 hover:text-red-400 hover:underline cursor-pointer"
                         >
                           Reset
                         </button>
@@ -209,7 +209,7 @@ export function EditorBubbleTailForm({
                           tailCurvature: parseInt(e.target.value),
                         })
                       }
-                      className="w-full accent-blue-600 cursor-pointer"
+                      className="w-full accent-[#e8185a] cursor-pointer"
                     />
                   </div>
                 </div>

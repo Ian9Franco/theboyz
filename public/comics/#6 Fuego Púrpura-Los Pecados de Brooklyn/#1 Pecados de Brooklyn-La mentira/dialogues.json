@@ -4,16 +4,35 @@
       "panels": [
         {
           "focusY": 0.3,
-          "dialogue": []
-        },
-        {
-          "focusY": 0.88,
-          "dialogue": []
+          "dialogue": [
+            { "text": "Prologo", "style": "caption", "size": "small", "posX": 6, "posY": 4, "tailX": 50, "tailY": 5, "tailWidth": 6, "tailCurvature": -22, "width": 155, "fontSize": 12, "borderRadius": 0, "customBg": "#f5e642", "customColor": "#000000", "fontFamily": "sans" },
+            { "text": "Laboratorio científico V.O.P.S", "style": "caption", "size": "small", "posX": 50, "posY": 0, "tailX": 50, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 9, "borderRadius": 4 }
+          ]
         }
       ]
     }
   },
   "settings": {
-    "dialogueDepth": 2
-  }
+    "dialogueDepth": 5
+  },
+  "audioTracks": [
+    {
+      "id": "track-1782687632576-qavau",
+      "layer": "music",
+      "src": "/sounds/sfx/lluvia_truenos.mp3",
+      "startPageKey": "0",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "8"
+      },
+      "soundConfig": {
+        "volume": 0.2,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1800,
+        "fadeOut": 1800
+      }
+    }
+  ]
 }

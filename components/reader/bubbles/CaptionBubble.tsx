@@ -56,7 +56,7 @@ export function CaptionBubble({
   const fontClass           = resolveFontClass(line);
 
   // ── Colours ──
-  const captionBg           = line.customBg    || "#ffffff";
+  const captionBg           = line.customBg    || "#f5e642";
   const captionBorderColor  = line.customColor || "#0a0a0f";
   const captionSpeakerColor = getSpeakerColor(line.speaker, "#e8185a");
 

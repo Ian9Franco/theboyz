@@ -45,7 +45,7 @@ export function getBubbleStyles(line: DialogueLine) {
     bgColor     = line.customBg    || "rgba(0, 240, 255, 0.07)";
     borderColor = line.customColor || "#00f0ff";
   } else if (style === "caption") {
-    bgColor     = line.customBg    || "#ffffff";
+    bgColor     = line.customBg    || "#f5e642";
     borderColor = line.customColor || "#0a0a0f";
   } else if (style === "thought") {
     bgColor     = line.customBg    || "#ffffff";
