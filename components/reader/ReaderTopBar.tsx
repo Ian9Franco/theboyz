@@ -37,6 +37,10 @@ interface ReaderTopBarProps {
   setFocusDialogue?: (value: boolean) => void;
   focusPanel?: boolean;
   setFocusPanel?: (value: boolean) => void;
+  zoomScale?: number;
+  setZoomScale?: React.Dispatch<React.SetStateAction<number>>;
+  panOffset?: { x: number; y: number };
+  setPanOffset?: (val: { x: number; y: number }) => void;
 }
 
 /**
@@ -64,6 +68,10 @@ export function ReaderTopBar({
   setFocusDialogue,
   focusPanel = true,
   setFocusPanel,
+  zoomScale,
+  setZoomScale,
+  panOffset,
+  setPanOffset,
 }: ReaderTopBarProps) {
   const [showPublish, setShowPublish] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -132,6 +140,15 @@ export function ReaderTopBar({
               ← Volver
             </Link>
 
+            {isReadMode && (
+              <Link
+                href="/lore"
+                className="font-[var(--font-bangers)] text-xs sm:text-sm px-2.5 py-1.5 border border-white/25 bg-white/10 hover:bg-white/20 text-white transition-all rounded-sm backdrop-blur-sm uppercase"
+              >
+                Lore
+              </Link>
+            )}
+
             <div className="hidden md:flex items-center gap-2">
               <span
                 className="tag text-xs"
@@ -150,6 +167,40 @@ export function ReaderTopBar({
 
           {/* Right — controls */}
           <div className="flex items-center gap-1.5 sm:gap-2">
+
+            {/* Mobile Zoom Controls */}
+            {mode === "read" && setZoomScale && zoomScale !== undefined && (
+              <div className="flex md:hidden items-center gap-1 bg-black/40 border border-white/20 px-1 py-0.5 rounded-sm shrink-0">
+                <button
+                  onClick={() => setZoomScale((prev) => Math.max(0.5, prev - 0.5))}
+                  disabled={zoomScale <= 0.5}
+                  className="w-7 h-7 flex items-center justify-center font-bold text-white bg-white/10 hover:bg-white/20 disabled:opacity-30 disabled:pointer-events-none rounded-sm text-sm"
+                >
+                  －
+                </button>
+                <span className="text-white font-[var(--font-bangers)] text-xs min-w-[20px] text-center select-none leading-none">
+                  {zoomScale.toFixed(1)}x
+                </span>
+                <button
+                  onClick={() => setZoomScale((prev) => Math.min(4, prev + 0.5))}
+                  disabled={zoomScale >= 4}
+                  className="w-7 h-7 flex items-center justify-center font-bold text-white bg-white/10 hover:bg-white/20 disabled:opacity-30 disabled:pointer-events-none rounded-sm text-sm"
+                >
+                  ＋
+                </button>
+                {(Math.abs(zoomScale - 1) > 0.01 || (panOffset && (panOffset.x !== 0 || panOffset.y !== 0))) && (
+                  <button
+                    onClick={() => {
+                      setZoomScale(1);
+                      if (setPanOffset) setPanOffset({ x: 0, y: 0 });
+                    }}
+                    className="w-7 h-7 flex items-center justify-center text-xs bg-rose-500 hover:bg-rose-600 text-white rounded-sm"
+                  >
+                    🔄
+                  </button>
+                )}
+              </div>
+            )}
 
             {/* Read mode settings */}
             {mode === "read" && (

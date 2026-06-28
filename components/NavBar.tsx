@@ -132,28 +132,13 @@ export default function NavBar() {
             </div>
           </div>
 
-          {/* Lore Dropdown */}
-          <div className="relative group">
-            <button
-              className="font-[var(--font-bangers)] text-xl tracking-wider text-white/80 hover:text-[#f5e642] transition-colors pb-1 border-b-2 border-transparent hover:border-[#f5e642] flex items-center gap-1"
-            >
-              Universo
-              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className="opacity-60 group-hover:opacity-100 transition-all group-hover:translate-y-0.5">
-                <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-            </button>
-            <div className="absolute top-full right-0 pt-2 hidden group-hover:flex flex-col z-50">
-              <div
-                className="flex flex-col gap-1 p-2 min-w-[260px]"
-                style={{ background: "#13131e", border: "2px solid #0f1b3d", boxShadow: "6px 6px 0 #0f1b3d" }}
-              >
-                <Link href="/lore"
-                  className="font-[var(--font-bangers)] text-lg tracking-wider px-3 py-2 text-white hover:text-[#0a0a0f] hover:bg-[#f5e642] transition-all block">
-                  <span className="text-[#4a6fa5] mr-2">✦</span>Historia y Poderes
-                </Link>
-              </div>
-            </div>
-          </div>
+          {/* Lore Button */}
+          <Link
+            href="/lore"
+            className="font-[var(--font-bangers)] text-xl tracking-wider text-white/80 hover:text-[#f5e642] transition-colors pb-1 border-b-2 border-transparent hover:border-[#f5e642] uppercase"
+          >
+            LORE
+          </Link>
 
           {/* Personajes Button */}
           <Link
@@ -227,15 +212,10 @@ export default function NavBar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div style={{ background: "#13131e", borderTop: "2px solid #0f1b3d" }} className="md:hidden px-5 py-6 flex flex-col gap-5">
-          {/* Leer Cómic Button on Mobile Dropdown */}
-          <Link
-            href="/#pibes"
-            onClick={() => setMenuOpen(false)}
-            className="w-full font-[var(--font-bangers)] text-lg text-center tracking-wider py-2.5 border-2 border-white/30 bg-transparent hover:bg-white/10 text-white uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] block"
-          >
-            — Personajes —
-          </Link>
+        <div
+          style={{ background: "#13131e", borderTop: "2px solid #0f1b3d", maxHeight: "calc(100vh - 64px)" }}
+          className="md:hidden px-5 py-6 flex flex-col gap-5 overflow-y-auto"
+        >
           <Link
             href="/#sagas"
             onClick={() => setMenuOpen(false)}
@@ -244,14 +224,22 @@ export default function NavBar() {
             Leer Cómic →
           </Link>
 
+          <Link
+            href="/lore"
+            onClick={() => setMenuOpen(false)}
+            className="w-full font-[var(--font-bangers)] text-lg text-center tracking-wider py-2.5 border-2 border-white/30 bg-transparent hover:bg-white/10 text-white uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] block"
+          >
+            LORE
+          </Link>
+
           {/* Button at the top of mobile menu */}
           <button
             onClick={toggleUnlockAll}
-            className={`w-full font-[var(--font-bangers)] text-lg tracking-wider py-2.5 border-2 border-black uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] cursor-pointer ${
-              unlockAll 
-                ? "bg-[#6b7280] text-white" 
-                : "bg-[#f5e642] text-black"
-            }`}
+            className="w-full font-[var(--font-bangers)] text-lg tracking-wider py-2.5 border-2 border-black uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] cursor-pointer"
+            style={{
+              backgroundColor: unlockAll ? "#6b7280" : "#f5e642",
+              color: unlockAll ? "white" : "black"
+            }}
           >
             {unlockAll ? "✕ Ocultar Spoilers" : "🔓 Desbloquear Todo"}
           </button>
@@ -311,20 +299,6 @@ export default function NavBar() {
               )}
             </div>
           )}
-
-          <div key="lore-mobile">
-            <p
-              className="font-[var(--font-bangers)] text-2xl mb-2 tracking-widest"
-              style={{ color: "#f5e642" }}
-            >
-              Universo
-            </p>
-            <Link href="/lore"
-              onClick={() => setMenuOpen(false)}
-              className="font-[var(--font-bangers)] text-xl tracking-wider pl-4 py-1.5 block text-white/70 hover:text-[#f5e642] hover:pl-6 transition-all border-l-2 border-white/10 hover:border-[#4a6fa5] mb-1">
-              <span className="text-[#4a6fa5] mr-2">✦</span>Historia y Poderes
-            </Link>
-          </div>
         </div>
       )}
     </header>

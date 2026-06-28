@@ -4,13 +4,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const GLOSARIO_CHARS: Record<string, { name: string; role: string; color: string; image: string; tag: string }> = {
-  ian:    { name: "Ian",    role: "Vesperwing",  color: "#10b981", image: "/personajes/LosPibes/CLOSEUP/IAN_FACE.webp",    tag: "Humano / Nexo Estratégico sin poderes biológicos" },
-  jaz:    { name: "Jaz",   role: "Oracle",      color: "#f5e642", image: "/personajes/LosPibes/CLOSEUP/JAZ_FACE.webp",    tag: "Enlace Dimensional / Clarividente Psíquica" },
-  julian: { name: "Julián",role: "Wildcard",    color: "#3b82f6", image: "/personajes/LosPibes/CLOSEUP/JULIAN_FACE.webp", tag: "Hostigador Energético / Constructos Glitch" },
-  mati:   { name: "Mati",  role: "Swapfire",    color: "#a855f7", image: "/personajes/LosPibes/CLOSEUP/MATI_FACE.webp",   tag: "Nexo Cósmico / Plasma Violeta Bifásico" },
-  uandi:  { name: "Uandi", role: "Aegis",       color: "#ef4444", image: "/personajes/LosPibes/CLOSEUP/UANDI_FACE.webp",  tag: "Tanque Cinético / Batería de Impacto" },
-  volvo:  { name: "Volvo", role: "Null Vector",  color: "#f97316", image: "/personajes/LosPibes/CLOSEUP/VOLVO_FACE.webp",  tag: "Movilidad Absoluta / Teletransportación Blink" },
-  sofi:   { name: "Sofi",  role: "Hush",        color: "#06b6d4", image: "/personajes/LosPibes/CLOSEUP/SOFI_FACE.webp",   tag: "Duelista Acústica / Sigilo y Eco-Precisión" },
+  ian:    { name: "Ian",    role: "Vesperwing",  color: "#10b981", image: "/personajes/CLOSEUP/boyz/VESPERWING/IAN_FACE.webp",    tag: "Humano / Nexo Estratégico sin poderes biológicos" },
+  jaz:    { name: "Jaz",   role: "Oracle",      color: "#f5e642", image: "/personajes/CLOSEUP/boyz/ORACLE/JAZ_FACE.webp",    tag: "Enlace Dimensional / Clarividente Psíquica" },
+  julian: { name: "Julián",role: "Wildcard",    color: "#3b82f6", image: "/personajes/CLOSEUP/boyz/WILDCARD/JULIAN_FACE.webp", tag: "Hostigador Energético / Constructos Glitch" },
+  mati:   { name: "Mati",  role: "Swapfire",    color: "#a855f7", image: "/personajes/CLOSEUP/boyz/SWAPFIRE/MATI_FACE.webp",   tag: "Nexo Cósmico / Plasma Violeta Bifásico" },
+  uandi:  { name: "Uandi", role: "Aegis",       color: "#ef4444", image: "/personajes/CLOSEUP/boyz/AEGIS/UANDI_FACE.webp",  tag: "Tanque Cinético / Batería de Impacto" },
+  volvo:  { name: "Volvo", role: "Null Vector",  color: "#f97316", image: "/personajes/CLOSEUP/boyz/VECTOR/VOLVO_FACE.webp",  tag: "Movilidad Absoluta / Teletransportación Blink" },
+  sofi:   { name: "Sofi",  role: "Hush",        color: "#06b6d4", image: "/personajes/CLOSEUP/boyz/HUSH/SOFI_FACE.webp",   tag: "Duelista Acústica / Sigilo y Eco-Precisión" },
 };
 
 export function GlosarioLink({ id, children }: { id: string; children: React.ReactNode }) {
@@ -18,11 +18,17 @@ export function GlosarioLink({ id, children }: { id: string; children: React.Rea
   const charData = GLOSARIO_CHARS[id];
   if (!charData) return <span className="font-bold text-white">{children}</span>;
 
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.dispatchEvent(new CustomEvent("open-character-modal", { detail: { id } }));
+  };
+
   return (
     <span
-      className="relative inline-block cursor-help group"
+      className="relative inline-block cursor-pointer group"
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
+      onClick={handleClick}
     >
       <strong
         className="underline decoration-dotted decoration-2 transition-all duration-200 hover:text-white"

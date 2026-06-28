@@ -287,55 +287,50 @@ export function EditorAudioTracks({
   const stopPanelCount = panelCountForPage(form.stopPageKey);
 
   return (
-    <div className="border-b-2 border-zinc-200 shrink-0">
-      {/* Accordion Header */}
-      <div className="p-4 flex justify-between items-center">
-        <button
-          type="button"
-          onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-1.5 font-[var(--font-bangers)] text-lg text-zinc-600 tracking-wider hover:text-[#e8185a] transition-colors"
-        >
-          <span>{isOpen ? "▼" : "▶"} Pistas de Audio</span>
-          <span className="text-xs font-mono bg-zinc-200 text-zinc-700 px-1.5 py-0.5 rounded-full">
+    <div className="border-b border-white/10 shrink-0">
+      {/* Static Header */}
+      <div className="p-4 flex justify-between items-center bg-[#161622]">
+        <div className="flex items-center gap-1.5 font-[var(--font-bangers)] text-lg text-zinc-300 tracking-wider">
+          <span>🔊 Pistas de Audio</span>
+          <span className="text-xs font-mono bg-zinc-800 text-zinc-300 px-1.5 py-0.5 rounded-full border border-white/10">
             {audioTracks.length}
           </span>
-        </button>
-        {isOpen && !showForm && (
+        </div>
+        {!showForm && (
           <button
             type="button"
             onClick={openNewForm}
-            className="font-[var(--font-bangers)] text-xs bg-blue-500 text-white border border-[#0a0a0f] px-2 py-1 shadow-[1px_1px_0_#0a0a0f] hover:bg-blue-600 transition-colors"
+            className="font-[var(--font-bangers)] text-xs bg-blue-600 text-white border border-white/10 px-2 py-1 shadow-lg hover:bg-blue-700 transition-colors rounded cursor-pointer"
           >
             + Nueva Pista
           </button>
         )}
       </div>
 
-      {isOpen && (
-        <div className="px-4 pb-4 flex flex-col gap-3">
+      <div className="px-4 pb-4 flex flex-col gap-3 bg-[#0a0a0f] pt-2">
           {/* ── Track List ── */}
           {audioTracks.length === 0 && !showForm && (
-            <div className="text-sm text-zinc-400 italic text-center py-4 border border-dashed border-zinc-300 rounded">
+            <div className="text-sm text-zinc-500 italic text-center py-4 border border-dashed border-white/10 rounded">
               No hay pistas. Usá "+ Nueva Pista" para agregar música o SFX persistente.
             </div>
           )}
 
           {audioTracks.map((track) => {
             const isPreviewing = previewingId === track.id;
-            const layerColor = track.layer === "music" ? "bg-purple-100 border-purple-300" : "bg-orange-100 border-orange-300";
+            const layerColor = track.layer === "music" ? "bg-purple-950/20 border-purple-900/40 text-purple-250" : "bg-amber-950/20 border-amber-900/40 text-amber-250";
             const layerBadge = track.layer === "music"
-              ? "bg-purple-600 text-white"
-              : "bg-orange-500 text-white";
+              ? "bg-purple-650 text-white"
+              : "bg-orange-650 text-white";
 
             return (
-              <div key={track.id} className={`border-2 rounded p-3 flex flex-col gap-2 ${layerColor}`}>
+              <div key={track.id} className={`border rounded p-3 flex flex-col gap-2 ${layerColor}`}>
                 {/* Track header */}
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-2 min-w-0">
                     <span className={`text-[9px] font-bold uppercase px-1.5 py-0.5 rounded shrink-0 ${layerBadge}`}>
                       {track.layer === "music" ? "🎵 Music" : "💥 SFX"}
                     </span>
-                    <span className="text-[10px] font-mono text-zinc-700 truncate">
+                    <span className="text-[10px] font-mono text-zinc-300 truncate">
                       {track.src.split("/").pop()}
                     </span>
                   </div>
@@ -343,10 +338,10 @@ export function EditorAudioTracks({
                     <button
                       type="button"
                       onClick={() => isPreviewing ? stopPreview() : playPreview(track)}
-                      className={`text-[9px] font-bold px-1.5 py-0.5 rounded border transition-all ${
+                      className={`text-[9px] font-bold px-1.5 py-0.5 rounded border transition-all cursor-pointer ${
                         isPreviewing
                           ? "bg-green-600 text-white border-green-700"
-                          : "bg-green-100 text-green-700 border-green-300 hover:bg-green-200"
+                          : "bg-green-950 text-green-300 border-green-800 hover:bg-green-900"
                       }`}
                     >
                       {isPreviewing ? "⏸" : "▶"}
@@ -354,14 +349,14 @@ export function EditorAudioTracks({
                     <button
                       type="button"
                       onClick={() => openEditForm(track)}
-                      className="text-[9px] font-bold px-1.5 py-0.5 rounded border bg-blue-100 text-blue-700 border-blue-300 hover:bg-blue-200 transition-all"
+                      className="text-[9px] font-bold px-1.5 py-0.5 rounded border bg-blue-950 text-blue-300 border-blue-800 hover:bg-blue-900 transition-all cursor-pointer"
                     >
                       ✏️
                     </button>
                     <button
                       type="button"
                       onClick={() => handleDeleteTrack(track.id)}
-                      className="text-[9px] font-bold px-1.5 py-0.5 rounded border bg-red-100 text-red-600 border-red-300 hover:bg-red-200 transition-all"
+                      className="text-[9px] font-bold px-1.5 py-0.5 rounded border bg-red-950 text-red-300 border-red-800 hover:bg-red-900 transition-all cursor-pointer"
                     >
                       ✕
                     </button>
@@ -370,11 +365,11 @@ export function EditorAudioTracks({
 
                 {/* Track details */}
                 <div className="flex flex-col gap-0.5">
-                  <div className="flex gap-2 text-[9px] font-mono text-zinc-600">
-                    <span className="bg-white/60 px-1.5 py-0.5 rounded border border-zinc-200">
+                  <div className="flex gap-2 text-[9px] font-mono text-zinc-400">
+                    <span className="bg-[#0a0a0f] px-1.5 py-0.5 rounded border border-white/5">
                       ▶ Pág {track.startPageKey}, Viñeta {track.startPanelIdx + 1}
                     </span>
-                    <span className="bg-white/60 px-1.5 py-0.5 rounded border border-zinc-200">
+                    <span className="bg-[#0a0a0f] px-1.5 py-0.5 rounded border border-white/5">
                       ⏹ {describeTrigger(track.stopTrigger)}
                     </span>
                   </div>
@@ -392,15 +387,15 @@ export function EditorAudioTracks({
 
           {/* ── New / Edit Form ── */}
           {showForm && (
-            <div className="border-2 border-blue-400 rounded p-3 bg-blue-50 flex flex-col gap-3">
+            <div className="border border-blue-500/40 rounded p-3 bg-[#161622] flex flex-col gap-3">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold text-blue-800 uppercase tracking-wider">
+                <span className="text-[11px] font-bold text-blue-400 uppercase tracking-wider">
                   {editingId ? "✏️ Editar Pista" : "➕ Nueva Pista"}
                 </span>
                 <button
                   type="button"
                   onClick={closeForm}
-                  className="text-[10px] text-zinc-500 hover:text-zinc-800"
+                  className="text-[10px] text-zinc-400 hover:text-zinc-200 cursor-pointer"
                 >
                   ✕ Cancelar
                 </button>
@@ -408,24 +403,24 @@ export function EditorAudioTracks({
 
               {/* Layer selector */}
               <div className="flex flex-col gap-1">
-                <label className="text-[9px] font-bold text-zinc-600 uppercase tracking-wider">Capa</label>
+                <label className="text-[9px] font-bold text-zinc-400 uppercase tracking-wider">Capa</label>
                 <div className="flex gap-2">
                   {(["music", "sfx"] as const).map((l) => (
                     <button
                       key={l}
                       type="button"
                       onClick={() => handleFormChange("layer", l)}
-                      className={`flex-1 text-[9px] font-bold py-1.5 rounded border transition-all ${
+                      className={`flex-1 text-[9px] font-bold py-1.5 rounded border transition-all cursor-pointer ${
                         form.layer === l
-                          ? l === "music" ? "bg-purple-600 text-white border-purple-700" : "bg-orange-500 text-white border-orange-600"
-                          : "bg-white text-zinc-500 border-zinc-300 hover:border-zinc-400"
+                          ? l === "music" ? "bg-purple-655 text-white border-purple-700" : "bg-orange-655 text-white border-orange-600"
+                          : "bg-[#0a0a0f] text-zinc-450 border-white/10 hover:border-white/20"
                       }`}
                     >
                       {l === "music" ? "🎵 Música" : "💥 SFX"}
                     </button>
                   ))}
                 </div>
-                <p className="text-[8px] text-zinc-400">
+                <p className="text-[8px] text-zinc-500">
                   {form.layer === "music"
                     ? "No interrumpe pistas SFX activas."
                     : "No interrumpe pistas de música activas."}
@@ -434,12 +429,12 @@ export function EditorAudioTracks({
 
               {/* Sound selector */}
               <div className="flex flex-col gap-1">
-                <label className="text-[9px] font-bold text-zinc-600 uppercase tracking-wider">Sonido</label>
+                <label className="text-[9px] font-bold text-zinc-400 uppercase tracking-wider">Sonido</label>
                 <div className="flex gap-2">
                   <select
                     value={form.src}
                     onChange={(e) => handleFormChange("src", e.target.value)}
-                    className="flex-1 text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                    className="flex-1 text-[8px] px-1.5 py-1 border border-white/10 rounded font-mono bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
                   >
                     <option value="">-- Seleccioná un archivo --</option>
                     {availableSounds.map((s) => (
@@ -450,10 +445,10 @@ export function EditorAudioTracks({
                     <button
                       type="button"
                       onClick={handlePreviewFormTrack}
-                      className={`text-[8px] font-bold px-2.5 py-1 rounded border transition-all ${
+                      className={`text-[8px] font-bold px-2.5 py-1 rounded border transition-all cursor-pointer ${
                         previewingId === "__form_preview__"
                           ? "bg-green-600 text-white border-green-700 shadow-inner"
-                          : "bg-green-500 hover:bg-green-600 text-white border-green-700"
+                          : "bg-green-700 hover:bg-green-600 text-white border-green-800"
                       }`}
                     >
                       {previewingId === "__form_preview__" ? "⏸ Detener" : "▶ Preview"}
@@ -463,15 +458,15 @@ export function EditorAudioTracks({
               </div>
 
               {/* Start position */}
-              <div className="border border-zinc-200 rounded p-2 bg-white flex flex-col gap-2">
-                <span className="text-[9px] font-bold text-zinc-600 uppercase tracking-wider">▶ Inicio</span>
+              <div className="border border-white/5 rounded p-2 bg-[#0a0a0f] flex flex-col gap-2">
+                <span className="text-[9px] font-bold text-zinc-400 uppercase tracking-wider">▶ Inicio</span>
                 <div className="grid grid-cols-2 gap-2">
                   <div className="flex flex-col gap-0.5">
                     <label className="text-[8px] font-mono text-zinc-500">Página</label>
                     <select
                       value={form.startPageKey}
                       onChange={(e) => handleFormChange("startPageKey", e.target.value)}
-                      className="text-[8px] px-1 py-0.5 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                      className="text-[8px] px-1 py-0.5 border border-white/10 rounded font-mono bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
                     >
                       {pageKeys.map((k) => (
                         <option key={k} value={k}>Pág {k}</option>
@@ -483,7 +478,7 @@ export function EditorAudioTracks({
                     <select
                       value={form.startPanelIdx}
                       onChange={(e) => handleFormChange("startPanelIdx", parseInt(e.target.value))}
-                      className="text-[8px] px-1 py-0.5 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                      className="text-[8px] px-1 py-0.5 border border-white/10 rounded font-mono bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
                     >
                       {Array.from({ length: Math.max(1, panelCountForPage(form.startPageKey)) }, (_, i) => (
                         <option key={i} value={i}>Viñeta {i + 1}</option>
@@ -494,12 +489,12 @@ export function EditorAudioTracks({
               </div>
 
               {/* Stop trigger */}
-              <div className="border border-zinc-200 rounded p-2 bg-white flex flex-col gap-2">
-                <span className="text-[9px] font-bold text-zinc-600 uppercase tracking-wider">⏹ Stop / Fin</span>
+              <div className="border border-white/5 rounded p-2 bg-[#0a0a0f] flex flex-col gap-2">
+                <span className="text-[9px] font-bold text-zinc-400 uppercase tracking-wider">⏹ Stop / Fin</span>
                 <select
                   value={form.stopType}
                   onChange={(e) => handleFormChange("stopType", e.target.value as StopTriggerType)}
-                  className="text-[8px] px-1.5 py-1 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                  className="text-[8px] px-1.5 py-1 border border-white/10 rounded font-mono bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
                 >
                   <option value="none">Nunca (manual / fin del capítulo)</option>
                   <option value="panelEnd">Al salir de una viñeta</option>
@@ -518,7 +513,7 @@ export function EditorAudioTracks({
                           handleFormChange("stopPageKey", e.target.value);
                           handleFormChange("stopPanelIdx", 0);
                         }}
-                        className="text-[8px] px-1 py-0.5 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                        className="text-[8px] px-1 py-0.5 border border-white/10 rounded font-mono bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
                       >
                         {pageKeys.map((k) => (
                           <option key={k} value={k}>Pág {k}</option>
@@ -531,7 +526,7 @@ export function EditorAudioTracks({
                         <select
                           value={form.stopPanelIdx}
                           onChange={(e) => handleFormChange("stopPanelIdx", parseInt(e.target.value))}
-                          className="text-[8px] px-1 py-0.5 border border-zinc-300 rounded font-mono bg-white focus:outline-none focus:ring-1 focus:ring-blue-400"
+                          className="text-[8px] px-1 py-0.5 border border-white/10 rounded font-mono bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
                         >
                           {Array.from({ length: Math.max(1, stopPanelCount) }, (_, i) => (
                             <option key={i} value={i}>Viñeta {i + 1}</option>
@@ -544,8 +539,8 @@ export function EditorAudioTracks({
               </div>
 
               {/* Sound config */}
-              <div className="border border-zinc-200 rounded p-2 bg-white flex flex-col gap-2">
-                <span className="text-[9px] font-bold text-zinc-600 uppercase tracking-wider">⚙️ Configuración</span>
+              <div className="border border-white/5 rounded p-2 bg-[#0a0a0f] flex flex-col gap-2">
+                <span className="text-[9px] font-bold text-zinc-400 uppercase tracking-wider">⚙️ Configuración</span>
 
                 {/* Volume */}
                 <div className="flex flex-col gap-0.5">
@@ -604,14 +599,14 @@ export function EditorAudioTracks({
                 </div>
 
                 {/* Loop, delay, startTime in a grid */}
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-2 text-white">
                   <div className="flex items-center justify-between">
-                    <span className="text-[8px] font-mono text-zinc-500">Loop</span>
+                    <span className="text-[8px] font-mono text-zinc-550">Loop</span>
                     <input
                       type="checkbox"
                       checked={form.loop}
                       onChange={(e) => handleFormChange("loop", e.target.checked)}
-                      className="w-3.5 h-3.5 accent-blue-500"
+                      className="w-3.5 h-3.5 accent-blue-500 cursor-pointer"
                     />
                   </div>
                   <div className="flex flex-col gap-0.5">
@@ -620,7 +615,7 @@ export function EditorAudioTracks({
                       type="number" min="0" step="100"
                       value={form.delay}
                       onChange={(e) => handleFormChange("delay", parseInt(e.target.value) || 0)}
-                      className="text-[8px] px-1 py-0.5 border border-zinc-300 rounded font-mono bg-white w-full focus:outline-none focus:ring-1 focus:ring-blue-400"
+                      className="text-[8px] px-1 py-0.5 border border-white/10 rounded font-mono bg-[#0a0a0f] text-white w-full focus:outline-none focus:ring-1 focus:ring-blue-500"
                     />
                   </div>
                   <div className="flex flex-col gap-0.5">
@@ -629,7 +624,7 @@ export function EditorAudioTracks({
                       type="number" min="0" step="0.5"
                       value={form.startTime}
                       onChange={(e) => handleFormChange("startTime", parseFloat(e.target.value) || 0)}
-                      className="text-[8px] px-1 py-0.5 border border-zinc-300 rounded font-mono bg-white w-full focus:outline-none focus:ring-1 focus:ring-blue-400"
+                      className="text-[8px] px-1 py-0.5 border border-white/10 rounded font-mono bg-[#0a0a0f] text-white w-full focus:outline-none focus:ring-1 focus:ring-blue-500"
                     />
                   </div>
                 </div>
@@ -641,14 +636,14 @@ export function EditorAudioTracks({
                   type="button"
                   onClick={handleSaveTrack}
                   disabled={!form.src || !form.startPageKey}
-                  className="flex-1 text-[9px] font-bold py-1.5 rounded border bg-blue-600 hover:bg-blue-700 text-white border-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 text-[9px] font-bold py-1.5 rounded border bg-blue-600 hover:bg-blue-700 text-white border-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                 >
                   {editingId ? "✓ Guardar cambios" : "✓ Agregar pista"}
                 </button>
                 <button
                   type="button"
                   onClick={closeForm}
-                  className="text-[9px] font-bold px-3 py-1.5 rounded border bg-zinc-100 text-zinc-600 border-zinc-300 hover:bg-zinc-200 transition-all"
+                  className="text-[9px] font-bold px-3 py-1.5 rounded border bg-zinc-800 text-zinc-300 border-white/10 hover:bg-zinc-700 transition-all cursor-pointer"
                 >
                   Cancelar
                 </button>
@@ -656,7 +651,6 @@ export function EditorAudioTracks({
             </div>
           )}
         </div>
-      )}
     </div>
   );
 }

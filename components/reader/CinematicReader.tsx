@@ -659,6 +659,10 @@ export function CinematicReader({
         setFocusDialogue={handleSetFocusDialogue}
         focusPanel={focusPanel}
         setFocusPanel={handleSetFocusPanel}
+        zoomScale={zoomScale}
+        setZoomScale={setZoomScale}
+        panOffset={panOffset}
+        setPanOffset={setPanOffset}
       />
 
       <div className="flex-1 flex flex-col md:flex-row overflow-hidden w-full h-full relative">

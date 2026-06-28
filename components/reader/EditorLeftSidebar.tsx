@@ -349,33 +349,33 @@ export function EditorLeftSidebar({
   };
 
   const renderMarkdownContent = (text: string) => {
-    if (!text) return <p className="text-zinc-400 text-xs italic">El archivo está vacío.</p>;
+    if (!text) return <p className="text-zinc-450 text-xs italic">El archivo está vacío.</p>;
     const lines = text.split("\n");
     return (
       <div className="flex flex-col gap-2.5 pb-8">
         {lines.map((line, idx) => {
           const trimmed = line.trim();
-          if (trimmed.startsWith("# ")) return <h1 key={idx} className="text-lg font-bold border-b-2 border-[#0a0a0f] pb-1.5 mt-5 mb-2" style={{ fontFamily: "var(--font-bangers)", letterSpacing: "0.05em" }}>{trimmed.slice(2)}</h1>;
-          if (trimmed.startsWith("## ")) return <h2 key={idx} className="text-sm font-bold mt-4 mb-1.5 border-b border-dashed border-zinc-300 pb-0.5" style={{ fontFamily: "var(--font-marker)" }}>{trimmed.slice(3)}</h2>;
-          if (trimmed.startsWith("### ")) return <h3 key={idx} className="text-xs font-black uppercase text-rose-600 mt-3 mb-1 tracking-wider">{trimmed.slice(4)}</h3>;
-          if (trimmed === "---") return <hr key={idx} className="my-3 border-[#0a0a0f]" />;
+          if (trimmed.startsWith("# ")) return <h1 key={idx} className="text-lg font-bold border-b border-white/10 pb-1.5 mt-5 mb-2 text-white" style={{ fontFamily: "var(--font-bangers)", letterSpacing: "0.05em" }}>{trimmed.slice(2)}</h1>;
+          if (trimmed.startsWith("## ")) return <h2 key={idx} className="text-sm font-bold mt-4 mb-1.5 border-b border-dashed border-white/10 pb-0.5 text-zinc-200" style={{ fontFamily: "var(--font-marker)" }}>{trimmed.slice(3)}</h2>;
+          if (trimmed.startsWith("### ")) return <h3 key={idx} className="text-xs font-black uppercase text-[#e8185a] mt-3 mb-1 tracking-wider">{trimmed.slice(4)}</h3>;
+          if (trimmed === "---") return <hr key={idx} className="my-3 border-white/10" />;
           if (trimmed === "") return <div key={idx} className="h-1" />;
 
           const isBullet = trimmed.startsWith("* ") || trimmed.startsWith("- ");
           const content = isBullet ? trimmed.slice(2) : trimmed;
 
           const renderInline = (str: string) => {
-            return str.split("**").map((part, i) => i % 2 === 1 ? <strong key={i} className="font-bold text-zinc-900 bg-yellow-100/60 px-0.5 rounded">{part}</strong> : part);
+            return str.split("**").map((part, i) => i % 2 === 1 ? <strong key={i} className="font-bold text-white bg-yellow-500/20 px-0.5 rounded">{part}</strong> : part);
           };
 
           const hasDialogueDash = trimmed.includes("—") || trimmed.includes("\"") || trimmed.includes("“");
           const isCopied = copiedIndex === idx;
 
           return (
-            <motion.div key={idx} whileHover={{ x: 2 }} className={`group relative flex items-start gap-1 p-1.5 rounded border transition-all ${isBullet ? "pl-2" : ""} ${hasDialogueDash ? "bg-amber-50/40 border-amber-200/50 hover:bg-amber-50 hover:border-amber-300" : "border-transparent hover:bg-zinc-50"}`}>
-              {isBullet && <span className="text-zinc-400 mr-1 select-none">•</span>}
-              <div className="flex-1 text-xs text-zinc-700 leading-relaxed font-sans select-text">{renderInline(content)}</div>
-              <button onClick={() => handleCopyText(content, idx)} title="Copiar diálogo limpio" className={`shrink-0 ml-1.5 p-1 rounded border border-[#0a0a0f] shadow-[1px_1px_0_#0a0a0f] cursor-pointer transition-all opacity-0 group-hover:opacity-100 ${isCopied ? "bg-emerald-500 text-white" : "bg-white hover:bg-zinc-100"}`}>
+            <motion.div key={idx} whileHover={{ x: 2 }} className={`group relative flex items-start gap-1 p-1.5 rounded border transition-all ${isBullet ? "pl-2" : ""} ${hasDialogueDash ? "bg-[#e8185a]/10 border-[#e8185a]/30 hover:bg-[#e8185a]/15 hover:border-[#e8185a]/40" : "border-transparent hover:bg-white/5"}`}>
+              {isBullet && <span className="text-zinc-550 mr-1 select-none">•</span>}
+              <div className="flex-1 text-xs text-zinc-300 leading-relaxed font-sans select-text">{renderInline(content)}</div>
+              <button onClick={() => handleCopyText(content, idx)} title="Copiar diálogo limpio" className={`shrink-0 ml-1.5 p-1 rounded border border-white/10 shadow-[1px_1px_0_rgba(255,255,255,0.1)] cursor-pointer transition-all opacity-0 group-hover:opacity-100 ${isCopied ? "bg-emerald-500 text-white" : "bg-[#0a0a0f] hover:bg-zinc-800 text-white"}`}>
                 {isCopied ? "✓" : "📋"}
               </button>
             </motion.div>
@@ -399,16 +399,16 @@ export function EditorLeftSidebar({
             <motion.div
               whileHover={{ x: 2 }}
               onClick={() => handleSelectFile(item.path)}
-              className={`flex-1 flex items-center gap-2.5 py-1 px-2 rounded border-2 cursor-pointer text-xs select-none transition-all min-w-0 ${
-                isSelected ? "bg-[#e8185a] text-white font-bold border-[#0a0a0f] shadow-[2px_2px_0_#0a0a0f]" : "text-zinc-700 bg-white border-zinc-200 hover:border-zinc-400"
+              className={`flex-1 flex items-center gap-2.5 py-1 px-2 rounded border cursor-pointer text-xs select-none transition-all min-w-0 ${
+                isSelected ? "bg-[#e8185a] text-white font-bold border-transparent shadow-[2px_2px_0_rgba(0,0,0,0.3)]" : "text-zinc-300 bg-[#0a0a0f] border-white/10 hover:border-white/20"
               }`}
             >
               <span className="shrink-0">📄</span>
               <span className="truncate flex-1 min-w-0">{item.displayName}</span>
             </motion.div>
             <div className="flex flex-col gap-0.5 shrink-0">
-              <button onClick={() => handleRenameNode(item.path, item.name)} className="text-[10px] bg-zinc-100 border border-zinc-300 px-1 hover:bg-zinc-200" title="Renombrar">✏️</button>
-              <button onClick={() => handleDeleteNode(item.path)} className="text-[10px] bg-red-100 border border-red-300 px-1 hover:bg-red-200 text-red-600" title="Eliminar">🗑</button>
+              <button onClick={() => handleRenameNode(item.path, item.name)} className="text-[10px] bg-zinc-800 border border-white/10 px-1 hover:bg-zinc-700 text-white" title="Renombrar">✏️</button>
+              <button onClick={() => handleDeleteNode(item.path)} className="text-[10px] bg-red-950 border border-red-800 px-1 hover:bg-red-900 text-red-400" title="Eliminar">🗑</button>
             </div>
           </div>
         );
@@ -419,27 +419,27 @@ export function EditorLeftSidebar({
           <div className="flex items-center gap-1">
             <div
               onClick={() => toggleFolder(item.path)}
-              className="flex-1 flex items-center justify-between py-1 px-2 rounded border border-transparent cursor-pointer text-xs select-none hover:bg-zinc-100 font-bold text-zinc-800 min-w-0"
+              className="flex-1 flex items-center justify-between py-1 px-2 rounded border border-transparent cursor-pointer text-xs select-none hover:bg-white/5 font-bold text-zinc-200 min-w-0"
             >
               <div className="flex items-center gap-2 truncate flex-1 min-w-0">
                 <span className="text-sm leading-none shrink-0">{isFolderOpen ? "📂" : "📁"}</span>
                 <span className="truncate flex-1 min-w-0">{item.displayName}</span>
               </div>
-              <span className="text-[10px] text-zinc-400 font-mono pr-1 shrink-0">{isFolderOpen ? "▲" : "▼"}</span>
+              <span className="text-[10px] text-zinc-500 font-mono pr-1 shrink-0">{isFolderOpen ? "▲" : "▼"}</span>
             </div>
             <div className="flex gap-0.5 shrink-0">
-              <button onClick={() => handleCreateNode(item.path, "file")} className="text-[10px] bg-blue-100 border border-blue-300 px-1 hover:bg-blue-200" title="Nuevo Archivo">📄+</button>
-              <button onClick={() => handleCreateNode(item.path, "folder")} className="text-[10px] bg-green-100 border border-green-300 px-1 hover:bg-green-200" title="Nueva Carpeta">📁+</button>
+              <button onClick={() => handleCreateNode(item.path, "file")} className="text-[10px] bg-blue-950 border border-blue-800 px-1 hover:bg-blue-900 text-blue-300" title="Nuevo Archivo">📄+</button>
+              <button onClick={() => handleCreateNode(item.path, "folder")} className="text-[10px] bg-green-950 border border-green-800 px-1 hover:bg-green-900 text-green-300" title="Nueva Carpeta">📁+</button>
               {item.path !== "conceptos" && item.path !== "guiones" && (
                 <>
-                  <button onClick={() => handleRenameNode(item.path, item.name)} className="text-[10px] bg-zinc-100 border border-zinc-300 px-1 hover:bg-zinc-200" title="Renombrar">✏️</button>
-                  <button onClick={() => handleDeleteNode(item.path)} className="text-[10px] bg-red-100 border border-red-300 px-1 hover:bg-red-200 text-red-600" title="Eliminar">🗑</button>
+                  <button onClick={() => handleRenameNode(item.path, item.name)} className="text-[10px] bg-zinc-800 border border-white/10 px-1 hover:bg-zinc-700 text-white" title="Renombrar">✏️</button>
+                  <button onClick={() => handleDeleteNode(item.path)} className="text-[10px] bg-red-950 border border-red-800 px-1 hover:bg-red-900 text-red-400" title="Eliminar">🗑</button>
                 </>
               )}
             </div>
           </div>
           {isFolderOpen && item.children && (
-            <div className="pl-3 border-l-2 border-dashed border-zinc-200 ml-3.5 flex flex-col">
+            <div className="pl-3 border-l border-dashed border-white/10 ml-3.5 flex flex-col">
               {item.children.map((child) => renderNode(child))}
             </div>
           )}
@@ -462,17 +462,95 @@ export function EditorLeftSidebar({
 
   return (
     <>
-      <div className="absolute md:relative left-0 top-0 md:left-auto md:top-auto w-[290px] sm:w-[320px] md:w-[350px] shrink-0 bg-white border-r-3 border-[#0a0a0f] flex flex-col overflow-hidden z-[160] md:z-40 shadow-2xl md:shadow-none" style={{ maxHeight: "calc(100vh - 64px)", height: "100%" }}>
-        <button onClick={() => setIsOpen(false)} className="absolute right-2 top-3 w-7 h-7 flex items-center justify-center bg-zinc-100 hover:bg-zinc-200 border-2 border-[#0a0a0f] shadow-[1px_1px_0_#0a0a0f] text-xs font-mono font-bold text-[#0a0a0f] cursor-pointer rounded transition-all active:translate-y-0.5" style={{ zIndex: 100 }}>
+      <div className="absolute md:relative left-0 top-0 md:left-auto md:top-auto w-[290px] sm:w-[320px] md:w-[350px] shrink-0 bg-[#0e0e14] border-r border-white/10 flex flex-col overflow-hidden z-[160] md:z-40 shadow-2xl md:shadow-none editor-dark-theme" style={{ maxHeight: "calc(100vh - 64px)", height: "100%" }}>
+        <style>{`
+          /* Scoped editor dark theme overrides */
+          .editor-dark-theme {
+            background-color: #0e0e14 !important;
+            color: #e4e4e7 !important;
+          }
+          .editor-dark-theme::-webkit-scrollbar {
+            width: 6px;
+          }
+          .editor-dark-theme::-webkit-scrollbar-track {
+            background: #0e0e14;
+          }
+          .editor-dark-theme::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 3px;
+          }
+          .editor-dark-theme::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+          }
+
+          .editor-dark-theme select,
+          .editor-dark-theme input:not([type="checkbox"]):not([type="range"]):not([type="color"]),
+          .editor-dark-theme textarea {
+            background-color: #0a0a0f !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 4px !important;
+            font-size: 12px !important;
+            padding: 6px 10px !important;
+          }
+
+          .editor-dark-theme select option {
+            background-color: #0a0a0f !important;
+            color: #ffffff !important;
+          }
+
+          .editor-dark-theme label,
+          .editor-dark-theme .text-zinc-600,
+          .editor-dark-theme .text-zinc-700,
+          .editor-dark-theme .text-zinc-500 {
+            color: #a1a1aa !important;
+          }
+
+          .editor-dark-theme .bg-white,
+          .editor-dark-theme .bg-zinc-50,
+          .editor-dark-theme .bg-zinc-50\\/50,
+          .editor-dark-theme .bg-[#f3f4f6],
+          .editor-dark-theme .bg-zinc-100,
+          .editor-dark-theme .bg-zinc-100\\/50 {
+            background-color: #14141e !important;
+            color: #f4f4f5 !important;
+          }
+
+          .editor-dark-theme .hover\\:bg-zinc-100:hover {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+          }
+          .editor-dark-theme .hover\\:bg-zinc-200:hover {
+            background-color: rgba(255, 255, 255, 0.08) !important;
+          }
+          .editor-dark-theme .hover\\:bg-zinc-50:hover {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+          }
+
+          .editor-dark-theme .border-zinc-200,
+          .editor-dark-theme .border-zinc-300,
+          .editor-dark-theme .border-b-2,
+          .editor-dark-theme .border-b-3,
+          .editor-dark-theme .border-t-3,
+          .editor-dark-theme .border-2,
+          .editor-dark-theme .border,
+          .editor-dark-theme .border-\\[\\#0a0a0f\\] {
+            border-color: rgba(255, 255, 255, 0.08) !important;
+          }
+
+          .editor-dark-theme input[type="range"] {
+            accent-color: #e8185a !important;
+          }
+        `}</style>
+        <button onClick={() => setIsOpen(false)} className="absolute right-2 top-3 w-7 h-7 flex items-center justify-center bg-zinc-800 hover:bg-zinc-700 border border-white/10 text-xs font-mono font-bold text-white cursor-pointer rounded transition-all active:translate-y-0.5" style={{ zIndex: 100 }}>
           ◀
         </button>
 
-        <div className="p-4 border-b-3 border-[#0a0a0f] bg-zinc-50 flex flex-col gap-1 pr-12">
-          <span className="font-[var(--font-bangers)] text-xl tracking-wider text-[#0a0a0f]">Panel de Control</span>
-          <span className="font-sans text-[10px] text-zinc-500 font-bold uppercase tracking-wider truncate">{saga.title} — Cap #{chapter.number}</span>
+        <div className="p-4 border-b border-white/10 bg-[#161622] flex flex-col gap-1 pr-12">
+          <span className="font-[var(--font-bangers)] text-xl tracking-wider text-white">Panel de Control</span>
+          <span className="font-sans text-[10px] text-zinc-400 font-bold uppercase tracking-wider truncate">{saga.title} — Cap #{chapter.number}</span>
         </div>
 
-        <div className="flex border-b-3 border-[#0a0a0f] bg-zinc-100 p-1.5 gap-1.5">
+        <div className="flex border-b border-white/10 bg-[#14141e] p-1.5 gap-1.5">
           {(["pages", "episodes", "docs"] as const).map((tab) => {
             let label = tab === "pages" ? "Págs" : tab === "episodes" ? "Episodios" : "Docs";
             const isActive = activeTab === tab;
@@ -480,7 +558,7 @@ export function EditorLeftSidebar({
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`flex-1 font-[var(--font-bangers)] text-xs py-1.5 border-2 rounded transition-all cursor-pointer ${isActive ? "bg-[#e8185a] text-white border-[#0a0a0f] shadow-[2px_2px_0_#0a0a0f] translate-y-[-1px]" : "bg-white text-zinc-600 border-zinc-300 hover:border-zinc-400 hover:bg-zinc-50"}`}
+                className={`flex-1 font-[var(--font-bangers)] text-xs py-1.5 border rounded transition-all cursor-pointer ${isActive ? "bg-[#e8185a] text-white border-transparent shadow-[2px_2px_0_rgba(0,0,0,0.3)] translate-y-[-1px]" : "bg-zinc-800 text-zinc-300 border-white/10 hover:border-white/20 hover:bg-zinc-700"}`}
               >
                 {label}
               </button>
@@ -488,35 +566,35 @@ export function EditorLeftSidebar({
           })}
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4 bg-zinc-50/50">
+        <div className="flex-1 overflow-y-auto p-4 bg-[#0a0a0f] text-white">
           <AnimatePresence mode="wait">
             {activeTab === "pages" && (
               <motion.div key="pages-tab" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col gap-3">
-                <span className="font-[var(--font-bangers)] text-sm text-[#0a0a0f] tracking-wide mb-1 block">📖 Páginas ({pages.length})</span>
+                <span className="font-[var(--font-bangers)] text-sm text-white tracking-wide mb-1 block">📖 Páginas ({pages.length})</span>
                 <div className="grid grid-cols-2 gap-3">
                   {pages.map((src, idx) => {
                     const isSelected = pageIdx === idx;
                     const isEditing = editingPageName === idx;
                     const oldName = src.substring(src.lastIndexOf("/") + 1, src.lastIndexOf("."));
                     return (
-                      <motion.div key={src} whileHover={{ scale: 1.03 }} className={`flex flex-col border-2 rounded bg-white overflow-hidden transition-all ${isSelected ? "border-[#e8185a] shadow-[4px_4px_0_#e8185a]" : "border-zinc-300 shadow-[2px_2px_0_rgba(10,10,15,0.05)] hover:border-zinc-500"}`}>
-                        <div className="relative aspect-[3/4] bg-zinc-100 border-b border-zinc-200 cursor-pointer" onClick={() => resetPage(idx)}>
+                      <motion.div key={src} whileHover={{ scale: 1.03 }} className={`flex flex-col border rounded bg-[#161622] overflow-hidden transition-all ${isSelected ? "border-[#e8185a] shadow-[4px_4px_0_#e8185a]" : "border-white/10 shadow-[2px_2px_0_rgba(0,0,0,0.2)] hover:border-white/30"}`}>
+                        <div className="relative aspect-[3/4] bg-[#0a0a0f] border-b border-white/10 cursor-pointer" onClick={() => resetPage(idx)}>
                           <img src={getComicPageUrl(src)} alt={`Página ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
                           <div className="absolute bottom-1 right-1 bg-[#0a0a0f] text-yellow-400 font-[var(--font-bangers)] text-xs px-1.5 rounded">#{idx + 1}</div>
                         </div>
                         <div className="p-1.5 text-center flex flex-col gap-1">
                           {isEditing ? (
                             <div className="flex items-center gap-1">
-                              <input autoFocus type="text" value={newPageName} onChange={(e) => setNewPageName(e.target.value)} className="w-full text-xs p-1 border border-[#0a0a0f] rounded" />
+                              <input autoFocus type="text" value={newPageName} onChange={(e) => setNewPageName(e.target.value)} className="w-full text-xs p-1 border border-white/10 bg-[#0a0a0f] text-white rounded" />
                               <button onClick={() => handleRenamePage(idx, src)} className="bg-green-500 text-white p-1 rounded">✓</button>
                               <button onClick={() => setEditingPageName(null)} className="bg-zinc-300 p-1 rounded">✕</button>
                             </div>
                           ) : (
                             <div className="flex items-center justify-between px-1">
-                              <span className={`text-[10px] font-bold ${isSelected ? "text-[#e8185a]" : "text-zinc-600"}`}>
+                              <span className={`text-[10px] font-bold ${isSelected ? "text-[#e8185a]" : "text-zinc-300"}`}>
                                 {oldName}
                               </span>
-                              <button onClick={() => { setEditingPageName(idx); setNewPageName(oldName); }} className="text-[10px] text-blue-500 hover:text-blue-700">✏️</button>
+                              <button onClick={() => { setEditingPageName(idx); setNewPageName(oldName); }} className="text-[10px] text-blue-400 hover:text-blue-300">✏️</button>
                             </div>
                           )}
                         </div>
@@ -530,33 +608,33 @@ export function EditorLeftSidebar({
             {activeTab === "episodes" && (
               <motion.div key="episodes-tab" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col gap-3">
                 <div className="flex justify-between items-center mb-1">
-                  <span className="font-[var(--font-bangers)] text-sm text-[#0a0a0f] tracking-wide">⚡ Sagas y Capítulos</span>
-                  <button onClick={handleCreateSaga} className="bg-emerald-400 text-[#0a0a0f] text-[10px] font-bold px-2 py-1 rounded border-2 border-[#0a0a0f] shadow-[1px_1px_0_#0a0a0f]">+ Nueva Saga</button>
+                  <span className="font-[var(--font-bangers)] text-sm text-white tracking-wide">⚡ Sagas y Capítulos</span>
+                  <button onClick={handleCreateSaga} className="bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded border border-white/10 hover:bg-emerald-700 transition-colors">+ Nueva Saga</button>
                 </div>
 
-                {loadingSagas ? <div className="text-center py-8 text-zinc-400 text-xs animate-pulse">Cargando...</div> : (
+                {loadingSagas ? <div className="text-center py-8 text-zinc-500 text-xs animate-pulse">Cargando...</div> : (
                   <div className="flex flex-col gap-4">
                     {sagas.map((s) => (
-                      <div key={s.id} className="border-2 border-[#0a0a0f] bg-white p-2.5 rounded shadow-[3px_3px_0_#0a0a0f]">
+                      <div key={s.id} className="border border-white/10 bg-[#161622] p-2.5 rounded shadow-lg">
                         <div className="flex justify-between items-center mb-2">
                           <div className="flex items-center gap-2">
-                            <div className="font-[var(--font-bangers)] text-xs px-2 py-0.5 rounded text-white border border-[#0a0a0f]" style={{ backgroundColor: s.color || "#0a0a0f" }}>
+                            <div className="font-[var(--font-bangers)] text-xs px-2 py-0.5 rounded text-white border border-white/20" style={{ backgroundColor: s.color || "#0a0a0f" }}>
                               #{s.order} — {s.title}
                             </div>
-                            <button onClick={() => handleRenameSaga(s.id, s.order, s.title)} className="text-[10px] text-blue-500 hover:text-blue-700">✏️</button>
+                            <button onClick={() => handleRenameSaga(s.id, s.order, s.title)} className="text-[10px] text-blue-400 hover:text-blue-300">✏️</button>
                           </div>
-                          <button onClick={() => handleCreateChapter(s.id)} className="text-[10px] bg-zinc-200 border border-zinc-400 px-1 rounded hover:bg-zinc-300">+ Capítulo</button>
+                          <button onClick={() => handleCreateChapter(s.id)} className="text-[10px] bg-zinc-800 border border-white/10 text-white px-2 py-0.5 rounded hover:bg-zinc-700 font-bold transition-all">+ Capítulo</button>
                         </div>
                         <div className="flex flex-col gap-1.5">
                           {s.chapters.map((ch: any) => {
                             const isCurrent = ch.id === chapter.id;
                             return (
                               <div key={ch.id} className="flex gap-1">
-                                <button onClick={() => handleSwitchChapter(ch.id)} className={`flex-1 text-left py-1.5 px-2.5 border-2 rounded text-xs transition-all flex items-center justify-between cursor-pointer ${isCurrent ? "bg-zinc-100 border-[#0a0a0f] text-[#0a0a0f] font-black" : "bg-white border-zinc-200 text-zinc-600 hover:border-zinc-400"}`}>
+                                <button onClick={() => handleSwitchChapter(ch.id)} className={`flex-1 text-left py-1.5 px-2.5 border rounded text-xs transition-all flex items-center justify-between cursor-pointer ${isCurrent ? "bg-white/10 border-white/30 text-white font-black" : "bg-[#0a0a0f] border-white/10 text-zinc-400 hover:border-white/20 hover:text-white"}`}>
                                   <span className="truncate flex-1">#{ch.number} — {ch.title}</span>
                                   {isCurrent && <span className="text-[10px] text-[#e8185a] font-black">ACTIVO</span>}
                                 </button>
-                                <button onClick={() => handleRenameChapter(s.id, ch.id, ch.number, ch.title)} className="px-1.5 text-[10px] bg-zinc-100 border border-zinc-300 rounded hover:bg-zinc-200" title="Renombrar">✏️</button>
+                                <button onClick={() => handleRenameChapter(s.id, ch.id, ch.number, ch.title)} className="px-1.5 text-[10px] bg-zinc-800 border border-white/10 rounded hover:bg-zinc-750 text-white" title="Renombrar">✏️</button>
                               </div>
                             );
                           })}
@@ -573,32 +651,32 @@ export function EditorLeftSidebar({
                 <AnimatePresence mode="wait">
                   {selectedFilePath === null ? (
                     <motion.div key="explorer-view" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col gap-3">
-                      <span className="font-[var(--font-bangers)] text-sm text-[#0a0a0f] tracking-wide mb-1 block">📁 Guiones & Conceptos</span>
-                      {loadingDocs ? <div className="text-center py-8 text-zinc-400 text-xs animate-pulse">Cargando...</div> : (
+                      <span className="font-[var(--font-bangers)] text-sm text-white tracking-wide mb-1 block">📁 Guiones & Conceptos</span>
+                      {loadingDocs ? <div className="text-center py-8 text-zinc-500 text-xs animate-pulse">Cargando...</div> : (
                         <div className="flex flex-col gap-3">
-                          {docTree.guiones && <div className="border border-zinc-200 rounded p-2 bg-white"><span className="text-[10px] font-black text-zinc-400 block mb-1">Guiones</span>{renderTree(docTree.guiones)}</div>}
-                          {docTree.conceptos && <div className="border border-zinc-200 rounded p-2 bg-white"><span className="text-[10px] font-black text-zinc-400 block mb-1">Conceptos</span>{renderTree(docTree.conceptos)}</div>}
+                          {docTree.guiones && <div className="border border-white/10 rounded p-2 bg-[#161622]"><span className="text-[10px] font-black text-zinc-400 block mb-1">Guiones</span>{renderTree(docTree.guiones)}</div>}
+                          {docTree.conceptos && <div className="border border-white/10 rounded p-2 bg-[#161622]"><span className="text-[10px] font-black text-zinc-400 block mb-1">Conceptos</span>{renderTree(docTree.conceptos)}</div>}
                         </div>
                       )}
                     </motion.div>
                   ) : (
                     <motion.div key="viewer-view" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col h-full">
                       <div className="flex items-center gap-2 mb-3">
-                        <button onClick={() => setSelectedFilePath(null)} className="py-1 px-2.5 bg-zinc-200 border-2 border-[#0a0a0f] shadow-[1px_1px_0_#0a0a0f] text-[10px] font-bold cursor-pointer rounded hover:translate-y-0.5">← Volver</button>
+                        <button onClick={() => setSelectedFilePath(null)} className="py-1 px-2.5 bg-zinc-800 border border-white/10 text-[10px] font-bold cursor-pointer rounded hover:translate-y-0.5 text-white">← Volver</button>
                         <span className="text-[10px] font-bold text-zinc-400 truncate flex-1 uppercase tracking-wider text-right">{selectedFilePath.split("/").pop()}</span>
-                        <button onClick={() => isEditingDoc ? handleSaveDoc() : setIsEditingDoc(true)} className={`py-1 px-2.5 border-2 border-[#0a0a0f] shadow-[1px_1px_0_#0a0a0f] text-[10px] font-bold cursor-pointer rounded hover:translate-y-0.5 ${isEditingDoc ? 'bg-green-400 text-[#0a0a0f]' : 'bg-blue-400 text-white'}`}>
+                        <button onClick={() => isEditingDoc ? handleSaveDoc() : setIsEditingDoc(true)} className={`py-1 px-2.5 border border-white/10 text-[10px] font-bold cursor-pointer rounded hover:translate-y-0.5 ${isEditingDoc ? 'bg-green-600 text-white' : 'bg-blue-600 text-white'}`}>
                           {isEditingDoc ? "💾 Guardar" : "✏️ Editar"}
                         </button>
                       </div>
 
-                      <div className="bg-white border-2 border-[#0a0a0f] rounded p-3 shadow-[3px_3px_0_#0a0a0f] overflow-y-auto max-h-[60vh] relative flex flex-col flex-1">
+                      <div className="bg-[#161622] border border-white/10 rounded p-3 shadow-2xl overflow-y-auto max-h-[60vh] relative flex flex-col flex-1">
                         {loadingContent ? (
-                          <div className="text-center py-12 text-zinc-400 text-xs animate-pulse">Cargando...</div>
+                          <div className="text-center py-12 text-zinc-500 text-xs animate-pulse">Cargando...</div>
                         ) : isEditingDoc ? (
                           <textarea
                             value={editedDocContent}
                             onChange={(e) => setEditedDocContent(e.target.value)}
-                            className="w-full h-full min-h-[300px] text-xs font-mono p-2 border border-zinc-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none flex-1"
+                            className="w-full h-full min-h-[300px] text-xs font-mono p-2 border border-white/10 bg-[#0a0a0f] text-white rounded focus:outline-none resize-none flex-1"
                           />
                         ) : (
                           renderMarkdownContent(selectedFileContent || "")

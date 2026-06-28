@@ -27,7 +27,7 @@ export function ReaderZoomControls({
 
   return (
     <div
-      className="zoom-controls flex absolute bottom-20 right-4 sm:bottom-6 sm:right-6 z-50 items-center gap-2 bg-white border-3 border-[#0a0a0f] p-1.5 shadow-[4px_4px_0_#0a0a0f]"
+      className="zoom-controls hidden md:flex absolute bottom-20 right-4 sm:bottom-6 sm:right-6 z-50 items-center gap-2 bg-white border-3 border-[#0a0a0f] p-1.5 shadow-[4px_4px_0_#0a0a0f]"
       onClick={(e) => e.stopPropagation()}
       onPointerDown={(e) => e.stopPropagation()}
       onMouseDown={(e) => e.stopPropagation()}

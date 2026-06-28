@@ -108,31 +108,101 @@ export function DialogueEditorPanel({
   handleUpdateSettings,
   handleUpdateAudioTracks,
 }: DialogueEditorPanelProps) {
-  const [isViñetasOpen, setIsViñetasOpen] = useState(true);
-  const [isGlobalSettingsOpen, setIsGlobalSettingsOpen] = useState(false);
-
   if (mode !== "edit") return null;
 
   const isLastPage = pageIdx >= pagesLength - 1;
 
   return (
     <div
-      className="w-full md:w-96 shrink-0 bg-white border-t-3 md:border-t-0 border-[#0a0a0f] flex flex-col overflow-y-auto z-40"
+      className="w-full md:w-[680px] shrink-0 bg-[#0e0e14] border-t md:border-t-0 md:border-l border-white/10 flex flex-col overflow-y-auto z-40 text-zinc-200 editor-dark-theme"
       style={{ maxHeight: "calc(100vh - 64px)" }}
     >
+      <style>{`
+        /* Scoped editor dark theme overrides */
+        .editor-dark-theme::-webkit-scrollbar {
+          width: 6px;
+        }
+        .editor-dark-theme::-webkit-scrollbar-track {
+          background: #0e0e14;
+        }
+        .editor-dark-theme::-webkit-scrollbar-thumb {
+          background: #27272a;
+          border-radius: 3px;
+        }
+        .editor-dark-theme::-webkit-scrollbar-thumb:hover {
+          background: #3f3f46;
+        }
+
+        .editor-dark-theme select,
+        .editor-dark-theme input:not([type="checkbox"]):not([type="range"]):not([type="color"]),
+        .editor-dark-theme textarea {
+          background-color: #0a0a0f !important;
+          color: #ffffff !important;
+          border: 1px solid rgba(255, 255, 255, 0.1) !important;
+          border-radius: 4px !important;
+          font-size: 12px !important;
+          padding: 6px 10px !important;
+        }
+
+        .editor-dark-theme select option {
+          background-color: #0a0a0f !important;
+          color: #ffffff !important;
+        }
+
+        .editor-dark-theme label,
+        .editor-dark-theme .text-zinc-600,
+        .editor-dark-theme .text-zinc-700,
+        .editor-dark-theme .text-zinc-500 {
+          color: #a1a1aa !important;
+        }
+
+        .editor-dark-theme .bg-white,
+        .editor-dark-theme .bg-zinc-50,
+        .editor-dark-theme .bg-zinc-50\\/50,
+        .editor-dark-theme .bg-[#f3f4f6],
+        .editor-dark-theme .bg-zinc-100,
+        .editor-dark-theme .bg-zinc-100\\/50 {
+          background-color: #14141e !important;
+          color: #f4f4f5 !important;
+        }
+
+        .editor-dark-theme .border-zinc-200,
+        .editor-dark-theme .border-zinc-300,
+        .editor-dark-theme .border-b-2,
+        .editor-dark-theme .border-b-3,
+        .editor-dark-theme .border-t-3,
+        .editor-dark-theme .border-2,
+        .editor-dark-theme .border,
+        .editor-dark-theme .border-\\[\\#0a0a0f\\] {
+          border-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        .editor-dark-theme input[type="range"] {
+          accent-color: #e8185a !important;
+        }
+
+        /* Details list marker hide */
+        .editor-dark-theme details summary::-webkit-details-marker {
+          display: none !important;
+        }
+        .editor-dark-theme details summary {
+          list-style: none !important;
+        }
+      `}</style>
+
       {/* Header / Save Block */}
-      <div className="p-4 border-b-3 border-[#0a0a0f] bg-zinc-50 flex items-center justify-between">
-        <span className="font-[var(--font-bangers)] text-xl tracking-wider text-[#0a0a0f]">
+      <div className="p-4 border-b border-white/10 bg-[#161622] flex items-center justify-between">
+        <span className="font-[var(--font-bangers)] text-xl tracking-wider text-white">
           Editor de Diálogos
         </span>
         <button
           onClick={handleSaveChanges}
           disabled={isSaving}
-          className={`font-[var(--font-bangers)] text-sm px-4 py-2 border-2 border-[#0a0a0f] shadow-[2px_2px_0_#0a0a0f] transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#0a0a0f] ${
+          className={`font-[var(--font-bangers)] text-sm px-4 py-2 border border-white/20 shadow-[2px_2px_0_rgba(0,0,0,0.3)] transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_rgba(0,0,0,0.3)] rounded cursor-pointer ${
             saveStatus === "success"
-              ? "bg-green-500 text-white"
+              ? "bg-green-600 text-white"
               : saveStatus === "error"
-              ? "bg-red-500 text-white"
+              ? "bg-red-600 text-white"
               : "bg-[#e8185a] text-white hover:bg-rose-700"
           }`}
         >
@@ -141,35 +211,35 @@ export function DialogueEditorPanel({
       </div>
 
       {/* Page Navigation */}
-      <div className="p-4 border-b-2 border-zinc-200 bg-zinc-50 flex items-center justify-between gap-2">
+      <div className="p-4 border-b border-white/10 bg-[#14141e] flex items-center justify-between gap-2">
         <button
           type="button"
           onClick={() => pageIdx > 0 && resetPage(pageIdx - 1)}
           disabled={pageIdx === 0}
-          className="btn btn-dark text-xs py-1 px-3 disabled:opacity-50"
+          className="bg-zinc-800 border border-white/10 hover:bg-zinc-700 text-white text-xs py-1.5 px-3 rounded disabled:opacity-50 cursor-pointer"
         >
           Pág Ant
         </button>
-        <span className="font-[var(--font-marker)] text-sm text-[#0a0a0f]">
+        <span className="font-[var(--font-marker)] text-sm text-white">
           Página {pageIdx + 1}
         </span>
         <button
           type="button"
           onClick={() => pageIdx < pagesLength - 1 && resetPage(pageIdx + 1)}
           disabled={isLastPage}
-          className="btn btn-dark text-xs py-1 px-3 disabled:opacity-50"
+          className="bg-zinc-800 border border-white/10 hover:bg-zinc-700 text-white text-xs py-1.5 px-3 rounded disabled:opacity-50 cursor-pointer"
         >
           Pág Sig
         </button>
       </div>
 
       {/* Grid & Snapping Controls */}
-      <div className="p-4 border-b-2 border-zinc-200 bg-zinc-50 flex flex-col gap-2.5">
-        <span className="font-[var(--font-bangers)] text-sm text-[#0a0a0f] tracking-wide">
+      <div className="p-4 border-b border-white/10 bg-[#161622] flex flex-col gap-2.5">
+        <span className="font-[var(--font-bangers)] text-sm text-zinc-300 tracking-wide">
           📏 Cuadrícula y Alineación
         </span>
         <div className="flex items-center justify-between">
-          <label className="text-xs text-zinc-600 font-bold">Mostrar Grid:</label>
+          <label className="text-xs text-zinc-400 font-bold">Mostrar Grid:</label>
           <input
             type="checkbox"
             checked={showGrid}
@@ -178,7 +248,7 @@ export function DialogueEditorPanel({
           />
         </div>
         <div className="flex items-center justify-between">
-          <label className="text-xs text-zinc-600 font-bold">Ajustar al Grid (Snap):</label>
+          <label className="text-xs text-zinc-400 font-bold">Ajustar al Grid (Snap):</label>
           <input
             type="checkbox"
             checked={snapToGrid}
@@ -187,11 +257,11 @@ export function DialogueEditorPanel({
           />
         </div>
         <div className="flex items-center justify-between gap-2">
-          <label className="text-xs text-zinc-600 font-bold">Paso del Grid (%):</label>
+          <label className="text-xs text-zinc-400 font-bold">Paso del Grid (%):</label>
           <select
             value={gridSize}
             onChange={(e) => setGridSize(parseInt(e.target.value))}
-            className="border-2 border-[#0a0a0f] px-2 py-1 text-xs font-mono rounded bg-white text-[#0a0a0f]"
+            className="border border-white/10 px-2 py-1.5 text-xs font-mono rounded bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-rose-500 cursor-pointer"
           >
             <option value="2">2%</option>
             <option value="5">5% (Estándar)</option>
@@ -204,8 +274,6 @@ export function DialogueEditorPanel({
       <EditorTabSettings
         settings={settings}
         handleUpdateSettings={handleUpdateSettings}
-        isGlobalSettingsOpen={isGlobalSettingsOpen}
-        setIsGlobalSettingsOpen={setIsGlobalSettingsOpen}
       />
 
       {/* Accordion: Panels Stops Tab */}
@@ -213,8 +281,6 @@ export function DialogueEditorPanel({
         currentPanels={currentPanels}
         activePanelIdx={activePanelIdx}
         activeBubbleIdx={activeBubbleIdx}
-        isViñetasOpen={isViñetasOpen}
-        setIsViñetasOpen={setIsViñetasOpen}
         handleAddPanel={handleAddPanel}
         setActivePanelIdx={setActivePanelIdx}
         setActiveBubbleIdx={setActiveBubbleIdx}

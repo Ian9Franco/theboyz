@@ -7,6 +7,8 @@ import { BookOpen, Calendar, Cpu, Lock, Unlock } from "lucide-react";
 import { DossierTab } from "@/components/lore/DossierTab";
 import { TimelineTab } from "@/components/lore/TimelineTab";
 import { BlueprintsTab } from "@/components/lore/BlueprintsTab";
+import { CharacterModal } from "@/components/home/CharacterModal";
+import { CHARACTER_DETAILS } from "@/lib/characterData";
 
 type TabId = "dossier" | "timeline" | "blueprints";
 
@@ -20,6 +22,7 @@ export default function LorePage() {
   const [activeTab, setActiveTab] = useState<TabId>("dossier");
   const [readChapters, setReadChapters] = useState<string[]>([]);
   const [unlockAll, setUnlockAll] = useState(false);
+  const [selectedChar, setSelectedChar] = useState<any | null>(null);
 
   useEffect(() => {
     try {
@@ -29,6 +32,21 @@ export default function LorePage() {
     } catch (e) {
       console.error(e);
     }
+  }, []);
+
+  useEffect(() => {
+    const handleOpenModal = (e: Event) => {
+      const customEvent = e as CustomEvent<{ id: string }>;
+      const charId = customEvent.detail?.id;
+      if (charId) {
+        const char = CHARACTER_DETAILS.find((c) => c.id === charId);
+        if (char) {
+          setSelectedChar(char);
+        }
+      }
+    };
+    window.addEventListener("open-character-modal", handleOpenModal);
+    return () => window.removeEventListener("open-character-modal", handleOpenModal);
   }, []);
 
   const toggleUnlockAll = () => {
@@ -108,6 +126,15 @@ export default function LorePage() {
           )}
         </AnimatePresence>
       </div>
+
+      <AnimatePresence>
+        {selectedChar && (
+          <CharacterModal
+            char={selectedChar}
+            onClose={() => setSelectedChar(null)}
+          />
+        )}
+      </AnimatePresence>
     </main>
   );
 }
