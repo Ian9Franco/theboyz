@@ -42,7 +42,6 @@ try {
 const watchDirs = [
   path.join(projectRoot, "public", "personajes", "PORTADAS"),
   path.join(projectRoot, "public", "personajes", "Fichas"),
-  path.join(projectRoot, "public", "personajes", "FICHAS"),
 ];
 
 let debounceTimeout;

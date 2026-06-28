@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "0": {
+      "panels": [
+        {
+          "focusY": 0.3,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": []
+        }
+      ]
+    }
+  },
+  "settings": {
+    "dialogueDepth": 2
+  }
+}

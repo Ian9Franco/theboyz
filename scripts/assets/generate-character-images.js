@@ -18,10 +18,9 @@ const path = require('path');
 const projectRoot  = path.join(__dirname, '..', '..');
 const baseDir      = path.join(projectRoot, 'public', 'personajes');
 const portadasDir  = path.join(baseDir, 'PORTADAS');
-// Fichas folder has mixed-case name in the actual project structure
-const fichasDir    = fs.existsSync(path.join(baseDir, 'FICHAS'))
-  ? path.join(baseDir, 'FICHAS')
-  : path.join(baseDir, 'Fichas');
+// Fichas folder has mixed-case name in the actual project structure.
+// We strictly use the canonical casing 'Fichas' to ensure matches work correctly on Next.js public routes.
+const fichasDir    = path.join(baseDir, 'Fichas');
 const charDataDir  = path.join(projectRoot, 'lib', 'characterData');
 const outputFile   = path.join(charDataDir, 'characterImages.ts');
 
