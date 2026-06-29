@@ -531,7 +531,9 @@ export function EditorTabPanels({
                         type="button"
                         onClick={(e) => {
                           e.stopPropagation();
-                          const newRects = [...rects, { x: 20, y: 20, w: 60, h: 60 }];
+                          const lastRect = rects[rects.length - 1];
+                          const newY = lastRect ? Math.min(100, Math.max(0, lastRect.y + 10)) : 0;
+                          const newRects = [...rects, { x: 0, y: newY, w: 100, h: 20 }];
                           handleUpdatePanelParams(pIdx, { zoomRects: newRects, zoomRect: undefined });
                         }}
                         className="font-[var(--font-bangers)] text-[10px] bg-emerald-600 hover:bg-emerald-700 text-white py-1.5 px-3 rounded transition-all mt-1 w-full text-center tracking-wider cursor-pointer border border-emerald-700"

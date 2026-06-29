@@ -10,6 +10,326 @@
           ]
         }
       ]
+    },
+    "1": {
+      "panels": [
+        {
+          "focusY": 0.24,
+          "dialogue": [
+            { "text": "Qué raro... otra fluctuación en la red", "style": "thought", "size": "small", "posX": 48, "posY": 4, "tailX": 38, "tailY": 12, "tailWidth": 6, "tailCurvature": -36, "width": 125, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Cada vez que una de estas firmas de energía se apaga... siento que la presión en mi córnea aumenta. No tiene sentido.", "size": "small", "posX": 80, "posY": 30, "tailX": 36, "tailY": 24, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.46,
+          "dialogue": [
+            { "text": "tiki tiki tiki", "style": "sfx", "size": "small", "posX": 20, "posY": 36, "tailX": 48, "tailY": 52, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Tengo que borrar el historial y apagar esta máquina. Si el Comandante o Don Vanguard se enteran de que soy un mutante... no voy a salir de este edificio.", "size": "small", "posX": 4, "posY": 52, "tailX": 48, "tailY": 44, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "versiones de mati", "style": "caption", "size": "small", "posX": 102, "posY": 56, "tailX": 50, "tailY": 61, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "estas personas.. sera que..", "size": "small", "posX": 106, "posY": 62, "tailX": 76, "tailY": 62, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.78,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 65, "w": 100, "h": 34 }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [
+            { "text": "CLANG", "style": "sfx", "size": "small", "posX": 82, "posY": 28, "tailX": 50, "tailY": 29, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.44,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 33, "w": 100, "h": 22 }
+          ],
+          "hideUntilReached": false
+        },
+        {
+          "focusY": 0.64,
+          "dialogue": [
+            { "text": "Mati... ¿qué es esto? Esas cosas... tienen tu cara", "size": "small", "posX": 4, "posY": 58, "tailX": 22, "tailY": 64, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Volvo, no debiste entrar. Es de uso restringido—", "size": "small", "posX": 94, "posY": 60, "tailX": 66, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Me dijiste que tu mutacion estaba bajo control, y estas exponiendonos a todos aca!", "size": "small", "posX": -8, "posY": 74, "tailX": 26, "tailY": 66, "tailWidth": 6, "tailCurvature": -50, "width": 200, "fontSize": 8, "borderRadius": 15 }
+          ]
+        },
+        {
+          "focusY": 0.92,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 80, "w": 100, "h": 21 }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "panels": [
+        {
+          "focusY": 0.16,
+          "dialogue": [
+            { "text": "¡Volvo, esperá! ¡No es lo que pensás!", "size": "small", "posX": 44, "posY": 26, "tailX": -20, "tailY": 24, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.48,
+          "dialogue": [
+            { "text": "Ocultar tu mutación a la agencia ya era una locura. ¡Pero estás rastreando firmas externas en su red! Si Vanguard detecta tu energía, va a mandar a R.E.G.U.L.A.R. y a toda la fuerza táctica a borrarnos del mapa.", "size": "small", "posX": 92, "posY": 40, "tailX": 60, "tailY": 48, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 8, "borderRadius": 23 },
+            { "text": "¡No sé qué son esas firmas, Volvo! ¡Sólo intentaba rastrear mis picos de energía para apagarlos!", "size": "small", "posX": 6, "posY": 42, "tailX": 36, "tailY": 48, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.66,
+          "dialogue": [
+            { "text": "Hacete el pelotudo!\n¡Nos pusiste en su radar! Si descubren tu mutacion acá, ¡este lugar va a ser nuestra tumba!", "size": "small", "posX": 92, "posY": 66, "tailX": 62, "tailY": 68, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 77, "w": 100, "h": 23 }
+          ],
+          "hideUntilReached": false
+        }
+      ]
+    },
+    "4": {
+      "panels": [
+        {
+          "focusY": 0.18,
+          "dialogue": [
+            { "text": "No quiero hacer esto..", "size": "small", "posX": 88, "posY": 10, "tailX": 76, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.44,
+          "dialogue": [
+            { "text": "pero no me dejas opcion..", "size": "small", "posX": 90, "posY": 32, "tailX": 78, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.76,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 54, "w": 100, "h": 46 }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "Se detectó una intrusión cuántica no autorizada en el servidor del laboratorio. Protocolo de seguridad activo", "style": "electronic", "size": "small", "posX": 76, "posY": 16, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "tail": "left" }
+          ]
+        },
+        {
+          "focusY": 0.58,
+          "dialogue": [
+            { "text": "Que estan haciendo ustedes dos?", "size": "small", "posX": 62, "posY": 46, "tailX": 52, "tailY": 56, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "Supercamionero.. por favor..no", "size": "small", "posX": 98, "posY": 70, "tailX": 78, "tailY": 78, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": ".. no puedo— mis ojos— no los controlo—", "size": "small", "posX": 100, "posY": 88, "tailX": 74, "tailY": 92, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 68, "w": 100, "h": 32 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/loading gun.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.55,
+                "playbackRate": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "panels": [
+        {
+          "focusY": 0.1,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 20 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/laser_2.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 1,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.36,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 18, "w": 100, "h": 26 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/fuego.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 1,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.58,
+          "dialogue": [
+            { "text": "Estas demente mati", "size": "small", "posX": 36, "posY": 40, "tailX": 22, "tailY": 52, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Le voy a decir a los demas, y vamos a resolver esto", "size": "small", "posX": 64, "posY": 44, "tailX": 42, "tailY": 54, "tailWidth": 6, "tailCurvature": -18, "width": 175, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 46, "w": 100, "h": 30 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/beam3.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.6,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 76, "w": 100, "h": 24 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/fuego.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.4,
+                "playbackRate": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "panels": [
+        {
+          "focusY": 0.16,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 32 }
+          ]
+        },
+        {
+          "focusY": 0.42,
+          "dialogue": [
+            { "text": "Todavía respiraba. Eso era lo único que importaba.", "size": "small", "posX": 64, "posY": 34, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "tail": "none", "customBg": "#f5e642", "customColor": "#000000" },
+            { "text": "Si Vanguard se entera... es el fin", "size": "small", "posX": 94, "posY": 58, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "tail": "none", "customBg": "#f5e642", "customColor": "#000000" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 32, "w": 100, "h": 32 }
+          ]
+        },
+        {
+          "focusY": 0.78,
+          "dialogue": [
+            { "text": "Los Pecados de Brooklyn — Parte 1:", "style": "caption", "size": "small", "posX": 46, "posY": 100, "tailX": 50, "tailY": 93, "tailWidth": 6, "tailCurvature": -22, "width": 255, "fontSize": 10, "borderRadius": 18, "customBg": "#f5e642", "customColor": "#000000" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 63, "w": 100, "h": 38 }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [
+            { "text": "Actualidad..", "style": "caption", "size": "small", "posX": 38, "posY": 2, "tailX": 48, "tailY": 8, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "#f5e642", "customColor": "#000000" }
+          ]
+        },
+        {
+          "focusY": 0.58,
+          "dialogue": [
+            { "text": "Las runas bajaron a amarillo. Ya no estás en zona roja de sobrecarga cinético-batería", "size": "small", "posX": 46, "posY": 36, "tailX": 24, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 9, "borderRadius": 18 },
+            { "text": "*(sin abrir los ojos, voz ronca)* \"Bien. Porque tengo un hambre de tres dimensiones.", "size": "small", "posX": 56, "posY": 44, "tailX": 42, "tailY": 58, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Julián, andá a comprar facturas antes de que se coma el sillón", "size": "small", "posX": 56, "posY": 56, "tailX": 36, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.64,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 46, "y": 43, "w": 54, "h": 25 }
+          ]
+        },
+        {
+          "focusY": 0.84,
+          "dialogue": [
+            { "text": "Traje medialunas.", "size": "small", "posX": 30, "posY": 68, "tailX": 18, "tailY": 76, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "(abriendo un ojo)* Al fin. uno que aporta", "size": "small", "posX": 18, "posY": 100, "tailX": 36, "tailY": 88, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "mmh.. manchas de barro.. pero llovio de madrugada", "style": "thought", "size": "small", "posX": 106, "posY": 92, "tailX": 64, "tailY": 82, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 69, "w": 100, "h": 32 }
+          ]
+        }
+      ]
+    },
+    "9": {
+      "panels": [
+        {
+          "focusY": 0.18,
+          "dialogue": [
+            { "text": "¿Desde cuándo hacés eso con las cartas?", "size": "small", "posX": 88, "posY": 2, "tailX": 74, "tailY": 12, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Desde siempre, wachin. ¿Recién te das cuenta?", "size": "small", "posX": 66, "posY": 0, "tailX": 46, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Es una alteración electromagnética local. Estable mientras no haya carga emocional.", "size": "small", "posX": 102, "posY": 26, "tailX": 82, "tailY": 18, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.56,
+          "dialogue": [
+            { "text": "Con carga emocional solo por la wawi", "size": "small", "posX": 66, "posY": 46, "tailX": 52, "tailY": 52, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "¿Dónde está Sofi?", "size": "small", "posX": 26, "posY": 36, "tailX": 16, "tailY": 52, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "UANDI: Tokio\n", "size": "small", "posX": 14, "posY": 58, "tailX": -8, "tailY": 52, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.76,
+          "dialogue": [
+            { "text": "Y nosotros estamos acá, quebrados. La tele nueva sale una fortuna y hay que reconstruir el taller de Ian", "size": "small", "posX": 62, "posY": 62, "tailX": 42, "tailY": 84, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Igual, quédense tranquilos. Se me ocurrió una idea para conseguir la plata", "size": "small", "posX": 36, "posY": 62, "tailX": 32, "tailY": 74, "tailWidth": 32, "tailCurvature": 68, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "¿Qué idea?", "size": "small", "posX": -6, "posY": 74, "tailX": 6, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Un secreto comercial. Confíen en mí.", "speaker": "Julián", "size": "small", "posX": 92, "posY": 72, "tailX": 108, "tailY": 56, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        }
+      ]
     }
   },
   "settings": {
@@ -27,7 +347,7 @@
         "pageKey": "8"
       },
       "soundConfig": {
-        "volume": 0.2,
+        "volume": 0.3,
         "playbackRate": 1,
         "loop": true,
         "fadeIn": 1800,
