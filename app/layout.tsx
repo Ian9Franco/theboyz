@@ -30,19 +30,19 @@ function Footer() {
   return (
     <footer
       className="pt-16 pb-10 px-6 overflow-hidden relative"
-      style={{ background: "#07070a", borderTop: "4px solid #0f1b3d" }}
+      style={{ background: "#001419", borderTop: "4px solid #D7263D" }}
     >
       {/* Premium Halftone pop-art dot pattern */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.05] z-0"
         style={{
-          backgroundImage: "radial-gradient(circle, #0f1b3d 1.5px, transparent 1.5px)",
+          backgroundImage: "radial-gradient(circle, #D7263D 1.5px, transparent 1.5px)",
           backgroundSize: "14px 14px",
         }}
       />
 
       <div className="max-w-5xl mx-auto relative z-10 text-center flex flex-col items-center gap-6">
-        <div className="relative w-60 h-16 sm:w-72 sm:h-20 max-w-full overflow-hidden rounded-xl shadow-[0_0_20px_rgba(27,67,50,0.2)] border border-white/10 bg-[#0a0a0f]">
+        <div className="relative w-60 h-16 sm:w-72 sm:h-20 max-w-full overflow-hidden rounded-xl shadow-[0_0_20px_rgba(27,67,50,0.2)] border border-white/10 bg-[#001419]">
           <img
             src="/logo_white.webp"
             alt="The Boyz Logo"
@@ -51,7 +51,7 @@ function Footer() {
         </div>
         <p
           className="font-[var(--font-marker)] text-lg tracking-wider"
-          style={{ color: "#f5e642", textShadow: "2px 2px 0 rgba(0,0,0,0.8)" }}
+          style={{ color: "#D7263D", textShadow: "2px 2px 0 rgba(0,0,0,0.8)" }}
         >
           Pronto caen más capítulos — dale que llueve
         </p>
@@ -61,11 +61,11 @@ function Footer() {
           <span
             className="font-[var(--font-bangers)] text-xs sm:text-sm tracking-[0.35em] uppercase"
             style={{
-              color: "#f5e642",
-              border: "2px solid #f5e642",
+              color: "#D7263D",
+              border: "2px solid #D7263D",
               padding: "0.5rem 1.5rem",
-              background: "#0a0a0f",
-              boxShadow: "3px 3px 0 #0f1b3d",
+              background: "#001419",
+              boxShadow: "3px 3px 0 #D7263D",
               display: "inline-block",
               borderRadius: "4px",
             }}
@@ -92,7 +92,7 @@ function Footer() {
             href="https://ian-pontorno-portfolio.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-yellow-400 underline transition-colors font-bold text-gray-400"
+            className="hover:text-[#D7263D] underline transition-colors font-bold text-gray-400"
           >
             IAN PONTORNO
           </a>
@@ -101,3 +101,5 @@ function Footer() {
     </footer>
   );
 }
+
+

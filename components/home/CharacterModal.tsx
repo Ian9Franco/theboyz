@@ -13,16 +13,16 @@ function getTextColor(hexColor: string) {
   const g = parseInt(color.substring(2, 4), 16);
   const b = parseInt(color.substring(4, 6), 16);
   const yiq = (r * 299 + g * 587 + b * 114) / 1000;
-  return yiq >= 140 ? "#0a0a0f" : "white";
+  return yiq >= 140 ? "#001419" : "white";
 }
 
 function getVibrantColor(hexColor: string) {
-  if (!hexColor) return "#f5e642";
+  if (!hexColor) return "#D7263D";
   const c = hexColor.toLowerCase();
   if (c === "#0d3a2b") return "#10b981"; // Ian: emerald green
   if (c === "#0a1128") return "#3b82f6"; // Julián: vibrant blue
   if (c === "#4c1d95") return "#a855f7"; // Mati: vibrant purple
-  if (c === "#b91c1c") return "#ef4444"; // Uandi: vibrant red
+  if (c === "#b91c1c") return "#D7263D"; // Uandi: vibrant red
   return hexColor;
 }
 
@@ -30,7 +30,7 @@ function getDarkBgColor(hexColor: string) {
   if (!hexColor) return "#0f172a";
   const c = hexColor.toLowerCase();
   if (c === "#0d3a2b") return "#061410"; // very dark green
-  if (c === "#f5e642") return "#121203"; // very dark yellow
+  if (c === "#D7263D") return "#121203"; // very dark yellow
   if (c === "#0a1128") return "#020512"; // very dark blue
   if (c === "#4c1d95") return "#0d041c"; // very dark purple
   if (c === "#b91c1c") return "#170303"; // very dark red
@@ -245,7 +245,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-[#0a0a0f]/92 cursor-pointer"
+        className="fixed inset-0 bg-[#001419]/92 cursor-pointer"
         onClick={onClose}
       />
 
@@ -258,7 +258,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
         className="relative w-full z-10 flex flex-col sm:flex-row overflow-hidden transition-colors duration-400"
         style={{
           maxWidth: 1100,
-          border: "4px solid #0a0a0f",
+          border: "4px solid #001419",
           boxShadow: `10px 10px 0 ${isPowersMode ? vibrantAccent : accent}`,
           height: "auto",
           minHeight: "65vh",
@@ -369,9 +369,9 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
                         tempImg.onerror = () => { setSelectedImageId(imgOpt.id); setIsTransitioning(false); };
                       }}
                       style={{
-                        backgroundColor: isActive ? (isPowersMode ? vibrantAccent : accent) : "#0a0a0f",
+                        backgroundColor: isActive ? (isPowersMode ? vibrantAccent : accent) : "#001419",
                         color: isActive ? getTextColor(isPowersMode ? vibrantAccent : accent) : "#ffffff",
-                        borderColor: isActive ? (isPowersMode ? vibrantAccent : accent) : "#0a0a0f",
+                        borderColor: isActive ? (isPowersMode ? vibrantAccent : accent) : "#001419",
                         boxShadow: isActive ? `0 0 10px ${isPowersMode ? vibrantAccent : accent}88` : "2px 2px 0 #000",
                         transform: isActive ? "translate(1px, 1px)" : "none",
                       }}
@@ -405,3 +405,4 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     </div>
   );
 }
+

@@ -33,17 +33,17 @@ export default function Home() {
   const classicSagas = sagasList.filter((s) => s.order < 3);
 
   return (
-    <div className="flex flex-col" style={{ background: "#0a0a0f" }}>
+    <div className="flex flex-col" style={{ background: "#002a32" }}>
       <HeroSection />
-      <section id="sagas" className="py-16 px-4 sm:px-6 relative" style={{ background: "#0a0a0f" }}>
+      <section id="sagas" className="py-16 px-4 sm:px-6 relative" style={{ background: "#002a32" }}>
         {/* Subtle halftone grid */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.025]"
-          style={{ backgroundImage: "radial-gradient(circle, #1b4332 1.5px, transparent 1.5px)", backgroundSize: "18px 18px" }} />
+          style={{ backgroundImage: "radial-gradient(circle, #D7263D 1.5px, transparent 1.5px)", backgroundSize: "18px 18px" }} />
 
         <div className="max-w-7xl mx-auto flex flex-col gap-12 relative z-10">
           {loading ? (
             <div className="text-center py-20">
-              <span className="font-[var(--font-bangers)] text-4xl text-[#f5e642] animate-pulse tracking-wider">
+              <span className="font-[var(--font-bangers)] text-4xl text-[#D7263D] animate-pulse tracking-wider">
                 Cargando Sagas...
               </span>
             </div>
@@ -59,38 +59,38 @@ export default function Home() {
               {officialSagas.length > 0 && (
                 <div className="flex flex-col gap-12">
                   {/* Section Header */}
-                  <div className="relative border-4 border-white overflow-hidden shadow-[8px_8px_0_#1b4332]"
-                    style={{ background: "linear-gradient(135deg, #0e1a14 0%, #0a0a0f 60%, #071510 100%)" }}>
+                  <div className="relative border-4 border-white overflow-hidden shadow-[8px_8px_0_#D7263D]"
+                    style={{ background: "linear-gradient(135deg, #0e1a14 0%, #001419 60%, #071510 100%)" }}>
                     {/* Accent bar top */}
-                    <div className="h-1 w-full bg-[#1b4332]" />
+                    <div className="h-1 w-full bg-[#D7263D]" />
                     <div className="p-6 md:p-8 relative z-10">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                         <div>
                           <div className="flex items-center gap-3 mb-3">
-                            <div className="w-2 h-8 bg-[#f5e642]" />
-                            <span className="font-[var(--font-bangers)] text-[10px] tracking-[0.3em] text-[#f5e642] uppercase border border-[#f5e642] px-2 py-0.5">
+                            <div className="w-2 h-8 bg-[#D7263D]" />
+                            <span className="font-[var(--font-bangers)] text-[10px] tracking-[0.3em] text-[#D7263D] uppercase border border-[#D7263D] px-2 py-0.5">
                               LÍNEA CANON OFICIAL
                             </span>
                           </div>
                           <h2 className="font-[var(--font-bangers)] text-4xl sm:text-5xl text-white tracking-widest leading-none mb-3"
-                            style={{ textShadow: "3px 3px 0 #1b4332" }}>
+                            style={{ textShadow: "3px 3px 0 #D7263D" }}>
                             HISTORIA PRINCIPAL
                           </h2>
                           <p className="font-sans text-sm text-gray-400 max-w-2xl leading-relaxed">
                             Acá comienza el canon oficial de <strong className="text-white">The Boyz</strong>.{" "}
                             La historia arranca tras un escape desesperado:{" "}
-                            <strong className="text-[#f5e642]">Ian</strong> y <strong className="text-[#ef4444]">Uandi</strong> lograron rescatar a{" "}
-                            <strong className="text-[#3b82f6]">Julián</strong> de un secuestro en los <strong className="text-white">Backrooms</strong>.
-                            Al huir, terminaron varados en el <strong className="text-[#a855f7]">Universo 616</strong>.{" "}
+                            <strong className="text-[#D7263D]">Ian</strong> y <strong className="text-[#D7263D]">Uandi</strong> lograron rescatar a{" "}
+                            <strong className="text-[#D7263D]">Julián</strong> de un secuestro en los <strong className="text-white">Backrooms</strong>.
+                            Al huir, terminaron varados en el <strong className="text-[#D7263D]">Universo 616</strong>.{" "}
                             Mientras tanto, <strong className="text-white">Volvo</strong> vaga perdido en otra realidad y la{" "}
-                            <strong className="text-[#a855f7]">Guerra Mativersal</strong> se aproxima.
+                            <strong className="text-[#D7263D]">Guerra Mativersal</strong> se aproxima.
                           </p>
                         </div>
                         <img src="/comic-book.webp" alt="" className="w-10 h-10 object-contain opacity-30 shrink-0 hidden sm:block" />
                       </div>
                     </div>
                     {/* Bottom accent */}
-                    <div className="h-1 w-full" style={{ background: "linear-gradient(to right, #1b4332, #f5e642, #1b4332)" }} />
+                    <div className="h-1 w-full" style={{ background: "linear-gradient(to right, #D7263D, #D7263D, #D7263D)" }} />
                   </div>
 
                   {/* featured split grid */}
@@ -222,3 +222,5 @@ export default function Home() {
     </div>
   );
 }
+
+

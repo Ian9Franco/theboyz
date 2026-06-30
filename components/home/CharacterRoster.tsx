@@ -13,58 +13,58 @@ function getTextColor(hexColor: string) {
   const g = parseInt(color.substring(2, 4), 16);
   const b = parseInt(color.substring(4, 6), 16);
   const yiq = (r * 299 + g * 587 + b * 114) / 1000;
-  return yiq >= 140 ? "#0a0a0f" : "white";
+  return yiq >= 140 ? "#001419" : "white";
 }
 
 const CATEGORY_METADATA = {
   pibes: {
     title: "LOS PIBES",
     tagline: "El equipo principal",
-    badgeColor: "#1b4332",
+    badgeColor: "#D7263D",
     shadowColor: "rgba(27,67,50,0.2)",
-    borderColor: "#1b4332",
+    borderColor: "#D7263D",
   },
   independientes: {
     title: "ALIADOS INDEPENDIENTES",
     tagline: "Héroes del asfalto y la fortuna",
-    badgeColor: "#8b5cf6",
+    badgeColor: "#D7263D",
     shadowColor: "rgba(139,92,246,0.2)",
-    borderColor: "#8b5cf6",
+    borderColor: "#D7263D",
   },
   secundarios: {
     title: "ALIADOS Y SOPORTE",
     tagline: "El soporte táctico",
-    badgeColor: "#8b5cf6",
+    badgeColor: "#D7263D",
     shadowColor: "rgba(139,92,246,0.2)",
-    borderColor: "#8b5cf6",
+    borderColor: "#D7263D",
   },
   taberna_resistencia: {
     title: "TABERNA DE LA RESISTENCIA",
     tagline: "El bastión del norte",
-    badgeColor: "#0284c7",
+    badgeColor: "#D7263D",
     shadowColor: "rgba(2,132,199,0.2)",
-    borderColor: "#0284c7",
+    borderColor: "#D7263D",
   },
   voughtverse: {
     title: "VOUGHTVERSE",
     tagline: "Variantes de otra realidad",
-    badgeColor: "#2563eb",
+    badgeColor: "#D7263D",
     shadowColor: "rgba(37,99,235,0.2)",
-    borderColor: "#2563eb",
+    borderColor: "#D7263D",
   },
   matis: {
     title: "CONSEJO DE MATIS",
     tagline: "Las variantes cuánticas",
-    badgeColor: "#b45309",
+    badgeColor: "#D7263D",
     shadowColor: "rgba(180,83,9,0.2)",
-    borderColor: "#b45309",
+    borderColor: "#D7263D",
   },
   antagonistas: {
     title: "ANTAGONISTAS",
     tagline: "Las amenazas del orden",
-    badgeColor: "#ef4444",
+    badgeColor: "#D7263D",
     shadowColor: "rgba(239,68,68,0.2)",
-    borderColor: "#ef4444",
+    borderColor: "#D7263D",
   },
   entidades: {
     title: "ENTIDADES",
@@ -76,16 +76,16 @@ const CATEGORY_METADATA = {
   deidades: {
     title: "DEIDADES",
     tagline: "Seres cósmicos y divinos",
-    badgeColor: "#fbbf24",
+    badgeColor: "#D7263D",
     shadowColor: "rgba(251,191,36,0.2)",
-    borderColor: "#fbbf24",
+    borderColor: "#D7263D",
   },
   locaciones: {
     title: "LOCACIONES",
     tagline: "Los escenarios de la historia",
-    badgeColor: "#0ea5e9",
+    badgeColor: "#D7263D",
     shadowColor: "rgba(14,165,233,0.2)",
-    borderColor: "#0ea5e9",
+    borderColor: "#D7263D",
   },
 };
 
@@ -256,8 +256,8 @@ export function CharacterRoster() {
       
       <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-24">
         {/* Search and Filter Panel */}
-        <div className="bg-[#13131e] border-4 border-white p-6 shadow-[8px_8px_0_#000] flex flex-col md:flex-row gap-6 items-center justify-between mb-8 relative">
-          <div className="absolute top-[-12px] left-6 bg-[#e8185a] border-2 border-white px-3 py-0.5 shadow-[2px_2px_0_#000] rotate-[-1deg] z-10">
+        <div className="bg-[#003842] border-4 border-white p-6 shadow-[8px_8px_0_#000] flex flex-col md:flex-row gap-6 items-center justify-between mb-8 relative">
+          <div className="absolute top-[-12px] left-6 bg-[#D7263D] border-2 border-white px-3 py-0.5 shadow-[2px_2px_0_#000] rotate-[-1deg] z-10">
             <span className="font-[var(--font-bangers)] text-xs text-white tracking-widest uppercase">
               BÚSQUEDA Y FILTRADO
             </span>
@@ -270,7 +270,7 @@ export function CharacterRoster() {
               placeholder="BUSCAR PERSONAJE..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-2 bg-black border-3 border-white text-white font-[var(--font-bangers)] tracking-widest placeholder:text-gray-600 focus:outline-none focus:border-[#f5e642] focus:shadow-[4px_4px_0_#f5e642] transition-all text-sm uppercase"
+              className="w-full px-4 py-2 bg-black border-3 border-white text-white font-[var(--font-bangers)] tracking-widest placeholder:text-gray-600 focus:outline-none focus:border-[#D7263D] focus:shadow-[4px_4px_0_#D7263D] transition-all text-sm uppercase"
             />
           </div>
 
@@ -289,9 +289,9 @@ export function CharacterRoster() {
                   key={btn.id}
                   onClick={() => setActiveFilter(btn.id)}
                   style={{
-                    backgroundColor: isActive ? "#f5e642" : "#2a2a35",
-                    color: isActive ? "#0a0a0f" : "#ffffff",
-                    boxShadow: isActive ? "3px 3px 0 #e8185a" : "3px 3px 0 #000",
+                    backgroundColor: isActive ? "#D7263D" : "#063f49",
+                    color: isActive ? "#001419" : "#ffffff",
+                    boxShadow: isActive ? "3px 3px 0 #D7263D" : "3px 3px 0 #000",
                     transform: isActive ? "translate(1px, 1px)" : "none",
                   }}
                   className="px-3 py-1.5 border-2 border-white font-[var(--font-bangers)] text-xs tracking-wider uppercase transition-all hover:scale-105 active:scale-95 cursor-pointer"
@@ -304,8 +304,8 @@ export function CharacterRoster() {
         </div>
 
         {orderedCategories.length === 0 && (
-          <div className="text-center py-12 border-4 border-dashed border-white/20 p-8 bg-[#13131e] shadow-[8px_8px_0_#000]">
-            <span className="font-[var(--font-bangers)] text-2xl text-[#f5e642] tracking-wider uppercase">
+          <div className="text-center py-12 border-4 border-dashed border-white/20 p-8 bg-[#003842] shadow-[8px_8px_0_#000]">
+            <span className="font-[var(--font-bangers)] text-2xl text-[#D7263D] tracking-wider uppercase">
               No se encontraron coincidencias tácticas
             </span>
             <p className="font-sans text-xs text-gray-500 mt-2">
@@ -331,7 +331,7 @@ export function CharacterRoster() {
                 const isMatisUnlocked = groupChars.some(c => !c.incognito);
                 return (
                   <div 
-                    className={`w-full mb-12 border-4 border-white shadow-[8px_8px_0_#b45309] overflow-hidden relative group ${isMatisUnlocked ? "cursor-zoom-in pointer-events-auto" : "cursor-not-allowed pointer-events-auto"}`}
+                    className={`w-full mb-12 border-4 border-white shadow-[8px_8px_0_#D7263D] overflow-hidden relative group ${isMatisUnlocked ? "cursor-zoom-in pointer-events-auto" : "cursor-not-allowed pointer-events-auto"}`}
                     onClick={isMatisUnlocked ? () => setShowMatiLightbox(true) : undefined}
                   >
                     <img 
@@ -398,7 +398,7 @@ export function CharacterRoster() {
                           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
                           viewport={{ once: true, margin: "-50px" }}
                           transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.05 }}
-                          className="relative group bg-[#13131e] flex flex-col cursor-pointer select-none border-4 transition-colors duration-300"
+                          className="relative group bg-[#003842] flex flex-col cursor-pointer select-none border-4 transition-colors duration-300"
                           style={{ 
                             borderColor: "#ffffff", 
                             zIndex: hoveredCardId === char.id ? 40 : 10,
@@ -447,8 +447,8 @@ export function CharacterRoster() {
                             className="relative w-full aspect-[2/3] overflow-hidden shrink-0"
                             style={{
                               background: char.incognito 
-                                ? "#2a2a35" 
-                                : `radial-gradient(circle at center, ${char.displayColor}33 0%, #13131e 100%)`
+                                ? "#063f49" 
+                                : `radial-gradient(circle at center, ${char.displayColor}33 0%, #003842 100%)`
                             }}
                           >
                             {/* Foil Holographic Shine Overlay */}
@@ -516,7 +516,7 @@ export function CharacterRoster() {
                               color: char.incognito ? "white" : getTextColor(char.displayColor),
                               textShadow: char.incognito 
                                 ? "2px 2px 0 rgba(0,0,0,0.3)"
-                                : (getTextColor(char.displayColor) === '#0a0a0f' 
+                                : (getTextColor(char.displayColor) === '#001419' 
                                   ? "1px 1px 0 rgba(255,255,255,0.6)" 
                                   : "2px 2px 0 rgba(0,0,0,0.3)"),
                               fontSize: "0.85rem"
@@ -562,4 +562,5 @@ export function CharacterRoster() {
     </section>
   );
 }
+
 

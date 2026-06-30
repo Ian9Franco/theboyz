@@ -121,6 +121,7 @@ export function CinematicReader({
   const [speedMultiplier, setSpeedMultiplierState] = useState<number>(1.0);
   const [focusDialogue, setFocusDialogue] = useState<boolean>(true);
   const [focusPanel, setFocusPanel] = useState<boolean>(true);
+  const [bubbleOpacity, setBubbleOpacityState] = useState<number>(0.90);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -148,6 +149,10 @@ export function CinematicReader({
       const savedFocusPanel = localStorage.getItem("reader_focus_panel");
       if (savedFocusPanel !== null) {
         setFocusPanel(savedFocusPanel === "true");
+      }
+      const savedBubbleOpacity = localStorage.getItem("reader_bubble_opacity");
+      if (savedBubbleOpacity !== null) {
+        setBubbleOpacityState(parseFloat(savedBubbleOpacity));
       }
       const hasRead = localStorage.getItem("has_read_instructions") === "true";
       if (!hasRead) {
@@ -195,6 +200,13 @@ export function CinematicReader({
     setFocusPanel(value);
     if (typeof window !== "undefined") {
       localStorage.setItem("reader_focus_panel", String(value));
+    }
+  };
+
+  const handleSetBubbleOpacity = (value: number) => {
+    setBubbleOpacityState(value);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("reader_bubble_opacity", String(value));
     }
   };
 
@@ -459,6 +471,7 @@ export function CinematicReader({
     activePanel,
     activeReadingBubbleIdx,
     focusPanel,
+    focusDialogue,
   });
 
   const handleReaderTap = (e: React.MouseEvent) => {
@@ -602,6 +615,7 @@ export function CinematicReader({
         handleDragEnd={handleDragEnd}
         handleTailTargetDragEnd={handleTailTargetDragEnd}
         focusDialogue={focusDialogue}
+        bubbleOpacity={bubbleOpacity}
       />
     );
   }, [
@@ -633,6 +647,7 @@ export function CinematicReader({
     handleDragEnd,
     handleTailTargetDragEnd,
     focusDialogue,
+    bubbleOpacity,
   ]);
 
   return (
@@ -663,6 +678,8 @@ export function CinematicReader({
         setZoomScale={setZoomScale}
         panOffset={panOffset}
         setPanOffset={setPanOffset}
+        bubbleOpacity={bubbleOpacity}
+        setBubbleOpacity={handleSetBubbleOpacity}
       />
 
       <div className="flex-1 flex flex-col md:flex-row overflow-hidden w-full h-full relative">

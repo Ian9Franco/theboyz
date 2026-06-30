@@ -133,7 +133,7 @@ export function EpicTransitionOverlay({
           <div className="mt-6 z-10 w-[min(80%,260px)] flex flex-col items-center gap-1.5">
             <div
               className="w-full h-2.5 border border-white/20 overflow-hidden"
-              style={{ backgroundColor: "#0a0a0f" }}
+              style={{ backgroundColor: "#001419" }}
             >
               <motion.div
                 initial={{ width: "0%" }}
@@ -185,3 +185,4 @@ export function EpicTransitionOverlay({
 function netLabel() {
   return "NET";
 }
+

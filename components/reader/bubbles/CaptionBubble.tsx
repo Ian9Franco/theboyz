@@ -12,6 +12,7 @@ import {
   buildExitVariant,
   buildAnimTransition,
   computeBubbleDelay,
+  resolveBgColor,
 } from "./bubbleHelpers";
 
 interface CaptionBubbleProps {
@@ -23,6 +24,7 @@ interface CaptionBubbleProps {
   depth?: number;
   textScale?: number;
   speedMultiplier?: number;
+  bubbleOpacity?: number;
 }
 
 export function CaptionBubble({
@@ -34,6 +36,7 @@ export function CaptionBubble({
   depth,
   textScale = 1.0,
   speedMultiplier = 1.0,
+  bubbleOpacity,
 }: CaptionBubbleProps) {
   const paragraphs = parseParagraphs(line.text);
   const size = line.size ?? "medium";
@@ -56,7 +59,7 @@ export function CaptionBubble({
   const fontClass           = resolveFontClass(line);
 
   // ── Colours ──
-  const captionBg           = line.customBg    || "#f5e642";
+  const captionBg           = resolveBgColor(line.customBg, "#f5e642", bubbleOpacity);
   const captionBorderColor  = line.customColor || "#0a0a0f";
   const captionSpeakerColor = getSpeakerColor(line.speaker, "#e8185a");
 
@@ -65,12 +68,18 @@ export function CaptionBubble({
   if (size === "small") captionSizeClass = "text-xs px-2.5 py-1.5";
   if (size === "large") captionSizeClass = "text-base sm:text-lg px-5 py-3.5";
 
+  const isTranslucent = captionBg.includes("rgba") || captionBg === "transparent";
+  const backdropBlurStyles: React.CSSProperties = isTranslucent
+    ? { backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)" }
+    : {};
+
   const captionStyles: React.CSSProperties = {
     pointerEvents: "none",
-    border: `1.5px solid ${captionBorderColor}`,
+    border: `1.75px solid ${captionBorderColor}`, // slightly thicker for better contrast when transparent
     background: captionBg,
     boxShadow: "none",
     borderRadius: line.borderRadius !== undefined ? `${line.borderRadius}px` : undefined,
+    ...backdropBlurStyles,
   };
 
   let baseFontSize = line.fontSize;

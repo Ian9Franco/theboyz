@@ -11,6 +11,7 @@ interface UseReaderLayoutProps {
   activePanel: PanelStop;
   activeReadingBubbleIdx: number;
   focusPanel?: boolean;
+  focusDialogue?: boolean;
 }
 
 export function useReaderLayout({
@@ -23,6 +24,7 @@ export function useReaderLayout({
   activePanel,
   activeReadingBubbleIdx,
   focusPanel = true,
+  focusDialogue = true,
 }: UseReaderLayoutProps) {
   return useMemo(() => {
     let imgWidth = 0;
@@ -39,7 +41,46 @@ export function useReaderLayout({
         imgHeight = imgSize.h * scale;
       } else {
         // Mode: "read"
-        if (focusPanel && activeZoomRect && !zoomedOut) {
+        const activeBubble = activePanel?.dialogue?.[activeReadingBubbleIdx];
+
+        if (focusDialogue && activeBubble && !zoomedOut) {
+          // Focus camera on the active dialogue bubble
+          let fitScale = 1.25; // default mild zoom when focusPanel is off
+          let fx = 0.5;
+          let fy = 0.5;
+
+          const bx = (activeBubble.posX ?? 50) / 100;
+          const by = (activeBubble.posY ?? ((activePanel.focusY ?? 0.5) * 100)) / 100;
+
+          if (focusPanel && activeZoomRect) {
+            const rx = activeZoomRect.x / 100;
+            const ry = activeZoomRect.y / 100;
+            const rw = activeZoomRect.w / 100;
+            const rh = activeZoomRect.h / 100;
+            const cropW = imgSize.w * rw;
+            const cropH = imgSize.h * rh;
+            const scaleX = (containerSize.w * 0.9) / cropW;
+            const scaleY = (containerSize.h * 0.9) / cropH;
+            
+            // Milder panel scale: cap at 2.0 and multiply by 0.75
+            fitScale = Math.max(1.1, Math.min(2.0, Math.min(scaleX, scaleY) * 0.75));
+
+            // Interpolate panel center and bubble position to keep panel context and other dialogues visible
+            const cropCenterX = rx + rw / 2;
+            const cropCenterY = ry + rh / 2;
+            fx = cropCenterX * 0.7 + bx * 0.3;
+            fy = cropCenterY * 0.7 + by * 0.3;
+          } else {
+            // No panel focus: nudge camera slightly from page center towards active bubble
+            fx = 0.5 * 0.6 + bx * 0.4;
+            fy = 0.5 * 0.6 + by * 0.4;
+          }
+
+          imgWidth = imgSize.w * fitScale;
+          imgHeight = imgSize.h * fitScale;
+          imgLeft = containerSize.w / 2 - fx * imgWidth;
+          imgTop = containerSize.h / 2 - fy * imgHeight;
+        } else if (focusPanel && activeZoomRect && !zoomedOut) {
           const rx = activeZoomRect.x / 100;
           const ry = activeZoomRect.y / 100;
           const rw = activeZoomRect.w / 100;
@@ -50,7 +91,9 @@ export function useReaderLayout({
 
           const scaleX = (containerSize.w * 0.9) / cropW;
           const scaleY = (containerSize.h * 0.9) / cropH;
-          const fitScale = Math.max(1, Math.min(3.5, Math.min(scaleX, scaleY)));
+          
+          // Milder standard panel focus: cap at 2.2 instead of 3.5, and scale by 0.85
+          const fitScale = Math.max(1, Math.min(2.2, Math.min(scaleX, scaleY) * 0.85));
 
           imgWidth = imgSize.w * fitScale;
           imgHeight = imgSize.h * fitScale;
@@ -83,5 +126,6 @@ export function useReaderLayout({
     activePanel,
     activeReadingBubbleIdx,
     focusPanel,
+    focusDialogue,
   ]);
 }

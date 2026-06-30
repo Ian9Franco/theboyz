@@ -39,10 +39,11 @@ export function ImageLightbox({ src, alt, onClose }: ImageLightboxProps) {
       />
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-[#e8185a] border-2 border-white text-white font-[var(--font-bangers)] text-xl shadow-lg"
+        className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-[#D7263D] border-2 border-white text-white font-[var(--font-bangers)] text-xl shadow-lg"
       >
         ✕
       </button>
     </motion.div>
   );
 }
+

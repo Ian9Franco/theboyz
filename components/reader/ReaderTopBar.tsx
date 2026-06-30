@@ -41,6 +41,8 @@ interface ReaderTopBarProps {
   setZoomScale?: React.Dispatch<React.SetStateAction<number>>;
   panOffset?: { x: number; y: number };
   setPanOffset?: (val: { x: number; y: number }) => void;
+  bubbleOpacity?: number;
+  setBubbleOpacity?: (val: number) => void;
 }
 
 /**
@@ -72,6 +74,8 @@ export function ReaderTopBar({
   setZoomScale,
   panOffset,
   setPanOffset,
+  bubbleOpacity = 0.90,
+  setBubbleOpacity,
 }: ReaderTopBarProps) {
   const [showPublish, setShowPublish] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -334,6 +338,29 @@ export function ReaderTopBar({
                             >
                               {focusDialogue ? "✓ Sí" : "✗ No"}
                             </button>
+                          </div>
+                        )}
+
+                        {/* Transparency Slider */}
+                        {setBubbleOpacity && (
+                          <div className={`flex flex-col gap-1.5 pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
+                            <div className="flex items-center justify-between">
+                              <span className={`font-[var(--font-bangers)] text-[10px] uppercase tracking-wider ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
+                                Opacidad globos:
+                              </span>
+                              <span className={`font-mono text-[10px] font-bold ${isReadMode ? "text-zinc-300" : "text-[#0a0a0f]"}`}>
+                                {Math.round(bubbleOpacity * 100)}%
+                              </span>
+                            </div>
+                            <input
+                              type="range"
+                              min="0.10"
+                              max="1.00"
+                              step="0.05"
+                              value={bubbleOpacity}
+                              onChange={(e) => setBubbleOpacity(parseFloat(e.target.value))}
+                              className="w-full h-1 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-[#e8185a] transition-all hover:accent-pink-500"
+                            />
                           </div>
                         )}
 

@@ -12,7 +12,7 @@ function getTextColor(hexColor: string) {
   const g = parseInt(color.substring(2, 4), 16);
   const b = parseInt(color.substring(4, 6), 16);
   const yiq = (r * 299 + g * 587 + b * 114) / 1000;
-  return yiq >= 140 ? "#0a0a0f" : "white";
+  return yiq >= 140 ? "#001419" : "white";
 }
 
 export function SagaBlock({ 
@@ -63,27 +63,27 @@ export function SagaBlock({
   const isNuevo = saga.nuevo === true;
   const isProximamente = saga.proximamente === true;
 
-  // color_secondary es opcional — si no se define, cae en el verde oscuro canónico
-  const colorSecondary: string = saga.color_secondary || "#1b4332";
+  const colorPrimary = "#D7263D";
+  const colorSecondary = "#D7263D";
 
-  const isLightBg = getTextColor(saga.color) === "#0a0a0f";
+  const isLightBg = getTextColor(colorPrimary) === "#001419";
   const buttonIconSrc = isLightBg ? "/boom.webp" : "/boom-white.webp";
 
-  // Proximamente siempre usa layout vertical con banda amarilla, independientemente de isFeatured
+  // Proximamente siempre usa layout vertical con banda crimson, independientemente de isFeatured
   if (isProximamente) {
     return (
       <div 
         onClick={() => { if (isCollapsed && typeof window !== 'undefined' && window.innerWidth < 768) onToggleCollapse?.(); }}
-        className={`border-4 border-dashed border-yellow-400/80 relative overflow-hidden rounded-lg opacity-95 transition-all duration-300 flex flex-row items-stretch min-h-[350px] animate-fadeIn ${
+        className={`border-4 border-dashed border-[#D7263D]/80 relative overflow-hidden rounded-lg opacity-95 transition-all duration-300 flex flex-row items-stretch min-h-[350px] animate-fadeIn ${
           isCollapsed 
             ? "w-12 sm:w-14 md:w-full cursor-pointer md:cursor-default select-none md:select-text pl-0 md:pl-12 md:sm:pl-14" 
             : "w-full pl-12 sm:pl-14"
         }`}
         style={{
           boxShadow: isCollapsed 
-            ? "6px 6px 0 #000, 9px 9px 0 rgba(245, 230, 66, 0.15), 0 10px 20px rgba(0,0,0,0.5)" 
-            : "10px 10px 0 #000, 14px 14px 0 rgba(245, 230, 66, 0.25), 0 20px 40px -10px rgba(245, 230, 66, 0.2)",
-          background: "#0f0f15"
+            ? "6px 6px 0 #000, 9px 9px 0 rgba(215, 38, 61, 0.15), 0 10px 20px rgba(0,0,0,0.5)" 
+            : "10px 10px 0 #000, 14px 14px 0 rgba(215, 38, 61, 0.25), 0 20px 40px -10px rgba(215, 38, 61, 0.2)",
+          background: "#021e25"
         }}
       >
         {/* Absolute Docked Left Banner for perfect full-height alignment */}
@@ -94,10 +94,10 @@ export function SagaBlock({
               onToggleCollapse?.(); 
             }
           }}
-          className={`absolute left-0 top-0 bottom-0 w-12 sm:w-14 bg-yellow-400 flex items-center justify-center shrink-0 select-none border-r-4 border-black z-20 ${
+          className={`absolute left-0 top-0 bottom-0 w-12 sm:w-14 bg-[#D7263D] flex items-center justify-center shrink-0 select-none border-r-4 border-black z-20 ${
             isCollapsed 
               ? "cursor-pointer" 
-              : "cursor-pointer hover:bg-yellow-300 transition-colors"
+              : "cursor-pointer hover:bg-[#ff3b51] transition-colors"
           }`}
         >
           <span 
@@ -117,7 +117,7 @@ export function SagaBlock({
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.07] z-0"
           style={{
-            backgroundImage: "radial-gradient(circle, #f5e642 1.5px, transparent 1.5px)",
+            backgroundImage: "radial-gradient(circle, #D7263D 1.5px, transparent 1.5px)",
             backgroundSize: "12px 12px",
           }}
         />
@@ -128,7 +128,7 @@ export function SagaBlock({
             <div className="flex flex-col items-center text-center w-full">
               {saga.cover && (
                 <div 
-                  className="relative shrink-0 w-36 sm:w-40 aspect-[3/4] border-4 border-white overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_#f5e642] group cursor-zoom-in"
+                  className="relative shrink-0 w-36 sm:w-40 aspect-[3/4] border-4 border-white overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_#D7263D] group cursor-zoom-in"
                   onClick={(e) => {
                     e.stopPropagation();
                     onCoverClick?.(getComicPageUrl(saga.cover));
@@ -151,16 +151,16 @@ export function SagaBlock({
                   />
                   <span
                     className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-white"
-                    style={{ background: saga.color, color: getTextColor(saga.color) }}
+                    style={{ background: colorPrimary, color: getTextColor(colorPrimary) }}
                   >
                     SAGA
                   </span>
-                  <span className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-black bg-yellow-400 text-black shadow-[1px_1px_0_#000]">
+                  <span className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-black bg-[#D7263D] text-black shadow-[1px_1px_0_#000]">
                     EN CAMINO
                   </span>
                 </div>
                 <h2 className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-none tracking-wider mb-2 text-white"
-                  style={{ textShadow: "2px 2px 0 #1b4332" }}>
+                  style={{ textShadow: "2px 2px 0 #D7263D" }}>
                   {saga.title}
                 </h2>
                 <div 
@@ -175,7 +175,7 @@ export function SagaBlock({
                     e.stopPropagation();
                     setShowDescription(!showDescription);
                   }}
-                  className="lg:hidden text-[10px] font-sans font-bold underline hover:no-underline text-yellow-400 mt-2 tracking-wide uppercase cursor-pointer"
+                  className="lg:hidden text-[10px] font-sans font-bold underline hover:no-underline text-[#D7263D] mt-2 tracking-wide uppercase cursor-pointer"
                 >
                   {showDescription ? "Ocultar Sinopsis ▲" : "Leer Sinopsis ▼"}
                 </button>
@@ -187,7 +187,7 @@ export function SagaBlock({
                 e.stopPropagation();
                 setShowChapters(!showChapters);
               }}
-              className="font-[var(--font-bangers)] text-sm tracking-wider px-5 py-2.5 border-2 border-yellow-400 bg-yellow-400 hover:bg-yellow-350 text-black uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 cursor-pointer flex items-center gap-2 mt-4"
+              className="font-[var(--font-bangers)] text-sm tracking-wider px-5 py-2.5 border-2 border-[#D7263D] bg-[#D7263D] hover:bg-[#ff3b51] text-black uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 cursor-pointer flex items-center gap-2 mt-4"
             >
               <img 
                 src="/comic-page.webp" 
@@ -228,7 +228,7 @@ export function SagaBlock({
                           key={chapter.id}
                           chapter={chapter}
                           sagaId={saga.id}
-                          sagaColor={saga.color}
+                          sagaColor={colorPrimary}
                           index={ci}
                           isLocked={true}
                           sagaCover={saga.cover}
@@ -252,13 +252,13 @@ export function SagaBlock({
         <div 
           className="border-4 border-black relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn"
           style={{
-            boxShadow: "10px 10px 0 #0a0a0f, 14px 14px 0 #2a4e8c, 0 25px 50px -12px rgba(0, 184, 212, 0.35)",
-            background: "#fbfaf7"
+            boxShadow: "10px 10px 0 #001419, 14px 14px 0 #D7263D, 0 25px 50px -12px rgba(0, 184, 212, 0.35)",
+            background: "#ecf7f8"
           }}
         >
           {/* Horizontal Banner for nuevo - un poco más grande */}
           <div 
-            className="w-full bg-[#0f2042] text-white border-b-4 border-black py-4 px-4 flex items-center justify-center font-[var(--font-bangers)] text-xl sm:text-2xl tracking-widest select-none shadow-md"
+            className="w-full bg-[#D7263D] text-white border-b-4 border-black py-4 px-4 flex items-center justify-center font-[var(--font-bangers)] text-xl sm:text-2xl tracking-widest select-none shadow-md"
           >
             ¡ÚLTIMO LANZAMIENTO!
           </div>
@@ -268,7 +268,7 @@ export function SagaBlock({
             <div
               className="absolute inset-0 pointer-events-none opacity-[0.06] z-0"
               style={{
-                backgroundImage: "radial-gradient(circle, #0f2042 1.5px, transparent 1.5px)",
+                backgroundImage: "radial-gradient(circle, #D7263D 1.5px, transparent 1.5px)",
                 backgroundSize: "12px 12px",
               }}
             />
@@ -277,7 +277,7 @@ export function SagaBlock({
             <div className="flex flex-col lg:flex-row gap-6 items-center lg:items-stretch w-full relative z-10">
               {saga.cover && (
                 <div 
-                  className="relative shrink-0 w-40 sm:w-44 aspect-[3/4] border-4 border-[#0a0a0f] overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_rgba(10,10,15,1)] group cursor-zoom-in self-center"
+                  className="relative shrink-0 w-40 sm:w-44 aspect-[3/4] border-4 border-[#001419] overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_rgba(10,10,15,1)] group cursor-zoom-in self-center"
                   onClick={() => onCoverClick?.(getComicPageUrl(saga.cover))}
                 >
                   <img 
@@ -285,7 +285,7 @@ export function SagaBlock({
                     alt={`Portada de la saga ${saga.title}`} 
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#001419]/40 via-transparent to-transparent pointer-events-none" />
                 </div>
               )}
               <div className="flex-1 flex flex-col justify-between items-center lg:items-start text-center lg:text-left py-1">
@@ -298,16 +298,16 @@ export function SagaBlock({
                     />
                     <span
                       className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-black"
-                      style={{ background: saga.color, color: getTextColor(saga.color) }}
+                      style={{ background: colorPrimary, color: getTextColor(colorPrimary) }}
                     >
                       SAGA
                     </span>
-                    <span className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-black bg-[#0f2042] text-white shadow-[1px_1px_0_#2a4e8c] animate-bounce">
+                    <span className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-black bg-[#D7263D] text-white shadow-[1px_1px_0_#D7263D] animate-bounce">
                       ¡NUEVA!
                     </span>
                   </div>
                   <h2
-                    className="font-[var(--font-bangers)] text-2xl sm:text-4xl leading-none tracking-wider mb-2 text-[#0a0a0f]"
+                    className="font-[var(--font-bangers)] text-2xl sm:text-4xl leading-none tracking-wider mb-2 text-[#001419]"
                     style={{ textShadow: `2px 2px 0 rgba(15, 32, 66, 0.15)` }}
                   >
                     {saga.title}
@@ -319,10 +319,10 @@ export function SagaBlock({
 
                 <button
                   onClick={() => setShowChapters(!showChapters)}
-                  className="font-[var(--font-bangers)] text-sm tracking-wider px-5 py-2.5 border-2 border-[#0a0a0f] uppercase transition-all shadow-[3px_3px_0_#0a0a0f] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#0a0a0f] cursor-pointer flex items-center gap-2 mt-4"
+                  className="font-[var(--font-bangers)] text-sm tracking-wider px-5 py-2.5 border-2 border-[#001419] uppercase transition-all shadow-[3px_3px_0_#001419] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#001419] cursor-pointer flex items-center gap-2 mt-4"
                   style={{ 
-                    background: saga.color, 
-                    color: getTextColor(saga.color)
+                    background: colorPrimary, 
+                    color: getTextColor(colorPrimary)
                   }}
                 >
                   <img 
@@ -345,17 +345,17 @@ export function SagaBlock({
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden relative z-10 w-full"
                 >
-                  <div className="border-t-2 border-dashed border-[#0a0a0f]/20 pt-6">
+                  <div className="border-t-2 border-dashed border-[#001419]/20 pt-6">
                     <div className="flex items-center gap-2 mb-4">
                       <img 
                         src="/comic-page.webp" 
                         alt="Page" 
                         className="w-5 h-5 object-contain" 
                       />
-                      <h4 className="font-[var(--font-bangers)] text-lg tracking-wider text-[#0a0a0f]">
+                      <h4 className="font-[var(--font-bangers)] text-lg tracking-wider text-[#001419]">
                         EPISODIOS DISPONIBLES
                       </h4>
-                      <div className="h-[1px] flex-1 bg-[#0a0a0f]/10" />
+                      <div className="h-[1px] flex-1 bg-[#001419]/10" />
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
@@ -373,7 +373,7 @@ export function SagaBlock({
                             key={chapter.id}
                             chapter={chapter}
                             sagaId={saga.id}
-                            sagaColor={saga.color}
+                            sagaColor={colorPrimary}
                             index={ci}
                             isLocked={isLocked}
                             sagaCover={saga.cover}
@@ -391,10 +391,10 @@ export function SagaBlock({
     } else {
       return (
         <div 
-          className="border-4 border-[#0a0a0f] relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn"
+          className="border-4 border-[#001419] relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn"
           style={{
-            boxShadow: `8px 8px 0 #0a0a0f, 12px 12px 0 ${colorSecondary}, 0 25px 50px -12px ${saga.color}35`,
-            background: "#fbfaf7"
+            boxShadow: `8px 8px 0 #001419, 12px 12px 0 ${colorSecondary}, 0 25px 50px -12px ${colorPrimary}35`,
+            background: "#ecf7f8"
           }}
         >
           <div className="p-6 sm:p-8 relative z-10 flex flex-col justify-between">
@@ -402,7 +402,7 @@ export function SagaBlock({
             <div
               className="absolute inset-0 pointer-events-none opacity-[0.06] z-0"
               style={{
-                backgroundImage: "radial-gradient(circle, #0a0a0f 1.5px, transparent 1.5px)",
+                backgroundImage: "radial-gradient(circle, #001419 1.5px, transparent 1.5px)",
                 backgroundSize: "12px 12px",
               }}
             />
@@ -411,7 +411,7 @@ export function SagaBlock({
             <div className="flex flex-col lg:flex-row gap-6 items-center lg:items-stretch w-full relative z-10">
               {saga.cover && (
                 <div 
-                  className="relative shrink-0 w-40 sm:w-44 aspect-[3/4] border-4 border-[#0a0a0f] overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_rgba(10,10,15,1)] group cursor-zoom-in self-center"
+                  className="relative shrink-0 w-40 sm:w-44 aspect-[3/4] border-4 border-[#001419] overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_rgba(10,10,15,1)] group cursor-zoom-in self-center"
                   onClick={() => onCoverClick?.(getComicPageUrl(saga.cover))}
                 >
                   <img 
@@ -419,7 +419,7 @@ export function SagaBlock({
                     alt={`Portada de la saga ${saga.title}`} 
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#001419]/40 via-transparent to-transparent pointer-events-none" />
                 </div>
               )}
               <div className="flex-1 flex flex-col justify-between items-center lg:items-start text-center lg:text-left py-1">
@@ -432,18 +432,18 @@ export function SagaBlock({
                     />
                     <span
                       className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-black"
-                      style={{ background: saga.color, color: getTextColor(saga.color) }}
+                      style={{ background: colorPrimary, color: getTextColor(colorPrimary) }}
                     >
                       SAGA
                     </span>
                     {/* Badge de color secundario si se define en saga.json */}
-                    {saga.color_secondary && (
+                    {colorSecondary && (
                       <span
                         className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-black"
                         style={{
-                          background: saga.color_secondary,
-                          color: getTextColor(saga.color_secondary),
-                          boxShadow: `1px 1px 0 ${saga.color_secondary}88`
+                          background: colorSecondary,
+                          color: getTextColor(colorSecondary),
+                          boxShadow: `1px 1px 0 ${colorSecondary}88`
                         }}
                       >
                         ALT
@@ -451,7 +451,7 @@ export function SagaBlock({
                     )}
                   </div>
                   <h2
-                    className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-none tracking-wider mb-2 text-[#0a0a0f]"
+                    className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-none tracking-wider mb-2 text-[#001419]"
                     style={{ textShadow: `2px 2px 0 rgba(10, 10, 15, 0.05)` }}
                   >
                     {saga.title}
@@ -463,10 +463,10 @@ export function SagaBlock({
 
                 <button
                   onClick={() => setShowChapters(!showChapters)}
-                  className="font-[var(--font-bangers)] text-sm tracking-wider px-5 py-2.5 border-2 border-[#0a0a0f] uppercase transition-all shadow-[3px_3px_0_#0a0a0f] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#0a0a0f] cursor-pointer flex items-center gap-2 mt-4"
+                  className="font-[var(--font-bangers)] text-sm tracking-wider px-5 py-2.5 border-2 border-[#001419] uppercase transition-all shadow-[3px_3px_0_#001419] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#001419] cursor-pointer flex items-center gap-2 mt-4"
                   style={{ 
-                    background: saga.color, 
-                    color: getTextColor(saga.color)
+                    background: colorPrimary, 
+                    color: getTextColor(colorPrimary)
                   }}
                 >
                   <img 
@@ -489,17 +489,17 @@ export function SagaBlock({
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden relative z-10 w-full"
                 >
-                  <div className="border-t-2 border-dashed border-[#0a0a0f]/20 pt-6">
+                  <div className="border-t-2 border-dashed border-[#001419]/20 pt-6">
                     <div className="flex items-center gap-2 mb-4">
                       <img 
                         src="/comic-page.webp" 
                         alt="Page" 
                         className="w-5 h-5 object-contain" 
                       />
-                      <h4 className="font-[var(--font-bangers)] text-lg tracking-wider text-[#0a0a0f]">
+                      <h4 className="font-[var(--font-bangers)] text-lg tracking-wider text-[#001419]">
                         EPISODIOS DISPONIBLES
                       </h4>
-                      <div className="h-[1px] flex-1 bg-[#0a0a0f]/10" />
+                      <div className="h-[1px] flex-1 bg-[#001419]/10" />
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
@@ -517,7 +517,7 @@ export function SagaBlock({
                             key={chapter.id}
                             chapter={chapter}
                             sagaId={saga.id}
-                            sagaColor={saga.color}
+                            sagaColor={colorPrimary}
                             index={ci}
                             isLocked={isLocked}
                             sagaCover={saga.cover}
@@ -538,21 +538,21 @@ export function SagaBlock({
   const containerClass = isNuevo
     ? "border-4 border-black p-6 sm:p-10 relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.005]"
     : isProximamente
-      ? "border-4 border-dashed border-yellow-400 bg-[#0f0f15] p-6 sm:p-10 relative overflow-hidden rounded-lg opacity-90 transition-opacity hover:opacity-100"
-      : "border-4 border-[#0a0a0f] bg-[#fbfaf7] p-6 sm:p-10 relative overflow-hidden rounded-lg";
+      ? "border-4 border-dashed border-[#D7263D] bg-[#021e25] p-6 sm:p-10 relative overflow-hidden rounded-lg opacity-90 transition-opacity hover:opacity-100"
+      : "border-4 border-[#001419] bg-[#ecf7f8] p-6 sm:p-10 relative overflow-hidden rounded-lg";
 
   return (
     <div 
       className={containerClass}
       style={{
         boxShadow: isNuevo 
-          ? "10px 10px 0 #0a0a0f, 14px 14px 0 #2a4e8c, 0 25px 50px -12px rgba(0, 184, 212, 0.35)" 
+          ? "10px 10px 0 #001419, 14px 14px 0 #D7263D, 0 25px 50px -12px rgba(0, 184, 212, 0.35)" 
           : isProximamente 
-            ? "10px 10px 0 #000, 14px 14px 0 rgba(245, 230, 66, 0.25), 0 20px 40px -10px rgba(245, 230, 66, 0.2)"
-            : `8px 8px 0 #0a0a0f, 12px 12px 0 ${colorSecondary}, 0 25px 50px -12px ${saga.color}35`,
+            ? "10px 10px 0 #000, 14px 14px 0 rgba(215, 38, 61, 0.25), 0 20px 40px -10px rgba(215, 38, 61, 0.2)"
+            : `8px 8px 0 #001419, 12px 12px 0 ${colorSecondary}, 0 25px 50px -12px ${colorPrimary}35`,
         background: isProximamente
-          ? "#0f0f15"
-          : "#fbfaf7"
+          ? "#021e25"
+          : "#ecf7f8"
       }}
     >
       {/* Halftone pop-art highly visible background pattern */}
@@ -560,21 +560,21 @@ export function SagaBlock({
         className="absolute inset-0 pointer-events-none opacity-[0.06] z-0"
         style={{
           backgroundImage: isProximamente
-            ? "radial-gradient(circle, #f5e642 1.5px, transparent 1.5px)"
-            : "radial-gradient(circle, #0a0a0f 1.5px, transparent 1.5px)",
+            ? "radial-gradient(circle, #D7263D 1.5px, transparent 1.5px)"
+            : "radial-gradient(circle, #001419 1.5px, transparent 1.5px)",
           backgroundSize: "12px 12px",
         }}
       />
 
       {/* Retro sticker/banner highlights */}
       {isNuevo && (
-        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-[#0f2042] text-white font-[var(--font-bangers)] text-xs sm:text-sm px-3.5 py-1.5 uppercase tracking-widest border-2 border-black shadow-[3px_3px_0_#2a4e8c] z-20 rotate-[3deg] select-none animate-pulse">
+        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-[#D7263D] text-white font-[var(--font-bangers)] text-xs sm:text-sm px-3.5 py-1.5 uppercase tracking-widest border-2 border-black shadow-[3px_3px_0_#D7263D] z-20 rotate-[3deg] select-none animate-pulse">
           ¡ÚLTIMO LANZAMIENTO!
         </div>
       )}
 
       {isProximamente && (
-        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-yellow-400 text-black font-[var(--font-bangers)] text-xs sm:text-sm px-3.5 py-1.5 uppercase tracking-widest border-2 border-black shadow-[3px_3px_0_#000] z-20 -rotate-[3deg] select-none">
+        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-[#D7263D] text-black font-[var(--font-bangers)] text-xs sm:text-sm px-3.5 py-1.5 uppercase tracking-widest border-2 border-black shadow-[3px_3px_0_#000] z-20 -rotate-[3deg] select-none">
           PRÓXIMAMENTE
         </div>
       )}
@@ -582,7 +582,7 @@ export function SagaBlock({
       <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 sm:gap-12 relative z-10">
         {saga.cover && (
           <div 
-            className="relative shrink-0 w-64 sm:w-80 aspect-[3/4] border-4 border-[#0a0a0f] overflow-hidden rounded bg-zinc-900 shadow-[8px_8px_0_rgba(10,10,15,1)] group cursor-zoom-in"
+            className="relative shrink-0 w-64 sm:w-80 aspect-[3/4] border-4 border-[#001419] overflow-hidden rounded bg-zinc-900 shadow-[8px_8px_0_rgba(10,10,15,1)] group cursor-zoom-in"
             style={{ transform: isEven ? "rotate(-1.5deg)" : "rotate(1.5deg)" }}
             onClick={() => onCoverClick?.(getComicPageUrl(saga.cover))}
           >
@@ -591,7 +591,7 @@ export function SagaBlock({
               alt={`Portada de la saga ${saga.title}`} 
               className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102" 
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#001419]/40 via-transparent to-transparent pointer-events-none" />
           </div>
         )}
         <div className="flex-1 flex flex-col justify-between text-center lg:text-left items-center lg:items-start py-2">
@@ -604,37 +604,37 @@ export function SagaBlock({
               />
               <span
                 className="tag text-xs font-[var(--font-bangers)] tracking-widest px-2.5 py-0.5 border-2 border-black"
-                style={{ background: saga.color, color: getTextColor(saga.color) }}
+                style={{ background: colorPrimary, color: getTextColor(colorPrimary) }}
               >
                 SAGA
               </span>
               {/* Badge de color secundario si se define en saga.json */}
-              {saga.color_secondary && !isNuevo && !isProximamente && (
+              {colorSecondary && !isNuevo && !isProximamente && (
                 <span
                   className="tag text-xs font-[var(--font-bangers)] tracking-widest px-2.5 py-0.5 border-2 border-black"
                   style={{
-                    background: saga.color_secondary,
-                    color: getTextColor(saga.color_secondary),
-                    boxShadow: `2px 2px 0 ${saga.color_secondary}88`
+                    background: colorSecondary,
+                    color: getTextColor(colorSecondary),
+                    boxShadow: `2px 2px 0 ${colorSecondary}88`
                   }}
                 >
                   ALT
                 </span>
               )}
               {isNuevo && (
-                <span className="tag text-xs font-[var(--font-bangers)] tracking-widest px-2.5 py-0.5 border-2 border-black bg-[#0f2042] text-white shadow-[2px_2px_0_#2a4e8c] animate-bounce">
+                <span className="tag text-xs font-[var(--font-bangers)] tracking-widest px-2.5 py-0.5 border-2 border-black bg-[#D7263D] text-white shadow-[2px_2px_0_#D7263D] animate-bounce">
                   ¡NUEVA!
                 </span>
               )}
               {isProximamente && (
-                <span className="tag text-xs font-[var(--font-bangers)] tracking-widest px-2.5 py-0.5 border-2 border-black bg-yellow-400 text-black shadow-[2px_2px_0_#000]">
+                <span className="tag text-xs font-[var(--font-bangers)] tracking-widest px-2.5 py-0.5 border-2 border-black bg-[#D7263D] text-black shadow-[2px_2px_0_#000]">
                   EN CAMINO
                 </span>
               )}
             </div>
             <h2
               className="font-[var(--font-bangers)] text-4xl sm:text-6xl leading-none tracking-wider mb-4"
-              style={{ color: "#0a0a0f", textShadow: `3px 3px 0 ${colorSecondary}44` }}
+              style={{ color: "#001419", textShadow: `3px 3px 0 ${colorSecondary}44` }}
             >
               {saga.title}
             </h2>
@@ -645,11 +645,11 @@ export function SagaBlock({
 
           <button
             onClick={() => setShowChapters(!showChapters)}
-            className="font-[var(--font-bangers)] text-lg sm:text-xl tracking-wider px-8 py-3.5 border-4 border-[#0a0a0f] uppercase transition-all shadow-[4px_4px_0_#0a0a0f] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#0a0a0f] cursor-pointer flex items-center gap-3 mt-4"
+            className="font-[var(--font-bangers)] text-lg sm:text-xl tracking-wider px-8 py-3.5 border-4 border-[#001419] uppercase transition-all shadow-[4px_4px_0_#001419] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#001419] cursor-pointer flex items-center gap-3 mt-4"
             style={{ 
-              background: isProximamente ? "#475569" : saga.color, 
-              color: isProximamente ? "#ffffff" : getTextColor(saga.color),
-              borderColor: isProximamente ? "#0f172a" : "#0a0a0f"
+              background: isProximamente ? "#475569" : colorPrimary, 
+              color: isProximamente ? "#ffffff" : getTextColor(colorPrimary),
+              borderColor: isProximamente ? "#0f172a" : "#001419"
             }}
           >
             <img 
@@ -675,17 +675,17 @@ export function SagaBlock({
             transition={{ duration: 0.35, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="border-t-4 border-dashed border-[#0a0a0f]/20 pt-8">
+            <div className="border-t-4 border-dashed border-[#001419]/20 pt-8">
               <div className="flex items-center gap-3 mb-8">
                 <img 
                   src="/comic-page.webp" 
                   alt="Page" 
                   className="w-6 h-6 object-contain" 
                 />
-                <h4 className="font-[var(--font-bangers)] text-2xl tracking-wider text-[#0a0a0f]">
+                <h4 className="font-[var(--font-bangers)] text-2xl tracking-wider text-[#001419]">
                   {isProximamente ? "EPISODIOS PROYECTADOS" : "EPISODIOS DISPONIBLES"}
                 </h4>
-                <div className="h-[2px] flex-1 bg-[#0a0a0f]/10" />
+                <div className="h-[2px] flex-1 bg-[#001419]/10" />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
@@ -705,7 +705,7 @@ export function SagaBlock({
                       key={chapter.id}
                       chapter={chapter}
                       sagaId={saga.id}
-                      sagaColor={saga.color}
+                      sagaColor={colorPrimary}
                       index={ci}
                       isLocked={isLocked}
                       sagaCover={saga.cover}
@@ -725,7 +725,7 @@ export function SagaBlock({
 }
 
 /* ── CHAPTER CARD ── */
-const ACCENTS = ["#1b4332", "#00b8d4", "#f5e642", "#6d28d9", "#f97316"];
+const ACCENTS = ["#D7263D", "#D7263D", "#D7263D", "#D7263D", "#D7263D"];
 
 function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, isSagaProximamente }: {
   chapter: any;
@@ -758,10 +758,10 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
     const isDraftChapter = chapter.draft;
     const cardContent = (
       <div
-        className={`flex flex-col h-full overflow-hidden border-[3px] border-[#0a0a0f] ${isDraftChapter ? "cursor-pointer hover:scale-[1.01] transition-transform" : ""}`}
+        className={`flex flex-col h-full overflow-hidden border-[3px] border-[#001419] ${isDraftChapter ? "cursor-pointer hover:scale-[1.01] transition-transform" : ""}`}
         style={{
-          background: isDraftChapter ? "#13131e" : "#e5e5eb",
-          boxShadow: isDraftChapter ? "5px 5px 0 #e8185a" : "5px 5px 0 #0a0a0f",
+          background: isDraftChapter ? "#003842" : "#e5e5eb",
+          boxShadow: isDraftChapter ? "5px 5px 0 #D7263D" : "5px 5px 0 #001419",
         }}
       >
         {/* Cover image area locked */}
@@ -769,7 +769,7 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
           className="relative w-full overflow-hidden shrink-0 flex items-center justify-center"
           style={{
             aspectRatio: "3/4",
-            background: `repeating-linear-gradient(45deg, #13131e, #13131e 10px, #2a2a35 10px, #2a2a35 20px)`,
+            background: `repeating-linear-gradient(45deg, #003842, #003842 10px, #063f49 10px, #063f49 20px)`,
           }}
         >
           {(chapter.cover || sagaCover) && (
@@ -782,28 +782,28 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
           <div className="absolute inset-0 speed-lines opacity-20" />
           
           <div className="absolute inset-0 flex flex-col items-center justify-center z-20 gap-3">
-            <div className={`w-12 h-12 rounded-full flex items-center justify-center border ${isDraftChapter ? "bg-[#e8185a]/20 border-[#e8185a]/50 text-[#e8185a]" : "bg-white/10 border-white/20 text-white/80"}`}>
+            <div className={`w-12 h-12 rounded-full flex items-center justify-center border ${isDraftChapter ? "bg-[#D7263D]/20 border-[#D7263D]/50 text-[#D7263D]" : "bg-white/10 border-white/20 text-white/80"}`}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2.5" />
                 <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
               </svg>
             </div>
-            <span className={`font-[var(--font-bangers)] text-lg tracking-widest uppercase ${isDraftChapter ? "text-[#e8185a]" : "text-white/60"}`}>
+            <span className={`font-[var(--font-bangers)] text-lg tracking-widest uppercase ${isDraftChapter ? "text-[#D7263D]" : "text-white/60"}`}>
               {isDraftChapter ? "DRAFT" : "Bloqueado"}
             </span>
           </div>
         </div>
 
         {/* Info strip */}
-        <div className={`flex-1 p-4 flex flex-col justify-between gap-3 ${isDraftChapter ? "bg-[#0e0e16]" : "bg-[#eef0f4]"}`}>
+        <div className={`flex-1 p-4 flex flex-col justify-between gap-3 ${isDraftChapter ? "bg-[#021e25]" : "bg-[#eef0f4]"}`}>
           <div>
-            <p className={`font-[var(--font-bangers)] text-xs tracking-[0.2em] uppercase mb-1 ${isDraftChapter ? "text-[#e8185a]/60" : "text-gray-400"}`}>
+            <p className={`font-[var(--font-bangers)] text-xs tracking-[0.2em] uppercase mb-1 ${isDraftChapter ? "text-[#D7263D]/60" : "text-gray-400"}`}>
               {saga_label(index)}
             </p>
             <h3 className={`font-[var(--font-bangers)] text-2xl sm:text-3xl leading-tight uppercase tracking-wide ${isDraftChapter ? "text-white/70" : "text-gray-400"}`}>
               {chapter.title}
             </h3>
-            <p className={`font-[var(--font-sans)] text-xs mt-1 ${isDraftChapter ? "text-[#e8185a]/70" : "text-gray-500"}`}>
+            <p className={`font-[var(--font-sans)] text-xs mt-1 ${isDraftChapter ? "text-[#D7263D]/70" : "text-gray-500"}`}>
               {isDraftChapter
                 ? "Borrador — ingresá la contraseña para previsualizar."
                 : isSagaProximamente
@@ -812,7 +812,7 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
             </p>
           </div>
           {isDraftChapter && (
-            <div className="text-[10px] font-[var(--font-bangers)] tracking-widest text-[#e8185a] uppercase flex items-center gap-1">
+            <div className="text-[10px] font-[var(--font-bangers)] tracking-widest text-[#D7263D] uppercase flex items-center gap-1">
               <span>🔑</span> Acceso con contraseña →
             </div>
           )}
@@ -859,8 +859,8 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
           style={{
             aspectRatio: "3/4",
             background: (cover || chapter.cover || sagaCover)
-              ? "#0a0a0f"
-              : `linear-gradient(145deg, #0a0a0f 0%, ${accent}33 100%)`,
+              ? "#001419"
+              : `linear-gradient(145deg, #001419 0%, ${accent}33 100%)`,
           }}
         >
           {/* Actual cover image */}
@@ -892,10 +892,10 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
             <div
               className="absolute top-3 right-3 z-30 font-[var(--font-bangers)] text-sm px-2.5 py-0.5 tracking-wider rotate-[6deg] animate-pulse"
               style={{
-                background: "#f5e642",
-                color: "#0a0a0f",
-                border: "2px solid #0a0a0f",
-                boxShadow: "3px 3px 0 #1b4332",
+                background: "#D7263D",
+                color: "#001419",
+                border: "2px solid #001419",
+                boxShadow: "3px 3px 0 #D7263D",
               }}
             >
               Borrador
@@ -925,7 +925,7 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
             >
               {saga_label(index)}
             </p>
-            <h3 className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-tight uppercase tracking-wide text-[#0a0a0f]">
+            <h3 className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-tight uppercase tracking-wide text-[#001419]">
               {chapter.title}
             </h3>
           </div>
@@ -941,3 +941,8 @@ function saga_label(index: number) {
   const labels = ["Primer número", "Segundo número", "Tercer número", "Cuarto número", "Quinto número"];
   return labels[index] ?? `Número ${index + 1}`;
 }
+
+
+
+
+

@@ -34,7 +34,7 @@ export const secundarios: CharacterDetail[] = [
   },
   {
     id: 'supertrucker',
-    name: 'Super Camionero',
+    name: 'Supercamionero',
     category: 'independientes',
     isSecondary: true,
     image: '/personajes/SECUNDARIOS/Independientes/Supercamionero/Supercamionero_ficha.webp',
@@ -303,6 +303,161 @@ export const secundarios: CharacterDetail[] = [
       significa: 'Hechicera de Control y Vanguardia Líquida. Absorbe la esencia mágica de seres caídos y controla el campo con fluidos oscuros.',
       crisis: 'Consumo Vital: La Tinta Viva se alimenta de su propia fuerza vital, debilitando su cuerpo físico si se usa por tiempo prolongado.',
       stats: { fuerza: 8, inteligencia: 10, carisma: 9, suerte: 5, combate: 8, defensa: 8, especialVal: 10 }
+    }
+  },
+  {
+    id: 'aurelia',
+    name: 'Aurelia Veyr',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/Fichas/Secundarios/Aurelia Veyr/Aurelia Veyr_sheet.png',
+    fullBody: '/personajes/Fichas/Secundarios/Aurelia Veyr/Aurelia Veyr_sheet.png',
+    color: '#cbd5e1',
+    role: 'La Cartógrafa Blanca / Astrónoma del Fin',
+    visualCode: 'Túnica blanca, marcas de mapas estelares biológicos en la piel, bastón de navegación estelar',
+    perfil: [
+      'La última Elyndari: Su planeta natal, Elyndra, fue removido de la realidad, convirtiéndola en el último mapa vivo de su mundo.',
+      'Cartógrafa estelar: Capaz de leer rutas cósmicas imposibles, corredores gravitacionales y órbitas fantasma.',
+      'Ancla de realidad: Su cuerpo y bastón biológico conservan las coordenadas de lugares borrados del mapa estelar.'
+    ],
+    crisis: 'Remembranza dolorosa: Intentar manifestar coordenadas de Elyndra le genera una intensa disonancia cognitiva y fatiga física.',
+    loreNote: 'Miembro de La Órbita Muerta. Aurelia pertenece a los Elyndari, especie que cartografiaba y conectaba mundos. Su planeta natal Elyndra fue "removido" de la realidad por una fuerza desconocida. Ella es el último mapa vivo de un mundo que nadie recuerda.',
+    stats: { fuerza: 4, inteligencia: 9, carisma: 8, suerte: 6, combate: 5, defensa: 6, especialVal: 9 },
+    especialLabel: 'Navegación',
+    powers: {
+      role: 'Cartógrafa Astral',
+      habilidades: [
+        'Bastón de Elyndra: Fija coordenadas espaciales estables para abrir mapas holográficos y detectar caminos ocultos.',
+        'Lectura de Rutas: Detecta fluctuaciones dimensionales y percibe cuando una realidad local ha sido manipulada.',
+        'Sello de Brechas: Cierra pequeñas fisuras dimensionales canalizando la energía de mapas estelares antiguos.'
+      ],
+      significa: 'La navegante de la realidad. Abre y cierra accesos interdimensionales guiando al grupo por caminos seguros.',
+      crisis: 'Disonancia de mapa: Si la realidad física difiere demasiado de sus coordenadas estelares, su orientación colapsa.',
+      stats: { fuerza: 5, inteligencia: 10, carisma: 9, suerte: 7, combate: 6, defensa: 7, especialVal: 10 }
+    }
+  },
+  {
+    id: 'john_wick',
+    name: 'John Wick',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/Fichas/Secundarios/John Wick/John Wick_sheet.jpeg',
+    fullBody: '/personajes/Fichas/Secundarios/John Wick/John Wick_sheet.jpeg',
+    color: '#1c1917',
+    role: 'El Diurno / Baba Yaga',
+    visualCode: 'Traje negro a medida, mirada implacable, estaca táctica de plata, espada corta Luto',
+    perfil: [
+      'Dhampir por traición: Sometido a una conversión fallida por la Mesa Carmesí (red de casas vampíricas de la Mesa Alta), quedó atrapado entre la vida y la muerte.',
+      'Depredador de la noche: Caza vampiros impulsado por una disciplina inquebrantable y el deseo de vengar su humanidad perdida.',
+      'Eficacia letal: Combina técnicas de combate profesional humano con reflejos, fuerza y sentidos vampíricos aumentados.'
+    ],
+    crisis: 'Sed de sangre: Luchar contra su propia naturaleza dhampir consume su autocontrol si se expone a heridas sagradas o plata.',
+    loreNote: 'Conocido como Baba Yaga y temido en el mundo oculto como El Diurno, John Wick fue traicionado por la Mesa Carmesí. Quedó transformado en un dhampir con fuerza y regeneración aumentadas, pero todavía dueño de su voluntad. Ahora caza vampiros buscando cobrar con sangre.',
+    stats: { fuerza: 7, inteligencia: 8, carisma: 6, suerte: 5, combate: 10, defensa: 8, especialVal: 8 },
+    especialLabel: 'Baba Yaga',
+    powers: {
+      role: 'Diurno',
+      habilidades: [
+        'Estaca Táctica: Ataques quirúrgicos a puntos vitales usando una estaca plegable de aleación de plata.',
+        'Tiro Profesional: Uso letal de armas de fuego con munición de plata, UV e incendiaria contra nidos vampíricos.',
+        'Reflejos Dhampir: Esquiva y contraataca a velocidades sobrehumanas sin perder su enfoque táctico limpio.'
+      ],
+      significa: 'El ejecutor de la noche. Limpia salones de enemigos mediante fuerza híbrida y precisión balística absoluta.',
+      crisis: 'Agotamiento híbrido: La exposición prolongada a la luz solar o heridas purificadoras debilita su regeneración.',
+      stats: { fuerza: 9, inteligencia: 9, carisma: 7, suerte: 6, combate: 10, defensa: 9, especialVal: 9 }
+    }
+  },
+  {
+    id: 'lucian',
+    name: 'Lucian Graves',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/Fichas/Secundarios/Lucian Graves/Lucian Graves_sheet.png',
+    fullBody: '/personajes/Fichas/Secundarios/Lucian Graves/Lucian Graves_sheet.png',
+    color: '#292524',
+    role: 'El Exorcista Maldito / Abogado del Desastre',
+    visualCode: 'Gabardina gastada, cigarrillo encendido, Fósforo de San Judas, bolsa de reliquias robadas',
+    perfil: [
+      'Condenado al Infierno: Su alma pertenece a Malphas el Contador tras despertar a una entidad con un grimorio antiguo.',
+      'Visión del más allá: Puede ver de forma innata posesiones, pecados adheridos al cuerpo y demonios camuflados.',
+      'Embaucador astuto: Utiliza la "Mentira Santa" y reliquias robadas para engañar y disolver pactos demoníacos.'
+    ],
+    crisis: 'Plazo de cobro: Malphas y sus cobradores acechan constantemente, obligándolo a gastar energía para evitar su descenso.',
+    loreNote: 'Un ocultista y exorcista maldito de Saint Marrow condenado al Infierno. Graves sobrevive resolviendo casos sobrenaturales mientras navega una red de pactos y figuras infernales que lo odian y lo necesitan, usando el Fósforo de San Judas y su bolsa de reliquias robadas.',
+    stats: { fuerza: 3, inteligencia: 9, carisma: 7, suerte: 5, combate: 6, defensa: 5, especialVal: 8 },
+    especialLabel: 'Exorcismo',
+    powers: {
+      role: 'Ocultista',
+      habilidades: [
+        'Fósforo de San Judas: Enciende y activa sigilos, sal negra o papel con nombres verdaderos para repeler entidades.',
+        'Mentira Santa: Negocia o confunde a demonios usando verdades a medias, alterando las reglas de sus contratos.',
+        'Bolsa de Recursos: Extrae reliquias consagradas o malditas (como agua bendita robada o sal negra) para defensa.'
+      ],
+      significa: 'El negociador maldito. Desactiva ventajas demoníacas y manipula las reglas del combate místico.',
+      crisis: 'Límite contractual: Forzar la Mentira Santa puede alertar a Malphas, acelerando el cobro de su deuda.',
+      stats: { fuerza: 5, inteligencia: 10, carisma: 8, suerte: 6, combate: 8, defensa: 7, especialVal: 10 }
+    }
+  },
+  {
+    id: 'mando',
+    name: 'Mando',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/Fichas/Secundarios/Mando/Mando_sheet.png',
+    fullBody: '/personajes/Fichas/Secundarios/Mando/Mando_sheet.png',
+    color: '#334155',
+    role: 'El Errante del Polvo / Cazador de Órbitas Muertas',
+    visualCode: 'Armadura de combate abollada, casco con tres ranuras azules Ghostline, capa de camuflaje térmico',
+    perfil: [
+      'Sobreviviente de Veyra-9: Ex-soldado colonial cuya unidad y memoria fueron borradas tras un desastre de horror cósmico.',
+      'Rastreador implacable: Caza recompensas en la frontera espacial buscando la señal que causó la masacre de su escuadrón.',
+      'Disciplina militar: Silencioso, seco y metódico. Carga en su capa fragmentos de los uniformes de sus caídos.'
+    ],
+    crisis: 'Fantasmas de Ghostline: Su visor táctico muestra ecos térmicos del pasado, distorsionando su enfoque en combate.',
+    loreNote: 'Miembro de La Órbita Muerta. Antiguo soldado colonial sobreviviente de Veyra-9, donde su escuadrón y una colonia entera desaparecieron tras una señal cósmica. Acepta contratos mientras rastrea pistas sobre el origen de la señal a bordo de su nave, El Cuervo de Veyra.',
+    stats: { fuerza: 8, inteligencia: 7, carisma: 5, suerte: 6, combate: 9, defensa: 8, especialVal: 7 },
+    especialLabel: 'Ghostline',
+    powers: {
+      role: 'Cazarecompensas',
+      habilidades: [
+        'Rastreo Ghostline: Lee trazas de calor, energía cuántica y motores espaciales para predecir movimientos.',
+        'Manto de Supervivencia: Capa de camuflaje térmico que absorbe radiación e interrumpe sensores enemigos.',
+        'Arsenal de Frontera: Emplea rifles pesados, ganchos de anclaje y explosivos tácticos con eficiencia de soldado.'
+      ],
+      significa: 'El soldado de asalto. Rastrea objetivos invisibles y resiste daños masivos gracias a su blindaje.',
+      crisis: 'Obsesión de rastro: Si la señal Ghostline coincide con Veyra-9, ignora amenazas para seguir el origen.',
+      stats: { fuerza: 9, inteligencia: 8, carisma: 6, suerte: 7, combate: 10, defensa: 9, especialVal: 8 }
+    }
+  },
+  {
+    id: 'vexa',
+    name: 'Vexa Ruun',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/Fichas/Secundarios/Vexa Ruun/Vexa Ruun_sheet.png',
+    fullBody: '/personajes/Fichas/Secundarios/Vexa Ruun/Vexa Ruun_sheet.png',
+    color: '#0891b2',
+    role: 'La Cazadora de Vidrio / Ejecutora de Órbita Limpia',
+    visualCode: 'Cuerpo translúcido con núcleo de energía, armadura biomecánica blanca y dorada, garras de vidrio',
+    perfil: [
+      'Ejecutora cuántica: Cazadora de élite corporativa que modela la cacería como una ecuación matemática pura.',
+      'Tecnología prohibida: Su cuerpo translúcido alberga un núcleo de energía recuperada de la anomalía de Veyra-9.',
+      'Precisión implacable: Carece de emoción en combate. Rastrea mediante predicción probabilística y sigilo óptico.'
+    ],
+    crisis: 'Sincronía inestable: Su núcleo entra en resonancia violenta y pierde control al acercarse al Ghostline de Mando.',
+    loreNote: 'Miembro de La Órbita Muerta. Cazadora de élite biomecánica cuyos sistemas de probabilidad son extremadamente precisos. Posee un núcleo de energía recuperada de Veyra-9, y al acercarse a Mando, su núcleo reacciona al Ghostline de su casco.',
+    stats: { fuerza: 6, inteligencia: 9, carisma: 4, suerte: 5, combate: 9, defensa: 7, especialVal: 8 },
+    especialLabel: 'Probabilidad',
+    powers: {
+      role: 'Blue Wraith',
+      habilidades: [
+        'Cálculo Probabilístico: Modela rutas y movimientos enemigos en tiempo real, aumentando su evasión.',
+        'Garras de Vidrio: Cuchillas biomecánicas de alta frecuencia que vibran para cortar escudos energéticos.',
+        'Camuflaje del Espectro: Vuelve su cuerpo translúcido invisible a la luz visible y sensores térmicos.'
+      ],
+      significa: 'La cazadora sigilosa. Se infiltra tras líneas enemigas y neutraliza objetivos clave con precisión clínica.',
+      crisis: 'Error algorítmico: Si un objetivo actúa de forma irracional o caótica, sus modelos probabilísticos se sobrecargan.',
+      stats: { fuerza: 8, inteligencia: 10, carisma: 5, suerte: 6, combate: 10, defensa: 8, especialVal: 9 }
     }
   }
 ];

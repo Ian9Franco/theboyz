@@ -216,6 +216,50 @@ export function EditorBubbleVisualsForm({
           </div>
         </div>
 
+        {/* Transparency / Translucency Presets */}
+        <div className="flex flex-col gap-1 mb-2">
+          <label className="text-xs font-bold text-zinc-300">Transparencia / Opacidad:</label>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                  customBg: "rgba(255, 255, 255, 0.88)",
+                  customColor: "#0a0a0f",
+                  textColor: "#0a0a0f",
+                });
+              }}
+              className="flex-1 py-1.5 px-2 bg-white/20 hover:bg-white/30 border border-white/20 hover:border-white/40 text-white text-[9px] font-bold rounded flex items-center justify-center gap-1 transition-colors cursor-pointer"
+            >
+              💎 Translúcido
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                  customBg: "rgba(255, 255, 255, 0.5)",
+                  customColor: "#0a0a0f",
+                  textColor: "#0a0a0f",
+                });
+              }}
+              className="flex-1 py-1.5 px-2 bg-white/10 hover:bg-white/20 border border-white/15 hover:border-white/30 text-white text-[9px] font-bold rounded flex items-center justify-center gap-1 transition-colors cursor-pointer"
+            >
+              🌫️ Semitransp.
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                  customBg: "#ffffff",
+                });
+              }}
+              className="flex-1 py-1.5 px-2 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-zinc-200 text-[9px] font-bold rounded flex items-center justify-center gap-1 transition-colors cursor-pointer"
+            >
+              ⚪ Sólido
+            </button>
+          </div>
+        </div>
+
         {/* Custom Background Color */}
         <div className="flex flex-col gap-1 mt-1">
           <label className="text-xs font-bold text-zinc-300">Color Fondo:</label>

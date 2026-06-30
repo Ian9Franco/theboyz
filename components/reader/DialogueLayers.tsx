@@ -38,6 +38,7 @@ interface DialogueLayersProps {
   handleDragEnd: (info: any, pIdx: number, bIdx: number) => void;
   handleTailTargetDragEnd: (info: any, pIdx: number, bIdx: number) => void;
   focusDialogue?: boolean;
+  bubbleOpacity?: number;
 }
 
 export function DialogueLayers({
@@ -69,6 +70,7 @@ export function DialogueLayers({
   handleDragEnd,
   handleTailTargetDragEnd,
   focusDialogue = true,
+  bubbleOpacity = 0.88,
 }: DialogueLayersProps) {
   const settings = localDialogues.settings || {};
   const clearReadDialogues = settings.clearReadDialogues ?? true;
@@ -139,7 +141,7 @@ export function DialogueLayers({
 
             let elasticTailNode = null;
             if (targetX !== null && targetY !== null && line.tail !== "none") {
-              const { bgColor } = getBubbleStyles(line);
+              const { bgColor } = getBubbleStyles(line, bubbleOpacity);
               const target = findTargetBubble(
                 line.tailX!,
                 line.tailY!,
@@ -236,6 +238,7 @@ export function DialogueLayers({
                   depth={dialogueDepth}
                   textScale={textScale}
                   speedMultiplier={speedMultiplier}
+                  bubbleOpacity={bubbleOpacity}
                 />
               </div>
             );
@@ -276,7 +279,7 @@ export function DialogueLayers({
 
           let elasticTailNode = null;
           if (targetX !== null && targetY !== null && line.tail !== "none") {
-            const { bgColor } = getBubbleStyles(line);
+            const { bgColor } = getBubbleStyles(line, bubbleOpacity);
             const target = findTargetBubble(
               line.tailX!,
               line.tailY!,
@@ -374,6 +377,7 @@ export function DialogueLayers({
                     depth={dialogueDepth}
                     textScale={textScale}
                     speedMultiplier={speedMultiplier}
+                    bubbleOpacity={bubbleOpacity}
                   />
                 </div>
               </motion.div>

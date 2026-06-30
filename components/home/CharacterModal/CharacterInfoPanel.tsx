@@ -22,16 +22,16 @@ function getTextColor(hexColor: string) {
   const g = parseInt(color.substring(2, 4), 16);
   const b = parseInt(color.substring(4, 6), 16);
   const yiq = (r * 299 + g * 587 + b * 114) / 1000;
-  return yiq >= 140 ? "#0a0a0f" : "white";
+  return yiq >= 140 ? "#001419" : "white";
 }
 
 function getVibrantColor(hexColor: string) {
-  if (!hexColor) return "#f5e642";
+  if (!hexColor) return "#D7263D";
   const c = hexColor.toLowerCase();
   if (c === "#0d3a2b") return "#10b981"; // Ian: emerald green
   if (c === "#0a1128") return "#3b82f6"; // Julián: vibrant blue
   if (c === "#4c1d95") return "#a855f7"; // Mati: vibrant purple
-  if (c === "#b91c1c") return "#ef4444"; // Uandi: vibrant red
+  if (c === "#b91c1c") return "#D7263D"; // Uandi: vibrant red
   return hexColor;
 }
 
@@ -39,7 +39,7 @@ function getDarkBgColor(hexColor: string) {
   if (!hexColor) return "#0f172a";
   const c = hexColor.toLowerCase();
   if (c === "#0d3a2b") return "#061410";
-  if (c === "#f5e642") return "#121203";
+  if (c === "#D7263D") return "#121203";
   if (c === "#0a1128") return "#020512";
   if (c === "#4c1d95") return "#0d041c";
   if (c === "#b91c1c") return "#170303";
@@ -168,7 +168,7 @@ export function CharacterInfoPanel({
     <div
       style={{
         backgroundColor: isPowersMode ? darkBg : "#ffffff",
-        color: isPowersMode ? "#f8fafc" : "#0a0a0f",
+        color: isPowersMode ? "#f8fafc" : "#001419",
       }}
       className="flex-1 flex flex-col p-4 sm:p-5 gap-2 sm:gap-3 overflow-y-auto transition-colors duration-400"
     >
@@ -181,7 +181,7 @@ export function CharacterInfoPanel({
             </svg>
           </div>
           <h3 className="font-[var(--font-bangers)] text-3xl tracking-wider">PERSONAJE BLOQUEADO</h3>
-          <p className="font-[var(--font-marker)] text-base text-[#e8185a] uppercase tracking-wider">Próximamente</p>
+          <p className="font-[var(--font-marker)] text-base text-[#D7263D] uppercase tracking-wider">Próximamente</p>
           <p className="font-sans text-sm text-gray-500 max-w-xs leading-snug">
             {char.hint ?? "Seguí leyendo para desbloquear este personaje."}
           </p>
@@ -232,7 +232,7 @@ export function CharacterInfoPanel({
                 style={{
                   backgroundColor: isPowersMode ? vibrantAccent : accent,
                   color: isPowersMode ? getTextColor(vibrantAccent) : getTextColor(accent),
-                  borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
+                  borderColor: isPowersMode ? vibrantAccent : "#001419",
                   boxShadow: isPowersMode ? `2px 2px 0 ${darkBg}` : "2px 2px 0 #000",
                 }}
                 className="shrink-0 mt-1 px-3 py-1.5 border-2 font-[var(--font-bangers)] text-xs tracking-wider uppercase active:translate-x-0.5 active:translate-y-0.5 transition-all flex items-center gap-1.5 hover:brightness-110"
@@ -248,7 +248,7 @@ export function CharacterInfoPanel({
 
           {/* ── profile / habilidades ── */}
           <div
-            style={{ borderColor: isPowersMode ? `${vibrantAccent}33` : "#0a0a0f" }}
+            style={{ borderColor: isPowersMode ? `${vibrantAccent}33` : "#001419" }}
             className="border-t-2 pt-1.5 flex flex-col gap-0.5 flex-shrink-0"
           >
             <h4 className="font-[var(--font-bangers)] text-[10px] tracking-wider">
@@ -266,7 +266,7 @@ export function CharacterInfoPanel({
           {!isPibe && char.powers?.habilidades && (
             <div
               className="border-t-2 pt-2 flex flex-col gap-1 flex-shrink-0"
-              style={{ borderColor: "#0a0a0f" }}
+              style={{ borderColor: "#001419" }}
             >
               <h4 className="font-[var(--font-bangers)] text-xs tracking-wider">HABILIDADES ESPECIALES:</h4>
               <ul className="font-sans text-xs leading-relaxed flex flex-col gap-1 pl-3 list-disc list-outside">
@@ -281,7 +281,7 @@ export function CharacterInfoPanel({
           {char.extras && Object.keys(char.extras).length > 0 && (
             <div
               className="border-t-2 pt-2 flex flex-col gap-1 flex-shrink-0"
-              style={{ borderColor: isPowersMode ? `${vibrantAccent}33` : "#0a0a0f" }}
+              style={{ borderColor: isPowersMode ? `${vibrantAccent}33` : "#001419" }}
             >
               <h4 className="font-[var(--font-bangers)] text-xs tracking-wider">EXTRAS:</h4>
               <div className="flex flex-col gap-1 pl-1">
@@ -300,14 +300,14 @@ export function CharacterInfoPanel({
           {/* ── significa banner ── */}
           {((isPowersMode && variantContent.significa) || (!isPibe && char.powers?.significa)) && (
             <div
-              className="p-2 border-2 relative bg-[#13131e] flex-shrink-0"
+              className="p-2 border-2 relative bg-[#003842] flex-shrink-0"
               style={{
                 borderColor: isPowersMode ? vibrantAccent : accent,
                 boxShadow: isPowersMode ? `2px 2px 0 ${vibrantAccent}` : `2px 2px 0 ${accent}`,
               }}
             >
               <span
-                className="font-[var(--font-marker)] text-[9px] uppercase absolute -top-2.5 left-3 rotate-[-1deg] border border-[#0a0a0f] px-1.5 py-0"
+                className="font-[var(--font-marker)] text-[9px] uppercase absolute -top-2.5 left-3 rotate-[-1deg] border border-[#001419] px-1.5 py-0"
                 style={{
                   backgroundColor: isPowersMode ? vibrantAccent : accent,
                   color: getTextColor(isPowersMode ? vibrantAccent : accent),
@@ -328,16 +328,16 @@ export function CharacterInfoPanel({
               className="flex-1 border-2 p-2.5 relative flex flex-col gap-1 transition-all duration-300 min-w-0"
               style={{
                 backgroundColor: isPowersMode ? "#111827" : "#fffbeb",
-                borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
+                borderColor: isPowersMode ? vibrantAccent : "#001419",
                 boxShadow: isPowersMode ? `2px 2px 0 ${vibrantAccent}` : "2px 2px 0 #000",
               }}
             >
               <div
                 className="self-start font-[var(--font-bangers)] text-[10px] tracking-wider px-1.5 py-0.5 border-2 uppercase"
                 style={{
-                  backgroundColor: isPowersMode ? vibrantAccent : "#e8185a",
+                  backgroundColor: isPowersMode ? vibrantAccent : "#D7263D",
                   color: isPowersMode ? getTextColor(vibrantAccent) : "white",
-                  borderColor: isPowersMode ? vibrantAccent : "#0a0a0f",
+                  borderColor: isPowersMode ? vibrantAccent : "#001419",
                 }}
               >
                 {isPowersMode ? "Ficha Táctica" : "En Crisis"}
@@ -372,7 +372,7 @@ export function CharacterInfoPanel({
                 className="border-t pt-4 flex flex-col gap-3 flex-shrink-0 animate-fade-in"
               >
                 <div className="flex items-center justify-between">
-                  <h4 className={`font-[var(--font-bangers)] text-xs tracking-wider ${isPowersMode ? "text-white" : "text-[#0a0a0f]"}`}>
+                  <h4 className={`font-[var(--font-bangers)] text-xs tracking-wider ${isPowersMode ? "text-white" : "text-[#001419]"}`}>
                     CONCEPT ARTS & GALERÍA:
                   </h4>
                   {hasAlts && (
@@ -381,7 +381,7 @@ export function CharacterInfoPanel({
                       style={{
                         backgroundColor: showAlts ? (isPowersMode ? vibrantAccent : accent) : (isPowersMode ? "#1f2937" : "#f1f5f9"),
                         color: showAlts ? getTextColor(isPowersMode ? vibrantAccent : accent) : (isPowersMode ? "#ffffff" : "#0f172a"),
-                        borderColor: showAlts ? (isPowersMode ? vibrantAccent : accent) : "#0a0a0f",
+                        borderColor: showAlts ? (isPowersMode ? vibrantAccent : accent) : "#001419",
                         boxShadow: "2.5px 2.5px 0 #000",
                       }}
                       className="px-2.5 py-0.5 border-2 font-[var(--font-bangers)] text-[10px] tracking-wider uppercase transition-all hover:scale-105 active:scale-95 flex items-center gap-1 active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#000] cursor-pointer"
@@ -458,3 +458,4 @@ export function CharacterInfoPanel({
     </div>
   );
 }
+

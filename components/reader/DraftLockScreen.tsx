@@ -101,15 +101,15 @@ export function DraftLockScreen({
           </motion.div>
         </div>
 
-        <h1 className="font-[var(--font-bangers)] text-4xl md:text-5xl mb-2 text-[#0a0a0f] tracking-wider leading-none">
+        <h1 className="font-[var(--font-bangers)] text-4xl md:text-5xl mb-2 text-white tracking-wider leading-none">
           ACCESO RESTRINGIDO
         </h1>
         <p className="font-[var(--font-marker)] text-base text-[#e8185a] mb-6 uppercase tracking-widest">
           Contenido en Borrador
         </p>
 
-        <p className="font-sans text-sm text-[#0a0a0f]/80 mb-8 leading-relaxed">
-          El capítulo <strong className="text-[#0a0a0f] font-bold">"{chapterTitle}"</strong> aún está en desarrollo.
+        <p className="font-sans text-sm text-zinc-300 mb-8 leading-relaxed">
+          El capítulo <strong className="text-white font-bold">"{chapterTitle}"</strong> aún está en desarrollo.
           Ingresá la contraseña secreta para ver la previsualización en la web.
         </p>
 
@@ -121,7 +121,7 @@ export function DraftLockScreen({
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               disabled={loading}
-              className="w-full font-[var(--font-bangers)] text-xl tracking-widest px-4 py-3 border-3 border-[#0a0a0f] text-center focus:outline-none focus:border-[#e8185a] transition-all bg-[#f4f0e6]"
+              className="w-full font-[var(--font-bangers)] text-xl tracking-widest px-4 py-3 border-3 border-[#0a0a0f] text-center focus:outline-none focus:border-[#e8185a] transition-all bg-[#f4f0e6] text-[#0a0a0f] placeholder:text-zinc-500/70"
               style={{
                 boxShadow: "3px 3px 0 #0a0a0f",
               }}

@@ -4,7 +4,7 @@ import React from "react";
 import { CaptionBubble } from "./bubbles/CaptionBubble";
 import { ThoughtBubble } from "./bubbles/ThoughtBubble";
 import { StandardBubble } from "./bubbles/StandardBubble";
-import { SPEAKER_COLORS } from "./bubbles/bubbleHelpers";
+import { SPEAKER_COLORS, resolveBgColor } from "./bubbles/bubbleHelpers";
 
 export type DialogueLine = {
   text: string;
@@ -28,9 +28,9 @@ export type DialogueLine = {
   linkedTo?: number;     // Index of sibling bubble to connect with an organic bridge
 };
 
-export function getBubbleStyles(line: DialogueLine) {
+export function getBubbleStyles(line: DialogueLine, bubbleOpacity?: number) {
   const style = line.style ?? "normal";
-  let bgColor      = line.customBg    || "#ffffff";
+  let bgColor      = resolveBgColor(line.customBg, "#ffffff", bubbleOpacity);
   let borderColor  = line.customColor || "#0a0a0f";
   let strokeWidth  = 1.5;
 
@@ -39,16 +39,16 @@ export function getBubbleStyles(line: DialogueLine) {
     borderColor = line.customColor || "#0a0a0f";
     strokeWidth = 2.5;
   } else if (style === "whisper") {
-    bgColor     = line.customBg    || "#ffffff";
+    bgColor     = resolveBgColor(line.customBg, "#ffffff", bubbleOpacity);
     borderColor = line.customColor || "#a1a1aa";
   } else if (style === "electronic") {
     bgColor     = line.customBg    || "rgba(0, 240, 255, 0.07)";
     borderColor = line.customColor || "#00f0ff";
   } else if (style === "caption") {
-    bgColor     = line.customBg    || "#f5e642";
+    bgColor     = resolveBgColor(line.customBg, "#f5e642", bubbleOpacity);
     borderColor = line.customColor || "#0a0a0f";
   } else if (style === "thought") {
-    bgColor     = line.customBg    || "#ffffff";
+    bgColor     = resolveBgColor(line.customBg, "#ffffff", bubbleOpacity);
     borderColor = line.customColor || "#0a0a0f";
   } else if (style === "sfx") {
     bgColor     = line.customBg    || "transparent";
@@ -68,6 +68,7 @@ export function DialogueBubble({
   depth,
   textScale = 1.0,
   speedMultiplier = 1.0,
+  bubbleOpacity,
 }: {
   line: DialogueLine;
   index: number;
@@ -78,6 +79,7 @@ export function DialogueBubble({
   depth?: number;
   textScale?: number;
   speedMultiplier?: number;
+  bubbleOpacity?: number;
 }) {
   const style = line.style ?? "normal";
 
@@ -92,6 +94,7 @@ export function DialogueBubble({
         depth={depth}
         textScale={textScale}
         speedMultiplier={speedMultiplier}
+        bubbleOpacity={bubbleOpacity}
       />
     );
   }
@@ -108,6 +111,7 @@ export function DialogueBubble({
         depth={depth}
         textScale={textScale}
         speedMultiplier={speedMultiplier}
+        bubbleOpacity={bubbleOpacity}
       />
     );
   }
@@ -123,6 +127,7 @@ export function DialogueBubble({
       depth={depth}
       textScale={textScale}
       speedMultiplier={speedMultiplier}
+      bubbleOpacity={bubbleOpacity}
     />
   );
 }

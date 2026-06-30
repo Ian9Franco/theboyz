@@ -11,7 +11,7 @@ export function HeroSection() {
       {/* ── Banner Section (Hero) ── */}
       <section
         className="relative flex flex-col overflow-hidden min-h-[60vh] md:min-h-[75vh] justify-center cursor-zoom-in"
-        style={{ background: "#0a0a0f" }}
+        style={{ background: "#002a32" }}
         onClick={() => setShowLightbox(true)}
       >
         {/* ── Full Banner Background Image ── */}
@@ -25,7 +25,7 @@ export function HeroSection() {
           <div 
             className="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
             style={{
-              background: "linear-gradient(to bottom, transparent, #0a0a0f)"
+              background: "linear-gradient(to bottom, transparent, #002a32)"
             }}
           />
           <div 
@@ -49,7 +49,7 @@ export function HeroSection() {
         <div
           className="absolute right-0 top-0 w-80 h-80 pointer-events-none opacity-[0.04] z-10"
           style={{
-            backgroundImage: "radial-gradient(circle, #1b4332 1.5px, transparent 1.5px)",
+            backgroundImage: "radial-gradient(circle, #D7263D 1.5px, transparent 1.5px)",
             backgroundSize: "10px 10px",
           }}
         />
@@ -120,7 +120,7 @@ export function BannerLightbox({ src, alt, onClose }: { src: string; alt: string
             e.stopPropagation();
             setIsZoomed(!isZoomed);
           }}
-          className="bg-[#1b4332] hover:bg-[#2d6a4f] px-3 py-1 rounded text-white transition-colors"
+          className="bg-[#D7263D] hover:bg-[#ff3b51] px-3 py-1 rounded text-white transition-colors"
         >
           {isZoomed ? "LUPA -" : "LUPA +"}
         </button>
@@ -128,10 +128,12 @@ export function BannerLightbox({ src, alt, onClose }: { src: string; alt: string
 
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-[#1b4332] border-2 border-white text-white font-[var(--font-bangers)] text-xl shadow-lg z-20 hover:bg-[#2d6a4f] transition-colors"
+        className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-[#D7263D] border-2 border-white text-white font-[var(--font-bangers)] text-xl shadow-lg z-20 hover:bg-[#ff3b51] transition-colors"
       >
         ✕
       </button>
     </motion.div>
   );
 }
+
+

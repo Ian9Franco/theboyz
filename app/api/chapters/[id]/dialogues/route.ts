@@ -132,7 +132,7 @@ export async function POST(
                 if (style === "scream") defaultFont = "bangers";
                 else if (style === "electronic") defaultFont = "mono";
                 else if (style === "whisper") defaultFont = "marker";
-                else if (style === "sfx") defaultFont = "luckiest";
+                else if (style === "sfx") defaultFont = "bangers";
                 
                 if (pruned.fontFamily === defaultFont) {
                   delete pruned.fontFamily;

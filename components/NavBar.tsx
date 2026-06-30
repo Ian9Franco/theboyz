@@ -42,7 +42,7 @@ export default function NavBar() {
   };
 
   return (
-    <header className="sticky top-0 z-50" style={{ background: "#0a0a0f", borderBottom: "3px solid #0f1b3d" }}>
+    <header className="sticky top-0 z-50" style={{ background: "#001419", borderBottom: "3px solid #D7263D" }}>
       <div className="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between gap-4">
 
         {/* Logo */}
@@ -59,7 +59,7 @@ export default function NavBar() {
           {/* Cómics Dropdown */}
           <div className="relative group">
             <button
-              className="font-[var(--font-bangers)] text-xl tracking-wider text-white/80 hover:text-[#f5e642] transition-colors pb-1 border-b-2 border-transparent hover:border-[#f5e642] flex items-center gap-1"
+              className="font-[var(--font-bangers)] text-xl tracking-wider text-white/80 hover:text-[#D7263D] transition-colors pb-1 border-b-2 border-transparent hover:border-[#D7263D] flex items-center gap-1"
             >
               Cómics
               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className="opacity-60 group-hover:opacity-100 transition-all group-hover:translate-y-0.5">
@@ -70,21 +70,21 @@ export default function NavBar() {
             <div className="absolute top-full left-0 pt-2 hidden group-hover:flex flex-col z-50">
               <div
                 className="flex flex-col gap-4 p-4 min-w-[280px] max-w-[320px] max-h-[70vh] overflow-y-auto rounded-lg"
-                style={{ background: "#13131e", border: "2px solid #0f1b3d", boxShadow: "6px 6px 0 #0f1b3d" }}
+                style={{ background: "#003842", border: "2px solid #D7263D", boxShadow: "6px 6px 0 #D7263D" }}
               >
                 {/* Official Sagas (Canon) */}
                 {sagasList.filter(s => s.order >= 3).map((saga) => (
                   <div key={saga.id} className="flex flex-col gap-1 border-b border-white/10 last:border-0 pb-3 last:pb-0">
                     <div className="flex items-center gap-2 mb-0.5">
-                      <p className="font-[var(--font-bangers)] text-sm tracking-widest text-[#f5e642] uppercase">
+                      <p className="font-[var(--font-bangers)] text-sm tracking-widest text-[#D7263D] uppercase">
                         {saga.title}
                       </p>
                     </div>
                     <div className="flex flex-col gap-0.5 pl-2">
                       {saga.chapters.map((ch: any) => (
                         <Link key={ch.id} href={`/chapters/${ch.id}`}
-                          className="font-[var(--font-bangers)] text-base tracking-wider py-1 text-white hover:text-[#0a0a0f] hover:bg-[#f5e642] transition-all block px-2 rounded-sm">
-                          <span className="text-[#4a6fa5] mr-2">#{ch.number}</span>{ch.title}
+                          className="font-[var(--font-bangers)] text-base tracking-wider py-1 text-white hover:text-[#001419] hover:bg-[#D7263D] transition-all block px-2 rounded-sm">
+                          <span className="text-[#D7263D] mr-2">#{ch.number}</span>{ch.title}
                         </Link>
                       ))}
                     </div>
@@ -96,13 +96,13 @@ export default function NavBar() {
                   <div className="flex flex-col pt-1">
                     <button
                       onClick={() => setPilotsOpen(!pilotsOpen)}
-                      className="w-full flex items-center justify-between font-[var(--font-bangers)] text-sm tracking-widest text-white/50 hover:text-[#f5e642] py-2 border-t border-white/10 transition-colors cursor-pointer select-none"
+                      className="w-full flex items-center justify-between font-[var(--font-bangers)] text-sm tracking-widest text-white/50 hover:text-[#D7263D] py-2 border-t border-white/10 transition-colors cursor-pointer select-none"
                     >
                       <span className="flex items-center gap-1.5">
                         <span className="text-[10px] bg-white/10 text-white/60 px-1 border border-white/10">PILOTO</span>
                         CÓMICS ANTERIORES
                       </span>
-                      <span className={`transition-transform duration-200 text-xs ${pilotsOpen ? "rotate-180 text-[#f5e642]" : ""}`}>
+                      <span className={`transition-transform duration-200 text-xs ${pilotsOpen ? "rotate-180 text-[#D7263D]" : ""}`}>
                         ▼
                       </span>
                     </button>
@@ -111,14 +111,14 @@ export default function NavBar() {
                       <div className="flex flex-col gap-3 mt-2 pl-1 border-l-2 border-dashed border-white/10 animate-fadeIn">
                         {sagasList.filter(s => s.order < 3).map((saga) => (
                           <div key={saga.id} className="flex flex-col gap-1 pb-2 last:pb-0 border-b border-white/5 last:border-0">
-                            <p className="font-[var(--font-bangers)] text-xs tracking-wider text-[#f5e642]/80 uppercase">
+                            <p className="font-[var(--font-bangers)] text-xs tracking-wider text-[#D7263D]/80 uppercase">
                               {saga.title}
                             </p>
                             <div className="flex flex-col gap-0.5 pl-1.5">
                               {saga.chapters.map((ch: any) => (
                                 <Link key={ch.id} href={`/chapters/${ch.id}`}
-                                  className="font-[var(--font-bangers)] text-sm tracking-wider py-0.5 text-white/80 hover:text-[#0a0a0f] hover:bg-[#f5e642] transition-all block px-1.5 rounded-sm">
-                                  <span className="text-[#1b4332] mr-1.5 text-xs">#{ch.number}</span>{ch.title}
+                                  className="font-[var(--font-bangers)] text-sm tracking-wider py-0.5 text-white/80 hover:text-[#001419] hover:bg-[#D7263D] transition-all block px-1.5 rounded-sm">
+                                  <span className="text-[#D7263D] mr-1.5 text-xs">#{ch.number}</span>{ch.title}
                                 </Link>
                               ))}
                             </div>
@@ -135,7 +135,7 @@ export default function NavBar() {
           {/* Lore Button */}
           <Link
             href="/lore"
-            className="font-[var(--font-bangers)] text-xl tracking-wider text-white/80 hover:text-[#f5e642] transition-colors pb-1 border-b-2 border-transparent hover:border-[#f5e642] uppercase"
+            className="font-[var(--font-bangers)] text-xl tracking-wider text-white/80 hover:text-[#D7263D] transition-colors pb-1 border-b-2 border-transparent hover:border-[#D7263D] uppercase"
           >
             LORE
           </Link>
@@ -152,7 +152,7 @@ export default function NavBar() {
           {/* Leer Cómic Button */}
           <Link
             href="/#sagas"
-            className="font-[var(--font-bangers)] text-sm tracking-wider px-4 py-1.5 border-2 border-[#0f1b3d] bg-[#0f1b3d] hover:bg-[#1a2f5e] hover:border-[#1a2f5e] text-white uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] shrink-0 flex items-center gap-1.5"
+            className="font-[var(--font-bangers)] text-sm tracking-wider px-4 py-1.5 border-2 border-[#D7263D] bg-[#D7263D] hover:bg-[#ff3b51] hover:border-[#ff3b51] text-white uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] shrink-0 flex items-center gap-1.5"
           >
             <BookOpen className="w-3.5 h-3.5" />
             LEER
@@ -163,8 +163,8 @@ export default function NavBar() {
             onClick={toggleUnlockAll}
             className={`font-[var(--font-bangers)] text-sm tracking-wider px-4 py-1.5 border-2 uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] cursor-pointer shrink-0 flex items-center gap-1.5 ${
               unlockAll
-                ? "bg-[#e8185a] border-[#e8185a] text-white hover:bg-[#c0103e]"
-                : "bg-[#f5e642] border-[#f5e642] text-[#0a0a0f] hover:bg-[#eab308]"
+                ? "bg-[#D7263D] border-[#D7263D] text-white hover:bg-[#ff3b51]"
+                : "bg-[#D7263D] border-[#D7263D] text-[#001419] hover:bg-[#ff3b51]"
             }`}
           >
             {unlockAll ? <Lock className="w-3.5 h-3.5" /> : <Unlock className="w-3.5 h-3.5" />}
@@ -183,7 +183,7 @@ export default function NavBar() {
           </Link>
           <Link
             href="/#sagas"
-            className="p-2 border border-[#0f1b3d] bg-[#0f1b3d] text-white transition-all shadow-[1px_1px_0_#000] active:scale-95 shrink-0"
+            className="p-2 border border-[#D7263D] bg-[#D7263D] text-white transition-all shadow-[1px_1px_0_#000] active:scale-95 shrink-0"
             title="Leer Cómic"
           >
             <BookOpen className="w-4 h-4" />
@@ -194,8 +194,8 @@ export default function NavBar() {
             title={unlockAll ? "Ocultar spoilers" : "Mostrar spoilers"}
             className={`p-2 border transition-all shadow-[1px_1px_0_#000] active:scale-95 cursor-pointer shrink-0 ${
               unlockAll
-                ? "bg-[#e8185a] border-[#e8185a] text-white"
-                : "bg-[#f5e642] border-[#f5e642] text-black"
+                ? "bg-[#D7263D] border-[#D7263D] text-white"
+                : "bg-[#D7263D] border-[#D7263D] text-black"
             }`}
           >
             {unlockAll ? <Lock className="w-4 h-4" /> : <Unlock className="w-4 h-4" />}
@@ -203,7 +203,7 @@ export default function NavBar() {
           
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 text-white border border-white/20 hover:border-[#4a6fa5] hover:text-[#4a6fa5] transition-colors"
+            className="p-2 text-white border border-white/20 hover:border-[#D7263D] hover:text-[#D7263D] transition-colors"
           >
             {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -213,13 +213,13 @@ export default function NavBar() {
       {/* Mobile dropdown */}
       {menuOpen && (
         <div
-          style={{ background: "#13131e", borderTop: "2px solid #0f1b3d", maxHeight: "calc(100vh - 64px)" }}
+          style={{ background: "#003842", borderTop: "2px solid #D7263D", maxHeight: "calc(100vh - 64px)" }}
           className="md:hidden px-5 py-6 flex flex-col gap-5 overflow-y-auto"
         >
           <Link
             href="/#sagas"
             onClick={() => setMenuOpen(false)}
-            className="w-full font-[var(--font-bangers)] text-lg text-center tracking-wider py-2.5 border-2 border-white bg-[#0f1b3d] hover:bg-[#1a2f5e] text-white uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] block"
+            className="w-full font-[var(--font-bangers)] text-lg text-center tracking-wider py-2.5 border-2 border-white bg-[#D7263D] hover:bg-[#ff3b51] text-white uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] block"
           >
             Leer Cómic →
           </Link>
@@ -237,7 +237,7 @@ export default function NavBar() {
             onClick={toggleUnlockAll}
             className="w-full font-[var(--font-bangers)] text-lg tracking-wider py-2.5 border-2 border-black uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] cursor-pointer"
             style={{
-              backgroundColor: unlockAll ? "#6b7280" : "#f5e642",
+              backgroundColor: unlockAll ? "#6b7280" : "#D7263D",
               color: unlockAll ? "white" : "black"
             }}
           >
@@ -249,15 +249,15 @@ export default function NavBar() {
             <div key={saga.id}>
               <p
                 className="font-[var(--font-bangers)] text-2xl mb-2 tracking-widest"
-                style={{ color: "#f5e642" }}
+                style={{ color: "#D7263D" }}
               >
                 {saga.title}
               </p>
               {saga.chapters.map((ch: any) => (
                 <Link key={ch.id} href={`/chapters/${ch.id}`}
                   onClick={() => setMenuOpen(false)}
-                  className="font-[var(--font-bangers)] text-xl tracking-wider pl-4 py-1.5 block text-white/70 hover:text-[#f5e642] hover:pl-6 transition-all border-l-2 border-white/10 hover:border-[#4a6fa5] mb-1">
-                  <span className="text-[#4a6fa5] mr-2">#{ch.number}</span>{ch.title}
+                  className="font-[var(--font-bangers)] text-xl tracking-wider pl-4 py-1.5 block text-white/70 hover:text-[#D7263D] hover:pl-6 transition-all border-l-2 border-white/10 hover:border-[#D7263D] mb-1">
+                  <span className="text-[#D7263D] mr-2">#{ch.number}</span>{ch.title}
                 </Link>
               ))}
             </div>
@@ -268,7 +268,7 @@ export default function NavBar() {
             <div className="flex flex-col border-t border-white/10 pt-4">
               <button
                 onClick={() => setMobilePilotsOpen(!mobilePilotsOpen)}
-                className="w-full flex items-center justify-between font-[var(--font-bangers)] text-xl tracking-widest text-[#f5e642] py-2 cursor-pointer select-none"
+                className="w-full flex items-center justify-between font-[var(--font-bangers)] text-xl tracking-widest text-[#D7263D] py-2 cursor-pointer select-none"
               >
                 <span className="flex items-center gap-2">
                   <span className="text-xs bg-white/10 text-white/60 px-1.5 py-0.5 border border-white/10">PILOTO</span>
@@ -289,8 +289,8 @@ export default function NavBar() {
                       {saga.chapters.map((ch: any) => (
                         <Link key={ch.id} href={`/chapters/${ch.id}`}
                           onClick={() => setMenuOpen(false)}
-                          className="font-[var(--font-bangers)] text-lg tracking-wider pl-3 py-1 block text-white/60 hover:text-[#f5e642] transition-all border-l border-white/10 mb-0.5">
-                          <span className="text-[#1b4332] mr-1.5 text-sm">#{ch.number}</span>{ch.title}
+                          className="font-[var(--font-bangers)] text-lg tracking-wider pl-3 py-1 block text-white/60 hover:text-[#D7263D] transition-all border-l border-white/10 mb-0.5">
+                          <span className="text-[#D7263D] mr-1.5 text-sm">#{ch.number}</span>{ch.title}
                         </Link>
                       ))}
                     </div>
@@ -304,3 +304,5 @@ export default function NavBar() {
     </header>
   );
 }
+
+

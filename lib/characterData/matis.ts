@@ -120,5 +120,36 @@ export const matis: CharacterDetail[] = [
       crisis: 'Vacío de acciones: Si un enemigo no realiza movimientos hostiles directos, sus habilidades pierden efectividad.',
       stats: { fuerza: 6, inteligencia: 10, carisma: 7, suerte: 8, combate: 9, defensa: 10, especialVal: 9 }
     }
+  },
+  {
+    id: 'astronauta',
+    name: 'Mati Astronauta',
+    category: 'matis',
+    isSecondary: true,
+    image: '/personajes/Fichas/matis/Mati Astronauta/Mati_Astronauta_sheet.png',
+    fullBody: '/personajes/Fichas/matis/Mati Astronauta/Mati_Astronauta_sheet.png',
+    color: '#1e1b4b',
+    role: 'El Exiliado Orbital / Especialista Extradimensional',
+    visualCode: 'Traje espacial negro dañado, luces orbitales tenues, casco con visor trizado',
+    perfil: [
+      'El desterrado: Variante proveniente de una línea temporal donde la humanidad alcanzó viajes interdimensionales, exiliada por negarse a drenar energía de universos vecinos.',
+      'Especialista técnico: Experto en tecnología extradimensional, combate orbital y anomalías de variantes dentro del equipo de La Órbita Muerta.',
+      'Traje de condena: Su armadura espacial dañada conserva la marca grabada en el núcleo del traje: "No pertenece a ningún cielo".'
+    ],
+    crisis: 'Desconexión de órbita: Su traje dañado sufre micro-desgarros dimensionales si se expone a fluctuaciones cuánticas inestables.',
+    loreNote: 'Miembro de La Órbita Muerta. Starfall descubrió que su universo sobrevivía drenando energía de realidades vecinas. Al intentar exponerlo, fue exiliado y arrojado a una realidad ajena con su traje dañado.',
+    stats: { fuerza: 6, inteligencia: 9, carisma: 6, suerte: 5, combate: 8, defensa: 7, especialVal: 9 },
+    especialLabel: 'Orbital',
+    powers: {
+      role: 'Mati Variant',
+      habilidades: [
+        'Salto de Vacío: Realiza micro-teletransportaciones tácticas simulando caída libre orbital.',
+        'Gravedad Cero: Altera el peso cinético de los objetos a su alrededor, desestabilizando al oponente.',
+        'Núcleo Desterrado: Sobrecarga el reactor de su traje para emitir un pulso de energía extradimensional.'
+      ],
+      significa: 'Combatiente táctico espacial. Controla la gravedad local y realiza maniobras tridimensionales rápidas.',
+      crisis: 'Falla del soporte vital: Usar el Núcleo Desterrado drena el oxígeno y la energía interna de su armadura.',
+      stats: { fuerza: 7, inteligencia: 10, carisma: 7, suerte: 6, combate: 9, defensa: 8, especialVal: 10 }
+    }
   }
 ];

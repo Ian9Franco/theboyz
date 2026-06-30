@@ -34,12 +34,32 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/Fichas/deidades/ARCHON/Archon_ficha_alt.webp",
     ]
   },
+  "astronauta": {
+    "portada": "/personajes/PORTADAS/Mati Astronauta/Mati Astronauta.png",
+    "portadas": [
+      "/personajes/PORTADAS/Mati Astronauta/Mati Astronauta.png",
+    ],
+    "ficha": "/personajes/Fichas/matis/Mati Astronauta/Mati_Astronauta_ficha.png",
+    "fichas": [
+      "/personajes/Fichas/matis/Mati Astronauta/Mati_Astronauta_ficha.png",
+    ]
+  },
   "augusto": {
     "portada": null,
     "portadas": [
     ],
     "ficha": null,
     "fichas": [
+    ]
+  },
+  "aurelia": {
+    "portada": "/personajes/PORTADAS/Aurelia Veyr/Aurelia Veyr.png",
+    "portadas": [
+      "/personajes/PORTADAS/Aurelia Veyr/Aurelia Veyr.png",
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/Aurelia Veyr/Aurelia Veyr_ficha.png",
+    "fichas": [
+      "/personajes/Fichas/Secundarios/Aurelia Veyr/Aurelia Veyr_ficha.png",
     ]
   },
   "azathos": {
@@ -142,10 +162,12 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/PORTADAS/Ian/MARK-3_ALT.webp",
       "/personajes/PORTADAS/Ian/MARK-3.webp",
       "/personajes/PORTADAS/Ian/MARK-L.webp",
+      "/personajes/PORTADAS/Ian/Matisvariantes.png",
       "/personajes/PORTADAS/Ian/Vesperwing_MK.webp",
     ],
-    "ficha": "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_Ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/VESPERWING/Mativariantes_ficha.webp",
     "fichas": [
+      "/personajes/Fichas/Boyz/VESPERWING/Mativariantes_ficha.webp",
       "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_Ficha.webp",
       "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_ficha2.webp",
       "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_ficha3.webp",
@@ -169,6 +191,16 @@ export const characterImages: Record<string, CharacterImages> = {
     "fichas": [
       "/personajes/Fichas/Boyz/ORACLE/Oracle_Ficha.webp",
       "/personajes/Fichas/Boyz/ORACLE/Oracle_ficha_alt.webp",
+    ]
+  },
+  "john_wick": {
+    "portada": "/personajes/PORTADAS/John Wick/John Wick.jpeg",
+    "portadas": [
+      "/personajes/PORTADAS/John Wick/John Wick.jpeg",
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/John Wick/John Wick_ficha.jpeg",
+    "fichas": [
+      "/personajes/Fichas/Secundarios/John Wick/John Wick_ficha.jpeg",
     ]
   },
   "judge_null": {
@@ -226,6 +258,16 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/Fichas/entidades/Lion/Lion_ficha.webp",
     ]
   },
+  "lucian": {
+    "portada": "/personajes/PORTADAS/Lucian Graves/Lucian Graves.png",
+    "portadas": [
+      "/personajes/PORTADAS/Lucian Graves/Lucian Graves.png",
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/Lucian Graves/Lucian Graves_ficha.png",
+    "fichas": [
+      "/personajes/Fichas/Secundarios/Lucian Graves/Lucian Graves_ficha.png",
+    ]
+  },
   "lucifer": {
     "portada": null,
     "portadas": [
@@ -261,6 +303,17 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/Fichas/entidades/Malakas/Malakas_ficha_alt.webp",
     ]
   },
+  "mando": {
+    "portada": "/personajes/PORTADAS/Mando/Mando.png",
+    "portadas": [
+      "/personajes/PORTADAS/Mando/Mando.png",
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/Mando/Mando_alt_ficha.png",
+    "fichas": [
+      "/personajes/Fichas/Secundarios/Mando/Mando_alt_ficha.png",
+      "/personajes/Fichas/Secundarios/Mando/Mando_ficha.png",
+    ]
+  },
   "mars": {
     "portada": null,
     "portadas": [
@@ -287,8 +340,6 @@ export const characterImages: Record<string, CharacterImages> = {
     "ficha": "/personajes/Fichas/Boyz/SWAPFIRE/Swapfire_ficha.webp",
     "fichas": [
       "/personajes/Fichas/Boyz/SWAPFIRE/Swapfire_ficha.webp",
-      "/personajes/Fichas/matis/Matisvariantes.png",
-      "/personajes/Fichas/matis/Mativariantes_ficha.webp",
     ]
   },
   "mati_prime": {
@@ -340,12 +391,13 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "supertrucker": {
-    "portada": null,
+    "portada": "/personajes/PORTADAS/Supercamionero/Supercamionero.png",
     "portadas": [
+      "/personajes/PORTADAS/Supercamionero/Supercamionero.png",
     ],
-    "ficha": "/personajes/Fichas/Secundarios/Super Camionero/Supercamionero_ficha.webp",
+    "ficha": "/personajes/Fichas/Secundarios/Supercamionero/Supercamionero_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Secundarios/Super Camionero/Supercamionero_ficha.webp",
+      "/personajes/Fichas/Secundarios/Supercamionero/Supercamionero_ficha.webp",
     ]
   },
   "terrorblade": {
@@ -375,6 +427,16 @@ export const characterImages: Record<string, CharacterImages> = {
     "ficha": "/personajes/Fichas/Secundarios/Valery/Valery_ficha.webp",
     "fichas": [
       "/personajes/Fichas/Secundarios/Valery/Valery_ficha.webp",
+    ]
+  },
+  "vexa": {
+    "portada": "/personajes/PORTADAS/Vexa Ruun/Vexa Ruun.png",
+    "portadas": [
+      "/personajes/PORTADAS/Vexa Ruun/Vexa Ruun.png",
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/Vexa Ruun/Vexa Ruun_ficha.png",
+    "fichas": [
+      "/personajes/Fichas/Secundarios/Vexa Ruun/Vexa Ruun_ficha.png",
     ]
   },
   "volvo": {
