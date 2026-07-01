@@ -127,7 +127,8 @@ interface EditorTabPanelsProps {
   setActiveBubbleIdx: (idx: number | null) => void;
   handleRemovePanel: (idx: number) => void;
   handleUpdatePanelParams: (pIdx: number, updates: Partial<PanelConfig>) => void;
-  handleAddBubble: (pIdx: number) => void;
+  handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle?: "normal" | "caption") => void;
+  presetMode?: "standard" | "custom";
 }
 
 /**
@@ -146,6 +147,7 @@ export function EditorTabPanels({
   handleRemovePanel,
   handleUpdatePanelParams,
   handleAddBubble,
+  presetMode = "standard",
 }: EditorTabPanelsProps) {
   const [availableSounds, setAvailableSounds] = useState<Array<{ name: string; path: string }>>([]);
   const [previewingSound, setPreviewingSound] = useState<string | null>(null);
@@ -390,8 +392,69 @@ export function EditorTabPanels({
                     />
                   </div>
 
-                  {/* SECTION 1: Zoom Areas & Spoilers (Collapsible) */}
-                  <details className="group border border-white/10 rounded bg-[#0d0d12]/40 mb-2.5 overflow-hidden" open={isSelected}>
+                  {presetMode === "standard" ? (
+                    <div className="border border-white/10 rounded bg-[#0d0d12]/40 p-2 flex flex-col gap-2 mt-1">
+                      <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">
+                        💬 Globos de Diálogo ({panel.dialogue?.length || 0})
+                      </span>
+                      <div className="flex flex-col gap-1.5 max-h-40 overflow-y-auto pr-0.5">
+                        {panel.dialogue?.map((bub, bIdx) => {
+                          const isBubActive = isSelected && activeBubbleIdx === bIdx;
+                          return (
+                            <button
+                              key={bIdx}
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setActivePanelIdx(pIdx);
+                                setActiveBubbleIdx(bIdx);
+                              }}
+                              className={`text-left text-xs p-2 border rounded font-mono truncate transition-all cursor-pointer ${
+                                isBubActive
+                                  ? "border-[#e8185a] bg-rose-950/20 text-rose-200 font-bold"
+                                  : "border-white/10 bg-[#161622] hover:bg-[#1a1a29] text-zinc-300"
+                              }`}
+                            >
+                              <span className="text-[9px] bg-white/5 px-1 rounded mr-1">
+                                {bub.style === "caption" ? "Narr." : "Diál."}
+                              </span>
+                              {bub.speaker ? `${bub.speaker}: ` : ""}
+                              {bub.text || "(vacío)"}
+                            </button>
+                          );
+                        })}
+                        {(panel.dialogue?.length || 0) === 0 && (
+                          <span className="text-[10px] text-zinc-500 italic text-center py-1">Sin globos de diálogo</span>
+                        )}
+                      </div>
+                      
+                      <div className="flex gap-1.5 mt-1 border-t border-white/5 pt-2">
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleAddBubble(pIdx, undefined, "normal");
+                          }}
+                          className="flex-1 text-[10px] bg-[#161622] hover:bg-[#1a1a29] text-white font-bold py-1.5 px-2 rounded border border-white/10 text-center transition-colors cursor-pointer"
+                        >
+                          💬 + Diálogo
+                        </button>
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleAddBubble(pIdx, undefined, "caption");
+                          }}
+                          className="flex-1 text-[10px] bg-[#f5e642] hover:bg-yellow-500 text-black font-bold py-1.5 px-2 rounded border border-yellow-600/20 text-center transition-colors cursor-pointer"
+                        >
+                          📜 + Narración
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      {/* SECTION 1: Zoom Areas & Spoilers (Collapsible) */}
+                      <details className="group border border-white/10 rounded bg-[#0d0d12]/40 mb-2.5 overflow-hidden" open={isSelected}>
                     <summary className="flex items-center justify-between p-2 cursor-pointer list-none select-none hover:bg-white/5 transition-colors">
                       <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider flex items-center gap-1.5">
                         🔍 Áreas de Zoom y Máscaras ({rects.length})
@@ -1074,6 +1137,8 @@ export function EditorTabPanels({
                       </div>
                     </div>
                   </details>
+                    </>
+                  )}
                 </div>
               );
             })

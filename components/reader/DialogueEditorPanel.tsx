@@ -70,6 +70,8 @@ export interface DialogueEditorPanelProps {
   handleUpdateBubble: (pIdx: number, bIdx: number, updates: Partial<DialogueLine>) => void;
   handleUpdateSettings: (updates: Partial<ChapterSettings>) => void;
   handleUpdateAudioTracks: (tracks: AudioTrack[]) => void;
+  presetMode: "standard" | "custom";
+  setPresetMode: (mode: "standard" | "custom") => void;
 }
 
 /**
@@ -107,6 +109,8 @@ export function DialogueEditorPanel({
   handleUpdateBubble,
   handleUpdateSettings,
   handleUpdateAudioTracks,
+  presetMode,
+  setPresetMode,
 }: DialogueEditorPanelProps) {
   if (mode !== "edit") return null;
 
@@ -233,6 +237,37 @@ export function DialogueEditorPanel({
         </button>
       </div>
 
+      {/* Preset Mode Selector */}
+      <div className="p-4 border-b border-white/10 bg-[#12121c] flex items-center justify-between gap-2">
+        <span className="text-xs text-zinc-400 font-bold uppercase tracking-wider">
+          Modo de Edición:
+        </span>
+        <div className="flex bg-[#0a0a0f] p-0.5 rounded border border-white/10">
+          <button
+            type="button"
+            onClick={() => setPresetMode("standard")}
+            className={`px-3 py-1 text-xs font-bold rounded transition-all cursor-pointer ${
+              presetMode === "standard"
+                ? "bg-[#e8185a] text-white"
+                : "text-zinc-400 hover:text-white"
+            }`}
+          >
+            Estándar
+          </button>
+          <button
+            type="button"
+            onClick={() => setPresetMode("custom")}
+            className={`px-3 py-1 text-xs font-bold rounded transition-all cursor-pointer ${
+              presetMode === "custom"
+                ? "bg-[#e8185a] text-white"
+                : "text-zinc-400 hover:text-white"
+            }`}
+          >
+            Personalizado
+          </button>
+        </div>
+      </div>
+
       {/* Grid & Snapping Controls */}
       <div className="p-4 border-b border-white/10 bg-[#161622] flex flex-col gap-2.5">
         <span className="font-[var(--font-bangers)] text-sm text-zinc-300 tracking-wide">
@@ -271,10 +306,12 @@ export function DialogueEditorPanel({
       </div>
 
       {/* Accordion: Global Settings Tab */}
-      <EditorTabSettings
-        settings={settings}
-        handleUpdateSettings={handleUpdateSettings}
-      />
+      {presetMode === "custom" && (
+        <EditorTabSettings
+          settings={settings}
+          handleUpdateSettings={handleUpdateSettings}
+        />
+      )}
 
       {/* Accordion: Panels Stops Tab */}
       <EditorTabPanels
@@ -287,15 +324,18 @@ export function DialogueEditorPanel({
         handleRemovePanel={handleRemovePanel}
         handleUpdatePanelParams={handleUpdatePanelParams}
         handleAddBubble={handleAddBubble}
+        presetMode={presetMode}
       />
 
       {/* Accordion: Chapter-level Audio Tracks */}
-      <EditorAudioTracks
-        audioTracks={localDialogues.audioTracks ?? []}
-        pages={pages}
-        localDialogues={localDialogues}
-        onUpdate={handleUpdateAudioTracks}
-      />
+      {presetMode === "custom" && (
+        <EditorAudioTracks
+          audioTracks={localDialogues.audioTracks ?? []}
+          pages={pages}
+          localDialogues={localDialogues}
+          onUpdate={handleUpdateAudioTracks}
+        />
+      )}
 
       {/* Active Dialogue Bubble Settings Panel */}
       <div className="p-4 flex-1">
@@ -307,6 +347,7 @@ export function DialogueEditorPanel({
           handleAddBubble={handleAddBubble}
           handleRemoveBubble={handleRemoveBubble}
           handleUpdateBubble={handleUpdateBubble}
+          presetMode={presetMode}
         />
       </div>
     </div>

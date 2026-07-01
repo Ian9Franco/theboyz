@@ -112,6 +112,8 @@ export function CinematicReader({
     handleFocusYDragEnd,
     handlePanelRectResizeStart,
     handleSaveChanges,
+    presetMode,
+    setPresetMode,
   } = useDialogueEditor({ dialogues, chapterId: chapter.id, pageKey: getPageKeyFromUrl(pages[pageIdx]), imgRef });
 
   const [textScale, setTextScale] = useState<number>(1.0);
@@ -787,6 +789,8 @@ export function CinematicReader({
           handleUpdateBubble={handleUpdateBubble}
           handleUpdateSettings={handleUpdateSettings}
           handleUpdateAudioTracks={handleUpdateAudioTracks}
+          presetMode={presetMode}
+          setPresetMode={setPresetMode}
         />
       </div>
 

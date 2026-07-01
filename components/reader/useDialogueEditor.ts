@@ -38,6 +38,9 @@ export function useDialogueEditor({
   const [snapToGrid, setSnapToGrid] = useState(true);
   const [gridSize, setGridSize] = useState(5); // step size in percentage (e.g. 5%)
 
+  // Preset Mode (standard vs custom)
+  const [presetMode, setPresetMode] = useState<"standard" | "custom">("standard");
+
   // Initialize dialogues copy
   useEffect(() => {
     if (dialogues) {
@@ -113,6 +116,8 @@ export function useDialogueEditor({
     const posX = defaultPosition ? defaultPosition.posX : 50;
     const posY = defaultPosition ? defaultPosition.posY : Math.round(targetPanel.focusY * 100);
 
+    const isStandard = presetMode === "standard";
+
     dialoguesCopy.push({
       text: defaultStyle === "caption" ? "Texto de la narración..." : "Nuevo diálogo",
       speaker: "",
@@ -128,7 +133,12 @@ export function useDialogueEditor({
       fontSize: 9,
       borderRadius: defaultStyle === "caption" ? 4 : 18,
       tail: defaultStyle === "caption" ? "none" : undefined,
-      fontFamily: defaultStyle === "caption" ? "sans" : undefined,
+      fontFamily: isStandard 
+        ? "marker" 
+        : (defaultStyle === "caption" ? "sans" : undefined),
+      customBg: isStandard && defaultStyle === "caption" ? "#f5e642" : undefined,
+      textColor: isStandard && defaultStyle === "caption" ? "#000000" : undefined,
+      customColor: isStandard && defaultStyle === "caption" ? "#0a0a0f" : undefined,
     });
 
     targetPanel.dialogue = dialoguesCopy;
@@ -468,5 +478,7 @@ export function useDialogueEditor({
     handleFocusYDragEnd,
     handlePanelRectResizeStart,
     handleSaveChanges,
+    presetMode,
+    setPresetMode,
   };
 }

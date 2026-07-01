@@ -15,6 +15,7 @@ interface EditorTabDialoguesProps {
   handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle?: "normal" | "caption") => void;
   handleRemoveBubble: (pIdx: number, bIdx: number) => void;
   handleUpdateBubble: (pIdx: number, bIdx: number, updates: Partial<DialogueLine>) => void;
+  presetMode?: "standard" | "custom";
 }
 
 /**
@@ -29,6 +30,7 @@ export function EditorTabDialogues({
   handleAddBubble,
   handleRemoveBubble,
   handleUpdateBubble,
+  presetMode = "standard",
 }: EditorTabDialoguesProps) {
   const activePanel = currentPanels[activePanelIdx];
 
@@ -100,6 +102,122 @@ export function EditorTabDialogues({
   }
 
   const bubble = activePanel.dialogue[activeBubbleIdx];
+
+  if (presetMode === "standard") {
+    return (
+      <div className="bg-[#161622] border border-white/10 rounded p-4 flex flex-col gap-4">
+        <div className="flex justify-between items-center border-b border-white/10 pb-2.5">
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setActiveBubbleIdx(null)}
+              className="text-xs text-zinc-400 hover:text-white transition-colors cursor-pointer"
+            >
+              ← Volver
+            </button>
+            <span className="font-[var(--font-bangers)] text-base text-zinc-300 tracking-wider">
+              {bubble.style === "caption" ? "Narración 📜" : "Diálogo 💬"} #{activeBubbleIdx + 1}
+            </span>
+          </div>
+          <button
+            type="button"
+            onClick={() => handleRemoveBubble(activePanelIdx, activeBubbleIdx)}
+            className="text-xs text-red-500 hover:text-red-400 hover:underline cursor-pointer font-bold"
+          >
+            Eliminar
+          </button>
+        </div>
+
+        {/* Speaker Name Input */}
+        <div className="flex flex-col gap-1.5">
+          <label className="text-xs font-bold text-zinc-300">Hablante / Personaje:</label>
+          <input
+            type="text"
+            value={bubble.speaker || ""}
+            onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { speaker: e.target.value })}
+            className="border border-white/10 p-2 text-xs font-sans rounded bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a]"
+            placeholder="Ej: Ian, Mati, Uandi..."
+          />
+          {/* Quick Speaker Selector */}
+          <div className="flex flex-wrap gap-1 mt-1">
+            {["Ian", "Mati", "Uandi", "Sofi", "Jaz", "Julián", "Volvo"].map((name) => (
+              <button
+                key={name}
+                type="button"
+                onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { speaker: name })}
+                className={`text-[10px] font-bold px-2 py-1 rounded transition-colors cursor-pointer ${
+                  bubble.speaker === name
+                    ? "bg-[#e8185a] text-white font-bold"
+                    : "bg-[#0a0a0f] text-zinc-400 hover:text-white border border-white/5"
+                }`}
+              >
+                {name}
+              </button>
+            ))}
+            {bubble.speaker && (
+              <button
+                type="button"
+                onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { speaker: "" })}
+                className="text-[10px] font-bold px-2 py-1 rounded bg-[#0a0a0f] text-red-400 hover:text-red-300 border border-white/5 cursor-pointer"
+              >
+                Quitar
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Text Area for Dialogue content */}
+        <div className="flex flex-col gap-1.5 mt-1">
+          <div className="flex justify-between items-center">
+            <label className="text-xs font-bold text-zinc-300">Texto:</label>
+            <button
+              type="button"
+              onClick={async () => {
+                try {
+                  const text = await navigator.clipboard.readText();
+                  if (text) {
+                    handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text });
+                  }
+                } catch (err) {
+                  console.error("Error al leer el portapapeles:", err);
+                }
+              }}
+              className="font-[var(--font-bangers)] text-[10px] bg-blue-950/40 hover:bg-blue-900/30 text-blue-300 border border-blue-900/40 px-2 py-0.5 rounded transition-all cursor-pointer"
+            >
+              ⚡ Pegar
+            </button>
+          </div>
+          <textarea
+            value={bubble.text}
+            onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: e.target.value })}
+            className="w-full h-24 border border-white/10 p-2 text-xs font-sans rounded bg-[#0a0a0f] text-white resize-none focus:outline-none focus:ring-1 focus:ring-[#e8185a]"
+            placeholder="Escribí el diálogo..."
+          />
+        </div>
+
+        {/* Max Width Slider */}
+        <div className="flex flex-col gap-1 mt-1">
+          <div className="flex justify-between items-center text-xs font-bold text-zinc-300">
+            <span>Ancho Máximo:</span>
+            <span className="font-mono text-zinc-400">{bubble.width ? `${bubble.width}px` : "Defecto"}</span>
+          </div>
+          <input
+            type="range"
+            min="100"
+            max="600"
+            step="10"
+            value={bubble.width || 250}
+            onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { width: parseInt(e.target.value) })}
+            className="w-full accent-[#e8185a] cursor-pointer"
+          />
+        </div>
+
+        <span className="text-[10px] text-zinc-500 italic text-center border-t border-white/5 pt-2 mt-1">
+          💡 ¡También podés arrastrar la burbuja directamente en el lienzo del cómic para posicionarla!
+        </span>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-[#161622] border border-white/10 rounded p-4 flex flex-col gap-4">

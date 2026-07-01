@@ -330,6 +330,122 @@
           ]
         }
       ]
+    },
+    "10": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "cuando normalizamos esto?", "size": "small", "posX": 40, "posY": 0, "tailX": 35, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 100, "fontSize": 9, "borderRadius": 18 },
+            { "text": "amigo vos te enojas y te convertis en monstruo", "size": "small", "posX": -5, "posY": 30, "tailX": 5, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            { "text": "¿Tomás?", "size": "small", "posX": 30, "posY": 40, "tailX": 20, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Nos están comiendo los gastos. La tele costó trescientos.", "speaker": "Ian", "size": "small", "posX": 100, "posY": 60, "tailX": 105, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Podría haber sido peor.", "size": "small", "posX": 55, "posY": 55, "tailX": 45, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "Podría haber sido la pared.", "size": "small", "posX": -5, "posY": 75, "tailX": 5, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "¿Alguien sabe algo de Volvo?", "size": "small", "posX": 100, "posY": 70, "tailX": 80, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "No lo veo hace dias-", "size": "small", "posX": 90, "posY": 85, "tailX": 75, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "11": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "Mas tarde..", "style": "caption", "posX": 55, "posY": 0, "tailX": 50, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 9, "borderRadius": 4, "tail": "none", "customBg": "#f5e642" }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "Mentirle a Uandi fue fácil. A Ian también.", "style": "caption", "posX": 20, "posY": 40, "tailX": 50, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 9, "borderRadius": 4, "tail": "none", "customBg": "#f5e642" }
+          ]
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": [
+            { "text": "Lo que no es fácil es que tengo razón", "style": "caption", "posX": 90, "posY": 60, "tailX": 50, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 9, "borderRadius": 4, "tail": "none", "customBg": "#f5e642" },
+            { "text": "Si les cuento lo de Volvo, empiezan las preguntas.", "style": "caption", "posX": 15, "posY": 75, "tailX": 50, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 9, "borderRadius": 4, "tail": "none", "customBg": "#f5e642" }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [
+            { "text": "Todavía no sé si me lo estoy diciendo a mí o a ellos.", "style": "caption", "posX": 15, "posY": 85, "tailX": 50, "tailY": 105, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 9, "borderRadius": 4, "tail": "none", "customBg": "#f5e642" }
+          ]
+        }
+      ]
+    },
+    "12": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "Che, te dejé una medialuna antes de que Uandi arrase con el resto, wachin. ¿Estás bien?", "size": "small", "posX": -5, "posY": 50, "tailX": 10, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.65,
+          "dialogue": [
+            { "text": "Sí... Voy al baño", "size": "small", "posX": 105, "posY": 55, "tailX": 80, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "13": {
+      "panels": [
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            { "text": "Necesito aire.", "size": "small", "posX": 95, "posY": 65, "tailX": 60, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "Mati sale. Nadie lo ve. La puerta de la base cerrándose.*", "style": "caption", "posX": 100, "posY": 90, "tailX": 50, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 9, "borderRadius": 4, "tail": "none", "customBg": "#f5e642" }
+          ]
+        }
+      ]
+    },
+    "14": {
+      "panels": [
+        {
+          "focusY": 0.25,
+          "dialogue": [
+            { "text": "Nueva York al atardecer es una sobreexposición de luz dorada. Millones de personas cruzándose sin detenerse...", "style": "caption", "posX": 55, "posY": 25, "tailX": 50, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 410, "fontSize": 9, "borderRadius": 4, "tail": "none", "customBg": "#f5e642" }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "...y es la única ciudad del mundo donde podés esconderte a plena luz del crepúsculo", "style": "caption", "posX": 5, "posY": 35, "tailX": 50, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 9, "borderRadius": 4, "tail": "none", "customBg": "#f5e642" }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": []
+        }
+      ]
     }
   },
   "settings": {
