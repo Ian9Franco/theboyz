@@ -13,7 +13,7 @@ export const pibes: CharacterDetail[] = [
     perfil: [
       'Humano sin alteraciones: Carece de mutaciones biológicas; su ventaja radica en una inteligencia analítica excepcional aplicada al diseño de soluciones estratégicas.',
       'Arquitecto de retaguardia: Su mente procesa el entorno de forma masiva, detectando patrones, fallas estructurales y vectores de ataque antes de que ocurran.',
-      'Lealtad incondicional hacia su equipo, respaldada por una disciplina táctica impecable y un consumo crónico de café filtrado para mantener el enfoque.'
+      'Lealtad incondicional: Su obsesión con planificar planes de escape y contingencias nace de un profundo miedo a perder a sus amigos, respaldado por un consumo crónico de café negro.'
     ],
     crisis: 'Hiperenfoque analítico: Ante giros drásticos e imprevistos en el entorno, su cerebro prioriza recalcular todas las variables en milisegundos, lo que puede retrasar su respuesta inmediata en pos de la jugada perfecta.',
     stats: { fuerza: 4, inteligencia: 9, carisma: 6, suerte: 5, combate: 3, defensa: 3, especialVal: 1 },
@@ -149,8 +149,8 @@ export const pibes: CharacterDetail[] = [
     visualCode: 'Suéter azul marino, barba, pelo corto con fade',
     perfil: [
       'Peleador ágil y hostigador: Combate con cartas y constructos de energía pura inestable (glitch azul y rojo) para desestabilizar coberturas y enemigos a corto/medio rango.',
-      'Fachada sarcástica: Oculta una altísima ansiedad interna y un cerebro hiperactivo bajo una capa de cinismo, carisma magnético y humor negro.',
-      'Contextos de Vestimenta: Ropa normal (suéter azul marino) en el día a día para pasar desapercibido, y el Traje Cósmico "Wildcard" en misiones críticas.',
+      'Fachada sarcástica: Oculta su ansiedad constante bajo cinismo, carisma y humor negro, llamando "wachin" o "wacha" para berretinear por igual dependiendo el género.',
+      'Detalles personales: Tiene una novia de nombre y rostro misteriosos a la que solo se refiere cariñosamente como "wawi". Juega nerviosamente con naipes de energía para calmarse.',
       'Ancla Psicológica: Ponerse el traje cósmico le sirve como señal mental de que "la situación se fue global/multiversal", forzando a su mente ansiosa a enfocarse.'
     ],
     crisis: 'Agotamiento por sobrecarga: Si se sobreesfuerza intentando cargar objetos grandes (como autos o columnas) o inyectando demasiada energía a sus clones, sufre migrañas incapacitantes y queda indefenso.',
@@ -260,8 +260,8 @@ export const pibes: CharacterDetail[] = [
     visualCode: 'Remera técnica Kappa, lentes redondos, tatuajes manga en ambos brazos',
     perfil: [
       'Honestidad brutal e ingenua: Transparente en sus intenciones, actúa bajo un código moral directo y se posiciona como el protector rígido del grupo.',
-      'Complexión atlética: Porte físico imponente, caracterizado por una intrincada y extensa manga de tatuajes de diseño tribal/geométrico en ambos brazos.',
-      'Estilo urbano deportivo: Remera técnica ajustada de Kappa, pantalón cargo gris y lentes redondos que suavizan sutilmente sus facciones de combate.'
+      'Hábitos y costumbres: Conductor designado y tomador crónico de mate. Siempre propone hacer un asado pero nunca lo hace; termina cocinando un guiso o dejando que cocinen Ian o Julián sin ayudarlos.',
+      'Estilo rústico: De físico imponente y tatuado, se dirige a los demás con modismos porteños directos ("pibe", "loco", "maestro"), rechazando apodos importados como "Bub".'
     ],
     crisis: 'Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo vuelve inflexible; tiende a cargar de frente contra el peligro, confiando en su resistencia física antes de evaluar rutas de evasión.',
     stats: { fuerza: 8, inteligencia: 3, carisma: 5, suerte: 3, combate: 8, defensa: 8, especialVal: 0 },
