@@ -171,7 +171,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   "ian": [
     {
       "name": "Ian Sheet",
-      "path": "/personajes/GUIAS/boyz/VESPERWING/IAN_sheet.webp",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/ian_sheet.webp",
       "isAlt": false
     },
     {
