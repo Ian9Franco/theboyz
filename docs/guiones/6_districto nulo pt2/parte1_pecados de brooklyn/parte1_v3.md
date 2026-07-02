@@ -985,139 +985,403 @@
 
 ---
 
-### PÁGINA 38 — "El Cerco de Dumbo"
-**5 viñetas — Noche, interior de la base de los chicos**
+### PÁGINA 38 — "Apagón Táctico"
+**8 viñetas — Noche, interior de la base de los chicos acorralados**
 
-**Viñeta 1 — Grande — El taller oscureciéndose**
-*De repente, las luces de la base parpadean y se apagan, dejando el lugar sumido en una penumbra azulada. Los monitores de Ian se apagan de golpe con un zumbido.*
-**EFECTO DE SONIDO:** *CLIC-BZZT*
+**Viñeta 1 — Grande — Interior de Dumbo en penumbra**
+*Interior de la base de Dumbo sumido en la penumbra. Afuera, las potentes luces de sirena azules y cian de los furgones de V.O.P.S. se filtran intensamente a través de las ventanas de vidrio industrial.*
 
-**Viñeta 2 — Media — Ian y Mati**
-*Ian teclea frustrado en su tablet portátil, la cual apenas enciende en un tono de advertencia. Mati a su lado se ajusta el visor.*
-**IAN:** "Se cayeron los repetidores del barrio. No hay señal de red ni satélite local. Nos cortaron las comunicaciones por completo."
+**Viñeta 2 — Media — Ian conectando cables**
+*Ian trabaja a contrarreloj frente a la consola principal de la base, conectando los cables de sus exo-guanteletes directamente al disyuntor de energía central.*
+**IAN:** “Si nos ven, nos encierran. Si los ciego, nos quedamos sin ojos también.”
 
-**Viñeta 3 — Pequeña — Uandi en la ventana**
-*Uandi, con expresión seria, aparta levemente una de las chapas de la ventana para mirar hacia la calle oscura.*
+**Viñeta 3 — Media — Los chicos listos**
+*Mati se ajusta el visor púrpura en silencio. Julián hace aparecer su bastón de energía táctico, rodeado de estática cian y magenta, mientras Uandi respira pesado con las runas rojas encendiéndose bajo su piel.*
 
-**Viñeta 4 — Grande — Contraplano: la calle rodeada**
-*Lo que ve Uandi: la calle frente al taller está completamente bloqueada de noche por furgones blindados negros mate de V.O.P.S. Los soldados bajan en formación táctica de los furgones con sus rifles de estasis apuntando al edificio, con sus visores de luces azules y cian brillando bajo la lluvia.*
+**Viñeta 4 — Pequeña — Plano detalle: la palanca principal**
+*La mano de Ian tira con fuerza de la palanca del interruptor general.*
+**EFECTO DE SONIDO:** *KRRR-BZZZT*
 
-**Viñeta 5 — Media — Uandi dándose la vuelta**
-*Uandi suelta la chapa y mira al grupo con rostro de alerta.*
-**UANDI:** "Es R.E.G.U.L.A.R."
-**UANDI:** "Están afuera."
+**Viñeta 5 — Grande — Exterior de la calle**
+*Los drones tácticos de V.O.P.S. que sobrevolaban la manzana caen en picada hacia el asfalto como insectos inservibles de alta tecnología. Las luces de los visores y equipos de los soldados de la calle parpadean y se apagan.*
 
----
+**Viñeta 6 — Media — R.E.G.U.L.A.R. sereno**
+*El Comandante R.E.G.U.L.A.R. permanece inmóvil bajo la lluvia. Su visor de combate se apaga momentáneamente por el pulso electromagnético, pero él no se inmuta.*
+**R.E.G.U.L.A.R.:** “Ciego táctico confirmado. Procedan por contacto.”
 
-### PÁGINA 39 — "El Cliffhanger"
-**4 viñetas — Noche, el clímax paralelo**
+**Viñeta 7 — Media — Granadas de humo**
+*Soldados de V.O.P.S. cargan y disparan granadas de humo a través de las ventanas rotas del taller.*
+**EFECTO DE SONIDO:** *THUNK—THUNK—THUNK*
 
-**Viñeta 1 — Splash (1/2 página) — Los chicos listos para la pelea**
-*Los cuatro vigilantes en el living oscuro de la base de Dumbo, asumiendo posiciones de combate. Las luces cian y azul de los furgones policiales de afuera se filtran entre las rendijas de las ventanas, iluminando sus rostros decididos:*
-* **Julián:** Al frente, con los ojos brillando en azul estático, materializa su bastón de energía táctico rodeado de estática cian y magenta.*
-* **Uandi:** Con los puños cerrados. Sus antebrazos se iluminan en runas amarillas y rojas, pero el brillo parpadea de forma inestable. Su cuerpo emana vapor de calor y Uandi aprieta los dientes en una mueca de dolor físico, forzando su límite físico para resistir el asalto.*
-* **Ian:** Al fondo, colocándose sus exo-guanteletes de combate de alta tecnología y ajustándose sus exo-botas metálicas.*
-* **Mati:** Con el visor prototipo púrpura puesto, cuyos cristales comienzan a destellar ráfagas eléctricas de plasma violeta en sus ojos, preparándose para la descarga.*
-
-**Viñeta 2 — Media — Don Vanguard en el City Hall**
-*Don Vanguard en su oficina señorial de la alcaldía, con el rostro desencajado en una mezcla de pánico y furia sádica, sostiene el teléfono rojo de emergencia. A su lado, un asistente grita sudando:*
-**ASISTENTE:** "¡Señor! ¡Un coloso químico está destruyendo Central Park... y nuestras unidades blindadas están desplegadas en el asedio de Dumbo!"
-
-**Viñeta 3 — Media — Phobos bajo la lluvia**
-*Phobos en persona, de espaldas, parado en lo alto de la cornisa de un rascacielos bajo la lluvia, contemplando el panorama de la ciudad de noche. A la izquierda, a lo lejos, se alza la humareda verde radiactivo de Central Park; a la derecha, titilan las luces de estasis azules sobre el muelle de Dumbo.*
-
-**Viñeta 4 — Grande — El rostro de Phobos**
-*Primer plano de perfil de Phobos de noche. La lluvia corre por su rostro pálido y la corona-venda metálica de su nuca. Se muestra una sonrisa amplia y aterradora en su boca cruzada por cicatrices.*
-**CAPTION:** *Fin — Parte 1*
-**CAPTION:** *Fuego Púrpura continúa en la Parte 2: "La Cacería"*
+**Viñeta 8 — Grande — El humo invadiendo**
+*Una espesa humareda gris de gas de contención entra a raudales en la base, engullendo a los chicos en la oscuridad.*
 
 ---
 
-*— Fin del Guion, Parte 1 —*
-*39 páginas / Borrador v3*
+### PÁGINA 39 — "Entrada Forzada"
+**7 viñetas — Noche, interior de la base y asalto táctico**
 
----
----
+**Viñeta 1 — Grande — La puerta rota**
+*La puerta de chapa reforzada de la base vuela hacia el interior en pedazos tras una detonación táctica.*
+**EFECTO DE SONIDO:** *KRAAANG*
 
-# ROAD TO PARTE 2 — "La Cacería"
-## Resumen estructural y beats narrativos
+**Viñeta 2 — Media — Soldados irrumpiendo**
+*Los soldados de V.O.P.S. entran en formación cerrada y profesional con escudos pesados y linternas acopladas a sus rifles de estasis.*
+**SOLDADO V.O.P.S.:** “¡Sector uno limpio!”
 
-*Este documento es una hoja de ruta, no un guion. Sirve para tener el horizonte claro antes de escribir página por página.*
+**Viñeta 3 — Media — Los chicos escondidos**
+*Ian, Mati y Julián se agachan detrás de columnas de hormigón y maquinaria pesada, observando los haces de luz cruzar el humo.*
 
----
+**Viñeta 4 — Media — Uandi en el suelo**
+*Uandi está de rodillas en las sombras, apretándose el pecho con fuerza. Su piel se tiñe de un rojo incandescente y un vapor denso empieza a brotar de sus hombros. Sus runas brillan como lava.*
 
-## ESTADO DEL MUNDO AL INICIO DE LA PARTE 2
+**Viñeta 5 — Pequeña — Julián susurrando**
+*Julián observa a Uandi con pánico real y le susurra desde su escondite.*
+**JULIÁN:** “Uandi… no, no, no. Maestro, bajá un cambio.”
 
-**El grupo sabe:**
-- Gorgon existe. Es una amenaza física que los superó en escala en estado base y es potencialmente imparable en estado mutado.
-- R.E.G.U.L.A.R. los tiene en el mapa desde antes de Times Square. El encuentro con Gorgon en Dumbo confirmó su ubicación aproximada.
-- Quien expuso a Mati en Times Square no es tecnológico — opera en una dimensión que Ian no puede monitorear.
-- La base ya no es invisible.
+**Viñeta 6 — Pequeña — Primer plano de Uandi**
+*Uandi sonríe de forma dura y peligrosa, sintiendo la sobrecarga cuántica al límite.*
+**UANDI:** “No puedo, pibe.”
 
-**El grupo NO sabe:**
-- Que Gorgon es el ejecutor de Phobos.
-- Quién es Phobos.
-- Que Phobos ya está parado a media cuadra de donde duermen.
-
-**Las amenazas activas:**
-- **Phobos:** presente, cercano, invisible para el grupo. Su próximo movimiento es directo — ya terminó la fase de observación.
-- **Gorgon:** se retiró porque eligió hacerlo. Volverá en estado mutado.
-- **R.E.G.U.L.A.R. y V.O.P.S.:** tienen la ubicación aproximada, están construyendo el operativo. Su movimiento es más lento pero más institucional — cuando lleguen, van a llegar con todo.
-- **Don Vanguard:** en modo daño controlado post-transmisión de Times Square. Tiene un problema político además de uno de seguridad.
+**Viñeta 7 — Grande — Soldados descubriendo la silueta**
+*Los haces de las linternas de V.O.P.S. barren el humo y revelan una silueta colosal y humeante que se alza lentamente.*
 
 ---
 
-## ESTRUCTURA DE BEATS — PARTE 2
+### PÁGINA 40 — "Aegis Desatado"
+**5 viñetas — Noche, combate brutal dentro y fuera de la base**
 
-### BEAT 1 — "El Amanecer con Phobos" (Págs. 1-5)
-*El grupo descubre que Phobos estuvo afuera toda la noche cuando Ian revisa las cámaras de seguridad externas a la mañana. Phobos ya no está — pero hay algo que dejó: uno de los Hounds, encadenado al poste de afuera, muerto o en estado de colapso.*
-*Es un mensaje. No de amenaza — de anuncio. "Ya sé dónde están."*
-*Ian no puede analizar la firma de energía de los Hounds. Es orgánica y liminal al mismo tiempo. Fuera de todo su espectro.*
+**Viñeta 1 — Grande — Soldados abriendo fuego**
+*Los soldados de V.O.P.S. disparan ráfagas cian de estasis a quemarropa hacia la gran silueta.*
+**EFECTO DE SONIDO:** *TKTKTKTK*
 
-### BEAT 2 — "Gorgon en Estado Mutado, Round 2" (Págs. 6-14)
-*La pelea real. Gorgon vuelve — ya en estado mutado desde el primer segundo. Esta vez no es un ariete tosco. Es un estratega sádico con fuerza de titán.*
-*La pelea tiene tres momentos:*
-- *Gorgon domina: el grupo no tiene respuesta para la combinación de fuerza y táctica.*
-- *Mati intentando usar el fuego púrpura de forma más controlada con el visor — funciona parcialmente, daña a Gorgon, pero el costo físico es alto.*
-- *El giro: Ian descubre la debilidad — las mangueras. Si se cortan o se sabotean, el sistema colapsa. Julián, con un naipe cargado de estática glitch en el punto correcto, corta una manguera. Gorgon colapsa de regreso a estado base.*
-*Gorgon en estado base: aturdido, vulnerable. El grupo podría rematarlo. No lo hacen — o no pueden antes de que algo interrumpa.*
+**Viñeta 2 — Media — Uandi absorbiendo impactos**
+*Uandi, transformado en Aegis, recibe las descargas en su torso. Las runas rojas absorben la energía de estasis, brillando con fuerza destructiva.*
+**UANDI:** “¿Eso era?”
 
-### BEAT 3 — "Phobos en Persona" (Págs. 15-19)
-*Phobos aparece en el momento en que Gorgon colapsa — como si hubiera estado esperando ese momento específico.*
-*Primera interacción real con el grupo. Phobos en modo Filósofo Frío: no ataca, no amenaza directamente. Habla. Evalúa. Hace preguntas que no deberían saber la respuesta.*
-*Le habla a Mati específicamente — sabe sobre las variantes, sobre Volvo, sobre el decaimiento cuántico. Demasiado.*
-*Se retira llevando a Gorgon — que ahora es claramente su ejecutor. El reveal queda explícito.*
-*Lo que el grupo siente después: no es alivio. Es la sensación de haber sido estudiados.*
+**Viñeta 3 — Grande — Uandi embistiendo**
+*Uandi se abalanza sobre dos soldados, levantándolos del suelo por los chalecos y estrellándolos con fuerza bruta contra la carrocería de un furgón policial en la calle.*
+**EFECTO DE SONIDO:** *KRA-DOOOM*
 
-### BEAT 4 — "V.O.P.S. Llega" (Págs. 20-26)
-*El operativo de R.E.G.U.L.A.R. llega a Dumbo mientras el grupo todavía procesa el encuentro con Phobos.*
-*R.E.G.U.L.A.R. aparece en persona por primera vez — no a través de una radio. Su presencia física es diferente a todo lo anterior: institucional, fría, blindada.*
-*No es una pelea limpia — es un operativo de contención. El grupo tiene que salir de la base sin que R.E.G.U.L.A.R. los capture.*
-*La base queda comprometida — al final de esta secuencia, no pueden volver.*
+**Viñeta 4 — Media — Ian y Julián vigilando**
+*Ian examina la telemetría biológica inestable de Uandi en su tablet.*
+**IAN:** “Está absorbiendo demasiada energía. Si sigue así, explota.”
+**JULIÁN:** “¿Explota tipo metáfora o tipo buscar alquiler nuevo?”
+**IAN:** “Tipo no hay barrio.”
 
-### BEAT 5 — "Sin Base" (Págs. 27-30)
-*El grupo fuera de su único refugio. Sin recursos. Con dos frentes activos — Phobos/Gorgon y V.O.P.S.*
-*Tensión interna real: Ian quiere planificar, Mati quiere resolver lo de las variantes, Julián quiere pelear, Uandi sostiene todo desde el centro.*
-*Decisión: hay que entender quién es Phobos antes de que llegue su próximo movimiento. Y la única pista es la firma liminal que Ian no puede leer desde su taller — porque el taller ya no existe.*
-
-### BEAT 6 — "El Cliffhanger de Parte 2" (Págs. 31-35)
-*Ian logra rastrear la firma liminal de Phobos a una fuente: los Backrooms.*
-*El grupo tiene que decidir si entra.*
-*Última viñeta: los cuatro frente a la entrada a los Backrooms. Y del otro lado — en la oscuridad del umbral — la silueta de Phobos esperándolos.*
-*Su boca: la sonrisa completa. El Lunático Teatral despertando.*
-**CAPTION:** *Fuego Púrpura concluye en: "El Teatro"*
+**Viñeta 5 — Splash (Página completa) — El coloso de Dumbo**
+*Aegis en medio de la calle bajo la lluvia, convertido en un gigante rojo incandescente que exhala vapor de calor. Furgones volcados y soldados de V.O.P.S. retrocediendo despavoridos ante su imponente presencia.*
 
 ---
 
-## NOTAS DE TONO PARA PARTE 2
+### PÁGINA 41 — "Llamado de Prioridad"
+**7 viñetas — Noche, la calle en llamas e interferencias de mando**
 
-- **La escala sube pero el foco se mantiene en los personajes.** Las peleas son más grandes pero los beats emocionales siguen siendo domésticos — la tensión interna del grupo sin base es tan importante como cualquier confrontación con Gorgon.
-- **Phobos nunca es fácil de leer.** Cuando habla con el grupo en el Beat 3, el lector no sabe si está siendo honesto o si cada palabra es parte de una operación psicológica. Esa ambigüedad es su arma principal.
-- **R.E.G.U.L.A.R. no es el villano de la Parte 2 — es la presión institucional que fuerza al grupo a moverse.** Su función narrativa es quitarles la base y obligarlos a ir a terreno de Phobos. Él sabe eso y lo usa.
-- **Gorgon en estado mutado tiene que sentirse diferente al de estado base.** No solo más fuerte — más presente. Cuando habla, cuando piensa, cuando elige sus blancos. La inteligencia que despierta la metatoxina es el elemento más perturbador de su diseño.
-- **El final de Parte 2 abre Parte 3 ("El Teatro")** — que es la historia completa dentro de los Backrooms, territorio de Phobos, donde las reglas del mundo real no aplican.
+**Viñeta 1 — Media — R.E.G.U.L.A.R. en el combate**
+*El Comandante observa la carnicería táctica. De fondo, un soldado sale despedido y choca contra el capó de una patrulla.*
+
+**Viñeta 2 — Pequeña — Teléfono parpadeando**
+*El receptor rojo de emergencia en la muñeca de R.E.G.U.L.A.R. vibra con insistencia.*
+**EFECTO DE SONIDO:** *BRRRT*
+
+**Viñeta 3 — Media — Vanguard en pantalla**
+*En el comunicador holográfico aparece el rostro desencajado de Don Vanguard desde el City Hall.*
+**DON VANGUARD (tele):** “Central Park. Ahora. Gorgon está destruyendo media ciudad.”
+**R.E.G.U.L.A.R.:** “Tengo una anomalía clase roja en Dumbo.”
+
+**Viñeta 4 — Media — El reporte de la calle**
+*Un soldado grita al fondo mientras Uandi arranca una puerta metálica para usarla como escudo.*
+**SOLDADO V.O.P.S. (fuera de campo):** “¡Señor, el rojo nos está revoleando los camiones!”
+**R.E.G.U.L.A.R. (seco):** “Corrección. Tengo una anomalía clase roja usando presupuesto público como instrumento de percusión.”
+
+**Viñeta 5 — Pequeña — Vanguard furioso**
+*Vanguard golpea su escritorio.*
+**DON VANGUARD (tele):** “¡GORGON ES PRIORIDAD POLÍTICA!”
+
+**Viñeta 6 — Media — R.E.G.U.L.A.R. cortando la señal**
+*El comandante apaga el receptor sin dudar.*
+**R.E.G.U.L.A.R.:** “Entonces voy a terminar esto rápido.”
+
+**Viñeta 7 — Grande — El arma pesada**
+*El comandante abre el compartimento de munición de su blindado y extrae el lanzaredes de contención mutagénica avanzada.*
 
 ---
 
-*Road to Parte 2 — v1*
-*Para uso interno de desarrollo narrativo*
+### PÁGINA 42 — "La Primera Retirada"
+**9 viñetas — Noche, asalto coordinado y derrota táctica**
+
+**Viñeta 1 — Media — Julián y Mati**
+*Mati y Julián ven el arma desde su cobertura.*
+**MATI:** “Si le pega a Uandi con eso, lo apaga.”
+**JULIÁN:** “Bueno, entonces rompamos el juguete fascista. Me cae mal desde la caja.”
+
+**Viñeta 2 — Media — Mati disparando al arma**
+*Mati apunta su visor y dispara un fino haz concentrado de plasma violeta directamente a las manos de R.E.G.U.L.A.R., fundiendo el cargador del lanzaredes.*
+
+**Viñeta 3 — Media — Julián embistiendo**
+*Julián salta empuñando su bastón de energía cian cargado con estática.*
+**JULIÁN:** “Dormiste, Robocop de La Salada.”
+
+**Viñeta 4 — Grande — Contraataque del comandante**
+*R.E.G.U.L.A.R. esquiva el golpe y realiza una rápida llave de sumisión, inmovilizando a Julián del brazo por la espalda.*
+**R.E.G.U.L.A.R.:** “Tu energía tarda medio segundo en estabilizarse.”
+**JULIÁN:** “Bueno, pará, mirá qué detallista el sorete.”
+
+**Viñeta 5 — Media — Ian atacando**
+*Ian surge por detrás y dispara una ráfaga verde comprimida de su guantelete en la espalda de R.E.G.U.L.A.R.*
+**EFECTO DE SONIDO:** *VMMM-CRACK*
+
+**Viñeta 6 — Media — R.E.G.U.L.A.R. resistiendo**
+*Suelta a Julián y se reincorpora al instante activando su escudo repulsor para mantener distancia.*
+**R.E.G.U.L.A.R.:** “Objetivo cuatro confirmado. Tecnología de origen no registrado.”
+
+**Viñeta 7 — Grande — Uandi exhausto**
+*Uandi sigue golpeando blindados, pero las runas de sus brazos se agrietan. Ian se da cuenta de la inminente explosión cinética.*
+**IAN:** “No estamos ganando. Estamos por detonarnos.”
+
+**Viñeta 8 — Grande — Disparo de la red**
+*R.E.G.U.L.A.R. levanta el lanzaredes dañado y dispara una red incompleta. Los filamentos de estasis cian se clavan en el torso de Uandi. El coloso cae de rodillas, con las runas apagándose.*
+
+**Viñeta 9 — Grande — Sombra en el callejón**
+*Los soldados de V.O.P.S. apuntan sus linternas hacia un furgón negro antiguo que irrumpe desde un pasaje fuera del mapa.*
+**CAPTION:** *Carmella aparece.*
+
+---
+
+### PÁGINA 43 — "No vuelvan"
+**6 viñetas — Noche, escape apresurado y pérdida del hogar**
+
+**Viñeta 1 — Grande — La llegada de Carmella**
+*Carmella Nocturna baja del furgón fúnebre modificado bajo la lluvia, vestida con su abrigo de terciopelo carmesí y negro, lentes oscuros y paraguas rojo. Dos guardaespaldas vampiros están detrás.*
+**CARMELLA:** “Julián.”
+**JULIÁN:** “Wawi.”
+
+**Viñeta 2 — Media — Sorpresa del grupo**
+*Ian y Mati ayudan a levantar a Uandi.*
+**MATI:** “¿Wawi es una vampira?”
+**IAN:** “Ese dato habría sido tácticamente útil hace veinte minutos.”
+**JULIÁN:** “No quería presumir.”
+
+**Viñeta 3 — Media — Escapatoria por los túneles**
+*Carmella abre una pesada reja que da a unas catacumbas pluviales abandonadas.*
+**CARMELLA:** “Subsuelo viejo. Sin cámaras, sin satélite, sin jurisdicción.”
+**IAN:** “Eso no existe en los mapas.”
+**CARMELLA:** “Por eso sigue existiendo.”
+
+**Viñeta 4 — Media — Ian en el taller**
+*Ian intenta cargar un servidor y unas herramientas del taller mientras el humo y las sirenas se acercan.*
+
+**Viñeta 5 — Pequeña — Carmella deteniéndolo**
+*La mano fría de Carmella se posa en su hombro.*
+**CARMELLA:** “Lo que no puedas llevar en treinta segundos ya pertenece a la ciudad.”
+**IAN:** “Ahí está todo.”
+**CARMELLA:** “Entonces aprendé a odiar más rápido.”
+
+**Viñeta 6 — Grande — Incendio en Dumbo**
+*El Comandante R.E.G.U.L.A.R. da la orden definitiva mientras el túnel se cierra.*
+**R.E.G.U.L.A.R.:** “No los persigan. Quítenles el suelo. Incendien la base.”
+
+---
+
+### PÁGINA 44 — "La ciudad bajo la ciudad"
+**5 viñetas — Noche, el descenso al refugio de los marginados**
+
+**Viñeta 1 — Grande — Descenso subterráneo**
+*Los chicos descienden por viejos túneles de ladrillo iluminados por carteles de neón rojo parpadeantes.*
+**CAPTION (Ian):** *La ciudad oficial vive arriba. La ciudad real cobra entrada.*
+
+**Viñeta 2 — Media — El club de Carmella**
+*Llegan a un antro subterráneo inmenso de estética gótico-industrial. Vampiros de trajes finos bailan en una pista bajo lluvia artificial roja.*
+
+**Viñeta 3 — Media — El mercado negro**
+*En las esquinas oscuras del club, contrabandistas intercambian armas UV, sangre sintética y tecnología robada de V.O.P.S.*
+
+**Viñeta 4 — Pequeña — Reacción del grupo**
+*Mati mira todo con incomodidad; Uandi (aún semi-transformado) gruñe a un vampiro; Julián sonríe nervioso; Ian escanea mentalmente el entorno.*
+
+**Viñeta 5 — Media — Ian y Carmella**
+*Ian mira las conexiones del club.*
+**IAN:** “Esto no figura en ninguna red municipal.”
+**CARMELLA:** “Porque la ciudad oficial vive arriba. La ciudad real cobra entrada.”
+
+---
+
+### PÁGINA 45 — "Wawi"
+**5 viñetas — Noche, la salida a la superficie y el contacto pendiente**
+
+**Viñeta 1 — Grande — Salida a la superficie**
+*El grupo llega frente a una vieja puerta de hierro pesado que tiene escaleras metálicas hacia una rejilla exterior. Entra aire fresco de la noche.*
+
+**Viñeta 2 — Media — El beso de Carmella**
+*Carmella abraza a Julián por el cuello y lo besa de forma apasionada.*
+**CARMELLA:** “No te mueras esta semana.”
+**JULIÁN:** “Qué específica.”
+**CARMELLA:** “Con vos hay que serlo.”
+
+**Viñeta 3 — Media — Comentarios de los chicos**
+*Julián sube las escaleras con una sonrisa mientras los demás lo siguen.*
+**MATI:** “Pará. ¿Tu wawi es una vampira?”
+**UANDI:** “Yo pensé que wawi era… no sé, una mina normal.”
+**IAN:** “Estadísticamente, Julián nunca tuvo pinta de tomar buenas decisiones afectivas.”
+**JULIÁN:** “Están todos re celosos. Es triste.”
+
+**Viñeta 4 — Media — La mirada de Carmella**
+*Carmella mira de reojo a Ian antes de cerrar la reja.*
+**CARMELLA:** “Tu amigo ya recibió la invitación.”
+
+**Viñeta 5 — Pequeña — Detalle: el teléfono de Ian**
+*Ian abre su móvil. En la pantalla parpadean varios mensajes de Norman Parker.*
+
+---
+
+### PÁGINA 46 — "East Side"
+**4 viñetas — Noche, el refugio temporal**
+
+**Viñeta 1 — Grande — El penthouse de Jaz**
+*Jaz abre la puerta de su penthouse en el East Side, un espacio limpio, caro y espiritual lleno de cuarzos y ventanales con vista a Manhattan.*
+
+**Viñeta 2 — Grande — Los chicos entrando hechos un desastre**
+*Los chicos entran cubiertos de barro, hollín y ropa rasgada. Uandi deja marcas negras en la alfombra blanca.*
+**JAZ:** “No.”
+**MATI:** “Hola.”
+**JAZ:** “No me ‘hola’. ¿Por qué Uandi está humeando en mi alfombra?”
+**UANDI:** “Es vapor emocional.”
+**JAZ:** “Eso es hollín, Uandi.”
+
+**Viñeta 3 — Media — Explicaciones en el living**
+*Julián intenta disculparse.*
+**JULIÁN:** “Técnicamente venimos de perder una casa, no de ensuciar una.”
+**JAZ:** “Mi energía estaba limpia hace diez minutos.”
+
+**Viñeta 4 — Media — La advertencia de Jaz**
+*Jaz mira al grupo exhausto con rostro serio.*
+**JAZ:** “No pueden quedarse corriendo de refugio en refugio. Ya los marcaron.”
+
+---
+
+### PÁGINA 47 — "El bar de la esquina"
+**4 viñetas — Noche, la cita bajo la lluvia**
+
+**Viñeta 1 — Media — Ian saliendo**
+*Ian se calza la campera y abre la puerta.*
+**MATI:** “¿Quién?”
+**IAN:** “Alguien que ya sabía dónde estábamos antes que nosotros.”
+
+**Viñeta 2 — Pequeña — Mensajes de Parker**
+*Ian camina bajo la lluvia y lee la pantalla de su teléfono.*
+**CAPTION (Parker):** *La red de V.O.P.S. se movió contra vos. Vanguard está usando mi tecnología. Bar de la esquina. Diez minutos. Esta vez no rechaces la puerta.*
+
+**Viñeta 3 — Grande — El bar antiguo**
+*Ian entra en un pub viejo, elegante y oscuro. Se sienta en la barra y mira al barman.*
+**BARMAN:** “¿Martini?”
+**IAN:** “Hoy no me alcanza con café.”
+
+**Viñeta 4 — Media — Norman Parker**
+*Norman Parker aparece a su lado, impecable con su traje de sastre azul oscuro y cabello hacia atrás.*
+**NORMAN PARKER:** “Ian.”
+**IAN:** “Norman.”
+**NORMAN:** “Seguís vivo. Eso ya mejora la reunión anterior.”
+
+---
+
+### PÁGINA 48 — "La segunda oferta"
+**5 viñetas — Noche, la mesa de negociaciones**
+
+**Viñeta 1 — Media — La revelación de Parker**
+*Norman hace girar su trago tranquilamente.*
+**NORMAN:** “Vanguard compró herramientas de seguridad de Parker Tech. Las convirtió en una jaula.”
+**IAN:** “Conveniente distinción para el tipo que fabricó los barrotes.”
+**NORMAN:** “Y aun así estás sentado conmigo.”
+
+**Viñeta 2 — Media — La propuesta**
+*Norman le detalla sus condiciones.*
+**NORMAN:** “Te ofrezco protección política, laboratorios, tecnología limpia y un área de contención para tu amigo. Y a cambio...”
+
+**Viñeta 3 — Pequeña — Norman mirando fijamente**
+**NORMAN:** “Necesito que me ayudes a auditar mi propia tecnología.”
+**IAN:** “Eso no es lo que querés.”
+**NORMAN:** “No. Quiero que me ayudes a superarla.”
+
+**Viñeta 4 — Media — Los fantasmas de la base**
+*Flashes en la mente de Ian: Uandi perdiendo el control y la base en llamas.*
+
+**Viñeta 5 — Media — Ian acepta el trato**
+**IAN:** “No trabajo para vos.”
+**NORMAN:** “Perfecto. Los empleados mienten para conservar el sueldo.”
+**IAN:** “Trabajo por ellos.”
+**NORMAN:** “Eso es exactamente lo que compré.”
+
+---
+
+### PÁGINA 49 — "Bajo mi ala"
+**5 viñetas — Noche, intercut entre la limusina y el escape de Gorgon**
+
+**Viñeta 1 — Grande — Ian y Norman en el coche**
+*Ian y Norman viajan en la parte trasera de una limusina negra de lujo con cristales blindados.*
+
+**Viñeta 2 — Intercut — Central Park vacío**
+*Helicópteros de V.O.P.S. iluminan los árboles destruidos y los restos del puente de piedra. El humo verde químico se disipa.*
+**NORMAN:** “Vanguard no puede proteger la ciudad de lo que viene.”
+
+**Viñeta 3 — Intercut — Gorgon escapa**
+*Gorgon en estado mutado, con su respirador humeando en verde neón, observa a las patrullas policiales desde la penumbra de un túnel pluvial.*
+**GORGON:** “Tres minutos cuarenta y dos segundos.”
+
+**Viñeta 4 — Intercut — Norman e Ian**
+*Norman mira a Ian con tranquilidad.*
+**NORMAN:** “Pero yo puedo protegerlos de Vanguard.”
+
+**Viñeta 5 — Splash (Página completa) — Parker Tower**
+*La monumental y futurista Parker Tower recortándose contra la noche con su imponente arquitectura negra y azul.*
+
+---
+
+### PÁGINA 50 — "La oferta"
+**4 viñetas — Noche, el dilema moral del grupo**
+
+**Viñeta 1 — Grande — Ian regresa al penthouse**
+*Ian se para frente al grupo en el salón de Jaz.*
+**JAZ:** “Tu aura huele a contrato.”
+**IAN:** “Tenemos un lugar.”
+**MATI:** “¿Seguro?”
+**IAN:** “No. Pero tiene laboratorios, servidores limpios y protección.”
+
+**Viñeta 2 — Media — Las dudas del equipo**
+**JULIÁN:** “Eso sonó a ‘vendí un riñón pero venía con cochera’.”
+**UANDI:** “¿Y cuál es la trampa?”
+**IAN:** “Norman Parker.”
+
+**Viñeta 3 — Media — La negativa de Jaz**
+*Jaz se cruza de brazos, firme.*
+**JAZ:** “No voy a meterme en una torre de un hombre que preparó habitaciones para nosotros antes de invitarnos.”
+**IAN:** “Lo sé.”
+**JAZ:** “Entonces no me pidas que vaya.”
+**IAN:** “No te lo estoy pidiendo.”
+
+**Viñeta 4 — Media — La partida**
+*Mati, Uandi y Julián asienten cansados y empiezan a empacar lo poco que tienen. Jaz los observa con tristeza.*
+
+---
+
+### PÁGINA 51 — "Nuevo hogar"
+**4 viñetas — Noche, el diablo en Parker Tower**
+
+**Viñeta 1 — Grande — La llegada**
+*Los chicos bajan de un vehículo negro frente al imponente vestíbulo de cristal del edificio Parker.*
+**MATI:** “Esto es una locura.”
+**JULIÁN:** “Bueno… técnicamente venimos de vivir en una alcantarilla con Wi-Fi.”
+**UANDI:** “No me gusta.”
+**IAN:** “A mí tampoco.”
+**JULIÁN:** “Excelente. Hogar dulce amenaza.”
+
+**Viñeta 2 — Media — Norman en el ático**
+*Norman Parker, de espaldas en su lujosa oficina del ático, observa a los chicos entrar a través de la cristalera panorámica.*
+
+**Viñeta 3 — Plano detalle: el reflejo de Norman**
+*En el reflejo del ventanal de la torre, su rostro se estira levemente hacia atrás de forma sutil, fluida y elástica, revelando la inestabilidad de su masa celular antes de volver a su compostura civil impecable.*
+**NORMAN PARKER:** “Bienvenidos.”
+
+**Viñeta 4 — Grande — Las pantallas de rastreo**
+*Detrás de él, pantallas murales táctiles muestran datos biométricos tridimensionales y firmas energéticas de Mati, Uandi, Julián e Ian mientras ingresan al edificio.*
+**CAPTION:** *Los Pibes encontraron techo. Todavía no saben quién tiene las llaves.*
+**CAPTION:** *Fin del Episodio 1.*

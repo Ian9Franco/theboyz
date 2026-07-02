@@ -285,11 +285,13 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "maker": {
-    "portada": null,
+    "portada": "/personajes/PORTADAS/Maker/Norman Parker.webp",
     "portadas": [
+      "/personajes/PORTADAS/Maker/Norman Parker.webp",
     ],
-    "ficha": null,
+    "ficha": "/personajes/Fichas/antagonistas/Maker/Norman Parker_ficha.webp",
     "fichas": [
+      "/personajes/Fichas/antagonistas/Maker/Norman Parker_ficha.webp",
     ]
   },
   "malakas": {

@@ -227,13 +227,16 @@ export const antagonistas: CharacterDetail[] = [
   perfil: [
     'Anatomía maleable: Antiguo genetista obsesionado con la metatoxina que mutó su cuerpo hasta volver su estructura celular completamente líquida y elástica.',
     'Pulcritud futurista: A diferencia de otros mutantes toscos, viste un diseño limpio, futurista y minimalista para ocultar su carencia de huesos y órganos fijos.',
-    'Supercomputadora viva: Puede estirar su propio cráneo o crear lóbulos temporales adicionales para procesar información a nivel de supercomputadora.'
+    'Supercomputadora viva: Puede estirar su propio cráneo o crear lóbulos temporales adicionales para procesar información a nivel de supercomputadora.',
+    'Mente maquiavélica: Fusión conceptual entre el intelecto científico de Reed Richards y la crueldad corporativa y política de Norman Osborn. Es un villano audaz y manipulador que no necesita recurrir a sus poderes elásticos para orquestar el mal y salirse con la suya.',
+    'Mentor fallido: Intentó reclutar y guiar a Ian en el pasado para moldearlo a su semejanza. Sin embargo, los inquebrantables principios morales del joven hicieron fracasar la tutoría, transformándola en una tensa hostilidad.'
   ],
   crisis: 'Inestabilidad térmica: El calor extremo derrite su cohesión celular, mientras que el frío extremo congela sus tejidos volviéndolo frágil.',
+  loreNote: 'Fusión conceptual de Norman Osborn y Reed Richards. Es el magnate tecnológico Norman Parker cuando actúa bajo las sombras como el peligroso villano Maker.',
   stats: { fuerza: 6, inteligencia: 10, carisma: 6, suerte: 5, combate: 7, defensa: 8, especialVal: 9 },
   especialLabel: 'Elasticidad Cerebral',
   powers: {
-    role: 'La Anomalía Biológica',
+    role: 'Norman Parker',
     habilidades: [
       'Maleabilidad Anatómica: Estira, aplana y contorsiona su cuerpo de formas físicamente imposibles para esquivar ataques o apresar objetivos a distancia.',
       'Expansión Cerebral: Modifica la estructura de su cráneo para generar masa cerebral adicional, procesando datos a nivel de supercomputadora.',

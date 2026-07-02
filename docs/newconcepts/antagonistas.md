@@ -320,6 +320,8 @@ Sobrecarga táctica: Al depender de cálculos geométricos lógicos, los eventos
 * **Anatomía maleable**: Antiguo genetista obsesionado con la metatoxina que mutó su cuerpo hasta volver su estructura celular completamente líquida y elástica.
 * **Pulcritud futurista**: A diferencia de otros mutantes toscos, viste un design limpio, futurista y minimalista para ocultar su carencia de huesos y órganos fijos.
 * **Supercomputadora viva**: Puede estirar su propio cráneo o crear lóbulos temporales adicionales para procesar información a nivel de supercomputadora.
+* **Mente maquiavélica**: Fusión conceptual entre el intelecto científico de Reed Richards y la crueldad corporativa y política de Norman Osborn. Es un villano audaz y manipulador que no necesita recurrir a sus poderes elásticos para orquestar el mal y salirse con la suya.
+* **Mentor fallido**: Intentó reclutar y guiar a Ian en el pasado para moldearlo a su semejanza. Sin embargo, los inquebrantables principios morales del joven hicieron fracasar la tutoría, transformándola en una tensa hostilidad.
 
 ### Crisis
 Inestabilidad térmica: El calor extremo derrite su cohesión celular, mientras que el frío extremo congela sus tejidos volviéndolo frágil.

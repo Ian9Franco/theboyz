@@ -47,6 +47,11 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "maker": [
     {
+      "name": "Norman Parker Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Maker/Norman Parker_sheet.webp",
+      "isAlt": false
+    },
+    {
       "name": "Maker Sheet",
       "path": "/personajes/GUIAS/antagonistas/Maker/Maker_sheet.webp",
       "isAlt": false
