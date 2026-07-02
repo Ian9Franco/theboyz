@@ -18,8 +18,8 @@ Este documento recopila la información de Los Pibes definidos en `lib/character
 * **Lealtad incondicional**: Hacia su equipo, respaldada por una disciplina táctica impecable y un consumo crónico de café filtrado para mantener el enfoque.
 
 ### Datos Complementarios
-* **Léxico y Trato**: Suele comunicarse con términos técnicos o jerga estratégica incluso en conversaciones casuales.
-* **Costumbres**: Se la pasa ajustando sus guanteletes y consumiendo dosis peligrosas de café para mantener su hiperenfoque.
+* **Léxico y Trato**: Suele comunicarse con términos técnicos o jerga estratégica incluso en conversaciones casuales. Aunque parece distante por su hiperenfoque analítico, su obsesión con planificar contingencias nace de un profundo sentido de responsabilidad y del miedo a perder a sus amigos.
+* **Costumbres**: Se la pasa ajustando sus guanteletes, recalculando planes de escape para cada miembro del grupo y consumiendo dosis peligrosas de café negro para mantener su cerebro despierto.
 
 ### Crisis
 Hiperenfoque analítico: Ante giros drásticos e imprevistos en el entorno, su cerebro prioriza recalcular todas las variables en milisegundos, lo que puede retrasar su respuesta inmediata en pos de la jugada perfecta.
@@ -178,7 +178,7 @@ Disociación del entorno: Ante picos intensos de tensión o dolor ajeno, su ment
 * **Ancla Psicológica**: Ponerse el traje cósmico le sirve como señal mental de que "la situación se fue global/multiversal", forzando a su mente ansiosa a enfocarse.
 
 ### Datos Complementarios
-* **Léxico y Trato**: Llama "wachin" para berretinear a aliados o enemigos por igual, ocultando su ansiedad detrás del sarcasmo.
+* **Léxico y Trato**: Llama "wachin" a los hombres y "wacha" a las mujeres para berretinear por igual dependiendo el género, ocultando su ansiedad constante detrás del sarcasmo y el humor negro. Tiene una novia de la que no se sabe nada (ni nombre ni rostro), a quien se refiere cariñosamente como "wawi".
 * **Costumbres**: Suele jugar nerviosamente con naipes de energía o monedas para canalizar su hiperactividad constante.
 
 ### Crisis
@@ -314,8 +314,8 @@ Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía vio
 * **Estilo urbano deportivo**: Remera técnica ajustada de Kappa, pantalón cargo gris y lentes redondos que suavizan sutilmente sus facciones de combate.
 
 ### Datos Complementarios
-* **Léxico y Trato**: Se dirige rústicamente a los demás usando términos crudos y porteños. Nunca usa apodos importados y prefiere llamar a la gente "pibe", "loco" o "maestro".
-* **Costumbres**: Asume el rol de escudo de forma instintiva, caminando siempre un paso adelante de los demás en zonas de riesgo.
+* **Léxico y Trato**: Se dirige rústicamente a los demás usando términos crudos y porteños directos. Nunca usa apodos extranjeros (como "Bub"); en su lugar, llama a la gente "pibe", "loco" o "maestro".
+* **Costumbres**: Siempre propone hacer un asado pero nunca lo hace; termina cocinando un guiso o dejando que cocinen Ian o Julián sin ayudarlos. Es el conductor designado del grupo, toma mate constantemente y asume el rol de escudo de forma instintiva.
 
 ### Crisis
 Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo vuelve inflexible; tiende a cargar de frente contra el peligro, confiando en su resistencia física antes de evaluar rutas de evasión.

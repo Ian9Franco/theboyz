@@ -23,6 +23,12 @@ const rawCharacters: CharacterDetail[] = [
 
 export const CHARACTER_DETAILS: CharacterDetail[] = rawCharacters
   .map((char) => {
+    // Exclude specific IDs that only have guides/fichas and shouldn't be shown yet
+    const excludedIds = ["supertrucker", "aurelia", "john_wick", "lucian", "mando", "vexa"];
+    if (excludedIds.includes(char.id)) {
+      return null;
+    }
+
     const images = characterImages[char.id];
     if (images) {
       const generatedPortadas = images.portadas || [];

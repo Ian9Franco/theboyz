@@ -35,9 +35,8 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "astronauta": {
-    "portada": "/personajes/PORTADAS/Mati Astronauta/Mati Astronauta.webp",
+    "portada": null,
     "portadas": [
-      "/personajes/PORTADAS/Mati Astronauta/Mati Astronauta.webp",
     ],
     "ficha": "/personajes/Fichas/matis/Mati Astronauta/Mati_Astronauta_ficha.webp",
     "fichas": [
