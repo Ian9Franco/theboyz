@@ -13,7 +13,7 @@ const POWER_ORIGINS = [
   { id: "ian",    title: "IAN / VESPERWING",  desc: "No posee poderes biológicos. Uandi se interpuso para protegerlo del rayo en los Backrooms y absorbió el impacto cuántico. Esa desventaja lo impulsó a convertirse en Vesperwing, diseñando tecnología táctica propia para competir en primera línea." },
   { id: "uandi",  title: "UANDI / AEGIS",     desc: "Absorbió la mayor exposición a la radiación cuántica. Su estructura dérmica mutó, permitiéndole asimilar impactos físicos directamente en sus tatuajes tribales para acumularlos y devolverlos en descargas o súper saltos cinéticos." },
   { id: "julian", title: "JULIÁN / WILDCARD", desc: "Modula energía estática inestable (glitch azul/rojo) para proyectar constructos de naipes filosos de corto alcance y clones temporales de estática degradable que puede detonar de manera estratégica." },
-  { id: "volvo",  title: "VOLVO / NULL VECTOR",desc: "El escape extradimensional colapsó sus átomos con tecnología molecular de la Corriente. Desarrolló la capacidad de generar micro-teleportaciones cuánticas (blink) e intangibilidad atómica transitoria para evadir daño físico." },
+  { id: "volvo",  title: "VOLVO / NULL VECTOR",desc: "DETALLES CLASIFICADOS. El origen exacto de sus habilidades atómicas y su contacto con la Corriente sigue bajo estricto secreto operativo. Se ha documentado su capacidad para generar estelas de portales mediante velocidad de escape e intangibilidad atómica transitoria, pero el detonante biológico permanece sin registrar." },
   { id: "mati",   title: "MATI / SWAPFIRE",   desc: "Su cuerpo es un nexo de calor del Mativerse. Brota plasma violeta puramente cinético/térmico por sus ojos que guía con precisión de cabeza gracias a su visor táctico, transponiendo materia y causando fricción molecular extrema." },
   { id: "jaz",    title: "JAZ / ORACLE",      desc: "Sintonizó su conciencia espiritual a través del estudio de runas y gemas energéticas en 616. Posee capacidades de aura-anclaje para proyectar defensas cristalinas y entrelazar las conciencias en un vínculo astral cohesivo." },
   { id: "sofi",   title: "SOFI / HUSH",       desc: "Nativa de la dimensión alterna. Carece de mutaciones biológicas; posee un oído absoluto y agudeza acústica refinada con entrenamiento ciego extremo. Ian complementa sus talentos con trajes silenciadores de vibraciones." },
@@ -58,13 +58,13 @@ export function DossierTab({ unlockAll, readChapters }: DossierTabProps) {
             <GlosarioLink id="mati">Mati original</GlosarioLink> permanece ajeno a que sus variantes malignas —lideradas por <strong className="text-[#e8185a]">Mati Prime</strong>— han iniciado la Guerra Mativersal.
           </p>
           <p>
-            Por otro lado, <GlosarioLink id="volvo">Volvo</GlosarioLink> se encuentra completamente aislado; tras escapar de Prime por portales, acaba de entrar en un universo distorsionado donde el destino de los personajes fue diferente, así como la manifestación de sus poderes.
+            Por otro lado, <GlosarioLink id="volvo">Volvo</GlosarioLink> se encuentra completamente aislado; tras huir cuando Mati disparó al Supercamionero por una inestabilidad de sus poderes, esperaba encontrarse con los chicos, pero en su lugar cayó en este universo distorsionado donde el destino de los personajes fue diferente, así como la manifestación de sus poderes.
           </p>
           <div className="p-4 bg-black/50 border border-[#f5e642]/30 rounded-sm text-[#f5e642] italic text-xs sm:text-sm mt-2">
             <strong>ANÁLISIS DE CAMPO:</strong> La continuación inmediata debe mostrar los primeros síntomas incontrolables de sus poderes:{" "}
             <Redacted chapterId="the-green-truck-chronicles" chapterName="Chronicles #1" unlockAll={unlockAll} readChapters={readChapters}>Uandi doblando estructuras sin querer por acumulación extrema de energía cinética pura</Redacted>,{" "}
             <Redacted chapterId="no-turning-back" chapterName="No Turning Back" unlockAll={unlockAll} readChapters={readChapters}>Julián viendo desfases de estática glitch cian y magenta en el espejo</Redacted>,
-            y Volvo descubriendo las anomalías de este universo alterno usando su recién descubierta velocidad de escape para abrir estelas de portales naranjas.
+            y Volvo descubriendo las anomalías de este universo alterno.
           </div>
         </div>
       </section>
