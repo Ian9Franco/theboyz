@@ -35,13 +35,13 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "astronauta": {
-    "portada": "/personajes/PORTADAS/Mati Astronauta/Mati Astronauta.png",
+    "portada": "/personajes/PORTADAS/Mati Astronauta/Mati Astronauta.webp",
     "portadas": [
-      "/personajes/PORTADAS/Mati Astronauta/Mati Astronauta.png",
+      "/personajes/PORTADAS/Mati Astronauta/Mati Astronauta.webp",
     ],
-    "ficha": "/personajes/Fichas/matis/Mati Astronauta/Mati_Astronauta_ficha.png",
+    "ficha": "/personajes/Fichas/matis/Mati Astronauta/Mati_Astronauta_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/matis/Mati Astronauta/Mati_Astronauta_ficha.png",
+      "/personajes/Fichas/matis/Mati Astronauta/Mati_Astronauta_ficha.webp",
     ]
   },
   "augusto": {
@@ -53,13 +53,13 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "aurelia": {
-    "portada": "/personajes/PORTADAS/Aurelia Veyr/Aurelia Veyr.png",
+    "portada": "/personajes/PORTADAS/Aurelia Veyr/Aurelia Veyr.webp",
     "portadas": [
-      "/personajes/PORTADAS/Aurelia Veyr/Aurelia Veyr.png",
+      "/personajes/PORTADAS/Aurelia Veyr/Aurelia Veyr.webp",
     ],
-    "ficha": "/personajes/Fichas/Secundarios/Aurelia Veyr/Aurelia Veyr_ficha.png",
+    "ficha": "/personajes/Fichas/Secundarios/Aurelia Veyr/Aurelia Veyr_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Secundarios/Aurelia Veyr/Aurelia Veyr_ficha.png",
+      "/personajes/Fichas/Secundarios/Aurelia Veyr/Aurelia Veyr_ficha.webp",
     ]
   },
   "azathos": {
@@ -108,9 +108,9 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "comandante": {
-    "portada": "/personajes/PORTADAS/Comandante R.E.G.U.L.A.R/Comandante R.E.G.U.L.A.R.png",
+    "portada": "/personajes/PORTADAS/Comandante R.E.G.U.L.A.R/Comandante R.E.G.U.L.A.R.webp",
     "portadas": [
-      "/personajes/PORTADAS/Comandante R.E.G.U.L.A.R/Comandante R.E.G.U.L.A.R.png",
+      "/personajes/PORTADAS/Comandante R.E.G.U.L.A.R/Comandante R.E.G.U.L.A.R.webp",
     ],
     "ficha": "/personajes/Fichas/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_cosmic_ficha.webp",
     "fichas": [
@@ -162,7 +162,7 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/PORTADAS/Ian/MARK-3_ALT.webp",
       "/personajes/PORTADAS/Ian/MARK-3.webp",
       "/personajes/PORTADAS/Ian/MARK-L.webp",
-      "/personajes/PORTADAS/Ian/Matisvariantes.png",
+      "/personajes/PORTADAS/Ian/Matisvariantes.webp",
       "/personajes/PORTADAS/Ian/Vesperwing_MK.webp",
     ],
     "ficha": "/personajes/Fichas/Boyz/VESPERWING/Mativariantes_ficha.webp",
@@ -194,13 +194,13 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "john_wick": {
-    "portada": "/personajes/PORTADAS/John Wick/John Wick.jpeg",
+    "portada": "/personajes/PORTADAS/John Wick/John Wick.webp",
     "portadas": [
-      "/personajes/PORTADAS/John Wick/John Wick.jpeg",
+      "/personajes/PORTADAS/John Wick/John Wick.webp",
     ],
-    "ficha": "/personajes/Fichas/Secundarios/John Wick/John Wick_ficha.jpeg",
+    "ficha": "/personajes/Fichas/Secundarios/John Wick/John Wick_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Secundarios/John Wick/John Wick_ficha.jpeg",
+      "/personajes/Fichas/Secundarios/John Wick/John Wick_ficha.webp",
     ]
   },
   "judge_null": {
@@ -259,13 +259,13 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "lucian": {
-    "portada": "/personajes/PORTADAS/Lucian Graves/Lucian Graves.png",
+    "portada": "/personajes/PORTADAS/Lucian Graves/Lucian Graves.webp",
     "portadas": [
-      "/personajes/PORTADAS/Lucian Graves/Lucian Graves.png",
+      "/personajes/PORTADAS/Lucian Graves/Lucian Graves.webp",
     ],
-    "ficha": "/personajes/Fichas/Secundarios/Lucian Graves/Lucian Graves_ficha.png",
+    "ficha": "/personajes/Fichas/Secundarios/Lucian Graves/Lucian Graves_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Secundarios/Lucian Graves/Lucian Graves_ficha.png",
+      "/personajes/Fichas/Secundarios/Lucian Graves/Lucian Graves_ficha.webp",
     ]
   },
   "lucifer": {
@@ -304,14 +304,14 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "mando": {
-    "portada": "/personajes/PORTADAS/Mando/Mando.png",
+    "portada": "/personajes/PORTADAS/Mando/Mando.webp",
     "portadas": [
-      "/personajes/PORTADAS/Mando/Mando.png",
+      "/personajes/PORTADAS/Mando/Mando.webp",
     ],
-    "ficha": "/personajes/Fichas/Secundarios/Mando/Mando_alt_ficha.png",
+    "ficha": "/personajes/Fichas/Secundarios/Mando/Mando_alt_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Secundarios/Mando/Mando_alt_ficha.png",
-      "/personajes/Fichas/Secundarios/Mando/Mando_ficha.png",
+      "/personajes/Fichas/Secundarios/Mando/Mando_alt_ficha.webp",
+      "/personajes/Fichas/Secundarios/Mando/Mando_ficha.webp",
     ]
   },
   "mars": {
@@ -356,9 +356,9 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/PORTADAS/Phobos/Phobos.webp",
       "/personajes/PORTADAS/Phobos/Phobos_alt.webp",
     ],
-    "ficha": "/personajes/Fichas/antagonistas/Phobos/Phobos_ficha.jpeg",
+    "ficha": "/personajes/Fichas/antagonistas/Phobos/Phobos_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/antagonistas/Phobos/Phobos_ficha.jpeg",
+      "/personajes/Fichas/antagonistas/Phobos/Phobos_ficha.webp",
     ]
   },
   "rylai": {
@@ -391,9 +391,9 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "supertrucker": {
-    "portada": "/personajes/PORTADAS/Supercamionero/Supercamionero.png",
+    "portada": "/personajes/PORTADAS/Supercamionero/Supercamionero.webp",
     "portadas": [
-      "/personajes/PORTADAS/Supercamionero/Supercamionero.png",
+      "/personajes/PORTADAS/Supercamionero/Supercamionero.webp",
     ],
     "ficha": "/personajes/Fichas/Secundarios/Supercamionero/Supercamionero_ficha.webp",
     "fichas": [
@@ -430,13 +430,13 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "vexa": {
-    "portada": "/personajes/PORTADAS/Vexa Ruun/Vexa Ruun.png",
+    "portada": "/personajes/PORTADAS/Vexa Ruun/Vexa Ruun.webp",
     "portadas": [
-      "/personajes/PORTADAS/Vexa Ruun/Vexa Ruun.png",
+      "/personajes/PORTADAS/Vexa Ruun/Vexa Ruun.webp",
     ],
-    "ficha": "/personajes/Fichas/Secundarios/Vexa Ruun/Vexa Ruun_ficha.png",
+    "ficha": "/personajes/Fichas/Secundarios/Vexa Ruun/Vexa Ruun_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Secundarios/Vexa Ruun/Vexa Ruun_ficha.png",
+      "/personajes/Fichas/Secundarios/Vexa Ruun/Vexa Ruun_ficha.webp",
     ]
   },
   "volvo": {
