@@ -9,7 +9,7 @@ Este documento recopila la información de Los Pibes definidos en `lib/character
 * **ID**: `ian`
 * **Categoría**: `pibes`
 * **Rol**: Analista táctico / inventor estratégico
-* **Código Visual**: Buzo hoodie gris, lentes redondos
+* **Código Visual**: Buzo hoodie gris (civil), traje táctico negro mate con circuitos y emblema 'V' verdes (Vesperwing).
 * **Color**: `#0d3a2b`
 
 ### Perfil
@@ -43,8 +43,8 @@ Hiperenfoque analítico: Ante giros drásticos e imprevistos en el entorno, su c
 * **Habilidades específicas**:
   * **Visión de Sistemas**: Capacidad cognitiva para escanear flujos de información, dinámicas de terreno y posicionamiento enemigo en tiempo real.
   * **Herramientas Ghost**: Interfaz GhostLens de reconocimiento activo y Ghostwatch para coordinar drones de soporte que expanden su control de mapa.
-  * **Guanteletes Vectoriales**: Dispositivos cinéticos de su propia autoría, calibrados para desviar impactos directos y abrir brechas de escape.
-  * **Movilidad Asistida**: Uso fluido de pistola de ganchos neumática y capa de planeo aerodinámica para ganar altura y dominar la perspectiva táctica.
+  * **Guanteletes Vectoriales**: Dispositivos cinéticos de su propia autoría, calibrados para desviar impactos directos y abrir brechas de escape. Proyectan energía verde esmeralda.
+  * **Movilidad Asistida**: Uso fluido de pistola de ganchos neumática, bastón táctico y una extensa capa verde oscura con capucha para ganar altura y dominar la perspectiva táctica.
 
 ### Variantes / Modos Alternativos
 
@@ -78,9 +78,9 @@ Hiperenfoque analítico: Ante giros drásticos e imprevistos en el entorno, su c
 * **Significado**: El traje principal para misiones estándar. Ian combatía a la par de Los Pibes manteniendo su agilidad y reflejos tácticos sin sacrificar movilidad.
 * **Crisis**: Limitación de Blindaje: Diseñado para amenazas locales; no soporta impactos de artillería pesada ni el vacío del espacio exterior.
 * **Habilidades**:
-  * Placas Anatómicas de Titanio: Blindaje equilibrado que no limita la movilidad física en combates terrestres estándar.
-  * Ópticas GhostLens Activas: HUD avanzado que escanea y resalta firmas térmicas de enemigos locales.
-  * Propulsión Repulsora Estándar: Vuelo estable de mediano rango controlado por discos estabilizadores en las palmas.
+  * **Placas Anatómicas de Titanio**: Blindaje negro mate equilibrado con líneas de energía verdes y emblema en 'V' brillante en el pecho. No limita la movilidad física en combates terrestres estándar.
+  * **Ópticas GhostLens Activas**: Máscara negra completa con lentes emisores de luz verde que oculta su rostro, HUD avanzado que escanea y resalta firmas térmicas.
+  * **Propulsión Repulsora Estándar**: Vuelo estable de mediano rango controlado por discos estabilizadores de luz verde en las palmas.
 
 #### Mark III (Infiltración) (`mk3_alt`)
 * **Significado**: Especialista en sigilo y reconocimiento. Ideal para misiones de penetración profunda detrás de líneas enemigas sin alertar sensores.
@@ -111,7 +111,7 @@ Hiperenfoque analítico: Ante giros drásticos e imprevistos en el entorno, su c
 ### Perfil
 * **Percepción mística innata**: Posee la capacidad de leer capas no físicas, flujos de energía astral y las frecuencias ocultas que componen la realidad.
 * **Intuición espiritual profunda**: Se guía por una fuerte conexión esotérica y una dependencia ritual (piedras energéticas, salvia) para limpiar el ruido de su entorno.
-* **Estilo distintivo**: Polera negra de cuello alto, calzas y una cabellera degradada en tonos sunset-gold que refleja la energía calurosa de su aura.
+* **Estilo distintivo**: Polera negra de cuello alto y calzas (civil). En combate, usa un traje táctico oscuro con patrones geométricos dorados brillantes y una capa translúcida de pura energía dorada. Lentes en forma de ojo de gato amarillos brillantes. Cabellera degradada en tonos sunset-gold que refleja la energía calurosa de su aura.
 
 ### Crisis
 Disociación del entorno: Ante picos intensos de tensión o dolor ajeno, su mente tiende a desconectarse de la realidad física, entrando en trances meditativos involuntarios para proteger su psique.
@@ -137,7 +137,7 @@ Disociación del entorno: Ante picos intensos de tensión o dolor ajeno, su ment
   * Defensa: 10
   * Especial: 10
 * **Habilidades específicas**:
-  * **Geometría de Anclaje**: Manifiesta estructuras cristalinas de energía psíquica pura en el plano físico, utilizándolas como escudos, plataformas flotantes o jaulas de contención.
+  * **Geometría de Anclaje**: Manifiesta estructuras cristalinas de energía psíquica pura dorada (rombos, cadenas, prismas) en el plano físico, utilizándolas como escudos, plataformas flotantes o jaulas de contención.
   * **Resonancia Emocional**: Lee las frecuencias vibracionales de los estados de ánimo circundantes, permitiéndole calmar el pánico o disipar la hostilidad sin necesidad de invadir pensamientos.
   * **Vínculo Astral Cohesivo**: Entrelaza las conciencias de su equipo en una red mental unificada, compartiendo intenciones, alertas y coordenadas en tiempo real.
   * **Ascensión Etérea**: Capacidad de vuelo natural y fluido mediante la alteración de su propia gravedad astral, desplazándose con una ligereza supersónica casi sin esfuerzo.
@@ -166,7 +166,7 @@ Disociación del entorno: Ante picos intensos de tensión o dolor ajeno, su ment
 ### Perfil
 * **Peleador ágil y hostigador**: Combate con cartas y constructos de energía pura inestable (glitch azul y rojo) para desestabilizar coberturas y enemigos a corto/medio rango.
 * **Fachada sarcástica**: Oculta una altísima ansiedad interna y un cerebro hiperactivo bajo una capa de cinismo, carisma magnético y humor negro.
-* **Contextos de Vestimenta**: Ropa normal (suéter azul marino) en el día a día para pasar desapercibido, y el Traje Cósmico "Wildcard" en misiones críticas.
+* **Contextos de Vestimenta**: Ropa normal (suéter azul marino) en el día a día para pasar desapercibido, y el Traje Cósmico "Wildcard" en misiones críticas (gabardina/chaqueta larga de cuero rojo oscuro sobre un traje táctico negro con correas rojas).
 * **Ancla Psicológica**: Ponerse el traje cósmico le sirve como señal mental de que "la situación se fue global/multiversal", forzando a su mente ansiosa a enfocarse.
 
 ### Crisis
@@ -193,9 +193,9 @@ Agotamiento por sobrecarga: Si se sobreesfuerza intentando cargar objetos grande
   * Defensa: 7
   * Especial: 9
 * **Habilidades específicas**:
-  * **Bomber Roja Táctica**: Chaqueta de cuero técnico rojo borravino estilo Star-Lord que disipa la fricción de su energía glitch y hace juego visual con sus constructos.
-  * **Casco de Conducción Colapsable**: Casco hermético inspirado en Star-Lord que le permite respirar en el espacio/vacío y cuenta con ópticas HUD de luz azul analógica.
-  * **Naipes de Energía**: Proyectiles inestables de energía glitch (azul y roja) que lanza con asistencia del HUD de su casco para calcular parábolas perfectas.
+  * **Bomber/Gabardina Roja Táctica**: Larga chaqueta de cuero técnico rojo borravino que disipa la fricción de su energía glitch y hace juego visual con sus constructos.
+  * **Casco de Conducción Colapsable**: Máscara respiradora hermética de aspecto industrial con múltiples filtros y visores circulares que emiten una intensa luz azul, permitiéndole respirar en el espacio.
+  * **Naipes de Energía y Cañones**: Proyectiles inestables de energía glitch (azul y roja) que lanza con las manos o a través de armas canalizadoras, asistido por el HUD de su casco para calcular parábolas perfectas.
   * **Ecos de Conservación Decreciente**: Clones de estática azul y roja que decaen temporalmente. Su detonación y energía residual son monitoreadas por las ópticas del casco.
 
 ### Variantes / Modos Alternativos
@@ -224,7 +224,7 @@ Agotamiento por sobrecarga: Si se sobreesfuerza intentando cargar objetos grande
 * **ID**: `mati`
 * **Categoría**: `pibes`
 * **Rol**: Controlador táctico / reposicionamiento y ofensiva de fricción
-* **Código Visual**: Piel bronceada, campera táctica, hoyuelos
+* **Código Visual**: Piel bronceada, campera táctica negra con acentos morados, hoyuelos
 * **Color**: `#4c1d95`
 
 ### Perfil
@@ -258,8 +258,8 @@ Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía vio
   * Defensa: 10
   * Especial: 10
 * **Habilidades específicas**:
-  * **Portal Ocular ("The Aperture")**: Sus ojos son un portal físico a otra dimensión de donde brota energía de plasma violeta base, la cual guía al 100% con su mirada y cabeza.
-  * **Visor de Calibración Táctica**: Regula la energía del portal ocular en ráfagas finas y rebotes geométricos. Cuenta con soporte de respiración autónoma para el vacío del espacio.
+  * **Portal Ocular ("The Aperture")**: Sus ojos son un portal físico a otra dimensión de donde brota energía de plasma violeta base, la cual guía al 100% con su mirada y cabeza. En estado crítico desborda en forma de rayos morados alrededor de su rostro.
+  * **Visor de Calibración Táctica**: Dispositivo metálico robusto que cubre sus ojos con un cristal panorámico brillante que regula la energía del portal ocular en ráfagas finas y rebotes geométricos. Cuenta con soporte de respiración autónoma.
   * **Nexo de Anclajes (Punto A/B)**: Transpone objetivos geométricamente entre un Punto A (visión) y un Punto B (anclajes en armas/drones) catalizando calor molecular extremo.
   * **Burbuja de Anclaje Local**: Mantiene de forma pasiva una porción de atmósfera terrestre pegada a su piel, permitiéndole sobrevivir en el espacio junto a su visor táctico.
 
@@ -294,7 +294,7 @@ Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía vio
 
 ### Perfil
 * **Honestidad brutal e ingenua**: Transparente en sus intenciones, actúa bajo un código moral directo y se posiciona como el protector rígido del grupo.
-* **Complexión atlética**: Porte físico imponente, caracterizado por una intrincada y extensa manga de tatuajes de diseño tribal/geométrico en ambos brazos.
+* **Complexión atlética**: Porte físico imponente, caracterizado por una intrincada y extensa red de tatuajes de diseño tribal/geométrico que cubren todo su torso y brazos.
 * **Estilo urbano deportivo**: Remera técnica ajustada de Kappa, pantalón cargo gris y lentes redondos que suavizan sutilmente sus facciones de combate.
 
 ### Crisis
@@ -332,10 +332,10 @@ Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo 
 * **Significado**: El coloso de primera línea. Cuando la sobrecarga está al máximo, su musculatura se expande de forma masiva y su piel se vuelve roja por la energía cinética acumulada, convirtiéndose en una fuerza imparable.
 * **Crisis**: Agotamiento cinético extremo: La liberación masiva de energía acumulada agota instantáneamente sus reservas físicas. Tras la descarga, sufre de fatiga extrema y debilidad muscular inmediata.
 * **Habilidades**:
-  * Hipertrofia Muscular Cinética: Su masa muscular se incrementa de forma masiva y su piel se torna de un color rojo incandescente debido al calor de la energía acumulada.
-  * Absorción Cinética Total: Resiste ráfagas de proyectiles pesados o impactos de gran escala al recibir la fuerza física y asimilarla directamente en sus fibras musculares dilatadas.
-  * Fuerza de Impacto Colosal: Su fuerza física se eleva a escala colosal, permitiéndole fracturar blindajes pesados, derribar fortificaciones o hundir el terreno con golpes devastadores.
-  * Luminiscencia Rúnica y Vapor: Al alcanzar el umbral máximo de almacenamiento, sus tatuajes brillan en rojo vivo mientras su cuerpo emana nubes de vapor denso debido al calor térmico residual.
+  * **Hipertrofia Muscular Cinética**: Su masa muscular se incrementa de forma masiva y su piel se torna de un color rojo incandescente oscuro debido al calor de la energía acumulada.
+  * **Absorción Cinética Total**: Resiste ráfagas de proyectiles pesados o impactos de gran escala al recibir la fuerza física y asimilarla directamente en sus fibras musculares dilatadas.
+  * **Fuerza de Impacto Colosal**: Su fuerza física se eleva a escala colosal, permitiéndole fracturar blindajes pesados, derribar fortificaciones o hundir el terreno con golpes devastadores.
+  * **Luminiscencia Rúnica y Vapor**: Al alcanzar el umbral máximo de almacenamiento, los tatuajes de todo su cuerpo brillan en un rojo y naranja vivo que asemeja magma, mientras emana humo y vapor denso. Durante este estado crítico su ropa superior suele ser destruida por el calor.
 
 ---
 
@@ -350,7 +350,7 @@ Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo 
 ### Perfil
 * **Velocidad de escape dimensional**: Se desplaza a velocidades que desafían la física, abriendo portales naranjas brillantes por pura fricción con el espacio-tiempo.
 * **Inmunidad de entorno natural**: Al nacer su mutación de la Corriente, su cuerpo resiste el vacío del espacio y atmósferas hostiles sin necesidad de trajes especiales.
-* **Vector Suit aerodinámico**: Utiliza un traje molecular flexible diseñado por Ian que evita que la fricción dimensional desintegre su cuerpo o queme su ropa al correr.
+* **Vector Suit aerodinámico**: Traje táctico negro ajustado, surcado por líneas de circuitos y grietas que brillan en naranja intenso, con un emblema circular naranja en el pecho. Evita que la fricción dimensional desintegre su cuerpo.
 
 ### Crisis
 Acecho del Eco Corrupto: Correr a máxima velocidad debilita las barreras dimensionales y atrae a Reverse Volvo, quien corre justo detrás de él en el fondo de sus portales, esperando a que se canse para ocupar su lugar.
@@ -398,7 +398,7 @@ Acecho del Eco Corrupto: Correr a máxima velocidad debilita las barreras dimens
 * **ID**: `sofi`
 * **Categoría**: `pibes`
 * **Rol**: Reconocimiento avanzado / duelista táctica
-* **Código Visual**: Campera puffer tricolor rosa y borgoña, bufanda, rulos en rodete
+* **Código Visual**: Campera puffer tricolor (civil) o trajes tácticos de infiltración (blanco camuflado o negro stealth), rulos en alto rodete.
 * **Color**: `#06b6d4`
 
 ### Perfil
@@ -441,7 +441,7 @@ Inflexibilidad de criterio: Al procesar certezas sensoriales que los demás igno
 * **Significado**: Cierra los ojos para alcanzar su máximo potencial. Ya no solo rastrea, ahora ejecuta con una fluidez aterradora.
 * **Crisis**: Al depender de micro-sonidos, oponentes que logran moverse sin fricción o seres no-biológicos (sin latido ni respiración) son casi imposibles de anticipar.
 * **Habilidades**:
-  * Traje de Combate Vesperwing: Armadura táctica ligera diseñada específicamente por Ian para suprimir el ruido de su propia fricción y potenciar su movilidad.
+  * **Traje y Máscara Respiradora Táctica**: Armadura táctica ligera (blanca camuflada o negra stealth) diseñada para suprimir el ruido. Utiliza una semi-máscara de alta tecnología con detalles luminosos azules que oculta su rostro y filtra toxinas.
   * Katanas Gemelas: En combate cerrado despliega sus katanas, confiando puramente en su instinto y entrenamiento marcial.
   * Esquiva Predictiva: Al escuchar la contracción muscular de su oponente, comienza a esquivar el golpe antes de que sea lanzado.
   * Intercepción Perfecta: Desarma o desvía armas interceptando en el ángulo exacto de menor resistencia.
