@@ -261,7 +261,7 @@ export const pibes: CharacterDetail[] = [
     perfil: [
       'Honestidad brutal e ingenua: Transparente en sus intenciones, actúa bajo un código moral directo y se posiciona como el protector rígido del grupo.',
       'Hábitos y costumbres: Conductor designado y tomador crónico de mate. Siempre propone hacer un asado pero nunca lo hace; termina cocinando un guiso o dejando que cocinen Ian o Julián sin ayudarlos.',
-      'Estilo rústico: De físico imponente y tatuado, se dirige a los demás con modismos porteños directos ("pibe", "loco", "maestro").'
+      'Estilo rústico: De físico imponente y tatuado.',
     ],
     crisis: 'Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo vuelve inflexible; tiende a cargar de frente contra el peligro, confiando en su resistencia física antes de evaluar rutas de evasión.',
     stats: { fuerza: 8, inteligencia: 3, carisma: 5, suerte: 3, combate: 8, defensa: 8, especialVal: 0 },
