@@ -37,8 +37,11 @@ console.log(`Mensaje de commit: "\x1b[32m${commitMsg}\x1b[0m"\n`);
 // ── 1. Optimizar y sincronizar assets (Imágenes y Audios) ──────────────────
 console.log("--- 🎨 Preparando Assets ---");
 try {
-  console.log("⏳ Corriendo optimización de imágenes (convert en the-boyz-comic)...");
+  console.log("⏳ Corriendo optimización de imágenes locales de cómics (convert en the-boyz-comic)...");
   execSync("npm run convert", { cwd: siblingRoot, stdio: "inherit" });
+
+  console.log("⏳ Corriendo optimización general de imágenes (compress en the-boys)...");
+  execSync("npm run compress", { cwd: projectRoot, stdio: "inherit" });
 
   console.log("⏳ Corriendo compresión de audios (compress:audio en the-boys)...");
   execSync("npm run compress:audio", { cwd: projectRoot, stdio: "inherit" });
