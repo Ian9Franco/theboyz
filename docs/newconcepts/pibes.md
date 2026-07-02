@@ -17,6 +17,10 @@ Este documento recopila la información de Los Pibes definidos en `lib/character
 * **Arquitecto de retaguardia**: Su mente procesa el entorno de forma masiva, detectando patrones, fallas estructurales y vectores de ataque antes de que ocurran.
 * **Lealtad incondicional**: Hacia su equipo, respaldada por una disciplina táctica impecable y un consumo crónico de café filtrado para mantener el enfoque.
 
+### Datos Complementarios
+* **Léxico y Trato**: Suele comunicarse con términos técnicos o jerga estratégica incluso en conversaciones casuales.
+* **Costumbres**: Se la pasa ajustando sus guanteletes y consumiendo dosis peligrosas de café para mantener su hiperenfoque.
+
 ### Crisis
 Hiperenfoque analítico: Ante giros drásticos e imprevistos en el entorno, su cerebro prioriza recalcular todas las variables en milisegundos, lo que puede retrasar su respuesta inmediata en pos de la jugada perfecta.
 
@@ -113,6 +117,10 @@ Hiperenfoque analítico: Ante giros drásticos e imprevistos en el entorno, su c
 * **Intuición espiritual profunda**: Se guía por una fuerte conexión esotérica y una dependencia ritual (piedras energéticas, salvia) para limpiar el ruido de su entorno.
 * **Estilo distintivo**: Polera negra de cuello alto y calzas (civil). En combate, usa un traje táctico oscuro con patrones geométricos dorados brillantes y una capa translúcida de pura energía dorada. Lentes en forma de ojo de gato amarillos brillantes. Cabellera degradada en tonos sunset-gold que refleja la energía calurosa de su aura.
 
+### Datos Complementarios
+* **Léxico y Trato**: Integra conceptos astrológicos y energéticos al hablar. Trata a todos con calidez, pero no duda en ser asertiva si las energías se descontrolan.
+* **Costumbres**: Antes de misiones pesadas quema palo santo o recurre a sus piedras para limpiar la vibración del equipo.
+
 ### Crisis
 Disociación del entorno: Ante picos intensos de tensión o dolor ajeno, su mente tiende a desconectarse de la realidad física, entrando en trances meditativos involuntarios para proteger su psique.
 
@@ -168,6 +176,10 @@ Disociación del entorno: Ante picos intensos de tensión o dolor ajeno, su ment
 * **Fachada sarcástica**: Oculta una altísima ansiedad interna y un cerebro hiperactivo bajo una capa de cinismo, carisma magnético y humor negro.
 * **Contextos de Vestimenta**: Ropa normal (suéter azul marino) en el día a día para pasar desapercibido, y el Traje Cósmico "Wildcard" en misiones críticas (gabardina/chaqueta larga de cuero rojo oscuro sobre un traje táctico negro con correas rojas).
 * **Ancla Psicológica**: Ponerse el traje cósmico le sirve como señal mental de que "la situación se fue global/multiversal", forzando a su mente ansiosa a enfocarse.
+
+### Datos Complementarios
+* **Léxico y Trato**: Llama "wachin" para berretinear a aliados o enemigos por igual, ocultando su ansiedad detrás del sarcasmo.
+* **Costumbres**: Suele jugar nerviosamente con naipes de energía o monedas para canalizar su hiperactividad constante.
 
 ### Crisis
 Agotamiento por sobrecarga: Si se sobreesfuerza intentando cargar objetos grandes (como autos o columnas) o inyectando demasiada energía a sus clones, sufre migrañas incapacitantes y queda indefenso.
@@ -234,6 +246,10 @@ Agotamiento por sobrecarga: Si se sobreesfuerza intentando cargar objetos grande
 * **Conciencia de su rol**: Plenamente consciente de que sus poderes no son un accidente y de su responsabilidad en el multiverso. No tiene complejo de héroe, actúa por madura convicción.
 * **Resistencia y fuerza sobrehumana**: Posee una fuerza física aumentada y una densidad dérmica que detiene las balas, hiriendo su piel pero sin perforar sus órganos vitales.
 
+### Datos Complementarios
+* **Léxico y Trato**: Intercala memes o frases de internet en pleno combate, pero cambia drásticamente a un tono maduro y firme cuando la situación lo requiere.
+* **Costumbres**: Manda audios larguísimos y stickers fuera de contexto al grupo de WhatsApp en los momentos más inoportunos.
+
 ### Crisis
 Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía violeta brota sin filtro ni calibración, expandiéndose instantáneamente a todo su campo de visión y provocando destrucción masiva de área con peligro de fuego aliado.
 
@@ -297,6 +313,10 @@ Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía vio
 * **Complexión atlética**: Porte físico imponente, caracterizado por una intrincada y extensa red de tatuajes de diseño tribal/geométrico que cubren todo su torso y brazos.
 * **Estilo urbano deportivo**: Remera técnica ajustada de Kappa, pantalón cargo gris y lentes redondos que suavizan sutilmente sus facciones de combate.
 
+### Datos Complementarios
+* **Léxico y Trato**: Se dirige rústicamente a los demás usando términos crudos y porteños. Nunca usa apodos importados y prefiere llamar a la gente "pibe", "loco" o "maestro".
+* **Costumbres**: Asume el rol de escudo de forma instintiva, caminando siempre un paso adelante de los demás en zonas de riesgo.
+
 ### Crisis
 Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo vuelve inflexible; tiende a cargar de frente contra el peligro, confiando en su resistencia física antes de evaluar rutas de evasión.
 
@@ -352,6 +372,10 @@ Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo 
 * **Inmunidad de entorno natural**: Al nacer su mutación de la Corriente, su cuerpo resiste el vacío del espacio y atmósferas hostiles sin necesidad de trajes especiales.
 * **Vector Suit aerodinámico**: Traje táctico negro ajustado, surcado por líneas de circuitos y grietas que brillan en naranja intenso, con un emblema circular naranja en el pecho. Evita que la fricción dimensional desintegre su cuerpo.
 
+### Datos Complementarios
+* **Léxico y Trato**: Habla rápido y atropellado, con poca paciencia para planes largos o discursos heroicos.
+* **Costumbres**: Siempre está picando algo (snacks, barritas energéticas) debido al desgaste calórico masivo que le genera su vibración cuántica.
+
 ### Crisis
 Acecho del Eco Corrupto: Correr a máxima velocidad debilita las barreras dimensionales y atrae a Reverse Volvo, quien corre justo detrás de él en el fondo de sus portales, esperando a que se canse para ocupar su lugar.
 
@@ -405,6 +429,10 @@ Acecho del Eco Corrupto: Correr a máxima velocidad debilita las barreras dimens
 * **Presencia dominante y audaz**: Posee una agudeza física innata y una audición hiperdesarrollada capaz de aislar las frecuencias más sutiles del entorno.
 * **Determinación inflexible**: Caracterizada por una firmeza extrema en sus convicciones; no altera su postura ni cede ante presiones o amenazas externas.
 * **Estilo urbano de bloques**: Campera puffer con bloques geométricos rosa y borgoña, suéter crema, bufanda abrigada y un prolijo rodete de rulos oscuros.
+
+### Datos Complementarios
+* **Léxico y Trato**: Seca, silenciosa y al punto. No gasta saliva en rodeos y sus sentencias suelen sonar a advertencias mudas.
+* **Costumbres**: Suele refugiarse en cuartos aislados a oscuras para apaciguar el zumbido constante de su audición hiperfocalizada.
 
 ### Crisis
 Inflexibilidad de criterio: Al procesar certezas sensoriales que los demás ignoran, tiende a cerrarse en sus propias conclusiones tácticas, actuando de manera unilateral y agresiva para resolver la amenaza.

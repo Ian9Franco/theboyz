@@ -20,13 +20,13 @@ const POWER_ORIGINS = [
 ];
 
 const ALIAS_ORIGINS = [
-  { id: "julian", name: "Julián → Wildcard",  text: "No viene de sus poderes, sino de su personalidad caótica. En una misión táctica, cuando saca 'una carta buena' improvisada de estática azul que salva la retirada, Mati lo bautiza como un wildcard literal." },
-  { id: "jaz",    name: "Jaz → Oracle",       text: "Nace como una broma de Uandi al verla rodeada de grimorios astrales interpretando anomalías: 'Preguntale al oráculo. Seguro ya sabe qué va a explotar.' Eventualmente se convierte en el ancla clarividente del grupo." },
-  { id: "sofi",   name: "Sofi → Hush",        text: "Proviene de la reputación que infunde en los foros criminales del bajo fondo en Los Ángeles alterno: 'Si Hush te escucha, estás acabado.' Sofi adopta el alias tras descubrir que Ian leía esos registros." },
-  { id: "uandi",  name: "Uandi → Aegis",      text: "Aparece después de que Uandi se pone delante del grupo para recibir un impacto colosal de artillería. Alguien comenta: 'Ese tipo es un escudo.' A lo que Ian responde: 'No es un escudo. Es una maldita Aegis.'", extra: "Uandi se dirige rústicamente a otros usando 'Bub'." },
-  { id: "volvo",  name: "Volvo → Null Vector", text: "Originado de los expedientes tácticos militares paralelos. Su mera presencia anula comunicaciones e interfiere sensores, siendo catalogado como el vector nulo donde todo sistema deja de operar." },
+  { id: "julian", name: "Julián → Wildcard",  text: "No viene de sus poderes, sino de su personalidad caótica. En una misión táctica, cuando saca 'una carta buena' improvisada de estática azul que salva la retirada, Mati lo bautiza como un wildcard literal.", extra: "Llama 'wachin' para berretinear a aliados o enemigos por igual, ocultando su ansiedad." },
+  { id: "jaz",    name: "Jaz → Oracle",       text: "Nace como una broma de Uandi al verla rodeada de grimorios astrales interpretando anomalías: 'Preguntale al oráculo. Seguro ya sabe qué va a explotar.' Eventualmente se convierte en el ancla clarividente del grupo.", extra: "Antes de misiones pesadas quema palo santo o recurre a sus piedras para limpiar la vibración." },
+  { id: "sofi",   name: "Sofi → Hush",        text: "Proviene de la reputación que infunde en los foros criminales del bajo fondo en Los Ángeles alterno: 'Si Hush te escucha, estás acabado.' Sofi adopta el alias tras descubrir que Ian leía esos registros.", extra: "Suele refugiarse a oscuras para apaciguar el zumbido constante de su audición hiperfocalizada." },
+  { id: "uandi",  name: "Uandi → Aegis",      text: "Aparece después de que Uandi se pone delante del grupo para recibir un impacto colosal de artillería. Alguien comenta: 'Ese tipo es un escudo.' A lo que Ian responde: 'No es un escudo. Es una maldita Aegis.'", extra: "Se dirige a los demás rústicamente con apodos porteños como 'pibe', 'loco' o 'maestro'." },
+  { id: "volvo",  name: "Volvo → Null Vector", text: "Originado de los expedientes tácticos militares paralelos. Su mera presencia anula comunicaciones e interfiere sensores, siendo catalogado como el vector nulo donde todo sistema deja de operar.", extra: "Siempre está picando snacks o barritas por el enorme desgaste calórico de su vibración cuántica." },
   { id: "mati",   name: "Mati → Swapfire",    text: "Intercambia el estado de la materia alternando plasma puramente sólido (cinético) y fuego cruzado térmico mediante anclajes dimensionales en sus ojos.", extra: "Julián se niega a usar su alias y solo le dice 'el mati' o 'el mati de mierda'." },
-  { id: "ian",    name: "Ian → Vesperwing",   text: "Es el único que elige su propio alias. Cree firmemente que la identidad heroica debe ser diseñada con la misma frialdad analítica que un exochasis o un algoritmo de soporte." },
+  { id: "ian",    name: "Ian → Vesperwing",   text: "Es el único que elige su propio alias. Cree firmemente que la identidad heroica debe ser diseñada con la misma frialdad analítica que un exochasis o un algoritmo de soporte.", extra: "Se comunica con jerga táctica y consume dosis peligrosas de café negro para su hiperenfoque." },
 ];
 
 import { GLOSARIO_CHARS } from "./GlosarioLink";
@@ -58,13 +58,13 @@ export function DossierTab({ unlockAll, readChapters }: DossierTabProps) {
             <GlosarioLink id="mati">Mati original</GlosarioLink> permanece ajeno a que sus variantes malignas —lideradas por <strong className="text-[#e8185a]">Mati Prime</strong>— han iniciado la Guerra Mativersal.
           </p>
           <p>
-            Por otro lado, <GlosarioLink id="volvo">Volvo</GlosarioLink> se encuentra completamente aislado; tras escapar de Prime por portales, acaba de caer en la realidad de <em>The Boys</em> en pleno Times Square, cruzándose cara a cara con Billy Butcher.
+            Por otro lado, <GlosarioLink id="volvo">Volvo</GlosarioLink> se encuentra completamente aislado; tras escapar de Prime por portales, acaba de entrar en un universo distorsionado donde el destino de los personajes fue diferente, así como la manifestación de sus poderes.
           </p>
           <div className="p-4 bg-black/50 border border-[#f5e642]/30 rounded-sm text-[#f5e642] italic text-xs sm:text-sm mt-2">
             <strong>ANÁLISIS DE CAMPO:</strong> La continuación inmediata debe mostrar los primeros síntomas incontrolables de sus poderes:{" "}
-            <Redacted chapterId="the-green-truck-chronicles" chapterName="Chronicles #1" unlockAll={unlockAll} readChapters={readChapters}>Uandi rompiendo cosas sin querer por exceso de energía</Redacted>,{" "}
-            <Redacted chapterId="no-turning-back" chapterName="No Turning Back" unlockAll={unlockAll} readChapters={readChapters}>Julián viendo parpadeos de clones glitch en el espejo</Redacted>,
-            y Volvo enfrentándose a Butcher usando su recién descubierto blink para sobrevivir.
+            <Redacted chapterId="the-green-truck-chronicles" chapterName="Chronicles #1" unlockAll={unlockAll} readChapters={readChapters}>Uandi doblando estructuras sin querer por acumulación extrema de energía cinética pura</Redacted>,{" "}
+            <Redacted chapterId="no-turning-back" chapterName="No Turning Back" unlockAll={unlockAll} readChapters={readChapters}>Julián viendo desfases de estática glitch cian y magenta en el espejo</Redacted>,
+            y Volvo descubriendo las anomalías de este universo alterno usando su recién descubierta velocidad de escape para abrir estelas de portales naranjas.
           </div>
         </div>
       </section>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Users, BookOpen, Lock, Unlock, Menu, X } from "lucide-react";
+import { Users, BookOpen, Lock, Unlock, Menu, X, Compass } from "lucide-react";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -173,7 +173,14 @@ export default function NavBar() {
         </nav>
 
         {/* Mobile Actions */}
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex md:hidden items-center gap-1.5 sm:gap-2">
+          <Link
+            href="/lore"
+            className="p-2 border border-white/20 bg-white/5 text-white/70 transition-all active:scale-95 shrink-0"
+            title="Lore"
+          >
+            <Compass className="w-4 h-4" />
+          </Link>
           <Link
             href="/#pibes"
             className="p-2 border border-white/20 bg-white/5 text-white/70 transition-all active:scale-95 shrink-0"
