@@ -13,6 +13,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 38 — "Apagón Táctico"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Julián, Uandi, V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 38. Grilla de 4 viñetas. Viñeta 1 grande y cinematográfica; viñetas 2 y 3 horizontales de tensión técnica.
@@ -24,7 +25,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 4. **PROMPT FINAL PARA SEAART:**
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
-> Official comic book page layout, dynamic non-uniform multi-panel grid mixing wide cinematic horizontal panels with tight vertical sequential panels. Bold solid black panel borders, thick black gutters between panels, solid black divider lines. Modern American heroic comic art style, hand-inked line work, clean organic line art, expressive faces, dense black inks, high-contrast chiaroscuro, cross-hatching, halftone matte texture, flat hard-edged cel-shading. Cinematic palette: cold indigo rainy night, cyan/blue V.O.P.S. estasis lights, emerald green Ian tech, violet Mati plasma, cyan/magenta Julian glitch energy, red/orange Uandi magma heat, red nightclub vampire lighting. Accurate character skin tones preserved, no global amber wash. 2D illustration, sharp focus, traditional inked texture, no glossy 3D look.
+> Official comic book page layout, dynamic non-uniform multi-panel grid with sharp irregular diagonal slash cuts, slanted gutters, and irregular diagonal slash borders. Bold solid black panel borders, thick black gutters between panels, solid black divider lines. Modern American heroic comic art style, hand-inked line work, clean organic line art, expressive faces, dense black inks, high-contrast chiaroscuro, cross-hatching, halftone matte texture, flat hard-edged cel-shading. Cinematic palette: cold indigo rainy night, cyan/blue V.O.P.S. estasis lights, emerald green Ian tech, violet Mati plasma, cyan/magenta Julian glitch energy, red/orange Uandi magma heat, red nightclub vampire lighting. Accurate character skin tones preserved, no global amber wash. 2D illustration, sharp focus, traditional inked texture, no glossy 3D look.
 > CHARACTER DESIGN LOCK FOR THESE PAGES: Ian / Vesperwing: slim slender young man, light skin, messy wavy brown hair with volume, light brown eyes behind thick brown-framed glasses, analytical exhausted expression, textured dark grey hoodie over light grey shirt, dark slim jeans, amber tear pendant, later wearing compact emerald-green vector exo-gauntlets and metallic exo-boots projecting green kinetic energy. Mati / Snapfire: young man with warm light-brown skin, clean-shaven face with visible dimples, short parted very dark hair, charcoal tactical bomber jacket with sleeve zipper pocket, olive round-neck shirt, khaki cargo pants, prototype purple tactical visor covering his eyes, violet plasma glow behind the lenses. Julián / Wildcard: lean athletic young man, light warm-brown skin, short wavy black hair with clean side fade, thick stubble beard and mustache, almond light-brown eyes, dark navy knit sweater, dark jeans, sarcastic anxious expression, creates cyan and magenta glitch-energy constructs and a pure energy tactical staff with no physical handle. Uandi / Aegis: muscular athletic young man with broad shoulders, coily dark brown curls on top, clean faded sides, short stubble beard, round black-framed glasses, left arm full black mythological/geometric tattoo sleeve with solid band above elbow, right arm clean with two thin black bands around bicep, fitted black crewneck shirt. In transformation: massive red incandescent hypertrophied body, tattoos glowing like magma, heat vapor, cracked red-orange runes, shirt damaged by heat but no explicit gore. R.E.G.U.L.A.R.: tactical armored commander in matte black and dark blue combat armor, sealed helmet with solid blue visor, cyan estasis lines, heavy tactical shield, disciplined military posture, expert close-quarters combat. V.O.P.S. soldiers: dark matte tactical uniforms with blue/cyan estasis lights, rifles with flashlights, heavy shields. Regular soldiers are dark blue/black, not gold. Carmella Nocturna: elegant pale vampire woman, black and deep crimson velvet coat, dark sunglasses at night, red umbrella, aristocratic underworld poise, accompanied by two tall vampire bodyguards in black coats. Jaz: young woman with sunset-gold hair, cat-eye glasses, black turtleneck/polera, elegant East Side penthouse style, warm golden spiritual aura, clean expensive apartment with quartz crystals. Norman Parker: tall elegant corporate man in impeccable dark blue tailored suit, slicked-back hair, calm predatory expression; mutation is subtle elastic cellular tissue, face stretching fluidly backward in reflections, not grotesque gore. Gorgon: colossal mutated tactical brute with industrial respirator, dark torn leather tactical harness, reinforced polymer tubes connected to temples, neck and arms, neon green metatoxin vapor, intelligent calculating eyes.
 > PAGE 38, "Apagón Táctico". Four-panel comic page. Panel 1: large wide shot inside Dumbo Base, a cluttered underground industrial loft with exposed brick, cables, screens, old red couch, server racks and workshop tables, plunged into darkness while blue and cyan V.O.P.S. siren lights slice through tall industrial windows. Panel 2: medium shot of Ian kneeling at the main breaker, plugging emerald-lit vector gauntlets into thick power cables, face tense and analytical. Panel 3: medium ensemble shot: Mati adjusts his purple tactical visor, Julián materializes a cyan-magenta glitch energy staff with no handle, Uandi breathes heavily while red runes glow under his skin. Panel 4: wide shot of the rainy street outside, tactical vehicles and searchlights pointing at the building.
 > --no 3d, photorealistic, cgi, text, readable letters, speech bubbles, captions, watermarks, glossy reflections, airbrushed gradients, explicit gore, graphic dismemberment, explicit nudity, pornographic content, white gutters, white panel borders, white divider lines
@@ -38,6 +39,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 38.5 — "El Interruptor"
+**PERSONAJES EN ESTA PÁGINA:** Ian, V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 38.5. Grilla de 4 viñetas. Viñeta 3 en fondo blanco puro sin bordes (Fondo Blanco) para congelar el impacto físico; viñeta 4 grande de lanzamiento de gas y asfixia.
@@ -62,6 +64,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 39 — "Entrada Forzada"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Julián, V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 39. Grilla de 3 viñetas. Viñeta 1 grande de impacto estructural; viñetas 2 y 3 de irrupción táctica.
@@ -85,6 +88,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 39.5 — "El Despertar del Coloso"
+**PERSONAJES EN ESTA PÁGINA:** Uandi, V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 39.5. Grilla de 6 viñetas. Viñeta 2 en fondo blanco (Fondo Blanco) para destello cegador; viñeta 6 grande de revelación del monstruo.
@@ -111,6 +115,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 40 — "Aegis Desatado"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Julián, Uandi, V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 40. Grilla de 5 viñetas. Viñeta 5 splash a página completa; viñeta 3 grande de impacto.
@@ -136,6 +141,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 41 — "Llamado de Prioridad"
+**PERSONAJES EN ESTA PÁGINA:** R.E.G.U.L.A.R., V.O.P.S., Don Vanguard
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 41. Grilla de 3 viñetas. Viñeta 1 de atmósfera hostil; viñetas 2 y 3 de comunicación e interferencia.
@@ -159,6 +165,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 41.5 — "Decisión Táctica"
+**PERSONAJES EN ESTA PÁGINA:** Uandi, R.E.G.U.L.A.R., Don Vanguard
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 41.5. Grilla de 4 viñetas. Viñeta 1 de caos mediano; viñeta 4 grande de reveal de arma pesada.
@@ -183,6 +190,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 42 — "El error de mirar al monstruo"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Julián, Uandi, R.E.G.U.L.A.R., V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 42. Grilla de 6 viñetas. Viñeta 1 grande y horizontal; viñetas 4 y 5 de combate ágil; viñeta 6 de tensión enfocada.
@@ -209,6 +217,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 43 — "Captura limpia"
+**PERSONAJES EN ESTA PÁGINA:** Julián, R.E.G.U.L.A.R.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 43. Grilla de 4 viñetas. Viñetas de la 2 a la 4 son paneles horizontales para mostrar la secuencia de combate estilo MMA. Viñeta 3 en fondo blanco sin bordes (Fondo Blanco) para congelar el impacto.
@@ -233,6 +242,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 43.5 — "El Grillete"
+**PERSONAJES EN ESTA PÁGINA:** Julián, R.E.G.U.L.A.R., V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 43.5. Grilla de 3 viñetas. Viñeta 3 en fondo blanco sin bordes (Fondo Blanco) para el apagado definitivo de los poderes.
@@ -253,14 +263,11 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 * **Viñeta 2 (Plano Medio):** Soldados caen con escudos pesados para presionar a Julián contra el suelo.
 * **Viñeta 3 (Plano General Grande — FONDO BLANCO):** Esposas inhibidoras cerrándose en sus muñecas; chispas de energía cian/magenta apagándose.
 
----(Plano Detalle Pequeño):** El holograma marca el cierre absoluto de Dumbo.
-* **Viñeta 3 (Plano Medio):** Soldados cierran el otro extremo de la manzana con furgones.
-* **Viñeta 4 (Plano Medio):** Mati e Ian ven los faros del furgón de traslado desde el taller.
-* **Viñeta 5 (Plano General Grande):** El furgón blindado de traslado listo para partir rodeado de guardias.
 
 ---
 
 ## PÁGINA 44 — "Llamada de Alerta"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, R.E.G.U.L.A.R., V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 44. Grilla de 5 viñetas. Viñetas 1 y 5 grandes.
@@ -286,6 +293,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 45 — "Resistencia Interna"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Uandi, V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 45. Grilla de 5 viñetas. Viñeta 2 e inset 3 de tensión rápida.
@@ -311,6 +319,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 46 — "Carga de Aegis"
+**PERSONAJES EN ESTA PÁGINA:** Uandi, V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 46. Grilla de 5 viñetas. Viñeta 1 grande y destructiva.
@@ -336,6 +345,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 47 — "Bloqueo de V.O.P.S."
+**PERSONAJES EN ESTA PÁGINA:** Ian, Uandi, R.E.G.U.L.A.R., V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 47. Grilla de 6 viñetas. Viñetas 2 y 3 pequeñas para el despliegue del bloqueo.
@@ -362,6 +372,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 48 — "El Cerco de R.E.G.U.L.A.R."
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Julián, R.E.G.U.L.A.R., V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 48. Grilla de 5 viñetas. Viñeta 2 inset pequeña; viñeta 5 grande de acorralamiento.
@@ -387,6 +398,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 49 — "Incapacidad de Rescate"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Julián, V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 49. Grilla de 5 viñetas. Viñeta 3 horizontal de impacto; viñeta 5 grande de fracaso.
@@ -412,6 +424,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 50 — "Furia Roja"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Julián, Uandi
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 50. Grilla de 4 viñetas. Viñeta 4 splash de media página.
@@ -436,6 +449,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 51 — "El Traslado"
+**PERSONAJES EN ESTA PÁGINA:** Julián, V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 51. Grilla de 5 viñetas. Viñetas 3 y 4 de opresión facial.
@@ -461,6 +475,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 52 — "Wawi"
+**PERSONAJES EN ESTA PÁGINA:** Julián
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 52. Grilla de 5 viñetas. Viñeta 5 pequeña de cliffhanger silencioso.
@@ -486,6 +501,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 53 — "El disparo contra Aegis"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Uandi, R.E.G.U.L.A.R.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 53. Grilla de 6 viñetas. Viñetas 3 y 4 grandes de disparo e impacto masivo.
@@ -512,6 +528,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 54 — "La sombra"
+**PERSONAJES EN ESTA PÁGINA:** Julián, V.O.P.S., Carmella Nocturna
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 54. Grilla de 5 viñetas. Viñeta 2 grande y de terror sugerido.
@@ -537,6 +554,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 55 — "Cortina violeta"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Julián, R.E.G.U.L.A.R.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 55. Grilla de 6 viñetas. Viñeta 2 grande y horizontal.
@@ -563,6 +581,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 56 — "Callejón / primera aparición frontal de Carmella"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Julián, Carmella Nocturna
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 56. Grilla de 5 viñetas. Viñeta 2 icónica de presentación.
@@ -588,6 +607,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 57 — "Entrada al túnel"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Uandi, Carmella Nocturna
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 57. Grilla de 5 viñetas. Viñeta 4 grande de descenso.
@@ -613,6 +633,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 58 — "Descenso under / cierre del escape inmediato"
+**PERSONAJES EN ESTA PÁGINA:** Mati, Julián, Carmella Nocturna
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 58. Grilla de 6 viñetas. Viñetas 3 y 5 de ambientación.
@@ -639,6 +660,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 59 — "Impacto en Central Park"
+**PERSONAJES EN ESTA PÁGINA:** Uandi, Gorgon
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 59. Grilla de 5 viñetas. Viñeta 1 grande de impacto; viñeta 5 cara a cara de colosos.
@@ -664,6 +686,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 60 — "Dos colosos"
+**PERSONAJES EN ESTA PÁGINA:** Uandi, Gorgon
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 60. Grilla de 5 viñetas. Viñeta 1 de carga masiva; viñeta 3 de impacto brutal.
@@ -689,6 +712,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 61 — "Más fuerte no significa más claro"
+**PERSONAJES EN ESTA PÁGINA:** Uandi, Gorgon
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 61. Grilla de 5 viñetas. Viñeta 2 grande; viñeta 5 enfocada en el análisis de Gorgon.
@@ -714,6 +738,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 62 — "El intelecto despierto"
+**PERSONAJES EN ESTA PÁGINA:** Uandi, Gorgon
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 62. Grilla de 5 viñetas. Viñeta 3 e Inset 4 para desorientación táctica.
@@ -739,6 +764,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 63 — "Retirada calculada"
+**PERSONAJES EN ESTA PÁGINA:** Uandi, V.O.P.S., Gorgon
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 63. Grilla de 6 viñetas. Viñeta 4 grande de explosión verde.
@@ -765,6 +791,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 64 — "La bestia en el techo"
+**PERSONAJES EN ESTA PÁGINA:** Uandi, V.O.P.S., Gorgon
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 64. Grilla de 5 viñetas. Viñeta 3 grande de súper salto; viñeta 5 de destransformación silenciosa.
@@ -790,6 +817,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 65 — "No toques nada blanco"
+**PERSONAJES EN ESTA PÁGINA:** Mati, Julián, Uandi, Jaz
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 65. Grilla de 5 viñetas. Viñeta 3 grande de entrada inesperada.
@@ -815,6 +843,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 66 — "Club under / Carmella y Julián"
+**PERSONAJES EN ESTA PÁGINA:** Julián, Carmella Nocturna
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 66. Grilla de 5 viñetas. Viñeta 1 de grilla de dos tercios de página para el club.
@@ -840,6 +869,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 67 — "Under más oscuro / Ian y Mati observan"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, V.O.P.S.
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 67. Grilla de 5 viñetas. Viñeta 2 grande; viñeta 4 pequeña de asombro.
@@ -865,6 +895,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 68 — "Beso-marca de Carmella"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Julián, Carmella Nocturna
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 68. Grilla de 5 viñetas. Viñeta 3 icónica y central.
@@ -890,6 +921,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 69 — "Ian se separa para ver a Norman"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Julián, Norman Parker
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 69. Grilla de 5 viñetas. Viñetas 2 y 3 pequeñas de transición.
@@ -915,6 +947,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 70 — "Bar con Norman"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Norman Parker
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 70. Grilla de 4 viñetas. Viñeta 3 grande de atmósfera noir.
@@ -939,6 +972,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 71 — "Segunda oferta"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Julián, Uandi, V.O.P.S., Norman Parker
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 71. Grilla de 5 viñetas. Viñeta 4 de flashes mentales en blanco de velocidad.
@@ -964,6 +998,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 72 — "Limusina / Parker Tower"
+**PERSONAJES EN ESTA PÁGINA:** Ian, V.O.P.S., Norman Parker, Gorgon
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 72. Grilla de 5 viñetas. Viñeta 5 splash de la torre.
@@ -989,6 +1024,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 73 — "Ian vuelve por el grupo / Jaz no va"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Julián, Uandi, Jaz, Norman Parker
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 73. Grilla de 4 viñetas. Viñetas 2 y 3 de tensión moral y espiritual.
@@ -1013,6 +1049,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 74 — "Llegada final a Parker Tower / reveal Norman"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Julián, Uandi, Norman Parker
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 74. Grilla de 4 viñetas. Viñetas 1 y 4 grandes de escala y control.
