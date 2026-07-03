@@ -1010,7 +1010,7 @@
 **R.E.G.U.L.A.R.:** “Ciego táctico confirmado. Procedan por contacto.”
 
 **Viñeta 7 — Media — Granadas de humo**
-*Soldados de V.O.P.S. cargan y disparan granadas de humo a través de las ventanas rotas del taller.*
+*Soldados de V.O.P.S. desde el exterior, bajo la lluvia, arrojan granadas de gas lacrimógeno desde afuera por la ventana hacia el interior del taller.*
 **EFECTO DE SONIDO:** *THUNK—THUNK—THUNK*
 
 **Viñeta 8 — Grande — El humo invadiendo**
@@ -1032,15 +1032,15 @@
 **Viñeta 3 — Media — Los chicos escondidos**
 *Ian, Mati y Julián se agachan detrás de columnas de hormigón y maquinaria pesada, observando los haces de luz cruzar el humo.*
 
-**Viñeta 4 — Media — Uandi en el suelo**
-*Uandi está de rodillas en las sombras, apretándose el pecho con fuerza. Su piel se tiñe de un rojo incandescente y un vapor denso empieza a brotar de sus hombros. Sus runas brillan como lava.*
-
-**Viñeta 5 — Pequeña — Julián susurrando**
-*Julián observa a Uandi con pánico real y le susurra desde su escondite.*
+**Viñeta 4 — Primer Plano — Uandi aguantando**
+*Uandi está de rodillas en las sombras, tomándose la cara con ambas manos y apretando los dientes en un esfuerzo desesperado por contener la mutación. Julián lo observa con pánico real y le susurra desde su escondite.*
 **JULIÁN:** “Uandi… no, no, no. Maestro, bajá un cambio.”
 
-**Viñeta 6 — Pequeña — Primer plano de Uandi**
-*Uandi sonríe de forma dura y peligrosa, sintiendo la sobrecarga cuántica al límite.*
+**Viñeta 5 — Primerísimo Primer Plano — El ojo**
+*Detalle extremo de su ojo derecho abriéndose, con el iris tornándose rojo incandescente como lava ardiente y pequeñas venas de fuego agrietando su piel.*
+
+**Viñeta 6 — Media — La transición física**
+*Los hombros y el torso de Uandi se expanden a medida que su musculatura se hipertrofia. Sus tatuajes y runas se encienden en un rojo brillante de magma mientras expulsa densas bocanadas de vapor de calor. Su voz suena grave, distorsionada.*
 **UANDI:** “No puedo, pibe.”
 
 **Viñeta 7 — Grande — Soldados descubriendo la silueta**

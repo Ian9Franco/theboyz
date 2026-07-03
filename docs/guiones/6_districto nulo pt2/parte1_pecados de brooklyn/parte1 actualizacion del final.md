@@ -16,7 +16,7 @@ SFX: KRRR-BZZZT
 Exterior: drones de V.O.P.S. cayendo como mosquitos caros. Hermoso. Basura tecnológica premium.
 R.E.G.U.L.A.R. no se altera.
 R.E.G.U.L.A.R.: “Ciego táctico confirmado. Procedan por contacto.”
-Soldados lanzan granadas de humo por las ventanas.
+Soldados desde el exterior arrojan granadas de gas lacrimógeno desde afuera por la ventana hacia el interior del taller.
 SFX: THUNK—THUNK—THUNK
 
 Remate: el humo entra en la base como una marea gris. Los chicos desaparecen entre sombras.
@@ -34,14 +34,13 @@ SFX: KRAAANG
 Soldados V.O.P.S. entrando con linternas azules, rifles de estasis y escudos.
 SOLDADO: “¡Sector uno limpio!”
 Ian, Mati y Julián ocultos detrás de columnas, maquinaria y muebles volcados.
-Uandi oculto en la oscuridad, arrodillado, apretándose el pecho. La piel empieza a ponerse rojo oscuro. Vapor. Runas como magma.
-Julián lo ve desde su escondite.
+Uandi en el suelo, de rodillas en las sombras, tomándose la cara con ambas manos y aguantando el dolor, intentando desesperadamente contener la mutación cuántica.
+Julián lo observa preocupado desde su cobertura.
 JULIÁN: “Uandi… no, no, no. Maestro, bajá un cambio.”
-Primer plano de Uandi. Sonrisa mínima. No heroica. Peligrosa.
+Primerísimo primer plano del ojo de Uandi abriéndose, con el iris tornándose de un rojo incandescente como lava ardiente y venas de fuego en su piel.
+Los hombros y torso de Uandi se expanden físicamente a medida que su musculatura se hipertrofia y expulsa bocanadas de vapor caliente.
 UANDI: “No puedo, pibe.”
-Linternas de soldados barren el humo y encuentran una silueta enorme creciendo entre la niebla.
-
-Remate: splash parcial. La silueta colosal de Uandi transformado, rojo incandescente, vapor saliendo de hombros y espalda. Los soldados se congelan.
+Las linternas tácticas de los soldados barren el humo y revelan una silueta colosal y humeante que se alza lentamente.
 
 PÁGINA 40 — “Aegis Desatado”
 
