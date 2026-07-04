@@ -11,21 +11,21 @@ export function HeroSection() {
       {/* ── Banner Section (Hero) ── */}
       <section
         className="relative flex flex-col overflow-hidden min-h-[60vh] md:min-h-[75vh] justify-center cursor-zoom-in"
-        style={{ background: "#002a32" }}
+        style={{ background: "#0A0A0A" }}
         onClick={() => setShowLightbox(true)}
       >
         {/* ── Full Banner Background Image ── */}
         <div className="absolute inset-0 z-0 pointer-events-auto">
           <img 
-            src="/personajes/LosPibes/group banner/Teamup.webp" 
-            alt="The Boys Teamup" 
+            src="/personajes/group banner/Teamup.webp" 
+            alt="Elseframe Teamup" 
             className="w-full h-full object-cover opacity-85 grayscale-[0.1] hero-banner-img"
           />
           {/* Soft dark overlay gradients so the background remains highly visible */}
           <div 
             className="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
             style={{
-              background: "linear-gradient(to bottom, transparent, #002a32)"
+              background: "linear-gradient(to bottom, transparent, #0A0A0A)"
             }}
           />
           <div 
@@ -49,7 +49,7 @@ export function HeroSection() {
         <div
           className="absolute right-0 top-0 w-80 h-80 pointer-events-none opacity-[0.04] z-10"
           style={{
-            backgroundImage: "radial-gradient(circle, #D7263D 1.5px, transparent 1.5px)",
+            backgroundImage: "radial-gradient(circle, #880D16 1.5px, transparent 1.5px)",
             backgroundSize: "10px 10px",
           }}
         />
@@ -58,8 +58,8 @@ export function HeroSection() {
       <AnimatePresence>
         {showLightbox && (
           <BannerLightbox 
-            src="/personajes/LosPibes/group banner/Teamup.webp" 
-            alt="The Boys Teamup" 
+            src="/personajes/group banner/Teamup.webp" 
+            alt="Elseframe Teamup" 
             onClose={() => setShowLightbox(false)} 
           />
         )}
