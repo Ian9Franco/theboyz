@@ -391,12 +391,17 @@
       "panels": [
         {
           "focusY": 0.15,
-          "dialogue": []
+          "dialogue": [
+            { "text": "che y esas copias como las controlas?", "size": "small", "posX": 55, "posY": 0, "tailX": 50, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "No las controlo, pienso lo que quiero que hagan antes de hacerlos aparecer", "size": "small", "posX": 95, "posY": 30, "tailX": 75, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
         },
         {
           "focusY": 0.4,
           "dialogue": [
-            { "text": "Che, te dejé una medialuna antes de que Uandi arrase con el resto, wachin. ¿Estás bien?", "size": "small", "posX": -5, "posY": 50, "tailX": 10, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+            { "text": "Che, te dejé una medialuna antes de que Uandi arrase con el resto, wachin. ¿Estás bien?", "size": "small", "posX": -10, "posY": 60, "tailX": 10, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "y como haces eso?", "size": "small", "posX": 40, "posY": 35, "tailX": 55, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "que se yo amigo, vos como haces para ponerte rojo", "size": "small", "posX": 90, "posY": 55, "tailX": 75, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
           ]
         },
         {
@@ -410,15 +415,29 @@
     "13": {
       "panels": [
         {
-          "focusY": 0.6,
-          "dialogue": [
-            { "text": "Necesito aire.", "size": "small", "posX": 95, "posY": 65, "tailX": 60, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          "focusY": 0.2,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 32 }
           ]
         },
         {
-          "focusY": 0.8,
+          "focusY": 0.5,
           "dialogue": [
-            { "text": "Mati sale. Nadie lo ve. La puerta de la base cerrándose.*", "style": "caption", "posX": 100, "posY": 90, "tailX": 50, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 9, "borderRadius": 4, "tail": "none", "customBg": "#f5e642" }
+            { "text": "", "style": "caption", "posX": 95, "posY": 85, "tailX": 50, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 9, "borderRadius": 4, "tail": "none", "customBg": "#f5e642" },
+            { "text": "Necesito aire.", "size": "small", "posX": 80, "posY": 55, "tailX": 65, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 30, "w": 100, "h": 41 }
+          ]
+        },
+        {
+          "focusY": 0.95,
+          "dialogue": [
+            { "text": "Mati sale. Nadie lo ve. La puerta de la base cerrándose.*", "style": "caption", "posX": 90, "posY": 95, "tailX": 50, "tailY": 110, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 9, "borderRadius": 4, "tail": "none", "fontFamily": "sans" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 70, "w": 100, "h": 28 }
           ]
         }
       ]
