@@ -1,22 +1,25 @@
-# FUEGO PÚRPURA — PROMPTS OPTIMIZADOS POR VIÑETA
-## Páginas 38 a 74 — versión optimizada (Tiras de Zoom + Fichas de Referencia)
+# FUEGO PÚRPURA — PROMPTS OPTIMIZADOS POR PÁGINA
+## Páginas 38 a 74 — versión composición dinámica (Splash + Insets + Secuencias)
 
 ## POR QUÉ ESTE FORMATO
-El problema original era meter 4-6 viñetas distintas (personajes, luces y acciones diferentes) en un solo prompt de generación. La IA "promedia" todo eso en una sola imagen y pierde dinamismo, estilo y coherencia. La solución: **generar de forma independiente las viñetas complejas y unificar secuencias simples en tiras de 2 o 3 paneles con zoom de detalle e insets**. Después arman la página completa en su compaginador (Photoshop, Clip Studio, etc.) siguiendo el plano de grilla indicado en cada página.
+El objetivo de esta versión es que cada página se genere con una estructura de cómic más cercana a las referencias: **panel dominante**, mini-viñetas incrustadas, secuencias verticales u horizontales de detalle, personajes rompiendo el borde, gutters negros gruesos, diagonales agresivas, perspectiva marcada y fondos-sonido cuando corresponda. La trama se mantiene igual, pero cada prompt pide una página completa con arquitectura visual clara en vez de viñetas aisladas.
 
 ## CÓMO USAR CADA PROMPT
-Cada bloque de viñeta o tira ya viene listo para pegar en SeaArt. Se arma así:
-`[ESTILO BASE] + [LOCKS/FICHA de los personajes de ESA viñeta] + [descripción de la escena] + [NEGATIVO ESTÁNDAR]`
+Cada bloque de página ya viene listo para pegar en SeaArt. Se arma así:
+`[ESTILO BASE] + [DISEÑO DE PÁGINA] + [LOCKS/FICHA de los personajes de ESA PÁGINA] + [PROMPT DE PÁGINA COMPLETA] + [NEGATIVO ESTÁNDAR]`
 
-Abajo tenés el ESTILO BASE, la Librería de Personajes (candados de diseño y referencias a sus archivos `_sheet.webp`) y el NEGATIVO ESTÁNDAR. Copien el texto correspondiente y péguenlo en el prompt de generación.
+Abajo tenés el ESTILO BASE, el DISEÑO DE PÁGINA, la Librería de Personajes (candados de diseño y referencias a sus archivos `_sheet.webp`) y el NEGATIVO ESTÁNDAR. Copien el texto correspondiente y péguenlo en el prompt de generación.
 
 ---
 
 ## ESTILO BASE (pegar siempre, sin cambios)
-> Official comic book single panel, bold solid black panel border. Modern American heroic comic art style, solid hand-inked line work, clean organic line art, expressive faces, clean skin with no wrinkles, flat cel-shading with defined shadow borders, halftone matte paper texture, matte finish. Accurate character skin tones, no global color wash. 2D vector-like illustration, sharp focus, traditional inked texture, flat colors, no glossy or metallic reflections, dry matte surfaces. Any rain depicted only as subtle thin background lines.
+> Official modern American comic book page, bold solid black panel borders, thick black gutters, dynamic full-page composition with one dominant cinematic panel plus smaller inset panels, zoom strips, overlapping frames, diagonal panel cuts, occasional figures breaking panel borders, strong perspective, expressive body language. Solid hand-inked line work, clean organic line art, expressive faces, clean skin with no wrinkles, flat cel-shading with defined shadow borders, halftone matte paper texture, matte finish. Accurate character skin tones, no global color wash. 2D vector-like illustration, sharp focus, traditional inked texture, flat colors, no glossy or metallic reflections, dry matte surfaces. No rain. Time continuity: Dumbo assault and escape are dry night scenes; time passes during the underground vampire sequence; after the group exits the underground, exterior scenes become clear daytime or bright overcast daylight. Only a few old puddles are allowed on the ground for reflections.
+
+## DISEÑO DE PÁGINA (pegar siempre, sin cambios)
+> Page architecture inspired by modern superhero comic layouts: avoid simple equal-size grid pages. Use one clear dominant image per page, supported by smaller inset panels, stacked zoom strips, cinematic horizontal strips, and occasional borderless close-up inserts. Prefer bold black gutters and confident negative space. Characters may break out of panel borders when the action peaks. Use strong foreground silhouettes framing the scene, deep perspective corridors, low-angle and high-angle camera views, speed lines, impact bursts, and overlapping panels. For action pages, use sequential movement across panels like storyboard beats: wide establishing action, close-up mechanical detail, impact panel, reaction inset, final wide consequence. For emotional or noir pages, use a large atmospheric panel with small hand/eye/object insets. Allow stylized sound-effect lettering integrated into the background only when explicitly requested by the page prompt, as part of the art and not as dialogue. Use pure white or flat-color negative backgrounds for selected impact panels, with figures and energy breaking past the panel border.
 
 ## NEGATIVO ESTÁNDAR (pegar siempre, sin cambios)
-> --no 3d render, photorealistic, cgi, text, speech bubbles, captions, watermarks, glossy reflections, plastic surfaces, shiny armor, metallic gloss, airbrushed soft shading, raytracing, digital painting gradients, white gutters, white panel borders, white divider lines, wet skin, wet clothes, soaked clothing, water droplets, facial wrinkles, hyper-detailed skin, sweat, dirty pores, shiny wet highlights
+> --no 3d render, photorealistic, cgi, rain, rainy weather, rainfall, raindrops, storm clouds, night rain, speech bubbles, captions, random unreadable text, watermarks, glossy reflections, plastic surfaces, shiny armor, metallic gloss, airbrushed soft shading, raytracing, digital painting gradients, white gutters, white panel borders, white divider lines, wet skin, wet clothes, soaked clothing, water droplets, facial wrinkles, hyper-detailed skin, sweat, dirty pores, shiny wet highlights
 
 ## LIBRERÍA DE PERSONAJES (candados de diseño y referencias)
 
@@ -40,7 +43,7 @@ Abajo tenés el ESTILO BASE, la Librería de Personajes (candados de diseño y r
 
 **[VANGUARD]** Don Vanguard (Reference: `don vanguard_sheet.webp`): imposing older man, immaculate white suit, authoritative and furious demeanor, City Hall office setting.
 
-**[CARMELLA]** Carmella Nocturna (Reference: `Carmilla_sheet.webp` - *Nota: Wawi es Carmella*): elegant pale vampire woman, black and deep crimson velvet coat, dark sunglasses at night, red umbrella, aristocratic underworld poise.
+**[CARMELLA]** Carmella Nocturna (Reference: `Carmilla_sheet.webp` - *Nota: Wawi es Carmella*): elegant pale vampire woman, black and deep crimson velvet coat, dark sunglasses even in daylight, folded crimson parasol or cane-parasol as an aristocratic accessory, aristocratic underworld poise.
 
 **[CARMELLA-GUARDS]** (agregar a [CARMELLA] si aparecen): accompanied by two tall vampire bodyguards in black coats.
 
@@ -50,568 +53,411 @@ Abajo tenés el ESTILO BASE, la Librería de Personajes (candados de diseño y r
 
 **[GORGON]** Gorgon (Reference: `gorgon_ficha_sheet.webp`): colossal mutated tactical brute, industrial respirator, dark torn leather tactical harness, reinforced polymer tubes at temples/neck/arms, neon green metatoxin vapor, intelligent calculating eyes.
 
+## LIBRERÍA DE LOCACIONES
+
+**[PARKER-TOWER]** Parker Tower (Reference: `public/personajes/Locaciones/Torre P/Torre P.webp`): monumental futuristic black graphite and blue-glass corporate skyscraper, tall tapered tower, exposed dark structural ribs, curved blue curtain-wall glass, sharp crown spires and antennae, massive cantilevered landing platform near the upper floors with a glowing white-blue "P" logo underneath, elevated glass skybridges, transparent glass lobby canopy, broad marble entrance plaza with a few old puddle reflections but no rain, clean daylight exterior.
+
+**[PARKER-GARAGE]** Parker Tower garage / hangar (Reference: `public/personajes/Locaciones/Torre P/garaje.webp`): huge circular underground high-tech mech hangar, dark graphite metal walls, blue status lights, yellow industrial robotic arms, radial ceiling aperture, reinforced storage bays, command stations, a giant green-lit armored mech docked in the center on a heavy hydraulic circular platform, dense cables and pistons, industrial scale.
+
+**[PARKER-INTERIOR]** Parker Tower interior (Reference: `public/personajes/Locaciones/Torre P/Interior.webp`): pristine futuristic corporate interior, grey polished floors with blue light strips, circular atrium lounge with central suspended fireplace, curved balconies, panoramic windows, glass display pods with armored suits, clean conference room with holographic blue interfaces, round command room with large blue hologram table, luxury meets laboratory.
+
 ---
 ---
 
 # PÁGINA 38 — "Apagón Táctico"
-Grilla: 4 viñetas. Ritmo: tensión previa al asalto.
+Composición: página completa con panel dominante superior y dos insets de preparación abajo. Ritmo: tensión previa al asalto.
 * **PERSONAJES:** Ian, Mati, Julián, Uandi, V.O.P.S.
 
-### Viñetas 38.1 y 38.4 — Tira de 2 Paneles (Sin personajes)
-> [ESTILO BASE] Two-panel comic strip, slanted gutters, horizontal sequence. Panel 1: Interior of Dumbo Base, a cluttered underground industrial loft with exposed brick, cables, screens, old red couch, server racks and workshop tables, plunged into darkness while blue and cyan V.O.P.S. siren lights slice through tall industrial windows. Empty establishing shot, pure atmosphere. Panel 2: Wide shot of a dark street with subtle background rain lines outside an industrial building, V.O.P.S. tactical vehicles and searchlights pointing at the building facade, blue-cyan light beams cutting through the rain. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 38.2 y 38.3 — Tira de 2 Paneles (Preparación del Grupo)
-> [ESTILO BASE] [IAN-SUIT] [MATI] [JULIAN] [UANDI] Two-panel comic strip, slanted gutters, horizontal sequence. Panel 1: Medium shot of Ian kneeling at the main breaker, plugging his emerald-lit vector gauntlets into thick power cables, face tense and analytical, green glow reflected on his glasses. Panel 2: Medium ensemble shot of the other three: Mati adjusts his purple tactical visor, Julián materializes a handle-less cyan-magenta glitch-energy staff, Uandi breathes heavily as faint red light glows under his skin. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN-SUIT] [MATI] [JULIAN] [UANDI] [VOPS] Full comic page layout. Dominant wide top panel: Interior of Dumbo Base, cluttered underground industrial loft with exposed brick, cables, screens, old red couch, server racks and workshop tables, suddenly plunged into darkness while blue and cyan V.O.P.S. siren lights slice through tall industrial windows. In the deep foreground, Ian kneels at the main breaker, plugging emerald vector gauntlets into thick power cables, green glow reflected on his glasses. Left vertical inset strip: outside street at dry night, V.O.P.S. tactical vehicles and searchlights pointing at the building facade, a few old puddles reflecting blue-cyan lights on otherwise dry pavement. Bottom row of three small black-bordered panels: Mati adjusts his purple visor; Julián forms a handle-less cyan-magenta glitch-energy staff; Uandi breathes heavily with faint red light under his skin. Strong black gutters, noir tactical tension, no dialogue. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 38.5 — "El Interruptor"
-Grilla: 4 viñetas. Ritmo: acción rápida y corte de energía.
+Composición: secuencia vertical de zoom + panel de impacto central + inset exterior. Ritmo: acción rápida y corte de energía.
 * **PERSONAJES:** Ian, V.O.P.S.
 
-### Viñetas 38.5.1 y 38.5.2 — Tira de 3 Paneles con Zoom (Ian / Botón / Interruptor)
-> [ESTILO BASE] [IAN] Three-panel vertical comic strip, vertical zoom-in progression, slanted gutters. Panel 1 (top): Close-up of Ian's face, exhausted expression, eyes reflecting green monitor glow. Panel 2 (middle): Extreme close-up of Ian's finger hovering over a metallic starter button. Panel 3 (bottom): Close-up of a heavy industrial steel electrical switch lever mounted on a concrete wall, dim ambient light. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 38.5.3 — Plano Detalle Grande, FONDO BLANCO (Ian, mano)
-> [ESTILO BASE] [IAN-SUIT] Pure white background, action close-up of Ian's hand pulling a heavy industrial lever down, explosive green sparks and kinetic energy arcs breaking through the panel borders into the gutters. --no 3d, photorealistic, cgi, text, speech bubbles, watermarks, glossy reflections, explicit gore, explicit nudity
-
-### Viñeta 38.5.4 — Plano Medio (V.O.P.S.)
-> [ESTILO BASE] [VOPS] Medium shot from outside a building under subtle background rain lines, V.O.P.S. soldiers throwing canister grenades of tear gas through a shattered industrial window frame into the dark interior, thick grey smoke plumes billowing as canisters fly inward. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN] [IAN-SUIT] [VOPS] Full comic page layout with a tall left zoom strip and one large action panel. Left strip, three stacked panels: close-up of Ian's exhausted face with green monitor glow in his eyes; extreme close-up of his finger hovering over a metallic starter button; close-up of a heavy industrial steel switch lever on concrete. Main central panel on selective pure white impact background: Ian's exo-gauntlet hand yanks the lever down, explosive green sparks and kinetic arcs burst past the black panel border into the gutters. Top-right small inset: the whole base goes black. Bottom-right horizontal inset: outside the building at night, V.O.P.S. soldiers throw tear-gas canisters through a shattered industrial window, grey smoke plumes curling inward through dry air. No speech bubbles, fast mechanical rhythm. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 39 — "Entrada Forzada"
-Grilla: 3 viñetas. Ritmo: entrada destructiva.
+Composición: panel grande de irrupción con micro-secuencia de botas/escudos. Ritmo: entrada destructiva.
 * **PERSONAJES:** Ian, Mati, Julián, V.O.P.S.
 
-### Viñetas 39.1 a 39.3 — Tira de 4 Paneles (La Irrupción de V.O.P.S.)
-> [ESTILO BASE] [VOPS] [IAN] [MATI] [JULIAN] Four-panel comic strip, dynamic diagonal slash cuts, slanted gutters. Panel 1: Large explosive shot of a door blasting inward, shattered metal and smoke. Panel 2 (zoom): Close-up of a heavy black tactical combat boot stomping down on the shattered door frame. Panel 3: V.O.P.S. soldiers entering in disciplined close formation, heavy shields, rifles with bright flashlights. Panel 4: Medium shot of Ian, Mati, and Julián crouched behind concrete columns and heavy workshop machinery, watching flashlight beams cross the haze. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [VOPS] [IAN] [MATI] [JULIAN] Full comic page layout, aggressive diagonal slash composition. Dominant central panel: metal door blasts inward into Dumbo Base, shattered fragments and smoke exploding toward the reader, flashlight beams cutting the haze. Across the left edge, a vertical mini-sequence of three narrow panels: heavy black tactical boot stomps onto the broken frame; shield edge locks into formation; rifle flashlight switches on. Bottom wide panel: disciplined V.O.P.S. soldiers pour in with heavy shields while Ian, Mati and Julián crouch behind concrete columns and workshop machinery, their faces lit by crossing beams. One small inset overlaps the smoke: Ian's eyes calculating the entry path. Thick black gutters, cinematic tactical pressure, no dialogue. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 39.5 — "El Despertar del Coloso"
-Grilla: 6 viñetas. Ritmo: caos cegador e inicio de la mutación.
+Composición: flashbang blanco + columna de zoom corporal + gran silueta final. Ritmo: caos cegador e inicio de la mutación.
 * **PERSONAJES:** Uandi, V.O.P.S.
 
-### Viñetas 39.5.1 y 39.5.2 — Tira de 3 Paneles con Zoom (Granada / Detalle / Explosión)
-> [ESTILO BASE] Three-panel vertical comic strip, vertical progression, slanted gutters. Panel 1 (top): Small close-up of a tactical canister grenade rolling on a concrete floor. Panel 2 (middle, zoom): Extreme close-up of the red warning light on the canister rapidly blinking. Panel 3 (bottom): Blinding flashbang explosion, characters shielding their eyes as dark high-contrast silhouettes against a white negative space. --no 3d, photorealistic, cgi, text, speech bubbles, watermarks, glossy reflections, explicit gore
-
-### Viñetas 39.5.3 a 39.5.5 — Tira de 5 Paneles (El Despertar de Aegis)
-> [ESTILO BASE] [UANDI] [AEGIS] Five-panel vertical comic strip, vertical zoom-in and expansion progression, slanted gutters. Panel 1 (top): Close-up of Uandi in the shadows, clutching his face with both hands, teeth grit. Panel 2 (zoom): Extreme close-up of Uandi's neck, black veins starting to pulse and crack with glowing red energy. Panel 3 (extreme zoom): Extreme close-up of Uandi's right eye wide open, the iris turning a glowing incandescent red like liquid magma, skin around the eye cracking with red-orange runes. Panel 4: Medium shot of his physical transformation mid-transition, his chest and shoulders expanding, red magma tattoos glowing, steam rising. Panel 5 (bottom): Large wide silhouette of the colossal steaming red colossus Aegis standing upright in the smoke, massive proportions. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 39.5.6 — Plano General Grande (Aegis, silueta)
-> [ESTILO BASE] Large dramatic wide shot: flashlight beams converge and reveal a colossal steaming red silhouette rising in thick grey smoke, shoulders and head breaking through the panel border. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [UANDI] [AEGIS] [VOPS] Full comic page layout. Top horizontal mini-sequence: tactical canister grenade rolling on concrete; extreme close-up of its red warning light blinking; blinding white flashbang eruption turning everyone into hard black silhouettes. Main body of page is a vertical transformation column: Uandi in shadows clutching his face; close-up of black veins pulsing red along his neck; extreme close-up of one eye turning incandescent magma; medium shot of chest and shoulders expanding, red runes cracking open, steam rising. Bottom half is a huge dramatic reveal panel: the colossal red Aegis silhouette stands upright in smoke, shoulders and head breaking past the border while V.O.P.S. flashlight beams converge on him. Heavy black gutters, white negative-space flash, no gore. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 40 — "Aegis Desatado"
-Grilla: 5 viñetas. Ritmo: acción destructiva masiva.
+Composición: splash dominante con insets de telemetría y daño físico. Ritmo: acción destructiva masiva.
 * **PERSONAJES:** Ian, Julián, Uandi, V.O.P.S.
 
-### Viñetas 40.1, 40.2 y 40.4 — Tira de 4 Paneles (Fuego Cruzado / Telemetría)
-> [ESTILO BASE] Four-panel comic strip, dynamic diagonal slash cuts, slanted gutters, fast-paced action. Panel 1: Large action shot, V.O.P.S. soldiers fire cyan estasis rifle bursts point-blank into dark smoke, muzzle flashes breaking beyond the panel borders. Panel 2: Low-angle medium shot of Aegis receiving cyan blasts in his broad incandescent chest, magma tattoos absorbing energy. Panel 3: Medium cutaway inside the base, Ian studies a tablet, Julián beside him with a nervous, sarcastic expression. Panel 4 (zoom): Extreme close-up of the tablet screen showing unstable green vector wave lines peaking and flashing a critical warning, reflecting green light on glasses. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 40.3 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] Large kinetic impact panel with selective pure white background, showing Aegis grabbing two V.O.P.S. soldiers by their tactical vests and hurling them into the side of an armored van, no blood, no gore, metal crumpling. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of the crushed metal dent forming on the van's side, and another showing a soldier's tactical boot slipping on the wet pavement. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 40.5 — SPLASH (Escena Épica con Insets 3D)
-> [ESTILO BASE] Full-page splash panel: Aegis stands in a dark street with subtle background rain lines like a red-hot colossus, vapor pouring from his shoulders, shattered vans overturned around him, soldiers retreating in panic in the background. Overlapping the main splash panel are three small borderless 3D inset close-up panels: one showing a close-up of Uandi's glowing magma-like red eyes, another showing steam vaporizing off his hot skin, and a third showing a cracked tactical helmet lying in a puddle. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [AEGIS] [IAN-SUIT] [JULIAN] [VOPS] Full comic page layout with one huge central splash. Aegis stands in a dry night street shadow like a red-hot colossus, vapor pouring from shoulders, V.O.P.S. soldiers firing cyan estasis bursts that splash across his incandescent chest and get absorbed by magma tattoos. In the same dominant panel, he hurls two soldiers by their tactical vests into an armored van, crumpling metal, no blood. Left side stacked insets: Ian inside the base reading a tablet; Julián beside him with nervous sarcastic expression; extreme close-up of unstable green vector wave lines peaking on the tablet reflected in Ian's glasses. Bottom overlapping insets: crushed van dent forming, tactical boot slipping near an old puddle, cracked helmet on asphalt. Strong black gutters, energy arcs breaking borders. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 41 — "Llamado de Prioridad"
-Grilla: 4 viñetas. Ritmo: comedia táctica y presión.
+Composición: figura inmóvil en panel grande + insets de comunicador. Ritmo: comedia táctica y presión.
 * **PERSONAJES:** R.E.G.U.L.A.R., Don Vanguard, V.O.P.S.
 
-### Viñetas 41.1 a 41.4 — Tira de 4 Paneles (Alerta y Comunicador)
-> [ESTILO BASE] Four-panel comic strip, slanted gutters, horizontal progression. Panel 1: Medium shot of R.E.G.U.L.A.R. standing in a dark street with subtle background rain lines, behind him a soldier flies through the air and crashes onto a patrol car hood, rendered as a dark silhouette. Panel 2: R.E.G.U.L.A.R.'s armored wrist communicator buzzing under rain. Panel 3 (zoom): Extreme close-up of a small red holographic icon blinking on his gauntlet. Panel 4: Medium shot of a cyan holographic call projected above the gauntlet, showing Don Vanguard furious in his City Hall office. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [REGULAR] [VANGUARD] [VOPS] Full comic page layout, mostly one large still panel with comedic pressure. R.E.G.U.L.A.R. stands motionless in the dry night street, helmet and shield calm, while behind him a soldier flies through the air and crashes onto a patrol car hood as a dark silhouette. Across the bottom, three small inset panels like a zoom strip: armored wrist communicator buzzing with a red alert; extreme close-up of a red holographic icon blinking on the gauntlet; cyan holographic call projecting Don Vanguard furious in his City Hall office, slamming a desk. Use thick black panel borders, restrained body language, chaos in background, no speech bubbles. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 41.5 — "Decisión Táctica"
-Grilla: 4 viñetas. Ritmo: escalada del conflicto y armamento pesado.
+Composición: doble escena paralela, Aegis al fondo y launcher como reveal. Ritmo: escalada del conflicto y armamento pesado.
 * **PERSONAJES:** R.E.G.U.L.A.R., Uandi, Don Vanguard, V.O.P.S.
 
-### Viñetas 41.5.1 a 41.5.3 — Tira de 3 Paneles (Aegis y Corte de Estasis)
-> [ESTILO BASE] Three-panel comic strip, dynamic diagonal slash cuts, slanted gutters. Panel 1: Medium background chaos shot, Aegis tears a heavy van door free and uses it as a shield while soldiers panic. Panel 2: Close-up of Don Vanguard slamming a mahogany desk, white sleeve and gold ring visible. Panel 3: Medium shot of R.E.G.U.L.A.R. cutting the holographic signal with cold precision, the hologram fading beside him. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 41.5.4 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] Large low-angle reveal shot: the commander opens an armored vehicle compartment and pulls out a massive weapon launcher, black and blue military tech with cyan glowing coils. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of the glowing cyan coils powering up with electricity, and another showing R.E.G.U.L.A.R.'s gloved finger resting on the heavy metal trigger. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [REGULAR] [AEGIS] [VANGUARD] [VOPS] Full comic page layout with split diagonal tension. Upper large panel: Aegis rips a reinforced armored van door from its hinges and uses it as an improvised shield, cyan bolts deflecting, V.O.P.S. soldiers scrambling. Right vertical inset strip: R.E.G.U.L.A.R. argues with a cyan hologram of furious Don Vanguard in a City Hall office; close-up of R.E.G.U.L.A.R.'s gloved thumb slamming a manual kill switch; hologram shattering into horizontal static. Bottom dominant low-angle reveal: the commander opens an armored vehicle compartment and pulls out a massive black-and-blue launcher with cyan glowing coils. Small overlapping insets show coils powering up and his finger settling on the heavy trigger. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 42 — "El error de mirar al monstruo"
-Grilla: 6 viñetas. Ritmo: combate callejero intenso de múltiples frentes.
+Composición: batalla coral con foco visual que se cierra sobre Julián. Ritmo: combate callejero intenso de múltiples frentes.
 * **PERSONAJES:** Ian, Mati, Julián, R.E.G.U.L.A.R., Uandi, V.O.P.S.
+* **CONTINUIDAD:** Julián queda marcado como objetivo principal mientras Aegis absorbe la atención del frente.
 
-### Viñetas 42.1 a 42.3 — Tira de 3 Paneles (El Combate en la Calle)
-> [ESTILO BASE] [AEGIS] [IAN-SUIT] [MATI] [VOPS] Three-panel comic strip, aggressive diagonal slash cuts, slanted gutters, high-energy action. Panel 1: Wide shot of Aegis in the street, incandescent red, tearing the door off an armored patrol car, soldiers scrambling with electric batons and shields. Panel 2: Medium shot of Ian using green kinetic gauntlets to shove away a soldier, green energy arcs breaking beyond the panel border onto a white background. Panel 3: Medium shot of Mati behind a pillar, firing short precise violet plasma bursts from his visor to disarm soldiers. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 42.4 y 42.5 — Tira de 2 Paneles (Julián Expuesto y Acecho)
-> [ESTILO BASE] [JULIAN] [REGULAR] Two-panel comic strip, slanted gutters. Panel 1: Action shot of Julián spinning his cyan-magenta energy staff to block incoming tactical baton hits, energy trails overlapping the panel margins. Panel 2: Large shot of R.E.G.U.L.A.R. standing completely still in the middle of the street, rain pouring over his dark armor, locked on Julián. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 42.6 — Plano Detalle (Visor del Comandante)
-> [ESTILO BASE] [REGULAR] Tight inset panel of R.E.G.U.L.A.R.'s visor, reflecting Julián's chaotic cyan-magenta glitch energy, identifying him as the vulnerable target. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [AEGIS] [IAN-SUIT] [SWAPFIRE] [JULIAN] [REGULAR] [VOPS] Full comic page layout, multi-front street battle. Dominant wide panel: Aegis smashes a patrol car door outside Dumbo Base at dry night while V.O.P.S. soldiers scatter behind shield walls, red vapor filling the street. Left lower inset: Ian repels a flanking soldier with emerald gauntlet arcs inside the broken entrance. Right lower inset: Mati fires short precise violet visor bursts to melt weapons, not people. Across the center, a narrow diagonal action panel isolates Julián at the alley mouth, spinning a handle-less cyan-magenta staff with afterimages. Bottom large still panel: R.E.G.U.L.A.R. stands motionless, shield low, launcher nearby, helmet visor locked on Julián while Aegis rages blurred behind. Tiny visor inset shows abstract targeting shapes separating Julián's cyan-magenta signature from Aegis's red mass. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 43 — "Captura limpia"
-Grilla: 4 viñetas. Ritmo: combate clínico e inmovilización.
+Composición: coreografía en cascada con golpes limpios y panel final de caída. Ritmo: combate clínico e inmovilización.
 * **PERSONAJES:** Julián, R.E.G.U.L.A.R.
+* **CONTINUIDAD:** El comandante no improvisa; neutraliza a Julián con precisión profesional.
 
-### Viñetas 43.1 a 43.4 — Tira de 5 Paneles (El Derribo Clínico de Julián)
-> [ESTILO BASE] [JULIAN] [REGULAR] Five-panel comic strip, dynamic diagonal slash cuts, slanted gutters, MMA choreography progression. Panel 1: Medium action shot of Julián swinging his cyan energy staff at R.E.G.U.L.A.R. Panel 2: Tight horizontal panel on white background, R.E.G.U.L.A.R. slipping inside the swing, shoulder-checking Julián's chest. Panel 3: Tight horizontal panel on pure white background, R.E.G.U.L.A.R. landing a short clinical punch to Julián's solar plexus, sharp black impact lines breaking beyond the panel frame. Panel 4: Tight horizontal panel, the commander executing a rapid leg sweep. Panel 5: Julián crashing onto the wet street, his energy staff vanishing in cyan sparks. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [JULIAN] [REGULAR] Full comic page layout, clean tactical MMA choreography. Top wide panel: Julián throws cyan-magenta glitch cards and swings a pure energy staff at R.E.G.U.L.A.R. in a dry night street. Middle of the page becomes a diagonal cascade of four tight panels: R.E.G.U.L.A.R. blocks with a heavy matte shield without stepping back; he slips inside the staff arc on a pure white impact background; shoulder-checks Julián's chest; armored glove strikes Julián's solar plexus with black impact lines, no gore. Bottom dominant horizontal panel: Julián hits dry asphalt hard near a few old puddles, energy staff dissolving into fading cyan-magenta static reflections, R.E.G.U.L.A.R. already balanced and upright. Thick black gutters, clinical precision, no dialogue. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 43.5 — "El Grillete"
-Grilla: 4 viñetas. Ritmo: sometimiento físico.
+Composición: panel grande de sometimiento + insets mecánicos de inhibidores. Ritmo: sometimiento físico.
 * **PERSONAJES:** Julián, R.E.G.U.L.A.R., V.O.P.S.
+* **CONTINUIDAD:** Julián queda inhibido y listo para traslado, pero el furgón todavía no se mueve.
 
-### Viñetas 43.5.1 a 43.5.3 — Tira de 3 Paneles (Inhibidores Colocados)
-> [ESTILO BASE] [JULIAN] [REGULAR] [VOPS] Three-panel comic strip, slanted gutters, tight framing. Panel 1: Close horizontal panel, R.E.G.U.L.A.R. pinning Julián on matte dark asphalt, knee on his back, locking his wrist. Panel 2: V.O.P.S. soldiers rushing in with heavy shields to secure Julián, pinning his limbs. Panel 3: Pure white background, heavy metallic inhibitor handcuffs clicking onto Julián's wrists, cutting off his cyan-magenta glitch energy constructs as energy sparks fade. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 43.5.4 — Plano Detalle (Sometido)
-> [ESTILO BASE] [JULIAN] Close shot of Julián's face pressed against the wet asphalt, eyes shut, rain lines crossing his face, his expression defeated. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [JULIAN] [REGULAR] [VOPS] Full comic page layout. Dominant low horizontal panel: R.E.G.U.L.A.R. pins Julián on matte dry asphalt, knee on his back, one arm twisted into control position, Julián conscious and bruised. Around the main panel, V.O.P.S. shield soldiers close into a protective ring that blocks Ian and Mati's line of approach. Overlapping mechanical insets: heavy inhibitor cuffs clamp onto Julián's wrists on a pure white detail background; cyan-magenta sparks die instantly; close-up of Julián's face pressed to asphalt, one eye open toward Ian and Mati's direction, static fading around his cheek. Dense black gutters, restrained violence, no gore. [NEGATIVO ESTÁNDAR]
 
 ---
 
-# PÁGINA 44 — "Llamada de Alerta"
-Grilla: 5 viñetas. Ritmo: repliegue y asalto aéreo.
-* **PERSONAJES:** Ian, Mati, R.E.G.U.L.A.R., V.O.P.S.
+# PÁGINA 44 — "Ruta de Mantenimiento"
+Composición: mapa táctico integrado en la escena + vista exterior secundaria. Ritmo: descubrimiento táctico y decisión de flanqueo.
+* **PERSONAJES:** Ian, Mati, Julián, V.O.P.S.
+* **CONTINUIDAD:** Ian y Mati no escapan; ven a Julián siendo llevado al furgón e identifican el ducto como atajo hacia la zona trasera de carga.
 
-### Viñetas 44.1 a 44.3 — Tira de 4 Paneles (Cerco Militar e Impacto de Plasma)
-> [ESTILO BASE] [VOPS] [IAN] [MATI] [SWAPFIRE] Four-panel comic strip, dynamic diagonal slash cuts, slanted gutters. Panel 1: Large shot of V.O.P.S. soldiers advancing in shield-wall formation, blue estasis lights on shields. Panel 2: Medium shot of Ian and Mati crouched behind a heavy metal lathe inside the workshop, watching the shield wall approach. Panel 3: Medium shot of Mati firing a precision violet plasma beam at a soldier's rifle. Panel 4 (zoom): Close-up of the soldier's rifle barrel melting and sparking under the intense violet plasma heat. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 44.4 — Plano Medio (Comandante Ordenando)
-> [ESTILO BASE] [REGULAR] Medium shot of R.E.G.U.L.A.R. talking into his wrist communicator, giving calm orders under the rain. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 44.5 — Plano General Grande (Helicópteros)
-> [ESTILO BASE] Large wide shot of Dumbo Base from the outside, V.O.P.S. tactical helicopters circling above with spotlights, casting blue-white cones over the industrial roof. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [VOPS] [IAN-SUIT] [SWAPFIRE] [JULIAN] [AEGIS] Full comic page layout, tactical spatial continuity. Main wide interior panel: Dumbo Base filled with smoke, V.O.P.S. shield wall advancing while red glow from Aegis's street battle burns through the broken entrance. In the mid-ground, soldiers drag handcuffed Julián toward a side loading area beyond machinery, not yet inside the van. Bottom-left inset cluster: Ian and Mati hidden behind a heavy metal lathe; Ian points at an old maintenance map on a cracked wall panel or tablet; extreme close-up of Ian's gloved finger tracing a route to the rear loading area, no readable labels. Bottom-right dominant detail: Ian lifts a grease-stained square floor hatch, revealing a dark duct. Thin exterior banner panel across the top edge: helicopters and searchlights focus on Aegis at the front, leaving the side alley shadowed. [NEGATIVO ESTÁNDAR]
 
 ---
 
-# PÁGINA 45 — "Resistencia Interna"
-Grilla: 5 viñetas. Ritmo: combate claustrofóbico y fuego.
+# PÁGINA 45 — "Bajo la Base"
+Composición: ducto claustrofóbico como eje diagonal y mini-cortes de espacio arriba/abajo. Ritmo: avance subterráneo hacia el furgón.
 * **PERSONAJES:** Ian, Mati, V.O.P.S.
+* **CONTINUIDAD:** El ducto conecta físicamente la base con la parte trasera del área de carga. No hay explosión de escape definitiva.
 
-### Viñetas 45.1 y 45.2 — Tira de 2 Paneles (Asalto y Contraataque)
-> [ESTILO BASE] [VOPS] [IAN-SUIT] Two-panel comic strip, aggressive diagonal cuts, slanted gutters. Panel 1: Medium shot of soldiers kicking down a side wooden door inside an industrial loft, flashlights blinding. Panel 2: Kinetic shot of Ian leaping forward, firing a compressed green kinetic blast from his gauntlets, green vector shockwaves breaking the panel dividers. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 45.3 a 45.5 — Tira de 4 Paneles (Destrucción y Advertencia)
-> [ESTILO BASE] [MATI] [SWAPFIRE] [IAN] Four-panel comic strip, slanted gutters. Panel 1: Medium shot of Mati behind a server rack, firing violet plasma beams to disable a tactical drone. Panel 2: The drone exploding in violet fire. Panel 3: Extreme close-up of a tablet screen on a workbench showing Uandi's telemetry flashing a red warning sign. Panel 4: Wide shot of the cluttered workshop starting to burn, servers sparking, the two backing away into the shadows. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN-SUIT] [SWAPFIRE] [VOPS] Full comic page layout, claustrophobic infiltration page. A long diagonal dominant panel runs from upper-left to lower-right inside a narrow industrial maintenance duct: Ian leads with emerald gauntlet light as a small lamp, Mati crawls behind under pipes and old cables, dust shaking from red tremors above. Top-left inset: Ian holds open the heavy floor hatch while Mati drops in, shield-wall flashlights sweeping above without seeing them. Small overhead cutaway inset in the center: abstract route passes beneath the workshop toward parked vehicles, no readable labels. Bottom-left inset: Mati pauses, hearing muffled boots and engine checks above, purple visor flickering. Bottom-right low-angle grate panel: silhouettes of V.O.P.S. boots and the underside of an armored transport van appear above them. Heavy black gutters, compressed perspective. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 46 — "Carga de Aegis"
-Grilla: 5 viñetas. Ritmo: fuerza arrolladora de Aegis.
-* **PERSONAJES:** Uandi, V.O.P.S.
+Composición: gran acción frontal + panel táctico del furgón detenido. Ritmo: Aegis concentra involuntariamente el frente.
+* **PERSONAJES:** Uandi, R.E.G.U.L.A.R., V.O.P.S.
+* **CONTINUIDAD:** Aegis no cubre una retirada consciente; su furia obliga a V.O.P.S. a mirar al frente y detiene el traslado.
 
-### Viñeta 46.1 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [AEGIS] Large action shot: Aegis, massive and glowing red-hot, ripping the heavy back door off a tactical transport and throwing it at a barricade, door breaking beyond the panel border. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of Aegis's molten fingers denting the door's steel plate, and another showing a soldier diving out of the way of the flying door. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 46.2 a 46.4 — Tira de 3 Paneles (Ataque y Resistencia)
-> [ESTILO BASE] [VOPS] [AEGIS] Three-panel comic strip, diagonal cuts, slanted gutters. Panel 1: Medium shot of three V.O.P.S. soldiers firing cyan estasis rifles, muzzle flashes reflecting on the dark street. Panel 2: Close shot of Aegis's broad chest absorbing cyan blasts, magma-like runes glowing intensely, steam rising. Panel 3: Medium shot of soldiers backing away in panic as a police cruiser is flipped over behind them. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 46.5 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [AEGIS] Large wide shot: Aegis roaring under subtle background rain lines, surrounded by smashed military vehicles. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing rain droplets instantly vaporizing into steam on Aegis's red-hot shoulder, and another showing a police cruiser's tire spinning slowly in the mud. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [AEGIS] [REGULAR] [JULIAN] [VOPS] Full comic page layout. Dominant upper action panel: Aegis hurls a torn van door across the front street, forcing V.O.P.S. shield teams to pivot away from the side loading zone, red heat vapor crossing blue estasis fire. Overlapping detail insets: Aegis's incandescent fingers burning marks into torn metal; V.O.P.S. boot sliding backward in a puddle. Middle horizontal tactical strip: R.E.G.U.L.A.R. watches Aegis approach the transport lane; soldiers push cuffed Julián toward the stationary armored van; R.E.G.U.L.A.R. raises one armored hand ordering the transport to wait while his visor tracks Aegis. Bottom wide panel: side loading alley, armored V.O.P.S. van parked with rear doors open, engine lights on but wheels still. Insets show the tire motionless in a puddle and a guard's tense hand on the rear handle. [NEGATIVO ESTÁNDAR]
 
 ---
 
-# PÁGINA 47 — "Bloqueo de V.O.P.S."
-Grilla: 6 viñetas. Ritmo: contención electromagnética.
-* **PERSONAJES:** Ian, R.E.G.U.L.A.R., Uandi, V.O.P.S.
+# PÁGINA 47 — "La Rejilla Trasera"
+Composición: punto de vista desde rejilla + acción frontal separada por profundidad. Ritmo: llegada al punto de observación y espera.
+* **PERSONAJES:** Ian, Mati, Julián, V.O.P.S.
+* **CONTINUIDAD:** Ian y Mati llegan detrás del furgón, pero no salen todavía; atacar antes alertaría al perímetro.
 
-### Viñetas 47.1 y 47.2 — Tira de 2 Paneles (La Barrera)
-> [ESTILO BASE] Two-panel comic strip, slanted gutters, horizontal sequence. Panel 1: Wide shot of a tactical truck deploying two heavy metallic pillars onto matte dark asphalt. Panel 2: Medium shot of a translucent cyan kinetic energy wall shooting up between the two pillars, rain vaporizing. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 47.3 — Plano Medio (Carga de Aegis)
-> [ESTILO BASE] [AEGIS] Medium shot of Aegis charging at the cyan energy wall, steam vaporizing off his hot skin. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 47.4 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [AEGIS] Large action shot: Aegis slamming into the cyan energy barrier, a massive explosion of cyan sparks, his runes glowing yellow-hot as he is repelled. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing Aegis's clenched fist hitting the crackling energy grid, and another showing a tactical terminal on a nearby truck screen flashing "COLLISION WARNING". [NEGATIVO ESTÁNDAR]
-
-### Viñetas 47.5 y 47.6 — Tira de 2 Paneles con Zoom (Inoperancia de Telemetría)
-> [ESTILO BASE] [IAN] [REGULAR] Two-panel vertical comic strip, vertical progression, slanted gutters. Panel 1 (top): Extreme close-up of Ian's handheld console screen going completely black, a small red "OFFLINE" indicator blinking. Panel 2 (bottom): Medium shot of R.E.G.U.L.A.R. supervising with subtle background rain lines, overseeing a containment wall. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN-SUIT] [SWAPFIRE] [AEGIS] [REGULAR] [VOPS] Full comic page layout from a hidden viewpoint. Large lower panel seen through rusty grate bars: Ian and Mati crouch inside the duct behind trash bins and industrial crates, Ian signaling Mati to wait with one finger raised, their faces lit green and violet. Through the grate, the stationary V.O.P.S. van sits with rear doors open, two guards at the back, most soldiers turned toward the front battle. Top dominant exterior action panel: Aegis charges too close to the vehicle lane, forcing soldiers back and R.E.G.U.L.A.R. to plant himself between Aegis and the parked van. Overlapping insets: red brake lights reflected in a puddle; R.E.G.U.L.A.R.'s boots planted firmly; old brick blind spot with broken analog service gate; extreme close-up of corroded grate and dead sensor cable. [NEGATIVO ESTÁNDAR]
 
 ---
 
-# PÁGINA 48 — "El Cerco de R.E.G.U.L.A.R."
-Grilla: 5 viñetas. Ritmo: acorralamiento táctico.
-* **PERSONAJES:** Ian, Mati, R.E.G.U.L.A.R., V.O.P.S.
+# PÁGINA 48 — "Transporte en Espera"
+Composición: interior del furgón en columna + perímetro dividido en plano grande. Ritmo: preparación de traslado sin partida.
+* **PERSONAJES:** Julián, R.E.G.U.L.A.R., V.O.P.S., Aegis.
+* **CONTINUIDAD:** Julián entra al furgón, pero R.E.G.U.L.A.R. prohíbe moverlo hasta expulsar a Aegis.
 
-### Viñetas 48.1 a 48.4 — Tira de 5 Paneles (El Cierre del Cerco Táctico)
-> [ESTILO BASE] [REGULAR] [VOPS] [MATI] [IAN] Five-panel comic strip, slanted gutters, horizontal sequence. Panel 1: Medium shot of R.E.G.U.L.A.R. standing next to a command vehicle, coordinates glowing on a holographic map on his gauntlet. Panel 2 (zoom): Extreme close-up of a small inset panel showing holographic map coordinates converging on Dumbo Base. Panel 3: V.O.P.S. soldiers sealing off the end of a city block with armored vans. Panel 4: Close shot of Mati and Ian looking through a cracked window. Panel 5: Extreme close-up of Ian's eyes wide in panic as the headlights of the transfer van approach. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 48.5 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] Large wide shot: Armored transport van with headlights shining, ready to leave, soldiers guarding the rear doors, dark dark night with subtle background rain lines. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of the red tail lights reflecting in a puddle, and another showing a soldier's hand gripping his rifle strap. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [JULIAN] [REGULAR] [AEGIS] [VOPS] Full comic page layout, procedural tactical rhythm. Left vertical strip of five tight panels: soldiers shove cuffed Julián into the dark armored van; Julián lands on metal floor, bruised, inhibitor cuffs glowing cyan; rear doors begin closing but do not lock fully, guards still outside; driver cockpit seen through windshield, systems lit but van parked; close-up of a still wheel in a puddle. Right dominant tactical layout panel: front street is dominated by Aegis and heavy V.O.P.S. fire while the side alley holds the parked prisoner van. R.E.G.U.L.A.R. in foreground gestures that nobody moves the transport, red Aegis glow reflected in his visor, Ian and Mati barely visible as silhouettes behind the hidden grate. Thick black gutters connect all zones. [NEGATIVO ESTÁNDAR]
 
 ---
 
-# PÁGINA 49 — "Incapacidad de Rescate"
-Grilla: 5 viñetas. Ritmo: desesperación y derrota física.
-* **PERSONAJES:** Ian, V.O.P.S.
+# PÁGINA 49 — "La Oportunidad No Llega"
+Composición: página silenciosa de espera con primerísimos planos. Ritmo: tensión contenida, no ataque frontal.
+* **PERSONAJES:** Ian, Mati, Julián, V.O.P.S.
+* **CONTINUIDAD:** Se elimina el intento frontal de Ian. Ian y Mati esperan ocultos porque atacar revelaría su posición.
 
-### Viñetas 49.1 a 49.3 — Tira de 4 Paneles (Ian en el Fuego Cruzado)
-> [ESTILO BASE] [IAN-SUIT] [VOPS] Four-panel comic strip, dynamic diagonal slash cuts, slanted gutters. Panel 1: Medium shot of Ian running out of a base entrance, emerald vector gauntlets glowing, eyes locked on a moving transfer van. Panel 2: Ian aiming his gauntlets at two soldiers blocking his path. Panel 3: Action shot of Ian firing a green kinetic beam, green shockwaves. Panel 4: Large horizontal panel on a white impact background, showing a giant shield commander slamming a heavy estasis shield into Ian's chest, green sparks and shockwaves. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 49.4 y 49.5 — Tira de 2 Paneles con Zoom (Derrota de Ian)
-> [ESTILO BASE] [IAN-SUIT] [VOPS] Two-panel vertical comic strip, vertical progression, slanted gutters. Panel 1 (top): Medium shot of Ian falling onto matte dark asphalt, his green gauntlets flickering and losing energy. Panel 2 (bottom): Large shot of a shield commander standing over Ian on the ground, shield glowing cyan, preventing rescue. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN-SUIT] [SWAPFIRE] [JULIAN] [REGULAR] [AEGIS] [VOPS] Full comic page layout, stealth tension and restraint. Dominant lower panel from inside the grate: two V.O.P.S. guards pass within inches, boots huge in foreground, Ian and Mati frozen in darkness behind the bars. Left column of small close-ups: Ian watches guards around the van, jaw clenched; Mati lifts his visor with shaking fingers, wanting to shoot; Ian stops him with a firm hand on his shoulder. Tiny inset through the van rear window slit: Julián sits cuffed inside, fighting to stay conscious. Top wide panel: R.E.G.U.L.A.R. turns away from the transport, attention locked on approaching Aegis. Overlapping visor inset shows Aegis's huge red thermal mass dominating abstract ballistic reflection, van tiny and blurred behind. No action release yet. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 50 — "Furia Roja"
-Grilla: 4 viñetas. Ritmo: explosión de ira y calor.
-* **PERSONAJES:** Uandi
+Composición: ascenso visual desde ojo/furgón/puño hacia splash de amenaza. Ritmo: Aegis amenaza el transporte y obliga al disparo.
+* **PERSONAJES:** Uandi, R.E.G.U.L.A.R., V.O.P.S.
+* **CONTINUIDAD:** La furia de Aegis se activa por ver a Julián capturado y el furgón cerca, no por una derrota de Ian.
 
-### Viñetas 50.1 y 50.2 — Tira de 3 Paneles con Zoom (Furia de Aegis)
-> [ESTILO BASE] [AEGIS] Three-panel vertical comic strip, vertical zoom-in progression, slanted gutters. Panel 1 (top): Close shot of Aegis's face, eyes glowing bright yellow-red, veins bulging. Panel 2 (middle, zoom): Extreme close-up of Aegis's massive clenched fist, red-hot skin cracking and glowing like lava. Panel 3 (bottom): Medium shot of Aegis slamming both fists into matte dark asphalt, a massive crater forming under his hands. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 50.3 — Plano General (Escena Épica con Insets 3D)
-> [ESTILO BASE] [AEGIS] Large action shot: A kinetic heatwave exploding from Aegis's body, turning rain to steam, soldiers thrown back, patrol cars sliding over the road. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a car tire melting from the heat, and another showing steam venting from Aegis's back. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 50.4 — SPLASH (Escena Épica con Insets 3D)
-> [ESTILO BASE] [AEGIS] Full-page splash panel: Aegis stands in steam, a glowing red colossus, heat haze distorting background buildings. Overlapping the main splash panel are three small borderless 3D inset close-up panels: one showing a close-up of Aegis's glowing chest runes, another showing boiling mud around his feet, and a third showing a soldier's walkie-talkie sparking in a puddle. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [AEGIS] [JULIAN] [REGULAR] [VOPS] Full comic page layout. Top-left vertical zoom strip: Aegis's red-hot face turns toward the side alley; tiny view through the van rear slit shows Julián cuffed inside with weak cyan-magenta static; extreme close-up of Aegis's massive fist clenching, magma cracks widening. Main splash: Aegis advances toward the prisoner van, heatwave bending dry night air, soldiers shouting and retreating, transport guards panicking while the van remains stationary. Foreground lower-right: R.E.G.U.L.A.R. raises the heavy launcher into firing position, soldiers clearing his line of fire. Overlapping insets: guard hand hovering over van door lock; van suspension trembling; cyan coils charging; Ian and Mati watching helplessly from the hidden grate. [NEGATIVO ESTÁNDAR]
 
 ---
 
-# PÁGINA 51 — "El Traslado"
-Grilla: 5 viñetas. Ritmo: cierre del cerco táctico.
-* **PERSONAJES:** Julián, V.O.P.S.
+# PÁGINA 51 — "El Traslado Suspendido"
+Composición: interior cerrado y símbolos de inmovilidad. Ritmo: encierro, inmovilidad y llamada posible.
+* **PERSONAJES:** Julián, V.O.P.S., R.E.G.U.L.A.R.
+* **CONTINUIDAD:** Julián está encerrado en un vehículo inmóvil; los soldados esperan autorización.
 
-### Viñetas 51.1 y 51.2 — Tira de 2 Paneles (Traslado de Julián)
-> [ESTILO BASE] [JULIAN] [VOPS] Two-panel comic strip, slanted gutters. Panel 1: Medium shot of soldiers throwing handcuffed Julián into the dark metal hold of a transport van. Panel 2: Julián hitting the metal floor of the van, bruised, teeth grit, cyan-magenta energy sparks flickering dead. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 51.3 y 51.4 — Tira de 3 Paneles con Zoom (Cierre de Furgón)
-> [ESTILO BASE] Three-panel vertical comic strip, vertical progression, slanted gutters. Panel 1 (top): Medium shot of heavy steel back doors of a van slamming shut, sealing the dark interior. Panel 2 (middle, zoom): Close-up of a heavy mechanical metal latch clicking shut, locking. Panel 3 (bottom): Small shot of a van's tires spinning on matte dark asphalt, throwing dirty water. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 51.5 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] Large wide shot of an armored van accelerating down a dark street with subtle background rain lines, escort vehicles following. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of the van's license plate covered in mud, and another showing red siren lights reflecting on a wet brick wall. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [JULIAN] [REGULAR] [VOPS] [AEGIS] Full comic page layout, trapped interior against battlefield exterior. Dominant interior panel: Julián inside the parked armored van, thrown against a metal bench, wrists cuffed with inhibitor restraints, bruised but alert under dim emergency light. Across the right edge, a vertical mechanical zoom strip: rear doors slam shut; latch locks; van tire rests still in a puddle, engine vibration making ripples but no rotation; driver's gloved hand waits on the gear lever. Top exterior banner: V.O.P.S. guards close the doors while the driver's silhouette checks controls. Bottom wide panel: R.E.G.U.L.A.R. stands between approaching Aegis and the transport lane, one hand raised to hold the van in place, launcher beginning to charge. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 52 — "Wawi"
-Grilla: 5 viñetas. Ritmo: SOS desesperado en aislamiento.
-* **PERSONAJES:** Julián, Carmella Nocturna
+Composición: página íntima, encierro oscuro y respuesta roja en contrapunto. Ritmo: SOS discreto desde el furgón inmóvil.
+* **PERSONAJES:** Julián, Carmella Nocturna.
+* **CONTINUIDAD:** La llamada ocurre antes del disparo contra Aegis, con el furgón detenido y los guardias afuera.
 
-### Viñetas 52.1 a 52.4 — Tira de 4 Paneles (Aislamiento y Llamada)
-> [ESTILO BASE] [JULIAN] Four-panel comic strip, slanted gutters, horizontal sequence. Panel 1: Medium shot of Julián sitting in the pitch-black interior of a moving armored van, hands locked in cuffs. Panel 2: Close shot of Julián's fingers maneuvering a cracked smartphone, screen lighting his face in red-pink hues. Panel 3 (zoom): Tight close-up of the cracked phone screen displaying a call interface. Panel 4: Close shot of Julián's thumb pressing a green dial button on the cracked glass. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 52.5 — Plano Medio (Llamada Atendida)
-> [ESTILO BASE] [CARMELLA] Medium shot of a phone glowing red on a dark table, a pale hand in a tight black velvet glove picking it up, red neon bar light illuminating the background. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [JULIAN] [CARMELLA] Full comic page layout, claustrophobic SOS. Main large panel: Julián alone inside the parked armored van, cuffed wrists in his lap, dim red emergency light, exterior battle flashing through thin seams. Left vertical zoom strip: he painfully twists one hand toward his pocket; pulls out a cracked smartphone despite inhibitor cuffs; cracked phone screen glows red-pink on his bruised face with abstract call-interface shapes, no readable text; trembling thumb presses the call button while boots and muffled voices remain outside. Bottom contrasting panel in red-lit underground bar: a phone vibrates on a dark table, pale gloved hand reaching from shadow, only Carmella's lips and black velvet sleeve visible, crimson neon reflected on glass. No full reveal yet. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 53 — "El disparo contra Aegis"
-Grilla: 6 viñetas. Ritmo: punto de quiebre y disparo anti-anomalía.
-* **PERSONAJES:** Ian, Mati, R.E.G.U.L.A.R., Uandi
+Composición: disparo como splash blanco-cian, con la sombra moviéndose en insets. Ritmo: evento dominante que permite la infiltración silenciosa.
+* **PERSONAJES:** R.E.G.U.L.A.R., Uandi, Ian, Mati, Carmella Nocturna.
+* **CONTINUIDAD:** Carmella empieza a acercarse en segundo plano, pero R.E.G.U.L.A.R. solo registra a Aegis.
 
-### Viñetas 53.1 y 53.2 — Tira de 3 Paneles con Zoom (Carga de Launcher)
-> [ESTILO BASE] [REGULAR] Three-panel vertical comic strip, vertical progression, slanted gutters. Panel 1 (top): Medium shot of R.E.G.U.L.A.R. raising a heavy mutagenic containment net launcher, blue coils glowing. Panel 2 (middle, zoom): Close-up of the weapon's capacitor chamber, neon-blue fluid bubbling inside glass tubes. Panel 3 (bottom): Close shot of the launcher's muzzle charging a massive circular cyan energy blast. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 53.3 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] Large action shot on pure white impact background, showing the launcher firing a colossal cyan energy beam. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of the cyan coils on the launcher venting blue steam, and another showing R.E.G.U.L.A.R.'s visor reflecting the intense cyan flash. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 53.4 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [AEGIS] Large kinetic shot: Aegis hit in the chest by the energy blast, thrown violently backward through the air, breaking through concrete structures. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing Aegis's red runes cracking and leaking orange light, and another showing concrete debris flying in mid-air. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 53.5 y 53.6 — Tira de 2 Paneles (Reacción y Descenso)
-> [ESTILO BASE] [IAN] [MATI] [REGULAR] Two-panel comic strip, slanted gutters. Panel 1: Medium shot of Ian and Mati watching in horror through the smoke. Panel 2: Medium shot of R.E.G.U.L.A.R. lowering the smoking launcher, rain washing over his dark armor. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [REGULAR] [AEGIS] [IAN-SUIT] [SWAPFIRE] [CARMELLA] Full comic page layout. Main central splash on pure white-cyan impact background: R.E.G.U.L.A.R. fires a colossal cyan containment blast from the heavy launcher, the flash overpowering the dry night street, vehicles vibrating, soldiers covering visors. Top-left zoom strip: launcher raised; cyan capacitor coils charging; dry air warping near the muzzle. Across the blast path, Aegis is struck in the chest and launched violently out of the Dumbo perimeter over broken concrete and barricades, not yet landing in Central Park. Shadow insets along the blind alley: barely visible red eyes and black coat shape slip behind transport guards; van guards blinded by flash; Ian and Mati flinch behind the grate seeing dark shapes move. Bottom still panel: R.E.G.U.L.A.R. lowers smoking launcher but looks toward Aegis's trajectory, not the van. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 54 — "La sombra"
-Grilla: 5 viñetas. Ritmo: intervención sobrenatural veloz.
+Composición: rescate noir con sombras superpuestas al furgón. Ritmo: intervención silenciosa aprovechando el destello.
 * **PERSONAJES:** Julián, Carmella Nocturna, V.O.P.S.
+* **CONTINUIDAD:** Carmella libera a Julián sin que el comandante la vea.
 
-### Viñetas 54.1, 54.3 y 54.4 — Tira de 3 Paneles (Detención e Intercepción)
-> [ESTILO BASE] [JULIAN] Three-panel comic strip, slanted gutters. Panel 1: Wide shot of a transfer van suddenly swerving and stopping under a flickering streetlight. Panel 2: Medium shot of the van's back doors torn open, lock broken, a pale hand visible. Panel 3: Medium shot of Julián falling out of the van onto his hands and knees, cuffs hanging from one wrist. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 54.2 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [CARMELLA] Large shot of a dark shadow falling over guards outside a van, red glowing eyes in the mist, a black coat whipping, soldiers falling as dark silhouettes, no gore. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of a guard's tactical helmet spinning on the wet asphalt, and another showing a pale hand catching a falling tactical rifle in the dark. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 54.5 — Tira de 2 Paneles con Zoom (Reconocimiento)
-> [ESTILO BASE] [JULIAN] [CARMELLA] Two-panel vertical comic strip, vertical zoom, slanted gutters. Panel 1 (top): Close-up of Julián's face, embarrassed and surprised. Panel 2 (bottom): Medium shot of the dark silhouette of Carmella standing over him, red umbrella casting a crimson glow. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [JULIAN] [CARMELLA] [IAN-SUIT] [SWAPFIRE] [VOPS] Full comic page layout, noir stealth rescue. Dominant shadowy alley panel: Carmella and two dark vampire silhouettes silently neutralize the few van guards in the cyan afterflash, no gore, bodies dropping as dark shapes, crimson eyes and black coats in mist. Overlapping insets: pale hand catches a falling rifle before it hits ground; guard helmet rolls silently under the van; broken latch on rear door. Right vertical sequence: rear of stationary van with disoriented guards; van doors opening quietly; Julián inside turning toward a pale hand; Julián pulled out with one inhibitor cuff broken and one still hanging. Bottom small grate panel: Ian and Mati watch, eyes wide. Final narrow panel: dark feminine silhouette points toward blind alley entrance, face unrevealed. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 55 — "Cortina violeta"
-Grilla: 6 viñetas. Ritmo: escape táctico y cobertura de plasma.
-* **PERSONAJES:** Ian, Mati, Julián, R.E.G.U.L.A.R., Carmella Nocturna
+Composición: carrera lateral con vapor violeta como gran forma gráfica. Ritmo: salida del ducto, rescate físico y cobertura.
+* **PERSONAJES:** Ian, Mati, Julián, Carmella Nocturna, V.O.P.S.
+* **CONTINUIDAD:** Ian y Mati salen solo cuando Julián ya está fuera del furgón. La cortina se genera después de alcanzarlo.
 
-### Viñetas 55.1, 55.3 y 55.4 — Tira de 3 Paneles (Estrategia y Explosión)
-> [ESTILO BASE] [MATI] [REGULAR] Three-panel comic strip, dynamic diagonal slash cuts, slanted gutters. Panel 1: Medium shot of Mati looking through smoke, seeing an opportunity. Panel 2: Action shot of the street exploding in steam, asphalt chunks, and violet sparks, violet energy lines breaking the margins. Panel 3: Medium shot of R.E.G.U.L.A.R. shielding his visor as violet mist blocks his view. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 55.2 — Plano Horizontal Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [SWAPFIRE] Large horizontal panel: Mati firing a concentrated violet plasma laser from his visor directly into matte dark street tarmac. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of Mati's visor glowing intense purple, and another showing asphalt melting into bubbling violet sludge. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 55.5 y 55.6 — Tira de 2 Paneles (Rescate y Alianza)
-> [ESTILO BASE] [IAN] [JULIAN] [MATI] [CARMELLA] Two-panel comic strip, slanted gutters. Panel 1: Medium shot of Ian running to help Julián stand, Mati covering their backs in the violet mist. Panel 2: Wide shot of an alley entrance, Carmella's dark silhouette with red eyes gesturing for them to enter. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN-SUIT] [SWAPFIRE] [JULIAN] [CARMELLA] [VOPS] Full comic page layout, horizontal escape movement. Top-left inset: Ian quietly pushes open the hidden grate behind crates while Mati follows. Main sweeping horizontal panel: Ian reaches Julián and catches him under one arm as Julián limps, one cuff hanging; Mati turns back and fires a short violet plasma line into a street steam grate or exposed pipe, producing dense vapor, violet sparks and camera interference, not an explosion. The vapor wall becomes a huge graphic shape crossing the page. Insets inside the vapor: Mati's visor glowing intense purple; boiling water bursting from the grate; confused V.O.P.S. silhouettes behind haze. Bottom wide panel: Ian supports Julián while Mati covers rear, Carmella's silhouette with a folded crimson parasol gestures them toward the blind alley entrance. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 56 — "Callejón / primera aparición frontal de Carmella"
-Grilla: 5 viñetas. Ritmo: noir y misterio urbano.
-* **PERSONAJES:** Ian, Julián, Carmella Nocturna
+Composición: reveal de personaje en panel dominante con mini-reacciones. Ritmo: noir, misterio y respiro breve.
+* **PERSONAJES:** Ian, Mati, Julián, Carmella Nocturna.
+* **CONTINUIDAD:** Primera presentación clara de Carmella ocurre después de haber cruzado el punto ciego.
 
-### Viñetas 56.1 y 56.3 — Tira de 2 Paneles (Huida y Desahogo)
-> [ESTILO BASE] [IAN] [JULIAN] Two-panel comic strip, slanted gutters. Panel 1: Medium shot of Ian and Julián entering a dark alley, red/magenta emergency light reflecting in puddles. Panel 2: Medium shot of Julián looking down, holding his wrist, muttering sheepishly. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 56.2 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [CARMELLA] Large iconic shot of Carmella Nocturna standing under magenta light, elegant pale skin, long velvet coat, dark sunglasses, holding a red umbrella, aristocratic poise. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of her pale lips curved into a mysterious smile, and another showing red rain droplets dripping off the tip of her red umbrella. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 56.4 y 56.5 — Tira de 2 Paneles con Zoom (Miradas de Sospecha)
-> [ESTILO BASE] [IAN] [CARMELLA] Two-panel vertical comic strip, vertical progression, slanted gutters. Panel 1 (top): Close shot of Ian studying Carmella with intense suspicion, analytical expression, amber tear pendant. Panel 2 (bottom): Medium shot of Carmella looking back, a cool unreadable expression, red umbrella casting a crimson glow. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN] [MATI] [JULIAN] [CARMELLA] Full comic page layout, iconic noir reveal. Dominant central panel: Carmella Nocturna fully visible for the first time, elegant pale vampire woman in black and deep crimson velvet coat, dark sunglasses, folded crimson parasol held like a cane, standing beneath broken red neon in an old brick alley with aristocratic underworld poise. Top-left small panel: Ian, Mati and Julián enter beyond violet vapor, Julián leaning heavily on Ian, one cuff dangling, no V.O.P.S. line of sight. Bottom-left inset: Julián embarrassed and exhausted holding his wrist while Mati scans behind through purple visor. Overlapping close-up insets on Carmella: pale lips forming cold half-smile; crimson parasol tip touching the dry pavement; one gloved finger raised toward an old hidden iron gate. Right narrow reaction panel: Ian studies her suspiciously, glasses reflecting red alley light, amber pendant visible. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 57 — "Entrada al túnel"
-Grilla: 5 viñetas. Ritmo: escape por infraestructura abandonada.
-* **PERSONAJES:** Ian, Mati, Julián, Carmella Nocturna
+Composición: descenso vertical con puerta como umbral principal. Ritmo: escape por infraestructura abandonada.
+* **PERSONAJES:** Ian, Mati, Julián, Carmella Nocturna.
+* **CONTINUIDAD:** El grupo desciende por la reja oculta antes de que R.E.G.U.L.A.R. revise el furgón.
 
-### Viñetas 57.1 y 57.2 — Tira de 2 Paneles con Zoom (El Acceso al Túnel)
-> [ESTILO BASE] [CARMELLA] [IAN] Two-panel vertical comic strip, vertical progression, slanted gutters. Panel 1 (top): Medium shot of Carmella opening a heavy, rusted iron gate hidden in an alley. Panel 2 (bottom): Close-up of Ian inspecting the gate frame, noting the complete lack of modern card readers or tactical sensors. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 57.4 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [IAN] [MATI] [JULIAN] [CARMELLA] Large shot of the group descending a steep metallic stair into a dark brick storm-drain tunnel, illuminated by a distant red glow. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of Ian's muddy boots on the metal step, and another showing a rusty pipe dripping dark water into a puddle. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 57.3 y 57.5 — Tira de 2 Paneles (Cierre de Escape)
-> [ESTILO BASE] [MATI] [CARMELLA] Two-panel comic strip, slanted gutters. Panel 1: Medium shot of Mati looking back down the alley, worried, visor reflecting smoke. Panel 2: Close-up of Carmella closing a heavy gate and locking it with a heavy padlock. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN] [MATI] [JULIAN] [CARMELLA] Full comic page layout with strong vertical descent. Top wide panel: Carmella opens a heavy rusted iron gate hidden behind old pipes and brickwork, revealing steep stairs into darkness. Dominant tall central panel: the group descends into a dark brick storm-drain tunnel, Carmella leading, Ian supporting Julián, Mati last with visor turned back toward the alley. Small technical insets: Ian notices no modern card readers, cameras or tactical sensors, only old mechanical locks; Ian's muddy boot on a metal step; Julián's broken inhibitor cuff scraping against railing. Bottom panel: Carmella closes the gate from inside and locks it with an old mechanical padlock while the group disappears below, violet haze fading outside. [NEGATIVO ESTÁNDAR]
 
 ---
 
+# PÁGINA 57.5 — "Descubrimiento tardío"
+Composición: investigación posterior en página fría y controlada. Ritmo: reacción profesional de R.E.G.U.L.A.R. y puente hacia la persecución futura.
+* **PERSONAJES:** R.E.G.U.L.A.R., V.O.P.S.
+* **CONTINUIDAD:** El comandante descubre la fuga después de seguir la trayectoria de Aegis. No fue derrotado; perdió de vista un frente secundario mientras neutralizaba la amenaza principal.
+
+### Prompt de página completa
+> [ESTILO BASE] [REGULAR] [VOPS] Full comic page layout, cold investigative aftermath. Top wide panel: R.E.G.U.L.A.R. lowers the overheated launcher in the street, helmet still angled toward the distant red trajectory of Aegis leaving the perimeter. Middle procedural strip: he turns back toward the transport lane, posture controlled, issuing an order through wrist communicator; armored van revealed with rear doors open, guards down or dazed, violet steam thinning around the empty compartment. Dominant lower noir panel: R.E.G.U.L.A.R. and two V.O.P.S. soldiers stand before the sealed old gate, modern scanners useless, alley empty except fading violet vapor and faint impossible crimson trace. Insets: armored hand touches violet plasma residue; visor reflects fragmented heat traces vanishing into old brick infrastructure. Controlled anger, no panic. [NEGATIVO ESTÁNDAR]
+
+---
 # PÁGINA 58 — "Descenso under / cierre del escape inmediato"
-Grilla: 6 viñetas. Ritmo: descenso y ambientación de submundo.
+Composición: transición al submundo con vigilancia en balcones y puerta final. Ritmo: descenso, ambientación y paso de tiempo hacia el amanecer.
 * **PERSONAJES:** Mati, Julián, Carmella Nocturna
 
-### Viñetas 58.1, 58.2 y 58.5 — Tira de 3 Paneles (Túneles Abajo)
-> [ESTILO BASE] [MATI] [JULIAN] [CARMELLA] Three-panel comic strip, slanted gutters. Panel 1: Wide shot of the group walking through ancient brick tunnels, water dripping from arched ceilings, steam rising. Panel 2: Medium shot of Julián holding his arm, looking uncomfortable. Panel 3: Medium shot of Carmella raising a hand in a commanding gesture, making unseen onlookers retreat. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 58.3 y 58.4 — Tira de 2 Paneles con Zoom (Los Vigilantes del Túnel)
-> [ESTILO BASE] Two-panel vertical comic strip, vertical zoom progression, slanted gutters. Panel 1 (top): Medium shot of mysterious pale-skinned figures watching from shadow-filled balconies along tunnel walls. Panel 2 (bottom, zoom): Extreme close-up of a pale guard's face, nostrils flared as he sniffs the air, eyes reflecting faint red. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 58.6 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] Large shot of the group arriving at a massive metal service door, red neon tube light casting long dramatic silhouettes on brick. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of a red neon tube flickering on the wall, and another showing the heavy steel door handle turning. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [MATI] [JULIAN] [CARMELLA] Full comic page layout, descent into underworld. Dominant atmospheric panel: the group walks through ancient brick tunnels, water dripping from arched ceilings, steam rising, Carmella leading with absolute authority, Mati wary, Julián holding his arm and looking uncomfortable. Along the upper tunnel walls, shadow-filled balcony insets show mysterious pale-skinned figures watching. Zoom inset: pale guard's face sniffing the air, eyes reflecting faint red. Middle small panel: Carmella raises one hand in a commanding gesture and unseen onlookers retreat. Small time-passage inset near a high street grate: the outside sky above the city shifts from black night toward pale blue dawn while the group remains underground. Bottom large reveal panel: the group arrives at a massive metal service door, red neon tube casting long silhouettes on brick. Overlapping insets show neon tube flickering and heavy steel door handle turning. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 59 — "Impacto en Central Park"
-Grilla: 5 viñetas. Ritmo: choque violento y avistamiento.
+Composición: impacto tipo meteorito + encuentro cara a cara en panel inferior. Ritmo: choque violento y avistamiento.
 * **PERSONAJES:** Uandi, Gorgon
 
-### Viñeta 59.1 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] Large wide shot of a red glowing streak slamming into park grass like a meteor, shattering stone benches and iron fences, throwing up mud and debris against a white impact background, clods of dirt flying out of the boundaries. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of a shattered iron fence rail bent like wire, and another showing hot steam rising from the muddy impact crater. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 59.2 a 59.4 — Tira de 3 Paneles con Zoom (Búsqueda y Hallazgo)
-> [ESTILO BASE] [GORGON] [AEGIS] Three-panel comic strip, slanted gutters, horizontal sequence. Panel 1: Medium shot of Gorgon moving through trees and green chemical smoke. Panel 2: Close shot of Gorgon stopping, calculating eyes narrowing as he looks at the impact crater. Panel 3: Medium shot of Aegis rising from mud, fully transformed, red-hot skin, magma runes, breathing heavily. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 59.5 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [AEGIS] [GORGON] Large face-to-face shot: colossus Aegis on the left, steam rising from his shoulders, glaring at Gorgon; Gorgon on the right, massive and cool, neon-green tubes pulsing, a faint smirk behind his industrial respirator. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of Aegis's clenched, glowing red fist, and another showing Gorgon's green metatoxin tubes pulsing bright green. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [AEGIS] [GORGON] Full comic page layout. Dominant upper impact panel on white negative background: a red glowing streak slams into Central Park grass like a meteor, shattering stone benches and iron fences, mud and debris flying beyond the black border. Overlapping insets: shattered iron fence rail bent like wire; hot steam rising from muddy crater. Middle horizontal search sequence: Gorgon moves through trees and green chemical smoke; he stops with calculating eyes narrowing at the crater; Aegis rises from mud fully transformed, red-hot skin and magma runes breathing steam. Bottom wide face-off panel: Aegis on the left, steam rising from shoulders, glaring; Gorgon on the right, massive and calm, neon-green tubes pulsing, faint smirk behind respirator. Insets show Aegis's glowing fist and Gorgon's metatoxin tubes. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 60 — "Dos colosos"
-Grilla: 5 viñetas. Ritmo: acción pesada y colisión.
+Composición: secuencia de combate diagonal con impacto central blanco. Ritmo: acción pesada y colisión.
 * **PERSONAJES:** Uandi, Gorgon
 
-### Viñetas 60.1, 60.2, 60.4 y 60.5 — Tira de 5 Paneles de Combate (La Pugna de Titanes)
-> [ESTILO BASE] [AEGIS] [GORGON] Five-panel comic strip, dynamic diagonal slash cuts, slanted gutters, heavy action. Panel 1: Large action shot of Aegis charging headlong, fists clenched, red trail. Panel 2: Medium shot of Gorgon raising heavy polymer-reinforced forearms to block, mud spraying beyond the panel frame. Panel 3: Kinetic action shot of Gorgon countering with a heavy elbow to Aegis's neck. Panel 4: Aegis recovering and throwing a heavy hammer-fist. Panel 5 (bottom): Wide shot of Gorgon forced onto one knee, a stone bridge cracking behind them. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 60.3 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [AEGIS] [GORGON] Large impact panel on pure white background: Aegis's punch hitting Gorgon's guard, ground cracking under their feet, trees bending. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of the shockwave cracking the stone beneath their feet, and another showing neon green metatoxin fluid surging violently in Gorgon's arm tubes. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [AEGIS] [GORGON] Full comic page layout, heavy action with diagonal slash gutters. Top-left large panel: Aegis charges headlong, fists clenched, red trail tearing across park mud. Center dominant impact panel on pure white background: Aegis's punch crashes into Gorgon's polymer-reinforced guard, ground cracking under their feet, trees bending from shockwave. Overlapping insets show stone splitting and neon-green metatoxin surging violently in Gorgon's arm tubes. Right-side vertical combat strip: Gorgon counters with a heavy elbow to Aegis's neck; Aegis recovers and throws a hammer-fist. Bottom wide panel: Gorgon is forced onto one knee while a stone bridge cracks behind them, mud spraying past the panel frame. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 61 — "Más fuerte no significa más claro"
-Grilla: 5 viñetas. Ritmo: sobrecarga y desgaste estratégico.
+Composición: Aegis ocupa la página, Gorgon lo lee desde insets fríos. Ritmo: sobrecarga y desgaste estratégico.
 * **PERSONAJES:** Uandi, Gorgon
 
-### Viñetas 61.1 a 61.3 — Tira de 3 Paneles (Ataque y Evasión)
-> [ESTILO BASE] [AEGIS] [GORGON] Three-panel comic strip, slanted gutters, dynamic cuts. Panel 1: Medium shot of Aegis roaring, striking repeatedly, red energy flashing. Panel 2: Large shot of Gorgon dodging and weaving between trees, looking calm. Panel 3: Close shot of Aegis's arm tattoos cracking open with bright yellow magma heat, steam escaping. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 61.4 y 61.5 — Tira de 2 Paneles con Zoom (Análisis de Combate)
-> [ESTILO BASE] [GORGON] Two-panel vertical comic strip, vertical progression, slanted gutters. Panel 1 (top): Medium shot of Gorgon taking a hit to the ribs, keeping eyes locked on cracked runes. Panel 2 (bottom): Close-up of Gorgon's intelligent eyes behind his respirator, tracking heat telemetry. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [AEGIS] [GORGON] Full comic page layout, imbalance between rage and analysis. Dominant central panel: Aegis roars and strikes repeatedly, red energy flashing around him, his huge body breaking the upper panel border. Around him, smaller cool-toned inset panels show Gorgon dodging and weaving between trees with calm precision; Gorgon taking a hit to the ribs but keeping his eyes locked on Aegis's cracked runes; close-up of Gorgon's intelligent eyes behind respirator tracking heat telemetry through abstract shapes. Bottom close-up strip: Aegis's arm tattoos crack open with bright yellow magma heat, steam escaping, warning that his power is becoming unstable. Thick black gutters, red versus green contrast, no dialogue. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 62 — "El intelecto despierto"
-Grilla: 5 viñetas. Ritmo: uso táctico del entorno.
+Composición: táctica ambiental con géiser como gran forma vertical. Ritmo: uso táctico del entorno.
 * **PERSONAJES:** Uandi, Gorgon
 
-### Viñetas 62.1, 62.2 y 62.4 — Tira de 3 Paneles (Táctica de Evasión)
-> [ESTILO BASE] [GORGON] [AEGIS] Three-panel comic strip, slanted gutters. Panel 1: Medium shot of Gorgon grabbing a heavy iron lamppost and jamming it between Aegis's legs to trip him. Panel 2: Action shot of Aegis falling forward, shattering a stone bench, red sparks. Panel 3: Small tight close-up of Aegis's face, eyes water-logged and confused in the spray. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 62.3 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [GORGON] Large action shot: Gorgon slamming his fist into a water main box, a massive geyser of water and steam exploding upward, water spray breaking the gutters. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing Gorgon's heavy boot stepping back, and another showing the metal lid of the box flying off. [NEGATIVO ESTÁNDAR]
-
-### Vieta 62.5 — Plano General (Escena Épica con Insets 3D)
-> [ESTILO BASE] [AEGIS] [GORGON] Wide shot: Aegis swinging blindly in dense steam and water spray, Gorgon's dark shadow retreating into the fog. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing water condensation running down Aegis's face, and another showing Gorgon's footprints filling with muddy water. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [GORGON] [AEGIS] Full comic page layout, tactical use of environment. Top diagonal sequence: Gorgon grabs a heavy iron lamppost and jams it between Aegis's legs; Aegis falls forward and shatters a stone bench, red sparks flying; tight close-up of Aegis's confused face as spray begins to hit him. Dominant central vertical panel: Gorgon slams his fist into a water main box and a massive geyser of water and steam explodes upward, water spray breaking into the gutters. Overlapping insets: Gorgon's heavy boot stepping back; metal lid flying off; condensation running down Aegis's face. Bottom wide panel: Aegis swings blindly in dense steam and water spray while Gorgon's dark shadow retreats into fog, footprints filling with muddy water. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 63 — "Retirada calculada"
-Grilla: 6 viñetas. Ritmo: colapso y repliegue químico.
+Composición: colapso de puente + nube química como pantalla de escape. Ritmo: colapso y repliegue químico.
 * **PERSONAJES:** Uandi, Gorgon, V.O.P.S.
 
-### Viñetas 63.1, 63.5 y 63.6 — Tira de 3 Paneles (Escape y Gas)
-> [ESTILO BASE] [GORGON] [VOPS] Three-panel comic strip, slanted gutters. Panel 1: Medium shot of Gorgon standing before a stone arch bridge, baiting Aegis. Panel 2: Wide shot of a green cloud filling the area, V.O.P.S. headlights cutting through in the background. Panel 3: Dark silhouette panel of Gorgon escaping through a broken service grate inside collapsed bridge ruins. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 63.2 y 63.3 — Tira de 2 Paneles con Zoom (Derrumbe del Puente)
-> [ESTILO BASE] [AEGIS] Two-panel vertical comic strip, vertical zoom progression, slanted gutters. Panel 1 (top): Action shot of Aegis charging and slamming his fists into bridge support columns. Panel 2 (bottom): Medium shot of a stone arch collapsing, stone blocks falling over Aegis, throwing up a cloud of dust. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 63.4 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [GORGON] Large shot: Gorgon disconnecting a secondary tube from his respirator, releasing a dense cloud of bright neon-green metatoxin vapor. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of the green fluid draining from the tube, and another showing his respirator valve hissing. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [AEGIS] [GORGON] [VOPS] Full comic page layout. Top wide panel: Gorgon stands before a stone arch bridge, baiting Aegis with calm posture. Left vertical collapse strip: Aegis charges and slams fists into bridge support columns; stone arch collapses; blocks crash over Aegis in dust. Dominant middle panel: Gorgon disconnects a secondary tube from his respirator, releasing a dense bright neon-green metatoxin vapor cloud. Overlapping insets show green fluid draining from tube and respirator valve hissing. Bottom wide panel: green cloud fills the park area while V.O.P.S. headlights cut through in the background. Final dark inset: Gorgon escapes through a broken service grate inside collapsed bridge ruins. Thick black gutters, controlled retreat. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 64 — "La bestia en el techo"
-Grilla: 5 viñetas. Ritmo: huida vertical y destransformación.
+Composición: salto vertical que rompe el borde + destransformación en panel íntimo. Ritmo: huida vertical y destransformación.
 * **PERSONAJES:** Uandi, Gorgon, V.O.P.S.
 
-### Viñetas 64.1 y 64.2 — Tira de 2 Paneles (Búsqueda en las Ruinas)
-> [ESTILO BASE] [VOPS] [AEGIS] Two-panel comic strip, slanted gutters. Panel 1: Wide shot of containment units entering a park, spotlights illuminating ruins. Panel 2: Aegis standing in spotlight beams, surrounded by smoke and ruins. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 64.3 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [AEGIS] Large dynamic shot: Aegis executing a massive ballistic leap, launch shockwaves cracking pavement, flying toward a dark roof, breaking beyond the panel border. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of cracked pavement with steam, and another showing a distant V.O.P.S. spotlight beam pointing up in vain. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 64.4 y 64.5 — Tira de 2 Paneles con Zoom (Destransformación)
-> [ESTILO BASE] [AEGIS] [UANDI] Two-panel vertical comic strip, vertical zoom-out progression, slanted gutters. Panel 1 (top): Medium shot of Aegis landing on a dark rooftop in shadows, red glow fading. Panel 2 (bottom): Close shot of Uandi, now human, exhausted and gasping for air, clothes torn, looking at warm penthouse lights nearby. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [VOPS] [AEGIS] [UANDI] Full comic page layout with vertical escape energy. Top narrow search panels: V.O.P.S. containment units enter the park, spotlights illuminating ruins; Aegis stands in beams surrounded by smoke and broken stone. Dominant central panel: Aegis executes a massive ballistic leap from the park, launch shockwaves cracking pavement, his red body flying toward a dark roof and breaking beyond the panel border. Overlapping insets: cracked pavement steaming; distant V.O.P.S. spotlight pointing upward in vain. Bottom vertical zoom-out: Aegis lands on a dark rooftop in shadow, red glow fading; close shot of Uandi now human, exhausted and gasping, torn clothes, staring at warm penthouse lights nearby. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 65 — "No toques nada blanco"
-Grilla: 5 viñetas. Ritmo: tensión en el refugio y llegada de Uandi.
+Composición: refugio elegante interrumpido por aterrizaje sucio. Ritmo: tensión en el refugio y llegada de Uandi.
 * **PERSONAJES:** Mati, Julián, Uandi, Jaz
 
-### Viñetas 65.1 y 65.4 — Tira de 2 Paneles (Tensión en el Refugio)
-> [ESTILO BASE] [JAZ] [MATI] [JULIAN] [UANDI] Two-panel comic strip, slanted gutters. Panel 1: Medium interior shot of elegant penthouse, Jaz talking to Mati and Julián. Panel 2: Uandi kneeling on the balcony, covered in mud, soot, and twigs, steam rising from his back. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 65.2 y 65.3 — Tira de 2 Paneles con Zoom (Alerta en Penthouse)
-> [ESTILO BASE] [JAZ] Two-panel vertical comic strip, vertical zoom progression, slanted gutters. Panel 1 (top): Close-up of Jaz's face, suddenly pausing, golden aura flickering. Panel 2 (bottom): Large shot of glass balcony doors shaking as something heavy lands on the balcony terrace outside. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 65.5 — Plano General (Escena Épica con Insets 3D)
-> [ESTILO BASE] [UANDI] [JAZ] Wide shot of Uandi limping inside and collapsing onto a clean white rug, Jaz looking at him in resignation and anger, hand on her forehead. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing Uandi's muddy, torn boot marking the immaculate white rug, and another showing a small trail of soot and water dripping from his hand. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [JAZ] [MATI] [JULIAN] [UANDI] Full comic page layout, elegant refuge disrupted. Top calm panel: Jaz speaks with Mati and Julián inside an immaculate penthouse, clean white rug, glass balcony doors, warm golden aura restrained. Left vertical alert strip: close-up of Jaz's face suddenly pausing; her golden aura flickers; glass balcony doors shake as something heavy lands outside. Dominant middle panel: Uandi kneels on the balcony in pre-dawn blue light, covered in mud, soot and twigs, steam rising from his back, city horizon just beginning to pale behind him. Bottom wide panel: Uandi limps inside and collapses onto the clean white rug while Jaz looks at him with resignation and anger, hand on forehead. Insets: muddy torn boot marking the white rug; soot and water dripping from his hand. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 66 — "Club under / Carmella y Julián"
-Grilla: 5 viñetas. Ritmo: descenso al ambiente de club.
+Composición: splash de lugar + entrada de Carmella en catwalk con detalles incrustados. Ritmo: descenso al ambiente de club mientras arriba ya amanece.
 * **PERSONAJES:** Julián, Carmella Nocturna
 
-### Viñeta 66.1 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] Large wide shot of an underground gothic-industrial club, cathedral-like vaulted ceilings, steel structures, red artificial rain falling over a crowded dance floor. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a neon sign reading "NOCTURNA" in red script, and another showing red rain droplets splashing on a steel handrail. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 66.2, 66.3 y 66.5 — Tira de 3 Paneles (Detalles y Seguimiento)
-> [ESTILO BASE] [JULIAN] Three-panel comic strip, slanted gutters. Panel 1: Close-up of dark glasses filled with thick dark liquid on a bar. Panel 2: Elegant patrons in dark velvet suits talking in whispers, eyes reflecting red. Panel 3: Julián following behind, looking nervous, holding his bruised wrist. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 66.4 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [CARMELLA] Medium shot of Carmella walking down a steel catwalk, her crimson coat flowing behind her, a crowd of elegant patrons parting below in respect. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing her high-heeled leather boot stepping on the steel grid catwalk, and another showing patrons in the crowd bowing their heads. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [JULIAN] [CARMELLA] Full comic page layout, gothic-industrial club reveal. Dominant upper splash: underground club with cathedral-like vaulted ceilings, steel structures, red theatrical vapor drifting over a crowded dance floor, thick black gutters framing the architecture. A tiny high-vent inset shows pale morning light far above, unread by the characters, emphasizing that day is arriving outside while the underworld stays red and dark. Overlapping environmental insets: red neon sign reading NOCTURNA in stylized script; crimson condensation glowing on a steel handrail; dark glasses filled with thick dark liquid on a bar. Main lower panel: Carmella walks down a steel catwalk, crimson coat flowing, elegant patrons parting below in respect. Insets on the catwalk: her high-heeled boot stepping on steel grid; patrons bowing their heads. Bottom narrow panel: Julián follows behind, nervous, holding bruised wrist, eyes reflecting red club light. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 67 — "Under más oscuro / Ian y Mati observan"
-Grilla: 5 viñetas. Ritmo: investigación y revelación de mercado negro.
+Composición: investigación lateral + gran panel de mercado negro. Ritmo: investigación y revelación de mercado negro.
 * **PERSONAJES:** Ian, Mati, V.O.P.S.
 
-### Viñetas 67.1 y 67.5 — Tira de 2 Paneles (Investigación en el Club)
-> [ESTILO BASE] [IAN] [MATI] Two-panel comic strip, slanted gutters. Panel 1: Ian and Mati walking past heavy crimson velvet curtains lining the club's side rooms. Panel 2: Ian analyzing a stack of high-tech servers and custom cables, face serious. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 67.2 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] Large shot of a dark black-market corner, weapon crates containing UV-rifles and stolen glowing cyan tech parts, shady dealers negotiating. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of a UV-rifle's glowing energy core in a wooden crate, and another showing a roll of cash changing hands between pale fingers. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 67.3 y 67.4 — Tira de 2 Paneles con Zoom (El Tráfico del Under)
-> [ESTILO BASE] [MATI] Two-panel vertical comic strip, vertical zoom progression, slanted gutters. Panel 1 (top): Close shot of a dealer in a black coat holding a small vial of synthetic blood, glowing red. Panel 2 (bottom): Small shot of Mati's eyes behind his purple visor, wide in surprise. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN] [MATI] Full comic page layout, undercover investigation. Top narrow panel: Ian and Mati walk past heavy crimson velvet curtains lining the club's side rooms. Dominant central panel: dark black-market corner with weapon crates containing UV-rifles and stolen glowing cyan tech parts, shady dealers negotiating in red club haze. Overlapping insets: UV-rifle energy core glowing in wooden crate; cash changing hands between pale fingers; dealer in black coat holding a small vial of synthetic blood glowing red. Right vertical reaction strip: Mati's eyes widen behind purple visor; Ian analyzes stacked high-tech servers and custom cables with serious expression. Keep the page dense and shadowy, with thick black gutters and no speech bubbles. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 68 — "Beso-marca de Carmella"
-Grilla: 5 viñetas. Ritmo: intimidad y marca protectora.
+Composición: escena íntima dominante con lectura secreta para el lector. Ritmo: intimidad, mordida sutil y marca no transformadora.
 * **PERSONAJES:** Ian, Julián, Carmella Nocturna
 
-### Viñetas 68.1 y 68.2 — Tira de 2 Paneles (Acercamiento)
-> [ESTILO BASE] [CARMELLA] [JULIAN] Two-panel comic strip, slanted gutters. Panel 1: Medium shot of Carmella stopping in front of Julián, gently taking his chin in her pale hand. Panel 2: Close shot of her wiping a drop of dry blood from his cheek. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 68.3 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [CARMELLA] [JULIAN] Large intimate shot: Carmella leaning in and kissing Julián on the neck, red neon light behind them creating a warm haze, other patrons diverting eyes. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing Carmella's long pale fingers gently gripping Julián's dark knit sweater, and another showing an onlooker's hand holding a glass, pausing in mid-air. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 68.4 y 68.5 — Tira de 2 Paneles con Zoom (La Marca y la Sospecha)
-> [ESTILO BASE] [JULIAN] [IAN] Two-panel vertical comic strip, vertical zoom progression, slanted gutters. Panel 1 (top): Close-up of Julián's neck, showing a faint, elegant red runic mark glowing softly before fading under his collar. Panel 2 (bottom): Ian watching from the shadows, adjusting his glasses, registering the scene. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [CARMELLA] [JULIAN] [IAN] Full comic page layout, intimate red-noir page. Top small approach panels: Carmella stops in front of Julián and gently takes his chin in her pale hand; close-up of her wiping dry blood from his cheek. Dominant central panel: Carmella leans in as if kissing Julián on the neck, red neon behind them creating warm haze, other patrons politely diverting their eyes. The reader can see the secret detail: her lips part just enough for tiny fangs to pierce the side of his neck, a thin controlled trickle of blood at the contact point, Julián willingly allowing it with a dazed but calm expression. Ian and the other boys must not see the bite; their sightline is blocked by Carmella's hair, shoulder and coat collar, so to them it reads only as an intimate protective kiss. Overlapping insets: Carmella's long pale fingers gently gripping Julián's dark knit sweater; a tiny blood bead at her lip visible only to the reader; onlooker's hand holding a glass paused mid-air. Bottom zoom strip: close-up of Julián's neck with two tiny puncture marks hidden under his collar, no glowing rune, no transformation mark; Ian watches from shadows but does not register the bite, only mild suspicion about the intimacy. No vampire transformation, no turning Julián into a vampire, no explicit gore, no erotic exaggeration. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 69 — "Ian se separa para ver a Norman"
-Grilla: 5 viñetas. Ritmo: bifurcación y decisión solitaria.
+Composición: salida del under oscuro hacia exterior diurno y figura solitaria. Ritmo: bifurcación y decisión solitaria.
 * **PERSONAJES:** Ian, Mati, Julián, Norman Parker
 
-### Viñetas 69.1 y 69.4 — Tira de 2 Paneles (La Separación)
-> [ESTILO BASE] [IAN] [MATI] [JULIAN] Two-panel comic strip, slanted gutters. Panel 1: Ian, Mati, and Julián walking up old iron exit stairs towards a street grate. Panel 2: Ian turning to Mati and Julián, telling them he has to go alone. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 69.2 y 69.3 — Tira de 2 Paneles con Zoom (Decisión Digital)
-> [ESTILO BASE] [IAN] Two-panel vertical comic strip, vertical zoom progression, slanted gutters. Panel 1 (top): Close shot of Ian pulling out his glowing blue phone, unreadable notification blocks lighting his face. Panel 2 (bottom): Extreme close-up of the screen showing an address coordinate map overlay blinking. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 69.5 — Plano General (Escena Épica con Insets 3D)
-> [ESTILO BASE] [IAN] Wide shot: Ian walking out into a dark dark street with rain lines alone, putting on his dark hood, city lights blurred in the background. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing his boot stepping into a rain puddle reflecting neon signs, and another showing the amber tear pendant swinging against his chest. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN] [MATI] [JULIAN] [NORMAN] Full comic page layout, separation beat with strong contrast between underground and daylight. Top horizontal panel: Ian, Mati and Julián climb old iron exit stairs toward a street grate, underworld red light fading behind them. Left vertical decision strip: Ian pulls out glowing blue phone, unreadable notification blocks lighting his face; extreme close-up of address coordinate map overlay blinking; Ian turns to Mati and Julián and indicates he has to go alone, no speech bubble. Dominant bottom panel: Ian steps out alone into a clear daytime street, pulling up his hood against bright city light, no rain, dry air, a few old puddles reflecting signs on the pavement. Overlapping insets: boot stepping near a puddle reflection; amber tear pendant swinging against his chest. Keep Norman absent but implied by the cold corporate blue phone glow. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 70 — "Bar con Norman"
-Grilla: 4 viñetas. Ritmo: encuentro sobrio y calculador.
+Composición: bar clásico con Norman como aparición incrustada en el espacio. Ritmo: encuentro sobrio y calculador.
 * **PERSONAJES:** Ian, Norman Parker
 
-### Viñetas 70.1, 70.2 y 70.4 — Tira de 3 Paneles (El Pub y la Mirada)
-> [ESTILO BASE] [IAN] [NORMAN] Three-panel comic strip, slanted gutters, horizontal sequence. Panel 1: Wide shot of Ian entering a quiet, old-fashioned elegant pub, dark wood paneling, rain outside. Panel 2: Ian sitting on a leather stool at a polished wooden counter, ordering a drink. Panel 3: Close shot of Norman looking sideways, a subtle confident smile. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 70.3 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [NORMAN] Large atmospheric shot: Norman Parker sitting down at a bar counter as if he was always there, dark blue tailored suit, slicked-back hair, calm predatory expression. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of his glass of whiskey with a large ice sphere, and another showing his polished leather oxford shoes resting on the brass rail. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN] [NORMAN] Full comic page layout, quiet predatory meeting. Top establishing panel: Ian enters a quiet old-fashioned pub with dark wood paneling, bright daytime city visible through windows. Middle narrow panel: Ian sits on a leather stool at polished wooden counter, shoulders tense, ordering a drink without dialogue. Dominant atmospheric lower panel: Norman Parker is already seated at the bar as if he had always been there, dark blue tailored suit, slicked-back hair, calm predatory expression, turning slightly toward Ian. Overlapping detail insets: Norman's whiskey glass with large ice sphere; polished leather oxford shoes resting on brass rail; close-up of Norman's sideways smile. Muted warm interior light versus clear daylight outside, thick black gutters. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 71 — "Segunda oferta"
-Grilla: 5 viñetas. Ritmo: pacto forzado e impacto mental.
+Composición: trato silencioso con flash mental rasgando la página. Ritmo: pacto forzado e impacto mental.
 * **PERSONAJES:** Ian, Julián, Uandi, V.O.P.S., Norman Parker
 
-### Viñetas 71.1, 71.2, 71.3 y 71.5 — Tira de 4 Paneles (El Trato)
-> [ESTILO BASE] [NORMAN] [IAN] Four-panel comic strip, slanted gutters, horizontal sequence. Panel 1: Medium two-shot at a counter, Norman rotating his drink slowly, Ian watching with coldness. Panel 2: Norman's hand sliding a clean corporate keycard across the dark wood counter. Panel 3 (zoom): Extreme close-up of the keycard showing an embossed golden "P" logo. Panel 4: Ian taking the keycard, eyes hardened, Norman looking satisfied, transaction closed. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 71.4 — Flashes mentales (Escena Épica con Insets 3D)
-> [ESTILO BASE] [AEGIS] [VOPS] [JULIAN] Jagged mental flash panel in high-contrast black and white speed lines showing an overloaded red colossus Aegis roaring. Overlapping the main panel are three small borderless 3D inset close-up panels in high-contrast black-and-white: one showing a base in flames, another showing a shield commander's helmet, and a third showing Julián's handcuffed wrists. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [NORMAN] [IAN] [AEGIS] [VOPS] [JULIAN] Full comic page layout, quiet bargain interrupted by jagged mental imagery. Top horizontal bar sequence: Norman rotates his drink slowly while Ian watches coldly; Norman's hand slides a clean corporate keycard across dark wood; extreme close-up of keycard with embossed golden P logo; Ian takes it, eyes hardened, Norman satisfied. Across the middle, a jagged high-contrast mental flash tears through the page: overloaded red colossus Aegis roaring in black-and-white speed lines with red accent. Overlapping flash insets: base in flames; shield commander's helmet; Julián's cuffed wrists. Bottom still panel: Ian's hand closes around the card, decision made, pub light dim and heavy. No speech bubbles. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 72 — "Limusina / Parker Tower"
-Grilla: 5 viñetas. Ritmo: trayecto y revelación monumental.
+Composición: intercuts de limusina/parque/Gorgon y splash vertical de Torre Parker. Ritmo: trayecto y revelación monumental.
 * **PERSONAJES:** Ian, Norman Parker, Gorgon, V.O.P.S.
 
-### Viñetas 72.1 a 72.4 — Tira de 4 Paneles (Trayecto e Intercuts)
-> [ESTILO BASE] [IAN] [NORMAN] [GORGON] Four-panel comic strip, slanted gutters, horizontal sequence. Panel 1: Interior of a luxury black limousine, Ian and Norman sitting opposite under cool blue light. Panel 2: Medium shot of Norman looking out the limo window at the city. Panel 3: Intercut: Wide shot of an empty and broken park, searchlights sweeping, green smoke. Panel 4: Intercut: Dark silhouette shot of Gorgon inside a concrete sewer drain, respirator tubes glowing green. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 72.5 — SPLASH (Escena Épica con Insets 3D)
-> [ESTILO BASE] Full-page splash: A monumental black and blue skyscraper rising into a dark night with rain lines, clean futuristic lines. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of a security camera panning on the tower's corner, and another showing a glowing blue corporate logo "PARKER INDUSTRIES" on the glass facade. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN] [NORMAN] [GORGON] [VOPS] [PARKER-TOWER] Full comic page layout. Top cinematic strip: interior of luxury black limousine, Ian and Norman sitting opposite under cool blue light; Norman looks out window at the bright daytime city, calm and unreadable. Middle intercut strip: empty broken park in daylight with V.O.P.S. searchlights cutting through green smoke; Gorgon as a dark silhouette inside concrete sewer drain, respirator tubes glowing green. Dominant vertical splash occupying the right two-thirds: Parker Tower rises in clear daylight, a monumental black graphite and blue-glass corporate skyscraper with tapered vertical body, exposed dark structural ribs, curved blue curtain-wall glass, sharp crown spires and antennae, elevated skybridges and a massive cantilevered upper landing platform with a glowing white-blue P logo underneath. Overlapping architectural insets: security camera panning on tower corner; glowing blue corporate P logo on glass facade; transparent glass lobby canopy far below; blue glass panels reflecting the bright sky. Thick black gutters, clean corporate menace, no rain. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 73 — "Ian vuelve por el grupo / Jaz no va"
-Grilla: 4 viñetas. Ritmo: debate interno y ruptura.
+Composición: penthouse como escenario emocional, grupo dividido por diagonales. Ritmo: debate interno y ruptura.
 * **PERSONAJES:** Ian, Mati, Julián, Uandi, Jaz, Norman Parker
 
-### Viñetas 73.1 a 73.4 — Tira de 4 Paneles (La Decisión del Grupo)
-> [ESTILO BASE] [IAN] [MATI] [JULIAN] [UANDI] [JAZ] Four-panel comic strip, slanted gutters, horizontal sequence. Panel 1: Wide interior shot of the penthouse, Ian standing in front of the group, keycard in hand. Panel 2: Medium shot of Mati, Julián, and Uandi listening, exhausted, weighing the decision. Panel 3: Medium shot of Jaz crossing her arms, her golden aura tight and defensive, refusing; Ian watching her. Panel 4: Medium shot of the three picking up their small bags, ready to leave, Jaz standing at her doorway looking at them with sadness. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN] [MATI] [JULIAN] [UANDI] [JAZ] Full comic page layout, emotional group decision. Dominant wide penthouse panel: Ian stands before Mati, Julián and Uandi with the Parker keycard in hand, clean room lights contrasting with everyone's exhaustion. Left stacked reaction panels: Mati, Julián and Uandi listen, bruised and tired, weighing the choice; close-up of keycard held between Ian's fingers. Right diagonal panel: Jaz crosses her arms, golden aura tight and defensive, refusing to go while Ian watches her. Bottom wide departure panel: the three gather small bags and prepare to leave, Jaz at her doorway looking at them with sadness, emotional distance shown by black gutter splitting her from the group. No dialogue, all body language. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 74 — "Llegada final a Parker Tower / reveal Norman"
-Grilla: 4 viñetas. Ritmo: incursión y revelación perturbadora.
+Composición: entrada monumental + Norman reflejado + monitor wall final. Ritmo: incursión y revelación perturbadora.
 * **PERSONAJES:** Ian, Mati, Julián, Uandi, Norman Parker
 
-### Viñeta 74.1 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [IAN] [MATI] [JULIAN] [UANDI] Large ground-level shot outside a glass lobby with rain lines, the four walking inside, looking tiny beneath a massive steel frame. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a security card scanner flashing green as Ian swipes the keycard, and another showing their reflection on the polished marble floor. [NEGATIVO ESTÁNDAR]
-
-### Viñetas 74.2 y 74.3 — Tira de 2 Paneles con Zoom (Foco en Norman)
-> [ESTILO BASE] [NORMAN] Two-panel vertical comic strip, vertical zoom-in, slanted gutters. Panel 1 (top): Medium shot of Norman Parker in his high-rise office, back to the camera, looking down through a panoramic window. Panel 2 (bottom): Close shot of Norman's face reflection in the glass window, showing a subtle, fluid, elastic cellular distortion for a split second. [NEGATIVO ESTÁNDAR]
-
-### Viñeta 74.4 — Plano General Grande (Escena Épica con Insets 3D)
-> [ESTILO BASE] [NORMAN] Large final shot: wall-sized tactical monitors showing three-dimensional biometric and energy scans in violet, red, magenta and green, Norman standing as a dark silhouette in the foreground, data lights bleeding across the bottom gutter. Overlapping the main panel are two small borderless 3D inset close-up panels: one showing a close-up of a monitor showing Aegis's DNA strand sequencing, and another showing a monitor showing Ian's green vector energy signature spiking. [NEGATIVO ESTÁNDAR]
+### Prompt de página completa
+> [ESTILO BASE] [IAN] [MATI] [JULIAN] [UANDI] [NORMAN] [PARKER-TOWER] [PARKER-INTERIOR] [PARKER-GARAGE] Full comic page layout, final corporate reveal. Top ground-level wide panel: the four enter Parker Tower's transparent glass lobby in bright daylight, tiny beneath a massive black graphite steel frame, blue glass curtain walls, angular exterior ribs and a clean glass canopy; polished marble floor reflects them and a few old outdoor puddles are visible beyond the entrance, no rain. Overlapping insets: Ian swipes the keycard and scanner flashes green; their reflection stretches across polished marble; the glowing white-blue P logo appears above the entrance. Middle vertical Norman strip: Norman Parker in a high-rise office with back to camera, looking down through panoramic blue-tinted glass toward the tower plaza; close-up of his face reflected in glass with subtle fluid elastic cellular distortion for one split second. Dominant bottom final panel: pristine Parker Tower command interior with grey polished floor, blue light strips, curved walls and wall-sized tactical monitors displaying three-dimensional biometric and energy scans in violet, red, magenta and green, Norman a dark silhouette in foreground, data light bleeding into bottom gutter. Insets show Aegis DNA sequencing, Ian's green vector energy signature spiking, and a hidden sublevel garage feed: circular graphite mech hangar with yellow robotic arms and a giant green-lit armored suit docked on a hydraulic platform. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # FIN DEL SUPLEMENTO OPTIMIZADO
+

@@ -4,12 +4,28 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Users, BookOpen, Lock, Unlock, Menu, X, Compass } from "lucide-react";
 
+/**
+ * NavBar — Elseframe Comics
+ *
+ * Header sticky con identidad "Light Background" del manual de marca:
+ * - Fondo: Paper Crudo texturizado (brand-grain-light) → #E9E2D3 base
+ * - Borde inferior: Blood Red #880D16
+ * - Tipografía: Bungee (editorial/ink) para nav items — más acorde al wordmark
+ * - Logo: logo_light.webp (logo negro sobre crema) en desktop
+ *         icono_mini.webp en mobile
+ *
+ * Paleta de marca:
+ *   Ink Black  #0A0A0A
+ *   Blood Red  #880D16
+ *   Paper Cream #E9E2D3
+ */
 export default function NavBar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [sagasList, setSagasList] = useState<any[]>([]);
-  const [unlockAll, setUnlockAll] = useState(false);
-  const [pilotsOpen, setPilotsOpen] = useState(false);
+  const [menuOpen, setMenuOpen]                 = useState(false);
+  const [sagasList, setSagasList]               = useState<any[]>([]);
+  const [unlockAll, setUnlockAll]               = useState(false);
+  const [pilotsOpen, setPilotsOpen]             = useState(false);
   const [mobilePilotsOpen, setMobilePilotsOpen] = useState(false);
+  const [scrolled, setScrolled]                 = useState(false);
 
   useEffect(() => {
     const loadSagas = () => {
@@ -20,108 +36,155 @@ export default function NavBar() {
     };
     loadSagas();
 
-    const val = localStorage.getItem("unlock-all") === "true";
-    setUnlockAll(val);
+    setUnlockAll(localStorage.getItem("unlock-all") === "true");
 
-    const checkUnlock = () => {
+    const checkUnlock = () =>
       setUnlockAll(localStorage.getItem("unlock-all") === "true");
-    };
-    window.addEventListener("unlockAllChanged", checkUnlock);
+    const onScroll    = () => setScrolled(window.scrollY > 8);
+
+    window.addEventListener("unlockAllChanged",   checkUnlock);
     window.addEventListener("previewStateChanged", loadSagas);
+    window.addEventListener("scroll",             onScroll, { passive: true });
     return () => {
-      window.removeEventListener("unlockAllChanged", checkUnlock);
+      window.removeEventListener("unlockAllChanged",   checkUnlock);
       window.removeEventListener("previewStateChanged", loadSagas);
+      window.removeEventListener("scroll",             onScroll);
     };
   }, []);
 
   const toggleUnlockAll = () => {
-    const nextVal = !unlockAll;
-    localStorage.setItem("unlock-all", nextVal ? "true" : "false");
-    setUnlockAll(nextVal);
+    const next = !unlockAll;
+    localStorage.setItem("unlock-all", next ? "true" : "false");
+    setUnlockAll(next);
     window.dispatchEvent(new Event("unlockAllChanged"));
   };
 
-  return (
-    <header className="sticky top-0 z-50" style={{ background: "#001419", borderBottom: "3px solid #D7263D" }}>
-      <div className="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between gap-4">
+  /* ─── shared nav link style ─────────────────────────────────────────── */
+  const navLink =
+    "font-[var(--font-bungee)] text-[14px] tracking-[0.12em] text-[#0A0A0A] " +
+    "hover:text-[#880D16] transition-colors uppercase " +
+    "pb-0.5 border-b-2 border-transparent hover:border-[#880D16]";
 
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0 group hover:opacity-90 transition-opacity">
+  /* ─── CTA button: ink solid (Alto contraste: fondo negro puro) ───────────────────────── */
+  const btnInk =
+    "font-[var(--font-bungee)] text-[12px] tracking-[0.12em] uppercase px-5 py-2.5 " +
+    "bg-[#0A0A0A] text-[#E9E2D3] border-2 border-[#0A0A0A] " +
+    "hover:bg-[#880D16] hover:border-[#880D16] hover:text-[#E9E2D3] " +
+    "transition-all shadow-[3px_3px_0_rgba(0,0,0,1)] " +
+    "active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_rgba(0,0,0,1)] " +
+    "shrink-0 flex items-center gap-1.5 cursor-pointer";
+
+  /* ─── CTA button: red solid (Alto contraste: rojo puro) ─────────────────────────── */
+  const btnRed =
+    "font-[var(--font-bungee)] text-[12px] tracking-[0.12em] uppercase px-5 py-2.5 " +
+    "bg-[#880D16] text-[#E9E2D3] border-2 border-[#880D16] " +
+    "hover:bg-[#0A0A0A] hover:border-[#0A0A0A] hover:text-[#E9E2D3] " +
+    "transition-all shadow-[3px_3px_0_rgba(0,0,0,1)] " +
+    "active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_rgba(0,0,0,1)] " +
+    "shrink-0 flex items-center gap-1.5 cursor-pointer";
+
+  /* ─── outline ghost button (Alto contraste: fondo blanco/crema con borde negro) ───────── */
+  const btnGhost =
+    "font-[var(--font-bungee)] text-[12px] tracking-[0.12em] uppercase px-5 py-2.5 " +
+    "bg-[#F3EFE3] text-[#0A0A0A] border-2 border-[#0A0A0A] " +
+    "hover:bg-[#0A0A0A] hover:text-[#E9E2D3] " +
+    "transition-all shadow-[3px_3px_0_rgba(0,0,0,1)] " +
+    "active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_rgba(0,0,0,1)] " +
+    "shrink-0 flex items-center gap-1.5 cursor-pointer";
+
+  return (
+    <header
+      className="sticky top-0 z-50 brand-grain-light transition-shadow duration-300"
+      style={{
+        borderBottom: "3px solid #880D16",
+        boxShadow: scrolled
+          ? "0 6px 24px rgba(0,0,0,0.18), 0 1px 0 rgba(136,13,22,0.2)"
+          : "0 4px 12px rgba(0,0,0,0.08)",
+      }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 md:h-24 flex items-center justify-between gap-4">
+
+        {/* ── Logo ──────────────────────────────────────────────────────── */}
+        <Link
+          href="/"
+          className="flex items-center shrink-0 hover:opacity-85 transition-opacity"
+          aria-label="Elseframe Comics — Inicio"
+        >
+          {/* Mismo logo de desktop para mobile, pero responsivo de mayor tamaño */}
           <img
-            src="/logo_white.webp"
-            alt="The Boyz Logo"
-            className="h-10 w-auto object-contain block rounded-lg"
+            src="/marca/logo_light.webp"
+            alt="Elseframe Comics"
+            className="h-10 sm:h-12 md:h-14 w-auto object-contain"
           />
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* ── Desktop Nav ───────────────────────────────────────────────── */}
+        <nav className="hidden md:flex items-center gap-7">
+
           {/* Cómics Dropdown */}
           <div className="relative group">
-            <button
-              className="font-[var(--font-bangers)] text-xl tracking-wider text-white/80 hover:text-[#D7263D] transition-colors pb-1 border-b-2 border-transparent hover:border-[#D7263D] flex items-center gap-1"
-            >
+            <button className={`${navLink} flex items-center gap-1`}>
               Cómics
-              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className="opacity-60 group-hover:opacity-100 transition-all group-hover:translate-y-0.5">
-                <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+                className="opacity-70 group-hover:opacity-100 transition-all group-hover:translate-y-0.5 mt-px text-[#0A0A0A]">
+                <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"/>
               </svg>
             </button>
-            {/* Dropdown Wrapper (invisible bridge) */}
+
+            {/* Invisible bridge + dropdown */}
             <div className="absolute top-full left-0 pt-2 hidden group-hover:flex flex-col z-50">
               <div
-                className="flex flex-col gap-4 p-4 min-w-[280px] max-w-[320px] max-h-[70vh] overflow-y-auto rounded-lg"
-                style={{ background: "#003842", border: "2px solid #D7263D", boxShadow: "6px 6px 0 #D7263D" }}
+                className="flex flex-col gap-3 p-4 min-w-[280px] max-w-[320px] max-h-[70vh] overflow-y-auto"
+                style={{
+                  background: "#E9E2D3",
+                  backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23g)' opacity='0.38'/%3E%3C/svg%3E\")",
+                  backgroundSize: "200px 200px",
+                  border: "2px solid #0A0A0A",
+                  boxShadow: "6px 6px 0 #880D16",
+                }}
               >
-                {/* Official Sagas (Canon) */}
+                {/* Official Sagas */}
                 {sagasList.filter(s => s.order >= 3).map((saga) => (
-                  <div key={saga.id} className="flex flex-col gap-1 border-b border-white/10 last:border-0 pb-3 last:pb-0">
-                    <div className="flex items-center gap-2 mb-0.5">
-                      <p className="font-[var(--font-bangers)] text-sm tracking-widest text-[#D7263D] uppercase">
-                        {saga.title}
-                      </p>
-                    </div>
-                    <div className="flex flex-col gap-0.5 pl-2">
-                      {saga.chapters.map((ch: any) => (
-                        <Link key={ch.id} href={`/chapters/${ch.id}`}
-                          className="font-[var(--font-bangers)] text-base tracking-wider py-1 text-white hover:text-[#001419] hover:bg-[#D7263D] transition-all block px-2 rounded-sm">
-                          <span className="text-[#D7263D] mr-2">#{ch.number}</span>{ch.title}
-                        </Link>
-                      ))}
-                    </div>
+                  <div key={saga.id} className="flex flex-col gap-0.5 border-b border-black/15 last:border-0 pb-3 last:pb-0">
+                    <p className="font-[var(--font-bungee)] text-[11px] tracking-[0.15em] text-[#880D16] uppercase mb-1">
+                      {saga.title}
+                    </p>
+                    {saga.chapters.map((ch: any) => (
+                      <Link key={ch.id} href={`/chapters/${ch.id}`}
+                        className="font-[var(--font-bungee)] text-[12px] tracking-wide py-1 text-[#0A0A0A] hover:text-[#E9E2D3] hover:bg-[#0A0A0A] transition-all block px-2">
+                        <span className="text-[#880D16] mr-2">#{ch.number}</span>{ch.title}
+                      </Link>
+                    ))}
                   </div>
                 ))}
 
-                {/* Pilot Sagas (Collapsible Section) */}
+                {/* Pilots — Collapsible */}
                 {sagasList.some(s => s.order < 3) && (
                   <div className="flex flex-col pt-1">
                     <button
                       onClick={() => setPilotsOpen(!pilotsOpen)}
-                      className="w-full flex items-center justify-between font-[var(--font-bangers)] text-sm tracking-widest text-white/50 hover:text-[#D7263D] py-2 border-t border-white/10 transition-colors cursor-pointer select-none"
+                      className="w-full flex items-center justify-between font-[var(--font-bungee)] text-[10px] tracking-[0.12em] text-[#0A0A0A]/65 hover:text-[#880D16] py-2 border-t border-black/15 transition-colors cursor-pointer select-none"
                     >
                       <span className="flex items-center gap-1.5">
-                        <span className="text-[10px] bg-white/10 text-white/60 px-1 border border-white/10">PILOTO</span>
-                        CÓMICS ANTERIORES
+                        <span className="text-[9px] bg-black/10 text-black/60 px-1 border border-black/10">PILOTO</span>
+                        ANTERIORES
                       </span>
-                      <span className={`transition-transform duration-200 text-xs ${pilotsOpen ? "rotate-180 text-[#D7263D]" : ""}`}>
-                        ▼
-                      </span>
+                      <span className={`transition-transform duration-200 text-[10px] ${pilotsOpen ? "rotate-180 text-[#880D16]" : ""}`}>▼</span>
                     </button>
 
                     {pilotsOpen && (
-                      <div className="flex flex-col gap-3 mt-2 pl-1 border-l-2 border-dashed border-white/10 animate-fadeIn">
+                      <div className="flex flex-col gap-2 mt-2 pl-1 border-l-2 border-dashed border-black/15 animate-fadeIn">
                         {sagasList.filter(s => s.order < 3).map((saga) => (
-                          <div key={saga.id} className="flex flex-col gap-1 pb-2 last:pb-0 border-b border-white/5 last:border-0">
-                            <p className="font-[var(--font-bangers)] text-xs tracking-wider text-[#D7263D]/80 uppercase">
+                          <div key={saga.id} className="flex flex-col gap-0.5 pb-2 last:pb-0">
+                            <p className="font-[var(--font-bungee)] text-[9px] tracking-wider text-[#880D16]/80 uppercase">
                               {saga.title}
                             </p>
-                            <div className="flex flex-col gap-0.5 pl-1.5">
-                              {saga.chapters.map((ch: any) => (
-                                <Link key={ch.id} href={`/chapters/${ch.id}`}
-                                  className="font-[var(--font-bangers)] text-sm tracking-wider py-0.5 text-white/80 hover:text-[#001419] hover:bg-[#D7263D] transition-all block px-1.5 rounded-sm">
-                                  <span className="text-[#D7263D] mr-1.5 text-xs">#{ch.number}</span>{ch.title}
-                                </Link>
-                              ))}
-                            </div>
+                            {saga.chapters.map((ch: any) => (
+                              <Link key={ch.id} href={`/chapters/${ch.id}`}
+                                className="font-[var(--font-bungee)] text-[11px] tracking-wide py-0.5 text-[#0A0A0A]/70 hover:text-[#E9E2D3] hover:bg-[#0A0A0A] transition-all block px-1.5">
+                                <span className="text-[#880D16] mr-1.5 text-[10px]">#{ch.number}</span>{ch.title}
+                              </Link>
+                            ))}
                           </div>
                         ))}
                       </div>
@@ -132,172 +195,136 @@ export default function NavBar() {
             </div>
           </div>
 
-          {/* Lore Button */}
-          <Link
-            href="/lore"
-            className="font-[var(--font-bangers)] text-xl tracking-wider text-white/80 hover:text-[#D7263D] transition-colors pb-1 border-b-2 border-transparent hover:border-[#D7263D] uppercase"
-          >
-            LORE
-          </Link>
+          {/* Lore */}
+          <Link href="/lore" className={navLink}>LORE</Link>
 
-          {/* Personajes Button */}
-          <Link
-            href="/#pibes"
-            className="font-[var(--font-bangers)] text-sm tracking-wider px-4 py-1.5 border-2 border-white/30 bg-white/5 hover:bg-white/15 hover:border-white/60 text-white/80 hover:text-white uppercase transition-all shadow-[2px_2px_0_rgba(0,0,0,0.5)] active:translate-y-0.5 active:translate-x-0.5 shrink-0 flex items-center gap-1.5"
-          >
-            <Users className="w-3.5 h-3.5" />
+          {/* Personajes */}
+          <Link href="/#pibes" className={btnGhost}>
+            <Users className="w-4 h-4" />
             PIBES
           </Link>
 
-          {/* Leer Cómic Button */}
-          <Link
-            href="/#sagas"
-            className="font-[var(--font-bangers)] text-sm tracking-wider px-4 py-1.5 border-2 border-[#D7263D] bg-[#D7263D] hover:bg-[#ff3b51] hover:border-[#ff3b51] text-white uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] shrink-0 flex items-center gap-1.5"
-          >
-            <BookOpen className="w-3.5 h-3.5" />
+          {/* Leer Cómic — CTA principal */}
+          <Link href="/#sagas" className={btnRed}>
+            <BookOpen className="w-4 h-4" />
             LEER
           </Link>
 
-          {/* Global Toggle Button */}
-          <button
-            onClick={toggleUnlockAll}
-            className={`font-[var(--font-bangers)] text-sm tracking-wider px-4 py-1.5 border-2 uppercase transition-all shadow-[2px_2px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0_#000] cursor-pointer shrink-0 flex items-center gap-1.5 ${
-              unlockAll
-                ? "bg-[#D7263D] border-[#D7263D] text-white hover:bg-[#ff3b51]"
-                : "bg-[#D7263D] border-[#D7263D] text-[#001419] hover:bg-[#ff3b51]"
-            }`}
-          >
-            {unlockAll ? <Lock className="w-3.5 h-3.5" /> : <Unlock className="w-3.5 h-3.5" />}
+          {/* Spoilers Toggle */}
+          <button onClick={toggleUnlockAll} className={btnInk}>
+            {unlockAll ? <Lock className="w-4 h-4" /> : <Unlock className="w-4 h-4" />}
             <span>{unlockAll ? "SPOILERS ON" : "SPOILERS"}</span>
           </button>
         </nav>
 
-        {/* Mobile Actions */}
-        <div className="flex md:hidden items-center gap-1.5 sm:gap-2">
-          <Link
-            href="/lore"
-            className="p-2 border border-white/20 bg-white/5 text-white/70 transition-all active:scale-95 shrink-0"
-            title="Lore"
-          >
-            <Compass className="w-4 h-4" />
+        {/* ── Mobile Actions (Rediseñados para máximo contraste y tamaño óptimo) ── */}
+        <div className="flex md:hidden items-center gap-2">
+          <Link href="/lore" title="Lore"
+            className="p-2.5 border-2 border-[#0A0A0A] bg-[#F3EFE3] text-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-[#E9E2D3] transition-all shadow-[2px_2px_0_rgba(0,0,0,1)] active:scale-95 shrink-0">
+            <Compass className="w-5 h-5" />
           </Link>
-          <Link
-            href="/#pibes"
-            className="p-2 border border-white/20 bg-white/5 text-white/70 transition-all active:scale-95 shrink-0"
-            title="Personajes"
-          >
-            <Users className="w-4 h-4" />
+          <Link href="/#pibes" title="Personajes"
+            className="p-2.5 border-2 border-[#0A0A0A] bg-[#F3EFE3] text-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-[#E9E2D3] transition-all shadow-[2px_2px_0_rgba(0,0,0,1)] active:scale-95 shrink-0">
+            <Users className="w-5 h-5" />
           </Link>
-          <Link
-            href="/#sagas"
-            className="p-2 border border-[#D7263D] bg-[#D7263D] text-white transition-all shadow-[1px_1px_0_#000] active:scale-95 shrink-0"
-            title="Leer Cómic"
-          >
-            <BookOpen className="w-4 h-4" />
+          <Link href="/#sagas" title="Leer Cómic"
+            className="p-2.5 border-2 border-[#0A0A0A] bg-[#880D16] text-[#E9E2D3] hover:bg-[#0A0A0A] hover:text-[#E9E2D3] transition-all shadow-[2px_2px_0_rgba(0,0,0,1)] active:scale-95 shrink-0">
+            <BookOpen className="w-5 h-5" />
           </Link>
-
-          <button
-            onClick={toggleUnlockAll}
-            title={unlockAll ? "Ocultar spoilers" : "Mostrar spoilers"}
-            className={`p-2 border transition-all shadow-[1px_1px_0_#000] active:scale-95 cursor-pointer shrink-0 ${
-              unlockAll
-                ? "bg-[#D7263D] border-[#D7263D] text-white"
-                : "bg-[#D7263D] border-[#D7263D] text-black"
-            }`}
-          >
-            {unlockAll ? <Lock className="w-4 h-4" /> : <Unlock className="w-4 h-4" />}
+          <button onClick={toggleUnlockAll} title={unlockAll ? "Ocultar spoilers" : "Mostrar spoilers"}
+            className="p-2.5 border-2 border-[#0A0A0A] bg-[#0A0A0A] text-[#E9E2D3] hover:bg-[#880D16] hover:border-[#880D16] transition-all shadow-[2px_2px_0_rgba(0,0,0,1)] active:scale-95 shrink-0 cursor-pointer">
+            {unlockAll ? <Lock className="w-5 h-5" /> : <Unlock className="w-5 h-5" />}
           </button>
-          
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 text-white border border-white/20 hover:border-[#D7263D] hover:text-[#D7263D] transition-colors"
+            className="p-2.5 border-2 border-[#0A0A0A] bg-[#F3EFE3] text-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-[#E9E2D3] transition-colors cursor-pointer"
           >
             {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* ── Mobile Dropdown ───────────────────────────────────────────────── */}
       {menuOpen && (
         <div
-          style={{ background: "#003842", borderTop: "2px solid #D7263D", maxHeight: "calc(100vh - 64px)" }}
-          className="md:hidden px-5 py-6 flex flex-col gap-5 overflow-y-auto"
+          className="md:hidden px-5 py-6 flex flex-col gap-4 overflow-y-auto brand-grain-light"
+          style={{
+            borderTop: "1px solid #880D16",
+            maxHeight: "calc(100vh - 64px)",
+          }}
         >
-          <Link
-            href="/#sagas"
-            onClick={() => setMenuOpen(false)}
-            className="w-full font-[var(--font-bangers)] text-lg text-center tracking-wider py-2.5 border-2 border-white bg-[#D7263D] hover:bg-[#ff3b51] text-white uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] block"
-          >
+          {/* Logo en el drawer */}
+          <div className="flex justify-center pb-3 border-b border-black/10">
+            <img
+              src="/marca/logo_light_mini.webp"
+              alt="Elseframe Comics"
+              className="h-9 w-auto object-contain"
+            />
+          </div>
+
+          <Link href="/#sagas" onClick={() => setMenuOpen(false)}
+            className="w-full font-[var(--font-bungee)] text-sm text-center tracking-[0.1em] py-3 border-2 border-[#880D16] bg-[#880D16] hover:bg-[#a01020] text-[#E9E2D3] uppercase transition-all shadow-[3px_3px_0_rgba(0,0,0,0.2)] active:translate-y-0.5 active:translate-x-0.5 block">
             Leer Cómic →
           </Link>
 
-          <Link
-            href="/lore"
-            onClick={() => setMenuOpen(false)}
-            className="w-full font-[var(--font-bangers)] text-lg text-center tracking-wider py-2.5 border-2 border-white/30 bg-transparent hover:bg-white/10 text-white uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] block"
-          >
+          <Link href="/lore" onClick={() => setMenuOpen(false)}
+            className="w-full font-[var(--font-bungee)] text-sm text-center tracking-[0.1em] py-3 border-2 border-[#0A0A0A]/25 bg-transparent hover:bg-black/5 text-[#0A0A0A] uppercase transition-all shadow-[3px_3px_0_rgba(0,0,0,0.08)] block">
             LORE
           </Link>
 
-          {/* Button at the top of mobile menu */}
-          <button
-            onClick={toggleUnlockAll}
-            className="w-full font-[var(--font-bangers)] text-lg tracking-wider py-2.5 border-2 border-black uppercase transition-all shadow-[3px_3px_0_#000] active:translate-y-0.5 active:translate-x-0.5 active:shadow-[2px_2px_0_#000] cursor-pointer"
+          <button onClick={toggleUnlockAll}
+            className="w-full font-[var(--font-bungee)] text-sm tracking-[0.1em] py-3 border-2 uppercase transition-all shadow-[3px_3px_0_rgba(0,0,0,0.15)] cursor-pointer"
             style={{
-              backgroundColor: unlockAll ? "#6b7280" : "#D7263D",
-              color: unlockAll ? "white" : "black"
+              borderColor: unlockAll ? "#555" : "#0A0A0A",
+              background:  unlockAll ? "#555" : "#0A0A0A",
+              color: "#E9E2D3",
             }}
           >
             {unlockAll ? "✕ Ocultar Spoilers" : "🔓 Desbloquear Todo"}
           </button>
-          
-          {/* Official Sagas on Mobile */}
+
+          {/* Sagas oficiales */}
           {sagasList.filter(s => s.order >= 3).map((saga) => (
             <div key={saga.id}>
-              <p
-                className="font-[var(--font-bangers)] text-2xl mb-2 tracking-widest"
-                style={{ color: "#D7263D" }}
-              >
+              <p className="font-[var(--font-bungee)] text-sm mb-2 tracking-[0.1em] text-[#880D16] uppercase">
                 {saga.title}
               </p>
               {saga.chapters.map((ch: any) => (
                 <Link key={ch.id} href={`/chapters/${ch.id}`}
                   onClick={() => setMenuOpen(false)}
-                  className="font-[var(--font-bangers)] text-xl tracking-wider pl-4 py-1.5 block text-white/70 hover:text-[#D7263D] hover:pl-6 transition-all border-l-2 border-white/10 hover:border-[#D7263D] mb-1">
-                  <span className="text-[#D7263D] mr-2">#{ch.number}</span>{ch.title}
+                  className="font-[var(--font-bungee)] text-[13px] tracking-wide pl-4 py-1.5 block text-[#0A0A0A]/60 hover:text-[#880D16] hover:pl-6 transition-all border-l-2 border-black/15 hover:border-[#880D16] mb-1">
+                  <span className="text-[#880D16] mr-2">#{ch.number}</span>{ch.title}
                 </Link>
               ))}
             </div>
           ))}
 
-          {/* Pilot Sagas on Mobile (Collapsible) */}
+          {/* Pilots — collapsible */}
           {sagasList.some(s => s.order < 3) && (
-            <div className="flex flex-col border-t border-white/10 pt-4">
+            <div className="flex flex-col border-t border-black/10 pt-3">
               <button
                 onClick={() => setMobilePilotsOpen(!mobilePilotsOpen)}
-                className="w-full flex items-center justify-between font-[var(--font-bangers)] text-xl tracking-widest text-[#D7263D] py-2 cursor-pointer select-none"
+                className="w-full flex items-center justify-between font-[var(--font-bungee)] text-sm tracking-[0.1em] text-[#880D16] py-2 cursor-pointer select-none"
               >
                 <span className="flex items-center gap-2">
-                  <span className="text-xs bg-white/10 text-white/60 px-1.5 py-0.5 border border-white/10">PILOTO</span>
-                  CÓMICS ANTERIORES
+                  <span className="text-[10px] bg-black/10 text-black/50 px-1.5 py-0.5 border border-black/10">PILOTO</span>
+                  ANTERIORES
                 </span>
-                <span className={`transition-transform duration-200 ${mobilePilotsOpen ? "rotate-180" : ""}`}>
-                  ▼
-                </span>
+                <span className={`transition-transform duration-200 ${mobilePilotsOpen ? "rotate-180" : ""}`}>▼</span>
               </button>
 
               {mobilePilotsOpen && (
-                <div className="flex flex-col gap-4 mt-3 pl-2 border-l-2 border-dashed border-white/10 animate-fadeIn">
+                <div className="flex flex-col gap-3 mt-3 pl-2 border-l-2 border-dashed border-black/15 animate-fadeIn">
                   {sagasList.filter(s => s.order < 3).map((saga) => (
                     <div key={saga.id}>
-                      <p className="font-[var(--font-bangers)] text-lg mb-1.5 tracking-wider text-white/90">
+                      <p className="font-[var(--font-bungee)] text-xs mb-1 tracking-wider text-[#0A0A0A]/70 uppercase">
                         {saga.title}
                       </p>
                       {saga.chapters.map((ch: any) => (
                         <Link key={ch.id} href={`/chapters/${ch.id}`}
                           onClick={() => setMenuOpen(false)}
-                          className="font-[var(--font-bangers)] text-lg tracking-wider pl-3 py-1 block text-white/60 hover:text-[#D7263D] transition-all border-l border-white/10 mb-0.5">
-                          <span className="text-[#D7263D] mr-1.5 text-sm">#{ch.number}</span>{ch.title}
+                          className="font-[var(--font-bungee)] text-[12px] tracking-wide pl-3 py-1 block text-[#0A0A0A]/50 hover:text-[#880D16] transition-all border-l border-black/10 mb-0.5">
+                          <span className="text-[#880D16] mr-1.5 text-[10px]">#{ch.number}</span>{ch.title}
                         </Link>
                       ))}
                     </div>
@@ -311,5 +338,3 @@ export default function NavBar() {
     </header>
   );
 }
-
-

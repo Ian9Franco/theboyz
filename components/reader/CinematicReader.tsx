@@ -650,8 +650,8 @@ export function CinematicReader({
 
   return (
     <div
-      className="fixed inset-0 z-[150] w-screen h-screen flex flex-col overflow-hidden"
-      style={{ background: "#0a0a0f", touchAction: "none" }}
+      className="brand-grain fixed inset-0 z-[150] w-screen h-screen flex flex-col overflow-hidden"
+      style={{ touchAction: "none" }}
     >
       <ReaderTopBar
         saga={saga}

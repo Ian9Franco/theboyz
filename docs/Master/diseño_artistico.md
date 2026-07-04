@@ -49,7 +49,7 @@ Este bloque define la distribución de los elementos editoriales de la portada (
 > A professional, high-end comic book cover layout and commercial print design. 
 > 
 > EDITORIAL LOGO AND TEXT ELEMENTS:
-> - In the upper left corner, a clean, solid vertical rectangular logo box with a sharp publisher badge icon, a bold "#01" issue number, and a small "$4.99 US" price tag.
+> - In the upper left corner, a clean, solid vertical rectangular logo box with a sharp publisher badge icon "elseframe comics", a bold "#01" issue number, and a small "$4.99 US" price tag.
 > - Across the top third, a massive, powerful comic book title logo reading "[INSERT_TITLE]" in an extra-bold, heavy-weight uppercase sans-serif font with a distinct gritty, slightly distressed stencil texture.
 > - In the bottom left corner, a crisp, realistic white barcode box with black scanning lines and serialization numbers.
 > - In the lower section, modern minimalist text in an uppercase, pure white condensed sans-serif font displaying brief dramatic story taglines, with a tiny, sharp "ian ©" mark aligned to the bottom right.

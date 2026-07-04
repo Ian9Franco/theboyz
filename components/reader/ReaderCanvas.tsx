@@ -122,7 +122,7 @@ export function ReaderCanvas({
       onDoubleClick={mode === "read" ? handleDoubleClick : undefined}
       onClick={mode === "read" ? handleReaderTap : undefined}
       className={`relative flex-1 h-full overflow-hidden select-none ${
-        mode === "edit" ? "bg-zinc-900 border-r-3 border-[#0a0a0f]" : "bg-[#0a0a0f]"
+        mode === "edit" ? "bg-zinc-900 border-r-3 border-[#0a0a0f]" : "brand-grain"
       } ${
         mode === "read"
           ? isPanning
@@ -352,7 +352,7 @@ export function ReaderCanvas({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.25, ease: "easeOut" }}
-                    className="absolute bg-[#0a0a0f] select-none overflow-hidden"
+                    className="absolute brand-grain select-none overflow-hidden"
                     style={{
                       left: maskLeft - 1,
                       top: maskTop - 1,
@@ -557,7 +557,7 @@ export function ReaderCanvas({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="absolute inset-0 bg-[#0a0a0f] z-[100] flex flex-col items-center justify-center pointer-events-auto cursor-default"
+            className="absolute inset-0 brand-grain z-[100] flex flex-col items-center justify-center pointer-events-auto cursor-default"
             onClick={(e) => e.stopPropagation()}
           >
             <motion.div

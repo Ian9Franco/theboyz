@@ -17,6 +17,11 @@
   --surface-3:  #063f49;
   --line:       rgba(215, 38, 61, 0.48);
   --glow:       rgba(215, 38, 61, 0.34);
+
+  /* Elseframe Brand Tokens */
+  --ef-ink:     #0A0A0A;
+  --ef-red:     #880D16;
+  --ef-cream:   #F3EFE3;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -149,5 +154,72 @@ body {
       linear-gradient(rgba(215,38,61,0.06) 1px, transparent 1px),
       linear-gradient(90deg, rgba(215,38,61,0.045) 1px, transparent 1px) !important;
     background-size: 34px 34px !important;
+  }
+
+  /**
+   * .brand-grain
+   * Fondo texturizado tipo papel oscuro granulado — identidad Elseframe Comics.
+   * Replica el grained background del logo "negro grande":
+   *   1. Base ink black sólido
+   *   2. Noise SVG (feTurbulence) a baja opacidad como capa de grain
+   *   3. Vignette radial para dar profundidad central
+   * No requiere imágenes externas, todo generado en CSS/SVG inline.
+   */
+  .brand-grain {
+    background-color: #080808;
+    background-image:
+      /* Vignette sutil — más oscuro en los bordes */
+      radial-gradient(
+        ellipse 120% 100% at 50% 50%,
+        transparent 40%,
+        rgba(0, 0, 0, 0.55) 100%
+      ),
+      /* Noise grain — SVG feTurbulence inline */
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23grain)' opacity='0.18'/%3E%3C/svg%3E");
+    background-blend-mode: normal, luminosity;
+    background-size: auto, 200px 200px;
+  }
+
+  /**
+   * .brand-grain-overlay
+   * Pseudo-elemento ::before para superponer grain sobre cualquier elemento
+   * sin alterar su propio background. Usar con position: relative.
+   */
+  .brand-grain-overlay {
+    position: relative;
+  }
+  .brand-grain-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23grain)' opacity='0.22'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    mix-blend-mode: overlay;
+    opacity: 0.6;
+    border-radius: inherit;
+  }
+
+  /**
+   * .brand-grain-light
+   * Paper crudo texturizado — variante clara identidad Elseframe.
+   * Replica el fondo "Light Background" del logo: papel sin recubrir, grano grueso,
+   * tono crema cálido con fibra visible. Similar a newsprint/offset sin barniz.
+   *   1. Base crema cálido (#E9E2D3)
+   *   2. Noise grain de alta frecuencia + baja opacidad mapeado en multiply
+   *   3. Segundo noise de baja freq para la variación irregular del papel
+   */
+  .brand-grain-light {
+    background-color: #E9E2D3;
+    background-image:
+      /* Grain fino — simula fibra de papel */
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23g)' opacity='0.38'/%3E%3C/svg%3E"),
+      /* Variación larga — irregularidad de la hoja */
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Cfilter id='g2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.18' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23g2)' opacity='0.08'/%3E%3C/svg%3E");
+    background-blend-mode: multiply, multiply;
+    background-size: 200px 200px, 400px 400px;
   }
 }

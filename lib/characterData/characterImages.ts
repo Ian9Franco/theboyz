@@ -118,8 +118,9 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "don": {
-    "portada": null,
+    "portada": "/personajes/PORTADAS/Don Vanguard/Don Vanguard_portada.webp",
     "portadas": [
+      "/personajes/PORTADAS/Don Vanguard/Don Vanguard_portada.webp",
     ],
     "ficha": "/personajes/Fichas/antagonistas/Don Vanguard/Don_ficha.webp",
     "fichas": [
