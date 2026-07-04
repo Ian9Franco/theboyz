@@ -9,13 +9,43 @@ const marker   = Permanent_Marker({ weight: "400", variable: "--font-marker", su
 const bungee   = Bungee({ weight: "400", variable: "--font-bungee", subsets: ["latin"] });
 const luckiest = Luckiest_Guy({ weight: "400", variable: "--font-luckiest", subsets: ["latin"] });
 
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "https://theboyz.vercel.app"; // Fallback URL de producción
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Elseframe Comics",
   description: "Un sello para historias que rompen el cuadro. Perspectivas distintas. Otras posibilidades. Elseframe.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/marca/icono.webp", sizes: "32x32", type: "image/webp" }
+    ],
+    apple: "/marca/icono.webp",
+  },
   openGraph: {
     title: "Elseframe Comics",
-    description: "Historias que desgarran la realidad. Leé el cómic original.",
+    description: "Un sello para historias que rompen el cuadro. Perspectivas distintas. Otras posibilidades. Elseframe.",
     siteName: "Elseframe Comics",
+    url: "./",
+    type: "website",
+    images: [
+      {
+        url: "/marca/logo_light.webp",
+        width: 1200,
+        height: 630,
+        alt: "Elseframe Comics Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Elseframe Comics",
+    description: "Un sello para historias que rompen el cuadro. Perspectivas distintas. Otras posibilidades. Elseframe.",
+    images: ["/marca/logo_light.webp"],
   },
 };
 
