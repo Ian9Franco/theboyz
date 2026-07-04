@@ -157,8 +157,9 @@ export function getEffectiveIndexes(
  */
 export function getComicPageUrl(relativePath: string | null | undefined): string {
   if (!relativePath) return "";
+  const isCover = relativePath.toLowerCase().includes("portada");
   const baseUrl = process.env.NEXT_PUBLIC_ASSETS_BASE_URL || "";
-  if (baseUrl) {
+  if (baseUrl && !isCover) {
     if (relativePath.startsWith("http://") || relativePath.startsWith("https://")) {
       return relativePath;
     }
