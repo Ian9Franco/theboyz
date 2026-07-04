@@ -16,6 +16,8 @@ interface EditorTabDialoguesProps {
   handleRemoveBubble: (pIdx: number, bIdx: number) => void;
   handleUpdateBubble: (pIdx: number, bIdx: number, updates: Partial<DialogueLine>) => void;
   presetMode?: "standard" | "custom";
+  handleMoveBubbleToPanel: (fromPanelIdx: number, bubbleIdx: number, toPanelIdx: number) => void;
+  handleReorderBubbles: (pIdx: number, startIndex: number, endIndex: number) => void;
 }
 
 /**
@@ -31,8 +33,31 @@ export function EditorTabDialogues({
   handleRemoveBubble,
   handleUpdateBubble,
   presetMode = "standard",
+  handleMoveBubbleToPanel,
+  handleReorderBubbles,
 }: EditorTabDialoguesProps) {
   const activePanel = currentPanels[activePanelIdx];
+  const textareaRef = React.useRef<HTMLTextAreaElement>(null);
+
+  const insertFormatting = (tagStart: string, tagEnd: string, textValue: string, onUpdate: (val: string) => void, textareaEl: HTMLTextAreaElement | null) => {
+    if (!textareaEl) {
+      onUpdate(textValue + tagStart + tagEnd);
+      return;
+    }
+    const start = textareaEl.selectionStart;
+    const end = textareaEl.selectionEnd;
+    const selectedText = textValue.substring(start, end);
+    const before = textValue.substring(0, start);
+    const after = textValue.substring(end);
+    const newText = before + tagStart + selectedText + tagEnd + after;
+    onUpdate(newText);
+
+    setTimeout(() => {
+      textareaEl.focus();
+      const newCursorPos = start + tagStart.length + selectedText.length + tagEnd.length;
+      textareaEl.setSelectionRange(newCursorPos, newCursorPos);
+    }, 0);
+  };
 
   if (!activePanel) {
     return (
@@ -115,8 +140,30 @@ export function EditorTabDialogues({
             >
               ← Volver
             </button>
-            <span className="font-[var(--font-bangers)] text-base text-zinc-300 tracking-wider">
+            <span className="font-[var(--font-bangers)] text-base text-zinc-300 tracking-wider flex items-center gap-1.5">
               {bubble.style === "caption" ? "Narración 📜" : "Diálogo 💬"} #{activeBubbleIdx + 1}
+              <span className="flex items-center gap-1 ml-2">
+                {activeBubbleIdx > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => handleReorderBubbles(activePanelIdx, activeBubbleIdx, activeBubbleIdx - 1)}
+                    className="text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-5 h-5 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
+                    title="Mover diálogo antes/arriba"
+                  >
+                    ▲
+                  </button>
+                )}
+                {activeBubbleIdx < (activePanel.dialogue?.length || 0) - 1 && (
+                  <button
+                    type="button"
+                    onClick={() => handleReorderBubbles(activePanelIdx, activeBubbleIdx, activeBubbleIdx + 1)}
+                    className="text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-5 h-5 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
+                    title="Mover diálogo después/abajo"
+                  >
+                    ▼
+                  </button>
+                )}
+              </span>
             </span>
           </div>
           <button
@@ -187,12 +234,68 @@ export function EditorTabDialogues({
               ⚡ Pegar
             </button>
           </div>
+          {/* Formatting Toolbar */}
+          <div className="flex items-center gap-1 bg-[#0a0a0f] border border-white/10 rounded-t p-1">
+            <button
+              type="button"
+              onClick={() => insertFormatting("**", "**", bubble.text || "", (txt) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: txt }), textareaRef.current)}
+              className="px-2 py-0.5 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded text-xs active:scale-95 transition-all cursor-pointer border border-white/5"
+              title="Negrita"
+            >
+              B
+            </button>
+            
+            <div className="h-4 w-px bg-white/10 mx-1" />
+            
+            <span className="text-[10px] text-zinc-500 font-mono mr-1">Color:</span>
+            {[
+              { hex: "#e8185a", name: "Rosa" },
+              { hex: "#00f0ff", name: "Cian" },
+              { hex: "#10b981", name: "Verde" },
+              { hex: "#f5e642", name: "Amarillo" },
+              { hex: "#8b5cf6", name: "Violeta" },
+              { hex: "#f97316", name: "Naranja" },
+              { hex: "#ffffff", name: "Blanco" },
+              { hex: "#0a0a0f", name: "Negro" },
+            ].map((c) => (
+              <button
+                key={c.hex}
+                type="button"
+                onClick={() => insertFormatting(`[color:${c.hex}]`, "[/color]", bubble.text || "", (txt) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: txt }), textareaRef.current)}
+                className="w-3.5 h-3.5 rounded-full border border-white/20 hover:scale-110 active:scale-95 transition-all cursor-pointer"
+                style={{ backgroundColor: c.hex }}
+                title={c.name}
+              />
+            ))}
+          </div>
           <textarea
+            ref={textareaRef}
             value={bubble.text}
             onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: e.target.value })}
-            className="w-full h-24 border border-white/10 p-2 text-xs font-sans rounded bg-[#0a0a0f] text-white resize-none focus:outline-none focus:ring-1 focus:ring-[#e8185a]"
+            className="w-full h-24 border border-white/10 border-t-0 p-2 text-xs font-sans rounded-b bg-[#0a0a0f] text-white resize-none focus:outline-none focus:ring-1 focus:ring-[#e8185a]"
             placeholder="Escribí el diálogo..."
           />
+        </div>
+
+        {/* Move Bubble to Another Panel */}
+        <div className="flex flex-col gap-1.5 mt-1">
+          <label className="text-xs font-bold text-zinc-300">Mover a Viñeta:</label>
+          <select
+            value={activePanelIdx}
+            onChange={(e) => {
+              const targetIdx = parseInt(e.target.value);
+              if (targetIdx !== activePanelIdx) {
+                handleMoveBubbleToPanel(activePanelIdx, activeBubbleIdx, targetIdx);
+              }
+            }}
+            className="w-full border border-white/10 p-2 text-xs font-mono rounded bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a] cursor-pointer"
+          >
+            {currentPanels.map((_, idx) => (
+              <option key={idx} value={idx}>
+                Mover a Viñeta {idx + 1} {idx === activePanelIdx ? "(Actual)" : ""}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Max Width Slider */}
@@ -230,8 +333,30 @@ export function EditorTabDialogues({
           >
             ← Volver
           </button>
-          <span className="font-[var(--font-bangers)] text-base text-zinc-300 tracking-wider">
+          <span className="font-[var(--font-bangers)] text-base text-zinc-300 tracking-wider flex items-center gap-1.5">
             Editando Globo #{activeBubbleIdx + 1}
+            <span className="flex items-center gap-1 ml-2">
+              {activeBubbleIdx > 0 && (
+                <button
+                  type="button"
+                  onClick={() => handleReorderBubbles(activePanelIdx, activeBubbleIdx, activeBubbleIdx - 1)}
+                  className="text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-5 h-5 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
+                  title="Mover diálogo antes/arriba"
+                >
+                  ▲
+                </button>
+              )}
+              {activeBubbleIdx < (activePanel.dialogue?.length || 0) - 1 && (
+                <button
+                  type="button"
+                  onClick={() => handleReorderBubbles(activePanelIdx, activeBubbleIdx, activeBubbleIdx + 1)}
+                  className="text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-5 h-5 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
+                  title="Mover diálogo después/abajo"
+                >
+                  ▼
+                </button>
+              )}
+            </span>
           </span>
         </div>
         <div className="flex gap-2">
@@ -272,6 +397,7 @@ export function EditorTabDialogues({
         activeBubbleIdx={activeBubbleIdx}
         currentPanels={currentPanels}
         handleUpdateBubble={handleUpdateBubble}
+        handleMoveBubbleToPanel={handleMoveBubbleToPanel}
       />
 
       <span className="text-[10px] text-zinc-500 italic text-center">

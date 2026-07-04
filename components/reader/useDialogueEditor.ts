@@ -447,6 +447,103 @@ export function useDialogueEditor({
     window.addEventListener("pointerup", handlePointerUp);
   };
 
+  const handleMoveBubbleToPanel = (fromPanelIdx: number, bubbleIdx: number, toPanelIdx: number) => {
+    if (fromPanelIdx === toPanelIdx) return;
+    const updatedPages = { ...localDialogues.pages };
+    const pg = { ...currentPageData };
+    const panelsCopy = [...(pg.panels || [])];
+    
+    const fromPanel = { ...panelsCopy[fromPanelIdx] };
+    const toPanel = { ...panelsCopy[toPanelIdx] };
+    
+    if (!fromPanel.dialogue || !fromPanel.dialogue[bubbleIdx]) return;
+    
+    const bubbleToMove = { ...fromPanel.dialogue[bubbleIdx] };
+    
+    // Remove from fromPanel
+    const newFromDialogue = fromPanel.dialogue.filter((_, idx) => idx !== bubbleIdx);
+    
+    // Adjust linkedTo references in fromPanel
+    const adjustedFromDialogue = newFromDialogue.map((bub) => {
+      if (bub.linkedTo === undefined) return bub;
+      if (bub.linkedTo === bubbleIdx) return { ...bub, linkedTo: undefined };
+      if (bub.linkedTo > bubbleIdx) return { ...bub, linkedTo: bub.linkedTo - 1 };
+      return bub;
+    });
+    
+    fromPanel.dialogue = adjustedFromDialogue;
+    
+    // Add to toPanel
+    const newToDialogue = toPanel.dialogue ? [...toPanel.dialogue] : [];
+    newToDialogue.push(bubbleToMove);
+    toPanel.dialogue = newToDialogue;
+    
+    panelsCopy[fromPanelIdx] = fromPanel;
+    panelsCopy[toPanelIdx] = toPanel;
+    pg.panels = panelsCopy;
+    updatedPages[pgKey] = pg;
+    updateDialoguesState(updatedPages);
+    
+    setActivePanelIdx(toPanelIdx);
+    setActiveBubbleIdx(newToDialogue.length - 1);
+  };
+
+  const handleReorderPanels = (startIndex: number, endIndex: number) => {
+    if (startIndex === endIndex) return;
+    const updatedPages = { ...localDialogues.pages };
+    const pg = { ...currentPageData };
+    const panelsCopy = [...(pg.panels || [])];
+    
+    if (startIndex < 0 || startIndex >= panelsCopy.length || endIndex < 0 || endIndex >= panelsCopy.length) return;
+    
+    const [removed] = panelsCopy.splice(startIndex, 1);
+    panelsCopy.splice(endIndex, 0, removed);
+    
+    pg.panels = panelsCopy;
+    updatedPages[pgKey] = pg;
+    updateDialoguesState(updatedPages);
+    
+    setActivePanelIdx(endIndex);
+    setActiveBubbleIdx(null);
+  };
+
+  const handleReorderBubbles = (pIdx: number, startIndex: number, endIndex: number) => {
+    if (startIndex === endIndex) return;
+    const updatedPages = { ...localDialogues.pages };
+    const pg = { ...currentPageData };
+    const panelsCopy = [...(pg.panels || [])];
+    const targetPanel = { ...panelsCopy[pIdx] };
+    const dialoguesCopy = targetPanel.dialogue ? [...targetPanel.dialogue] : [];
+    
+    if (startIndex < 0 || startIndex >= dialoguesCopy.length || endIndex < 0 || endIndex >= dialoguesCopy.length) return;
+    
+    const [removed] = dialoguesCopy.splice(startIndex, 1);
+    dialoguesCopy.splice(endIndex, 0, removed);
+    
+    const mapIndex = (oldIdx: number) => {
+      if (oldIdx === startIndex) return endIndex;
+      if (startIndex < endIndex) {
+        if (oldIdx > startIndex && oldIdx <= endIndex) return oldIdx - 1;
+      } else {
+        if (oldIdx >= endIndex && oldIdx < startIndex) return oldIdx + 1;
+      }
+      return oldIdx;
+    };
+    
+    const adjustedDialogues = dialoguesCopy.map((bub) => {
+      if (bub.linkedTo === undefined) return bub;
+      return { ...bub, linkedTo: mapIndex(bub.linkedTo) };
+    });
+    
+    targetPanel.dialogue = adjustedDialogues;
+    panelsCopy[pIdx] = targetPanel;
+    pg.panels = panelsCopy;
+    updatedPages[pgKey] = pg;
+    updateDialoguesState(updatedPages);
+    
+    setActiveBubbleIdx(endIndex);
+  };
+
   return {
     localDialogues,
     setLocalDialogues,
@@ -480,5 +577,8 @@ export function useDialogueEditor({
     handleSaveChanges,
     presetMode,
     setPresetMode,
+    handleMoveBubbleToPanel,
+    handleReorderPanels,
+    handleReorderBubbles,
   };
 }

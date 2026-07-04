@@ -114,6 +114,9 @@ export function CinematicReader({
     handleSaveChanges,
     presetMode,
     setPresetMode,
+    handleMoveBubbleToPanel,
+    handleReorderPanels,
+    handleReorderBubbles,
   } = useDialogueEditor({ dialogues, chapterId: chapter.id, pageKey: getPageKeyFromUrl(pages[pageIdx]), imgRef });
 
   const [textScale, setTextScale] = useState<number>(1.0);
@@ -499,18 +502,11 @@ export function CinematicReader({
     }
 
     if (zoomedOut) {
-      if (pageIdx < pages.length - 1) {
-        resetPage(pageIdx + 1);
-      }
       return;
     }
 
     if (currentPanels.length === 0) {
-      if (pageIdx < pages.length - 1) {
-        resetPage(pageIdx + 1);
-      } else {
-        setZoomedOut(true);
-      }
+      setZoomedOut(true);
       return;
     }
 
@@ -791,6 +787,9 @@ export function CinematicReader({
           handleUpdateAudioTracks={handleUpdateAudioTracks}
           presetMode={presetMode}
           setPresetMode={setPresetMode}
+          handleMoveBubbleToPanel={handleMoveBubbleToPanel}
+          handleReorderPanels={handleReorderPanels}
+          handleReorderBubbles={handleReorderBubbles}
         />
       </div>
 

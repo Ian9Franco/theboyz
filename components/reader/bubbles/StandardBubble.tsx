@@ -14,6 +14,7 @@ import {
   computeBubbleDelay,
   resolveBgColor,
   getSfxGradient,
+  renderStyledText,
 } from "./bubbleHelpers";
 
 interface StandardBubbleProps {
@@ -479,7 +480,7 @@ export function StandardBubble({
                     {p.speaker}:{" "}
                   </strong>
                 )}
-                <span>{p.text}</span>
+                <span>{renderStyledText(p.text)}</span>
               </div>
             ))}
           </div>

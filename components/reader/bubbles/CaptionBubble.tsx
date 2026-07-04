@@ -13,6 +13,7 @@ import {
   buildAnimTransition,
   computeBubbleDelay,
   resolveBgColor,
+  renderStyledText,
 } from "./bubbleHelpers";
 
 interface CaptionBubbleProps {
@@ -127,7 +128,7 @@ export function CaptionBubble({
             }}
           >
             {p.speaker && <strong style={{ color: captionBorderColor }}>{p.speaker}: </strong>}
-            {p.text}
+            {renderStyledText(p.text)}
           </div>
         ))}
       </div>

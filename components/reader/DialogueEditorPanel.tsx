@@ -72,6 +72,9 @@ export interface DialogueEditorPanelProps {
   handleUpdateAudioTracks: (tracks: AudioTrack[]) => void;
   presetMode: "standard" | "custom";
   setPresetMode: (mode: "standard" | "custom") => void;
+  handleMoveBubbleToPanel: (fromPanelIdx: number, bubbleIdx: number, toPanelIdx: number) => void;
+  handleReorderPanels: (startIndex: number, endIndex: number) => void;
+  handleReorderBubbles: (pIdx: number, startIndex: number, endIndex: number) => void;
 }
 
 /**
@@ -111,6 +114,9 @@ export function DialogueEditorPanel({
   handleUpdateAudioTracks,
   presetMode,
   setPresetMode,
+  handleMoveBubbleToPanel,
+  handleReorderPanels,
+  handleReorderBubbles,
 }: DialogueEditorPanelProps) {
   if (mode !== "edit") return null;
 
@@ -325,17 +331,16 @@ export function DialogueEditorPanel({
         handleUpdatePanelParams={handleUpdatePanelParams}
         handleAddBubble={handleAddBubble}
         presetMode={presetMode}
+        handleReorderPanels={handleReorderPanels}
       />
 
       {/* Accordion: Chapter-level Audio Tracks */}
-      {presetMode === "custom" && (
-        <EditorAudioTracks
-          audioTracks={localDialogues.audioTracks ?? []}
-          pages={pages}
-          localDialogues={localDialogues}
-          onUpdate={handleUpdateAudioTracks}
-        />
-      )}
+      <EditorAudioTracks
+        audioTracks={localDialogues.audioTracks ?? []}
+        pages={pages}
+        localDialogues={localDialogues}
+        onUpdate={handleUpdateAudioTracks}
+      />
 
       {/* Active Dialogue Bubble Settings Panel */}
       <div className="p-4 flex-1">
@@ -348,6 +353,8 @@ export function DialogueEditorPanel({
           handleRemoveBubble={handleRemoveBubble}
           handleUpdateBubble={handleUpdateBubble}
           presetMode={presetMode}
+          handleMoveBubbleToPanel={handleMoveBubbleToPanel}
+          handleReorderBubbles={handleReorderBubbles}
         />
       </div>
     </div>

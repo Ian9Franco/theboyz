@@ -1,11 +1,45 @@
-/**
- * bubbleHelpers.ts
- * Shared constants and utility functions used across all bubble types
- * (StandardBubble, CaptionBubble, ThoughtBubble).
- * Centralizing here avoids duplication and makes speaker/style changes universal.
- */
-
+import React from "react";
 import type { DialogueLine } from "../DialogueBubble";
+
+export function renderStyledText(text: string): React.ReactNode {
+  if (!text) return "";
+  const tokenRegex = /(\*\*|\[color:[^\]]+\]|\[\/color\])/g;
+  const parts = text.split(tokenRegex);
+  let isBold = false;
+  const colorStack: string[] = [];
+
+  return React.createElement(
+    React.Fragment,
+    null,
+    parts.map((part, index) => {
+      if (part === "**") {
+        isBold = !isBold;
+        return null;
+      } else if (part.startsWith("[color:") && part.endsWith("]")) {
+        const colorValue = part.slice(7, -1);
+        colorStack.push(colorValue);
+        return null;
+      } else if (part === "[/color]") {
+        colorStack.pop();
+        return null;
+      }
+      if (part === "") return null;
+
+      const style: React.CSSProperties = {};
+      if (isBold) {
+        style.fontWeight = "bold";
+      }
+      if (colorStack.length > 0) {
+        style.color = colorStack[colorStack.length - 1];
+      }
+
+      if (isBold || colorStack.length > 0) {
+        return React.createElement("span", { key: index, style }, part);
+      }
+      return part;
+    })
+  );
+}
 
 // ─── Speaker Color Palette ─────────────────────────────────────────────────────
 // Maps a lowercase speaker name to their canonical accent color.

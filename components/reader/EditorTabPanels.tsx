@@ -129,6 +129,7 @@ interface EditorTabPanelsProps {
   handleUpdatePanelParams: (pIdx: number, updates: Partial<PanelConfig>) => void;
   handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle?: "normal" | "caption") => void;
   presetMode?: "standard" | "custom";
+  handleReorderPanels: (startIndex: number, endIndex: number) => void;
 }
 
 /**
@@ -148,6 +149,7 @@ export function EditorTabPanels({
   handleUpdatePanelParams,
   handleAddBubble,
   presetMode = "standard",
+  handleReorderPanels,
 }: EditorTabPanelsProps) {
   const [availableSounds, setAvailableSounds] = useState<Array<{ name: string; path: string }>>([]);
   const [previewingSound, setPreviewingSound] = useState<string | null>(null);
@@ -361,16 +363,35 @@ export function EditorTabPanels({
                     <span className="font-[var(--font-marker)] text-xs text-white">
                       Viñeta {pIdx + 1}
                     </span>
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleRemovePanel(pIdx);
-                      }}
-                      className="text-xs text-red-400 hover:text-red-300 hover:underline font-bold"
-                    >
-                      Eliminar
-                    </button>
+                    <div className="flex items-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+                      {pIdx > 0 && (
+                        <button
+                          type="button"
+                          onClick={() => handleReorderPanels(pIdx, pIdx - 1)}
+                          className="text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-5 h-5 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
+                          title="Mover viñeta hacia arriba/atrás"
+                        >
+                          ◀
+                        </button>
+                      )}
+                      {pIdx < currentPanels.length - 1 && (
+                        <button
+                          type="button"
+                          onClick={() => handleReorderPanels(pIdx, pIdx + 1)}
+                          className="text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-5 h-5 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
+                          title="Mover viñeta hacia abajo/adelante"
+                        >
+                          ▶
+                        </button>
+                      )}
+                      <button
+                        type="button"
+                        onClick={() => handleRemovePanel(pIdx)}
+                        className="text-xs text-red-400 hover:text-red-300 hover:underline font-bold ml-1"
+                      >
+                        Eliminar
+                      </button>
+                    </div>
                   </div>
 
                   {/* FocusY Slider */}
@@ -392,8 +413,8 @@ export function EditorTabPanels({
                     />
                   </div>
 
-                  {presetMode === "standard" ? (
-                    <div className="border border-white/10 rounded bg-[#0d0d12]/40 p-2 flex flex-col gap-2 mt-1">
+                  {presetMode === "standard" && (
+                    <div className="border border-white/10 rounded bg-[#0d0d12]/40 p-2 flex flex-col gap-2 mt-1 mb-2.5">
                       <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">
                         💬 Globos de Diálogo ({panel.dialogue?.length || 0})
                       </span>
@@ -451,8 +472,7 @@ export function EditorTabPanels({
                         </button>
                       </div>
                     </div>
-                  ) : (
-                    <>
+                  )}
                       {/* SECTION 1: Zoom Areas & Spoilers (Collapsible) */}
                       <details className="group border border-white/10 rounded bg-[#0d0d12]/40 mb-2.5 overflow-hidden" open={isSelected}>
                     <summary className="flex items-center justify-between p-2 cursor-pointer list-none select-none hover:bg-white/5 transition-colors">
@@ -1089,55 +1109,55 @@ export function EditorTabPanels({
                   </details>
 
                   {/* SECTION 3: Dialogue List for this panel (Collapsible) */}
-                  <details className="group border border-white/10 rounded bg-[#0d0d12]/40 mb-1 overflow-hidden" open={isSelected && (panel.dialogue?.length || 0) > 0}>
-                    <summary className="flex items-center justify-between p-2 cursor-pointer list-none select-none hover:bg-white/5 transition-colors">
-                      <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider flex items-center gap-1.5">
-                        💬 Globos de Diálogo ({panel.dialogue?.length || 0})
-                      </span>
-                      <span className="text-[9px] font-mono text-zinc-500 group-open:rotate-180 transition-transform">▼</span>
-                    </summary>
-                    <div className="p-2 border-t border-white/5 flex flex-col gap-2 bg-[#0a0a0f]/40">
-                      <div className="flex justify-between items-center mb-1">
-                        <span className="text-[10px] font-bold text-zinc-500">Globos:</span>
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleAddBubble(pIdx);
-                          }}
-                          className="text-xs text-[#e8185a] hover:text-rose-400 hover:underline font-bold"
-                        >
-                          + Agregar Globo
-                        </button>
-                      </div>
+                  {presetMode === "custom" && (
+                    <details className="group border border-white/10 rounded bg-[#0d0d12]/40 mb-1 overflow-hidden" open={isSelected && (panel.dialogue?.length || 0) > 0}>
+                      <summary className="flex items-center justify-between p-2 cursor-pointer list-none select-none hover:bg-white/5 transition-colors">
+                        <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider flex items-center gap-1.5">
+                          💬 Globos de Diálogo ({panel.dialogue?.length || 0})
+                        </span>
+                        <span className="text-[9px] font-mono text-zinc-500 group-open:rotate-180 transition-transform">▼</span>
+                      </summary>
+                      <div className="p-2 border-t border-white/5 flex flex-col gap-2 bg-[#0a0a0f]/40">
+                        <div className="flex justify-between items-center mb-1">
+                          <span className="text-[10px] font-bold text-zinc-500">Globos:</span>
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleAddBubble(pIdx);
+                            }}
+                            className="text-xs text-[#e8185a] hover:text-rose-400 hover:underline font-bold"
+                          >
+                            + Agregar Globo
+                          </button>
+                        </div>
 
-                      <div className="flex flex-col gap-1.5">
-                        {panel.dialogue?.map((bub, bIdx) => {
-                          const isBubActive = isSelected && activeBubbleIdx === bIdx;
-                          return (
-                            <button
-                              key={bIdx}
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setActivePanelIdx(pIdx);
-                                setActiveBubbleIdx(bIdx);
-                              }}
-                              className={`text-left text-xs p-2 border rounded font-mono truncate transition-all cursor-pointer ${
-                                isBubActive
-                                  ? "border-rose-500 bg-rose-950/20 text-rose-200 font-bold"
-                                  : "border-white/10 bg-[#161622] hover:bg-[#1a1a29] text-zinc-300"
-                              }`}
-                            >
-                              {bub.speaker ? `${bub.speaker}: ` : ""}
-                              {bub.text || "(vacío)"}
-                            </button>
-                          );
-                        })}
+                        <div className="flex flex-col gap-1.5">
+                          {panel.dialogue?.map((bub, bIdx) => {
+                            const isBubActive = isSelected && activeBubbleIdx === bIdx;
+                            return (
+                              <button
+                                key={bIdx}
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setActivePanelIdx(pIdx);
+                                  setActiveBubbleIdx(bIdx);
+                                }}
+                                className={`text-left text-xs p-2 border rounded font-mono truncate transition-all cursor-pointer ${
+                                  isBubActive
+                                    ? "border-rose-500 bg-rose-950/20 text-rose-200 font-bold"
+                                    : "border-white/10 bg-[#161622] hover:bg-[#1a1a29] text-zinc-300"
+                                }`}
+                              >
+                                {bub.speaker ? `${bub.speaker}: ` : ""}
+                                {bub.text || "(vacío)"}
+                              </button>
+                            );
+                          })}
+                        </div>
                       </div>
-                    </div>
-                  </details>
-                    </>
+                    </details>
                   )}
                 </div>
               );

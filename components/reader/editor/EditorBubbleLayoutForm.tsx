@@ -10,6 +10,7 @@ interface EditorBubbleLayoutFormProps {
   activeBubbleIdx: number;
   currentPanels: PanelConfig[];
   handleUpdateBubble: (pIdx: number, bIdx: number, updates: Partial<DialogueLine>) => void;
+  handleMoveBubbleToPanel?: (fromPanelIdx: number, bubbleIdx: number, toPanelIdx: number) => void;
 }
 
 export function EditorBubbleLayoutForm({
@@ -18,7 +19,29 @@ export function EditorBubbleLayoutForm({
   activeBubbleIdx,
   currentPanels,
   handleUpdateBubble,
+  handleMoveBubbleToPanel,
 }: EditorBubbleLayoutFormProps) {
+  const textareaRef = React.useRef<HTMLTextAreaElement>(null);
+
+  const insertFormatting = (tagStart: string, tagEnd: string, textValue: string, onUpdate: (val: string) => void, textareaEl: HTMLTextAreaElement | null) => {
+    if (!textareaEl) {
+      onUpdate(textValue + tagStart + tagEnd);
+      return;
+    }
+    const start = textareaEl.selectionStart;
+    const end = textareaEl.selectionEnd;
+    const selectedText = textValue.substring(start, end);
+    const before = textValue.substring(0, start);
+    const after = textValue.substring(end);
+    const newText = before + tagStart + selectedText + tagEnd + after;
+    onUpdate(newText);
+
+    setTimeout(() => {
+      textareaEl.focus();
+      const newCursorPos = start + tagStart.length + selectedText.length + tagEnd.length;
+      textareaEl.setSelectionRange(newCursorPos, newCursorPos);
+    }, 0);
+  };
   return (
     <div className="flex flex-col gap-3">
       {/* Bubble Dimension Sliders */}
@@ -125,10 +148,45 @@ export function EditorBubbleLayoutForm({
             ⚡ Auto (Pegar)
           </button>
         </div>
+        {/* Formatting Toolbar */}
+        <div className="flex items-center gap-1 bg-[#0a0a0f] border border-white/10 rounded-t p-1">
+          <button
+            type="button"
+            onClick={() => insertFormatting("**", "**", bubble.text || "", (txt) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: txt }), textareaRef.current)}
+            className="px-2 py-0.5 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded text-xs active:scale-95 transition-all cursor-pointer border border-white/5"
+            title="Negrita"
+          >
+            B
+          </button>
+          
+          <div className="h-4 w-px bg-white/10 mx-1" />
+          
+          <span className="text-[10px] text-zinc-500 font-mono mr-1">Color:</span>
+          {[
+            { hex: "#e8185a", name: "Rosa" },
+            { hex: "#00f0ff", name: "Cian" },
+            { hex: "#10b981", name: "Verde" },
+            { hex: "#f5e642", name: "Amarillo" },
+            { hex: "#8b5cf6", name: "Violeta" },
+            { hex: "#f97316", name: "Naranja" },
+            { hex: "#ffffff", name: "Blanco" },
+            { hex: "#0a0a0f", name: "Negro" },
+          ].map((c) => (
+            <button
+              key={c.hex}
+              type="button"
+              onClick={() => insertFormatting(`[color:${c.hex}]`, "[/color]", bubble.text || "", (txt) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: txt }), textareaRef.current)}
+              className="w-3.5 h-3.5 rounded-full border border-white/20 hover:scale-110 active:scale-95 transition-all cursor-pointer"
+              style={{ backgroundColor: c.hex }}
+              title={c.name}
+            />
+          ))}
+        </div>
         <textarea
+          ref={textareaRef}
           value={bubble.text}
           onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: e.target.value })}
-          className="w-full h-20 border border-white/10 p-2 text-xs font-sans rounded bg-[#0a0a0f] text-white resize-none focus:outline-none focus:ring-1 focus:ring-[#e8185a]"
+          className="w-full h-20 border border-white/10 border-t-0 p-2 text-xs font-sans rounded-b bg-[#0a0a0f] text-white resize-none focus:outline-none focus:ring-1 focus:ring-[#e8185a]"
           placeholder="Escribí el diálogo..."
         />
       </div>
@@ -225,6 +283,29 @@ export function EditorBubbleLayoutForm({
           />
         </div>
       </div>
+
+      {/* Move Bubble to Another Panel */}
+      {handleMoveBubbleToPanel && (
+        <div className="flex flex-col gap-1.5 mt-2 bg-[#0a0a0f] border border-white/10 rounded p-3">
+          <label className="text-xs font-bold text-zinc-300">Mover a Viñeta:</label>
+          <select
+            value={activePanelIdx}
+            onChange={(e) => {
+              const targetIdx = parseInt(e.target.value);
+              if (targetIdx !== activePanelIdx) {
+                handleMoveBubbleToPanel(activePanelIdx, activeBubbleIdx, targetIdx);
+              }
+            }}
+            className="w-full border border-white/10 p-2 text-xs font-mono rounded bg-[#161622] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a] cursor-pointer"
+          >
+            {currentPanels.map((_, idx) => (
+              <option key={idx} value={idx}>
+                Mover a Viñeta {idx + 1} {idx === activePanelIdx ? "(Actual)" : ""}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
     </div>
   );
 }

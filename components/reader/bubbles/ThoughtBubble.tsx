@@ -13,6 +13,7 @@ import {
   buildAnimTransition,
   computeBubbleDelay,
   resolveBgColor,
+  renderStyledText,
 } from "./bubbleHelpers";
 
 interface ThoughtBubbleProps {
@@ -204,7 +205,7 @@ export function ThoughtBubble({
           {paragraphs.map((p, i) => (
             <div key={i}>
               {p.speaker && <strong style={{ color: thoughtBorderColor }}>{p.speaker}: </strong>}
-              <span>{p.text}</span>
+              <span>{renderStyledText(p.text)}</span>
             </div>
           ))}
         </div>
