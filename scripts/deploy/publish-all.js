@@ -1,4 +1,4 @@
-const { execSync } = require("child_process");
+const { execSync, spawnSync } = require("child_process");
 const path = require("path");
 const fs = require("fs");
 
@@ -77,7 +77,13 @@ function generateCommitMessage(statusText, baseMsg) {
   for (const line of lines) {
     if (line.length < 3) continue;
     const type = line.substring(0, 2).trim();
-    const filePath = line.substring(2).trim();
+    let filePath = line.substring(2).trim();
+
+    // Quitar comillas que Git agrega a las rutas con espacios o caracteres especiales
+    if (filePath.startsWith('"') && filePath.endsWith('"')) {
+      filePath = filePath.slice(1, -1);
+    }
+    filePath = filePath.replace(/"/g, '');
 
     // Extraer saga y capítulo de la ruta si aplica
     const comicMatch = filePath.match(/public[/\\]comics[/\\]([^/\\]+)(?:[/\\]([^/\\]+))?/);
@@ -164,8 +170,10 @@ function publishRepo(name, dir) {
     const dynamicCommitMsg = generateCommitMessage(status, commitMsg);
     console.log(`Mensaje dinámico generado: "\x1b[32m${dynamicCommitMsg}\x1b[0m"\n`);
 
-    const escapedMsg = dynamicCommitMsg.replace(/"/g, '\\"');
-    execSync(`git commit -m "${escapedMsg}"`, { cwd: dir, stdio: "inherit" });
+    const commitResult = spawnSync("git", ["commit", "-m", dynamicCommitMsg], { cwd: dir, stdio: "inherit" });
+    if (commitResult.status !== 0) {
+      throw new Error("git commit falló");
+    }
 
     console.log("Haciendo git push...");
     execSync("git push", { cwd: dir, stdio: "inherit" });

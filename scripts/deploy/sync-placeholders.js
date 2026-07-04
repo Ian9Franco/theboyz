@@ -130,9 +130,17 @@ function syncDirectories(srcDir, destDir, depth = 0) {
       } else if (IMAGE_EXTS.includes(ext)) {
         const baseName = path.basename(item, ext).toLowerCase();
         if (baseName === 'portada') {
-          // Copy covers (portada.webp) directly so they are always visible without local assets server running
-          fs.copyFileSync(srcPath, destPath);
-          console.log(`🖼️ Copiada portada real: ${path.relative(DEST_DIR, destPath)}`);
+          const srcMtime = stat.mtimeMs;
+          const destExists = fs.existsSync(destPath);
+          const destMtime = destExists ? fs.statSync(destPath).mtimeMs : 0;
+
+          if (!destExists || srcMtime > destMtime + 1000) {
+            fs.copyFileSync(srcPath, destPath);
+            console.log(`🖼️ Copiada portada real a Web: ${path.relative(DEST_DIR, destPath)}`);
+          } else if (destMtime > srcMtime + 1000) {
+            fs.copyFileSync(destPath, srcPath);
+            console.log(`🔄 Copiada portada real a Assets (Web es más nueva): ${path.relative(DEST_DIR, destPath)}`);
+          }
         } else {
           // Create a 0-byte placeholder for content pages
           const exists = fs.existsSync(destPath);
@@ -158,11 +166,16 @@ function syncDirectories(srcDir, destDir, depth = 0) {
         console.log(`🗑️ Eliminado directorio huérfano: ${path.relative(DEST_DIR, destPath)}`);
       } else {
         const ext = path.extname(destItem).toLowerCase();
+        const baseName = path.basename(destItem, ext).toLowerCase();
         if (ext === '.json') {
           // Si el JSON existe en la Web pero no en Assets, es un archivo nuevo creado por el editor
           // (ej. dialogues.json). Lo copiamos a Assets en lugar de eliminarlo.
           fs.copyFileSync(destPath, srcPath);
           console.log(`🔄 Copiado JSON nuevo a Assets (Evitando eliminación): ${path.relative(DEST_DIR, destPath)}`);
+        } else if (IMAGE_EXTS.includes(ext) && baseName === 'portada') {
+          // Si la portada existe en la Web pero no en Assets, la copiamos a Assets en lugar de eliminarla.
+          fs.copyFileSync(destPath, srcPath);
+          console.log(`🔄 Copiada portada nueva a Assets (Evitando eliminación): ${path.relative(DEST_DIR, destPath)}`);
         } else {
           fs.unlinkSync(destPath);
           console.log(`🗑️ Eliminado archivo huérfano: ${path.relative(DEST_DIR, destPath)}`);
