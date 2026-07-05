@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 interface UnlockNotificationModalProps {
   isOpen: boolean;
@@ -14,6 +15,8 @@ export function UnlockNotificationModal({
   onClose,
   chapterId,
 }: UnlockNotificationModalProps) {
+  const router = useRouter();
+
   useEffect(() => {
     if (isOpen) {
       try {
@@ -187,7 +190,10 @@ export function UnlockNotificationModal({
 
             {/* Action Button */}
             <button
-              onClick={onClose}
+              onClick={() => {
+                router.push("/lore");
+                onClose();
+              }}
               className="w-full py-3.5 border font-[var(--font-bangers)] text-lg tracking-[0.2em] uppercase transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
               style={{
                 backgroundColor: vibrantAccent,

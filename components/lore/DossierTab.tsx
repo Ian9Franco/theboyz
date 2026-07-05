@@ -1,8 +1,11 @@
 "use client";
 
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Lock } from "lucide-react";
 import { GlosarioLink } from "./GlosarioLink";
 import { Redacted } from "./Redacted";
+import { getComputedCharacters } from "@/lib/characterData";
 
 interface DossierTabProps {
   unlockAll: boolean;
@@ -32,6 +35,31 @@ const ALIAS_ORIGINS = [
 import { GLOSARIO_CHARS } from "./GlosarioLink";
 
 export function DossierTab({ unlockAll, readChapters }: DossierTabProps) {
+  const [activeCategory, setActiveCategory] = useState<string>("pibes");
+
+  const computedChars = getComputedCharacters(readChapters, true, unlockAll);
+
+  const getGroupedCharacters = (cat: string) => {
+    return computedChars.filter((c) => {
+      if (cat === "pibes") return c.category === "pibes";
+      if (cat === "antagonistas") return c.category === "antagonistas";
+      if (cat === "deidades") return c.category === "deidades";
+      if (cat === "entidades") return c.category === "entidades";
+      if (cat === "secundarios") {
+        return ["secundarios", "independientes", "taberna_resistencia", "voughtverse", "matis"].includes(c.category);
+      }
+      return false;
+    });
+  };
+
+  const CATEGORIES = [
+    { id: "pibes", label: "LOS PIBES" },
+    { id: "antagonistas", label: "ANTAGONISTAS" },
+    { id: "secundarios", label: "SECUNDARIOS" },
+    { id: "deidades", label: "DEIDADES" },
+    { id: "entidades", label: "ENTIDADES" },
+  ];
+
   return (
     <motion.div
       key="dossier"
@@ -113,6 +141,95 @@ export function DossierTab({ unlockAll, readChapters }: DossierTabProps) {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* SECTION 4 — CATEGORÍAS Y EXPEDIENTES */}
+      <section className="bg-[#0e0e16] border-2 border-white/10 p-6 sm:p-8 rounded relative shadow-[6px_6px_0_rgba(255,255,255,0.03)] border-l-4 border-l-[#3b82f6]">
+        <div className="absolute top-[-10px] left-6 bg-[#3b82f6] px-3 py-0.5 text-[10px] font-[var(--font-bangers)] tracking-widest shadow-[2px_2px_0_#000]">
+          SECCIÓN IV — EXPEDIENTES DE LA BASE DE DATOS
+        </div>
+        <h3 className="font-[var(--font-bangers)] text-2xl text-[#f5e642] mt-2 mb-6 tracking-widest">
+          DIRECTORIO DE EXPEDIENTES MULTIVERSALES
+        </h3>
+        
+        {/* Category tabs */}
+        <div className="flex flex-wrap gap-2 mb-8 justify-center sm:justify-start">
+          {CATEGORIES.map((cat) => {
+            const isActive = activeCategory === cat.id;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`px-4 py-2 border-2 font-[var(--font-bangers)] text-xs tracking-wider uppercase transition-all hover:scale-105 active:scale-95 cursor-pointer ${
+                  isActive
+                    ? "bg-[#3b82f6] text-white border-white shadow-[3px_3px_0_#000]"
+                    : "bg-[#181824] text-gray-400 border-white/15 hover:text-white"
+                }`}
+              >
+                {cat.label}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Character list/grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          {getGroupedCharacters(activeCategory).map((char) => {
+            const isUnlocked = !char.incognito;
+            const cardImg = char.image || char.fullBody;
+            return (
+              <div
+                key={char.id}
+                onClick={() => {
+                  if (isUnlocked) {
+                    window.dispatchEvent(new CustomEvent("open-character-modal", { detail: { id: char.id } }));
+                  }
+                }}
+                className={`relative border-2 p-2 flex flex-col bg-black/40 rounded transition-all duration-300 ${
+                  isUnlocked ? "cursor-pointer hover:border-[#3b82f6] hover:scale-105 hover:bg-black/60" : "opacity-60 cursor-not-allowed"
+                }`}
+                style={{
+                  borderColor: isUnlocked ? `${char.color}50` : "rgba(255,255,255,0.06)",
+                  boxShadow: isUnlocked ? `4px 4px 0 ${char.color}15` : "none",
+                }}
+              >
+                {/* Character portrait/locked box */}
+                <div className="w-full aspect-square overflow-hidden bg-zinc-900 rounded mb-2 relative flex items-center justify-center border border-white/5">
+                  {isUnlocked ? (
+                    <img
+                      src={cardImg}
+                      alt={char.displayName}
+                      className="w-full h-full object-cover object-top transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="flex flex-col items-center justify-center p-3 text-center">
+                      <Lock className="w-6 h-6 text-gray-600 mb-1" />
+                      <span className="text-[9px] text-gray-600 font-[var(--font-bangers)] uppercase tracking-wider">
+                        ENCRIPTADO
+                      </span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Character Name / Info */}
+                <div className="text-center min-w-0">
+                  <span className="font-[var(--font-bangers)] text-xs sm:text-sm tracking-wider uppercase block truncate" style={{ color: isUnlocked ? char.color : "#6b7280" }}>
+                    {char.displayName}
+                  </span>
+                  {isUnlocked ? (
+                    <span className="text-[9px] text-gray-400 block truncate uppercase tracking-widest font-[var(--font-marker)]">
+                      {char.role}
+                    </span>
+                  ) : (
+                    <span className="text-[8px] text-gray-500 block leading-tight font-sans italic max-w-full overflow-hidden text-ellipsis line-clamp-2">
+                      {char.hint || "Sigue leyendo para desbloquear."}
+                    </span>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </motion.div>

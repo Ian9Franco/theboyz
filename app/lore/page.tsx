@@ -16,7 +16,7 @@ type TabId = "dossier" | "timeline" | "blueprints";
 const TABS: { id: TabId; label: string; short: string; icon: React.ReactNode }[] = [
   { id: "dossier",    label: "EXPEDIENTES CLASIFICADOS",    short: "EXPEDIENTES", icon: <BookOpen className="w-4 h-4 shrink-0" /> },
   { id: "timeline",   label: "TIMELINE DEL MULTIVERSO",    short: "TIMELINE",    icon: <Calendar className="w-4 h-4 shrink-0" /> },
-  { id: "blueprints", label: "PLANOS TÉCNICOS (BLUEPRINTS)", short: "PLANOS",    icon: <Cpu className="w-4 h-4 shrink-0" /> },
+  { id: "blueprints", label: "ESQUEMAS DE TECNOLOGÍA", short: "TECNOLOGÍA",    icon: <Cpu className="w-4 h-4 shrink-0" /> },
 ];
 
 export default function LorePage() {
@@ -132,7 +132,7 @@ export default function LorePage() {
             <DossierTab key="dossier" unlockAll={unlockAll} readChapters={readChapters} />
           )}
           {activeTab === "timeline" && (
-            <TimelineTab key="timeline" unlockAll={unlockAll} />
+            <TimelineTab key="timeline" unlockAll={unlockAll} readChapters={readChapters} />
           )}
           {activeTab === "blueprints" && (
             <BlueprintsTab key="blueprints" unlockAll={unlockAll} readChapters={readChapters} />

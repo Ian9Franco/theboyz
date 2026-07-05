@@ -8,10 +8,11 @@ const TIMELINE_EVENTS = [
   {
     phase: "Fase 1",
     title: "EL SILENCIO DEL DRAGÓN",
-    saga: "Piloto: Hush",
+    saga: "Saga: Distrito Nulo",
     desc: "Tras un violento colapso arcano, Sofi sufre una brutal sobrecarga sensorial. Buscando silenciar su audición hiperfocalizada, huye a Tokio, refugiándose en el restaurante de Kenji. Cuando matones del Clan Kurogane lo asesinan por deudas, la gélida ira de Sofi despierta. Descolgando las katanas gemelas ancestrales, cierra los ojos para liberar su potencial como duelista ciega. Transformada en 'Hush', rastrea cada micro-sonido en los lluviosos callejones, ejecutando a los yakuzas con precisión absoluta guiada por su radar acústico y cortando sus manos como muda advertencia.",
     details: "INFORME DE CAUSALIDAD: El nacimiento de 'Hush' ocurre en paralelo al desarrollo inicial de la tecnología Vesperwing de Ian en Brooklyn, marcando el origen de dos justicieros urbanos tácticos en extremos opuestos del multiverso.",
     icon: "🐉",
+    unlockChapter: null,
   },
   {
     phase: "Fase 2",
@@ -20,23 +21,34 @@ const TIMELINE_EVENTS = [
     desc: "Las secuelas de la infección arcana estallan en Brooklyn. Uandi manifiesta una acumulación extrema de energía cinética pura, siendo capaz de doblar vigas de acero para salvar a Ian, pero al borde de una sobrecarga cardíaca. En paralelo, Julián sufre su primer desfase de estática glitch cian y magenta al ser emboscado por sicarios de Vanguard en Hell's Kitchen. La inestabilidad biológica de ambos desencadena una violenta sobrecarga en la base que destruye el living de Dumbo.",
     details: "INFORME DE CAUSALIDAD: Ian logra estabilizar a Uandi inyectando energía residual del Universo 5458 en su pecho, pero la reacción arcana inestable genera un clon de estática independiente que comienza a deambular en las sombras del taller.",
     icon: "🏙️",
+    unlockChapter: null,
   },
   {
     phase: "Fase 3",
     title: "FUEGO PÚRPURA: LA EXPOSICIÓN",
-    saga: "Saga: Fuego Púrpura",
-    desc: "Mati intenta ocultar una anomalía de la terminal de V.O.P.S. tras manifestar filamentos inestables de plasma violeta en sus ojos y herir accidentalmente al Supercamionero. Aprovechando el caos, Phobos, una enigmática silueta arcana, hackea las pantallas de Times Square exponiendo la mutación ante la corporación de Don Vanguard. El pánico desata la detención de Mati y un asedio militar total por parte del Comandante R.E.G.U.L.A.R. en la base de Dumbo.",
-    details: "INFORME DE CAUSALIDAD: Mientras el asedio táctico inmoviliza a los héroes, Phobos ejecuta una distracción mayor inyectando una metatoxina reactiva verde en Central Park. Gorgon emerge y arrasa el parque, alzando una enorme columna de humo esmeralda acompañada por la risa estática de Phobos.",
+    saga: "Saga: Distrito Nulo",
+    desc: "Mati investiga en secreto su propia mutación en la supercomputadora de V.O.P.S., experimentando dolorosos picos de plasma violeta en sus ojos que le provocan una descarga accidental hiriendo al Supercamionero. Forzado a huir, oculta el incidente a Ian, Uandi y Julián en la base de Dumbo. Al crepúsculo, la enigmática entidad Phobos hackea las pantallas de Times Square, proyectando públicamente la mutación de Mati e inculpando a Don Vanguard de encubrir mutantes. La multitud explota en revueltas y V.O.P.S. arresta violentamente a Mati en la plaza, provocando una explosión inestable que destruye el furgón. Tras ser rescatado por los chicos, Ian le fabrica un visor especial de filtro púrpura para estabilizar su descarga, pero la desconfianza fractura al grupo justo cuando el Comandante R.E.G.U.L.A.R. localiza la base e inicia un asedio táctico completo.",
+    details: "INFORME DE CAUSALIDAD: Mientras V.O.P.S. despliega todo su poder militar para sitiar a Los Pibes, Phobos aprovecha la distracción inyectando metatoxina verde en Central Park. Gorgon emerge y arrasa con el parque, desatando una nube esmeralda donde se proyecta la risa de Phobos sobre Manhattan.",
     icon: "🔮",
-    isLocked: true,
+    unlockChapter: "pecados de brooklyn-la mentira",
   },
+  {
+    phase: "Fase 4",
+    title: "FUEGO PÚRPURA: LA CACERÍA",
+    saga: "Saga: Distrito Nulo",
+    desc: "La caída de la base de Los Pibes en Dumbo desata el caos. Bajo un asalto militar implacable del Comandante R.E.G.U.L.A.R., el grupo se fragmenta y Julián es capturado, siendo posteriormente rescatado por la enigmática matriarca vampírica Carmilla Nocturna. Uandi (Aegis) enfrenta a Gorgon en un crudo duelo físico en Central Park antes de refugiarse con Jaz. Con el visor arcano de Mati a punto de colapsar, Ian se ve obligado a recurrir a su manipulador ex-mentor, Norman Parker (The Maker), buscando asilo en la Parker Tower sin saber que este ya planea adueñarse de sus datos biométricos.",
+    details: "INFORME DE CAUSALIDAD: Los Pibes se convierten en fugitivos oficiales, sin base operativa y expuestos al juego corporativo de Parker, quien empieza a trazar los planos para controlar la energía arcana multiversal.",
+    icon: "🦇",
+    isAlwaysLocked: true,
+  }
 ];
 
 interface TimelineTabProps {
   unlockAll?: boolean;
+  readChapters?: string[];
 }
 
-export function TimelineTab({ unlockAll = false }: TimelineTabProps) {
+export function TimelineTab({ unlockAll = false, readChapters = [] }: TimelineTabProps) {
   const [selectedIdx, setSelectedIdx] = useState(0);
   const [isDecrypted, setIsDecrypted] = useState(false);
   const [password, setPassword] = useState("");
@@ -84,8 +96,15 @@ export function TimelineTab({ unlockAll = false }: TimelineTabProps) {
   };
 
   const currentEvent = TIMELINE_EVENTS[selectedIdx];
-  // Phase 3 is locked unless decrypted via editor password
-  const isRedacted = currentEvent.isLocked && !isDecrypted;
+  const isRedacted = (() => {
+    if (isDecrypted || unlockAll) return false;
+    if (currentEvent.isAlwaysLocked) return true;
+    if (currentEvent.unlockChapter) {
+      const normalizedRead = readChapters.map(id => id.toLowerCase().trim());
+      return !normalizedRead.includes(currentEvent.unlockChapter.toLowerCase());
+    }
+    return false;
+  })();
 
   // Render variables based on redacted state
   const displayTitle = isRedacted ? "EXPEDIENTES CLASIFICADOS // ENCRIPTADO" : currentEvent.title;
@@ -110,10 +129,18 @@ export function TimelineTab({ unlockAll = false }: TimelineTabProps) {
         <div className="absolute top-[-12px] left-6 bg-[#e8185a] border border-white px-2 py-0.5 text-[9px] font-[var(--font-bangers)] tracking-widest shadow-[2px_2px_0_#000] rotate-[-1deg]">
           CRONOLOGÍA MULTIVERSAL
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-2">
           {TIMELINE_EVENTS.map((event, idx) => {
             const isSelected = selectedIdx === idx;
-            const eventLocked = event.isLocked && !isDecrypted;
+            const eventLocked = (() => {
+              if (isDecrypted || unlockAll) return false;
+              if (event.isAlwaysLocked) return true;
+              if (event.unlockChapter) {
+                const normalizedRead = readChapters.map(id => id.toLowerCase().trim());
+                return !normalizedRead.includes(event.unlockChapter.toLowerCase());
+              }
+              return false;
+            })();
             return (
               <button
                 key={idx}
@@ -133,7 +160,7 @@ export function TimelineTab({ unlockAll = false }: TimelineTabProps) {
                   {event.phase}
                 </span>
                 <span className="font-[var(--font-bangers)] text-xs tracking-wider uppercase leading-tight mt-0.5 truncate max-w-full">
-                  {eventLocked ? "CLASIFICADO" : event.title.split(":")[0]}
+                  {eventLocked ? "CLASIFICADO" : event.title}
                 </span>
               </button>
             );
