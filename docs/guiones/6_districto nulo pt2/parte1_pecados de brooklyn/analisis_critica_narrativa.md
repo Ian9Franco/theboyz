@@ -15,7 +15,7 @@ Este análisis evalúa el guion final de la Parte 1 ([parte1_v3.md](file:///d:/D
 ### 2. El Escape de Times Square y el Control de la Energía [RESUELTO EN V3]
 * **Estado:** Resuelto en la revisión de los Actos 3 y 4.
 * **Solución aplicada:** Para justificar que Mati no deambule por las avenidas principales con la mutación desatada, se implementó que V.O.P.S. reprima los disturbios de forma general y arreste a Mati junto a otros civiles. Su sobrecarga estalla en el camión de traslado, rompiendo el techo y provocando el choque. Mati huye del accidente y debe caminar con los ojos cerrados para contener el plasma. Ian lo asiste de inmediato llamándolo por teléfono para guiarlo y coordinar su rescate en auto con Julián y Uandi.
-* **Impacto narrativo:** Hace el escape mucho más orgánico y verosímil. Mantiene la premisa de que Mati no está ciego de forma permanente por la mutación, sino que simplemente no puede abrir los ojos debido al exceso de energía cuántica acumulada.
+* **Impacto narrativo:** Hace el escape mucho más orgánico y verosímil. Mantiene la premisa de que Mati no está ciego de forma permanente por la mutación, sino que simplemente no puede abrir los ojos debido al exceso de energía arcana acumulada.
 
 ### 3. El Vacío Lógico del Taller Dañado [RESUELTO EN V3]
 * **Estado:** Resuelto en la revisión del Acto 4 (Página 26).
@@ -24,7 +24,7 @@ Este análisis evalúa el guion final de la Parte 1 ([parte1_v3.md](file:///d:/D
 
 ### 4. Simplificación de las Deducciones de Ian [RESUELTO EN V3]
 * **Estado:** Resuelto en la revisión del Acto 6 (Página 32).
-* **Solución aplicada:** Se eliminaron las conjeturas cuánticas u orgánicas complejas de Ian sobre "otras dimensiones". Ahora el rastreo se explica por el análisis informático del hackeo (explicando que el atacante puenteó físicamente la señal de la fibra óptica de la ciudad mediante una inyección analógica) y por las cámaras de tránsito que rastrearon el auto de Julián tras el choque.
+* **Solución aplicada:** Se eliminaron las conjeturas arcanas u orgánicas complejas de Ian sobre "otras dimensiones". Ahora el rastreo se explica por el análisis informático del hackeo (explicando que el atacante puenteó físicamente la señal de la fibra óptica de la ciudad mediante una inyección analógica) y por las cámaras de tránsito que rastrearon el auto de Julián tras el choque.
 * **Impacto narrativo:** Fundamenta la inteligencia de Ian en hechos lógicos y técnicos, manteniéndolo como el soporte tecnológico realista del grupo sin hacerlo parecer un narrador omnisciente.
 
 ### 5. Monotonía de Escala en Acción y Descenso [RESUELTO EN V3]

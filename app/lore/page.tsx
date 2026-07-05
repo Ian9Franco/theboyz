@@ -9,6 +9,7 @@ import { TimelineTab } from "@/components/lore/TimelineTab";
 import { BlueprintsTab } from "@/components/lore/BlueprintsTab";
 import { CharacterModal } from "@/components/home/CharacterModal";
 import { CHARACTER_DETAILS } from "@/lib/characterData";
+import { PasswordPromptModal } from "@/components/PasswordPromptModal";
 
 type TabId = "dossier" | "timeline" | "blueprints";
 
@@ -49,10 +50,22 @@ export default function LorePage() {
     return () => window.removeEventListener("open-character-modal", handleOpenModal);
   }, []);
 
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
+
   const toggleUnlockAll = () => {
-    const newVal = !unlockAll;
-    setUnlockAll(newVal);
-    localStorage.setItem("unlock-all", newVal ? "true" : "false");
+    const next = !unlockAll;
+    if (next) {
+      setIsPasswordModalOpen(true);
+    } else {
+      setUnlockAll(false);
+      localStorage.setItem("unlock-all", "false");
+      window.dispatchEvent(new Event("unlockAllChanged"));
+    }
+  };
+
+  const handleUnlockSuccess = () => {
+    setUnlockAll(true);
+    localStorage.setItem("unlock-all", "true");
     window.dispatchEvent(new Event("unlockAllChanged"));
   };
 
@@ -122,7 +135,7 @@ export default function LorePage() {
             <TimelineTab key="timeline" unlockAll={unlockAll} />
           )}
           {activeTab === "blueprints" && (
-            <BlueprintsTab key="blueprints" />
+            <BlueprintsTab key="blueprints" unlockAll={unlockAll} readChapters={readChapters} />
           )}
         </AnimatePresence>
       </div>
@@ -135,6 +148,12 @@ export default function LorePage() {
           />
         )}
       </AnimatePresence>
+
+      <PasswordPromptModal
+        isOpen={isPasswordModalOpen}
+        onClose={() => setIsPasswordModalOpen(false)}
+        onSuccess={handleUnlockSuccess}
+      />
     </main>
   );
 }

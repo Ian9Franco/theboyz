@@ -16,6 +16,7 @@ import { useReaderLayout } from "./useReaderLayout";
 import { useReaderAudio } from "./useReaderAudio";
 import { getComicPageUrl, getPageKeyFromUrl } from "./readerUtils";
 import { Dialogues, PanelStop } from "./audioPlayer";
+import { UnlockNotificationModal } from "@/components/UnlockNotificationModal";
 
 export function CinematicReader({
   pages: rawPages,
@@ -45,6 +46,33 @@ export function CinematicReader({
   const [panelIdx, setPanelIdx] = useState(0);
   const [zoomIdx, setZoomIdx] = useState(0);
   const [zoomedOut, setZoomedOut] = useState(false);
+  const [showUnlockModal, setShowUnlockModal] = useState(false);
+
+  useEffect(() => {
+    if (zoomedOut && pageIdx === pages.length - 1) {
+      const triggerChapters = [
+        "un lugar",
+        "un-lugar",
+        "kenji",
+        "mativerse-chapter-one",
+        "pecados de brooklyn-la mentira"
+      ];
+      const chapId = chapter.id;
+      if (triggerChapters.includes(chapId.toLowerCase().trim())) {
+        try {
+          const notified = localStorage.getItem("notified-unlocks");
+          const notifiedList = notified ? JSON.parse(notified) : [];
+          if (!notifiedList.includes(chapId)) {
+            setShowUnlockModal(true);
+            notifiedList.push(chapId);
+            localStorage.setItem("notified-unlocks", JSON.stringify(notifiedList));
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    }
+  }, [zoomedOut, pageIdx, pages.length, chapter.id]);
   const [showAllDialogues, setShowAllDialogues] = useState(false);
   const [imgSize, setImgSize] = useState<{ w: number; h: number } | null>(null);
   const [containerSize, setContainerSize] = useState({ w: 0, h: 0 });
@@ -150,10 +178,20 @@ export function CinematicReader({
       const savedFocusDialogue = localStorage.getItem("reader_focus_dialogue");
       if (savedFocusDialogue !== null) {
         setFocusDialogue(savedFocusDialogue === "true");
+      } else {
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+          setFocusDialogue(false);
+        }
       }
       const savedFocusPanel = localStorage.getItem("reader_focus_panel");
       if (savedFocusPanel !== null) {
         setFocusPanel(savedFocusPanel === "true");
+      } else {
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+          setFocusPanel(false);
+        }
       }
       const savedBubbleOpacity = localStorage.getItem("reader_bubble_opacity");
       if (savedBubbleOpacity !== null) {
@@ -806,6 +844,12 @@ export function CinematicReader({
       <ReaderInstructionsModal
         isOpen={showInstructions}
         onClose={handleCloseInstructions}
+      />
+
+      <UnlockNotificationModal
+        isOpen={showUnlockModal}
+        onClose={() => setShowUnlockModal(false)}
+        chapterId={chapter.id}
       />
     </div>
   );

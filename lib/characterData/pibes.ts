@@ -174,7 +174,7 @@ export const pibes: CharacterDetail[] = [
           habilidades: [
             'Bomber Roja (Star-Lord Style): Cuero técnico carmesí con solapas mecánicas y cierres descentrados que amortigua la reacción cinética de sus dados y naipes.',
             'Asistencia de Apuntado HUD: Las ópticas de su máscara proyectan una interfaz azul que calcula trayectorias balísticas de naipes y la distancia exacta para detonar Ecos.',
-            'Supervivencia Autónoma: Casco colapsable con sellado ambiental que filtra toxinas cuánticas y provee respiración en el vacío espacial.'
+            'Supervivencia Autónoma: Casco colapsable con sellado ambiental que filtra toxinas arcanas y provee respiración en el vacío espacial.'
           ],
           significa: 'El combate sucio e improvisado llevado a escala interdimensional. Julián utiliza la tecnología de su traje para compensar la falta de gravedad y distorsiones del espacio.',
           crisis: 'Descalibración del HUD: Si la máscara sufre daños por impactos directos o estática glitch, el cálculo de trayectorias se distorsiona, arriesgando detonaciones accidentales.'
@@ -270,7 +270,7 @@ export const pibes: CharacterDetail[] = [
     powers: {
       role: 'Aegis / Tanque Cinético',
       habilidades: [
-        'Acumulación Cinética: La tinta de sus tatuajes actúa como un receptor cuántico que absorbe la energía de los impactos físicos recibidos. No lo hace inmune al dolor, pero canaliza la fuerza del golpe.',
+        'Acumulación Cinética: La tinta de sus tatuajes actúa como un receptor arcano que absorbe la energía de los impactos físicos recibidos. No lo hace inmune al dolor, pero canaliza la fuerza del golpe.',
         'Descarga de Fuerza Vectorial: Libera la energía acumulada para ejecutar súper saltos de gran distancia, impactos devastadores a corta distancia u ondas de choque de rango corto.',
         'Refuerzo de Densidad: Canaliza el almacenamiento residual de sus tatuajes para rigidizar su estructura molecular, resistiendo temporalmente ataques masivos que superarían a cualquier humano.',
         'Movilidad Balística: Ejecuta saltos de gran altura y proyección. Carece de vuelo dinámico; su tránsito aéreo es un proyectil guiado por su propio peso que cae con intención táctica.'
@@ -319,14 +319,14 @@ export const pibes: CharacterDetail[] = [
         'Vibración Atómica: Hace vibrar sus átomos a alta velocidad para volverse completamente intangible durante unos breves segundos, dejando pasar amenazas físicas y energéticas a través de él.',
         'Vector Suit Táctico: Traje molecular ultraligero diseñado por Ian que canaliza sus estelas naranjas y evita que la fricción dimensional desintegre su cuerpo o dañe su indumentaria.'
       ],
-      significa: 'El desborde y la movilidad absoluta. Volvo domina la velocidad a escala cuántica, convirtiendo el espacio y la materia sólida en simples puertas que puede abrir corriendo.',
+      significa: 'El desborde y la movilidad absoluta. Volvo domina la velocidad a escala arcana, convirtiendo el espacio y la materia sólida en simples puertas que puede abrir corriendo.',
       crisis: 'Acecho de Reverse Volvo: El uso de su velocidad de escape abre la puerta a su eco corrupto de estática oscura, quien le pisa los talones en el fondo de sus propios portales naranjas.',
       stats: { fuerza: 8, inteligencia: 8, carisma: 2, suerte: 5, combate: 8, defensa: 8, especialVal: 9 },
       variantData: {
         action: {
           label: 'Modo Vector Suit (Movilidad Absoluta)',
           habilidades: [
-            'Armadura Molecular Flexible: Traje negro mate y naranja que se adapta a su vibración cuántica y resiste altas temperaturas de fricción sin rasgarse.',
+            'Armadura Molecular Flexible: Traje negro mate y naranja que se adapta a su vibración arcana y resiste altas temperaturas de fricción sin rasgarse.',
             'Estela de Portales Naranja: Desplazamiento supersónico que abre fisuras dimensionales en línea recta para flanquear coberturas y evadir proyectiles.',
             'Intangibilidad Atómica: Micro-vibraciones que le permiten cruzar ataques densos de energía y trampas sólidas sin sufrir daño físico.'
           ],

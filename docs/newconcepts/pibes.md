@@ -218,7 +218,7 @@ Agotamiento por sobrecarga: Si se sobreesfuerza intentando cargar objetos grande
 * **Habilidades**:
   * Bomber Roja (Star-Lord Style): Cuero técnico carmesí con solapas mecánicas y cierres descentrados que amortigua la reacción cinética de sus dados y naipes.
   * Asistencia de Apuntado HUD: Las ópticas de su máscara proyectan una interfaz azul que calcula trayectorias balísticas de naipes y la distancia exacta para detonar Ecos.
-  * Supervivencia Autónoma: Casco colapsable con sellado ambiental que filtra toxinas cuánticas y provee respiración en el vacío espacial.
+  * Supervivencia Autónoma: Casco colapsable con sellado ambiental que filtra toxinas arcanas y provee respiración en el vacío espacial.
 
 #### Sobrecarga de Masa (Forma Límite) (`alt`)
 * **Significado**: El comodín de la baraja. Al asumir riesgos críticos, Julián deja de correr para sobrecargar masas pesadas u ofrecer su energía glitch como catalizador directo de la potencia física de Uandi.
@@ -341,7 +341,7 @@ Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo 
   * Defensa: 15
   * Especial: 10
 * **Habilidades específicas**:
-  * **Acumulación Cinética**: La tinta de sus tatuajes actúa como un receptor cuántico que absorbe la energía de los impactos físicos recibidos. No lo hace inmune al dolor, pero canaliza la fuerza del golpe.
+  * **Acumulación Cinética**: La tinta de sus tatuajes actúa como un receptor arcano que absorbe la energía de los impactos físicos recibidos. No lo hace inmune al dolor, pero canaliza la fuerza del golpe.
   * **Descarga de Fuerza Vectorial**: Libera la energía acumulada para ejecutar súper saltos de gran distancia, impactos devastadores a corta distancia u ondas de choque de rango corto.
   * **Refuerzo de Densidad**: Canaliza el almacenamiento residual de sus tatuajes para rigidizar su estructura molecular, resistiendo temporalmente ataques masivos que superarían a cualquier humano.
   * **Movilidad Balística**: Ejecuta saltos de gran altura y proyección. Carece de vuelo dinámico; su tránsito aéreo es un proyectil guiado por su propio peso que cae con intención táctica.
@@ -374,7 +374,7 @@ Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo 
 
 ### Datos Complementarios
 * **Léxico y Trato**: Habla rápido y atropellado, con poca paciencia para planes largos o discursos heroicos.
-* **Costumbres**: Siempre está picando algo (snacks, barritas energéticas) debido al desgaste calórico masivo que le genera su vibración cuántica.
+* **Costumbres**: Siempre está picando algo (snacks, barritas energéticas) debido al desgaste calórico masivo que le genera su vibración arcana.
 
 ### Crisis
 Acecho del Eco Corrupto: Correr a máxima velocidad debilita las barreras dimensionales y atrae a Reverse Volvo, quien corre justo detrás de él en el fondo de sus portales, esperando a que se canse para ocupar su lugar.
@@ -389,7 +389,7 @@ Acecho del Eco Corrupto: Correr a máxima velocidad debilita las barreras dimens
 * **Especial**: 0 (Disrupción)
 
 ### Poderes / Habilidades (Null-Vector / Movilidad Absoluta)
-* **Significado**: El desborde y la movilidad absoluta. Volvo domina la velocidad a escala cuántica, convirtiendo el espacio y la materia sólida en simples puertas que puede abrir corriendo.
+* **Significado**: El desborde y la movilidad absoluta. Volvo domina la velocidad a escala arcana, convirtiendo el espacio y la materia sólida en simples puertas que puede abrir corriendo.
 * **Crisis**: Acecho de Reverse Volvo: El uso de su velocidad de escape abre la puerta a su eco corrupto de estática oscura, quien le pisa los talones en el fondo de sus propios portales naranjas.
 * **Stats de Poder**:
   * Fuerza: 8
@@ -411,7 +411,7 @@ Acecho del Eco Corrupto: Correr a máxima velocidad debilita las barreras dimens
 * **Significado**: La velocidad de escape definitiva. Volvo utiliza la aerodinámica pura del Vector Suit para desbordar al enemigo y cruzar el campo de batalla sin restricciones físicas.
 * **Crisis**: Fatiga de Conducción: Sostener la velocidad extrema desgasta sus músculos. Si se agota, las grietas naranjas pueden colapsar y atraparlo a merced de Reverse Volvo.
 * **Habilidades**:
-  * Armadura Molecular Flexible: Traje negro mate y naranja que se adapta a su vibración cuántica y resiste altas temperaturas de fricción sin rasgarse.
+  * Armadura Molecular Flexible: Traje negro mate y naranja que se adapta a su vibración arcana y resiste altas temperaturas de fricción sin rasgarse.
   * Estela de Portales Naranja: Desplazamiento supersónico que abre fisuras dimensionales en línea recta para flanquear coberturas y evadir proyectiles.
   * Intangibilidad Atómica: Micro-vibraciones que le permiten cruzar ataques densos de energía y trampas sólidas sin sufrir daño físico.
 

@@ -54,7 +54,7 @@
 * **Viñeta 5 (Plano Medio):** Uandi manejando el auto con expresión cansada, mirando el camino. Ian a su lado en el asiento del acompañante, hablando serio.
 * **Viñeta 6 (Plano Medio):** Ian se acomoda los lentes marrones y continúa hablando con gravedad.
 * **Viñeta 7 (Primer Plano):** Julián en el asiento trasero gesticulando mientras habla para romper el hielo.
-* **Viñeta 8 (Plano Detalle / Flashback):** Una pequeña viñeta estilizada que muestra la desintegración dorada y púrpura del Universo 5458 en píxeles cuánticos.
+* **Viñeta 8 (Plano Detalle / Flashback):** Una pequeña viñeta estilizada que muestra la desintegración dorada y púrpura del Universo 5458 en píxeles arcanos.
 * **Viñeta 8b (Plano Corto):** De repente, Uandi aprieta el volante con fuerza y gime de dolor, con sudor frío en la frente. Ian lo mira preocupado, señalando hacia adelante indicando que falta poco.
 
 ---
@@ -92,7 +92,7 @@
 * **Viñeta 14 (Plano General):** En el living de la base. Julián está sentado en el único y amplio sillón de cuero. Ian entra sosteniendo del brazo a Uandi, que está consciente pero pálido y sudando frío. Ian, parado en el suelo frente a Julián, le hace un gesto urgente de prisa con la mano para que se levante y le deje el lugar. Julián se para refunfuñando.
 * **Viñeta 15 (Plano Medio):** Uandi está sentado en el amplio sillón de cuero, cansado pero bien despierto. Ian, parado frente al sillón en el piso, le conecta sensores de chupete (electrodos biométricos de succión) en los brazos descubiertos y en la frente, con los cables colgando. Julián observa de pie con curiosidad.
 * **Viñeta 16 (Plano Medio):** Ian corre de prisa al taller del fondo, sentándose frente a su escritorio equipado con una computadora y varios monitores encendidos.
-* **Viñeta 17 (Plano Detalle):** Primer plano de las pantallas. Muestran las lecturas biométricas de Uandi con picos caóticos y ruidosos de color rojo, registrando anomalías electromagnéticas y cuánticas extremas.
+* **Viñeta 17 (Plano Detalle):** Primer plano de las pantallas. Muestran las lecturas biométricas de Uandi con picos caóticos y ruidosos de color rojo, registrando anomalías electromagnéticas y arcanas extremas.
 * **Viñeta 17b (Primer Plano):** Rostro de Ian desencajado por el miedo, con el brillo rojo de las pantallas reflejado en sus anteojos.
 
 ---
@@ -177,7 +177,7 @@
 
 * **Viñeta 19 (Plano Medio Largo):** Ian y Uandi caminan uno al lado del otro de noche bajo una fría llovizna otoñal por las calles grises de Brooklyn. Visten camperas con capuchas y el ambiente es silencioso.
 * **Viñeta 20 (Primer Plano):** Uandi se mira las manos con sospecha mientras camina, explicándole a Ian la extraña vibración que sintió bajo la piel. Ian lo escucha con rostro serio y ceño fruncido.
-* **Viñeta 21 (Plano Corto):** Ian le habla con severidad, advirtiéndole del peligro cuántico que vio en los monitores. Uandi intenta restarle importancia sonriendo, señalando un almacén iluminado con un cartel de neón al final de la calle.
+* **Viñeta 21 (Plano Corto):** Ian le habla con severidad, advirtiéndole del peligro arcano que vio en los monitores. Uandi intenta restarle importancia sonriendo, señalando un almacén iluminado con un cartel de neón al final de la calle.
 * **Viñeta 21b (Plano General):** Doblan una esquina, adentrándose en una callejuela más oscura que pasa justo por debajo de unos andamios metálicos oxidados de una obra en construcción. Arriba, en el cielo brumoso, una gran grúa sostiene una carga de vigas.
 
 ---

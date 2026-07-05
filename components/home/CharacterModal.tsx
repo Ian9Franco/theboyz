@@ -185,7 +185,7 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     }
   }, [char.id]);
 
-  const isLocked = char.incognito && !unlockAll;
+  const isLocked = char.id === 'valery' ? true : (char.incognito && !unlockAll);
   const accent = isLocked ? "#6b7280" : char.color;
   const vibrantAccent = getVibrantColor(accent);
   const darkBg = getDarkBgColor(accent);

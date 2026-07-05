@@ -7,7 +7,7 @@
 ---
 
 ## 🔴 El Sistema de Conducción: "The Aperture" (La Apertura)
-A diferencia de Cíclopes, cuyos ojos son portales a otra dimensión de fuerza cinética, el poder de Mati no proviene de una mutación biológica estándar, sino de que sus ojos son literalmente un portal físico a otra dimensión del multiverso de donde brota esta energía de plasma. Su cuerpo funciona como un nexo cuántico que absorbe la energía residual de sus contrapartes en otras realidades (el "Mativerse").
+A diferencia de Cíclopes, cuyos ojos son portales a otra dimensión de fuerza cinética, el poder de Mati no proviene de una mutación biológica estándar, sino de que sus ojos son literalmente un portal físico a otra dimensión del multiverso de donde brota esta energía de plasma. Su cuerpo funciona como un nexo arcano que absorbe la energía residual de sus contrapartes en otras realidades (el "Mativerse").
 
 *   **Visor de Conducción Táctica:** Desarrollado por Vesperwing. Regula el flujo de salida de sus ojos, permitiéndole calibrar con precisión milimétrica la dirección, intensidad y el diámetro del haz de plasma. Además, posee soporte de respiración autónoma para el vacío del espacio.
 *   **Sin Visor (Estado Pasivo):** Mati puede abrir los ojos de forma normal en su vida cotidiana, parpadear y mirar a sus amigos sin emitir energía ni causar daño.

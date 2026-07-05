@@ -120,7 +120,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 40. Grilla de 5 viñetas. Viñeta 5 splash a página completa; viñeta 3 grande de impacto.
 2. **ANÁLISIS DE RITMO:**
-   Acción brutal. Uandi domina físicamente, pero la página instala el costo: sobrecarga cuántica al límite.
+   Acción brutal. Uandi domina físicamente, pero la página instala el costo: sobrecarga arcana al límite.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
    Fondo blanco en disparos y golpes rápidos. Uandi rompe paneles en Viñetas 3 y 5. Usar siluetas oscuras para impactos contra soldados, sin gore.
 

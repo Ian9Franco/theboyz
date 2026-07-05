@@ -104,7 +104,7 @@ Maker era originalmente un brillante y meticuloso genetista de la corporación. 
 
 ### 🎯 Motivación: ¿Qué es lo que busca?
 * **Evolución Forzada:** Convertir a la población en seres maleables libres de las limitaciones físicas tradicionales (enfermedad, envejecimiento, fracturas óseas), sin importar cuántos miles mueran en el proceso de asimilación molecular.
-* **Conocimiento Absoluto:** Analizar la energía cuántica y cinemática de los Pibes para integrarla en su propio código biológico y alcanzar la inmortalidad perfecta.
+* **Conocimiento Absoluto:** Analizar la energía arcana y cinemática de los Pibes para integrarla en su propio código biológico y alcanzar la inmortalidad perfecta.
 
 ### 🎭 Comportamiento y Personalidad
 * **El Académico Gélido:** Mantiene siempre una postura impecable y un tono de voz extremadamente educado y pausado. No muestra ira, alegría ni pánico. Trata los combates y las torturas como simples experimentos de laboratorio y recopilación de datos de variables físicas.
@@ -207,7 +207,7 @@ Character design datasheet of an elite tactical military operative named Apex. R
   * Especial (Fórmula Apex): 8
 * **Stats Amplificados (Poderes Activos):**
   * Fuerza: 8 | Inteligencia: 9 | Carisma: 5 | Suerte: 6 | Combate: 10 | Defensa: 8 | Especial: 9
-* **Crisis / Debilidad:** Sobrecarga de Datos: Al depender de cálculos geométricos lógicos y flujos ordenados, los eventos de naturaleza cuántica, caótica o anomalías interdimensionales sin reglas físicas constantes ralentizan su procesamiento táctico y desestabilizan su puntería.
+* **Crisis / Debilidad:** Sobrecarga de Datos: Al depender de cálculos geométricos lógicos y flujos ordenados, los eventos de naturaleza arcana, caótica o anomalías interdimensionales sin reglas físicas constantes ralentizan su procesamiento táctico y desestabilizan su puntería.
 
 ### ⏳ Origen
 Tras los catastróficos incidentes causados por la metatoxina verde de Phobos en Nueva York, agencias secretas del gobierno confiscaron una muestra del compuesto químico. Científicos militares lograron sintetizar una variante molecularmente estable: la Fórmula Apex. El suero fue inyectado en su mejor operativo de campo. A diferencia de Gorgon, la toxina se asimiló limpiamente a nivel celular sin causar deformaciones físicas ni locura, optimizando su fisiología y conexiones neuronales al límite humano.
@@ -222,7 +222,7 @@ Tras los catastróficos incidentes causados por la metatoxina verde de Phobos en
 * **Indumentaria:** Un traje de compresión táctico negro mate de alta resistencia, con placas de armadura ligera de polímero gris pizarra en el pecho y hombros. Cinturón táctico utilitario, arneses de pecho y fundas rígidas para armas en los muslos.
 
 ### 🎯 Motivación: ¿Qué es lo que busca?
-* **Cumplimiento del Deber:** Contener y neutralizar cualquier amenaza cuántica o anomalía mutante que ponga en peligro la seguridad nacional, incluyendo a los Pibes y a los esbirros de Phobos. Es un profesional que cumple órdenes sin cuestionar la moralidad de sus superiores.
+* **Cumplimiento del Deber:** Contener y neutralizar cualquier amenaza arcana o anomalía mutante que ponga en peligro la seguridad nacional, incluyendo a los Pibes y a los esbirros de Phobos. Es un profesional que cumple órdenes sin cuestionar la moralidad de sus superiores.
 
 ### 🎭 Comportamiento y Personalidad
 * **El Profesional Imperturbable:** Extremadamente pragmático, lacónico y directo. No se burla de sus oponentes ni muestra arrogancia. En combate es eficiente, silencioso y letal, buscando siempre la forma más rápida y limpia de terminar la misión.
@@ -276,7 +276,7 @@ Carmilla es la matriarca de un antiguo linaje vampírico que ha habitado las zon
 * **Indumentaria:** Un abrigo militar victoriano ajustado de color rojo carmesí brillante con botones dorados y cuello alto, guantes largos de cuero negro y una gran capa militar de terciopelo negro sobre sus hombros.
 
 ### 🎯 Motivación: ¿Qué es lo que busca?
-* **Preservación del Ecosistema Multiversal:** Mantener el flujo de mundos limpio de infecciones cuánticas o metatoxinas de Phobos que destruyan la esencia vital de la cual se alimentan los suyos.
+* **Preservación del Ecosistema Multiversal:** Mantener el flujo de mundos limpio de infecciones arcanas o metatoxinas de Phobos que destruyan la esencia vital de la cual se alimentan los suyos.
 * **Poder de Linaje:** Consolidar su dominio sobre las sombras de la Corriente.
 
 ### 🎭 Comportamiento y Personalidad

@@ -27,7 +27,7 @@ export const antagonistas: CharacterDetail[] = [
         'Guardia Pretoriana: Invoca contingentes de sicarios tácticos fuertemente armados con fusiles de asalto.'
       ],
       significa: 'El rey de los bajos fondos corporativos. Aplasta amenazas mediante tácticas de estrangulamiento de recursos.',
-      crisis: 'Sabotaje de red: Su imperio depende de sistemas bancarios estables; la disrupción cuántica anula su control.',
+      crisis: 'Sabotaje de red: Su imperio depende de sistemas bancarios estables; la disrupción arcana anula su control.',
       stats: { fuerza: 9, inteligencia: 10, carisma: 9, suerte: 7, combate: 9, defensa: 8, especialVal: 8 }
     }
   },
@@ -105,7 +105,7 @@ export const antagonistas: CharacterDetail[] = [
     perfil: [
       'Alquimista prohibido: Hermano de Don Vanguard, obsesionado con el hermetismo y el control de las almas.',
       'Golems de concreto: Arranca cimientos urbanos para fusionarlos con almas de criminales.',
-      'Fisonomía demacrada: Dedos manchados con tinta cuántica y ojos negros con runas rojas.'
+      'Fisonomía demacrada: Dedos manchados con tinta arcana y ojos negros con runas rojas.'
     ],
     crisis: 'Consumo vital: Sus hechizos de sangre consumen su propia fuerza si no drena almas de forma constante.',
     stats: { fuerza: 4, inteligencia: 9, carisma: 6, suerte: 5, combate: 6, defensa: 8, especialVal: 8 },
@@ -135,7 +135,7 @@ export const antagonistas: CharacterDetail[] = [
   visualCode: 'Uniforme táctico blindado negro y azul, visor de luz azul sólido, modulador de voz',
   perfil: [
     'Supersoldado institucional: Jefe operativo de los V.O.P.S., la fuerza policial de élite privatizada que Don Vanguard controla desde la alcaldía de Nueva York bajo fachada de seguridad pública.',
-    'Cazador de raros: Su unidad tiene mandato encubierto de identificar, contener y neutralizar a individuos con alteraciones cuánticas en la ciudad. Opera con total impunidad institucional.',
+    'Cazador de raros: Su unidad tiene mandato encubierto de identificar, contener y neutralizar a individuos con alteraciones arcanas en la ciudad. Opera con total impunidad institucional.',
     'Estilo de opresión blindada: Exo-uniforme táctico militar negro mate con líneas de luces azules de estasis, casco hermético con visor sellado y modulador de voz que distorsiona sus órdenes en frecuencia de radio.'
   ],
   crisis: 'Parálisis doctrinaria: La rigidez de su protocolo lo bloquea cuando enfrenta tácticas caóticas o improvisadas que escapan a sus manuales de contención táctica.',
@@ -145,7 +145,7 @@ export const antagonistas: CharacterDetail[] = [
   powers: {
     role: 'Jefe Táctico V.O.P.S.',
     habilidades: [
-      'Red de Contención: Dispara redes de energía azul que inmovilizan y suprimen físicamente a individuos con alteraciones cuánticas activas.',
+      'Red de Contención: Dispara redes de energía azul que inmovilizan y suprimen físicamente a individuos con alteraciones arcanas activas.',
       'Escudo Repulsor Antidisturbios: Deflector táctico pesado que absorbe impactos frontales y los devuelve como ondas de choque cinético.',
       'Protocolo de Neutralización: Coordina a su unidad de V.O.P.S. en formaciones de cerco que cortan las rutas de escape y aíslan al objetivo.'
     ],
@@ -199,7 +199,7 @@ export const antagonistas: CharacterDetail[] = [
     'Suero estabilizado: No causa deformidades físicas ni psicosis; se asimila a nivel celular para crear al soldado perfecto.',
     'Mente profesional: Corre por su sistema optimizando su tiempo de reacción, memoria muscular and procesamiento táctico de manera fría y profesional.'
   ],
-  crisis: 'Sobrecarga táctica: Al depender de cálculos geométricos lógicos, los eventos puramente caóticos o cuánticos desestabilizan su estrategia.',
+  crisis: 'Sobrecarga táctica: Al depender de cálculos geométricos lógicos, los eventos puramente caóticos o arcanos desestabilizan su estrategia.',
   stats: { fuerza: 7, inteligencia: 8, carisma: 5, suerte: 6, combate: 9, defensa: 7, especialVal: 8 },
   especialLabel: 'Fórmula Apex',
   powers: {

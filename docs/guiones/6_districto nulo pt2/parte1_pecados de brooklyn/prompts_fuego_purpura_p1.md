@@ -28,7 +28,7 @@ Este documento de diseño técnico contiene los prompts optimizados para SeaArt 
 * **Viñeta 1 (Plano General):** Mati teclea concentrado en el taller oscuro, rodeado de pantallas con códigos de color violeta.
 * **Viñeta 2 (Plano Detalle):** Dedos de Mati tecleando rápidamente sobre el teclado iluminado en violeta.
 * **Viñeta 3 (Primer Plano):** Mati con rostro concentrado e inexpresivo, con hoyuelos en las mejillas.
-* **Viñeta 4 (Plano Medio):** Monitores mostrando perfiles de variantes con distorsión cuántica violeta.
+* **Viñeta 4 (Plano Medio):** Monitores mostrando perfiles de variantes con distorsión arcana violeta.
 * **Viñeta 5 (Plano Detalle):** Manos de Mati operando de prisa la consola.
 * **Viñeta 6 (Plano General):** Volvo observa con sorpresa y sigilo desde la puerta entreabierta del laboratorio.
 
@@ -42,7 +42,7 @@ Este documento de diseño técnico contiene los prompts optimizados para SeaArt 
 2. **ANÁLISIS DE RITMO:**
    Slow-Burn. Confrontación verbal, revelación de sospechas y miedo mutuo.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
-   En la Viñeta 4, las líneas de estática cuántica que vibran alrededor de Volvo rompen el gutter superior, invadiendo sutilmente el panel 3.
+   En la Viñeta 4, las líneas de estática arcana que vibran alrededor de Volvo rompen el gutter superior, invadiendo sutilmente el panel 3.
 
 4. **PROMPT FINAL PARA SEAART:**
 > [!TIP]
@@ -282,7 +282,7 @@ Este documento de diseño técnico contiene los prompts optimizados para SeaArt 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 10. Grilla de 5 viñetas. Las viñetas 1, 3 y 5 son medianas y grandes. Las viñetas 2 y 4 son pequeñas.
 2. **ANÁLISIS DE RITMO:**
-   Slow-Burn. Monólogo interno de Mati, aumento de la presión cuántica.
+   Slow-Burn. Monólogo interno de Mati, aumento de la presión arcana.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
    En la Viñeta 3, el reflejo violeta en el cristal de la ventana se desborda y corta el gutter inferior derecho de la viñeta.
 
@@ -300,8 +300,8 @@ Este documento de diseño técnico contiene los prompts optimizados para SeaArt 
 5. **VIÑETAS EN ESPAÑOL:**
 * **Viñeta 1 (Plano Medio):** Mati solo en la cocina cortando una manzana con cara de preocupación.
 * **Viñeta 2 (Plano Detalle):** Cuchillo cortando la manzana sobre la tabla de madera.
-* **Viñeta 3 (Plano Medio):** Mati mira por la ventana y su reflejo revela brillo violeta cuántico en sus ojos.
-* **Viñeta 4 (Plano Detalle):** El reflejo del vidrio con el filamento cuántico violeta latiendo con fuerza.
+* **Viñeta 3 (Plano Medio):** Mati mira por la ventana y su reflejo revela brillo violeta arcano en sus ojos.
+* **Viñeta 4 (Plano Detalle):** El reflejo del vidrio con el filamento arcano violeta latiendo con fuerza.
 * **Viñeta 5 (Plano Medio):** Mati da vuelta la cara con mirada ensombrecida y decidida.
 
 
@@ -358,7 +358,7 @@ Este documento de diseño técnico contiene los prompts optimizados para SeaArt 
 
 5. **VIÑETAS EN ESPAÑOL:**
 * **Viñeta 1 (Plano Medio):** Mati mojándose la cara con agua fría en el baño del galpón.
-* **Viñeta 2 (Plano Detalle Extremo):** Sus ojos frente al espejo, mostrando iris agrietados con fuego cuántico violeta.
+* **Viñeta 2 (Plano Detalle Extremo):** Sus ojos frente al espejo, mostrando iris agrietados con fuego arcano violeta.
 * **Viñeta 3 (Plano Medio):** Mati cubriéndose la cabeza con la capucha de su campera bomber gris.
 * **Viñeta 4 (Plano General):** Mati saliendo de la base de noche a través del pasillo y la puerta metálica.
 
@@ -482,7 +482,7 @@ Este documento de diseño técnico contiene los prompts optimizados para SeaArt 
 2. **ANÁLISIS DE RITMO:**
    Slow-Burn. Phobos monitorea la inestabilidad de Mati.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
-   En la Viñeta 3, la proyección holográfica cuántica flota e invade el gutter izquierdo y superior de la viñeta.
+   En la Viñeta 3, la proyección holográfica arcana flota e invade el gutter izquierdo y superior de la viñeta.
 
 4. **PROMPT FINAL PARA SEAART:**
 > [!TIP]
@@ -600,7 +600,7 @@ Este documento de diseño técnico contiene los prompts optimizados para SeaArt 
 2. **ANÁLISIS DE RITMO:**
    Slow-Burn / Tensión. Phobos revela los archivos médicos de V.O.P.S.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
-   En la Viñeta 2, las líneas de la firma cuántica de Mati de las pantallas se desbordan e invaden el gutter inferior de la página.
+   En la Viñeta 2, las líneas de la firma arcana de Mati de las pantallas se desbordan e invaden el gutter inferior de la página.
 
 4. **PROMPT FINAL PARA SEAART:**
 > [!TIP]
@@ -611,8 +611,8 @@ Este documento de diseño técnico contiene los prompts optimizados para SeaArt 
 > --no 3d, photorealistic, cgi, text, speech bubbles, watermarks, glossy reflections, airbrushed gradients, white gutters, white panel borders, white divider lines
 
 5. **VIÑETAS EN ESPAÑOL:**
-* **Viñeta 1 (Plano Contrapicado):** Mati mira hacia arriba con horror las imágenes en Times Square, que muestran su ficha médica y análisis genéticos con diagramas detallados de sus ojos y mutación cuántica, iluminado por la luz violeta de las pantallas.
-* **Viñeta 2 (Plano General):** Las pantallas gigantes del centro urbano revelando el archivo y la ficha médica cuántica de Mati, con escaneos digitales extremos de su iris violeta agrietado e información genética con gráficos y datos de V.O.P.S.
+* **Viñeta 1 (Plano Contrapicado):** Mati mira hacia arriba con horror las imágenes en Times Square, que muestran su ficha médica y análisis genéticos con diagramas detallados de sus ojos y mutación arcana, iluminado por la luz violeta de las pantallas.
+* **Viñeta 2 (Plano General):** Las pantallas gigantes del centro urbano revelando el archivo y la ficha médica arcana de Mati, con escaneos digitales extremos de su iris violeta agrietado e información genética con gráficos y datos de V.O.P.S.
 
 
 ---
@@ -700,7 +700,7 @@ Este documento de diseño técnico contiene los prompts optimizados para SeaArt 
 5. **VIÑETAS EN ESPAÑOL:**
 * **Viñeta 1 (Plano General):** Mati y los civiles esposados e inmovilizados en el estrecho y seco furgón metálico en movimiento.
 * **Viñeta 2 (Plano Medio):** Mati con el rostro hacia abajo e inmovilizado por las esposas, intentando contener la energía que se filtra como un brillo violeta hacia el suelo.
-* **Viñeta 3 (Plano Detalle Extremo):** La energía cuántica violeta acumulándose y escapando de los párpados apretados de Mati.
+* **Viñeta 3 (Plano Detalle Extremo):** La energía arcana violeta acumulándose y escapando de los párpados apretados de Mati.
 * **Viñeta 4 (Plano Medio):** Un detenido esposado y aterrorizado gritando desesperado hacia la rejilla de los guardias al notar el brillo.
 * **Viñeta 5 (Plano Medio):** Los guardias en la cabina del camión riéndose, ignorando la alarma.
 
@@ -823,12 +823,12 @@ Este documento de diseño técnico contiene los prompts optimizados para SeaArt 
 
 ---
 
-## PÁGINA 25.5 — "La Presión Cuántica" (Acto 4)
+## PÁGINA 25.5 — "La Presión Arcana" (Acto 4)
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 25.5. Grilla de 5 viñetas. Estructura de alta tensión en el living. Las viñetas 2 y 4 son pequeñas.
 2. **ANÁLISIS DE RITMO:**
-   Tensión / Acción controlada. El peligro inmediato de la energía cuántica de Mati.
+   Tensión / Acción controlada. El peligro inmediato de la energía arcana de Mati.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
    En la Viñeta 2, el destello violeta rompe el panel del gutter.
 
@@ -939,7 +939,7 @@ Este documento de diseño técnico contiene los prompts optimizados para SeaArt 
 
 ---
 
-## PÁGINA 29 — "El Secreto Cuántico" (Acto 5)
+## PÁGINA 29 — "El Secreto Arcano" (Acto 5)
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 29. Grilla de 4 viñetas.
@@ -960,7 +960,7 @@ Este documento de diseño técnico contiene los prompts optimizados para SeaArt 
 
 5. **VIÑETAS EN ESPAÑOL:**
 * **Viñeta 1 (Plano Medio):** Julián preguntando por las razones de la huida de Volvo.
-* **Viñeta 2 (Plano General):** Mati revelando las firmas de clones y la presión cuántica en sus ojos.
+* **Viñeta 2 (Plano General):** Mati revelando las firmas de clones y la presión arcana en sus ojos.
 * **Viñeta 3 (Plano Medio):** Uandi prestando atención a la revelación de Mati.
 * **Viñeta 4 (Plano Detalle):** El marco de fotos roto de Sofi en primer plano.
 

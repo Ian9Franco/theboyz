@@ -62,7 +62,7 @@ Este documento reúne toda la información técnica, psicológica, narrativa y v
 ### 🦾 El Vesper-Hangar (Protocolo Overlord)
 Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares de titanio y fibra de carbono en color gris grafito y negro mate con filamentos en verde oscuro brillante:
 *   **Mark III — "The Baseline" (Traje Principal):** El traje que usa en el 90% de los combates en la Tierra. Equilibrado entre placas anatómicas de titanio y movilidad óptima.
-*   **Mark LXXXV (85) — "The Cosmic Vesper":** Versión definitiva para misiones en el espacio o multiversales. Presión absoluta para vacío, filtros cuánticos y disipador térmico reforzado para el *Archor Core* (anomalía de los Backrooms contenida en su pecho que le sirve como fuente de energía).
+*   **Mark LXXXV (85) — "The Cosmic Vesper":** Versión definitiva para misiones en el espacio o multiversales. Presión absoluta para vacío, filtros arcanos y disipador térmico reforzado para el *Archor Core* (anomalía de los Backrooms contenida en su pecho que le sirve como fuente de energía).
 *   **Mark XLIV (44) — "Aegisbuster" (El Rompe-Escudos):** Diseñado en secreto para contener a Uandi si pierde el control por sobrecarga. Usa guanteletes de absorción de impacto, emisores de frecuencias de aturdimiento y sistemas de anclaje hidráulico.
 *   **Mark L (50) — "Mecha-Vesper":** Mecha colosal pilotado desde el pecho, usado como artillería pesada móvil contra enemigos de escala Kaiju.
 
@@ -202,7 +202,7 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
 
 ### 📖 Lore e Historia
 *   **Lore Actual (El Impostor de Posibilidades):** Se adapta a su rol de infiltrador. Sufre por la inestabilidad de su poder: cada vez que absorbe los recuerdos de un Eco desintegrado experimenta sobrecarga sináptica, temiendo que su propia mente y cuerpo se disuelvan en estática analógica.
-*   **Lore Proyectado (El Guionista de la Realidad):** Descubre que la estática que manipula es la materia prima de las líneas temporales. Aprende a realizar **Edición Narrativa Táctica** para forzar paradojas breves (ej. sostener un puente roto por 3 segundos). Abusar de esto arriesga un derrame cerebral o quedar atrapado en descorrelación cuántica en el vacío interdimensional.
+*   **Lore Proyectado (El Guionista de la Realidad):** Descubre que la estática que manipula es la materia prima de las líneas temporales. Aprende a realizar **Edición Narrativa Táctica** para forzar paradojas breves (ej. sostener un puente roto por 3 segundos). Abusar de esto arriesga un derrame cerebral o quedar atrapado en descorrelación arcana en el vacío interdimensional.
 
 ### 🎨 Aspecto Visual y Guía de Generación
 *   **Estética:** Estática cromática azul y roja, distorsiones tipo glitch analógico, chispas de fricción de energía inestable.
@@ -251,7 +251,7 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
 | **Habilidad Especial (Intercambio)** | 10/10 |
 
 ### ⚡ Poderes y Habilidades
-*   **Poder Principal — *The Aperture (La Apertura)*:** Sus ojos son portales físicos a una dimensión de plasma violeta pura. Su cuerpo actúa como un nexo cuántico que absorbe la energía térmica de sus contrapartes en otras realidades (el "Mativerse").
+*   **Poder Principal — *The Aperture (La Apertura)*:** Sus ojos son portales físicos a una dimensión de plasma violeta pura. Su cuerpo actúa como un nexo arcano que absorbe la energía térmica de sus contrapartes en otras realidades (el "Mativerse").
     *   *Visor de Conducción Táctica:* Creado por Ian, le permite regular el diámetro, intensidad y dirección del haz de plasma.
     *   *Uso sin Visor (Catastrófico):* Si intenta usar sus poderes sin el visor, el rayo de plasma cubre todo su campo visual al instante, desatando una destrucción masiva y fuego aliado.
 *   **Modos de Disparo (Guiados por la Mirada):**
@@ -270,7 +270,7 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
 *   **Ian (Vesperwing):** Ian diseña su tecnología de retaguardia, pero en la línea de fuego es Mati quien asume la batuta táctica debido a su poder de fuego bruto.
 
 ### 📖 Lore e Historia
-*   **Lore Actual (La Guerra Mativersal):** Su cuerpo actúa como la batería cuántica del Mativerse. Sus variantes en otras dimensiones funcionan como generadores de su reactor. Si una variante muere, experimenta un subidón térmico doloroso. Actualmente, su variante maligna **Mati Prime** ha desatado una guerra para centralizar la energía multiversal.
+*   **Lore Actual (La Guerra Mativersal):** Su cuerpo actúa como la batería arcana del Mativerse. Sus variantes en otras dimensiones funcionan como generadores de su reactor. Si una variante muere, experimenta un subidón térmico doloroso. Actualmente, su variante maligna **Mati Prime** ha desatado una guerra para centralizar la energía multiversal.
 *   **Lore Proyectado (El Consejo de Matis):** Mati debe enfrentar a la "Corte de los Matis" (variantes como *Gladiador*, *Astronauta*, *Augusto*, *Pixel*, *Warden* y *Dweller*) y derrotar a *Mati Prime "El Arquitecto"*, quien busca destruir el libre albedrío multiversal por considerarlo una inestabilidad de software.
 
 ### 🎨 Aspecto Visual y Guía de Generación
@@ -394,7 +394,7 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
 *   **Julián (Wildcard):** Sinergia táctica alta en el campo. Julián disipa el exceso de calor e inestabilidad de Uandi absorbiéndolo con su estática y puede inyectarle energía de clones destruidos para recargar su batería cinética al instante.
 
 ### 📖 Lore e Historia
-*   **Lore Actual (El Reactor del Equipo):** Durante la huida de los Backrooms, Uandi se interpuso para proteger a Ian de una descarga inestable de energía cuántica. Su estructura celular absorbió el impacto, adaptándose para acumular y canalizar energía cinética. Con el tiempo, el exceso de energía absorbida genera calor extremo a su alrededor, evaporando agua y resquebrajando la tierra.
+*   **Lore Actual (El Reactor del Equipo):** Durante la huida de los Backrooms, Uandi se interpuso para proteger a Ian de una descarga inestable de energía arcana. Su estructura celular absorbió el impacto, adaptándose para acumular y canalizar energía cinética. Con el tiempo, el exceso de energía absorbida genera calor extremo a su alrededor, evaporando agua y resquebrajando la tierra.
 *   **Lore Proyectado — *Modo Sobrecarga Cinética*:** Cuando la vida de sus amigos corre peligro extremo, entra en **Sobrecarga Cinética (Crisis)**:
     *   *Aspecto Estandarizado:* Experimenta una **hipertrofia muscular masiva** y su **piel se vuelve incandescente**, mientras las runas rojas brillan con furia en su cuerpo y distorsionan térmicamente el aire (reemplazando ideas de solidificación o texturas rocosas).
     *   *El Costo:* La Sobrecarga anula su juicio racional, dominándolo un impulso obsesivo e incontrolable de proteger que le impide distinguir aliados de enemigos.
@@ -447,7 +447,7 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
 *   **Poder Principal — *Velocidad de Escape Dimensional*:** Se desplaza a velocidades supersónicas que desafían la física, abriendo portales naranjas brillantes en el aire por pura fricción con el espacio-tiempo. Puede cruzar estructuras sólidas abriendo un portal en ellas sobre la marcha.
 *   **Biología de la Corriente:**
     *   *Inmunidad de Entorno Natural:* Su cuerpo se adaptó a las leyes físicas del vacío entre realidades, lo que le permite sobrevivir sin cascos, máscaras ni trajes espaciales en el espacio exterior, resistir radiaciones y atmósferas hostiles de forma natural.
-    *   *Vibración Atómica (Intangibilidad):* En situaciones críticas, hace vibrar sus átomos a frecuencias cuánticas para volverse intangible por unos breves segundos, permitiendo que amenazas físicas o de energía lo atraviesen sin causarle daño.
+    *   *Vibración Atómica (Intangibilidad):* En situaciones críticas, hace vibrar sus átomos a frecuencias arcanas para volverse intangible por unos breves segundos, permitiendo que amenazas físicas o de energía lo atraviesen sin causarle daño.
 *   **Herramientas y Equipo — *Vector Suit (Diseño de Ian)*:**
     *   Traje ultraligero y elástico diseñado con fibras moleculares anti-desgarro para interactuar con la fricción de su velocidad y portales, impidiendo que el traje se queme o rompa al vibrar atómicamente.
 

@@ -75,7 +75,7 @@ const BLUEPRINTS: Blueprint[] = [
     habilidades: [
       {
         nombre: "CASCO DE CONDUCCIÓN",
-        desc: "Máscara hermética con HUD de luz azul analógica que filtra toxinas cuánticas, permite respirar en el vacío y calcula trayectorias balísticas en tiempo real.",
+        desc: "Máscara hermética con HUD de luz azul analógica que filtra toxinas, permite respirar en el vacío y calcula trayectorias balísticas en tiempo real.",
       },
       {
         nombre: "BOMBER ROJA TÁCTICA",
@@ -118,11 +118,11 @@ const BLUEPRINTS: Blueprint[] = [
   {
     id: "aegis",
     hero: "AEGIS",
-    objeto: "TATUAJES DE RECEPCIÓN CUÁNTICA",
+    objeto: "TATUAJES DE RECEPCIÓN ARCANA",
     color: "#ef4444", // Red
     habilidades: [
       {
-        nombre: "RECEPTOR CUÁNTICO (TINTA)",
+        nombre: "RECEPTOR ARCANO (TINTA)",
         desc: "Estructuras moleculares inyectadas en la piel que actúan como dipolos absorbentes de impacto. Convierten la fuerza cinética recibida en carga utilizable.",
       },
       {
@@ -178,7 +178,7 @@ const BLUEPRINTS: Blueprint[] = [
         desc: "Anclajes magnéticos en el calzado que ayudan a abrir portales estables de escape dimensional al alcanzar velocidades supersónicas.",
       },
       {
-        nombre: "ESTABILIZADORES CUÁNTICOS",
+        nombre: "ESTABILIZADORES ARCANOS",
         desc: "Dispositivos en las pantorrillas y muñecas que regulan la tasa de vibración atómica del cuerpo para coordinar la intangibilidad.",
       },
       {
@@ -399,13 +399,139 @@ function NullVectorSVG({ color, activeIdx, setActiveIdx }: SVGProps) {
   );
 }
 
+function PhobosSVG({ color, activeIdx, setActiveIdx }: SVGProps) {
+  return (
+    <svg width="260" height="280" viewBox="0 0 260 280" style={{ color }}>
+      {/* Visor outline */}
+      <path d="M40 100 L220 100 L200 150 L60 150 Z" fill="none" stroke="currentColor" strokeWidth="2.5" />
+      <line x1="40" y1="100" x2="60" y2="150" stroke="currentColor" strokeWidth="2.5" />
+      <line x1="220" y1="100" x2="200" y2="150" stroke="currentColor" strokeWidth="2.5" />
+      {/* Target/Scan lines */}
+      <circle cx="130" cy="125" r="18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4,3" />
+      <line x1="90" y1="125" x2="170" y2="125" stroke="currentColor" strokeWidth="1" opacity={0.5} />
+      <line x1="130" y1="85" x2="130" y2="165" stroke="currentColor" strokeWidth="1" opacity={0.5} />
+      
+      {/* Hotspots: 0: Reading sensor (scan center), 1: HUD screen (lens areas) */}
+      <HotspotDot cx={130} cy={125} index={0} activeIdx={activeIdx} setActiveIdx={setActiveIdx} color={color} />
+      <HotspotDot cx={80} cy={125} index={1} activeIdx={activeIdx} setActiveIdx={setActiveIdx} color={color} />
+      <HotspotDot cx={180} cy={125} index={1} activeIdx={activeIdx} setActiveIdx={setActiveIdx} color={color} />
+    </svg>
+  );
+}
+
+function GorgonSVG({ color, activeIdx, setActiveIdx }: SVGProps) {
+  return (
+    <svg width="260" height="280" viewBox="0 0 260 280" style={{ color }}>
+      {/* Spine / Vertebrae outline */}
+      <line x1="130" y1="40" x2="130" y2="240" stroke="currentColor" strokeWidth="4" opacity={0.3} />
+      <rect x="120" y="60" width="20" height="15" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
+      <rect x="120" y="90" width="20" height="15" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
+      <rect x="120" y="120" width="20" height="15" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
+      <rect x="120" y="150" width="20" height="15" rx="2" fill="none" stroke="currentColor" strokeWidth="2" />
+      {/* Injection tubes */}
+      <path d="M100 80 Q120 100 120 105" fill="none" stroke="currentColor" strokeWidth="2" />
+      <path d="M160 80 Q140 100 140 105" fill="none" stroke="currentColor" strokeWidth="2" />
+      <path d="M100 140 Q120 130 120 125" fill="none" stroke="currentColor" strokeWidth="2" />
+      <path d="M160 140 Q140 130 140 125" fill="none" stroke="currentColor" strokeWidth="2" />
+      
+      {/* Hotspots: 0: Cannulas (spinal attachments), 1: Venom container/compound */}
+      <HotspotDot cx={130} cy={105} index={0} activeIdx={activeIdx} setActiveIdx={setActiveIdx} color={color} />
+      <HotspotDot cx={130} cy={125} index={0} activeIdx={activeIdx} setActiveIdx={setActiveIdx} color={color} />
+      <HotspotDot cx={100} cy={80} index={1} activeIdx={activeIdx} setActiveIdx={setActiveIdx} color={color} />
+      <HotspotDot cx={160} cy={80} index={1} activeIdx={activeIdx} setActiveIdx={setActiveIdx} color={color} />
+    </svg>
+  );
+}
+
+function DonVanguardSVG({ color, activeIdx, setActiveIdx }: SVGProps) {
+  return (
+    <svg width="260" height="280" viewBox="0 0 260 280" style={{ color }}>
+      {/* Massive cane outline */}
+      <line x1="70" y1="240" x2="190" y2="50" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+      {/* Diamond head */}
+      <polygon points="180,35 205,50 190,65 165,50" fill={`${color}30`} stroke="currentColor" strokeWidth="2" />
+      {/* Body mass symbol (large outer ring showing Kingpin scale) */}
+      <circle cx="130" cy="140" r="60" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="6,4" opacity={0.25} />
+      
+      {/* Hotspots: 0: Cane head (pomo de diamante), 1: Physical mass (hipertrofia natural) */}
+      <HotspotDot cx={185} cy={50} index={0} activeIdx={activeIdx} setActiveIdx={setActiveIdx} color={color} />
+      <HotspotDot cx={130} cy={140} index={1} activeIdx={activeIdx} setActiveIdx={setActiveIdx} color={color} />
+    </svg>
+  );
+}
+
+const ANTAGONISTAS_BLUEPRINTS: Blueprint[] = [
+  {
+    id: "phobos",
+    hero: "PHOBOS",
+    objeto: "VISOR INTEGRAL Y AMPLIFICADOR PHOBOS",
+    color: "#e11d48", // Crimson red
+    habilidades: [
+      {
+        nombre: "LECTURA BIO-CRÍTICA",
+        desc: "Escanea firmas térmicas y ritmos cardíacos de objetivos para detectar debilidades físicas y predecir vectores de ataque inminentes.",
+      },
+      {
+        nombre: "PANTALLA HUD TÁCTICA",
+        desc: "Filtra destellos cegadores y proyecta una retícula holográfica de alineación precisa para centrar su armamento contra firmas biológicas.",
+      },
+    ],
+  },
+  {
+    id: "gorgon",
+    hero: "GORGON",
+    objeto: "DISPENSADOR DE VENENO BIO-POTENCIADOR",
+    color: "#10b981", // Emerald green
+    habilidades: [
+      {
+        nombre: "CÁNULAS DE INFUSIÓN ESPINAL",
+        desc: "Inyectores subcutáneos anclados directamente a la columna vertebral que dosifican un suero químico en el torrente sanguíneo.",
+      },
+      {
+        nombre: "VENENO BIO-ESTIMULANTE",
+        desc: "Compuesto químico que sobrecarga las fibras musculares y acelera las conexiones sinápticas, aumentando exponencialmente la fuerza física e inteligencia táctica (tipo Bane).",
+      },
+    ],
+  },
+  {
+    id: "don",
+    hero: "DON VANGUARD",
+    objeto: "BASTÓN DE MANDO Y MASA MUSCULAR VANGUARD",
+    color: "#9ca3af", // Gray
+    habilidades: [
+      {
+        nombre: "BASTÓN DE MANDO CONTRAPESADO",
+        desc: "Bastón con núcleo pesado de tungsteno y pomo de diamante negro que concentra el impacto de cada golpe para quebrar blindajes.",
+      },
+      {
+        nombre: "HIPERTROFIA NATURAL",
+        desc: "Aunque carece de poderes, posee una fuerza sobrehumana y densidad física excepcional oculta bajo trajes finos.",
+      },
+    ],
+  },
+];
+
 // ── Main Component ────────────────────────────────────────────────────────────
 
-export function BlueprintsTab() {
+interface BlueprintsTabProps {
+  unlockAll?: boolean;
+  readChapters?: string[];
+}
+
+export function BlueprintsTab({ unlockAll = false, readChapters = [] }: BlueprintsTabProps) {
   const [activeId, setActiveId] = useState<string>("vesperwing");
   const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
 
-  const bp = BLUEPRINTS.find((b) => b.id === activeId) ?? BLUEPRINTS[0];
+  const normalizedChapters = readChapters.map((id) => id.toLowerCase().trim());
+  const hasReadDistritoNulo2 =
+    unlockAll || normalizedChapters.includes("pecados de brooklyn-la mentira");
+
+  const availableBlueprints = [
+    ...BLUEPRINTS,
+    ...(hasReadDistritoNulo2 ? ANTAGONISTAS_BLUEPRINTS : []),
+  ];
+
+  const bp = availableBlueprints.find((b) => b.id === activeId) ?? availableBlueprints[0];
 
   const SVG_MAP: Record<string, React.ReactElement> = {
     vesperwing:   <VesperwingSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
@@ -415,6 +541,9 @@ export function BlueprintsTab() {
     aegis:        <AegisSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
     oracle:       <OracleSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
     "null-vector": <NullVectorSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
+    phobos:        <PhobosSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
+    gorgon:        <GorgonSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
+    don:           <DonVanguardSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
   };
 
   return (
@@ -427,7 +556,7 @@ export function BlueprintsTab() {
     >
       {/* Hero selector */}
       <div className="flex flex-wrap gap-2 justify-center">
-        {BLUEPRINTS.map((b) => (
+        {availableBlueprints.map((b) => (
           <button
             key={b.id}
             onClick={() => { setActiveId(b.id); setExpandedIdx(null); }}

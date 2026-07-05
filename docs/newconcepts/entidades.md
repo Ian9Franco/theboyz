@@ -171,7 +171,7 @@ Desprecio absoluto: Su arrogancia imperial lo lleva a subestimar a los combatien
   * Especial: 10
 * **Habilidades específicas**:
   * **Monopolio de Gravedad**: Crea esferas de enana blanca para deformar el espacio y succionar flotas.
-  * **Aguja Cuántica**: Cola segmentada equipada con punta de plasma cuántico violeta para ataques quirúrgicos.
+  * **Aguja Arcana**: Cola segmentada equipada con punta de plasma arcano violeta para ataques quirúrgicos.
   * **Brazalete de Conversión**: Dispositivo de marfil que absorbe la energía cinética enemiga para potenciar su cuerpo.
 
 ---

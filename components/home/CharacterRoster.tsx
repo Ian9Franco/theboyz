@@ -54,7 +54,7 @@ const CATEGORY_METADATA = {
   },
   matis: {
     title: "CONSEJO DE MATIS",
-    tagline: "Las variantes cuánticas",
+    tagline: "Las variantes arcanas",
     badgeColor: "#D7263D",
     shadowColor: "rgba(180,83,9,0.2)",
     borderColor: "#D7263D",

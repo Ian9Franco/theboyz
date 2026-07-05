@@ -24,8 +24,8 @@
 
 ### PÁGINA 4 (Los Exámenes)
 * **Viñeta 6 (Plano General):** Ian y Uandi entran al living. Ian, de pie frente al sillón, obliga a Julián a levantarse de mala gana del único y amplio sillón de cuero de la base para sentar allí a Uandi, que está consciente pero pálido y temblando. Le conecta electrodos de chupete biométricos en brazos y frente en el living.
-* **Viñeta 7 (Plano Detalle):** Ian se encierra en su taller con su computadora y múltiples monitores. Ejecuta el examen y ve con espanto gráficos con picos cuánticos/electromagnéticos caóticos en sangre, idénticos a los del portal.
-  * **IAN:** —(Asustado) No... esto no es una gripe... Es la firma cuántica del portal en sus células.
+* **Viñeta 7 (Plano Detalle):** Ian se encierra en su taller con su computadora y múltiples monitores. Ejecuta el examen y ve con espanto gráficos con picos arcanos/electromagnéticos caóticos en sangre, idénticos a los del portal.
+  * **IAN:** —(Asustado) No... esto no es una gripe... Es la firma arcana del portal en sus células.
 
 ### PÁGINA 4.2 (Hidratación y Tensión)
 * **Viñeta 7b (Plano Medio):** Julián en la cocina de la base. Se le ve abriendo la heladera vieja, buscando unas botellas de cerveza Corona y agarrando una jarra de agua. Lanza un comentario humorístico en voz alta. De fondo, a lo lejos en el sillón del living, se observa a Uandi sentado con los electrodos biométricos de succión colocados.
@@ -176,7 +176,7 @@
 
 ### PÁGINA 13 (Manifestación Glitch)
 * **Viñeta 50 (Plano Corto con Elemento Sobresaliente):** El líder de los matones se lanza con furia, tirando un puñetazo cargado con todo su peso hacia el rostro de Julián. El puño rompe el marco diagonal de la viñeta, sobresaliendo hacia el lector en 3D.
-* **Viñeta 51 (Viñeta Irregular - Efecto Glitch):** El puño del matón impacta en el rostro de Julián. Sin embargo, al hacer contacto, la imagen de Julián parpadea con una ráfaga de estática analógica de color cian y magenta, revelando que el golpe atravesó un remanente vacío de pura energía glitch. El puño y la navaja atraviesan la cabeza pixelada sin tocar nada sólido, con un lag cuántico zumbante.
+* **Viñeta 51 (Viñeta Irregular - Efecto Glitch):** El puño del matón impacta en el rostro de Julián. Sin embargo, al hacer contacto, la imagen de Julián parpadea con una ráfaga de estática analógica de color cian y magenta, revelando que el golpe atravesó un remanente vacío de pura energía glitch. El puño y la navaja atraviesan la cabeza pixelada sin tocar nada sólido, con un lag arcano zumbante.
   * **EFECTO DE SONIDO:** ¡FZZZT!
 * **Viñeta 52 (Plano General):** El matón tropieza hacia adelante por el propio impulso de su golpe, cruzando a través del remanente de estática que se desvanece en el aire con total confusión en su rostro. En el fondo, en una perspectiva profunda del callejón, el verdadero Julián corre desesperado hacia la salida, mirando hacia atrás por encima de su hombro con los ojos abiertos en absoluto estado de shock e incredulidad.
 * **Viñeta 53 (Plano Medio Corto):** Julián llega a la avenida principal y se oculta detrás de la esquina de un edificio, apoyando su espalda contra el concreto. Jadea exhausto, intentando comprender qué carajo acaba de ocurrir.

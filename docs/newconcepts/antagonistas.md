@@ -31,7 +31,7 @@ Aversión al caos: Las variables estocásticas e irracionales desestabilizan su 
 
 ### Poderes / Habilidades (Alexander Vance)
 * **Significado**: El rey de los bajos fondos corporativos. Aplasta amenazas mediante tácticas de estrangulamiento de recursos.
-* **Crisis**: Sabotaje de red: Su imperio depende de sistemas bancarios estables; la disrupción cuántica anula su control.
+* **Crisis**: Sabotaje de red: Su imperio depende de sistemas bancarios estables; la disrupción arcana anula su control.
 * **Stats de Poder**:
   * Fuerza: 9
   * Inteligencia: 10
@@ -144,7 +144,7 @@ Código de honor: Su apego a las tradiciones le impide atacar a traición o usar
 ### Perfil
 * **Alquimista prohibido**: Hermano de Don Vanguard, obsesionado con el hermetismo y el control de las almas.
 * **Golems de concreto**: Arranca cimientos urbanos para fusionarlos con almas de criminales.
-* **Fisonomía demacrada**: Dedos manchados con tinta cuántica y ojos negros con runas rojas.
+* **Fisonomía demacrada**: Dedos manchados con tinta arcana y ojos negros con runas rojas.
 
 ### Crisis
 Consumo vital: Sus hechizos de sangre consumen su propia fuerza si no drena almas de forma constante.
@@ -186,7 +186,7 @@ Consumo vital: Sus hechizos de sangre consumen su propia fuerza si no drena alma
 
 ### Perfil
 * **Supersoldado institucional**: Jefe operativo de los V.O.P.S., la fuerza policial de élite privatizada que Don Vanguard controla desde la alcaldía de Nueva York bajo fachada de seguridad pública.
-* **Cazador de raros**: Su unidad tiene mandato encubierto de identificar, contener y neutralizar a individuos con alteraciones cuánticas en la ciudad. Opera con total impunidad institucional.
+* **Cazador de raros**: Su unidad tiene mandato encubierto de identificar, contener y neutralizar a individuos con alteraciones arcanas en la ciudad. Opera con total impunidad institucional.
 * **Estilo de opresión blindada**: Exo-uniforme táctico militar negro mate con líneas de luces azules de estasis, casco hermético con visor sellado y modulador de voz que distorsiona sus órdenes en frecuencia de radio.
 
 ### Crisis
@@ -213,7 +213,7 @@ Parálisis doctrinaria: La rigidez de su protocolo lo bloquea cuando enfrenta t�
   * Defensa: 10
   * Especial: 8
 * **Habilidades específicas**:
-  * **Red de Contención**: Dispara redes de energía azul que inmovilizan y suprimen físicamente a individuos con alteraciones cuánticas activas.
+  * **Red de Contención**: Dispara redes de energía azul que inmovilizan y suprimen físicamente a individuos con alteraciones arcanas activas.
   * **Escudo Repulsor Antidisturbios**: Deflector táctico pesado que absorbe impactos frontales y los devuelve como ondas de choque cinético.
   * **Protocolo de Neutralización**: Coordina a su unidad de V.O.P.S. en formaciones de cerco que cortan las rutas de escape y aíslan al objetivo.
 
@@ -279,7 +279,7 @@ La Trampa del Olvido: Al regresar a su estado base, Gorgon pierde todo recuerdo 
 * **Mente profesional**: Corre por su sistema optimizando su tiempo de reacción, memoria muscular and procesamiento táctico de manera fría y profesional.
 
 ### Crisis
-Sobrecarga táctica: Al depender de cálculos geométricos lógicos, los eventos puramente caóticos o cuánticos desestabilizan su estrategia.
+Sobrecarga táctica: Al depender de cálculos geométricos lógicos, los eventos puramente caóticos o arcanos desestabilizan su estrategia.
 
 ### Stats Base
 * **Fuerza**: 7

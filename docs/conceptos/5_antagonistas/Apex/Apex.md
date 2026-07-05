@@ -19,7 +19,7 @@
   * **Combate:** 9
   * **Defensa:** 7
   * **Especial (Fórmula Apex):** 8
-* **Crisis / Debilidad:** **Sobrecarga táctica:** Al depender de cálculos geométricos lógicos, los eventos puramente caóticos o las distorsiones cuánticas impredecibles desestabilizan su estrategia.
+* **Crisis / Debilidad:** **Sobrecarga táctica:** Al depender de cálculos geométricos lógicos, los eventos puramente caóticos o las distorsiones arcanas impredecibles desestabilizan su estrategia.
 
 ***
 

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Users, BookOpen, Lock, Unlock, Menu, X, Compass } from "lucide-react";
+import { PasswordPromptModal } from "./PasswordPromptModal";
 
 /**
  * NavBar — Elseframe Comics
@@ -52,10 +53,22 @@ export default function NavBar() {
     };
   }, []);
 
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
+
   const toggleUnlockAll = () => {
     const next = !unlockAll;
-    localStorage.setItem("unlock-all", next ? "true" : "false");
-    setUnlockAll(next);
+    if (next) {
+      setIsPasswordModalOpen(true);
+    } else {
+      localStorage.setItem("unlock-all", "false");
+      setUnlockAll(false);
+      window.dispatchEvent(new Event("unlockAllChanged"));
+    }
+  };
+
+  const handleUnlockSuccess = () => {
+    localStorage.setItem("unlock-all", "true");
+    setUnlockAll(true);
     window.dispatchEvent(new Event("unlockAllChanged"));
   };
 
@@ -93,15 +106,16 @@ export default function NavBar() {
     "shrink-0 flex items-center gap-1.5 cursor-pointer";
 
   return (
-    <header
-      className="sticky top-0 z-50 brand-grain-light transition-shadow duration-300"
-      style={{
-        borderBottom: "3px solid #880D16",
-        boxShadow: scrolled
-          ? "0 6px 24px rgba(0,0,0,0.18), 0 1px 0 rgba(136,13,22,0.2)"
-          : "0 4px 12px rgba(0,0,0,0.08)",
-      }}
-    >
+    <>
+      <header
+        className="sticky top-0 z-50 brand-grain-light transition-shadow duration-300"
+        style={{
+          borderBottom: "3px solid #880D16",
+          boxShadow: scrolled
+            ? "0 6px 24px rgba(0,0,0,0.18), 0 1px 0 rgba(136,13,22,0.2)"
+            : "0 4px 12px rgba(0,0,0,0.08)",
+        }}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 md:h-24 flex items-center justify-between gap-4">
 
         {/* ── Logo ──────────────────────────────────────────────────────── */}
@@ -336,5 +350,11 @@ export default function NavBar() {
         </div>
       )}
     </header>
+      <PasswordPromptModal
+        isOpen={isPasswordModalOpen}
+        onClose={() => setIsPasswordModalOpen(false)}
+        onSuccess={handleUnlockSuccess}
+      />
+    </>
   );
 }

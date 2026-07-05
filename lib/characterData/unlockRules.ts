@@ -17,6 +17,7 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   invoker: ['never-unlocked'],
   ymir: ['never-unlocked'],
   kenji: ['Un Lugar'], // Se desbloquea al terminar #1 Un Lugar de Hush: El Silencio del Dragón
+  valery: ['never-unlocked'],
 
   // Voughtverse
   julander: ['never-unlocked'],
@@ -30,12 +31,12 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   warden: ['never-unlocked'],
 
   // Antagonistas
-  don: ['never-unlocked'],
-  phobos: ['never-unlocked'],
+  don: ['Pecados de Brooklyn-La mentira'],
+  phobos: ['Pecados de Brooklyn-La mentira'],
   shinjuro: ['Kenji'], // Se desbloquea al terminar #2 Kenji de Hush: El Silencio del Dragón
   balthazar: ['never-unlocked'],
   comandante: ['never-unlocked'],
-  gorgon: ['never-unlocked'],
+  gorgon: ['Pecados de Brooklyn-La mentira'],
 
   // Entidades
   krillor: ['never-unlocked'],

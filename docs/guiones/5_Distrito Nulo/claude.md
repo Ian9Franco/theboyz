@@ -56,7 +56,7 @@
 * **Viñeta 16 (Plano Medio):** Ian corre hacia su taller. Se instala frente al escritorio rodeado de doce monitores en interfaces oscuras.
 * **Viñeta 17 (Plano Detalle):** Las pantallas muestran las lecturas de Uandi: picos caóticos, ondas disparadas en rojo intenso.
 * **Viñeta 17b (Primer Plano):** El rostro de Ian reflejando el fulgor rojo de los monitores. Desencajado.
-  * **IAN:** *(susurrando)* —Esto no es una gripe. Es la firma cuántica del portal. Está en sus células.
+  * **IAN:** *(susurrando)* —Esto no es una gripe. Es la firma arcana del portal. Está en sus células.
 
 ---
 
@@ -72,7 +72,7 @@
 ---
 
 ### PÁGINA 4.5 (Estabilización y Alivio)
-* **Viñeta 18 (Plano Corto):** Pantalla del taller. Picos cuánticos caóticos. Todo en rojo. La luz baña el rostro de Ian desde abajo.
+* **Viñeta 18 (Plano Corto):** Pantalla del taller. Picos arcanos caóticos. Todo en rojo. La luz baña el rostro de Ian desde abajo.
   * **IAN:** *(para sí mismo)* —Todavía demasiado inestable.
 * **Viñeta 18b (Plano Detalle):** La pantalla. Los picos empiezan a ceder. Rojo a naranja. Ian contiene la respiración.
 * **Viñeta 18c (Plano Medio):** Verde. Todo en verde. Ian exhala. Los hombros se le aflojan. Julián levanta su Corona.
@@ -323,12 +323,12 @@
 ### PÁGINA 19 (El Fierro de Energía y la Cura)
 * **Viñeta 75 (Plano Americano con Elemento Sobresaliente):** Julián de pie, adrenalina pura. En su mano derecha se materializa desde estática analógica parpadeante un fierro largo de pura energía glitch azul y roja que zumba. El fierro y sus chispas rompen los marcos laterales.
   * **JULIÁN:** —¡¿Qué te pasa, pedazo de forro?! ¡Querés bardo, vamos!
-* **Viñeta 75b (Plano Medio):** Julián con el fierro de estática en ambas manos. Su cara distorsionada a medias por el glitch cuántico. Chispas analógicas azul/roja.
-* **Viñeta 76 (Plano Medio):** Ian irrumpe en la puerta del taller agitando el brazo. Un tubo de ensayo sellado en su mano resplandece con electricidad cuántica dorada y niebla púrpura del Universo 5458.
+* **Viñeta 75b (Plano Medio):** Julián con el fierro de estática en ambas manos. Su cara distorsionada a medias por el glitch arcano. Chispas analógicas azul/roja.
+* **Viñeta 76 (Plano Medio):** Ian irrumpe en la puerta del taller agitando el brazo. Un tubo de ensayo sellado en su mano resplandece con electricidad arcana dorada y niebla púrpura del Universo 5458.
 * **Viñeta 77 (Acción):** Ian en postura de pitcher, lanzando el tubo directo al pecho de Uandi que avanza rugiendo.
   * **IAN:** —¡Uandi! ¡Respirá esto!
 * **Viñeta 77b (Plano Detalle):** El tubo gira en el aire en cámara lenta. Energía dorada y púrpura fluyendo salvajemente en su interior de cristal.
-* **Viñeta 78 (Plano Corto con Elemento Sobresaliente — Cliffhanger):** El tubo choca contra el pecho de Uandi y estalla. Explosión eléctrica dorada mezclada con gas púrpura brillante. Las chispas y la nube cuántica desbordan el borde inferior en 3D.
+* **Viñeta 78 (Plano Corto con Elemento Sobresaliente — Cliffhanger):** El tubo choca contra el pecho de Uandi y estalla. Explosión eléctrica dorada mezclada con gas púrpura brillante. Las chispas y la nube arcana desbordan el borde inferior en 3D.
   * **EFECTO DE SONIDO:** ¡CRASH-FZZZT!
 
 ---

@@ -75,7 +75,10 @@ export function getComputedCharacters(readChapters: string[], isClient: boolean,
 
     const rules = UNLOCK_RULES[char.id];
     const alwaysUnlocked = rules !== undefined && rules.length === 0;
-    const unlocked = unlockAll || alwaysUnlocked || (rules?.some(hasRead) ?? false);
+    let unlocked = unlockAll || alwaysUnlocked || (rules?.some(hasRead) ?? false);
+    if (char.id === 'valery') {
+      unlocked = false;
+    }
 
     return {
       ...char,

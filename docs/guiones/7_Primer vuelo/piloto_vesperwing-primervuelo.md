@@ -116,7 +116,7 @@ La confrontación: Jaz, entre el dolor y la confusión total de ver el búnker, 
 
 JAZ: —Ian... ¿Qué carajo es este lugar? ¿Qué son esas pantallas?... Ayudame, por favor, no puedo apagar el ruido...—
 
-La solución técnica: Ian procesa el shock de ser descubierto, pero su instinto de protector e ingeniero se activa de inmediato. Corre a sus estantes, toma unos auriculares de alta fidelidad aislantes que estaba modificando y los conecta a su tablet. Le coloca los auriculares a Jaz a la fuerza y activa a Vision en una frecuencia inversa (frecuencia de cancelación de ruido cuántico).
+La solución técnica: Ian procesa el shock de ser descubierto, pero su instinto de protector e ingeniero se activa de inmediato. Corre a sus estantes, toma unos auriculares de alta fidelidad aislantes que estaba modificando y los conecta a su tablet. Le coloca los auriculares a Jaz a la fuerza y activa a Vision en una frecuencia inversa (frecuencia de cancelación de ruido arcano).
 
 IAN: —Vision, desfasá la señal. Aislá sus ondas celulares ahora.—
 

@@ -17,7 +17,7 @@ No corre por el suelo como un velocista tradicional. Al correr, abre grietas nar
 No necesita soporte vital para sobrevivir en el espacio exterior u otros universos (máscaras, cascos o trajes espaciales). Al haber nacido su mutación directamente de la Corriente (la red extradimensional), su cuerpo resiste el vacío del espacio, la radiación, atmósferas hostiles y presiones gravitacionales extremas de forma natural.
 
 ### ⚛️ Vibración Atómica
-Para salvar excepciones extremas (como ataques energéticos muy densos, explosiones de área o trampas físicas complejas), Volvo puede hacer vibrar sus átomos a frecuencias cuánticas, volviéndose completamente intangible durante unos breves segundos para dejar pasar el peligro a través de él.
+Para salvar excepciones extremas (como ataques energéticos muy densos, explosiones de área o trampas físicas complejas), Volvo puede hacer vibrar sus átomos a frecuencias arcanas, volviéndose completamente intangible durante unos breves segundos para dejar pasar el peligro a través de él.
 
 ---
 

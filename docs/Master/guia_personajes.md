@@ -80,7 +80,7 @@
 * **Físico:** Complexión atlética regular, proporciones naturales sin musculatura exagerada.
 * **Vestimenta:** Campera táctica estilo bomber gris oscuro/negro ("tactical jacket") con un bolsillo de cierre visible en la manga izquierda. Remera o suéter de cuello redondo verde oliva apagado. Pantalón cargo estilo jogger color caqui con puños elásticos ajustados en los tobillos. Zapatillas deportivas gris claro y blanco.
 * **Equipamiento Post-Acto 3:** Visor Táctico industrial que cubre sus ojos, con cables conductores expuestos hacia las sienes y un cristal polarizado violeta.
-* **Mecánica Visual de Poder:** Fuego cuántico violeta radiactivo que se emite directamente desde los ojos en forma de ráfagas de alta densidad.
+* **Mecánica Visual de Poder:** Fuego arcano violeta radiactivo que se emite directamente desde los ojos en forma de ráfagas de alta densidad.
 
 #### Prompts de Generación
 

@@ -130,7 +130,7 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "Se detectó una intrusión cuántica no autorizada en el servidor del laboratorio. Protocolo de seguridad activo", "style": "electronic", "size": "small", "posX": 76, "posY": 16, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "tail": "left" }
+            { "text": "Se detectó una intrusión arcana no autorizada en el servidor del laboratorio. Protocolo de seguridad activo", "style": "electronic", "size": "small", "posX": 76, "posY": 16, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "tail": "left" }
           ]
         },
         {
@@ -976,7 +976,7 @@
           "focusY": 0.7,
           "dialogue": [
             { "text": "¿Y qué encontraste?", "size": "small", "posX": 5, "posY": 45, "tailX": 20, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
-            { "text": "La computadora detectó otras firmas cuánticas compatibles con mi energía. Tenían mi cara, chicos... pero eran versiones mías de otros lados. Cada vez que una de esas firmas se apaga en la red, la presión en mis ojos aumenta. Siento que me queman por dentro.", "speaker": "Mati", "size": "small", "posX": 40, "posY": 95, "tailX": 115, "tailY": 100, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 9, "borderRadius": 18 }
+            { "text": "La computadora detectó otras firmas arcanas compatibles con mi energía. Tenían mi cara, chicos... pero eran versiones mías de otros lados. Cada vez que una de esas firmas se apaga en la red, la presión en mis ojos aumenta. Siento que me queman por dentro.", "speaker": "Mati", "size": "small", "posX": 40, "posY": 95, "tailX": 115, "tailY": 100, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 9, "borderRadius": 18 }
           ]
         }
       ]

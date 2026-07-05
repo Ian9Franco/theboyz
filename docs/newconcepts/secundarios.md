@@ -41,7 +41,7 @@ Prioridad de supervivencia: Ante un colapso, manipula la suerte para asegurar su
   * Defensa: 5
   * Especial: 9
 * **Habilidades específicas**:
-  * **Distorsión de Probabilidad Cuántica**: Altera la probabilidad local de manera irónica, provocando fallas catastróficas en tecnología enemiga.
+  * **Distorsión de Probabilidad Arcana**: Altera la probabilidad local de manera irónica, provocando fallas catastróficas en tecnología enemiga.
   * **Lazos del Destino**: Percibe e intercepta los hilos de la probabilidad, forzando fallas o colisiones.
   * **Navegación del Caos**: Transmuta el momentum de peligro en un escape fortuito.
 
@@ -95,13 +95,13 @@ Fijación de mantenimiento: Ante cualquier daño menor en sus sistemas mecánico
 * **ID**: `coleccionista`
 * **Categoría**: `secundarios`
 * **Rol**: Proveedor tecnológico / The Tinkerer
-* **Código Visual**: Overol de mecánico con grasa cuántica, visor ocular multi-lente
+* **Código Visual**: Overol de mecánico con grasa arcana, visor ocular multi-lente
 * **Color**: `#8b5cf6`
 
 ### Perfil
 * **Mentor silencioso y huraño**: Atiende el taller "Interdimensional Repairs", actuando como el nexo logístico de los pibes en el multiverso.
-* **Ingeniero de desguace**: Un experto absoluto en rediseñar, hibridar y estabilizar tecnologías y componentes cuánticos dañados.
-* **Estilo de taller cuántico**: Overol de mecánico desgastado y visor ocular de cuatro lentes móviles que proyectan planos en azul holográfico.
+* **Ingeniero de desguace**: Un experto absoluto en rediseñar, hibridar y estabilizar tecnologías y componentes arcanos dañados.
+* **Estilo de taller arcano**: Overol de mecánico desgastado y visor ocular de cuatro lentes móviles que proyectan planos en azul holográfico.
 
 ### Crisis
 Recelo profesional: Si los pibes tratan con descuido las piezas de su inventario, se rehúsa a cooperar o proveer armamento.
@@ -116,8 +116,8 @@ Recelo profesional: Si los pibes tratan con descuido las piezas de su inventario
 * **Especial**: 7 (Ingeniería)
 
 ### Poderes / Habilidades (The Tinkerer)
-* **Significado**: El armero de las dimensiones. Altera y refina la materia cuántica para generar recursos logísticos e infraestructura.
-* **Crisis**: Saturación del espectro: El uso continuo de su visor lo expone a sufrir interferencias cuánticas severas, bloqueando su lectura.
+* **Significado**: El armero de las dimensiones. Altera y refina la materia arcana para generar recursos logísticos e infraestructura.
+* **Crisis**: Saturación del espectro: El uso continuo de su visor lo expone a sufrir interferencias arcanas severas, bloqueando su lectura.
 * **Stats de Poder**:
   * Fuerza: 4
   * Inteligencia: 10
@@ -128,7 +128,7 @@ Recelo profesional: Si los pibes tratan con descuido las piezas de su inventario
   * Especial: 10
 * **Habilidades específicas**:
   * **Análisis de Código Físico**: Percepción analítica intuitiva que le permite descifrar el funcionamiento y planos de cualquier artefacto.
-  * **Modificación Cuántica**: Transmuta componentes comunes y chatarra tecnológica en portales estables o celdas de energía.
+  * **Modificación Arcana**: Transmuta componentes comunes y chatarra tecnológica en portales estables o celdas de energía.
   * **Ocular Multiespectral**: Visor que detecta vulnerabilidades atómicas, fugas de energía y fallas estructurales invisibles.
 
 ---
@@ -609,7 +609,7 @@ Fantasmas de Ghostline: Su visor táctico muestra ecos térmicos del pasado, dis
   * Defensa: 9
   * Especial: 8
 * **Habilidades específicas**:
-  * **Rastreo Ghostline**: Lee trazas de calor, energía cuántica y motores espaciales para predecir movimientos.
+  * **Rastreo Ghostline**: Lee trazas de calor, energía arcana y motores espaciales para predecir movimientos.
   * **Manto de Supervivencia**: Capa de camuflaje térmico que absorbe radiación e interrumpe sensores enemigos.
   * **Arsenal de Frontera**: Emplea rifles pesados, ganchos de anclaje y explosivos tácticos con eficiencia de soldado.
 
@@ -627,7 +627,7 @@ Miembro de La Órbita Muerta. Antiguo soldado colonial sobreviviente de Veyra-9,
 * **Color**: `#0891b2`
 
 ### Perfil
-* **Ejecutora cuántica**: Cazadora de élite corporativa que modela la cacería como una ecuación matemática pura.
+* **Ejecutora arcana**: Cazadora de élite corporativa que modela la cacería como una ecuación matemática pura.
 * **Tecnología prohibida**: Su cuerpo translúcido alberga un núcleo de energía recuperada de la anomalía de Veyra-9.
 * **Precisión implacable**: Carece de emoción en combate. Rastrea mediante predicción probabilística y sigilo óptico.
 

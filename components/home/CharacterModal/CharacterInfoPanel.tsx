@@ -66,7 +66,7 @@ export function CharacterInfoPanel({
     char.category === "pibes" ||
     ["ian", "jaz", "julian", "mati", "uandi", "volvo", "sofi"].includes(char.id);
 
-  const isLocked = char.incognito && !unlockAll;
+  const isLocked = char.id === 'valery' ? true : (char.incognito && !unlockAll);
   const accent = isLocked ? "#6b7280" : char.color;
   const vibrantAccent = getVibrantColor(accent);
   const darkBg = getDarkBgColor(accent);

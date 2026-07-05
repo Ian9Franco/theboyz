@@ -36,7 +36,7 @@ Ian, impulsado por su paranoia y la obsesión de proteger al grupo (y protegerse
 ### 🦾 Las Armaduras de Despliegue Estándar
 
 *   **Mark III — "The Baseline" (El Traje Principal):** Es la armadura que Ian utiliza en el 90% de los combates en la Tierra o misiones estándar. Está perfectamente equilibrada: placas anatómicas de titanio que no limitan su movilidad, ópticas *GhostLens* activas y un blindaje óptimo para amenazas locales. Es la obra cumbre que usa casi siempre para pelear a la par de Los Pibes sin quedar rezagado por su condición humana.
-*   **Mark LXXXV (85) — "The Cosmic Vesper" (Misiones Cósmicas y Espaciales):** La armadura definitiva de la línea estándar, reservada para cuando las papas queman a escala multiversal. Estéticamente mantiene la silueta limpia del Mk III, pero está construida con una aleación densa de polímeros y fibra de carbono espacial. Cuenta con un sellado de presión absoluta para el vacío, filtros cuánticos y un disipador reforzado alrededor del logo del pecho para aguantar la salida masiva de energía del *Archor Core* sin derretir los sistemas internos.
+*   **Mark LXXXV (85) — "The Cosmic Vesper" (Misiones Cósmicas y Espaciales):** La armadura definitiva de la línea estándar, reservada para cuando las papas queman a escala multiversal. Estéticamente mantiene la silueta limpia del Mk III, pero está construida con una aleación densa de polímeros y fibra de carbono espacial. Cuenta con un sellado de presión absoluta para el vacío, filtros arcanos y un disipador reforzado alrededor del logo del pecho para aguantar la salida masiva de energía del *Archor Core* sin derretir los sistemas internos.
 
 ### 🚨 Protocolos de Contingencia y Escala Pesada
 

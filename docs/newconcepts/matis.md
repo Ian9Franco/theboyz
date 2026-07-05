@@ -13,7 +13,7 @@ Este documento recopila la información de las variantes de Mati (el Consejo de 
 * **Color**: `#4b5563`
 
 ### Perfil
-* **El antagonista cerebral**: Frío, analítico y calculador. Considera el libre albedrío como una anomalía cuántica.
+* **El antagonista cerebral**: Frío, analítico y calculador. Considera el libre albedrío como una anomalía arcana.
 * **Controlador del multiverso**: Líder del Consejo de Matis y dueño del núcleo de portales robado.
 * **Estilo militarizado**: Armadura blindada con circuitos violetas que parpadean según su nivel de conexión dimensional.
 
@@ -31,7 +31,7 @@ Bucle obsesivo: Su obsesión por el orden lógico lo paraliza si se enfrenta a v
 
 ### Poderes / Habilidades (Mati Variant)
 * **Significado**: El cerebro del nexo. Neutraliza el caos espacial controlando las leyes de la física local a nivel vectorial.
-* **Crisis**: Sobrecarga de datos: Procesar miles de futuros y realidades en su visor genera migrañas cuánticas paralizantes.
+* **Crisis**: Sobrecarga de datos: Procesar miles de futuros y realidades en su visor genera migrañas arcanas paralizantes.
 * **Stats de Poder**:
   * Fuerza: 8
   * Inteligencia: 10
@@ -43,7 +43,7 @@ Bucle obsesivo: Su obsesión por el orden lógico lo paraliza si se enfrenta a v
 * **Habilidades específicas**:
   * **Manipulación Vectorial**: Controla y redirige vectores de fuerza y energía a escala macro en la escena.
   * **Núcleo de Portales**: Abre portales de gran tamaño para desviar ataques masivos de regreso hacia sus emisores.
-  * **Erradicación de Anomalías**: Desactiva temporalmente las habilidades cuánticas y portales de otras variantes.
+  * **Erradicación de Anomalías**: Desactiva temporalmente las habilidades arcanas y portales de otras variantes.
 
 ---
 
@@ -142,7 +142,7 @@ Orgullo de César: Se niega a retirarse ante amenazas menores, considerándolo u
 * **Color**: `#6d28d9`
 
 ### Perfil
-* **Juez de equivalencia**: Inflexible ejecutor de la ley cuántica. Obsesionado con equilibrar fuerzas en el nexo.
+* **Juez de equivalencia**: Inflexible ejecutor de la ley arcana. Obsesionado con equilibrar fuerzas en el nexo.
 * **Intercambio de consecuencias**: Traslada heridas físicas y estados de un cuerpo a otro.
 * **Estilo ceremonial**: Rostro cubierto por una capucha, balanza violeta flotando sobre su cabeza.
 
@@ -172,7 +172,7 @@ Equivalencia estricta: No puede atacar si el enemigo no ha atacado primero, sigu
 * **Habilidades específicas**:
   * **Intercambio de Consecuencias**: Transfiere heridas físicas, venenos o ceguera directamente al atacante.
   * **Sentencia de Estasis**: Inmoviliza al rival reflejando la misma energía que este intentaba canalizar.
-  * **Balanza Cuántica**: Ejerce una gravedad aplastante sobre el objetivo que posea mayor masa o momentum en escena.
+  * **Balanza Arcana**: Ejerce una gravedad aplastante sobre el objetivo que posea mayor masa o momentum en escena.
 
 ---
 
@@ -190,7 +190,7 @@ Equivalencia estricta: No puede atacar si el enemigo no ha atacado primero, sigu
 * **Traje de condena**: Su armadura espacial dañada conserva la marca grabada en el núcleo del traje: "No pertenece a ningún cielo".
 
 ### Crisis
-Desconexión de órbita: Su traje dañado sufre micro-desgarros dimensionales si se expone a fluctuaciones cuánticas inestables.
+Desconexión de órbita: Su traje dañado sufre micro-desgarros dimensionales si se expone a fluctuaciones arcanas inestables.
 
 ### Stats Base
 * **Fuerza**: 6

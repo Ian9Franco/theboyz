@@ -8,6 +8,7 @@ import { Lightbox as ReaderLightbox } from "@/components/reader/ReaderLightbox";
 import { DraftLockScreen } from "@/components/reader/DraftLockScreen";
 import { CinematicReader } from "@/components/reader/CinematicReader";
 import { getComicPageUrl } from "@/components/reader/readerUtils";
+import { UnlockNotificationModal } from "@/components/UnlockNotificationModal";
 
 export default function ChapterPage() {
   const params  = useParams();
@@ -22,6 +23,30 @@ export default function ChapterPage() {
   const [isLocked, setIsLocked] = useState(false);
   const [visiblePagesCount, setVisiblePagesCount] = useState(3);
   const observerRef = useRef<HTMLDivElement>(null);
+  const [showUnlockModal, setShowUnlockModal] = useState(false);
+
+  const triggerUnlockNotification = useCallback(() => {
+    const triggerChapters = [
+      "un lugar",
+      "un-lugar",
+      "kenji",
+      "mativerse-chapter-one",
+      "pecados de brooklyn-la mentira"
+    ];
+    if (triggerChapters.includes(id.toLowerCase().trim())) {
+      try {
+        const notified = localStorage.getItem("notified-unlocks");
+        const notifiedList = notified ? JSON.parse(notified) : [];
+        if (!notifiedList.includes(id)) {
+          setShowUnlockModal(true);
+          notifiedList.push(id);
+          localStorage.setItem("notified-unlocks", JSON.stringify(notifiedList));
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
+  }, [id]);
 
   useEffect(() => setMounted(true), []);
 
@@ -381,7 +406,11 @@ export default function ChapterPage() {
         )}
 
         {/* ── Chapter Navigation ── */}
-        <div className="mt-20 flex flex-col sm:flex-row gap-4 justify-between">
+        <motion.div
+          onViewportEnter={triggerUnlockNotification}
+          viewport={{ once: true }}
+          className="mt-20 flex flex-col sm:flex-row gap-4 justify-between"
+        >
           {nextChapter ? (
             <Link href={`/chapters/${nextChapter.id}`} className="btn btn-magenta text-xl flex-1 text-center truncate px-2">
               {nextChapter.title} →
@@ -392,8 +421,14 @@ export default function ChapterPage() {
               ← {prevChapter.title}
             </Link>
           ) : <div className="flex-1" />}
-        </div>
+        </motion.div>
       </div>
+
+      <UnlockNotificationModal
+        isOpen={showUnlockModal}
+        onClose={() => setShowUnlockModal(false)}
+        chapterId={id}
+      />
     </div>
   );
 }

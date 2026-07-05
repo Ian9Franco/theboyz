@@ -3,7 +3,7 @@ import { getDynamicSagas } from "@/lib/serverData";
 
 export async function POST(request: NextRequest) {
   try {
-    const { password } = await request.json();
+    const { password, onlyMaster } = await request.json();
     if (!password) {
       return NextResponse.json({ success: false, error: "Contraseña requerida" }, { status: 400 });
     }
@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
     const masterPassword = process.env.PREVIEW_PASSWORD || "spiderman1999";
     let isValid = (password === masterPassword);
 
-    if (!isValid) {
+    if (!isValid && !onlyMaster) {
       const sagas = getDynamicSagas();
       for (const saga of sagas) {
         if (saga.password && password === saga.password) {

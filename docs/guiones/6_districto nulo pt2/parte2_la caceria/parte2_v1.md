@@ -18,7 +18,7 @@
 - **Don Vanguard** — furioso, desde su oficina exige el exterminio o captura de los vigilantes tras el hackeo público.
 - **Carmella Nocturna (Wawi)** — líder vampiro del submundo. Rescata a Julián e Ian, cobrándose una vieja deuda y marcando a Julián.
 - **Jaz / Oracle** — alberga al grupo en su penthouse, pero rechaza la oferta de Norman Parker, quedándose atrás temporalmente.
-- **Norman Parker (The Maker)** — magnate tecnológico, antiguo mentor de Ian. Ofrece un estabilizador cuántico a cambio de control. Revela sutiles mutaciones elásticas.
+- **Norman Parker (The Maker)** — magnate tecnológico, antiguo mentor de Ian. Ofrece un estabilizador arcano a cambio de control. Revela sutiles mutaciones elásticas.
 
 ---
 
@@ -216,7 +216,7 @@
 *R.E.G.U.L.A.R. parado bajo la lluvia, frío e impasible, apuntando el lanzador pesado. Sus ojos en el visor registran los patrones del bastón de Julián.*
 
 **Viñeta 42.6 (Plano Detalle) — Plano detalle**
-*Primer plano del visor azul de R.E.G.U.L.A.R., reflejando la firma cuántica inestable de Julián. El sistema marca: "TARGET LOCKED".*
+*Primer plano del visor azul de R.E.G.U.L.A.R., reflejando la firma arcana inestable de Julián. El sistema marca: "TARGET LOCKED".*
 
 ---
 
@@ -243,7 +243,7 @@
 ---
 
 ### PÁGINA 43.5 — "El Grillete"
-**4 viñetas — El arresto e inhabilitación cuántica de Julián.**
+**4 viñetas — El arresto e inhabilitación arcana de Julián.**
 
 **Viñeta 43.5.1 (Tira Panel 1) — Plano medio**
 *R.E.G.U.L.A.R. pone una rodilla pesada sobre la espalda de Julián, inmovilizándolo contra el asfalto húmedo y torciendo su brazo izquierdo.*
@@ -830,7 +830,7 @@
 *Ian y Mati caminan por los pasillos laterales del club tras unas pesadas cortinas rojas.*
 
 **Viñeta 67.2 (Plano General Grande - Insets 3D) — Plano general**
-*Un mercado negro de armas UV y repuestos cuánticos robados en cajones de madera.*
+*Un mercado negro de armas UV y repuestos arcanos robados en cajones de madera.*
 * **INSET 1:** El núcleo de energía de un rifle UV brillando en su caja.
 * **INSET 2:** Un fajo de billetes cambiando de manos entre dos clientes pálidos.
 
@@ -925,7 +925,7 @@
 
 **Viñeta 71.1 (Tira Panel 1) — Plano medio**
 *Norman gira su vaso de whiskey con calma.*
-**NORMAN:** "Vanguard compró mi tecnología para armar su cerco. Pero yo tengo las llaves de los candados. Te ofrezco un núcleo cuántico para tu amigo."
+**NORMAN:** "Vanguard compró mi tecnología para armar su cerco. Pero yo tengo las llaves de los candados. Te ofrezco un núcleo arcano para tu amigo."
 
 **Viñeta 71.2 (Tira Panel 2) — Plano medio**
 *Norman desliza una tarjeta de acceso dorada con el logo "P" sobre la barra.*
@@ -978,7 +978,7 @@
 
 **Viñeta 73.1 (Tira Panel 1) — Plano general**
 *Ian entra al penthouse de Jaz y muestra la tarjeta dorada de Parker sobre la mesa.*
-**IAN:** "Tengo el estabilizador cuántico. Pero tenemos que ir a Parker Tower. Es el único laboratorio seguro."
+**IAN:** "Tengo el estabilizador arcano. Pero tenemos que ir a Parker Tower. Es el único laboratorio seguro."
 
 **Viñeta 73.2 (Tira Panel 2) — Plano medio**
 *Mati, Julián y Uandi escuchan cansados y resignados, entendiendo la gravedad del trato.*
@@ -1013,7 +1013,7 @@
 **Viñeta 74.4 (Plano General Grande - Insets 3D) — Plano general**
 *Las inmensas pantallas de la oficina se encienden, mostrando escaneos de energía de Aegis y Mati, mientras Norman se da vuelta en silueta.*
 * **INSET 1:** Un monitor analizando la firma de ADN de Aegis en rojo.
-* **INSET 2:** Un monitor mostrando la firma cuántica inestable de Mati en violeta.
+* **INSET 2:** Un monitor mostrando la firma arcana inestable de Mati en violeta.
 **CAPTION:** *Los Pibes cruzaron la puerta. Pero Norman Parker ya tiene las llaves de sus celdas.*
 **CAPTION:** *Fuego Púrpura concluirá en la Parte 3: "El Teatro".*
 

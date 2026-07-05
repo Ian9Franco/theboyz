@@ -9,7 +9,7 @@ const TIMELINE_EVENTS = [
     phase: "Fase 1",
     title: "EL SILENCIO DEL DRAGÓN",
     saga: "Piloto: Hush",
-    desc: "Tras un violento colapso cuántico, Sofi sufre una brutal sobrecarga sensorial. Buscando silenciar su audición hiperfocalizada, huye a Tokio, refugiándose en el restaurante de Kenji. Cuando matones del Clan Kurogane lo asesinan por deudas, la gélida ira de Sofi despierta. Descolgando las katanas gemelas ancestrales, cierra los ojos para liberar su potencial como duelista ciega. Transformada en 'Hush', rastrea cada micro-sonido en los lluviosos callejones, ejecutando a los yakuzas con precisión absoluta guiada por su radar acústico y cortando sus manos como muda advertencia.",
+    desc: "Tras un violento colapso arcano, Sofi sufre una brutal sobrecarga sensorial. Buscando silenciar su audición hiperfocalizada, huye a Tokio, refugiándose en el restaurante de Kenji. Cuando matones del Clan Kurogane lo asesinan por deudas, la gélida ira de Sofi despierta. Descolgando las katanas gemelas ancestrales, cierra los ojos para liberar su potencial como duelista ciega. Transformada en 'Hush', rastrea cada micro-sonido en los lluviosos callejones, ejecutando a los yakuzas con precisión absoluta guiada por su radar acústico y cortando sus manos como muda advertencia.",
     details: "INFORME DE CAUSALIDAD: El nacimiento de 'Hush' ocurre en paralelo al desarrollo inicial de la tecnología Vesperwing de Ian en Brooklyn, marcando el origen de dos justicieros urbanos tácticos en extremos opuestos del multiverso.",
     icon: "🐉",
   },
@@ -17,15 +17,15 @@ const TIMELINE_EVENTS = [
     phase: "Fase 2",
     title: "DISTRITO NULO: EL DESPERTAR",
     saga: "Saga: Distrito Nulo",
-    desc: "Las secuelas de la infección cuántica estallan en Brooklyn. Uandi manifiesta una acumulación extrema de energía cinética pura, siendo capaz de doblar vigas de acero para salvar a Ian, pero al borde de una sobrecarga cardíaca. En paralelo, Julián sufre su primer desfase de estática glitch cian y magenta al ser emboscado por sicarios de Vanguard en Hell's Kitchen. La inestabilidad biológica de ambos desencadena una violenta sobrecarga en la base que destruye el living de Dumbo.",
-    details: "INFORME DE CAUSALIDAD: Ian logra estabilizar a Uandi inyectando energía residual del Universo 5458 en su pecho, pero la reacción cuántica inestable genera un clon de estática independiente que comienza a deambular en las sombras del taller.",
+    desc: "Las secuelas de la infección arcana estallan en Brooklyn. Uandi manifiesta una acumulación extrema de energía cinética pura, siendo capaz de doblar vigas de acero para salvar a Ian, pero al borde de una sobrecarga cardíaca. En paralelo, Julián sufre su primer desfase de estática glitch cian y magenta al ser emboscado por sicarios de Vanguard en Hell's Kitchen. La inestabilidad biológica de ambos desencadena una violenta sobrecarga en la base que destruye el living de Dumbo.",
+    details: "INFORME DE CAUSALIDAD: Ian logra estabilizar a Uandi inyectando energía residual del Universo 5458 en su pecho, pero la reacción arcana inestable genera un clon de estática independiente que comienza a deambular en las sombras del taller.",
     icon: "🏙️",
   },
   {
     phase: "Fase 3",
     title: "FUEGO PÚRPURA: LA EXPOSICIÓN",
     saga: "Saga: Fuego Púrpura",
-    desc: "Mati intenta ocultar una anomalía de la terminal de V.O.P.S. tras manifestar filamentos inestables de plasma violeta en sus ojos y herir accidentalmente al Supercamionero. Aprovechando el caos, Phobos, una enigmática silueta cuántica, hackea las pantallas de Times Square exponiendo la mutación ante la corporación de Don Vanguard. El pánico desata la detención de Mati y un asedio militar total por parte del Comandante R.E.G.U.L.A.R. en la base de Dumbo.",
+    desc: "Mati intenta ocultar una anomalía de la terminal de V.O.P.S. tras manifestar filamentos inestables de plasma violeta en sus ojos y herir accidentalmente al Supercamionero. Aprovechando el caos, Phobos, una enigmática silueta arcana, hackea las pantallas de Times Square exponiendo la mutación ante la corporación de Don Vanguard. El pánico desata la detención de Mati y un asedio militar total por parte del Comandante R.E.G.U.L.A.R. en la base de Dumbo.",
     details: "INFORME DE CAUSALIDAD: Mientras el asedio táctico inmoviliza a los héroes, Phobos ejecuta una distracción mayor inyectando una metatoxina reactiva verde en Central Park. Gorgon emerge y arrasa el parque, alzando una enorme columna de humo esmeralda acompañada por la risa estática de Phobos.",
     icon: "🔮",
     isLocked: true,
@@ -77,7 +77,7 @@ export function TimelineTab({ unlockAll = false }: TimelineTabProps) {
       }
     } catch (err) {
       console.error(err);
-      setErrorMsg("Error de conexión cuántica.");
+      setErrorMsg("Error de conexión arcana.");
     } finally {
       setLoading(false);
     }
@@ -91,7 +91,7 @@ export function TimelineTab({ unlockAll = false }: TimelineTabProps) {
   const displayTitle = isRedacted ? "EXPEDIENTES CLASIFICADOS // ENCRIPTADO" : currentEvent.title;
   const displaySaga = isRedacted ? "SAGA POST-DISTRITO NULO" : currentEvent.saga;
   const displayDesc = isRedacted
-    ? "ACCESO DENEGADO. El registro narrativo de este evento ha sido bloqueado preventivamente por el Departamento de Spoilers de V.O.P.S. al no estar oficialmente publicado aún. Los detalles confidenciales como la manifestación ocular de Mati (████████), la aparición de Phobos (██████) y el destino final del asedio a la base (████████████) se encuentran cifrados bajo firma cuántica."
+    ? "ACCESO DENEGADO. El registro narrativo de este evento ha sido bloqueado preventivamente por el Departamento de Spoilers de V.O.P.S. al no estar oficialmente publicado aún. Los detalles confidenciales como la manifestación ocular de Mati (████████), la aparición de Phobos (██████) y el destino final del asedio a la base (████████████) se encuentran cifrados bajo firma arcana."
     : currentEvent.desc;
   const displayDetails = isRedacted
     ? "CÓDIGO DE ERROR V.O.P.S. 403: Para forzar el descifrado y visualización de esta fase del timeline, ingrese la firma de acceso del editor en la consola inferior."
@@ -183,7 +183,7 @@ export function TimelineTab({ unlockAll = false }: TimelineTabProps) {
                   ⚡ TERMINAL DE DESCIFRADO DE V.O.P.S.
                 </strong>
                 <p className="font-mono text-xs mb-3 leading-relaxed">
-                  Ingrese la contraseña de autorización del editor para descifrar esta firma cuántica temporal:
+                  Ingrese la contraseña de autorización del editor para descifrar esta firma arcana temporal:
                 </p>
                 <form onSubmit={handleDecrypt} className="flex flex-col sm:flex-row gap-2">
                   <input

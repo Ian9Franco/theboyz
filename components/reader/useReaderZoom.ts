@@ -18,6 +18,18 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
   const [isPanning, setIsPanning] = useState(false);
   const [bubbleOffsets, setBubbleOffsets] = useState<Record<string, { x: number; y: number }>>({});
   const [draggedBubbleKey, setDraggedBubbleKey] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      const checkMobile = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+      checkMobile();
+      window.addEventListener("resize", checkMobile);
+      return () => window.removeEventListener("resize", checkMobile);
+    }
+  }, []);
 
   const dragStartRef = useRef({ x: 0, y: 0 });
   const dragBubbleStartRef = useRef({ x: 0, y: 0 });
@@ -29,6 +41,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
   const lastTapRef = useRef<number>(0);
 
   const handlePanStart = (clientX: number, clientY: number) => {
+    if (isMobile) return;
     setIsPanning(true);
     dragStartRef.current = { x: clientX, y: clientY };
     panStartRef.current = { ...panOffset };
@@ -36,7 +49,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
   };
 
   const handlePanMove = (clientX: number, clientY: number) => {
-    if (!isPanning) return;
+    if (isMobile || !isPanning) return;
     const dx = clientX - dragStartRef.current.x;
     const dy = clientY - dragStartRef.current.y;
     totalDragDistRef.current = Math.sqrt(dx * dx + dy * dy);
@@ -57,6 +70,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
+    if (isMobile) return;
     if (e.button === 0) {
       const closestGrab = (e.target as HTMLElement).closest(".cursor-grab");
       const closestGrabbing = (e.target as HTMLElement).closest(".cursor-grabbing");
@@ -74,14 +88,17 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
+    if (isMobile) return;
     handlePanMove(e.clientX, e.clientY);
   };
 
   const handleMouseUp = () => {
+    if (isMobile) return;
     handlePanEnd();
   };
 
   const toggleZoomAtPoint = (clientX: number, clientY: number) => {
+    if (isMobile) return;
     if (zoomScale > 1) {
       setZoomScale(1);
       setPanOffset({ x: 0, y: 0 });
@@ -113,6 +130,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
+    if (isMobile) return;
     const closestGrab = (e.target as HTMLElement).closest(".cursor-grab");
     const closestGrabbing = (e.target as HTMLElement).closest(".cursor-grabbing");
     if (
@@ -151,6 +169,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
+    if (isMobile) return;
     if (e.touches.length === 1 && isPanning) {
       const touch = e.touches[0];
       handlePanMove(touch.clientX, touch.clientY);
@@ -170,6 +189,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
+    if (isMobile) return;
     if (e.touches.length === 0) {
       handlePanEnd();
       initialPinchDistRef.current = null;
@@ -181,6 +201,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
   };
 
   const handleWheel = (e: React.WheelEvent) => {
+    if (isMobile) return;
     if (
       (e.target as HTMLElement).closest(".zoom-controls") ||
       (e.target as HTMLElement).closest(".btn") ||
@@ -202,6 +223,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
   };
 
   const handleDoubleClick = (e: React.MouseEvent) => {
+    if (isMobile) return;
     if (
       (e.target as HTMLElement).closest(".zoom-controls") ||
       (e.target as HTMLElement).closest(".btn") ||

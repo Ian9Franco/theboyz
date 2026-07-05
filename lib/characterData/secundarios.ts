@@ -23,7 +23,7 @@ export const secundarios: CharacterDetail[] = [
     powers: {
       role: 'Karma',
       habilidades: [
-        'Distorsión de Probabilidad Cuántica: Altera la probabilidad local de manera irónica, provocando fallas catastróficas en tecnología enemiga.',
+        'Distorsión de Probabilidad Arcana: Altera la probabilidad local de manera irónica, provocando fallas catastróficas en tecnología enemiga.',
         'Lazos del Destino: Percibe e interceptar los hilos de la probabilidad, forzando fallas o colisiones.',
         'Navegación del Caos: Transmuta el momentum de peligro en un escape fortuito.'
       ],
@@ -72,11 +72,11 @@ export const secundarios: CharacterDetail[] = [
     fullBody: '/personajes/SECUNDARIOS/Tinkerer/The Tinkerer.webp',
     color: '#8b5cf6',
     role: 'Proveedor tecnológico / The Tinkerer',
-    visualCode: 'Overol de mecánico con grasa cuántica, visor ocular multi-lente',
+    visualCode: 'Overol de mecánico con grasa arcana, visor ocular multi-lente',
     perfil: [
       'Mentor silencioso y huraño: Atiende el taller "Interdimensional Repairs", actuando como el nexo logístico de los pibes en el multiverso.',
-      'Ingeniero de desguace: Un experto absoluto en rediseñar, hibridar y estabilizar tecnologías y componentes cuánticos dañados.',
-      'Estilo de taller cuántico: Overol de mecánico desgastado y visor ocular de cuatro lentes móviles que proyectan planos en azul holográfico.'
+      'Ingeniero de desguace: Un experto absoluto en rediseñar, hibridar y estabilizar tecnologías y componentes arcanos dañados.',
+      'Estilo de taller arcano: Overol de mecánico desgastado y visor ocular de cuatro lentes móviles que proyectan planos en azul holográfico.'
     ],
     crisis: 'Recelo profesional: Si los pibes tratan con descuido las piezas de su inventario, se rehúsa a cooperar o proveer armamento.',
     stats: { fuerza: 2, inteligencia: 8, carisma: 4, suerte: 6, combate: 1, defensa: 3, especialVal: 7 },
@@ -86,11 +86,11 @@ export const secundarios: CharacterDetail[] = [
       role: 'The Tinkerer',
       habilidades: [
         'Análisis de Código Físico: Percepción analítica intuitiva que le permite descifrar el funcionamiento y planos de cualquier artefacto.',
-        'Modificación Cuántica: Transmuta componentes comunes y chatarra tecnológica en portales estables o celdas de energía.',
+        'Modificación Arcana: Transmuta componentes comunes y chatarra tecnológica en portales estables o celdas de energía.',
         'Ocular Multiespectral: Visor que detecta vulnerabilidades atómicas, fugas de energía y fallas estructurales invisibles.'
       ],
-      significa: 'El armero de las dimensiones. Altera y refina la materia cuántica para generar recursos logísticos e infraestructura.',
-      crisis: 'Saturación del espectro: El uso continuo de su visor lo expone a sufrir interferencias cuánticas severas, bloqueando su lectura.',
+      significa: 'El armero de las dimensiones. Altera y refina la materia arcana para generar recursos logísticos e infraestructura.',
+      crisis: 'Saturación del espectro: El uso continuo de su visor lo expone a sufrir interferencias arcanas severas, bloqueando su lectura.',
       stats: { fuerza: 4, inteligencia: 10, carisma: 6, suerte: 8, combate: 3, defensa: 6, especialVal: 10 }
     }
   },
@@ -420,7 +420,7 @@ export const secundarios: CharacterDetail[] = [
     powers: {
       role: 'Cazarecompensas',
       habilidades: [
-        'Rastreo Ghostline: Lee trazas de calor, energía cuántica y motores espaciales para predecir movimientos.',
+        'Rastreo Ghostline: Lee trazas de calor, energía arcana y motores espaciales para predecir movimientos.',
         'Manto de Supervivencia: Capa de camuflaje térmico que absorbe radiación e interrumpe sensores enemigos.',
         'Arsenal de Frontera: Emplea rifles pesados, ganchos de anclaje y explosivos tácticos con eficiencia de soldado.'
       ],
@@ -440,7 +440,7 @@ export const secundarios: CharacterDetail[] = [
     role: 'La Cazadora de Vidrio / Ejecutora de Órbita Limpia',
     visualCode: 'Cuerpo translúcido con núcleo de energía, armadura biomecánica blanca y dorada, garras de vidrio',
     perfil: [
-      'Ejecutora cuántica: Cazadora de élite corporativa que modela la cacería como una ecuación matemática pura.',
+      'Ejecutora arcana: Cazadora de élite corporativa que modela la cacería como una ecuación matemática pura.',
       'Tecnología prohibida: Su cuerpo translúcido alberga un núcleo de energía recuperada de la anomalía de Veyra-9.',
       'Precisión implacable: Carece de emoción en combate. Rastrea mediante predicción probabilística y sigilo óptico.'
     ],

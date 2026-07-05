@@ -9,7 +9,7 @@
 *   **Asimilación Primordial:** Al fusionarse con Archon, Ian deja de ser puramente humano para convertirse en el nexo supremo de la realidad. Utiliza los fragmentos de las dimensiones destruidas (las *Incursiones*) para crear un único planeta unificado bajo su control absoluto: **Vesperia**.
 *   **Gobierno de Causalidad:** Se corona como el único Dios de este nuevo mundo bajo la consigna:
     > *"There is no God, only Vesper Archor."*
-*   **La Ecuación del Orden:** A diferencia de un dictador común, su tiranía es puramente estratégica. No gobierna países ni impone leyes humanas; manipula y gobierna las probabilidades cuánticas de la existencia a nivel macro para asegurar la supervivencia de la humanidad, sacrificando el libre albedrío individual si este genera peligro de extinción.
+*   **La Ecuación del Orden:** A diferencia de un dictador común, su tiranía es puramente estratégica. No gobierna países ni impone leyes humanas; manipula y gobierna las probabilidades arcanas de la existencia a nivel macro para asegurar la supervivencia de la humanidad, sacrificando el libre albedrío individual si este genera peligro de extinción.
 
 ---
 

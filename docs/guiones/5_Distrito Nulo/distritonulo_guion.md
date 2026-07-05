@@ -21,7 +21,7 @@
 * **Viñeta 7 (Primer Plano):** Julián (delgado pero atlético, corte fade muy prolijo, barba de una semana bien recortada, suéter azul marino) gesticula con sus manos desde el asiento trasero, intentando romper la pesadez del ambiente con su tono irónico habitual.
   * **JULIÁN:** —Sofi está bien, che. Salvó su pellejo y ahora se va a comer sushi al otro lado del charco. Dejen de maquinar, boludos, que nos salió redonda.
 * **Viñeta 8 (Plano Detalle / Flashback):** Una pequeña viñeta con bordes difusos y estilizados que muestra un fogonazo de recuerdo: la desintegración molecular en partículas de estática dorada y púrpura del Universo 5458.
-  * **TEXTO DE ENCUADRE:** "El Universo 5458 se deshizo en silencio. Un mundo entero borrado por un error cuántico."
+  * **TEXTO DE ENCUADRE:** "El Universo 5458 se deshizo en silencio. Un mundo entero borrado por un error arcano."
 * **Viñeta 8b (Plano Corto):** De repente, Uandi aprieta el volante de cuero con excesiva fuerza, soltando un quejido áspero de dolor. Gotas de sudor frío le brotan en la frente. Ian se da vuelta hacia él alarmado, señalándole la autopista indicando que falta poco.
   * **UANDI:** —¡Ah...! Mierda, me pegó un calorazo de golpe... Siento que me quemo por dentro, boludo.
   * **IAN:** —¡Uandi! Bancá un poco, ya estamos a unas cuadras. Aguantá.
@@ -46,9 +46,9 @@
 * **Viñeta 15 (Plano Medio):** Uandi está sentado recostado en el sillón de cuero, respirando pesado. Ian, de pie frente a él en el piso, le coloca con cuidado los sensores de succión biométricos (electrodos de chupete) en la frente y en los brazos desnudos, con los cables colgando hacia el piso. Julián observa a un lado de pie con curiosidad y los brazos cruzados.
   * **JULIÁN:** —¿Qué le ponés, che? ¿Eso te mide la presión o es para robarle cable a los yankis?
 * **Viñeta 16 (Plano Medio):** Ian corre de prisa hacia el taller del fondo de la base, acomodándose frente a su escritorio rodeado de doce monitores encendidos en interfaces oscuras.
-* **Viñeta 17 (Plano Detalle):** La pantalla principal de la computadora muestra las lecturas biométricas de Uandi, detallando picos y ondas caóticas rojas sumamente anormales que se disparan en los gráficos cuánticos.
+* **Viñeta 17 (Plano Detalle):** La pantalla principal de la computadora muestra las lecturas biométricas de Uandi, detallando picos y ondas caóticas rojas sumamente anormales que se disparan en los gráficos arcanos.
 * **Viñeta 17b (Primer Plano):** Rostro de Ian desencajado por el terror y el shock, con las lentes de sus anteojos reflejando el fulgor caótico y rojo de las pantallas del monitor.
-  * **IAN:** —(Susurrando en shock) No, no puede ser... esto no es una gripe común. Es la firma cuántica del portal en sus células...
+  * **IAN:** —(Susurrando en shock) No, no puede ser... esto no es una gripe común. Es la firma arcana del portal en sus células...
 
 ---
 
@@ -64,7 +64,7 @@
 ---
 
 ### PÁGINA 4.5 (Estabilización y Alivio)
-* **Viñeta 18 (Plano Corto):** En el taller, primer plano de las pantallas mostrando las lecturas de Uandi en picos cuánticos caóticos y de un color rojo intenso. La luz roja ilumina el rostro de Ian, quien observa las lecturas con angustia y el ceño muy fruncido.
+* **Viñeta 18 (Plano Corto):** En el taller, primer plano de las pantallas mostrando las lecturas de Uandi en picos arcanos caóticos y de un color rojo intenso. La luz roja ilumina el rostro de Ian, quien observa las lecturas con angustia y el ceño muy fruncido.
   * **IAN:** —(Susurrando para sí mismo, tenso) Sigue demasiado inestable...
 * **Viñeta 18b (Plano Detalle):** Primer plano de la pantalla. Los picos electromagnéticos y las anomalías de energía empiezan a calmarse, y el color de las métricas pasa de un rojo vivo a un tono naranja de alerta moderada. Ian contiene la respiración, observando con suma atención.
 * **Viñeta 18c (Plano Medio):** Ian frente a la pantalla, que finalmente muestra las líneas totalmente estables y en un color verde brillante. Ian suspira aliviado y relaja los hombros con una pequeña sonrisa. A su lado en el taller, Julián levanta su botella de Corona con una media sonrisa relajada, chocándola suavemente con la de Ian.
@@ -204,7 +204,7 @@
 ### PÁGINA 13
 * **Viñeta 50 (Plano Corto con Elemento Sobresaliente):** El líder de los matones se lanza con furia, tirando un puñetazo hacia el rostro de Julián. El puño del matón y la mano rota de Julián rompen los marcos de la viñeta, sobresaliendo hacia el lector en 3D.
 * **Viñeta 51 (Viñeta Irregular - Efecto Glitch):** El cuerpo de Julián se desfasa en tres copias de estática glitch que parpadean.
-* **Viñeta 51b (Plano Detalle):** La navaja pasa de largo a través del aire pixelado con lag visual. Los bordes de la viñeta se ven rotos por el glitch cuántico.
+* **Viñeta 51b (Plano Detalle):** La navaja pasa de largo a través del aire pixelado con lag visual. Los bordes de la viñeta se ven rotos por el glitch arcano.
   * **EFECTO DE SONIDO:** ¡FZZZT!
 * **Viñeta 52 (Plano Medio):** El matón tropieza hacia adelante cruzando la imagen de estática con total confusión en su cara.
 * **Viñeta 53 (Plano Medio Corto):** Julián corre desesperado hacia la avenida principal; la mitad de su rostro sigue distorsionada por estática digital y desfase molecular mientras jadea asustado.
@@ -284,12 +284,12 @@
 ### PÁGINA 19 (El Fierro de Energía y la Cura)
 * **Viñeta 75 (Plano Americano con Elemento Sobresaliente):** Julián se pone de pie con agilidad, lleno de adrenalina. En su mano derecha comienza a materializar, a partir de estática analógica parpadeante, un fierro largo y doblado de pura energía glitch azul y roja que zumba con estridencia. El fierro de energía y sus chispas eléctricas rompen la viñeta, sobresaliendo de los marcos laterales.
   * **JULIÁN:** —¡¿Qué te pasa, pedazo de forro?! ¡Querés bardo, vamos a darnos!
-* **Viñeta 75b (Plano Medio):** Julián adopta una pose defensiva sosteniendo el fierro de estática con las dos manos, con la cara distorsionada a medias por el glitch cuántico y chispas de estática analógica azul/roja.
-* **Viñeta 76 (Plano Medio):** Ian vuelve a aparecer de golpe en la puerta del taller, agitando el brazo. En su mano lleva un tubo de ensayo sellado que resplandece intensamente con una mezcla de electricidad cuántica dorada y una densa niebla púrpura del Universo 5458.
+* **Viñeta 75b (Plano Medio):** Julián adopta una pose defensiva sosteniendo el fierro de estática con las dos manos, con la cara distorsionada a medias por el glitch arcano y chispas de estática analógica azul/roja.
+* **Viñeta 76 (Plano Medio):** Ian vuelve a aparecer de golpe en la puerta del taller, agitando el brazo. En su mano lleva un tubo de ensayo sellado que resplandece intensamente con una mezcla de electricidad arcana dorada y una densa niebla púrpura del Universo 5458.
 * **Viñeta 77 (Acción):** Ian arrojando el tubo de ensayo con fuerza, con la pose de un lanzador de béisbol, apuntando directamente al pecho de Uandi que avanza rugiendo.
   * **IAN:** —¡Uandi, respirá esto! ¡Tomá!
 * **Viñeta 77b (Plano Detalle):** El tubo de ensayo gira en el aire en cámara lenta, cruzando la distancia hacia el pecho de Uandi, con la energía dorada y púrpura fluyendo salvajemente en su interior de cristal.
-* **Viñeta 78 (Plano Corto con Elemento Sobresaliente - Cliffhanger):** El tubo de cristal choca contra el pecho de Uandi y estalla. Se libera una explosión eléctrica dorada mezclada con gas púrpura brillante que envuelve su torso. Las chispas y la nube cuántica desbordan el borde inferior de la viñeta, cubriendo el margen en un espectacular efecto 3D.
+* **Viñeta 78 (Plano Corto con Elemento Sobresaliente - Cliffhanger):** El tubo de cristal choca contra el pecho de Uandi y estalla. Se libera una explosión eléctrica dorada mezclada con gas púrpura brillante que envuelve su torso. Las chispas y la nube arcana desbordan el borde inferior de la viñeta, cubriendo el margen en un espectacular efecto 3D.
   * **EFECTO DE SONIDO:** ¡CRASH-FZZZT!
 
 ---

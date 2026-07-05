@@ -12,7 +12,7 @@ export const matis: CharacterDetail[] = [
     role: 'El Arquitecto / Nexo Central',
     visualCode: 'Armadura gris oscuro, líneas LED violetas, visor táctico',
     perfil: [
-      'El antagonista cerebral: Frío, analítico y calculador. Considera el libre albedrío como una anomalía cuántica.',
+      'El antagonista cerebral: Frío, analítico y calculador. Considera el libre albedrío como una anomalía arcana.',
       'Controlador del multiverso: Líder del Consejo de Matis y dueño del núcleo de portales robado.',
       'Estilo militarizado: Armadura blindada con circuitos violetas que parpadean según su nivel de conexión dimensional.'
     ],
@@ -24,10 +24,10 @@ export const matis: CharacterDetail[] = [
       habilidades: [
         'Manipulación Vectorial: Controla y redirige vectores de fuerza y energía a escala macro en la escena.',
         'Núcleo de Portales: Abre portales de gran tamaño para desviar ataques masivos de regreso hacia sus emisores.',
-        'Erradicación de Anomalías: Desactiva temporalmente las habilidades cuánticas y portales de otras variantes.'
+        'Erradicación de Anomalías: Desactiva temporalmente las habilidades arcanas y portales de otras variantes.'
       ],
       significa: 'El cerebro del nexo. Neutraliza el caos espacial controlando las leyes de la física local a nivel vectorial.',
-      crisis: 'Sobrecarga de datos: Procesar miles de futuros y realidades en su visor genera migrañas cuánticas paralizantes.',
+      crisis: 'Sobrecarga de datos: Procesar miles de futuros y realidades en su visor genera migrañas arcanas paralizantes.',
       stats: { fuerza: 8, inteligencia: 10, carisma: 8, suerte: 7, combate: 9, defensa: 9, especialVal: 10 }
     }
   },
@@ -102,7 +102,7 @@ export const matis: CharacterDetail[] = [
     role: 'El Juez de Equivalencia',
     visualCode: 'Túnica oscura de juez, balanza de energía violeta flotante',
     perfil: [
-      'Juez de equivalencia: Inflexible ejecutor de la ley cuántica. Obsesionado con equilibrar fuerzas en el nexo.',
+      'Juez de equivalencia: Inflexible ejecutor de la ley arcana. Obsesionado con equilibrar fuerzas en el nexo.',
       'Intercambio de consecuencias: Traslada heridas físicas y estados de un cuerpo a otro.',
       'Estilo ceremonial: Rostro cubierto por una capucha, balanza violeta flotando sobre su cabeza.'
     ],
@@ -114,7 +114,7 @@ export const matis: CharacterDetail[] = [
       habilidades: [
         'Intercambio de Consecuencias: Transfiere heridas físicas, venenos o ceguera directamente al atacante.',
         'Sentencia de Estasis: Inmoviliza al rival reflejando la misma energía que este intentaba canalizar.',
-        'Balanza Cuántica: Ejerce una gravedad aplastante sobre el objetivo que posea mayor masa o momentum en escena.'
+        'Balanza Arcana: Ejerce una gravedad aplastante sobre el objetivo que posea mayor masa o momentum en escena.'
       ],
       significa: 'Juez del nexo. Equilibra el tablero de combate reflejando daños e imponiendo leyes de intercambio equivalente.',
       crisis: 'Vacío de acciones: Si un enemigo no realiza movimientos hostiles directos, sus habilidades pierden efectividad.',
@@ -136,7 +136,7 @@ export const matis: CharacterDetail[] = [
       'Especialista técnico: Experto en tecnología extradimensional, combate orbital y anomalías de variantes dentro del equipo de La Órbita Muerta.',
       'Traje de condena: Su armadura espacial dañada conserva la marca grabada en el núcleo del traje: "No pertenece a ningún cielo".'
     ],
-    crisis: 'Desconexión de órbita: Su traje dañado sufre micro-desgarros dimensionales si se expone a fluctuaciones cuánticas inestables.',
+    crisis: 'Desconexión de órbita: Su traje dañado sufre micro-desgarros dimensionales si se expone a fluctuaciones arcanas inestables.',
     loreNote: 'Miembro de La Órbita Muerta. Starfall descubrió que su universo sobrevivía drenando energía de realidades vecinas. Al intentar exponerlo, fue exiliado y arrojado a una realidad ajena con su traje dañado.',
     stats: { fuerza: 6, inteligencia: 9, carisma: 6, suerte: 5, combate: 8, defensa: 7, especialVal: 9 },
     especialLabel: 'Orbital',

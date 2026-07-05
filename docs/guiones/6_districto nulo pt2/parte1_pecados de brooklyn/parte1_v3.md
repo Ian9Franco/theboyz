@@ -33,11 +33,11 @@
 
 **Viñeta 1 — Grande (1/2 página) — Plano general**
 *Laboratorio científico táctico dentro de una instalación de V.O.P.S. en los muelles de contenedores de Brooklyn, de noche. Consolas metálicas de alta seguridad, pantallas tácticas de radar y servidores gubernamentales. Lluvia intensa contra los ventanales altos que muestran las pilas de contenedores afuera.*
-*En el centro, Mati de pie frente a la supercomputadora experimental de V.O.P.S., que proyecta tres perfiles holográficos de diagnóstico técnico bajo el encabezado "Firmas Cuánticas Compatibles": Mati Prime con armadura táctica pesada, Mati Warden con capucha y ropas complejas, y Mati Gladiador con arnés de cuero y cicatrices. Las imágenes son estáticas, rodeadas de telemetría y gráficos de ondas.*
+*En el centro, Mati de pie frente a la supercomputadora experimental de V.O.P.S., que proyecta tres perfiles holográficos de diagnóstico técnico bajo el encabezado "Firmas Arcanas Compatibles": Mati Prime con armadura táctica pesada, Mati Warden con capucha y ropas complejas, y Mati Gladiador con arnés de cuero y cicatrices. Las imágenes son estáticas, rodeadas de telemetría y gráficos de ondas.*
 **EMOCIÓN:** Concentración extrema. Cansancio y preocupación. Mati investiga en secreto.
 
 **Viñeta 2 — Media — Mati frente a la supercomputadora**
-*El rostro de Mati iluminado por el resplandor violeta de la consola. En la pantalla, una firma cuántica secundaria etiquetada como "Tierra-112" se desvanece de golpe, marcada con un destello rojo que dice "SEÑAL PERDIDA".*
+*El rostro de Mati iluminado por el resplandor violeta de la consola. En la pantalla, una firma arcana secundaria etiquetada como "Tierra-112" se desvanece de golpe, marcada con un destello rojo que dice "SEÑAL PERDIDA".*
 **MATI (susurrando):** "Qué raro... otra fluctuación en la red."
 **MATI (susurrando):** "Cada vez que una de estas firmas de energía se apaga... siento que la presión en mi córnea aumenta. No tiene sentido."
 
@@ -64,7 +64,7 @@
 **5 viñetas**
 
 **Viñeta 1 — Media — Volvo en el pasillo**
-*Inmóvil. Vestido con remera naranja. Confusión, traición y miedo en su rostro. A su alrededor, la estática cuántica invisible hace vibrar levemente los archivadores metálicos y los paneles del pasillo de la instalación.*
+*Inmóvil. Vestido con remera naranja. Confusión, traición y miedo en su rostro. A su alrededor, la estática arcana invisible hace vibrar levemente los archivadores metálicos y los paneles del pasillo de la instalación.*
 
 **Viñeta 2 — Pequeña — Plano detalle: su pie golpea un destornillador en el suelo**
 **EFECTO DE SONIDO:** *CLANG*
@@ -115,7 +115,7 @@
 **EFECTO DE SONIDO:** *BOOM*
 
 **Viñeta 2 — Media — El Supercamionero frente a Mati y Volvo**
-**SUPERCAMIONERO:** "Se detectó una intrusión cuántica no autorizada en el servidor del laboratorio. Protocolo de seguridad activo."
+**SUPERCAMIONERO:** "Se detectó una intrusión arcana no autorizada en el servidor del laboratorio. Protocolo de seguridad activo."
 **SUPERCAMIONERO:** "Nadie sale. Contención y cuarentena inmediata."
 
 **Viñeta 3 — Pequeña — Volvo retrocediendo**
@@ -404,7 +404,7 @@
 
 **Viñeta 2 — Grande — Plano general de la Fábrica**
 *Un plano general que muestra la escala monumental del espacio: tuberías corroídas cruzan por el aire, techos altos de chapa perforada y pasarelas colapsadas. El suelo está cubierto de escombros, charcos de agua estancada y químicos verdosos. El sonido del goteo resuena con un eco perturbador e infinito en las sombras del fondo.*
-**PHOBOS (de espaldas):** "La energía cuántica es tan inestable... pero tan fácil de canalizar."
+**PHOBOS (de espaldas):** "La energía arcana es tan inestable... pero tan fácil de canalizar."
 
 **Viñeta 3 — Pequeña — Plano detalle: las sombras industriales**
 *En los huecos oscuros bajo la maquinaria corroída y detrás de los tanques de gas oxidados, se mueven los Hounds: bestias sucias del tamaño de un perro mediano, con cuerpos caninos deformes y delgados, cubiertas de mugre y lodo seco. Sus ojos blancos sin pupilas brillan fijamente en la penumbra.*
@@ -428,8 +428,8 @@
 **Viñeta 2 — Pequeña — Plano detalle: manos de Phobos**
 *Dedos largos, pálidos y huesudos sostienen un vial de metatoxina verde brillante. Lo hace girar despacio bajo la luz parpadeante de una bombilla colgante, antes de guardarlo en su bolsillo.*
 
-**Viñeta 3 — Grande — Phobos ante la proyección cuántica**
-*Phobos está de espaldas frente a una distorsión espacial que flota en el aire como un espejo trizado. En la distorsión se proyectan las firmas cuánticas robadas del terminal de V.O.P.S. y la ficha de Mati marcada como "Nexo compatible". La silueta de Phobos, alta y rígida, permanece inmóvil observando los datos.*
+**Viñeta 3 — Grande — Phobos ante la proyección arcana**
+*Phobos está de espaldas frente a una distorsión espacial que flota en el aire como un espejo trizado. En la distorsión se proyectan las firmas arcanas robadas del terminal de V.O.P.S. y la ficha de Mati marcada como "Nexo compatible". La silueta de Phobos, alta y rígida, permanece inmóvil observando los datos.*
 **PHOBOS (de espaldas):** "Corré, chico."
 *(beat)*
 **PHOBOS (de espaldas):** "Todavía no."
@@ -520,7 +520,7 @@
 **EMOCIÓN:** El horror de ser visto en el lugar más visto del mundo.
 
 **Viñeta 2 — Media — Las pantallas**
-*La imagen de Mati continúa, pero ahora hay un segundo elemento — fragmentos filtrados de la base de datos de V.O.P.S. y el registro de personal de los muelles, mostrando la ficha médica de Mati y su firma de mutación cuántica.*
+*La imagen de Mati continúa, pero ahora hay un segundo elemento — fragmentos filtrados de la base de datos de V.O.P.S. y el registro de personal de los muelles, mostrando la ficha médica de Mati y su firma de mutación arcana.*
 **PHOBOS (parlantes):** "Alexander Vance construyó su imperio político prometiendo limpiar la ciudad de mutantes."
 **PHOBOS (parlantes):** "Pero miren los archivos de la alcaldía. Su propia fuerza de seguridad, V.O.P.S., tiene a estos monstruos en su nómina. Los oculta en sus bases tácticas. Los usa en### PÁGINA 19 — "La Revuelta"
 **5 viñetas — la escala del caos y el descontrol popular**
@@ -575,7 +575,7 @@
 *Mati mantiene el rostro apuntando hacia abajo, con la cabeza gacha intentando ocultar lo que le pasa. Sin embargo, a pesar de sus esfuerzos por esconderlo, un intenso y denso brillo violeta comienza a filtrarse entre sus párpados cerrados y sienes, iluminando el suelo seco bajo él. Las esposas le impiden llevarse las manos a la cara.*
 
 **Viñeta 3 — Pequeña — Plano detalle: ojos de Mati**
-*Mati sigue con la cabeza inclinada hacia el suelo. Sus párpados están fuertemente apretados por el dolor, pero la energía cuántica violeta se acumula de forma líquida y superdensa, escapando como finos hilos de plasma brillante por sus sienes.*
+*Mati sigue con la cabeza inclinada hacia el suelo. Sus párpados están fuertemente apretados por el dolor, pero la energía arcana violeta se acumula de forma líquida y superdensa, escapando como finos hilos de plasma brillante por sus sienes.*
 
 **Viñeta 4 — Media — Los detenidos en pánico**
 *Los otros reclusos inmovilizados en el estrecho espacio notan el resplandor violeta en el suelo y en la cara de Mati. Uno de ellos, incapaz de moverse debido a las esposas, se estremece de terror y grita desesperado con la mirada fija en Mati hacia la rejilla de comunicación de la cabina.*
@@ -651,7 +651,7 @@
 **MATI:** "¿Ian? ¿Ian, estás ahí?"
 
 **Viñeta 4 — Media — Ian al habla**
-**IAN (teléfono):** "Mati. Detecté una anomalía cuántica masiva hace diez minutos. Rastreé el GPS secundario de tu comunicador. No te muevas de la ruta."
+**IAN (teléfono):** "Mati. Detecté una anomalía arcana masiva hace diez minutos. Rastreé el GPS secundario de tu comunicador. No te muevas de la ruta."
 **MATI:** "Ian... no puedo abrir los ojos. La energía se está desbordando, si los abro voy a reventar todo. Estoy caminando a tientas."
 
 **Viñeta 5 — Grande — Mati sentándose contra la baranda, aliviado**
@@ -681,7 +681,7 @@
 
 ---
 
-### PÁGINA 25.5 — "La Presión Cuántica"
+### PÁGINA 25.5 — "La Presión Arcana"
 **5 viñetas — El peligro inmediato de la energía de Mati**
 
 **Viñeta 1 — Media — Mati en el sillón**
@@ -690,7 +690,7 @@
 **UANDI:** "Pará, Mati, no fuerces..."
 
 **Viñeta 2 — Plano detalle: el ojo de Mati entreabriéndose**
-*Mati abre apenas un milímetro sus párpados. Al instante, una chispa violenta de energía cuántica violeta sale disparada de su ojo izquierdo.*
+*Mati abre apenas un milímetro sus párpados. Al instante, una chispa violenta de energía arcana violeta sale disparada de su ojo izquierdo.*
 **EFECTO DE SONIDO:** *¡ZAP!*
 
 **Viñeta 3 — Media — Los chicos retroceden**
@@ -711,7 +711,7 @@
 **5 viñetas**
 
 **Viñeta 1 — Grande — Ian examinando los ojos de Mati**
-*Ian usa un escáner óptico portátil frente al rostro de Mati, quien mantiene los ojos fuertemente cerrados mientras pequeñas descargas estáticas violetas parpadean alrededor de sus párpados. Las pantallas del taller muestran gráficos con alarmantes picos de energía cuántica.*
+*Ian usa un escáner óptico portátil frente al rostro de Mati, quien mantiene los ojos fuertemente cerrados mientras pequeñas descargas estáticas violetas parpadean alrededor de sus párpados. Las pantallas del taller muestran gráficos con alarmantes picos de energía arcana.*
 **IAN:** "La carga de plasma interno en tus órbitas está al límite de saturación. Si abrís los párpados sin un amortiguador, la energía se va a descargar de forma incontrolable."
 **MATI:** "¿En español?"
 **IAN:** "Tus ojos son un reactor a punto de fundirse. Necesitás un filtro óptico que absorba y disperse la frecuencia del plasma para que puedas ver y contener la energía."
@@ -784,7 +784,7 @@
 
 **Viñeta 3 — Media — Uandi**
 **UANDI:** "¿Y qué encontraste?"
-**MATI:** "La computadora detectó otras firmas cuánticas compatibles con mi energía. Tenían mi cara, chicos... pero eran versiones mías de otros lados. Cada vez que una de esas firmas se apaga en la red, la presión en mis ojos aumenta. Siento que me queman por dentro."
+**MATI:** "La computadora detectó otras firmas arcanas compatibles con mi energía. Tenían mi cara, chicos... pero eran versiones mías de otros lados. Cada vez que una de esas firmas se apaga en la red, la presión en mis ojos aumenta. Siento que me queman por dentro."
 
 **Viñeta 4 — Pequeña — El portarretratos de Sofi**
 *El vidrio rajado.*

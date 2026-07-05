@@ -38,7 +38,7 @@
 
 ## MECÁNICAS DE PODER (respetar estrictamente)
 
-### Julián — "Desfase Cuántico"
+### Julián — "Desfase Arcano"
 - Proyecta **réplicas de interferencia** (ecos sólidos de estática roja/azul-cian/magenta) para evadir ataques
 - Puede **imbuir objetos pequeños** con energía electromagnética (naipes, maderas)
 - **COSTO:** migrañas, arritmias, pérdida temporal de tangibilidad física
@@ -219,7 +219,7 @@ PROMPT GPT-5:
 4. Ian lanza el tubo. Pose de lanzador. Plano de acción.
    - **¡Tomá!**
 5. Plano detalle: el tubo girando en el aire, la energía del Universo 5458 visible en su interior.
-6. **CLIFFHANGER (pág. par):** El tubo estalla contra el pecho de Uandi. Explosión de electricidad dorada + gas púrpura. Las chispas y la nube cuántica **desbordan el borde inferior en 3D**, cubriendo el margen. El impacto ilumina el living entero con dorado.
+6. **CLIFFHANGER (pág. par):** El tubo estalla contra el pecho de Uandi. Explosión de electricidad dorada + gas púrpura. Las chispas y la nube arcana **desbordan el borde inferior en 3D**, cubriendo el margen. El impacto ilumina el living entero con dorado.
    - **¡CRASH-FZZZT!**
 
 ---
