@@ -193,6 +193,8 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
     *   *Dagas de Proyección:* Hojas de estática en sus nudillos que se quiebran dentro del oponente para detonar de forma retardada.
     *   *Lazo de Tensión:* Cable de estática densa para movilidad o atrapar enemigos. Admite sobrecargas eléctricas.
     *   *Dados y Monedas:* Minas tácticas cargadas de energía cinética que emiten pulsos EMP al paso del enemigo.
+    *   *Alteración Atómica:* Capacidad de alterar sus átomos con su energía glitch para crear tejido artificial si es necesario (la naturaleza exacta de esta energía y sus límites son desconocidos por el momento).
+    *   *Cápsula de Energía y Oxígeno:* Puede cubrirse a sí mismo o a otros con una cápsula de energía protectora capaz de generar una burbuja de oxígeno en su interior para supervivencia.
 *   **Recurso Endgame — *Sobrecarga de Masa*:** Inyecta energía inestable en objetos de gran tamaño (autos, escombros) para crear bombas. Requiere contacto estático continuo (varios segundos inmóvil) y le genera migrañas masivas y sangrado nasal.
 
 ### 🤝 Relaciones Clave
@@ -231,8 +233,8 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
 > "Sabe que sus ojos son una ventana al colapso multiversal, y no se permite parpadear cuando importa."
 
 ### 👤 Perfil General
-*   **Rol en el Roster:** Controlador táctico / reposicionamiento / artillería de plasma a larga distancia.
-*   **Origen del Nombre Clave:** Proviene de su capacidad para combinar ráfagas de plasma concentrado dirigidas por la mirada con habilidades de intercambio y reposicionamiento físico en combate (swap + fire).
+*   **Rol en el Roster:** Controlador táctico / ofensiva de energía multiversal.
+*   **Origen del Nombre Clave:** Proviene de la poderosa energía multiversal pura que canaliza (fuego de nexo cruzado) y las ráfagas destructivas que emiten sus ojos (swapfire).
 
 ### 👤 Perfil Psicológico y Personalidad
 *   **El Descontracturador Jovial:** Sumamente carismático, divertido y amante de los memes. Alivia las tensiones del grupo en medio del peligro con chistes e ironía.
@@ -248,10 +250,10 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
 | **Suerte** | 4/10 |
 | **Combate** | 5/10 |
 | **Defensa** | 5/10 (Resistencia dérmica reforzada) |
-| **Habilidad Especial (Intercambio)** | 10/10 |
+| **Habilidad Especial (Energía Multiversal)** | 10/10 |
 
 ### ⚡ Poderes y Habilidades
-*   **Poder Principal — *The Aperture (La Apertura)*:** Sus ojos son portales físicos a una dimensión de plasma violeta pura. Su cuerpo actúa como un nexo arcano que absorbe la energía térmica de sus contrapartes en otras realidades (el "Mativerse").
+*   **Poder Principal — *The Aperture (La Apertura)*:** Sus ojos son portales físicos a otra dimensión de donde brota una poderosa energía multiversal. Su cuerpo actúa como una dimensión nexo entre todas las existentes, manifestándose en un único individuo por universo de formas diferentes; en nuestro Mati, lo hace específicamente a través de sus ojos.
     *   *Visor de Conducción Táctica:* Creado por Ian, le permite regular el diámetro, intensidad y dirección del haz de plasma.
     *   *Uso sin Visor (Catastrófico):* Si intenta usar sus poderes sin el visor, el rayo de plasma cubre todo su campo visual al instante, desatando una destrucción masiva y fuego aliado.
 *   **Modos de Disparo (Guiados por la Mirada):**
@@ -380,24 +382,24 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
 | **Suerte** | 4/10 |
 | **Combate** | 5/10 |
 | **Defensa** | 6/10 |
-| **Habilidad Especial (Reactor Cinético)** | 9/10 |
+| **Habilidad Especial (Ira y Regeneración)** | 9/10 |
 
 ### ⚡ Poderes y Habilidades
-*   **Poder Principal — *Acumulación y Disipación Cinética*:** Su cuerpo actúa como un reactor biológico que absorbe la fuerza de los impactos físicos, caídas o explosiones. Almacena esta energía en runas en su piel, traduciéndola en fuerza física devastadora, velocidad aumentada y regeneración dérmica.
-    *   *Limitación:* Debe disipar constantemente la energía almacenada para evitar el sobrecalentamiento térmico del cuerpo.
-*   **Habilidad de Combate — *Descarga Cinética (Blast)*:** Expulsa ráfagas de ondas de choque de alta densidad desde su pecho para barrer obstáculos y enemigos.
-*   **Movilidad:** Súper saltos impulsados por la liberación de la energía cinética acumulada en sus piernas.
+*   **Poder Principal — *Ira Regenerativa*:** Su cuerpo no acumula ni almacena energía absorbiéndola; en su lugar, cada ataque que recibe lo enfurece más. Su enojo es el catalizador directo que aumenta su fuerza física de forma exponencial a niveles desconocidos (sin límites conocidos en estado salvaje). Además, cuenta con una regeneración celular instantánea de cualquier herida física: si recibe un impacto o herida en estado base, su "otro yo" (Aegis) puede curarlo de forma instantánea sin necesidad de convertirse o transformarse del todo.
+    *   *Limitación:* El aumento descontrolado de su ira arriesga hacerlo entrar en un estado salvaje feral donde pierde la noción táctica y el juicio racional.
+*   **Habilidad de Combate — *Fuerza Feral*:** Canaliza su ira en golpes devastadores e impactos destructivos a corta distancia, liberando una potencia salvaje que ignora los límites anatómicos humanos.
+*   **Movilidad:** Ejecuta grandes saltos guiados por el peso de su cuerpo enfurecido para caer aplastando amenazas.
 
 ### 🤝 Relaciones Clave
 *   **Ian (Vesperwing):** Profundo respeto mutuo. Mientras Ian carga con la culpa del accidente, Uandi lo acepta con naturalidad: Ian es la mente y él es el escudo.
 *   **Jaz (Oracle):** Le hace bromas constantes sobre su rol místico, pero es el primero en colocarse delante si ella es atacada.
-*   **Julián (Wildcard):** Sinergia táctica alta en el campo. Julián disipa el exceso de calor e inestabilidad de Uandi absorbiéndolo con su estática y puede inyectarle energía de clones destruidos para recargar su batería cinética al instante.
+*   **Julián (Wildcard):** Sinergia táctica alta en el campo. Julián puede inyectarle ráfagas inestables de clones destruidos o constructos de naipes para hacerlo enojar a propósito de forma táctica y potenciar su fuerza física de forma inmediata (combos de furia).
 
 ### 📖 Lore e Historia
-*   **Lore Actual (El Reactor del Equipo):** Durante la huida de los Backrooms, Uandi se interpuso para proteger a Ian de una descarga inestable de energía arcana. Su estructura celular absorbió el impacto, adaptándose para acumular y canalizar energía cinética. Con el tiempo, el exceso de energía absorbida genera calor extremo a su alrededor, evaporando agua y resquebrajando la tierra.
-*   **Lore Proyectado — *Modo Sobrecarga Cinética*:** Cuando la vida de sus amigos corre peligro extremo, entra en **Sobrecarga Cinética (Crisis)**:
+*   **Lore Actual (El Reactor del Equipo):** Durante la huida de los Backrooms, Uandi se interpuso para proteger a Ian de una descarga inestable de energía arcana. Su estructura celular asimiló el impacto provocando una mutación: en lugar de absorber y almacenar energía cinética, su cuerpo reacciona ante cualquier agresión física aumentando drásticamente su nivel de ira, lo que potencia su fuerza exponencialmente y activa una regeneración instantánea de cualquier tejido dañado.
+*   **Lore Proyectado — *Modo Ira Desatada*:** Cuando la vida de sus amigos corre peligro extremo, entra en **Ira Desatada (Crisis)**:
     *   *Aspecto Estandarizado:* Experimenta una **hipertrofia muscular masiva** y su **piel se vuelve incandescente**, mientras las runas rojas brillan con furia en su cuerpo y distorsionan térmicamente el aire (reemplazando ideas de solidificación o texturas rocosas).
-    *   *El Costo:* La Sobrecarga anula su juicio racional, dominándolo un impulso obsesivo e incontrolable de proteger que le impide distinguir aliados de enemigos.
+    *   *El Costo:* La Sobrecarga de furia anula su juicio racional, dominándolo un impulso obsesivo e incontrolable de proteger que le impide distinguir aliados de enemigos.
 
 ### 🎨 Aspecto Visual y Guía de Generación
 *   **Estética:** Marcas rúnicas rojas que brillan intensamente por todo su cuerpo, distorsión térmica del aire a su alrededor debido al calor corporal.

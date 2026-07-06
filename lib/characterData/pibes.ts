@@ -163,7 +163,8 @@ export const pibes: CharacterDetail[] = [
         'Bomber Roja Táctica: Chaqueta de cuero técnico rojo borravino estilo Star-Lord que disipa la fricción de su energía glitch y hace juego visual con sus constructos.',
         'Casco de Conducción Colapsable: Casco hermético inspirado en Star-Lord que le permite respirar en el espacio/vacío y cuenta con ópticas HUD de luz azul analógica.',
         'Naipes de Energía: Proyectiles inestables de energía glitch (azul y roja) que lanza con asistencia del HUD de su casco para calcular parábolas perfectas.',
-        'Ecos de Conservación Decreciente: Clones de estática azul y roja que decaen temporalmente. Su detonación y energía residual son monitoreadas por las ópticas del casco.'
+        'Ecos de Conservación Decreciente: Clones de estática azul y roja que decaen temporalmente. Su detonación y energía residual son monitoreadas por las ópticas del casco.',
+        'Manipulación Atómica y Cápsula: Puede alterar sus átomos con energía para crear tejido artificial si es necesario, o cubrirse a sí mismo o a otros con una cápsula de energía protectora capaz de generar una burbuja de oxígeno en su interior (la naturaleza y límites de esta energía son desconocidos).'
       ],
       significa: 'El maestro del engaño y la agilidad táctica. Emplea constructos y clones de energía pura degradable para sembrar el caos y castigar al oponente sin comprometer su seguridad.',
       crisis: 'Migraña por Sobrecarga: Intentar mantener clones estables por mucho tiempo o cargar masas pesadas le genera migrañas y lo deja expuesto. Además, sus armas de energía vibran y pueden estallar en sus manos si no las descarta a tiempo.',
@@ -200,7 +201,7 @@ export const pibes: CharacterDetail[] = [
     image: '/personajes/PORTADAS/Mati/Swapfire.webp',
     fullBody: '/personajes/PORTADAS/Mati/Swapfire.webp',
     color: '#4c1d95',
-    role: 'Controlador táctico / reposicionamiento y ofensiva de fricción',
+    role: 'Controlador táctico / ofensiva de energía multiversal',
     visualCode: 'Piel bronceada, campera táctica, hoyuelos',
     perfil: [
       'Jovial y amante de los memes: El carismático que descontractura al grupo en medio del caos, aportando humor y ligereza incluso en las situaciones más tensas.',
@@ -211,17 +212,17 @@ export const pibes: CharacterDetail[] = [
     ],
     crisis: 'Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía violeta brota sin filtro ni calibración, expandiéndose instantáneamente a todo su campo de visión y provocando destrucción masiva de área con peligro de fuego aliado.',
     stats: { fuerza: 7, inteligencia: 6, carisma: 6, suerte: 4, combate: 6, defensa: 7, especialVal: 0 },
-    especialLabel: 'Intercambio',
+    especialLabel: 'Energía Multiversal',
     hint: 'Terminá el Capítulo 3 (Worlds) de Mativerse Part 1.',
     powers: {
-      role: 'Swapfire / Nexo Cósmico',
+      role: 'Swapfire / Nexo Multiversal',
       habilidades: [
         'Portal Ocular ("The Aperture"): Sus ojos son un portal físico a otra dimensión de donde brota energía de plasma violeta base, la cual guía al 100% con su mirada y cabeza.',
         'Visor de Calibración Táctica: Regula la energía del portal ocular en ráfagas finas y rebotes geométricos. Cuenta con soporte de respiración autónoma para el vacío del espacio.',
-        'Nexo de Anclajes (Punto A/B): Transpone objetivos geométricamente entre un Punto A (visión) y un Punto B (anclajes en armas/drones) catalizando calor molecular extremo.',
+        'Foco de Energía Multiversal: Proyecta ráfagas concentradas de plasma violeta multiversal que desgarran la materia y catalizan calor molecular extremo en los objetivos seleccionados con la mirada.',
         'Burbuja de Anclaje Local: Mantiene de forma pasiva una porción de atmósfera terrestre pegada a su piel, permitiéndole sobrevivir en el espacio junto a su visor táctico.'
       ],
-      significa: 'Mati es el primero en mandar un meme al grupo en medio de una crisis, pero también el primero en ponerse al frente cuando hay que tomar una decisión de la que depende la vida de todos. Sabe que sus ojos son una ventana al colapso multiversal, y no se permite parpadear cuando importa.',
+      significa: 'Mati es el primero en mandar un meme al grupo en medio de una crisis, pero también el primero en ponerse al frente cuando hay que tomar una decisión de la que depende la vida de todos. Su poder se basa específicamente en la manifestación de una poderosa energía multiversal, siendo una dimensión nexo entre todas las existentes, manifestada en un único individuo por universo de formas diferentes. Cada versión de Mati en el multiverso expresa esto de manera distinta; nuestro Mati lo hace a través de sus ojos. Sabe que son una ventana a este nexo de poder y no se permite parpadear cuando importa.',
       crisis: 'Meltdown Multiversal: Al sobrecalentarse o entrar en crisis, el rayo violeta se tiñe de rojo incandescente como fuego. Activar su poder sin visor desata una destrucción masiva y descontrolada en todo su campo de visión.',
       stats: { fuerza: 9, inteligencia: 8, carisma: 8, suerte: 7, combate: 10, defensa: 10, especialVal: 10 },
       variantData: {
@@ -230,7 +231,7 @@ export const pibes: CharacterDetail[] = [
           habilidades: [
             'Traje de Acción Alternativo: Armadura ligera optimizada para combate en tierra o espacio, que absorbe la violenta presión de retroceso y facilita maniobras físicas.',
             'Guía Ocular Avanzada: Dirección del haz violeta base mediante giros de cabeza y ojos, logrando trayectorias geométricas complejas y rebotes en superficies de alta densidad.',
-            'Sleight of Swap: Proyecta anclajes tridimensionales para intercambiar posiciones en fracciones de segundo, obligando al enemigo a interceptar su propia ráfaga.'
+            'Pulso de Convergencia: Libera una onda expansiva de energía multiversal desde su visor para repeler enemigos cercanos y desestabilizar la física local.'
           ],
           significa: 'La manipulación espacial y de energía combinadas en combate cerrado. Mati utiliza su visor y traje de acción para guiar su rayo violeta con precisión quirúrgica.',
           crisis: 'Saturación en Meltdown: Sostener el flujo de disparos eleva la temperatura al límite, tiñendo el rayo de rojo y amenazando con fundir los disipadores del traje.'
@@ -240,7 +241,7 @@ export const pibes: CharacterDetail[] = [
           habilidades: [
             'Overdrive Ocular: Abre la compuerta del visor al máximo para liberar un pilar masivo de plasma violeta guiado con el movimiento de su cabeza que barre toda cobertura.',
             'Respiración Espacial HUD: Su visor actúa como un respirador sellado de ciclo cerrado que filtra gases nocivos y genera oxígeno en entornos hostiles o en el vacío.',
-            'Lazo Cinético de Fricción: Conecta la inercia de objetos pesados a su rayo, permitiendo transferir momento físico e intercambiar estados moleculares por fricción térmica.',
+            'Lazo Cinético de Fricción: Conecta la inercia de objetos pesados a su rayo, permitiéndole transferir momento físico y generar calor extremo por fricción molecular.',
             'Redirección Defensiva: Utiliza su traje de acción y drones de red como nodos de desvío de impacto, protegiendo a aliados del retroceso y fuego de área.'
           ],
           significa: 'El control absoluto y destructivo del frente. Con su traje alternativo de acción y el visor al límite, Mati asume el mando en la línea de fuego para redistribuir la física y materia a su antojo.',
@@ -261,34 +262,34 @@ export const pibes: CharacterDetail[] = [
     perfil: [
       'Honestidad brutal e ingenua: Transparente en sus intenciones, actúa bajo un código moral directo y se posiciona como el protector rígido del grupo.',
       'Hábitos y costumbres: Conductor designado y tomador crónico de mate. Siempre propone hacer un asado pero nunca lo hace; termina cocinando un guiso o dejando que cocinen Ian o Julián sin ayudarlos.',
-      'Estilo rústico: De físico imponente y tatuado.',
+      'Estilo rústico: De físico imponente y tatuado.'
     ],
     crisis: 'Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo vuelve inflexible; tiende a cargar de frente contra el peligro, confiando en su resistencia física antes de evaluar rutas de evasión.',
     stats: { fuerza: 8, inteligencia: 3, carisma: 5, suerte: 3, combate: 8, defensa: 8, especialVal: 0 },
-    especialLabel: 'Carga Cinética',
+    especialLabel: 'Ira y Regeneración',
     hint: 'Terminá el Capítulo 4 (No Turning Back) de Green Truck.',
     powers: {
-      role: 'Aegis / Tanque Cinético',
+      role: 'Aegis / Ira Regenerativa',
       habilidades: [
-        'Acumulación Cinética: La tinta de sus tatuajes actúa como un receptor arcano que absorbe la energía de los impactos físicos recibidos. No lo hace inmune al dolor, pero canaliza la fuerza del golpe.',
-        'Descarga de Fuerza Vectorial: Libera la energía acumulada para ejecutar súper saltos de gran distancia, impactos devastadores a corta distancia u ondas de choque de rango corto.',
-        'Refuerzo de Densidad: Canaliza el almacenamiento residual de sus tatuajes para rigidizar su estructura molecular, resistiendo temporalmente ataques masivos que superarían a cualquier humano.',
-        'Movilidad Balística: Ejecuta saltos de gran altura y proyección. Carece de vuelo dinámico; su tránsito aéreo es un proyectil guiado por su propio peso que cae con intención táctica.'
+        'Furia Creciente: Cada impacto recibido no se almacena como energía, sino que aumenta su enojo y frustración, elevando su fuerza física de forma exponencial y a niveles desconocidos (sin límites conocidos en estado salvaje).',
+        'Regeneración de Aegis: Si recibe un impacto o herida en estado base, su "otro yo" (Aegis) puede curarlo de forma instantánea, cicatrizando y reparando su cuerpo sin necesidad de convertirse o transformarse del todo.',
+        'Fuerza Feral: Canaliza su ira en golpes devastadores e impactos destructivos a corta distancia, liberando una potencia salvaje que ignora los límites anatómicos humanos.',
+        'Movilidad Incontenible: Ejecuta saltos brutales de gran altura para cerrar distancias rápidamente. Carece de vuelo dinámico; su tránsito aéreo es un proyectil pesado guiado por su propio cuerpo enfurecido que cae con intención destructiva.'
       ],
-      significa: 'El escudo humano. Su rol es absorber el castigo que sus aliados no pueden soportar, asimilando la violencia del campo de batalla para devolverla multiplicada.',
-      crisis: 'Saturación de almacenamiento: Sus tatuajes tienen un límite de retención. Si se saturan de energía cinética y no ejecuta una descarga a tiempo, la tinta se agrieta superficialmente, liberando pulsos térmicos incontrolables.',
+      significa: 'El escudo humano. Su rol es recibir el castigo que sus aliados no pueden soportar. Cada ataque recibido lo enfurece más, alimentando su fuerza física a niveles incalculables y desatando su regeneración celular instantánea.',
+      crisis: 'Estado Salvaje: Si su ira supera cierto umbral, entra en un estado feral descontrolado donde pierde la noción táctica, incapaz de distinguir amigos de enemigos en su afán de aplastar la amenaza.',
       stats: { fuerza: 30, inteligencia: 5, carisma: 2, suerte: 5, combate: 20, defensa: 15, especialVal: 10 },
       variantData: {
         full: {
-          label: 'Modo Sobrecarga Cinética',
+          label: 'Modo Ira Desatada',
           habilidades: [
-            'Hipertrofia Muscular Cinética: Su masa muscular se incrementa de forma masiva y su piel se torna de un color rojo incandescente debido al calor de la energía acumulada.',
-            'Absorción Cinética Total: Resiste ráfagas de proyectiles pesados o impactos de gran escala al recibir la fuerza física y asimilarla directamente en sus fibras musculares dilatadas.',
-            'Fuerza de Impacto Colosal: Su fuerza física se eleva a escala colosal, permitiéndole fracturar blindajes pesados, derribar fortificaciones o hundir el terreno con golpes devastadores.',
-            'Luminiscencia Rúnica y Vapor: Al alcanzar el umbral máximo de almacenamiento, sus tatuajes brillan en rojo vivo mientras su cuerpo emana nubes de vapor denso debido al calor térmico residual.'
+            'Hipertrofia Muscular por Ira: Su masa muscular se incrementa de forma masiva y su piel se torna de un color rojo incandescente oscuro debido a la presión sanguínea y la adrenalina de su furia.',
+            'Regeneración de Combate Continuo: Su regeneración instantánea trabaja al triple de velocidad, cerrando heridas graves de forma simultánea a los impactos recibidos.',
+            'Fuerza de Impacto Colosal: Su fuerza física se eleva a niveles colosales, permitiéndole fracturar blindajes pesados, derribar fortificaciones o hundir el terreno con golpes devastadores.',
+            'Luminiscencia de Runas y Vapor: Al alcanzar el umbral máximo de ira, los tatuajes de todo su cuerpo brillan con luz roja viva por la presión corporal extrema, evaporando todo a su alrededor mientras emana humo denso. Durante este estado crítico su ropa superior suele ser destruida por el calor de su furia.'
           ],
-          significa: 'El coloso de primera línea. Cuando la sobrecarga está al máximo, su musculatura se expande de forma masiva y su piel se vuelve roja por la energía cinética acumulada, convirtiéndose en una fuerza imparable.',
-          crisis: 'Agotamiento cinético extremo: La liberación masiva de energía acumulada agota instantáneamente sus reservas físicas. Tras la descarga, sufre de fatiga extrema y debilidad muscular inmediata.'
+          significa: 'El coloso de primera línea. Cuando su ira alcanza el punto de quiebre, su musculatura se expande de forma masiva, su piel se torna roja por la presión extrema y entra en un estado salvaje imparable sin límites conocidos.',
+          crisis: 'Pérdida de Juicio Feral: En este estado salvaje extremo, pierde todo razonamiento y la capacidad de distinguir aliados de enemigos, guiado únicamente por un instinto destructivo de protección.'
         }
       }
     }

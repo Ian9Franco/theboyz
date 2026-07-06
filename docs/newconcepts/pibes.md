@@ -209,6 +209,7 @@ Agotamiento por sobrecarga: Si se sobreesfuerza intentando cargar objetos grande
   * **Casco de Conducción Colapsable**: Máscara respiradora hermética de aspecto industrial con múltiples filtros y visores circulares que emiten una intensa luz azul, permitiéndole respirar en el espacio.
   * **Naipes de Energía y Cañones**: Proyectiles inestables de energía glitch (azul y roja) que lanza con las manos o a través de armas canalizadoras, asistido por el HUD de su casco para calcular parábolas perfectas.
   * **Ecos de Conservación Decreciente**: Clones de estática azul y roja que decaen temporalmente. Su detonación y energía residual son monitoreadas por las ópticas del casco.
+  * **Manipulación Atómica y Cápsulas de Energía**: Capacidad de alterar sus átomos con energía para crear tejido artificial si es necesario. Puede rodearse a sí mismo o a otros con una cápsula de energía protectora capaz de generar una burbuja de oxígeno en su interior. La naturaleza exacta de esta energía y sus límites absolutos siguen siendo un misterio.
 
 ### Variantes / Modos Alternativos
 
@@ -235,7 +236,7 @@ Agotamiento por sobrecarga: Si se sobreesfuerza intentando cargar objetos grande
 
 * **ID**: `mati`
 * **Categoría**: `pibes`
-* **Rol**: Controlador táctico / reposicionamiento y ofensiva de fricción
+* **Rol**: Controlador táctico / ofensiva de energía multiversal
 * **Código Visual**: Piel bronceada, campera táctica negra con acentos morados, hoyuelos
 * **Color**: `#4c1d95`
 
@@ -260,10 +261,10 @@ Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía vio
 * **Suerte**: 4
 * **Combate**: 6
 * **Defensa**: 7
-* **Especial**: 0 (Intercambio)
+* **Especial**: 0 (Energía Multiversal)
 
-### Poderes / Habilidades (Swapfire / Nexo Cósmico)
-* **Significado**: Mati es el primero en mandar un meme al grupo en medio de una crisis, pero también el primero en ponerse al frente cuando hay que tomar una decisión de la que depende la vida de todos. Sabe que sus ojos son una ventana al colapso multiversal, y no se permite parpadear cuando importa.
+### Poderes / Habilidades (Swapfire / Nexo Multiversal)
+* **Significado**: Mati es el primero en mandar un meme al grupo en medio de una crisis, pero también el primero en ponerse al frente cuando hay que tomar una decisión de la que depende la vida de todos. Su poder se basa específicamente en la manifestación de una poderosa energía multiversal, siendo una dimensión nexo entre todas las existentes, manifestada en un único individuo por universo de formas diferentes. Cada versión de Mati en el multiverso expresa esto de manera distinta; nuestro Mati lo hace a través de sus ojos. Sabe que son una ventana a este nexo de poder y no se permite parpadear cuando importa.
 * **Crisis**: Meltdown Multiversal: Al sobrecalentarse o entrar en crisis, el rayo violeta se tiñe de rojo incandescente como fuego. Activar su poder sin visor desata una destrucción masiva y descontrolada en todo su campo de visión.
 * **Stats de Poder**:
   * Fuerza: 9
@@ -276,7 +277,7 @@ Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía vio
 * **Habilidades específicas**:
   * **Portal Ocular ("The Aperture")**: Sus ojos son un portal físico a otra dimensión de donde brota energía de plasma violeta base, la cual guía al 100% con su mirada y cabeza. En estado crítico desborda en forma de rayos morados alrededor de su rostro.
   * **Visor de Calibración Táctica**: Dispositivo metálico robusto que cubre sus ojos con un cristal panorámico brillante que regula la energía del portal ocular en ráfagas finas y rebotes geométricos. Cuenta con soporte de respiración autónoma.
-  * **Nexo de Anclajes (Punto A/B)**: Transpone objetivos geométricamente entre un Punto A (visión) y un Punto B (anclajes en armas/drones) catalizando calor molecular extremo.
+  * **Foco de Energía Multiversal**: Proyecta ráfagas concentradas de plasma violeta multiversal que desgarran la materia y catalizan calor molecular extremo en los objetivos seleccionados con la mirada.
   * **Burbuja de Anclaje Local**: Mantiene de forma pasiva una porción de atmósfera terrestre pegada a su piel, permitiéndole sobrevivir en el espacio junto a su visor táctico.
 
 ### Variantes / Modos Alternativos
@@ -287,7 +288,7 @@ Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía vio
 * **Habilidades**:
   * Traje de Acción Alternativo: Armadura ligera optimizada para combate en tierra o espacio, que absorbe la violenta presión de retroceso y facilita maniobras físicas.
   * Guía Ocular Avanzada: Dirección del haz violeta base mediante giros de cabeza y ojos, logrando trayectorias geométricas complejas y rebotes en superficies de alta densidad.
-  * Sleight of Swap: Proyecta anclajes tridimensionales para intercambiar posiciones en fracciones de segundo, obligando al enemigo a interceptar su propia ráfaga.
+  * Pulso de Convergencia: Libera una onda expansiva de energía multiversal desde su visor para repeler enemigos cercanos y desestabilizar la física local.
 
 #### Overdrive Multiversal (Nexo Completo) (`full`)
 * **Significado**: El control absoluto y destructivo del frente. Con su traje alternativo de acción y el visor al límite, Mati asume el mando en la línea de fuego para redistribuir la física y materia a su antojo.
@@ -295,7 +296,7 @@ Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía vio
 * **Habilidades**:
   * Overdrive Ocular: Abre la compuerta del visor al máximo para liberar un pilar masivo de plasma violeta guiado con el movimiento de su cabeza que barre toda cobertura.
   * Respiración Espacial HUD: Su visor actúa como un respirador sellado de ciclo cerrado que filtra gases nocivos y genera oxígeno en entornos hostiles o en el vacío.
-  * Lazo Cinético de Fricción: Conecta la inercia de objetos pesados a su rayo, permitiendo transferir momento físico e intercambiar estados moleculares por fricción térmica.
+  * Lazo Cinético de Fricción: Conecta la inercia de objetos pesados a su rayo, permitiéndole transferir momento físico y generar calor extremo por fricción molecular.
   * Redirección Defensiva: Utiliza su traje de acción y drones de red como nodos de desvío de impacto, protegiendo a aliados del retroceso y fuego de área.
 
 ---
@@ -327,11 +328,11 @@ Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo 
 * **Suerte**: 3
 * **Combate**: 8
 * **Defensa**: 8
-* **Especial**: 0 (Carga Cinética)
+* **Especial**: 0 (Ira y Regeneración)
 
-### Poderes / Habilidades (Aegis / Tanque Cinético)
-* **Significado**: El escudo humano. Su rol es absorber el castigo que sus aliados no pueden soportar, asimilando la violencia del campo de batalla para devolverla multiplicada.
-* **Crisis**: Saturación de almacenamiento: Sus tatuajes tienen un límite de retención. Si se saturan de energía cinética y no ejecuta una descarga a tiempo, la tinta se agrieta superficialmente, liberando pulsos térmicos incontrolables.
+### Poderes / Habilidades (Aegis / Ira Regenerativa)
+* **Significado**: El escudo humano. Su rol es recibir el castigo que sus aliados no pueden soportar. Cada ataque recibido lo enfurece más, alimentando su fuerza física a niveles incalculables y desatando su regeneración celular instantánea.
+* **Crisis**: Estado Salvaje: Si su ira supera cierto umbral, entra en un estado feral descontrolado donde pierde la noción táctica, incapaz de distinguir amigos de enemigos en su afán de aplastar la amenaza.
 * **Stats de Poder**:
   * Fuerza: 30
   * Inteligencia: 5
@@ -341,21 +342,21 @@ Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo 
   * Defensa: 15
   * Especial: 10
 * **Habilidades específicas**:
-  * **Acumulación Cinética**: La tinta de sus tatuajes actúa como un receptor arcano que absorbe la energía de los impactos físicos recibidos. No lo hace inmune al dolor, pero canaliza la fuerza del golpe.
-  * **Descarga de Fuerza Vectorial**: Libera la energía acumulada para ejecutar súper saltos de gran distancia, impactos devastadores a corta distancia u ondas de choque de rango corto.
-  * **Refuerzo de Densidad**: Canaliza el almacenamiento residual de sus tatuajes para rigidizar su estructura molecular, resistiendo temporalmente ataques masivos que superarían a cualquier humano.
-  * **Movilidad Balística**: Ejecuta saltos de gran altura y proyección. Carece de vuelo dinámico; su tránsito aéreo es un proyectil guiado por su propio peso que cae con intención táctica.
+  * **Furia Creciente**: Cada impacto recibido no se almacena como energía, sino que aumenta su enojo y frustración, elevando su fuerza física de forma exponencial y a niveles desconocidos (sin límites conocidos en estado salvaje).
+  * **Regeneración de Aegis**: Si recibe un impacto o herida en estado base, su "otro yo" (Aegis) puede curarlo de forma instantánea, cicatrizando y reparando su cuerpo sin necesidad de convertirse o transformarse del todo.
+  * **Fuerza Feral**: Canaliza su ira en golpes devastadores e impactos destructivos a corta distancia, liberando una potencia salvaje que ignora los límites anatómicos humanos.
+  * **Movilidad Incontenible**: Ejecuta saltos brutales de gran altura para cerrar distancias rápidamente. Carece de vuelo dinámico; su tránsito aéreo es un proyectil pesado guiado por su propio cuerpo enfurecido que cae con intención destructiva.
 
 ### Variantes / Modos Alternativos
 
-#### Modo Sobrecarga Cinética (`full`)
-* **Significado**: El coloso de primera línea. Cuando la sobrecarga está al máximo, su musculatura se expande de forma masiva y su piel se vuelve roja por la energía cinética acumulada, convirtiéndose en una fuerza imparable.
-* **Crisis**: Agotamiento cinético extremo: La liberación masiva de energía acumulada agota instantáneamente sus reservas físicas. Tras la descarga, sufre de fatiga extrema y debilidad muscular inmediata.
+#### Modo Ira Desatada (`full`)
+* **Significado**: El coloso de primera línea. Cuando su ira alcanza el punto de quiebre, su musculatura se expande de forma masiva, su piel se torna roja por la presión extrema y entra en un estado salvaje imparable sin límites conocidos.
+* **Crisis**: Pérdida de Juicio Feral: En este estado salvaje extremo, pierde todo razonamiento y la capacidad de distinguir aliados de enemigos, guiado únicamente por un instinto destructivo de protección.
 * **Habilidades**:
-  * **Hipertrofia Muscular Cinética**: Su masa muscular se incrementa de forma masiva y su piel se torna de un color rojo incandescente oscuro debido al calor de la energía acumulada.
-  * **Absorción Cinética Total**: Resiste ráfagas de proyectiles pesados o impactos de gran escala al recibir la fuerza física y asimilarla directamente en sus fibras musculares dilatadas.
-  * **Fuerza de Impacto Colosal**: Su fuerza física se eleva a escala colosal, permitiéndole fracturar blindajes pesados, derribar fortificaciones o hundir el terreno con golpes devastadores.
-  * **Luminiscencia Rúnica y Vapor**: Al alcanzar el umbral máximo de almacenamiento, los tatuajes de todo su cuerpo brillan en un rojo y naranja vivo que asemeja magma, mientras emana humo y vapor denso. Durante este estado crítico su ropa superior suele ser destruida por el calor.
+  * **Hipertrofia Muscular por Ira**: Su masa muscular se incrementa de forma masiva y su piel se torna de un color rojo incandescente oscuro debido a la presión sanguínea y la adrenalina de su furia.
+  * **Regeneración de Combate Continuo**: Su regeneración instantánea trabaja al triple de velocidad, cerrando heridas graves de forma simultánea a los impactos recibidos.
+  * **Fuerza de Impacto Colosal**: Su fuerza física se eleva a niveles colosales, permitiéndole fracturar blindajes pesados, derribar fortificaciones o hundir el terreno con golpes devastadores.
+  * **Luminiscencia de Runas y Vapor**: Al alcanzar el umbral máximo de ira, los tatuajes de todo su cuerpo brillan con luz roja viva por la presión corporal extrema, evaporando todo a su alrededor mientras emana humo denso. Durante este estado crítico su ropa superior suele ser destruida por el calor de su furia.
 
 ---
 
