@@ -36,7 +36,7 @@ const TIMELINE_EVENTS = [
     phase: "Fase 4",
     title: "FUEGO PÚRPURA: LA CACERÍA",
     saga: "Saga: Distrito Nulo",
-    desc: "La caída de la base de Los Pibes en Dumbo desata el caos. Bajo un asalto militar implacable del Comandante R.E.G.U.L.A.R., el grupo se fragmenta y Julián es capturado, siendo posteriormente rescatado por la enigmática matriarca vampírica Carmilla Nocturna. Uandi (Brimstone) enfrenta a Gorgon en un crudo duelo físico en Central Park antes de refugiarse con Jaz. Con el visor arcano de Mati a punto de colapsar, Ian se ve obligado a recurrir a su manipulador ex-mentor, Norman Parker (The Maker), buscando asilo en la Parker Tower sin saber que este ya planea adueñarse de sus datos biométricos.",
+    desc: "La caída de la base de Los Pibes en Dumbo desata el caos. Bajo un asalto militar implacable del Comandante R.E.G.U.L.A.R., el grupo se fragmenta y Julián es capturado, siendo posteriormente rescatado por la enigmática matriarca vampírica Carmilla Nocturna. Uandi (Aegis) enfrenta a Gorgon en un crudo duelo físico en Central Park antes de refugiarse con Jaz. Con el visor arcano de Mati a punto de colapsar, Ian se ve obligado a recurrir a su manipulador ex-mentor, Norman Parker (The Maker), buscando asilo en la Parker Tower sin saber que este ya planea adueñarse de sus datos biométricos.",
     details: "INFORME DE CAUSALIDAD: Los Pibes se convierten en fugitivos oficiales, sin base operativa y expuestos al juego corporativo de Parker, quien empieza a trazar los planos para controlar la energía arcana multiversal.",
     icon: "🦇",
     isAlwaysLocked: true,

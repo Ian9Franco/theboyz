@@ -72,10 +72,10 @@ Hiperenfoque analítico: Ante giros drásticos e imprevistos en el entorno, su c
 
 #### Protocolo Overlord (Exotraje) (`combat`)
 * **Significado**: El Plan Overlord en acción. Ian utiliza armaduras modulares personalizadas y protocolos de contingencia dolorosos para proteger a sus amigos de amenazas cósmicas y de sí mismos.
-* **Crisis**: Sobrecarga de Contingencia: Activar los modelos pesados (Brimstonebuster o Mecha-Vesper) consume el Archor Core a velocidad crítica, arriesgando el apagado total de sus sistemas.
+* **Crisis**: Sobrecarga de Contingencia: Activar los modelos pesados (Aegisbuster o Mecha-Vesper) consume el Archor Core a velocidad crítica, arriesgando el apagado total de sus sistemas.
 * **Habilidades**:
   * Sistemas Modular Mark III / LXXXV: Armaduras tácticas (estándar y cósmica) con propulsión verde esmeralda y sellado absoluto para el vacío espacial.
-  * Mark XLIV "Brimstonebuster": Armadura pesada de contingencia diseñada para inmovilizar a Uandi si pierde el control, usando guanteletes de absorción hidráulica.
+  * Mark XLIV "Aegisbuster": Armadura pesada de contingencia diseñada para inmovilizar a Uandi si pierde el control, usando guanteletes de absorción hidráulica.
   * Mark L "Mecha-Vesper": Coloso táctico de artillería pesada móvil pilotado desde el pecho para combatir amenazas de escala masiva o Kaiju.
 
 #### Mark III (Baseline) (`mk3`)
@@ -330,9 +330,9 @@ Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo 
 * **Defensa**: 8
 * **Especial**: 0 (Ira y Regeneración)
 
-### Poderes / Habilidades (Brimstone / Ira Regenerativa)
-* **Significado**: El escudo humano. Su rol es recibir el castigo que sus aliados no pueden soportar. Cada ataque recibido lo enfurece más, alimentando su fuerza física a niveles incalculables y desatando su regeneración celular instantánea.
-* **Crisis**: Estado Salvaje: Si su ira supera cierto umbral, entra en un estado feral descontrolado donde pierde la noción táctica, incapaz de distinguir amigos de enemigos en su afán de aplastar la amenaza.
+### Poderes / Habilidades (Aegis / Ira Regenerativa)
+* **Significado**: El escudo humano. Su "otro yo" es un demonio llamado Aegis y Uandi no sabe qué hace cuando se convierte en él, perdiendo todo el control y memoria de sus acciones. Cada ataque recibido lo enfurece más, alimentando su fuerza física a niveles incalculables y desatando su regeneración celular instantánea.
+* **Crisis**: Estado Salvaje / Posesión de Aegis: Si su ira supera cierto umbral, entra en un estado feral descontrolado donde el demonio Aegis toma el control absoluto. Pierde toda noción táctica y es incapaz de distinguir amigos de enemigos.
 * **Stats de Poder**:
   * Fuerza: 30
   * Inteligencia: 5
@@ -343,7 +343,7 @@ Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo 
   * Especial: 10
 * **Habilidades específicas**:
   * **Furia Creciente**: Cada impacto recibido no se almacena como energía, sino que aumenta su enojo y frustración, elevando su fuerza física de forma exponencial y a niveles desconocidos (sin límites conocidos en estado salvaje).
-  * **Regeneración de Brimstone**: Si recibe un impacto o herida en estado base, su "otro yo" (Brimstone) puede curarlo de forma instantánea, cicatrizando y reparando su cuerpo sin necesidad de convertirse o transformarse del todo.
+  * **Regeneración de Brimstone (Habilidad de Aegis)**: Si recibe un impacto o herida en estado base, su "otro yo" demoníaco (Aegis) lo cura de forma instantánea, cicatrizando y reparando su cuerpo de manera pasiva y automática sin necesidad de convertirse o transformarse por completo.
   * **Fuerza Feral**: Canaliza su ira en golpes devastadores e impactos destructivos a corta distancia, liberando una potencia salvaje que ignora los límites anatómicos humanos.
   * **Movilidad Incontenible**: Ejecuta saltos brutales de gran altura para cerrar distancias rápidamente. Carece de vuelo dinámico; su tránsito aéreo es un proyectil pesado guiado por su propio cuerpo enfurecido que cae con intención destructiva.
 

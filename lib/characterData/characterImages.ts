@@ -156,14 +156,17 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "ian": {
-    "portada": "/personajes/PORTADAS/Ian/vesperwing.webp",
+    "portada": "/personajes/PORTADAS/Ian/vesperwing1.png",
     "portadas": [
-      "/personajes/PORTADAS/Ian/vesperwing.webp",
+      "/personajes/PORTADAS/Ian/vesperwing1.png",
+      "/personajes/PORTADAS/Ian/Vesperwing.png",
+      "/personajes/PORTADAS/Ian/Vesperwing_MK.webp",
+      "/personajes/PORTADAS/Ian/vesperwing2.png",
+      "/personajes/PORTADAS/Ian/vesperwing3.png",
       "/personajes/PORTADAS/Ian/MARK-3_ALT.webp",
       "/personajes/PORTADAS/Ian/MARK-3.webp",
       "/personajes/PORTADAS/Ian/MARK-L.webp",
       "/personajes/PORTADAS/Ian/Matisvariantes.webp",
-      "/personajes/PORTADAS/Ian/Vesperwing_MK.webp",
     ],
     "ficha": "/personajes/Fichas/Boyz/VESPERWING/Mativariantes_ficha.webp",
     "fichas": [
@@ -183,9 +186,10 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "jaz": {
-    "portada": "/personajes/PORTADAS/Jaz/Oracle.webp",
+    "portada": "/personajes/PORTADAS/Jaz/Sigil.png",
     "portadas": [
-      "/personajes/PORTADAS/Jaz/Oracle.webp",
+      "/personajes/PORTADAS/Jaz/Sigil.png",
+      "/personajes/PORTADAS/Jaz/sigil1.png",
     ],
     "ficha": "/personajes/Fichas/Boyz/ORACLE/Oracle_Ficha.webp",
     "fichas": [
@@ -221,9 +225,9 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "julian": {
-    "portada": "/personajes/PORTADAS/Julián/Wildcard.webp",
+    "portada": "/personajes/PORTADAS/Julián/Bandit.png",
     "portadas": [
-      "/personajes/PORTADAS/Julián/Wildcard.webp",
+      "/personajes/PORTADAS/Julián/Bandit.png",
     ],
     "ficha": "/personajes/Fichas/Boyz/WILDCARD/Wildcard_ficha.webp",
     "fichas": [
@@ -334,9 +338,9 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "mati": {
-    "portada": "/personajes/PORTADAS/Mati/Swapfire.webp",
+    "portada": "/personajes/PORTADAS/Mati/Farsight.png",
     "portadas": [
-      "/personajes/PORTADAS/Mati/Swapfire.webp",
+      "/personajes/PORTADAS/Mati/Farsight.png",
     ],
     "ficha": "/personajes/Fichas/Boyz/SWAPFIRE/Swapfire_ficha.webp",
     "fichas": [
@@ -352,10 +356,10 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "phobos": {
-    "portada": "/personajes/PORTADAS/Phobos/Phobos.webp",
+    "portada": "/personajes/PORTADAS/Phobos/Phobos_alt.webp",
     "portadas": [
-      "/personajes/PORTADAS/Phobos/Phobos.webp",
       "/personajes/PORTADAS/Phobos/Phobos_alt.webp",
+      "/personajes/PORTADAS/Phobos/Phobos.webp",
     ],
     "ficha": "/personajes/Fichas/antagonistas/Phobos/Phobos_ficha.webp",
     "fichas": [
@@ -382,9 +386,10 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "sofi": {
-    "portada": "/personajes/PORTADAS/Sofi/Hush.webp",
+    "portada": "/personajes/PORTADAS/Sofi/Dusk.png",
     "portadas": [
-      "/personajes/PORTADAS/Sofi/Hush.webp",
+      "/personajes/PORTADAS/Sofi/Dusk.png",
+      "/personajes/PORTADAS/Sofi/Dusk_alt.png",
     ],
     "ficha": "/personajes/Fichas/Boyz/HUSH/Hush_Ficha.webp",
     "fichas": [
@@ -411,9 +416,9 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "uandi": {
-    "portada": "/personajes/PORTADAS/Uandi/Aegis.webp",
+    "portada": "/personajes/PORTADAS/Uandi/Uandi.png",
     "portadas": [
-      "/personajes/PORTADAS/Uandi/Aegis.webp",
+      "/personajes/PORTADAS/Uandi/Uandi.png",
     ],
     "ficha": "/personajes/Fichas/Boyz/AEGIS/Aegis_Ficha.webp",
     "fichas": [
@@ -441,9 +446,9 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "volvo": {
-    "portada": "/personajes/PORTADAS/Volvo/Null-vector.webp",
+    "portada": "/personajes/PORTADAS/Volvo/Outrider.png",
     "portadas": [
-      "/personajes/PORTADAS/Volvo/Null-vector.webp",
+      "/personajes/PORTADAS/Volvo/Outrider.png",
     ],
     "ficha": "/personajes/Fichas/Boyz/VECTOR/NULL-VECTOR_ficha.webp",
     "fichas": [

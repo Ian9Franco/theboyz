@@ -117,6 +117,8 @@ function listImages(dir, charId = '') {
   return fs.readdirSync(dir)
     .filter(f => {
       if (!imageExtensions.has(path.extname(f).toLowerCase())) return false;
+      const baseName = path.basename(f, path.extname(f)).toLowerCase();
+      if (baseName.includes('_old')) return false;
       if (charId && isSpoiler(charId, path.basename(f, path.extname(f)))) {
         console.log(`  🙈 Spoiler excluded [${charId}]: ${f}`);
         return false;
@@ -144,11 +146,11 @@ function toPublicUrl(absPath) {
 const pibeAliases = {
   ian: 'VESPERWING',
   uandi: 'AEGIS',
-  julian: 'WILDCARD',
-  volvo: 'VECTOR',
-  mati: 'SWAPFIRE',
-  jaz: 'ORACLE',
-  sofi: 'HUSH',
+  julian: 'BANDIT',
+  volvo: 'OUTRIDER',
+  mati: 'FARSIGHT',
+  jaz: 'SIGIL',
+  sofi: 'DUSK',
 };
 
 const reverseAliases = {};
@@ -160,12 +162,17 @@ for (const [id, alias] of Object.entries(pibeAliases)) {
 const extraAliases = {
   vesperwing: 'ian',
   aegis: 'uandi',
+  bandit: 'julian',
   wildcard: 'julian',
+  outrider: 'volvo',
   nullvector: 'volvo',
   'null-vector': 'volvo',
   vector: 'volvo',
+  farsight: 'mati',
   swapfire: 'mati',
+  sigil: 'jaz',
   oracle: 'jaz',
+  dusk: 'sofi',
   hush: 'sofi',
   lucy: 'lucifer',
   tusk: 'ymir',
@@ -344,20 +351,39 @@ function main() {
     ...Object.keys(fichasMap),
   ]);
 
+  const mainPortadaPriorities = {
+    ian: ['vesperwing1', 'vesperwing', 'vesperwing_mk'],
+    jaz: ['sigil', 'sigil1', 'oracle'],
+    julian: ['bandit', 'wildcard'],
+    mati: ['farsight', 'swapfire'],
+    sofi: ['dusk', 'hush'],
+    uandi: ['uandi', 'aegis'],
+    volvo: ['outrider', 'null-vector', 'nullvector', 'vector']
+  };
+
   const entries = {};
   for (const id of allIds) {
     const portadas = portadasMap[id] || [];
     const fichas   = fichasMap[id]   || [];
 
-    // Prioritize vesperwing.webp as the default portada for ian
-    if (id === 'ian') {
+    const priorities = mainPortadaPriorities[id];
+    if (priorities) {
       portadas.sort((a, b) => {
-        const aIsVw = a.toLowerCase().endsWith('/vesperwing.webp');
-        const bIsVw = b.toLowerCase().endsWith('/vesperwing.webp');
-        if (aIsVw && !bIsVw) return -1;
-        if (!aIsVw && bIsVw) return 1;
+        const aBase = path.basename(a, path.extname(a)).toLowerCase();
+        const bBase = path.basename(b, path.extname(b)).toLowerCase();
+        
+        const aIndex = priorities.findIndex(p => aBase === p || aBase.startsWith(p));
+        const bIndex = priorities.findIndex(p => bBase === p || bBase.startsWith(p));
+        
+        if (aIndex !== -1 && bIndex !== -1) {
+          return aIndex - bIndex;
+        }
+        if (aIndex !== -1) return -1;
+        if (bIndex !== -1) return 1;
         return a.localeCompare(b);
       });
+    } else {
+      portadas.sort((a, b) => a.localeCompare(b));
     }
 
     entries[id] = {

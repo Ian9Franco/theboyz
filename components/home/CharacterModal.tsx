@@ -73,7 +73,7 @@ function getCleanImageLabel(src: string, defaultLabel: string): string {
     .replace(/\b\w/g, (c) => c.toUpperCase());
 
   // If the clean label is a common hero or name, just call it "Portada"
-  const commonPortadas = ["vesperwing", "swapfire", "oracle", "wildcard", "aegis", "nullvector", "hush", "vector", "sigil", "bandit", "farsight", "brimstone", "outrider", "dusk"];
+  const commonPortadas = ["vesperwing", "swapfire", "oracle", "wildcard", "aegis", "nullvector", "hush", "vector", "sigil", "bandit", "farsight", "outrider", "dusk"];
   if (commonPortadas.includes(cleanLabel.toLowerCase().replace(/\s/g, ""))) {
     return "Portada";
   }

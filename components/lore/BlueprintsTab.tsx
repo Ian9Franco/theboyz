@@ -116,8 +116,8 @@ const BLUEPRINTS: Blueprint[] = [
     ],
   },
   {
-    id: "brimstone",
-    hero: "BRIMSTONE",
+    id: "aegis",
+    hero: "AEGIS",
     objeto: "TATUAJES DE RECEPCIÓN ARCANA",
     color: "#ef4444", // Red
     habilidades: [
@@ -538,7 +538,7 @@ export function BlueprintsTab({ unlockAll = false, readChapters = [] }: Blueprin
     dusk:         <HushSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
     bandit:       <WildcardSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
     farsight:     <SwapfireSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
-    brimstone:    <AegisSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
+    aegis:        <AegisSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
     sigil:        <OracleSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
     outrider:     <NullVectorSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
     phobos:        <PhobosSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
