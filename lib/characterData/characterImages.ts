@@ -156,21 +156,19 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "ian": {
-    "portada": "/personajes/PORTADAS/Ian/vesperwing1.png",
+    "portada": "/personajes/PORTADAS/Ian/vesperwing1.webp",
     "portadas": [
-      "/personajes/PORTADAS/Ian/vesperwing1.png",
-      "/personajes/PORTADAS/Ian/Vesperwing.png",
+      "/personajes/PORTADAS/Ian/vesperwing1.webp",
       "/personajes/PORTADAS/Ian/Vesperwing_MK.webp",
-      "/personajes/PORTADAS/Ian/vesperwing2.png",
-      "/personajes/PORTADAS/Ian/vesperwing3.png",
+      "/personajes/PORTADAS/Ian/Vesperwing_alt.webp",
+      "/personajes/PORTADAS/Ian/vesperwing.webp",
+      "/personajes/PORTADAS/Ian/vesperwing2.webp",
       "/personajes/PORTADAS/Ian/MARK-3_ALT.webp",
       "/personajes/PORTADAS/Ian/MARK-3.webp",
       "/personajes/PORTADAS/Ian/MARK-L.webp",
-      "/personajes/PORTADAS/Ian/Matisvariantes.webp",
     ],
-    "ficha": "/personajes/Fichas/Boyz/VESPERWING/Mativariantes_ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_Ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Boyz/VESPERWING/Mativariantes_ficha.webp",
       "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_Ficha.webp",
       "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_ficha2.webp",
       "/personajes/Fichas/Boyz/VESPERWING/Vesperwing_ficha3.webp",
@@ -186,10 +184,10 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "jaz": {
-    "portada": "/personajes/PORTADAS/Jaz/Sigil.png",
+    "portada": "/personajes/PORTADAS/Jaz/Sigil.webp",
     "portadas": [
-      "/personajes/PORTADAS/Jaz/Sigil.png",
-      "/personajes/PORTADAS/Jaz/sigil1.png",
+      "/personajes/PORTADAS/Jaz/Sigil.webp",
+      "/personajes/PORTADAS/Jaz/sigil1.webp",
     ],
     "ficha": "/personajes/Fichas/Boyz/ORACLE/Oracle_Ficha.webp",
     "fichas": [
@@ -225,9 +223,9 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "julian": {
-    "portada": "/personajes/PORTADAS/Julián/Bandit.png",
+    "portada": "/personajes/PORTADAS/Julián/Bandit.webp",
     "portadas": [
-      "/personajes/PORTADAS/Julián/Bandit.png",
+      "/personajes/PORTADAS/Julián/Bandit.webp",
     ],
     "ficha": "/personajes/Fichas/Boyz/WILDCARD/Wildcard_ficha.webp",
     "fichas": [
@@ -338,21 +336,23 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "mati": {
-    "portada": "/personajes/PORTADAS/Mati/Farsight.png",
+    "portada": "/personajes/PORTADAS/Mati/Farsight.webp",
     "portadas": [
-      "/personajes/PORTADAS/Mati/Farsight.png",
+      "/personajes/PORTADAS/Mati/Farsight.webp",
     ],
     "ficha": "/personajes/Fichas/Boyz/SWAPFIRE/Swapfire_ficha.webp",
     "fichas": [
       "/personajes/Fichas/Boyz/SWAPFIRE/Swapfire_ficha.webp",
+      "/personajes/Fichas/matis/Matisvariantes.webp",
     ]
   },
   "mati_prime": {
     "portada": null,
     "portadas": [
     ],
-    "ficha": null,
+    "ficha": "/personajes/Fichas/matis/Mati Prime/Mativariantes_ficha.webp",
     "fichas": [
+      "/personajes/Fichas/matis/Mati Prime/Mativariantes_ficha.webp",
     ]
   },
   "phobos": {
@@ -386,10 +386,10 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "sofi": {
-    "portada": "/personajes/PORTADAS/Sofi/Dusk.png",
+    "portada": "/personajes/PORTADAS/Sofi/Dusk.webp",
     "portadas": [
-      "/personajes/PORTADAS/Sofi/Dusk.png",
-      "/personajes/PORTADAS/Sofi/Dusk_alt.png",
+      "/personajes/PORTADAS/Sofi/Dusk.webp",
+      "/personajes/PORTADAS/Sofi/Dusk_alt.webp",
     ],
     "ficha": "/personajes/Fichas/Boyz/HUSH/Hush_Ficha.webp",
     "fichas": [
@@ -416,9 +416,9 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "uandi": {
-    "portada": "/personajes/PORTADAS/Uandi/Uandi.png",
+    "portada": "/personajes/PORTADAS/Uandi/Uandi.webp",
     "portadas": [
-      "/personajes/PORTADAS/Uandi/Uandi.png",
+      "/personajes/PORTADAS/Uandi/Uandi.webp",
     ],
     "ficha": "/personajes/Fichas/Boyz/AEGIS/Aegis_Ficha.webp",
     "fichas": [
@@ -446,9 +446,9 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "volvo": {
-    "portada": "/personajes/PORTADAS/Volvo/Outrider.png",
+    "portada": "/personajes/PORTADAS/Volvo/Outrider.webp",
     "portadas": [
-      "/personajes/PORTADAS/Volvo/Outrider.png",
+      "/personajes/PORTADAS/Volvo/Outrider.webp",
     ],
     "ficha": "/personajes/Fichas/Boyz/VECTOR/NULL-VECTOR_ficha.webp",
     "fichas": [
