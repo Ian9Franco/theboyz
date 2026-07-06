@@ -7,7 +7,7 @@ Su cerebro actúa como un procesador inestable que proyecta esta energía en con
 
 Debido a que esta energía glitch es intrínsecamente caótica, el casco táctico y la Bomber Roja que Ian desarrolló para él resultan indispensables en entornos espaciales: el HUD de la máscara compensa las distorsiones ambientales mapeando las trayectorias de sus naipes, mientras que el cuero técnico disipa el retroceso residual de sus detonaciones.
 
-## Origen de su Nombre Clave (Wildcard)
-El nombre no tiene que ver con sus poderes, sino con su personalidad. Julián es el tipo de persona que siempre tiene un plan absurdo, una salida inesperada y una carta oculta bajo la manga, además de ser muy bueno jugando a las cartas. 
+## Origen de su Nombre Clave (Bandit)
+El nombre tiene que ver con su personalidad y aficiones. Julián es extremadamente bueno con las cartas y tiene una obsesión con el póker y los juegos de casino (incluidas las máquinas tragamonedas, conocidas como 'one-armed bandits'). 
 
-Durante una misión crítica en la que no había un plan claro, Julián sonrió diciendo que siempre le sale una carta buena. Ian lo miró y dijo: *"—Él es literalmente un wildcard."* El nombre quedó, encajando luego a la perfección con su poder de energía inestable (un comodín capaz de materializar herramientas versátiles e improvisadas para dar vuelta cualquier pelea).
+Durante una misión crítica, Ian lo miró limpiar la mesa y quedarse con todas las ventajas del enemigo de forma imprevista y le dijo: *"—Te llevaste todo como un bandido."* Desde entonces, quedó bautizado como **Bandit** (encajando a la perfección con su estilo de juego arriesgado e impredecible).

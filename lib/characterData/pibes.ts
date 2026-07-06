@@ -56,11 +56,11 @@ export const pibes: CharacterDetail[] = [
           label: 'Protocolo Overlord (Exotraje)',
           habilidades: [
             'Sistemas Modular Mark III / LXXXV: Armaduras tácticas (estándar y cósmica) con propulsión verde esmeralda y sellado absoluto para el vacío espacial.',
-            'Mark XLIV "Aegisbuster": Armadura pesada de contingencia diseñada para inmovilizar a Uandi si pierde el control, usando guanteletes de absorción hidráulica.',
+            'Mark XLIV "Brimstonebuster": Armadura pesada de contingencia diseñada para inmovilizar a Uandi si pierde el control, usando guanteletes de absorción hidráulica.',
             'Mark L "Mecha-Vesper": Coloso táctico de artillería pesada móvil pilotado desde el pecho para combatir amenazas de escala masiva o Kaiju.'
           ],
           significa: 'El Plan Overlord en acción. Ian utiliza armaduras modulares personalizadas y protocolos de contingencia dolorosos para proteger a sus amigos de amenazas cósmicas y de sí mismos.',
-          crisis: 'Sobrecarga de Contingencia: Activar los modelos pesados (Aegisbuster o Mecha-Vesper) consume el Archor Core a velocidad crítica, arriesgando el apagado total de sus sistemas.'
+          crisis: 'Sobrecarga de Contingencia: Activar los modelos pesados (Brimstonebuster o Mecha-Vesper) consume el Archor Core a velocidad crítica, arriesgando el apagado total de sus sistemas.'
         },
         mk3: {
           label: 'Mark III (Baseline)',
@@ -113,7 +113,7 @@ export const pibes: CharacterDetail[] = [
     stats: { fuerza: 1, inteligencia: 6, carisma: 5, suerte: 11, combate: 2, defensa: 2, especialVal: 5 },
     especialLabel: 'Aura-Anclaje',
     powers: {
-      role: 'Oracle / Enlace Dimensional',
+      role: 'Sigil / Enlace Dimensional',
       habilidades: [
         'Geometría de Anclaje: Manifiesta estructuras cristalinas de energía psíquica pura en el plano físico, utilizándolas como escudos, plataformas flotantes o jaulas de contención.',
         'Resonancia Emocional: Lee las frecuencias vibracionales de los estados de ánimo circundantes, permitiéndole calmar el pánico o disipar la hostilidad sin necesidad de invadir pensamientos.',
@@ -158,7 +158,7 @@ export const pibes: CharacterDetail[] = [
     especialLabel: 'Energía Pura',
     hint: 'Terminá el Capítulo 1 de Green Truck para desbloquear.',
     powers: {
-      role: 'Wildcard / Hostigador Energético',
+      role: 'Bandit / Hostigador Energético',
       habilidades: [
         'Bomber Roja Táctica: Chaqueta de cuero técnico rojo borravino estilo Star-Lord que disipa la fricción de su energía glitch y hace juego visual con sus constructos.',
         'Casco de Conducción Colapsable: Casco hermético inspirado en Star-Lord que le permite respirar en el espacio/vacío y cuenta con ópticas HUD de luz azul analógica.',
@@ -215,7 +215,7 @@ export const pibes: CharacterDetail[] = [
     especialLabel: 'Energía Multiversal',
     hint: 'Terminá el Capítulo 3 (Worlds) de Mativerse Part 1.',
     powers: {
-      role: 'Swapfire / Nexo Multiversal',
+      role: 'Farsight / Nexo Multiversal',
       habilidades: [
         'Portal Ocular ("The Aperture"): Sus ojos son un portal físico a otra dimensión de donde brota energía de plasma violeta base, la cual guía al 100% con su mirada y cabeza.',
         'Visor de Calibración Táctica: Regula la energía del portal ocular en ráfagas finas y rebotes geométricos. Cuenta con soporte de respiración autónoma para el vacío del espacio.',
@@ -269,10 +269,10 @@ export const pibes: CharacterDetail[] = [
     especialLabel: 'Ira y Regeneración',
     hint: 'Terminá el Capítulo 4 (No Turning Back) de Green Truck.',
     powers: {
-      role: 'Aegis / Ira Regenerativa',
+      role: 'Brimstone / Ira Regenerativa',
       habilidades: [
         'Furia Creciente: Cada impacto recibido no se almacena como energía, sino que aumenta su enojo y frustración, elevando su fuerza física de forma exponencial y a niveles desconocidos (sin límites conocidos en estado salvaje).',
-        'Regeneración de Aegis: Si recibe un impacto o herida en estado base, su "otro yo" (Aegis) puede curarlo de forma instantánea, cicatrizando y reparando su cuerpo sin necesidad de convertirse o transformarse del todo.',
+        'Regeneración de Brimstone: Si recibe un impacto o herida en estado base, su "otro yo" (Brimstone) puede curarlo de forma instantánea, cicatrizando y reparando su cuerpo sin necesidad de convertirse o transformarse del todo.',
         'Fuerza Feral: Canaliza su ira en golpes devastadores e impactos destructivos a corta distancia, liberando una potencia salvaje que ignora los límites anatómicos humanos.',
         'Movilidad Incontenible: Ejecuta saltos brutales de gran altura para cerrar distancias rápidamente. Carece de vuelo dinámico; su tránsito aéreo es un proyectil pesado guiado por su propio cuerpo enfurecido que cae con intención destructiva.'
       ],
@@ -313,7 +313,7 @@ export const pibes: CharacterDetail[] = [
     especialLabel: 'Disrupción',
     hint: 'Terminá el Capítulo 3 (Worlds) de Mativerse Part 1.',
     powers: {
-      role: 'Null-Vector / Movilidad Absoluta',
+      role: 'Outrider / Movilidad Absoluta',
       habilidades: [
         'Estelas de Portales: Abre grietas naranjas en el aire y superficies sólidas al correr, lo que le permite cruzar estructuras y saltar de dimensiones simplemente corriendo en línea recta.',
         'Inmunidad de Entorno: Resistencia innata al vacío espacial, temperaturas extremas y atmósferas hostiles debido a su sintonía orgánica con la Corriente extradimensional.',
@@ -356,7 +356,7 @@ export const pibes: CharacterDetail[] = [
     especialLabel: 'Eco-Rango',
     hint: 'Terminá el Capítulo 2 (Casino) de Mativerse Part 1.',
     powers: {
-      role: 'Hush / Duelista Acústica',
+      role: 'Dusk / Duelista Acústica',
       habilidades: [
         'Radar Acústico: Percibe su entorno en un radio de 360 grados procesando el rebote del sonido, ignorando paredes y barreras visuales.',
         'Audición Hiperfocalizada: Puede aislar latidos cardíacos, respiraciones y fricción muscular para detectar mentiras o intenciones ocultas.',

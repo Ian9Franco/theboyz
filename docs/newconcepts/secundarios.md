@@ -332,7 +332,7 @@ Temeridad obstinada: Su rigidez ética y lealtad le impiden someterse a la extor
 
 ### Poderes / Habilidades (Kenji Sato)
 * **Significado**: El cable a tierra del equipo. Su ramen y sabiduría proveen un descanso vital para aliviar el trauma y recargar fuerzas.
-* **Crisis**: Muerte del mentor: Su deceso a manos del Clan Kurogane marca un punto sin retorno, forzando el despertar total de Hush.
+* **Crisis**: Muerte del mentor: Su deceso a manos del Clan Kurogane marca un punto sin retorno, forzando el despertar total de Dusk.
 * **Stats de Poder**:
   * Fuerza: 4
   * Inteligencia: 7

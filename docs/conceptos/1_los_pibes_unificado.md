@@ -7,7 +7,7 @@ Este documento reúne toda la información técnica, psicológica, narrativa y v
 ## 📌 Índice de Navegación
 1. [Ian — Vesperwing (El Nexo Estratégico)](#-ian-vesperwing-el-nexo-estratégico)
 2. [Jaz — Oracle (El Ancla Dimensional)](#-jaz-oracle-el-ancla-dimensional)
-3. [Julián — Wildcard (El Modificador de Energía Pura)](#-julián-wildcard-el-modificador-de-energía-pura)
+3. [Julián — Bandit (El Modificador de Energía Pura)](#-julián-bandit-el-modificador-de-energía-pura)
 4. [Mati — Swapfire (El Reactor Humano)](#-mati-swapfire-el-reactor-humano)
 5. [Sofi — Hush (El Eco de las Sombras)](#-sofi-hush-el-eco-de-las-sombras)
 6. [Uandi — Aegis (El Escudo Humano)](#-uandi-aegis-el-escudo-humano)
@@ -157,13 +157,13 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
 
 ---
 
-## ⚡ Julián — Wildcard (El Modificador de Energía Pura)
+## ⚡ Julián — Bandit (El Modificador de Energía Pura)
 
 > "Sé que soy un desastre, pero siempre me queda una carta bajo la manga."
 
 ### 👤 Perfil General
 *   **Rol en el Roster:** Hostigador ágil / distracción táctica / daño por fricción energética.
-*   **Origen del Nombre Clave:** Acuñado por Ian durante una misión crítica sin plan claro en la que Julián afirmó que siempre le salía una buena carta. Es un "comodín" impredecible capaz de improvisar herramientas versátiles.
+*   **Origen del Nombre Clave:** Proviene de su obsesión con el póker, los juegos de cartas y las máquinas de casino (conocidas como 'one-armed bandits'). Durante una misión crítica, Ian lo miró limpiar la mesa y quedarse con todo y le dijo: *"—Te llevaste todo como un bandido."* Desde entonces, quedó bautizado como **Bandit**.
 
 ### 👤 Perfil Psicológico y Personalidad
 *   **Sarcástico y Ansioso:** Oculta un alto nivel de ansiedad bajo comentarios sarcásticos y chistes inoportunos. Es el alivio cómico del grupo, pero a la vez teme profundamente a las amenazas reales.
@@ -210,7 +210,7 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
 *   **Estética:** Estática cromática azul y roja, distorsiones tipo glitch analógico, chispas de fricción de energía inestable.
 *   **Aspecto Humano (Diseño Base):**
     *   *Prompt (Inglés):* `short curly black hair with voluminous styled curls on top and a clean skin-fade on the sides and back, alert and focused dark brown eyes, light skin tone, neatly trimmed short black beard and mustache (medium stubble), slender and athletic build, wearing a dark navy blue long-sleeve crewneck sweater showing worn cotton texture and ribbed collar, black slim-fit pants, dark brown leather lace-up combat boots.`
-*   **Aspecto con Traje Cósmico (Wildcard):**
+*   **Aspecto con Traje Cósmico (Bandit):**
     *   *Prompt (Inglés):* `A young man wearing a high-tech Star-Lord inspired cosmic suit. He wears a fitted burgundy leather bomber jacket with off-center zippers and mechanical lapels. A sleek, collapsible metallic helmet covers his face, featuring glowing analog blue optic visor lenses. Red and blue holographic glitch sparks and static lines crackle around him. Highly detailed, cinematic lighting, cyberpunk edge.`
 *   **Crossover — Julander (Homelander):**
     *   *Prompt (Inglés):* `arrogant smile, glowing light-blue eyes, wearing a glossy blue and red spandex superhero suit with gold eagle pauldrons on shoulders, a large red flag-like cape, and red leather gloves.`
@@ -218,12 +218,12 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
 #### 🖼️ Recursos Visuales de Julián
 | Humano | Traje Default | Traje Cósmico (Combat) |
 | :---: | :---: | :---: |
-| ![Julián Humano](../../public/personajes/FULLBODY/JULIAN.webp) | ![Wildcard Default](../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard.webp) | ![Wildcard Combat](../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard_combat.webp) |
+| ![Julián Humano](../../public/personajes/FULLBODY/JULIAN.webp) | ![Bandit Default](../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard.webp) | ![Bandit Combat](../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard_combat.webp) |
 
 *   **Fichas de Referencia:**
     *   ![Julián Rostro Closeup](../../public/personajes/CLOSEUP/JULIAN_FACE.webp)
     *   ![Julián Alt Body](../../public/personajes/ALT/JULIAN_ALT.webp)
-    *   ![Wildcard Ficha](../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard_Ficha.webp)
+    *   ![Bandit Ficha](../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard_Ficha.webp)
     *   ![Julander Crossover](../../public/personajes/Voughtverse/Julander.webp)
 
 ---
@@ -393,7 +393,7 @@ Para lidiar con las amenazas de gran escala, Ian cuenta con exotrajes modulares 
 ### 🤝 Relaciones Clave
 *   **Ian (Vesperwing):** Profundo respeto mutuo. Mientras Ian carga con la culpa del accidente, Uandi lo acepta con naturalidad: Ian es la mente y él es el escudo.
 *   **Jaz (Oracle):** Le hace bromas constantes sobre su rol místico, pero es el primero en colocarse delante si ella es atacada.
-*   **Julián (Wildcard):** Sinergia táctica alta en el campo. Julián puede inyectarle ráfagas inestables de clones destruidos o constructos de naipes para hacerlo enojar a propósito de forma táctica y potenciar su fuerza física de forma inmediata (combos de furia).
+*   **Julián (Bandit):** Sinergia táctica alta en el campo. Julián puede inyectarle ráfagas inestables de clones destruidos o constructos de naipes para hacerlo enojar a propósito de forma táctica y potenciar su fuerza física de forma inmediata (combos de furia).
 
 ### 📖 Lore e Historia
 *   **Lore Actual (El Reactor del Equipo):** Durante la huida de los Backrooms, Uandi se interpuso para proteger a Ian de una descarga inestable de energía arcana. Su estructura celular asimiló el impacto provocando una mutación: en lugar de absorber y almacenar energía cinética, su cuerpo reacciona ante cualquier agresión física aumentando drásticamente su nivel de ira, lo que potencia su fuerza exponencialmente y activa una regeneración instantánea de cualquier tejido dañado.

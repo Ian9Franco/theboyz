@@ -1,4 +1,4 @@
-# 🦸‍♂️ Julián — "Wildcard" (El Modificador de Energía Pura)
+# 🦸‍♂️ Julián — "Bandit" (El Modificador de Energía Pura)
 
 *   **Rol en el Roster:** Hostigador ágil / Distracción táctica / Daño por fricción energética.
 *   **Poder Principal:** *Modificación de Energía Pura Inestable.*
@@ -40,7 +40,7 @@ Julián posee la capacidad teórica de inyectar energía inestable en objetos de
 ---
 
 ## 🤝 Sinergia Táctica con Uandi (Aegis)
-Julián y Uandi forman un dúo táctico altamente efectivo donde la energía inestable de Wildcard sirve de combustible para la fuerza de Aegis:
+Julián y Uandi forman un dúo táctico altamente efectivo donde la energía inestable de Bandit sirve de combustible para la fuerza de Aegis:
 
 *   **La Válvula de Escape:** Cuando Uandi está a punto de sobrecalentarse o perder la cordura por el exceso de energía cinética absorbida, Julián puede usar sus constructos de energía inestable para canalizar la sobrecarga de Uandi y dispersarla en ráfagas de estática controladas.
 *   **Alimentación Directa:** Julián puede arrojar constructos menores o clones gastados directamente a Uandi. Al impactar en él, Uandi absorbe esa energía inestable de forma segura para rellenar su batería cinética al instante, permitiéndole lanzar contraataques demoledores sin necesidad de recibir daño del enemigo.
@@ -52,7 +52,7 @@ Julián y Uandi forman un dúo táctico altamente efectivo donde la energía ine
 ### 👕 Misiones Terrestres (Ropa Normal)
 En el día a día y misiones urbanas, Julián mantiene su perfil bajo y callejero. Sigue usando su suéter azul marino básico, jeans y zapatillas cómodas para correr y amagar con sus Ecos. No le gusta sentirse "disfrazado" a menos que sea estrictamente necesario.
 
-### 🚀 Misiones Complejas (Traje Cósmico "Wildcard")
+### 🚀 Misiones Complejas (Traje Cósmico "Bandit")
 Cuando Los Pibes tienen que saltar a misiones espaciales, interdimensionales o de escala cósmica, el kit de Julián se actualiza por completo con tecnología diseñada para la supervivencia y el combate de alta densidad:
 
 *   **La Bomber Roja:** Una campera de cuero técnico reforzado de color rojo borravino o carmesí, con cierres descentrados y solapas mecánicas. Es de un diseño entallado pero ágil. El contraste en viñetas es brutal: cuando activa su energía glitch, las chispas azules y rojas de sus constructos hacen juego con el color de la campera, generando un impacto visual hiperdinámico.
@@ -65,10 +65,10 @@ Cuando Los Pibes tienen que saltar a misiones espaciales, interdimensionales o d
 ## 🖼️ Fichas y Aspecto Visual (Suit)
 
 ### Traje Default:
-![Wildcard Default](../../../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard.webp)
+![Bandit Default](../../../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard.webp)
 
 ### Traje Cósmico (Combat Suit):
-![Wildcard Combat](../../../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard_combat.webp)
+![Bandit Combat](../../../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard_combat.webp)
 
 ### Ficha de Personaje:
-![Wildcard Ficha](../../../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard_Ficha.webp)
+![Bandit Ficha](../../../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard_Ficha.webp)

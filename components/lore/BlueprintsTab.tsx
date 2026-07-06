@@ -44,8 +44,8 @@ const BLUEPRINTS: Blueprint[] = [
     ],
   },
   {
-    id: "hush",
-    hero: "HUSH",
+    id: "dusk",
+    hero: "DUSK",
     objeto: "KATANAS ANCESTRALES — FAMILIA KUROGANE",
     color: "#06b6d4", // Cyan
     habilidades: [
@@ -68,8 +68,8 @@ const BLUEPRINTS: Blueprint[] = [
     ],
   },
   {
-    id: "wildcard",
-    hero: "WILDCARD",
+    id: "bandit",
+    hero: "BANDIT",
     objeto: "CASCO COLAPSABLE & NAIPES GLITCH",
     color: "#6366f1", // Indigo
     habilidades: [
@@ -92,8 +92,8 @@ const BLUEPRINTS: Blueprint[] = [
     ],
   },
   {
-    id: "swapfire",
-    hero: "SWAPFIRE",
+    id: "farsight",
+    hero: "FARSIGHT",
     objeto: "VISOR DE CALIBRACIÓN TÁCTICA",
     color: "#8b5cf6", // Purple
     habilidades: [
@@ -116,8 +116,8 @@ const BLUEPRINTS: Blueprint[] = [
     ],
   },
   {
-    id: "aegis",
-    hero: "AEGIS",
+    id: "brimstone",
+    hero: "BRIMSTONE",
     objeto: "TATUAJES DE RECEPCIÓN ARCANA",
     color: "#ef4444", // Red
     habilidades: [
@@ -140,8 +140,8 @@ const BLUEPRINTS: Blueprint[] = [
     ],
   },
   {
-    id: "oracle",
-    hero: "ORACLE",
+    id: "sigil",
+    hero: "SIGIL",
     objeto: "RUNAS DE ANCLAJE MÍSTICO",
     color: "#f5e642", // Yellow
     habilidades: [
@@ -164,8 +164,8 @@ const BLUEPRINTS: Blueprint[] = [
     ],
   },
   {
-    id: "null-vector",
-    hero: "NULL-VECTOR",
+    id: "outrider",
+    hero: "OUTRIDER",
     objeto: "VECTOR SUIT MOLECULAR",
     color: "#f97316", // Orange
     habilidades: [
@@ -535,12 +535,12 @@ export function BlueprintsTab({ unlockAll = false, readChapters = [] }: Blueprin
 
   const SVG_MAP: Record<string, React.ReactElement> = {
     vesperwing:   <VesperwingSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
-    hush:         <HushSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
-    wildcard:     <WildcardSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
-    swapfire:     <SwapfireSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
-    aegis:        <AegisSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
-    oracle:       <OracleSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
-    "null-vector": <NullVectorSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
+    dusk:         <HushSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
+    bandit:       <WildcardSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
+    farsight:     <SwapfireSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
+    brimstone:    <AegisSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
+    sigil:        <OracleSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
+    outrider:     <NullVectorSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
     phobos:        <PhobosSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
     gorgon:        <GorgonSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,
     don:           <DonVanguardSVG color={bp.color} activeIdx={expandedIdx} setActiveIdx={setExpandedIdx} />,

@@ -27,12 +27,12 @@ Estas descripciones y recursos sirven para generar imágenes de la forma humana 
 
 ## 🦸‍♂️ 2. Aspectos con Traje y Variantes
 
-### 🚀 A. Traje Cósmico "Wildcard"
+### 🚀 A. Traje Cósmico "Bandit"
 El traje inspirado en Star-Lord para misiones complejas.
 
 #### 🖼️ Recursos Visuales:
-*   **Traje Default:** ![Wildcard Default](../../../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard.webp)
-*   **Ficha de Personaje:** ![Wildcard Ficha](../../../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard_Ficha.webp)
+*   **Traje Default:** ![Bandit Default](../../../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard.webp)
+*   **Ficha de Personaje:** ![Bandit Ficha](../../../../public/personajes/FULLBODY%20SUIT/WILDCARD/Wildcard_Ficha.webp)
 
 #### ✍️ Plantilla de Prompt de Apariencia de Traje (Inglés):
 *   **Prompt Principal:** `A young man wearing a high-tech Star-Lord inspired cosmic suit. He wears a fitted burgundy leather bomber jacket with off-center zippers and mechanical lapels. A sleek, collapsible metallic helmet covers his face, featuring glowing analog blue optic visor lenses. Red and blue holographic glitch sparks and static lines crackle around him. Highly detailed, cinematic lighting, cyberpunk edge.`

@@ -72,10 +72,10 @@ Hiperenfoque analítico: Ante giros drásticos e imprevistos en el entorno, su c
 
 #### Protocolo Overlord (Exotraje) (`combat`)
 * **Significado**: El Plan Overlord en acción. Ian utiliza armaduras modulares personalizadas y protocolos de contingencia dolorosos para proteger a sus amigos de amenazas cósmicas y de sí mismos.
-* **Crisis**: Sobrecarga de Contingencia: Activar los modelos pesados (Aegisbuster o Mecha-Vesper) consume el Archor Core a velocidad crítica, arriesgando el apagado total de sus sistemas.
+* **Crisis**: Sobrecarga de Contingencia: Activar los modelos pesados (Brimstonebuster o Mecha-Vesper) consume el Archor Core a velocidad crítica, arriesgando el apagado total de sus sistemas.
 * **Habilidades**:
   * Sistemas Modular Mark III / LXXXV: Armaduras tácticas (estándar y cósmica) con propulsión verde esmeralda y sellado absoluto para el vacío espacial.
-  * Mark XLIV "Aegisbuster": Armadura pesada de contingencia diseñada para inmovilizar a Uandi si pierde el control, usando guanteletes de absorción hidráulica.
+  * Mark XLIV "Brimstonebuster": Armadura pesada de contingencia diseñada para inmovilizar a Uandi si pierde el control, usando guanteletes de absorción hidráulica.
   * Mark L "Mecha-Vesper": Coloso táctico de artillería pesada móvil pilotado desde el pecho para combatir amenazas de escala masiva o Kaiju.
 
 #### Mark III (Baseline) (`mk3`)
@@ -133,7 +133,7 @@ Disociación del entorno: Ante picos intensos de tensión o dolor ajeno, su ment
 * **Defensa**: 2
 * **Especial**: 5 (Aura-Anclaje)
 
-### Poderes / Habilidades (Oracle / Enlace Dimensional)
+### Poderes / Habilidades (Sigil / Enlace Dimensional)
 * **Significado**: El nexo espiritual y protector del equipo. Su presencia cohesiona las mentes de sus aliados y erige las defensas esenciales; sin ella, el grupo opera a ciegas, fracturado y expuesto.
 * **Crisis**: Fluctuación del Velo: Bajo estrés extremo, su aura pierde estabilidad, provocando micro-grietas dimensionales involuntarias a su alrededor que alteran el espacio y representan un riesgo impredecible.
 * **Stats de Poder**:
@@ -174,7 +174,7 @@ Disociación del entorno: Ante picos intensos de tensión o dolor ajeno, su ment
 ### Perfil
 * **Peleador ágil y hostigador**: Combate con cartas y constructos de energía pura inestable (glitch azul y rojo) para desestabilizar coberturas y enemigos a corto/medio rango.
 * **Fachada sarcástica**: Oculta una altísima ansiedad interna y un cerebro hiperactivo bajo una capa de cinismo, carisma magnético y humor negro.
-* **Contextos de Vestimenta**: Ropa normal (suéter azul marino) en el día a día para pasar desapercibido, y el Traje Cósmico "Wildcard" en misiones críticas (gabardina/chaqueta larga de cuero rojo oscuro sobre un traje táctico negro con correas rojas).
+* **Contextos de Vestimenta**: Ropa normal (suéter azul marino) en el día a día para pasar desapercibido, y el Traje Cósmico "Bandit" en misiones críticas (gabardina/chaqueta larga de cuero rojo oscuro sobre un traje táctico negro con correas rojas).
 * **Ancla Psicológica**: Ponerse el traje cósmico le sirve como señal mental de que "la situación se fue global/multiversal", forzando a su mente ansiosa a enfocarse.
 
 ### Datos Complementarios
@@ -193,7 +193,7 @@ Agotamiento por sobrecarga: Si se sobreesfuerza intentando cargar objetos grande
 * **Defensa**: 4
 * **Especial**: 0 (Energía Pura)
 
-### Poderes / Habilidades (Wildcard / Hostigador Energético)
+### Poderes / Habilidades (Bandit / Hostigador Energético)
 * **Significado**: El maestro del engaño y la agilidad táctica. Emplea constructos y clones de energía pura degradable para sembrar el caos y castigar al oponente sin comprometer su seguridad.
 * **Crisis**: Migraña por Sobrecarga: Intentar mantener clones estables por mucho tiempo o cargar masas pesadas le genera migrañas y lo deja expuesto. Además, sus armas de energía vibran y pueden estallar en sus manos si no las descarta a tiempo.
 * **Stats de Poder**:
@@ -263,7 +263,7 @@ Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía vio
 * **Defensa**: 7
 * **Especial**: 0 (Energía Multiversal)
 
-### Poderes / Habilidades (Swapfire / Nexo Multiversal)
+### Poderes / Habilidades (Farsight / Nexo Multiversal)
 * **Significado**: Mati es el primero en mandar un meme al grupo en medio de una crisis, pero también el primero en ponerse al frente cuando hay que tomar una decisión de la que depende la vida de todos. Su poder se basa específicamente en la manifestación de una poderosa energía multiversal, siendo una dimensión nexo entre todas las existentes, manifestada en un único individuo por universo de formas diferentes. Cada versión de Mati en el multiverso expresa esto de manera distinta; nuestro Mati lo hace a través de sus ojos. Sabe que son una ventana a este nexo de poder y no se permite parpadear cuando importa.
 * **Crisis**: Meltdown Multiversal: Al sobrecalentarse o entrar en crisis, el rayo violeta se tiñe de rojo incandescente como fuego. Activar su poder sin visor desata una destrucción masiva y descontrolada en todo su campo de visión.
 * **Stats de Poder**:
@@ -306,7 +306,7 @@ Fuego ciego catastrófico: Si pierde su visor y activa su poder, la energía vio
 * **ID**: `uandi`
 * **Categoría**: `pibes`
 * **Rol**: Tanque y protector
-* **Código Visual**: Remera técnica Kappa, lentes redondos, tatuajes manga en ambos brazos
+* **Código Visual**: Remera técnica, lentes redondos, tatuajes manga en brazo izquierdo.
 * **Color**: `#b91c1c`
 
 ### Perfil
@@ -330,7 +330,7 @@ Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo 
 * **Defensa**: 8
 * **Especial**: 0 (Ira y Regeneración)
 
-### Poderes / Habilidades (Aegis / Ira Regenerativa)
+### Poderes / Habilidades (Brimstone / Ira Regenerativa)
 * **Significado**: El escudo humano. Su rol es recibir el castigo que sus aliados no pueden soportar. Cada ataque recibido lo enfurece más, alimentando su fuerza física a niveles incalculables y desatando su regeneración celular instantánea.
 * **Crisis**: Estado Salvaje: Si su ira supera cierto umbral, entra en un estado feral descontrolado donde pierde la noción táctica, incapaz de distinguir amigos de enemigos en su afán de aplastar la amenaza.
 * **Stats de Poder**:
@@ -343,7 +343,7 @@ Inercia de vanguardia: Ante la amenaza inminente, su instinto de protección lo 
   * Especial: 10
 * **Habilidades específicas**:
   * **Furia Creciente**: Cada impacto recibido no se almacena como energía, sino que aumenta su enojo y frustración, elevando su fuerza física de forma exponencial y a niveles desconocidos (sin límites conocidos en estado salvaje).
-  * **Regeneración de Aegis**: Si recibe un impacto o herida en estado base, su "otro yo" (Aegis) puede curarlo de forma instantánea, cicatrizando y reparando su cuerpo sin necesidad de convertirse o transformarse del todo.
+  * **Regeneración de Brimstone**: Si recibe un impacto o herida en estado base, su "otro yo" (Brimstone) puede curarlo de forma instantánea, cicatrizando y reparando su cuerpo sin necesidad de convertirse o transformarse del todo.
   * **Fuerza Feral**: Canaliza su ira en golpes devastadores e impactos destructivos a corta distancia, liberando una potencia salvaje que ignora los límites anatómicos humanos.
   * **Movilidad Incontenible**: Ejecuta saltos brutales de gran altura para cerrar distancias rápidamente. Carece de vuelo dinámico; su tránsito aéreo es un proyectil pesado guiado por su propio cuerpo enfurecido que cae con intención destructiva.
 
@@ -389,7 +389,7 @@ Acecho del Eco Corrupto: Correr a máxima velocidad debilita las barreras dimens
 * **Defensa**: 6
 * **Especial**: 0 (Disrupción)
 
-### Poderes / Habilidades (Null-Vector / Movilidad Absoluta)
+### Poderes / Habilidades (Outrider / Movilidad Absoluta)
 * **Significado**: El desborde y la movilidad absoluta. Volvo domina la velocidad a escala arcana, convirtiendo el espacio y la materia sólida en simples puertas que puede abrir corriendo.
 * **Crisis**: Acecho de Reverse Volvo: El uso de su velocidad de escape abre la puerta a su eco corrupto de estática oscura, quien le pisa los talones en el fondo de sus propios portales naranjas.
 * **Stats de Poder**:
@@ -447,7 +447,7 @@ Inflexibilidad de criterio: Al procesar certezas sensoriales que los demás igno
 * **Defensa**: 7
 * **Especial**: 8 (Eco-Rango)
 
-### Poderes / Habilidades (Hush / Duelista Acústica)
+### Poderes / Habilidades (Dusk / Duelista Acústica)
 * **Significado**: Ve el mundo con más claridad que cualquiera con los ojos abiertos. Nada se le oculta en la oscuridad.
 * **Crisis**: Sobrecarga Sensorial: Ruidos repentinos de extrema decibelia (explosiones cercanas, alarmas estridentes) la desorientan e incapacitan de dolor físico severo.
 * **Stats de Poder**:
@@ -466,7 +466,7 @@ Inflexibilidad de criterio: Al procesar certezas sensoriales que los demás igno
 
 ### Variantes / Modos Alternativos
 
-#### Modo Duelista Ciega (`combat`)
+#### Modo Duskblade (`combat`)
 * **Significado**: Cierra los ojos para alcanzar su máximo potencial. Ya no solo rastrea, ahora ejecuta con una fluidez aterradora.
 * **Crisis**: Al depender de micro-sonidos, oponentes que logran moverse sin fricción o seres no-biológicos (sin latido ni respiración) son casi imposibles de anticipar.
 * **Habilidades**:

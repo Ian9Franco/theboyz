@@ -5,8 +5,8 @@
 *   **Impredecible y Sucio:** Su estilo de combate no sigue una línea lógica o caballerosa. Prefiere engañar, amagar con clones, usar trampas rápidas y pelear con agilidad en lugar de entrar en enfrentamientos directos de fuerza bruta.
 *   **Estilo por Contexto:** 
     *   *Misiones Terrestres:* Suéter azul marino básico, jeans oscuros y zapatillas. Cómodo, urbano, sencillo. Odia sentirse "disfrazado".
-    *   *Misiones Complejas / Cósmicas:* Traje Cósmico "Wildcard" compuesto por la Bomber Roja técnica de cuero carmesí y el Casco de Conducción colapsable con HUD óptico de luz azul.
-*   **Vínculo con su Vestimenta:** Vestirse con el traje cósmico "Wildcard" actúa como un fuerte interruptor psicológico. Es su recordatorio personal y directo de que "la situación se fue global/multiversal", lo que fuerza a su mente dispersa y ansiosa a enfocarse con la seriedad que amerita.
+    *   *Misiones Complejas / Cósmicas:* Traje Cósmico "Bandit" compuesto por la Bomber Roja técnica de cuero carmesí y el Casco de Conducción colapsable con HUD óptico de luz azul.
+*   **Vínculo con su Vestimenta:** Vestirse con el traje cósmico "Bandit" actúa como un fuerte interruptor psicológico. Es su recordatorio personal y directo de que "la situación se fue global/multiversal", lo que fuerza a su mente dispersa y ansiosa a enfocarse con la seriedad que amerita.
 
 ---
 

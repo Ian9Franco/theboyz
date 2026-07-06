@@ -241,7 +241,7 @@ export const secundarios: CharacterDetail[] = [
         'Advertencia Táctica: Revela información local y dinámicas urbanas del Clan Kurogane para guiar a los héroes.'
       ],
       significa: 'El cable a tierra del equipo. Su ramen y sabiduría proveen un descanso vital para aliviar el trauma y recargar fuerzas.',
-      crisis: 'Muerte del mentor: Su deceso a manos del Clan Kurogane marca un punto sin retorno, forzando el despertar total de Hush.',
+      crisis: 'Muerte del mentor: Su deceso a manos del Clan Kurogane marca un punto sin retorno, forzando el despertar total de Dusk.',
       stats: { fuerza: 4, inteligencia: 7, carisma: 8, suerte: 6, combate: 4, defensa: 5, especialVal: 5 }
     }
   },
