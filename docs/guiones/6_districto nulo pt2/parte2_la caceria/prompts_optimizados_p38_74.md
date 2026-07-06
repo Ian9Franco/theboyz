@@ -235,7 +235,7 @@ Composición: interior cerrado y símbolos de inmovilidad. Ritmo: encierro, inmo
 ### Prompt de página completa
 > [ESTILO BASE] [JULIAN] [REGULAR] [VOPS] [AEGIS] Full comic page layout, trapped interior against battlefield exterior. Dominant interior panel: Julián inside the parked armored van, thrown against a metal bench, wrists cuffed with inhibitor restraints, bruised but alert under dim emergency light. Across the right edge, a vertical mechanical zoom strip: rear doors slam shut; latch locks; van tire rests still in a puddle, engine vibration making ripples but no rotation; driver's gloved hand waits on the gear lever. Top exterior banner: V.O.P.S. guards close the doors while the driver's silhouette checks controls. Bottom wide panel: R.E.G.U.L.A.R. stands between approaching Aegis and the transport lane, one hand raised to hold the van in place, launcher beginning to charge. [NEGATIVO ESTÁNDAR]
 
----
+------------------------------------------------------------
 
 # PÁGINA 52 — "Wawi"
 Composición: página íntima, encierro oscuro y respuesta roja en contrapunto. Ritmo: SOS discreto desde el furgón inmóvil.
