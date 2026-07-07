@@ -1,7 +1,7 @@
 # SUPLEMENTO DE PROMPTS GRÁFICOS — FUEGO PÚRPURA P1
 ## Páginas nuevas 38–74 — versión con lenguaje de viñetas agresivo y secuencia final corregida
 
-Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 para las páginas 38 a 74 de "Fuego Púrpura", integrando la batalla expandida de Dumbo Base, la captura de Julián, el escape subterráneo guiado por Carmella Nocturna, el enfrentamiento de Uandi y Gorgon en Central Park, y la llegada a Parker Tower, de acuerdo con la guía definitiva de `correcciones.txt`.
+Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 para las páginas 38 a 74 de "Fuego Púrpura", integrando la batalla expandida de Dumbo Base, la captura de Julián, el escape subterráneo guiado por Severine Alucard, el enfrentamiento de Uandi y Gorgon en Central Park, y la llegada a Parker Tower, de acuerdo con la guía definitiva de `correcciones.txt`.
 
 ## Ajuste de lenguaje visual para las referencias nuevas
 - Usar **fondos blancos puros** solo en golpes rápidos, disparos quirúrgicos, llaves de combat y micro-impactos. Sirven para congelar velocidad sin sobrecargar fondos.
@@ -26,7 +26,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
 > Official comic book page layout, dynamic non-uniform multi-panel grid with sharp irregular diagonal slash cuts, slanted gutters, and irregular diagonal slash borders. Bold solid black panel borders, thick black gutters between panels, solid black divider lines. Modern American heroic comic art style, hand-inked line work, clean organic line art, expressive faces, dense black inks, high-contrast chiaroscuro, cross-hatching, halftone matte texture, flat hard-edged cel-shading. Cinematic palette: cold indigo rainy night, cyan/blue V.O.P.S. estasis lights, emerald green Ian tech, violet Mati plasma, cyan/magenta Julian glitch energy, red/orange Uandi magma heat, red nightclub vampire lighting. Accurate character skin tones preserved, no global amber wash. 2D illustration, sharp focus, traditional inked texture, no glossy 3D look.
-> CHARACTER DESIGN LOCK FOR THESE PAGES: Ian / Vesperwing: slim slender young man, light skin, messy wavy brown hair with volume, light brown eyes behind thick brown-framed glasses, analytical exhausted expression, textured dark grey hoodie over light grey shirt, dark slim jeans, amber tear pendant, later wearing compact emerald-green vector exo-gauntlets and metallic exo-boots projecting green kinetic energy. Mati / Snapfire: young man with warm light-brown skin, clean-shaven face with visible dimples, short parted very dark hair, charcoal tactical bomber jacket with sleeve zipper pocket, olive round-neck shirt, khaki cargo pants, prototype purple tactical visor covering his eyes, violet plasma glow behind the lenses. Julián / Wildcard: lean athletic young man, light warm-brown skin, short wavy black hair with clean side fade, thick stubble beard and mustache, almond light-brown eyes, dark navy knit sweater, dark jeans, sarcastic anxious expression, creates cyan and magenta glitch-energy constructs and a pure energy tactical staff with no physical handle. Uandi / Aegis: muscular athletic young man with broad shoulders, coily dark brown curls on top, clean faded sides, short stubble beard, round black-framed glasses, left arm full black mythological/geometric tattoo sleeve with solid band above elbow, right arm clean with two thin black bands around bicep, fitted black crewneck shirt. In transformation: massive red incandescent hypertrophied body, tattoos glowing like magma, heat vapor, cracked red-orange runes, shirt damaged by heat but no explicit gore. R.E.G.U.L.A.R.: tactical armored commander in matte black and dark blue combat armor, sealed helmet with solid blue visor, cyan estasis lines, heavy tactical shield, disciplined military posture, expert close-quarters combat. V.O.P.S. soldiers: dark matte tactical uniforms with blue/cyan estasis lights, rifles with flashlights, heavy shields. Regular soldiers are dark blue/black, not gold. Carmella Nocturna: elegant pale vampire woman, black and deep crimson velvet coat, dark sunglasses at night, red umbrella, aristocratic underworld poise, accompanied by two tall vampire bodyguards in black coats. Jaz: young woman with sunset-gold hair, cat-eye glasses, black turtleneck/polera, elegant East Side penthouse style, warm golden spiritual aura, clean expensive apartment with quartz crystals. Norman Parker: tall elegant corporate man in impeccable dark blue tailored suit, slicked-back hair, calm predatory expression; mutation is subtle elastic cellular tissue, face stretching fluidly backward in reflections, not grotesque gore. Gorgon: colossal mutated tactical brute with industrial respirator, dark torn leather tactical harness, reinforced polymer tubes connected to temples, neck and arms, neon green metatoxin vapor, intelligent calculating eyes.
+> CHARACTER DESIGN LOCK FOR THESE PAGES: Ian / Vesperwing: slim slender young man, light skin, messy wavy brown hair with volume, light brown eyes behind thick brown-framed glasses, analytical exhausted expression, textured dark grey hoodie over light grey shirt, dark slim jeans, amber tear pendant, later wearing compact emerald-green vector exo-gauntlets and metallic exo-boots projecting green kinetic energy. Mati / Snapfire: young man with warm light-brown skin, clean-shaven face with visible dimples, short parted very dark hair, charcoal tactical bomber jacket with sleeve zipper pocket, olive round-neck shirt, khaki cargo pants, prototype purple tactical visor covering his eyes, violet plasma glow behind the lenses. Julián / Wildcard: lean athletic young man, light warm-brown skin, short wavy black hair with clean side fade, thick stubble beard and mustache, almond light-brown eyes, dark navy knit sweater, dark jeans, sarcastic anxious expression, creates cyan and magenta glitch-energy constructs and a pure energy tactical staff with no physical handle. Uandi / Aegis: muscular athletic young man with broad shoulders, coily dark brown curls on top, clean faded sides, short stubble beard, round black-framed glasses, left arm full black mythological/geometric tattoo sleeve with solid band above elbow, right arm clean with two thin black bands around bicep, fitted black crewneck shirt. In transformation: massive red incandescent hypertrophied body, tattoos glowing like magma, heat vapor, cracked red-orange runes, shirt damaged by heat but no explicit gore. R.E.G.U.L.A.R.: tactical armored commander in matte black and dark blue combat armor, sealed helmet with solid blue visor, cyan estasis lines, heavy tactical shield, disciplined military posture, expert close-quarters combat. V.O.P.S. soldiers: dark matte tactical uniforms with blue/cyan estasis lights, rifles with flashlights, heavy shields. Regular soldiers are dark blue/black, not gold. Severine Alucard: elegant pale vampire woman, black and deep crimson velvet coat, dark sunglasses at night, red umbrella, aristocratic underworld poise, accompanied by two tall vampire bodyguards in black coats. Jaz: young woman with sunset-gold hair, cat-eye glasses, black turtleneck/polera, elegant East Side penthouse style, warm golden spiritual aura, clean expensive apartment with quartz crystals. Norman Parker: tall elegant corporate man in impeccable dark blue tailored suit, slicked-back hair, calm predatory expression; mutation is subtle elastic cellular tissue, face stretching fluidly backward in reflections, not grotesque gore. Gorgon: colossal mutated tactical brute with industrial respirator, dark torn leather tactical harness, reinforced polymer tubes connected to temples, neck and arms, neon green metatoxin vapor, intelligent calculating eyes.
 > PAGE 38, "Apagón Táctico". Four-panel comic page. Panel 1: large wide shot inside Dumbo Base, a cluttered underground industrial loft with exposed brick, cables, screens, old red couch, server racks and workshop tables, plunged into darkness while blue and cyan V.O.P.S. siren lights slice through tall industrial windows. Panel 2: medium shot of Ian kneeling at the main breaker, plugging emerald-lit vector gauntlets into thick power cables, face tense and analytical. Panel 3: medium ensemble shot: Mati adjusts his purple tactical visor, Julián materializes a cyan-magenta glitch energy staff with no handle, Uandi breathes heavily while red runes glow under his skin. Panel 4: wide shot of the rainy street outside, tactical vehicles and searchlights pointing at the building.
 > --no 3d, photorealistic, cgi, text, readable letters, speech bubbles, captions, watermarks, glossy reflections, airbrushed gradients, explicit gore, graphic dismemberment, explicit nudity, pornographic content, white gutters, white panel borders, white divider lines
 
@@ -528,14 +528,14 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 54 — "La sombra"
-**PERSONAJES EN ESTA PÁGINA:** Julián, V.O.P.S., Carmella Nocturna
+**PERSONAJES EN ESTA PÁGINA:** Julián, V.O.P.S., Severine Alucard
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 54. Grilla de 5 viñetas. Viñeta 2 grande y de terror sugerido.
 2. **ANÁLISIS DE RITMO:**
-   Intervención sobrenatural rápida. Carmella ataca el furgón de traslado en las sombras y libera a Julián.
+   Intervención sobrenatural rápida. Severine ataca el furgón de traslado en las sombras y libera a Julián.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
-   La silueta negra del abrigo de Carmella invade gutters en la Viñeta 2 y 3.
+   La silueta negra del abrigo de Severine invade gutters en la Viñeta 2 y 3.
 
 4. **PROMPT FINAL PARA SEAART:**
 > [!TIP]
@@ -580,39 +580,39 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 
 ---
 
-## PÁGINA 56 — "Callejón / primera aparición frontal de Carmella"
-**PERSONAJES EN ESTA PÁGINA:** Ian, Julián, Carmella Nocturna
+## PÁGINA 56 — "Callejón / primera aparición frontal de Severine"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Julián, Severine Alucard
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 56. Grilla de 5 viñetas. Viñeta 2 icónica de presentación.
 2. **ANÁLISIS DE RITMO:**
-   Noir / misterio. Carmella Nocturna aparece por primera vez de frente. Tensión y diálogos cortantes.
+   Noir / misterio. Severine Alucard aparece por primera vez de frente. Tensión y diálogos cortantes.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
-   El paraguas rojo de Carmella sobresale del panel 2 hacia el gutter superior.
+   El paraguas rojo de Severine sobresale del panel 2 hacia el gutter superior.
 
 4. **PROMPT FINAL PARA SEAART:**
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
 > [SAME STYLE & DESIGN LOCK AS PAGE 38]
-> PAGE 56, "Callejón / Carmella". Five-panel page. Panel 1: medium shot of the group entering the dark alley, rain splashing, red/magenta emergency light reflecting in puddles. Panel 2: large iconic shot of Carmella Nocturna standing under the magenta light, elegant pale skin, wearing a long black/deep crimson velvet coat, dark sunglasses, holding a red umbrella; aristocratic poise. Panel 3: medium shot of Julián looking down, holding his wrist, muttering sheepishly. Panel 4: close shot of Ian studying her with intense suspicion, analytical expression, amber tear pendant catching the light. Panel 5: medium shot of Carmella looking back at Julián, a cool unreadable expression, red umbrella casting a crimson glow.
+> PAGE 56, "Callejón / Severine". Five-panel page. Panel 1: medium shot of the group entering the dark alley, rain splashing, red/magenta emergency light reflecting in puddles. Panel 2: large iconic shot of Severine Alucard standing under the magenta light, elegant pale skin, wearing a long black/deep crimson velvet coat, dark sunglasses, holding a red umbrella; aristocratic poise. Panel 3: medium shot of Julián looking down, holding his wrist, muttering sheepishly. Panel 4: close shot of Ian studying her with intense suspicion, analytical expression, amber tear pendant catching the light. Panel 5: medium shot of Severine looking back at Julián, a cool unreadable expression, red umbrella casting a crimson glow.
 > --no 3d, photorealistic, cgi, text, readable letters, speech bubbles, captions, watermarks, glossy reflections, airbrushed gradients, explicit gore, graphic dismemberment, explicit nudity, pornographic content, white gutters, white panel borders, white divider lines
 
 5. **VIÑETAS EN ESPAÑOL:**
 * **Viñeta 1 (Plano General):** El grupo ingresa al callejón oscuro bajo lluvia.
-* **Viñeta 2 (Plano General Grande):** Carmella de frente bajo luz magenta con paraguas rojo.
+* **Viñeta 2 (Plano General Grande):** Severine de frente bajo luz magenta con paraguas rojo.
 * **Viñeta 3 (Plano Medio):** Julián mira al suelo, avergonzado.
 * **Viñeta 4 (Plano Medio):** Ian la examina con total sospecha.
-* **Viñeta 5 (Plano Medio):** Carmella habla con Julián; reflejos rojos del paraguas.
+* **Viñeta 5 (Plano Medio):** Severine habla con Julián; reflejos rojos del paraguas.
 
 ---
 
 ## PÁGINA 57 — "Entrada al túnel"
-**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Uandi, Carmella Nocturna
+**PERSONAJES EN ESTA PÁGINA:** Ian, Mati, Uandi, Severine Alucard
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 57. Grilla de 5 viñetas. Viñeta 4 grande de descenso.
 2. **ANÁLISIS DE RITMO:**
-   Escapatoria. Carmella los guía a través de una reja metálica oculta que da a catacumbas pluviales.
+   Escapatoria. Severine los guía a través de una reja metálica oculta que da a catacumbas pluviales.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
    Las barras de la reja oxidada cruzan verticalmente los gutters de las viñetas centrales.
 
@@ -620,11 +620,11 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
 > [SAME STYLE & DESIGN LOCK AS PAGE 38]
-> PAGE 57, "Entrada al túnel". Five-panel page. Panel 1: medium shot of Carmella opening a heavy, rusted iron gate hidden behind discarded metal and old bricks in the alley. Panel 2: close-up of Ian inspecting the gate frame, noting the complete lack of modern card readers, network cables, or tactical sensors. Panel 3: medium shot of Mati looking back down the alley, worried, violet visor reflecting smoke. Panel 4: large shot of the group descending a steep metallic stair into a dark brick storm-drain tunnel, illuminated only by a distant red glow. Panel 5: close-up of Carmella closing the heavy gate behind them, locking out the sound of rain and sirens.
+> PAGE 57, "Entrada al túnel". Five-panel page. Panel 1: medium shot of Severine opening a heavy, rusted iron gate hidden behind discarded metal and old bricks in the alley. Panel 2: close-up of Ian inspecting the gate frame, noting the complete lack of modern card readers, network cables, or tactical sensors. Panel 3: medium shot of Mati looking back down the alley, worried, violet visor reflecting smoke. Panel 4: large shot of the group descending a steep metallic stair into a dark brick storm-drain tunnel, illuminated only by a distant red glow. Panel 5: close-up of Severine closing the heavy gate behind them, locking out the sound of rain and sirens.
 > --no 3d, photorealistic, cgi, text, readable letters, speech bubbles, captions, watermarks, glossy reflections, airbrushed gradients, explicit gore, graphic dismemberment, explicit nudity, pornographic content, white gutters, white panel borders, white divider lines
 
 5. **VIÑETAS EN ESPAÑOL:**
-* **Viñeta 1 (Plano Medio):** Carmella abre una reja de hierro oxidada y pesada.
+* **Viñeta 1 (Plano Medio):** Severine abre una reja de hierro oxidada y pesada.
 * **Viñeta 2 (Plano Detalle):** Ian nota que la puerta no está conectada a ninguna red.
 * **Viñeta 3 (Plano Medio):** Mati preocupado mira hacia atrás por Uandi.
 * **Viñeta 4 (Plano General):** Descenso del grupo por escaleras de metal hacia túneles de ladrillo.
@@ -633,20 +633,20 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 ---
 
 ## PÁGINA 58 — "Descenso under / cierre del escape inmediato"
-**PERSONAJES EN ESTA PÁGINA:** Mati, Julián, Carmella Nocturna
+**PERSONAJES EN ESTA PÁGINA:** Mati, Julián, Severine Alucard
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 58. Grilla de 6 viñetas. Viñetas 3 y 5 de ambientación.
 2. **ANÁLISIS DE RITMO:**
    Transición a un submundo hostil. Caminando por galerías subterráneas. El misterio de la población marginal se introduce mediante conductas y miradas.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
-   La sombra estirada e inhumana de Carmella se proyecta sobre el ladrillo rompiendo gutters en la Viñeta 6.
+   La sombra estirada e inhumana de Severine se proyecta sobre el ladrillo rompiendo gutters en la Viñeta 6.
 
 4. **PROMPT FINAL PARA SEAART:**
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
 > [SAME STYLE & DESIGN LOCK AS PAGE 38]
-> PAGE 58, "Descenso under". Six-panel page. Panel 1: wide shot of the group walking through ancient brick tunnels, water dripping from arched ceilings, steam rising. Panel 2: medium shot of Julián holding his arm, looking uncomfortable as he realizes he brought his friends into his secret world. Panel 3: medium shot of mysterious, pale-skinned figures watching them from shadow-filled balconies and alcoves along the tunnel walls. Panel 4: close shot of a pale guard in a dark coat sniffing the air as Mati passes, eyes reflecting faint red. Panel 5: medium shot of Carmella raising a hand in a commanding gesture, making the onlookers retreat into the shadows. Panel 6: large shot of the group arriving at a massive metal service door, red neon tube light casting long dramatic silhouettes on the brick.
+> PAGE 58, "Descenso under". Six-panel page. Panel 1: wide shot of the group walking through ancient brick tunnels, water dripping from arched ceilings, steam rising. Panel 2: medium shot of Julián holding his arm, looking uncomfortable as he realizes he brought his friends into his secret world. Panel 3: medium shot of mysterious, pale-skinned figures watching them from shadow-filled balconies and alcoves along the tunnel walls. Panel 4: close shot of a pale guard in a dark coat sniffing the air as Mati passes, eyes reflecting faint red. Panel 5: medium shot of Severine raising a hand in a commanding gesture, making the onlookers retreat into the shadows. Panel 6: large shot of the group arriving at a massive metal service door, red neon tube light casting long dramatic silhouettes on the brick.
 > --no 3d, photorealistic, cgi, text, readable letters, speech bubbles, captions, watermarks, glossy reflections, airbrushed gradients, explicit gore, graphic dismemberment, explicit nudity, pornographic content, white gutters, white panel borders, white divider lines
 
 5. **VIÑETAS EN ESPAÑOL:**
@@ -654,7 +654,7 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 * **Viñeta 2 (Plano Medio):** Julián se muestra incómodo al exponer su mundo secreto.
 * **Viñeta 3 (Plano Medio):** Figuras pálidas observan desde balcones subterráneos.
 * **Viñeta 4 (Plano Detalle):** Guardia pálido olfatea el aire cuando Mati pasa.
-* **Viñeta 5 (Plano Medio):** Carmella detiene miradas con un gesto firme de autoridad.
+* **Viñeta 5 (Plano Medio):** Severine detiene miradas con un gesto firme de autoridad.
 * **Viñeta 6 (Plano General Grande):** Siluetas estiradas bajo tubo de neón rojo frente a puerta metálica.
 
 ---
@@ -842,13 +842,13 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 
 ---
 
-## PÁGINA 66 — "Club under / Carmella y Julián"
-**PERSONAJES EN ESTA PÁGINA:** Julián, Carmella Nocturna
+## PÁGINA 66 — "Club under / Severine y Julián"
+**PERSONAJES EN ESTA PÁGINA:** Julián, Severine Alucard
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 66. Grilla de 5 viñetas. Viñeta 1 de grilla de dos tercios de página para el club.
 2. **ANÁLISIS DE RITMO:**
-   Ambientación gótica. Se muestra la suntuosidad decadente del club de Carmella, con vampiros bailando bajo lluvia roja artificial.
+   Ambientación gótica. Se muestra la suntuosidad decadente del club de Severine, con vampiros bailando bajo lluvia roja artificial.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
    Lluvia artificial roja inunda gutters y divisorias de paneles de la Viñeta 1 a la 3.
 
@@ -856,14 +856,14 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
 > [SAME STYLE & DESIGN LOCK AS PAGE 38]
-> PAGE 66, "Club under". Five-panel page. Panel 1: large wide shot of Carmella's underground gothic-industrial club, cathedral-like vaulted ceilings, steel structures, red artificial rain falling over a crowded dance floor filled with elegant figures, crimson lights. Panel 2: close-up of dark glasses filled with a thick dark liquid on a bar counter, hands of patrons pale. Panel 3: medium shot of elegant patrons in expensive dark velvet suits, talking in hushed whispers, eyes reflecting red in the dim light. Panel 4: medium shot of Carmella walking down a steel catwalk, her crimson coat flowing behind her, the crowd parting below. Panel 5: close shot of Julián following her, looking nervous and holding his bruised wrist, dark club atmosphere.
+> PAGE 66, "Club under". Five-panel page. Panel 1: large wide shot of Severine's underground gothic-industrial club, cathedral-like vaulted ceilings, steel structures, red artificial rain falling over a crowded dance floor filled with elegant figures, crimson lights. Panel 2: close-up of dark glasses filled with a thick dark liquid on a bar counter, hands of patrons pale. Panel 3: medium shot of elegant patrons in expensive dark velvet suits, talking in hushed whispers, eyes reflecting red in the dim light. Panel 4: medium shot of Severine walking down a steel catwalk, her crimson coat flowing behind her, the crowd parting below. Panel 5: close shot of Julián following her, looking nervous and holding his bruised wrist, dark club atmosphere.
 > --no 3d, photorealistic, cgi, text, readable letters, speech bubbles, captions, watermarks, glossy reflections, airbrushed gradients, explicit gore, graphic dismemberment, explicit nudity, pornographic content, white gutters, white panel borders, white divider lines
 
 5. **VIÑETAS EN ESPAÑOL:**
 * **Viñeta 1 (Plano General Grande):** Club gótico con lluvia artificial roja e iluminación carmesí.
 * **Viñeta 2 (Plano Detalle):** Copas con líquido oscuro sobre la barra del bar.
 * **Viñeta 3 (Plano Medio):** Clientes elegantes conversan en las sombras, ojos rojos sutiles.
-* **Viñeta 4 (Plano General):** Carmella camina por pasarela metálica, abriendo paso.
+* **Viñeta 4 (Plano General):** Severine camina por pasarela metálica, abriendo paso.
 * **Viñeta 5 (Plano Medio):** Julián la sigue con timidez, frotándose la muñeca golpeada.
 
 ---
@@ -894,13 +894,13 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 
 ---
 
-## PÁGINA 68 — "Beso-marca de Carmella"
-**PERSONAJES EN ESTA PÁGINA:** Ian, Julián, Carmella Nocturna
+## PÁGINA 68 — "Beso-marca de Severine"
+**PERSONAJES EN ESTA PÁGINA:** Ian, Julián, Severine Alucard
 
 1. **NÚMERO DE PÁGINA Y ESTRUCTURA DE LA GRILLA:**
    Página 68. Grilla de 5 viñetas. Viñeta 3 icónica y central.
 2. **ANÁLISIS DE RITMO:**
-   Intimidad y protección. Carmella marca a Julián para resguardarlo de la población del club. Ian registra la dinámica.
+   Intimidad y protección. Severine marca a Julián para resguardarlo de la población del club. Ian registra la dinámica.
 3. **PLAN DE PANEL BREAKING / PANEL BLEEDING:**
    La luz roja del neón de la Viñeta 3 invade gutters y difumina bordes.
 
@@ -908,13 +908,13 @@ Este suplemento contiene los prompts de imágenes en estilo Comic Diffusion v2 p
 > [!TIP]
 > **PROMPT PARA DIBUJAR ESTA PÁGINA (SEAART / COMIC DIFFUSION V2):**
 > [SAME STYLE & DESIGN LOCK AS PAGE 38]
-> PAGE 68, "Beso-marca". Five-panel page. Panel 1: medium shot of Carmella stopping in front of Julián, gently taking his chin in her pale hand. Panel 2: close shot of her wiping a drop of dry blood from his cheek, unreadable aristocratic expression. Panel 3: large intimate shot, Carmella leaning in and kissing Julián on the neck, a red neon light behind them creating a warm haze; other vampires in the background divert their eyes. Panel 4: close-up of Julián, surprised and sighing, a faint red mark glowing on his neck. Panel 5: medium shot of Ian watching from the shadows, adjusting his glasses, registering this mark as a social contract.
+> PAGE 68, "Beso-marca". Five-panel page. Panel 1: medium shot of Severine stopping in front of Julián, gently taking his chin in her pale hand. Panel 2: close shot of her wiping a drop of dry blood from his cheek, unreadable aristocratic expression. Panel 3: large intimate shot, Severine leaning in and kissing Julián on the neck, a red neon light behind them creating a warm haze; other vampires in the background divert their eyes. Panel 4: close-up of Julián, surprised and sighing, a faint red mark glowing on his neck. Panel 5: medium shot of Ian watching from the shadows, adjusting his glasses, registering this mark as a social contract.
 > --no 3d, photorealistic, cgi, text, readable letters, speech bubbles, captions, watermarks, glossy reflections, airbrushed gradients, explicit gore, graphic dismemberment, explicit nudity, pornographic content, white gutters, white panel borders, white divider lines
 
 5. **VIÑETAS EN ESPAOL:**
-* **Viñeta 1 (Plano Medio):** Carmella detiene a Julián tomándolo de la barbilla.
-* **Viñeta 2 (Primer Plano):** Carmella limpia sangre seca de la mejilla de Julián.
-* **Viñeta 3 (Plano General Grande):** Carmella besa el cuello de Julián bajo neón rojo.
+* **Viñeta 1 (Plano Medio):** Severine detiene a Julián tomándolo de la barbilla.
+* **Viñeta 2 (Primer Plano):** Severine limpia sangre seca de la mejilla de Julián.
+* **Viñeta 3 (Plano General Grande):** Severine besa el cuello de Julián bajo neón rojo.
 * **Viñeta 4 (Primer Plano Pequeño):** Julián asombrado; marca roja brilla en su cuello.
 * **Viñeta 5 (Plano Medio):** Ian observa la interacción desde las sombras del bar.
 

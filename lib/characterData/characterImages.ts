@@ -375,6 +375,17 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/Fichas/Secundarios/Crystal Maiden/Rylai_ficha.webp",
     ]
   },
+  "severine": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": "/personajes/Fichas/Secundarios/Severine/Severine_ficha.webp",
+    "fichas": [
+      "/personajes/Fichas/Secundarios/Severine/Severine_ficha.webp",
+      "/personajes/Fichas/Secundarios/Severine/Severine_ficha_alt.webp",
+      "/personajes/Fichas/Secundarios/Severine/Severine_ficha_alt2.webp",
+    ]
+  },
   "shinjuro": {
     "portada": null,
     "portadas": [

@@ -43,9 +43,9 @@ Abajo tenés el ESTILO BASE, el DISEÑO DE PÁGINA, la Librería de Personajes (
 
 **[VANGUARD]** Don Vanguard (Reference: `don vanguard_sheet.webp`): imposing older man, immaculate white suit, authoritative and furious demeanor, City Hall office setting.
 
-**[CARMELLA]** Carmella Nocturna (Reference: `Carmilla_sheet.webp` - *Nota: Wawi es Carmella*): elegant pale vampire woman, black and deep crimson velvet coat, dark sunglasses even in daylight, folded crimson parasol or cane-parasol as an aristocratic accessory, aristocratic underworld poise.
+**[SEVERINE]** Severine Alucard (Reference: `Severine_sheet.webp` - *Nota: Wawi es Severine*): elegant pale vampire woman, black and deep crimson velvet coat, dark sunglasses even in daylight, folded crimson parasol or cane-parasol as an aristocratic accessory, aristocratic underworld poise.
 
-**[CARMELLA-GUARDS]** (agregar a [CARMELLA] si aparecen): accompanied by two tall vampire bodyguards in black coats.
+**[SEVERINE-GUARDS]** (agregar a [SEVERINE] si aparecen): accompanied by two tall vampire bodyguards in black coats.
 
 **[JAZ]** Jaz (Reference: `JAZ_sheet.webp`): young woman, sunset-gold hair, cat-eye glasses, black turtleneck, elegant East Side penthouse style, warm golden spiritual aura.
 
@@ -239,61 +239,61 @@ Composición: interior cerrado y símbolos de inmovilidad. Ritmo: encierro, inmo
 
 # PÁGINA 52 — "Wawi"
 Composición: página íntima, encierro oscuro y respuesta roja en contrapunto. Ritmo: SOS discreto desde el furgón inmóvil.
-* **PERSONAJES:** Julián, Carmella Nocturna.
+* **PERSONAJES:** Julián, Severine Alucard.
 * **CONTINUIDAD:** La llamada ocurre antes del disparo contra Aegis, con el furgón detenido y los guardias afuera.
 
 ### Prompt de página completa
-> [ESTILO BASE] [JULIAN] [CARMELLA] Full comic page layout, claustrophobic SOS. Main large panel: Julián alone inside the parked armored van, cuffed wrists in his lap, dim red emergency light, exterior battle flashing through thin seams. Left vertical zoom strip: he painfully twists one hand toward his pocket; pulls out a cracked smartphone despite inhibitor cuffs; cracked phone screen glows red-pink on his bruised face with abstract call-interface shapes, no readable text; trembling thumb presses the call button while boots and muffled voices remain outside. Bottom contrasting panel in red-lit underground bar: a phone vibrates on a dark table, pale gloved hand reaching from shadow, only Carmella's lips and black velvet sleeve visible, crimson neon reflected on glass. No full reveal yet. [NEGATIVO ESTÁNDAR]
+> [ESTILO BASE] [JULIAN] [SEVERINE] Full comic page layout, claustrophobic SOS. Main large panel: Julián alone inside the parked armored van, cuffed wrists in his lap, dim red emergency light, exterior battle flashing through thin seams. Left vertical zoom strip: he painfully twists one hand toward his pocket; pulls out a cracked smartphone despite inhibitor cuffs; cracked phone screen glows red-pink on his bruised face with abstract call-interface shapes, no readable text; trembling thumb presses the call button while boots and muffled voices remain outside. Bottom contrasting panel in red-lit underground bar: a phone vibrates on a dark table, pale gloved hand reaching from shadow, only Severine's lips and black velvet sleeve visible, crimson neon reflected on glass. No full reveal yet. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 53 — "El disparo contra Aegis"
 Composición: disparo como splash blanco-cian, con la sombra moviéndose en insets. Ritmo: evento dominante que permite la infiltración silenciosa.
-* **PERSONAJES:** R.E.G.U.L.A.R., Uandi, Ian, Mati, Carmella Nocturna.
-* **CONTINUIDAD:** Carmella empieza a acercarse en segundo plano, pero R.E.G.U.L.A.R. solo registra a Aegis.
+* **PERSONAJES:** R.E.G.U.L.A.R., Uandi, Ian, Mati, Severine Alucard.
+* **CONTINUIDAD:** Severine empieza a acercarse en segundo plano, pero R.E.G.U.L.A.R. solo registra a Aegis.
 
 ### Prompt de página completa
-> [ESTILO BASE] [REGULAR] [AEGIS] [IAN-SUIT] [SWAPFIRE] [CARMELLA] Full comic page layout. Main central splash on pure white-cyan impact background: R.E.G.U.L.A.R. fires a colossal cyan containment blast from the heavy launcher, the flash overpowering the dry night street, vehicles vibrating, soldiers covering visors. Top-left zoom strip: launcher raised; cyan capacitor coils charging; dry air warping near the muzzle. Across the blast path, Aegis is struck in the chest and launched violently out of the Dumbo perimeter over broken concrete and barricades, not yet landing in Central Park. Shadow insets along the blind alley: barely visible red eyes and black coat shape slip behind transport guards; van guards blinded by flash; Ian and Mati flinch behind the grate seeing dark shapes move. Bottom still panel: R.E.G.U.L.A.R. lowers smoking launcher but looks toward Aegis's trajectory, not the van. [NEGATIVO ESTÁNDAR]
+> [ESTILO BASE] [REGULAR] [AEGIS] [IAN-SUIT] [SWAPFIRE] [SEVERINE] Full comic page layout. Main central splash on pure white-cyan impact background: R.E.G.U.L.A.R. fires a colossal cyan containment blast from the heavy launcher, the flash overpowering the dry night street, vehicles vibrating, soldiers covering visors. Top-left zoom strip: launcher raised; cyan capacitor coils charging; dry air warping near the muzzle. Across the blast path, Aegis is struck in the chest and launched violently out of the Dumbo perimeter over broken concrete and barricades, not yet landing in Central Park. Shadow insets along the blind alley: barely visible red eyes and black coat shape slip behind transport guards; van guards blinded by flash; Ian and Mati flinch behind the grate seeing dark shapes move. Bottom still panel: R.E.G.U.L.A.R. lowers smoking launcher but looks toward Aegis's trajectory, not the van. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 54 — "La sombra"
 Composición: rescate noir con sombras superpuestas al furgón. Ritmo: intervención silenciosa aprovechando el destello.
-* **PERSONAJES:** Julián, Carmella Nocturna, V.O.P.S.
-* **CONTINUIDAD:** Carmella libera a Julián sin que el comandante la vea.
+* **PERSONAJES:** Julián, Severine Alucard, V.O.P.S.
+* **CONTINUIDAD:** Severine libera a Julián sin que el comandante la vea.
 
 ### Prompt de página completa
-> [ESTILO BASE] [JULIAN] [CARMELLA] [IAN-SUIT] [SWAPFIRE] [VOPS] Full comic page layout, noir stealth rescue. Dominant shadowy alley panel: Carmella and two dark vampire silhouettes silently neutralize the few van guards in the cyan afterflash, no gore, bodies dropping as dark shapes, crimson eyes and black coats in mist. Overlapping insets: pale hand catches a falling rifle before it hits ground; guard helmet rolls silently under the van; broken latch on rear door. Right vertical sequence: rear of stationary van with disoriented guards; van doors opening quietly; Julián inside turning toward a pale hand; Julián pulled out with one inhibitor cuff broken and one still hanging. Bottom small grate panel: Ian and Mati watch, eyes wide. Final narrow panel: dark feminine silhouette points toward blind alley entrance, face unrevealed. [NEGATIVO ESTÁNDAR]
+> [ESTILO BASE] [JULIAN] [SEVERINE] [IAN-SUIT] [SWAPFIRE] [VOPS] Full comic page layout, noir stealth rescue. Dominant shadowy alley panel: Severine and two dark vampire silhouettes silently neutralize the few van guards in the cyan afterflash, no gore, bodies dropping as dark shapes, crimson eyes and black coats in mist. Overlapping insets: pale hand catches a falling rifle before it hits ground; guard helmet rolls silently under the van; broken latch on rear door. Right vertical sequence: rear of stationary van with disoriented guards; van doors opening quietly; Julián inside turning toward a pale hand; Julián pulled out with one inhibitor cuff broken and one still hanging. Bottom small grate panel: Ian and Mati watch, eyes wide. Final narrow panel: dark feminine silhouette points toward blind alley entrance, face unrevealed. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 55 — "Cortina violeta"
 Composición: carrera lateral con vapor violeta como gran forma gráfica. Ritmo: salida del ducto, rescate físico y cobertura.
-* **PERSONAJES:** Ian, Mati, Julián, Carmella Nocturna, V.O.P.S.
+* **PERSONAJES:** Ian, Mati, Julián, Severine Alucard, V.O.P.S.
 * **CONTINUIDAD:** Ian y Mati salen solo cuando Julián ya está fuera del furgón. La cortina se genera después de alcanzarlo.
 
 ### Prompt de página completa
-> [ESTILO BASE] [IAN-SUIT] [SWAPFIRE] [JULIAN] [CARMELLA] [VOPS] Full comic page layout, horizontal escape movement. Top-left inset: Ian quietly pushes open the hidden grate behind crates while Mati follows. Main sweeping horizontal panel: Ian reaches Julián and catches him under one arm as Julián limps, one cuff hanging; Mati turns back and fires a short violet plasma line into a street steam grate or exposed pipe, producing dense vapor, violet sparks and camera interference, not an explosion. The vapor wall becomes a huge graphic shape crossing the page. Insets inside the vapor: Mati's visor glowing intense purple; boiling water bursting from the grate; confused V.O.P.S. silhouettes behind haze. Bottom wide panel: Ian supports Julián while Mati covers rear, Carmella's silhouette with a folded crimson parasol gestures them toward the blind alley entrance. [NEGATIVO ESTÁNDAR]
+> [ESTILO BASE] [IAN-SUIT] [SWAPFIRE] [JULIAN] [SEVERINE] [VOPS] Full comic page layout, horizontal escape movement. Top-left inset: Ian quietly pushes open the hidden grate behind crates while Mati follows. Main sweeping horizontal panel: Ian reaches Julián and catches him under one arm as Julián limps, one cuff hanging; Mati turns back and fires a short violet plasma line into a street steam grate or exposed pipe, producing dense vapor, violet sparks and camera interference, not an explosion. The vapor wall becomes a huge graphic shape crossing the page. Insets inside the vapor: Mati's visor glowing intense purple; boiling water bursting from the grate; confused V.O.P.S. silhouettes behind haze. Bottom wide panel: Ian supports Julián while Mati covers rear, Severine's silhouette with a folded crimson parasol gestures them toward the blind alley entrance. [NEGATIVO ESTÁNDAR]
 
 ---
 
-# PÁGINA 56 — "Callejón / primera aparición frontal de Carmella"
+# PÁGINA 56 — "Callejón / primera aparición frontal de Severine"
 Composición: reveal de personaje en panel dominante con mini-reacciones. Ritmo: noir, misterio y respiro breve.
-* **PERSONAJES:** Ian, Mati, Julián, Carmella Nocturna.
-* **CONTINUIDAD:** Primera presentación clara de Carmella ocurre después de haber cruzado el punto ciego.
+* **PERSONAJES:** Ian, Mati, Julián, Severine Alucard.
+* **CONTINUIDAD:** Primera presentación clara de Severine ocurre después de haber cruzado el punto ciego.
 
 ### Prompt de página completa
-> [ESTILO BASE] [IAN] [MATI] [JULIAN] [CARMELLA] Full comic page layout, iconic noir reveal. Dominant central panel: Carmella Nocturna fully visible for the first time, elegant pale vampire woman in black and deep crimson velvet coat, dark sunglasses, folded crimson parasol held like a cane, standing beneath broken red neon in an old brick alley with aristocratic underworld poise. Top-left small panel: Ian, Mati and Julián enter beyond violet vapor, Julián leaning heavily on Ian, one cuff dangling, no V.O.P.S. line of sight. Bottom-left inset: Julián embarrassed and exhausted holding his wrist while Mati scans behind through purple visor. Overlapping close-up insets on Carmella: pale lips forming cold half-smile; crimson parasol tip touching the dry pavement; one gloved finger raised toward an old hidden iron gate. Right narrow reaction panel: Ian studies her suspiciously, glasses reflecting red alley light, amber pendant visible. [NEGATIVO ESTÁNDAR]
+> [ESTILO BASE] [IAN] [MATI] [JULIAN] [SEVERINE] Full comic page layout, iconic noir reveal. Dominant central panel: Severine Alucard fully visible for the first time, elegant pale vampire woman in black and deep crimson velvet coat, dark sunglasses, folded crimson parasol held like a cane, standing beneath broken red neon in an old brick alley with aristocratic underworld poise. Top-left small panel: Ian, Mati and Julián enter beyond violet vapor, Julián leaning heavily on Ian, one cuff dangling, no V.O.P.S. line of sight. Bottom-left inset: Julián embarrassed and exhausted holding his wrist while Mati scans behind through purple visor. Overlapping close-up insets on Severine: pale lips forming cold half-smile; crimson parasol tip touching the dry pavement; one gloved finger raised toward an old hidden iron gate. Right narrow reaction panel: Ian studies her suspiciously, glasses reflecting red alley light, amber pendant visible. [NEGATIVO ESTÁNDAR]
 
 ---
 
 # PÁGINA 57 — "Entrada al túnel"
 Composición: descenso vertical con puerta como umbral principal. Ritmo: escape por infraestructura abandonada.
-* **PERSONAJES:** Ian, Mati, Julián, Carmella Nocturna.
+* **PERSONAJES:** Ian, Mati, Julián, Severine Alucard.
 * **CONTINUIDAD:** El grupo desciende por la reja oculta antes de que R.E.G.U.L.A.R. revise el furgón.
 
 ### Prompt de página completa
-> [ESTILO BASE] [IAN] [MATI] [JULIAN] [CARMELLA] Full comic page layout with strong vertical descent. Top wide panel: Carmella opens a heavy rusted iron gate hidden behind old pipes and brickwork, revealing steep stairs into darkness. Dominant tall central panel: the group descends into a dark brick storm-drain tunnel, Carmella leading, Ian supporting Julián, Mati last with visor turned back toward the alley. Small technical insets: Ian notices no modern card readers, cameras or tactical sensors, only old mechanical locks; Ian's muddy boot on a metal step; Julián's broken inhibitor cuff scraping against railing. Bottom panel: Carmella closes the gate from inside and locks it with an old mechanical padlock while the group disappears below, violet haze fading outside. [NEGATIVO ESTÁNDAR]
+> [ESTILO BASE] [IAN] [MATI] [JULIAN] [SEVERINE] Full comic page layout with strong vertical descent. Top wide panel: Severine opens a heavy rusted iron gate hidden behind old pipes and brickwork, revealing steep stairs into darkness. Dominant tall central panel: the group descends into a dark brick storm-drain tunnel, Severine leading, Ian supporting Julián, Mati last with visor turned back toward the alley. Small technical insets: Ian notices no modern card readers, cameras or tactical sensors, only old mechanical locks; Ian's muddy boot on a metal step; Julián's broken inhibitor cuff scraping against railing. Bottom panel: Severine closes the gate from inside and locks it with an old mechanical padlock while the group disappears below, violet haze fading outside. [NEGATIVO ESTÁNDAR]
 
 ---
 
@@ -308,10 +308,10 @@ Composición: investigación posterior en página fría y controlada. Ritmo: rea
 ---
 # PÁGINA 58 — "Descenso under / cierre del escape inmediato"
 Composición: transición al submundo con vigilancia en balcones y puerta final. Ritmo: descenso, ambientación y paso de tiempo hacia el amanecer.
-* **PERSONAJES:** Mati, Julián, Carmella Nocturna
+* **PERSONAJES:** Mati, Julián, Severine Alucard
 
 ### Prompt de página completa
-> [ESTILO BASE] [MATI] [JULIAN] [CARMELLA] Full comic page layout, descent into underworld. Dominant atmospheric panel: the group walks through ancient brick tunnels, water dripping from arched ceilings, steam rising, Carmella leading with absolute authority, Mati wary, Julián holding his arm and looking uncomfortable. Along the upper tunnel walls, shadow-filled balcony insets show mysterious pale-skinned figures watching. Zoom inset: pale guard's face sniffing the air, eyes reflecting faint red. Middle small panel: Carmella raises one hand in a commanding gesture and unseen onlookers retreat. Small time-passage inset near a high street grate: the outside sky above the city shifts from black night toward pale blue dawn while the group remains underground. Bottom large reveal panel: the group arrives at a massive metal service door, red neon tube casting long silhouettes on brick. Overlapping insets show neon tube flickering and heavy steel door handle turning. [NEGATIVO ESTÁNDAR]
+> [ESTILO BASE] [MATI] [JULIAN] [SEVERINE] Full comic page layout, descent into underworld. Dominant atmospheric panel: the group walks through ancient brick tunnels, water dripping from arched ceilings, steam rising, Severine leading with absolute authority, Mati wary, Julián holding his arm and looking uncomfortable. Along the upper tunnel walls, shadow-filled balcony insets show mysterious pale-skinned figures watching. Zoom inset: pale guard's face sniffing the air, eyes reflecting faint red. Middle small panel: Severine raises one hand in a commanding gesture and unseen onlookers retreat. Small time-passage inset near a high street grate: the outside sky above the city shifts from black night toward pale blue dawn while the group remains underground. Bottom large reveal panel: the group arrives at a massive metal service door, red neon tube casting long silhouettes on brick. Overlapping insets show neon tube flickering and heavy steel door handle turning. [NEGATIVO ESTÁNDAR]
 
 ---
 
@@ -378,12 +378,12 @@ Composición: refugio elegante interrumpido por aterrizaje sucio. Ritmo: tensió
 
 ---
 
-# PÁGINA 66 — "Club under / Carmella y Julián"
-Composición: splash de lugar + entrada de Carmella en catwalk con detalles incrustados. Ritmo: descenso al ambiente de club mientras arriba ya amanece.
-* **PERSONAJES:** Julián, Carmella Nocturna
+# PÁGINA 66 — "Club under / Severine y Julián"
+Composición: splash de lugar + entrada de Severine en catwalk con detalles incrustados. Ritmo: descenso al ambiente de club mientras arriba ya amanece.
+* **PERSONAJES:** Julián, Severine Alucard
 
 ### Prompt de página completa
-> [ESTILO BASE] [JULIAN] [CARMELLA] Full comic page layout, gothic-industrial club reveal. Dominant upper splash: underground club with cathedral-like vaulted ceilings, steel structures, red theatrical vapor drifting over a crowded dance floor, thick black gutters framing the architecture. A tiny high-vent inset shows pale morning light far above, unread by the characters, emphasizing that day is arriving outside while the underworld stays red and dark. Overlapping environmental insets: red neon sign reading NOCTURNA in stylized script; crimson condensation glowing on a steel handrail; dark glasses filled with thick dark liquid on a bar. Main lower panel: Carmella walks down a steel catwalk, crimson coat flowing, elegant patrons parting below in respect. Insets on the catwalk: her high-heeled boot stepping on steel grid; patrons bowing their heads. Bottom narrow panel: Julián follows behind, nervous, holding bruised wrist, eyes reflecting red club light. [NEGATIVO ESTÁNDAR]
+> [ESTILO BASE] [JULIAN] [SEVERINE] Full comic page layout, gothic-industrial club reveal. Dominant upper splash: underground club with cathedral-like vaulted ceilings, steel structures, red theatrical vapor drifting over a crowded dance floor, thick black gutters framing the architecture. A tiny high-vent inset shows pale morning light far above, unread by the characters, emphasizing that day is arriving outside while the underworld stays red and dark. Overlapping environmental insets: red neon sign reading NOCTURNA in stylized script; crimson condensation glowing on a steel handrail; dark glasses filled with thick dark liquid on a bar. Main lower panel: Severine walks down a steel catwalk, crimson coat flowing, elegant patrons parting below in respect. Insets on the catwalk: her high-heeled boot stepping on steel grid; patrons bowing their heads. Bottom narrow panel: Julián follows behind, nervous, holding bruised wrist, eyes reflecting red club light. [NEGATIVO ESTÁNDAR]
 
 ---
 
@@ -396,12 +396,12 @@ Composición: investigación lateral + gran panel de mercado negro. Ritmo: inves
 
 ---
 
-# PÁGINA 68 — "Beso-marca de Carmella"
+# PÁGINA 68 — "Beso-marca de Severine"
 Composición: escena íntima dominante con lectura secreta para el lector. Ritmo: intimidad, mordida sutil y marca no transformadora.
-* **PERSONAJES:** Ian, Julián, Carmella Nocturna
+* **PERSONAJES:** Ian, Julián, Severine Alucard
 
 ### Prompt de página completa
-> [ESTILO BASE] [CARMELLA] [JULIAN] [IAN] Full comic page layout, intimate red-noir page. Top small approach panels: Carmella stops in front of Julián and gently takes his chin in her pale hand; close-up of her wiping dry blood from his cheek. Dominant central panel: Carmella leans in as if kissing Julián on the neck, red neon behind them creating warm haze, other patrons politely diverting their eyes. The reader can see the secret detail: her lips part just enough for tiny fangs to pierce the side of his neck, a thin controlled trickle of blood at the contact point, Julián willingly allowing it with a dazed but calm expression. Ian and the other boys must not see the bite; their sightline is blocked by Carmella's hair, shoulder and coat collar, so to them it reads only as an intimate protective kiss. Overlapping insets: Carmella's long pale fingers gently gripping Julián's dark knit sweater; a tiny blood bead at her lip visible only to the reader; onlooker's hand holding a glass paused mid-air. Bottom zoom strip: close-up of Julián's neck with two tiny puncture marks hidden under his collar, no glowing rune, no transformation mark; Ian watches from shadows but does not register the bite, only mild suspicion about the intimacy. No vampire transformation, no turning Julián into a vampire, no explicit gore, no erotic exaggeration. [NEGATIVO ESTÁNDAR]
+> [ESTILO BASE] [SEVERINE] [JULIAN] [IAN] Full comic page layout, intimate red-noir page. Top small approach panels: Severine stops in front of Julián and gently takes his chin in her pale hand; close-up of her wiping dry blood from his cheek. Dominant central panel: Severine leans in as if kissing Julián on the neck, red neon behind them creating warm haze, other patrons politely diverting their eyes. The reader can see the secret detail: her lips part just enough for tiny fangs to pierce the side of his neck, a thin controlled trickle of blood at the contact point, Julián willingly allowing it with a dazed but calm expression. Ian and the other boys must not see the bite; their sightline is blocked by Severine's hair, shoulder and coat collar, so to them it reads only as an intimate protective kiss. Overlapping insets: Severine's long pale fingers gently gripping Julián's dark knit sweater; a tiny blood bead at her lip visible only to the reader; onlooker's hand holding a glass paused mid-air. Bottom zoom strip: close-up of Julián's neck with two tiny puncture marks hidden under his collar, no glowing rune, no transformation mark; Ian watches from shadows but does not register the bite, only mild suspicion about the intimacy. No vampire transformation, no turning Julián into a vampire, no explicit gore, no erotic exaggeration. [NEGATIVO ESTÁNDAR]
 
 ---
 

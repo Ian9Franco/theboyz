@@ -29,12 +29,12 @@ Character model sheet, turnaround, multiple views. Khione Frost, muscular Africa
 
 ---
 
-### [FACIAL MORPHOLOGY — CRITICAL, MUST BE DISTINCT FROM VALERY AND CARMILLA]
+### [FACIAL MORPHOLOGY — CRITICAL, MUST BE DISTINCT FROM VALERY AND SEVERINE]
 Khione's face is a **BROAD WEST AFRICAN WARRIOR SQUARE**. The following features are mandatory and must be unmistakably different from both other characters:
-*   **Face shape:** broad, wide, and powerfully structured. Significantly wider than both Valery's oval and Carmilla's elongated angular face. A strong horizontal emphasis — the face reads as a shield.
+*   **Face shape:** broad, wide, and powerfully structured. Significantly wider than both Valery's oval and Severine's elongated angular face. A strong horizontal emphasis — the face reads as a shield.
 *   **Cheekbones:** extremely wide, broad, and prominent — projecting horizontally outward. This is the dominant feature of her face and must be clearly exaggerated in comic-book style.
-*   **Nose:** broad, strong, with a wide rounded base and flared nostrils. Full and powerful — a warrior's nose. The direct opposite of both Carmilla's narrow refined nose and Valery's delicate straight nose.
-*   **Eyes:** medium-sized, intense, and almond-shaped but with a more neutral horizontal lid — neither heavy-lidded like Valery nor hooded like Carmilla. The gaze is deadpan, unflinching, and analytical — like a targeting system, not a person.
+*   **Nose:** broad, strong, with a wide rounded base and flared nostrils. Full and powerful — a warrior's nose. The direct opposite of both Severine's narrow refined nose and Valery's delicate straight nose.
+*   **Eyes:** medium-sized, intense, and almond-shaped but with a more neutral horizontal lid — neither heavy-lidded like Valery nor hooded like Severine. The gaze is deadpan, unflinching, and analytical — like a targeting system, not a person.
 *   **Eyebrows:** thick, strong, and straight. Heavy brow ridge. Convey zero emotion in resting state — zero arch, zero curve. Pure horizontal lines of stone.
 *   **Lips:** very full, wide, and substantially prominent — the fullest lips of all three characters by a significant margin. A defining feature of her face. Barely parted in resting state, conveying total control.
 *   **Jaw and chin:** WIDE, SQUARE jaw — the most square-jawed of all three characters. Strong angular corners at the jaw, defining a powerful rectangular lower face. Her chin is broad and squared, not pointed.
@@ -51,7 +51,7 @@ A formidable, tall African-American female warrior general named "Khione Frost",
 
 ### [RESTRICTIONS]
 *   **NO** 3D render, **NO** photorealism, **NO** airbrushed gradients, **NO** background, **NO** spandex, **NO** cape, **NO** mantle, **NO** armor, **NO** mechanical parts.
-*   **STRICTLY NO** narrow or elongated facial features — Khione's face must be wide and square, never resembling Valery's soft oval or Carmilla's angular elongated face.
+*   **STRICTLY NO** narrow or elongated facial features — Khione's face must be wide and square, never resembling Valery's soft oval or Severine's angular elongated face.
 *   **NO** white or grey clothing — primary color must be deep forest green with black accents.
 *   In normal state, eyes must be dark — **NOT** green. In rage state, eyes **MUST** be vivid emerald green.
 *   **NO** fire, **NO** flame, **NO** red colors, **NO** orange colors.

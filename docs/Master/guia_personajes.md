@@ -182,15 +182,15 @@
 
 ---
 
-### 🤝 CARMILLA NOCTURNA (La Matriarca Vampira)
-* **Rostro y Cabello:** Facciones de óvalo gótico alargado y angular. Pómulos altos y mejillas sutilmente hundidas. Ojos felinos, rasgados y de mirada fría e hipnótica. Cejas rectas y finas. Labios definidos con un arco de cupido marcado y colmillos retráctiles expuestos. Cabello largo castaño-rubio peinado hacia atrás (saciada) o cabello blanco puro y largo en batalla (hambrienta). Piel de color blanco porcelana.
+### 🤝 SEVERINE ALUCARD (La Reina del Nadir)
+* **Rostro y Cabello:** Facciones de óvalo gótico alargado y angular. Pómulos altos y mejillas sutilmente hundidas. Ojos felinos, rasgados y de mirada fría e hipnótica. Cejas rectas y finas. Labios definidos con un arco de cupido marcado y colmillos retráctiles expuestos. Cabello largo castaño-rubio peinado hacia atrás (forma joven) o cabello blanco puro y largo en batalla (forma antigua). Piel de color blanco porcelana.
 * **Físico:** Femenino, alto, esbelto y de cintura plana y estrecha, con gran agilidad felina.
-* **Vestimenta y Accesorios:** Abrigo militar victoriano ajustado de color rojo carmesí brillante con botones dorados y cuello alto, guantes largos de cuero negro y una pesada capa militar de terciopelo negro.
+* **Vestimenta y Accesorios:** Abrigo militar victoriano ajustado de color rojo carmesí brillante con botones dorados y cuello alto, guantes largos de cuero negro (para contención en forma antigua) y una pesada capa militar de terciopelo negro.
 
 #### Prompt de Generación
 
 > **Prompt:**
-> `Character design datasheet of a gothic female vampire named Carmilla Nocturna. ROSTRO: gothic elongated angular face, high cheekbones, pale porcelain skin, swept-back hair, fangs. FÍSICO: tall slender athletic body, narrow waist. VESTIMENTA: rich blood-crimson Victorian military coat with gold buttons and high collar, sweeping heavy black velvet commander's mantle, long black leather gloves. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles`
+> `Character design datasheet of a gothic female vampire named Severine Alucard. ROSTRO: gothic elongated angular face, high cheekbones, pale porcelain skin, swept-back hair, fangs. FÍSICO: tall slender athletic body, narrow waist. VESTIMENTA: rich blood-crimson Victorian military coat with gold buttons and high collar, sweeping heavy black velvet commander's mantle, long black leather gloves. STYLE: Authentic hand-drawn and inked indie comic book art style. Visible sharp line art, heavy organic ink brush strokes, deep solid blacks (chiaroscuro) defining shadows and folds, traditional hatching textures. Flat colors, subtle cel-shading, matte paper texture. Strictly avoiding any 3D render styles, video game concept art sheen, digital airbrushing, or glossy metallic or plastic reflections. Multiple views, full body, portrait. --ar 16:9 --no 3d, photorealistic, cgi, text, speech bubbles`
 
 ---
 

@@ -53,17 +53,17 @@ Character model sheet, comic book character design sheet, reference turnaround. 
 
 
 
-[FACIAL MORPHOLOGY — CRITICAL, MUST BE DISTINCT FROM VALERY AND CARMILLA]
+[FACIAL MORPHOLOGY — CRITICAL, MUST BE DISTINCT FROM VALERY AND SEVERINE]
 
 Khione's face is a BROAD WEST AFRICAN WARRIOR SQUARE. The following features are mandatory and must be unmistakably different from both other characters:
 
-- Face shape: broad, wide, and powerfully structured. Significantly wider than both Valery's oval and Carmilla's elongated angular face. A strong horizontal emphasis — the face reads as a shield.
+- Face shape: broad, wide, and powerfully structured. Significantly wider than both Valery's oval and Severine's elongated angular face. A strong horizontal emphasis — the face reads as a shield.
 
 - Cheekbones: extremely wide, broad, and prominent — projecting horizontally outward. This is the dominant feature of her face and must be clearly exaggerated in comic-book style.
 
-- Nose: broad, strong, with a wide rounded base and flared nostrils. Full and powerful — a warrior's nose. The direct opposite of both Carmilla's narrow refined nose and Valery's delicate straight nose.
+- Nose: broad, strong, with a wide rounded base and flared nostrils. Full and powerful — a warrior's nose. The direct opposite of both Severine's narrow refined nose and Valery's delicate straight nose.
 
-- Eyes: medium-sized, intense, and almond-shaped but with a more neutral horizontal lid — neither heavy-lidded like Valery nor hooded like Carmilla. The gaze is deadpan, unflinching, and analytical — like a targeting system, not a person.
+- Eyes: medium-sized, intense, and almond-shaped but with a more neutral horizontal lid — neither heavy-lidded like Valery nor hooded like Severine. The gaze is deadpan, unflinching, and analytical — like a targeting system, not a person.
 
 - Eyebrows: thick, strong, and straight. Heavy brow ridge. Convey zero emotion in resting state — zero arch, zero curve. Pure horizontal lines of stone.
 
@@ -101,7 +101,7 @@ A formidable, tall African-American female warrior general named "Khione Frost",
 
 [CLOSE-UP PORTRAITS]
 
-4. Close-up portrait (Front View — Normal State): Her BROAD WEST AFRICAN WARRIOR SQUARE face — wide prominent cheekbones, broad strong nose, extremely full wide lips, square jaw, thick straight brows. Deadpan cold dark eyes. Long white hair flowing down. This face must be unmistakably, clearly different from both Valery and Carmilla. Deep black ink contrast.
+4. Close-up portrait (Front View — Normal State): Her BROAD WEST AFRICAN WARRIOR SQUARE face — wide prominent cheekbones, broad strong nose, extremely full wide lips, square jaw, thick straight brows. Deadpan cold dark eyes. Long white hair flowing down. This face must be unmistakably, clearly different from both Valery and Severine. Deep black ink contrast.
 
 
 
@@ -115,7 +115,7 @@ A formidable, tall African-American female warrior general named "Khione Frost",
 
 [RESTRICTIONS]
 
-NO 3D render, NO photorealism, NO airbrushed gradients, NO background, NO spandex, NO cape, NO mantle, NO armor, NO mechanical parts. STRICTLY NO narrow or elongated facial features — Khione's face must be wide and square, never resembling Valery's soft oval or Carmilla's angular elongated face. NO white or grey clothing — primary color must be deep forest green with black accents. In normal state, eyes must be dark — NOT green. In rage state, eyes MUST be vivid emerald green. NO fire, NO flame, NO red colors, NO orange colors. NO short hair, NO dark hair.
+NO 3D render, NO photorealism, NO airbrushed gradients, NO background, NO spandex, NO cape, NO mantle, NO armor, NO mechanical parts. STRICTLY NO narrow or elongated facial features — Khione's face must be wide and square, never resembling Valery's soft oval or Severine's angular elongated face. NO white or grey clothing — primary color must be deep forest green with black accents. In normal state, eyes must be dark — NOT green. In rage state, eyes MUST be vivid emerald green. NO fire, NO flame, NO red colors, NO orange colors. NO short hair, NO dark hair.
 
 
 
@@ -135,7 +135,7 @@ Character model sheet, comic book character design sheet, reference turnaround. 
 
 [FACIAL MORPHOLOGY — CRITICAL, MUST BE DISTINCT FROM VALERY AND KHIONE]
 
-Carmilla's face is a GOTHIC ELONGATED ANGULAR OVAL. The following features are mandatory:
+Severine's face is a GOTHIC ELONGATED ANGULAR OVAL. The following features are mandatory:
 
 - Face shape: longer and more vertically elongated than Valery's soft oval. Noticeably narrower, with more visible angular definition. Gothic and predatory architecture.
 
@@ -163,13 +163,13 @@ Carmilla's face is a GOTHIC ELONGATED ANGULAR OVAL. The following features are m
 
 [CHARACTER]
 
-An ancient, ageless female vampire lord named "Carmilla Nocturna". Physiognomy: athletic, slender, agile, tone-defined with a very narrow flat waist. Her entire wardrobe is deep blood crimson red: opulent high-collared Victorian military dress coat in rich blood crimson tailored to her narrow athletic allure, black leather opera gloves, and a sweeping heavy black velvet commander's mantle. Satiated state (25 years): stunning, hot, multi-toned blonde-brown chestnut hair swept back, provocative cold eyes, flawless porcelain skin. Starved state (50 years): same structure aged dramatically, pure white swept-back hair, wild feral eyes, elongated fangs.
+An ancient, ageless female vampire lord named "Severine Alucard". Physiognomy: athletic, slender, agile, tone-defined with a very narrow flat waist. Her entire wardrobe is deep blood crimson red: opulent high-collared Victorian military dress coat in rich blood crimson tailored to her narrow athletic allure, black leather opera gloves, and a sweeping heavy black velvet commander's mantle. Satiated state (25 years): stunning, hot, multi-toned blonde-brown chestnut hair swept back, provocative cold eyes, flawless porcelain skin. Starved state (50 years): same structure aged dramatically, pure white swept-back hair, wild feral eyes, elongated fangs.
 
 
 
 [FULL-BODY POSES]
 
-1. Full-body standing pose (Satiated — 25 Years Old): Carmilla stands with immense seductive presence. Her GOTHIC ELONGATED ANGULAR face at 25 fully visible — sharp cheekbones, hooded predatory eyes, straight dark brows, controlled lips. Dual-toned blonde-brown hair swept back. Blood crimson red coat form-fitted to her sleek narrow-waisted build. Dangerously, provocatively hot.
+1. Full-body standing pose (Satiated — 25 Years Old): Severine stands with immense seductive presence. Her GOTHIC ELONGATED ANGULAR face at 25 fully visible — sharp cheekbones, hooded predatory eyes, straight dark brows, controlled lips. Dual-toned blonde-brown hair swept back. Blood crimson red coat form-fitted to her sleek narrow-waisted build. Dangerously, provocatively hot.
 
 
 
@@ -197,5 +197,5 @@ An ancient, ageless female vampire lord named "Carmilla Nocturna". Physiognomy: 
 
 [RESTRICTIONS]
 
-NO 3D render, NO photorealism, NO airbrushed gradients, NO background, NO spandex, NO mechanical parts, NO bulky muscles. STRICTLY NO soft rounded facial features — Carmilla's face must be angular and elongated, never resembling Valery's soft oval face. NO burgundy or maroon — primary garment color must be vivid blood crimson red. NO short hair.
+NO 3D render, NO photorealism, NO airbrushed gradients, NO background, NO spandex, NO mechanical parts, NO bulky muscles. STRICTLY NO soft rounded facial features — Severine's face must be angular and elongated, never resembling Valery's soft oval face. NO burgundy or maroon — primary garment color must be vivid blood crimson red. NO short hair.
 

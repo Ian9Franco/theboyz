@@ -11,12 +11,12 @@
 
 - **Mati / Snapfire** — protagonista. Ojos rotos, visor inestable. Siente cómo mueren sus variantes en el multiverso.
 - **Ian / Vesperwing** — mente analítica. Se separa para buscar ayuda tecnológica de su antiguo mentor, aceptando un trato peligroso.
-- **Julián / Wildcard** — capturado por R.E.G.U.L.A.R. y rescatado por su contacto del "under", Carmella Nocturna, a quien le debía un favor.
+- **Julián / Wildcard** — capturado por R.E.G.U.L.A.R. y rescatado por su contacto del "under", Severine Alucard, a quien le debía un favor.
 - **Uandi / Aegis** — muta de forma descontrolada bajo la lluvia. Entra en combate directo contra Gorgon en Central Park.
 - **Gorgon** — coloso táctico. Pelea contra Aegis en el parque usando el entorno y metatoxina para desgastarlo.
 - **Comandante R.E.G.U.L.A.R.** — líder táctico de V.O.P.S. Captura a Julián clínicamente y ataca a Aegis con armamento pesado.
 - **Don Vanguard** — furioso, desde su oficina exige el exterminio o captura de los vigilantes tras el hackeo público.
-- **Carmella Nocturna (Wawi)** — líder vampiro del submundo. Rescata a Julián e Ian, cobrándose una vieja deuda y marcando a Julián.
+- **Severine Alucard (Wawi)** — líder vampiro del submundo. Rescata a Julián e Ian, cobrándose una vieja deuda y marcando a Julián.
 - **Jaz / Oracle** — alberga al grupo en su penthouse, pero rechaza la oferta de Norman Parker, quedándose atrás temporalmente.
 - **Norman Parker (The Maker)** — magnate tecnológico, antiguo mentor de Ian. Ofrece un estabilizador arcano a cambio de control. Revela sutiles mutaciones elásticas.
 
@@ -331,7 +331,7 @@
 
 ---
 
-## ACTO 2 — "Los Pecadores de Manhattan: El Club de Carmilla"
+## ACTO 2 — "Los Pecadores de Manhattan: El Club de Severine"
 ### Páginas 47 a 58
 
 ---
@@ -473,7 +473,7 @@
 
 **Viñeta 52.5 (Tira Panel 5) — Plano medio**
 *En un bar oscuro con luces de neón rojas, una mano pálida con guante de terciopelo negro agarra un teléfono que vibra en la mesa.*
-**CARMELLA (teléfono):** "Julián. Sabía que no ibas a durar una semana sin meter la pata."
+**SEVERINE (teléfono):** "Julián. Sabía que no ibas a durar una semana sin meter la pata."
 
 ---
 
@@ -506,7 +506,7 @@
 ---
 
 ### PÁGINA 54 — "La Sombra"
-**5 viñetas — El rescate silencioso de Carmella en el traslado.**
+**5 viñetas — El rescate silencioso de Severine en el traslado.**
 
 **Viñeta 54.1 (Tira Panel 1) — Plano general**
 *El furgón que traslada a Julián frena de golpe en una calle oscura, patinando sobre el asfalto.*
@@ -523,8 +523,8 @@
 *Julián sale a rastras del vehículo, con las esposas colgando de una sola muñeca.*
 
 **Viñeta 54.5 (Tira Panel 4) — Plano medio**
-*Carmella Nocturna de pie con su paraguas rojo carmesí, mirando a Julián con desdén y una leve sonrisa.*
-**CARMELLA:** "De pie, Wildcard. No me hagas perder el tiempo."
+*Severine Alucard de pie con su paraguas rojo carmesí, mirando a Julián con desdén y una leve sonrisa.*
+**SEVERINE:** "De pie, Wildcard. No me hagas perder el tiempo."
 
 ---
 
@@ -551,8 +551,8 @@
 *Ian ayuda a Julián a levantarse en medio del humo violeta, mientras Mati los guía.*
 
 **Viñeta 55.6 (Tira Panel 5) — Plano general**
-*El grupo corre hacia la entrada del callejón oscuro donde Carmella los espera junto a su vehículo.*
-**CARMELLA:** "Adentro. Rápido."
+*El grupo corre hacia la entrada del callejón oscuro donde Severine los espera junto a su vehículo.*
+**SEVERINE:** "Adentro. Rápido."
 
 ---
 
@@ -563,22 +563,22 @@
 *Ian, Mati y Julián a resguardo en el callejón oscuro bajo la lluvia.*
 
 **Viñeta 56.2 (Plano General Grande - Insets 3D) — Plano general**
-*Carmella Nocturna parada bajo un neón magenta, con su paraguas rojo, abrigo negro y gafas oscuras.*
+*Severine Alucard parada bajo un neón magenta, con su paraguas rojo, abrigo negro y gafas oscuras.*
 * **INSET 1:** Sus labios pálidos con una sonrisa fría.
 * **INSET 2:** Las gotas de lluvia rojas cayendo del paraguas.
 
 **Viñeta 56.3 (Tira Panel 2) — Plano medio**
 *Julián se sostiene el brazo herido, mirando al suelo con vergüenza.*
-**JULIÁN:** "Gracias, Carmella. Te debía una."
-**CARMELLA:** "Ahora estamos a mano, Julián. Pero tu deuda con mi gente no se limpia tan fácil."
+**JULIÁN:** "Gracias, Severine. Te debía una."
+**SEVERINE:** "Ahora estamos a mano, Julián. Pero tu deuda con mi gente no se limpia tan fácil."
 
 **Viñeta 56.4 (Tira Panel 3) — Plano medio**
-*Ian mira a Carmella con profunda sospecha analítica, acomodándose los anteojos.*
+*Ian mira a Severine con profunda sospecha analítica, acomodándose los anteojos.*
 **IAN:** "Esta zona no figura en los mapas tácticos de V.O.P.S. ¿Cómo nos encontraste tan rápido?"
 
 **Viñeta 56.5 (Tira Panel 4) — Plano medio**
-*Carmella le sonríe con frialdad por encima de sus gafas de sol.*
-**CARMELLA:** "Tengo oídos en las alcantarillas, Vesperwing. Cosas que tu tecnología no registra."
+*Severine le sonríe con frialdad por encima de sus gafas de sol.*
+**SEVERINE:** "Tengo oídos en las alcantarillas, Vesperwing. Cosas que tu tecnología no registra."
 
 ---
 
@@ -586,10 +586,10 @@
 **5 viñetas — El descenso a las alcantarillas de Manhattan.**
 
 **Viñeta 57.1 (Tira Panel 1) — Plano general**
-*Carmella abre una pesada reja de hierro oxidada oculta tras unos contenedores en el callejón.*
+*Severine abre una pesada reja de hierro oxidada oculta tras unos contenedores en el callejón.*
 
 **Viñeta 57.2 (Tira Panel 2) — Plano detalle**
-*La mano de Carmella con guante de terciopelo girando una llave de metal antigua en la cerradura.*
+*La mano de Severine con guante de terciopelo girando una llave de metal antigua en la cerradura.*
 
 **Viñeta 57.3 (Tira Panel 3) — Plano medio**
 *Ian examina el marco de la entrada, notando la ausencia total de cables de red o sensores tácticos.*
@@ -621,7 +621,7 @@
 *Un guardia pálido olfateando el aire húmedo, con sus ojos brillando en rojo en la oscuridad.*
 
 **Viñeta 58.5 (Tira Panel 5) — Plano medio**
-*Carmella hace una seña con la mano, indicando a los vigilantes que dejen pasar al grupo.*
+*Severine hace una seña con la mano, indicando a los vigilantes que dejen pasar al grupo.*
 
 **Viñeta 58.6 (Plano General Grande - Insets 3D) — Plano general**
 *Llegan frente a una puerta de metal pesado con un cartel de neón rojo que parpadea.*
@@ -800,7 +800,7 @@
 ---
 
 ### PÁGINA 66 — "Club Under"
-**5 viñetas — El club de Carmilla Nocturna.**
+**5 viñetas — El club de Severine Alucard.**
 
 **Viñeta 66.1 (Plano General Grande - Insets 3D) — Plano general**
 *El interior del club subterráneo estilo Blade. Luces de neón rojo sangre y lluvia artificial en la pista.*
@@ -814,7 +814,7 @@
 *Los vampiros bailando bajo los destellos rojos de las luces.*
 
 **Viñeta 66.4 (Plano General Grande - Insets 3D) — Plano general**
-*Carmella camina por una pasarela de metal elevada, con los clientes abriéndole paso.*
+*Severine camina por una pasarela de metal elevada, con los clientes abriéndole paso.*
 * **INSET 1:** Su bota de cuero negro pisando la rejilla de metal.
 * **INSET 2:** Los clientes del club bajando la cabeza en señal de respeto.
 
@@ -846,19 +846,19 @@
 
 ---
 
-### PÁGINA 68 — "Beso-marca de Carmella"
-**5 viñetas — El beso protector y de marca de Carmella a Julián.**
+### PÁGINA 68 — "Beso-marca de Severine"
+**5 viñetas — El beso protector y de marca de Severine a Julián.**
 
 **Viñeta 68.1 (Tira Panel 1) — Plano general**
-*Carmella se detiene frente a Julián, tomándolo de la barbilla con su mano pálida.*
+*Severine se detiene frente a Julián, tomándolo de la barbilla con su mano pálida.*
 
 **Viñeta 68.2 (Tira Panel 2) — Plano medio**
-*Carmella limpia un rastro de sangre del labio de Julián con su pulgar.*
-**CARMELLA:** "Sos un idiota, Julián. Pero sos mi idiota."
+*Severine limpia un rastro de sangre del labio de Julián con su pulgar.*
+**SEVERINE:** "Sos un idiota, Julián. Pero sos mi idiota."
 
 **Viñeta 68.3 (Plano General Grande - Insets 3D) — Plano general**
-*Carmella besa a Julián en el cuello bajo un neón rojo, marcando su piel.*
-* **INSET 1:** Los dedos de Carmella sujetando el suéter oscuro de Julián.
+*Severine besa a Julián en el cuello bajo un neón rojo, marcando su piel.*
+* **INSET 1:** Los dedos de Severine sujetando el suéter oscuro de Julián.
 * **INSET 2:** Un cliente del bar apartando la mirada con discreción.
 
 **Viñeta 68.4 (Tira Panel 3) — Plano detalle**

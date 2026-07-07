@@ -459,6 +459,37 @@ export const secundarios: CharacterDetail[] = [
       crisis: 'Error algorítmico: Si un objetivo actúa de forma irracional o caótica, sus modelos probabilísticos se sobrecargan.',
       stats: { fuerza: 8, inteligencia: 10, carisma: 5, suerte: 6, combate: 10, defensa: 8, especialVal: 9 }
     }
+  },
+  {
+    id: 'severine',
+    name: 'Severine Alucard',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/Fichas/Secundarios/Severine/Severine_ficha.webp',
+    fullBody: '/personajes/Fichas/Secundarios/Severine/Severine_ficha.webp',
+    color: '#8b0000',
+    role: 'La Reina del Nadir',
+    visualCode: 'Abrigo militar victoriano rojo carmesí, manto negro de terciopelo, guantes negros de contención',
+    perfil: [
+      'Soberana del Nadir: Gobierna la civilización vampírica subterránea y protege a los de linaje (aquellos que eligen no ser monstruos).',
+      'Última heredera Alucard: Capaz de resistir la corrupción de la sangre de Drácula y destinada a contener su legado.',
+      'Edad de Sangre: Su cuerpo no envejece de forma normal; alterna entre una forma joven descubierta y una forma antigua de pelo blanco con guantes negros.'
+    ],
+    crisis: 'Pérdida de Recuerdos: Cada vez que obliga a otro vampiro a obedecer mediante su Soberanía Hemática, sacrifica un recuerdo personal importante.',
+    stats: { fuerza: 8, inteligencia: 9, carisma: 10, suerte: 6, combate: 8, defensa: 7, especialVal: 10 },
+    especialLabel: 'Soberanía Hemática',
+    hint: 'Se desbloqueará en el próximo cómic de Distrito Nulo.',
+    powers: {
+      role: 'Reina del Nadir',
+      habilidades: [
+        'Soledad del Linaje (Soberanía Hemática): Control absoluto sobre cualquier vampiro descendiente de Drácula, a costa de sus propios recuerdos.',
+        'Manipulación y Armas Hemáticas: Modela su propia sangre en cuchillas, filamentos y sellos letales.',
+        'Descomposición en Enjambre: Transmuta parte de su cuerpo en murciélagos para desplazarse rápidamente a través de sombras.'
+      ],
+      significa: 'La soberana de la noche. Domina el combate de media distancia mediante constructos de sangre y subyugación de voluntades.',
+      crisis: 'Corrupción Primordial: El uso excesivo de su poder desata la sangre de Balanar en ella, envejeciéndola y haciéndola rastreable.',
+      stats: { fuerza: 10, inteligencia: 10, carisma: 10, suerte: 7, combate: 10, defensa: 9, especialVal: 10 }
+    }
   }
 ];
 
