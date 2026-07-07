@@ -34,8 +34,13 @@ export const CHARACTER_DETAILS: CharacterDetail[] = rawCharacters
       const generatedPortadas = images.portadas || [];
       const generatedFichas   = images.fichas || [];
 
-      // If the character doesn't have an image in PORTADAS, exclude them (except for locaciones)
-      if (char.category !== "locaciones" && generatedPortadas.length === 0) {
+      // If the character doesn't have any images at all (no portadas, no fichas, and no fallback image), exclude them (except for locaciones)
+      if (
+        char.category !== "locaciones" &&
+        generatedPortadas.length === 0 &&
+        generatedFichas.length === 0 &&
+        !char.image
+      ) {
         return null;
       }
 

@@ -523,12 +523,15 @@ export function BlueprintsTab({ unlockAll = false, readChapters = [] }: Blueprin
   const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
 
   const normalizedChapters = readChapters.map((id) => id.toLowerCase().trim());
+  const hasReadDistritoNulo =
+    unlockAll || normalizedChapters.includes("despertar") || normalizedChapters.includes("pecados de brooklyn-la mentira");
   const hasReadDistritoNulo2 =
     unlockAll || normalizedChapters.includes("pecados de brooklyn-la mentira");
 
   const availableBlueprints = [
     ...BLUEPRINTS,
-    ...(hasReadDistritoNulo2 ? ANTAGONISTAS_BLUEPRINTS : []),
+    ...(hasReadDistritoNulo ? ANTAGONISTAS_BLUEPRINTS.filter((b) => b.id === "don") : []),
+    ...(hasReadDistritoNulo2 ? ANTAGONISTAS_BLUEPRINTS.filter((b) => b.id !== "don") : []),
   ];
 
   const bp = availableBlueprints.find((b) => b.id === activeId) ?? availableBlueprints[0];

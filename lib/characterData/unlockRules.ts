@@ -9,7 +9,7 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   sofi: [],
 
   // Secundarios
-  matapobre: ['never-unlocked'],
+  matapobre: ['Worlds'],
   supertrucker: [], // Siempre desbloqueado (supercamionero)
   coleccionista: [], // Siempre desbloqueado (the tinkerer)
   rylai: ['never-unlocked'],
@@ -31,11 +31,11 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   warden: ['never-unlocked'],
 
   // Antagonistas
-  don: ['Pecados de Brooklyn-La mentira'],
+  don: ['Despertar', 'Pecados de Brooklyn-La mentira'],
   phobos: ['Pecados de Brooklyn-La mentira'],
   shinjuro: ['Kenji'], // Se desbloquea al terminar #2 Kenji de Dusk: El Silencio del Dragón
   balthazar: ['never-unlocked'],
-  comandante: ['never-unlocked'],
+  comandante: ['Despertar', 'Pecados de Brooklyn-La mentira'],
   gorgon: ['Pecados de Brooklyn-La mentira'],
 
   // Entidades

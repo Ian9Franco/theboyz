@@ -53,6 +53,14 @@ export function UnlockNotificationModal({
         color: "#a855f7", // Purple
       };
     }
+    if (norm === "despertar") {
+      return {
+        title: "INFORMACIÓN CLASIFICADA REVELADA",
+        item: "DON VANGUARD & COMANDANTE R.E.G.U.L.A.R.",
+        desc: "Se ha autorizado el acceso a los perfiles tácticos y planos iniciales en la base de datos.",
+        color: "#a855f7", // Purple
+      };
+    }
     if (norm === "pecados de brooklyn-la mentira") {
       return {
         title: "INFORMACIÓN CLASIFICADA REVELADA",
