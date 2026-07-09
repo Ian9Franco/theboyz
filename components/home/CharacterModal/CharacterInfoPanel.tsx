@@ -56,10 +56,10 @@ export function CharacterInfoPanel({
   handlePowersModeToggle,
 }: CharacterInfoPanelProps) {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
-  const [showAlts, setShowAlts] = useState(false);
+  const [showAlts, setShowAlts] = useState(true);
 
   useEffect(() => {
-    setShowAlts(false);
+    setShowAlts(true);
   }, [char.id]);
 
   const isPibe =
@@ -89,6 +89,9 @@ export function CharacterInfoPanel({
     } else if (selectedImageId.startsWith("ficha_alt_")) {
       const idx = parseInt(selectedImageId.replace("ficha_alt_", ""), 10);
       selectedImageSrc = char.fichaImages?.[idx] || "";
+    } else if (selectedImageId.startsWith("sheet_")) {
+      const idx = parseInt(selectedImageId.replace("sheet_", ""), 10);
+      selectedImageSrc = conceptArts[char.id]?.[idx]?.path || "";
     }
 
     if (selectedImageSrc) {

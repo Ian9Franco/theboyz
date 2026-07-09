@@ -19,10 +19,22 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
+  "balthazar": [
+    {
+      "name": "Balthazar Vane Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Balthazar Vane/Balthazar vane_sheet.webp",
+      "isAlt": false
+    }
+  ],
   "comandante": [
     {
-      "name": "R.e.g.u.l.a.r Y Los V.o.p.s Sheet",
-      "path": "/personajes/GUIAS/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R y los V.O.P.S_sheet.webp",
+      "name": "R.e.g.u.l.a.r Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "V.o.p.s Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Comandante R.E.G.U.L.A.R/v.o.p.s_sheet.webp",
       "isAlt": false
     }
   ],
@@ -47,11 +59,6 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "maker": [
     {
-      "name": "Norman Parker Sheet",
-      "path": "/personajes/GUIAS/antagonistas/Maker/Norman Parker_sheet.webp",
-      "isAlt": false
-    },
-    {
       "name": "Maker Sheet",
       "path": "/personajes/GUIAS/antagonistas/Maker/Maker_sheet.webp",
       "isAlt": false
@@ -59,6 +66,11 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Maker Sheet Alt",
       "path": "/personajes/GUIAS/antagonistas/Maker/Maker_sheet_alt.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Norman Parker Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Maker/Norman Parker_sheet.webp",
       "isAlt": false
     }
   ],
@@ -74,10 +86,10 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
-  "a_uandi": [
+  "shinjuro": [
     {
-      "name": "A Uandi Sheet",
-      "path": "/personajes/GUIAS/boyz/AEGIS/A-Uandi_sheet.webp",
+      "name": "Shinjuro Kurogane Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Shinjuro Kurogane/Shinjuro Kurogane_sheet.webp",
       "isAlt": false
     }
   ],
@@ -88,88 +100,133 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     },
     {
+      "name": "Aegis Newalt Sheet",
+      "path": "/personajes/GUIAS/boyz/AEGIS/Aegis_newalt_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Aegis New Sheet",
+      "path": "/personajes/GUIAS/boyz/AEGIS/Aegis_new_sheet.webp",
+      "isAlt": false
+    },
+    {
       "name": "Aegis Sheet",
-      "path": "/personajes/GUIAS/boyz/AEGIS/aegis_sheet.webp",
+      "path": "/personajes/GUIAS/boyz/AEGIS/Aegis_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Uandi Combat Sheet",
+      "path": "/personajes/GUIAS/boyz/AEGIS/uandi_combat_sheet.webp",
       "isAlt": false
     },
     {
       "name": "Uandi Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/uandi_sheet.webp",
       "isAlt": false
+    },
+    {
+      "name": "Uandi Sheet Alt",
+      "path": "/personajes/GUIAS/boyz/AEGIS/uandi_sheet_alt.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Uandi To Aegis Sheet",
+      "path": "/personajes/GUIAS/boyz/AEGIS/Uandi_to_Aegis_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "julian": [
+    {
+      "name": "Bandit Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/bandit_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Julian Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/julian_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Old Accion Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/alt/old_accion_sheet.webp",
+      "isAlt": true
+    },
+    {
+      "name": "Old Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/alt/old_alt_sheet.webp",
+      "isAlt": true
+    },
+    {
+      "name": "Old Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/alt/old_sheet.webp",
+      "isAlt": true
     }
   ],
   "sofi": [
     {
-      "name": "Hush Sheet",
-      "path": "/personajes/GUIAS/boyz/HUSH/hush_sheet.webp",
+      "name": "Dusk Sheet",
+      "path": "/personajes/GUIAS/boyz/DUSK/dusk_sheet.webp",
       "isAlt": false
     },
     {
-      "name": "Hush Sheet",
-      "path": "/personajes/GUIAS/boyz/HUSH/hush__sheet.webp",
+      "name": "Dusk Sheet",
+      "path": "/personajes/GUIAS/boyz/DUSK/dusk__sheet.webp",
       "isAlt": false
     },
     {
       "name": "Sofi Sheet",
-      "path": "/personajes/GUIAS/boyz/HUSH/sofi_sheet.webp",
+      "path": "/personajes/GUIAS/boyz/DUSK/sofi_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "mati": [
+    {
+      "name": "Farsight Sheet",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/farsight_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Mati Sheet",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/mati_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Accion Sheet",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/alt/accion_sheet.webp",
+      "isAlt": true
+    },
+    {
+      "name": "Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/alt/alt_sheet.webp",
+      "isAlt": true
+    },
+    {
+      "name": "Use Sheet",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/alt/use_sheet.webp",
+      "isAlt": true
+    }
+  ],
+  "volvo": [
+    {
+      "name": "Outrider Sheet",
+      "path": "/personajes/GUIAS/boyz/OUTRIDER/outrider_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Volvo Sheet",
+      "path": "/personajes/GUIAS/boyz/OUTRIDER/volvo_sheet.webp",
       "isAlt": false
     }
   ],
   "jaz": [
     {
       "name": "Jaz Sheet",
-      "path": "/personajes/GUIAS/boyz/ORACLE/JAZ_sheet.webp",
+      "path": "/personajes/GUIAS/boyz/SIGIL/JAZ_sheet.webp",
       "isAlt": false
     },
     {
-      "name": "Oracle Sheet",
-      "path": "/personajes/GUIAS/boyz/ORACLE/ORACLE_sheet.webp",
-      "isAlt": false
-    }
-  ],
-  "mati": [
-    {
-      "name": "Mati Sheet",
-      "path": "/personajes/GUIAS/boyz/SWAPFIRE/mati_sheet.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Swapfire Sheet",
-      "path": "/personajes/GUIAS/boyz/SWAPFIRE/swapfire_sheet.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Accion Sheet",
-      "path": "/personajes/GUIAS/boyz/SWAPFIRE/alt/accion_sheet.webp",
-      "isAlt": true
-    },
-    {
-      "name": "Alt Sheet",
-      "path": "/personajes/GUIAS/boyz/SWAPFIRE/alt/alt_sheet.webp",
-      "isAlt": true
-    },
-    {
-      "name": "Use Sheet",
-      "path": "/personajes/GUIAS/boyz/SWAPFIRE/alt/use_sheet.webp",
-      "isAlt": true
-    }
-  ],
-  "volvo": [
-    {
-      "name": "Vector Sheet",
-      "path": "/personajes/GUIAS/boyz/VECTOR/vector_sheet.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Volvo Sheet",
-      "path": "/personajes/GUIAS/boyz/VECTOR/volvo_sheet.webp",
-      "isAlt": false
-    }
-  ],
-  "volvo_carnicero": [
-    {
-      "name": "Volvo Carnicero Sheet",
-      "path": "/personajes/GUIAS/boyz/VECTOR/Volvo Carnicero_sheet.webp",
+      "name": "Sigil Sheet",
+      "path": "/personajes/GUIAS/boyz/SIGIL/SIGIL_sheet.webp",
       "isAlt": false
     }
   ],
@@ -215,52 +272,154 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": true
     }
   ],
-  "julian": [
+  "archon": [
     {
-      "name": "Julian Sheet",
-      "path": "/personajes/GUIAS/boyz/WILDCARD/julian_sheet.webp",
+      "name": "Archon Sheet",
+      "path": "/personajes/GUIAS/deidades/ARCHON/Archon_sheet.webp",
       "isAlt": false
-    },
-    {
-      "name": "Wildcard Sheet",
-      "path": "/personajes/GUIAS/boyz/WILDCARD/wildcard_sheet.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Old Accion Sheet",
-      "path": "/personajes/GUIAS/boyz/WILDCARD/alt/old_accion_sheet.webp",
-      "isAlt": true
-    },
-    {
-      "name": "Old Alt Sheet",
-      "path": "/personajes/GUIAS/boyz/WILDCARD/alt/old_alt_sheet.webp",
-      "isAlt": true
-    },
-    {
-      "name": "Old Sheet",
-      "path": "/personajes/GUIAS/boyz/WILDCARD/alt/old_sheet.webp",
-      "isAlt": true
     }
   ],
-  "magnus": [
+  "lucifer": [
     {
-      "name": "Victor Alt Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Magnus/victor_alt_sheet.webp",
+      "name": "Lucifer Sheet",
+      "path": "/personajes/GUIAS/deidades/Lucifer Morningstar/Lucifer_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "mars": [
+    {
+      "name": "Mars Sheet",
+      "path": "/personajes/GUIAS/deidades/Mars/Mars_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "lion": [
+    {
+      "name": "Lion Sheet",
+      "path": "/personajes/GUIAS/entidades/Lion/Lion_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "balanar": [
+    {
+      "name": "Night Stalker Sheet",
+      "path": "/personajes/GUIAS/entidades/Night Stalker/Night Stalker_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "terrorblade": [
+    {
+      "name": "Terrorblade Sheet",
+      "path": "/personajes/GUIAS/entidades/Terrorblade/Terrorblade_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "astronauta": [
+    {
+      "name": "Concept Art 1",
+      "path": "/personajes/GUIAS/matis/Mati Astronauta/ChatGPT Image 30 jun 2026, 12_02_33 a.m._sheet.webp",
       "isAlt": false
     },
     {
-      "name": "Victor Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Magnus/Victor_sheet.webp",
+      "name": "Mati Astronauta Sheet",
+      "path": "/personajes/GUIAS/matis/Mati Astronauta/Mati_Astronauta_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "augusto": [
+    {
+      "name": "Mati Augusto Sheet",
+      "path": "/personajes/GUIAS/matis/Mati Augusto/Mati Augusto_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "gladiador": [
+    {
+      "name": "Mati Kratos Alt Sheet",
+      "path": "/personajes/GUIAS/matis/Mati Gladiador/Mati_kratos_alt_sheet.webp",
       "isAlt": false
     },
     {
-      "name": "Victor Sheet Alt",
-      "path": "/personajes/GUIAS/Secundarios/Magnus/Victor_sheet_alt.webp",
+      "name": "Mati Kratos Joven Sheet",
+      "path": "/personajes/GUIAS/matis/Mati Gladiador/Mati_Kratos_joven_sheet.webp",
       "isAlt": false
     },
     {
-      "name": "Victor Sheet Alt2",
-      "path": "/personajes/GUIAS/Secundarios/Magnus/Victor_sheet_alt2.webp",
+      "name": "Mati Kratos Sheet",
+      "path": "/personajes/GUIAS/matis/Mati Gladiador/Mati_kratos_Sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "mati_prime": [
+    {
+      "name": "Concept Art 1",
+      "path": "/personajes/GUIAS/matis/Mati Prime/ChatGPT Image 30 jun 2026, 12_01_18 a.m._sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Mati Prime Sheet",
+      "path": "/personajes/GUIAS/matis/Mati Prime/Mati Prime_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "warden": [
+    {
+      "name": "Mati Wardens Sheet",
+      "path": "/personajes/GUIAS/matis/Mati Warden/Mati Wardens_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "aurelia": [
+    {
+      "name": "Aurelia Veyr Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Aurelia Veyr/Aurelia Veyr_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "bristleback": [
+    {
+      "name": "Bristleback Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Bristleback/Bristleback_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "rylai": [
+    {
+      "name": "Crystal Maiden Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Crystal Maiden/Crystal Maiden_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "invoker": [
+    {
+      "name": "Invoker Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Invoker/Invoker_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "john_wick": [
+    {
+      "name": "John Wick Sheet",
+      "path": "/personajes/GUIAS/Secundarios/John Wick/John Wick_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "lucian": [
+    {
+      "name": "Lucian Graves Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Lucian Graves/Lucian Graves_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "mando": [
+    {
+      "name": "Mando Alt Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Mando/Mando_alt_sheet.webp",
+      "isAlt": false
+    },
+    {
+      "name": "Mando Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Mando/Mando_sheet.webp",
       "isAlt": false
     }
   ],
@@ -274,19 +433,40 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   "supertrucker": [
     {
       "name": "Supercamionero Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Supercamionero/Supercamionero_sheet.png",
+      "path": "/personajes/GUIAS/Secundarios/Supercamionero/Supercamionero_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "ymir": [
+    {
+      "name": "Tusk Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Tusk/Tusk_sheet.webp",
       "isAlt": false
     }
   ],
   "valery": [
     {
-      "name": "Valery Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Valery/Valery_sheet.webp",
+      "name": "Valery Alt Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Valery/valery_alt_sheet.webp",
       "isAlt": false
     },
     {
-      "name": "Valery Sheet Alt",
-      "path": "/personajes/GUIAS/Secundarios/Valery/Valery_sheet_alt.webp",
+      "name": "Valery Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Valery/valery_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "vexa": [
+    {
+      "name": "Vexa Ruun Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Vexa Ruun/Vexa Ruun_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "a_uandi": [
+    {
+      "name": "A Uandi Sheet",
+      "path": "/personajes/GUIAS/voughtverse/A-Uandi/A-Uandi_sheet.webp",
       "isAlt": false
     }
   ],
@@ -294,6 +474,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Julander Sheet",
       "path": "/personajes/GUIAS/voughtverse/Julander/Julander_sheet.webp",
+      "isAlt": false
+    }
+  ],
+  "volvo_carnicero": [
+    {
+      "name": "Volvo Butcher Sheet",
+      "path": "/personajes/GUIAS/voughtverse/Volvo Butcher/Volvo Butcher_sheet.webp",
       "isAlt": false
     }
   ]

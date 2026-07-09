@@ -6,6 +6,8 @@ import { ImageLightbox } from "./CharacterModal/ImageLightbox";
 import { EpicTransitionOverlay } from "./CharacterModal/EpicTransitionOverlay";
 import { CharacterInfoPanel } from "./CharacterModal/CharacterInfoPanel";
 
+import { conceptArts } from "@/lib/characterData/conceptArts";
+
 function getTextColor(hexColor: string) {
   if (!hexColor) return "white";
   const color = hexColor.replace("#", "");
@@ -116,6 +118,16 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
       standardImages.push({ id: `ficha_alt_${i}`, label: getCleanImageLabel(src, `Ficha Alt ${i}`), src });
     }
   }
+
+  // Concept Sheets
+  const sheets = conceptArts[char.id] || [];
+  sheets.forEach((sheet, idx) => {
+    standardImages.push({
+      id: `sheet_${idx}`,
+      label: sheet.name,
+      src: sheet.path
+    });
+  });
 
   const [selectedImageId, setSelectedImageId] = useState<string>(() => {
     return standardImages.length > 0 ? standardImages[0].id : "default";

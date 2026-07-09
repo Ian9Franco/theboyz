@@ -189,10 +189,10 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/PORTADAS/Jaz/Sigil.webp",
       "/personajes/PORTADAS/Jaz/sigil1.webp",
     ],
-    "ficha": "/personajes/Fichas/Boyz/ORACLE/Oracle_Ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/SIGIL/Sigil_Ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Boyz/ORACLE/Oracle_Ficha.webp",
-      "/personajes/Fichas/Boyz/ORACLE/Oracle_ficha_alt.webp",
+      "/personajes/Fichas/Boyz/SIGIL/Sigil_Ficha.webp",
+      "/personajes/Fichas/Boyz/SIGIL/Sigil_ficha_alt.webp",
     ]
   },
   "john_wick": {
@@ -227,9 +227,9 @@ export const characterImages: Record<string, CharacterImages> = {
     "portadas": [
       "/personajes/PORTADAS/Julián/Bandit.webp",
     ],
-    "ficha": "/personajes/Fichas/Boyz/WILDCARD/Wildcard_ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/BANDIT/Bandit_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Boyz/WILDCARD/Wildcard_ficha.webp",
+      "/personajes/Fichas/Boyz/BANDIT/Bandit_ficha.webp",
     ]
   },
   "kenji": {
@@ -340,9 +340,9 @@ export const characterImages: Record<string, CharacterImages> = {
     "portadas": [
       "/personajes/PORTADAS/Mati/Farsight.webp",
     ],
-    "ficha": "/personajes/Fichas/Boyz/SWAPFIRE/Swapfire_ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/FARSIGHT/Farsight_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Boyz/SWAPFIRE/Swapfire_ficha.webp",
+      "/personajes/Fichas/Boyz/FARSIGHT/Farsight_ficha.webp",
       "/personajes/Fichas/matis/Matisvariantes.webp",
     ]
   },
@@ -402,9 +402,9 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/PORTADAS/Sofi/Dusk.webp",
       "/personajes/PORTADAS/Sofi/Dusk_alt.webp",
     ],
-    "ficha": "/personajes/Fichas/Boyz/HUSH/Hush_Ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/DUSK/Dusk_Ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Boyz/HUSH/Hush_Ficha.webp",
+      "/personajes/Fichas/Boyz/DUSK/Dusk_Ficha.webp",
     ]
   },
   "supertrucker": {
@@ -461,9 +461,9 @@ export const characterImages: Record<string, CharacterImages> = {
     "portadas": [
       "/personajes/PORTADAS/Volvo/Outrider.webp",
     ],
-    "ficha": "/personajes/Fichas/Boyz/VECTOR/NULL-VECTOR_ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/OUTRIDER/OUTRIDER_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Boyz/VECTOR/NULL-VECTOR_ficha.webp",
+      "/personajes/Fichas/Boyz/OUTRIDER/OUTRIDER_ficha.webp",
     ]
   },
   "volvo_carnicero": {
