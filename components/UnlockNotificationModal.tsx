@@ -69,6 +69,14 @@ export function UnlockNotificationModal({
         color: "#a855f7", // Purple
       };
     }
+    if (norm === "la caceria") {
+      return {
+        title: "EXPEDIENTE DESBLOQUEADO",
+        item: "SEVERINE ALUCARD",
+        desc: "Se ha descifrado y cargado la ficha confidencial de Severine Alucard, matriarca vampírica del Nadir, en el registro de personajes.",
+        color: "#dc2626", // Crimson
+      };
+    }
     return null;
   };
 

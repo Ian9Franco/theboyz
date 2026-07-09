@@ -55,7 +55,8 @@ export function CinematicReader({
         "un-lugar",
         "kenji",
         "mativerse-chapter-one",
-        "pecados de brooklyn-la mentira"
+        "pecados de brooklyn-la mentira",
+        "la caceria"
       ];
       const chapId = chapter.id;
       if (triggerChapters.includes(chapId.toLowerCase().trim())) {

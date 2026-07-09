@@ -31,7 +31,8 @@ export default function ChapterPage() {
       "un-lugar",
       "kenji",
       "mativerse-chapter-one",
-      "pecados de brooklyn-la mentira"
+      "pecados de brooklyn-la mentira",
+      "la caceria"
     ];
     if (triggerChapters.includes(id.toLowerCase().trim())) {
       try {

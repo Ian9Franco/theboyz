@@ -478,7 +478,7 @@ export const secundarios: CharacterDetail[] = [
     crisis: 'Pérdida de Recuerdos: Cada vez que obliga a otro vampiro a obedecer mediante su Soberanía Hemática, sacrifica un recuerdo personal importante.',
     stats: { fuerza: 8, inteligencia: 9, carisma: 10, suerte: 6, combate: 8, defensa: 7, especialVal: 10 },
     especialLabel: 'Soberanía Hemática',
-    hint: 'Se desbloqueará en el próximo cómic de Distrito Nulo.',
+    hint: 'Terminá La cacería para desbloquear.',
     powers: {
       role: 'Reina del Nadir',
       habilidades: [

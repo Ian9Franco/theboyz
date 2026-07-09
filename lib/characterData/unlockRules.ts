@@ -18,7 +18,7 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   ymir: ['never-unlocked'],
   kenji: ['Un Lugar'], // Se desbloquea al terminar #1 Un Lugar de Dusk: El Silencio del Dragón
   valery: ['never-unlocked'],
-  severine: ['never-unlocked'],
+  severine: ['La caceria'],
 
   // Voughtverse
   julander: ['never-unlocked'],
