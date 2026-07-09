@@ -331,7 +331,7 @@ Composición: secuencia de combate diagonal con impacto central blanco. Ritmo: a
 ### Prompt de página completa
 > [ESTILO BASE] [AEGIS] [GORGON] Full comic page layout, heavy action with diagonal slash gutters. Top-left large panel: Aegis charges headlong, fists clenched, red trail tearing across park mud. Center dominant impact panel on pure white background: Aegis's punch crashes into Gorgon's polymer-reinforced guard, ground cracking under their feet, trees bending from shockwave. Overlapping insets show stone splitting and neon-green metatoxin surging violently in Gorgon's arm tubes. Right-side vertical combat strip: Gorgon counters with a heavy elbow to Aegis's neck; Aegis recovers and throws a hammer-fist. Bottom wide panel: Gorgon is forced onto one knee while a stone bridge cracks behind them, mud spraying past the panel frame. [NEGATIVO ESTÁNDAR]
 
----
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 # PÁGINA 61 — "Más fuerte no significa más claro"
 Composición: Aegis ocupa la página, Gorgon lo lee desde insets fríos. Ritmo: sobrecarga y desgaste estratégico.
@@ -376,7 +376,7 @@ Composición: refugio elegante interrumpido por aterrizaje sucio. Ritmo: tensió
 ### Prompt de página completa
 > [ESTILO BASE] [JAZ] [MATI] [JULIAN] [UANDI] Full comic page layout, elegant refuge disrupted. Top calm panel: Jaz speaks with Mati and Julián inside an immaculate penthouse, clean white rug, glass balcony doors, warm golden aura restrained. Left vertical alert strip: close-up of Jaz's face suddenly pausing; her golden aura flickers; glass balcony doors shake as something heavy lands outside. Dominant middle panel: Uandi kneels on the balcony in pre-dawn blue light, covered in mud, soot and twigs, steam rising from his back, city horizon just beginning to pale behind him. Bottom wide panel: Uandi limps inside and collapses onto the clean white rug while Jaz looks at him with resignation and anger, hand on forehead. Insets: muddy torn boot marking the white rug; soot and water dripping from his hand. [NEGATIVO ESTÁNDAR]
 
----
+---.-.--.-.-.-.-.-.-.-.-.-.-.-.-.-..-.-
 
 # PÁGINA 66 — "Club under / Severine y Julián"
 Composición: splash de lugar + entrada de Severine en catwalk con detalles incrustados. Ritmo: descenso al ambiente de club mientras arriba ya amanece.
