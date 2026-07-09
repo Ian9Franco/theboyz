@@ -100,6 +100,11 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     },
     {
+      "name": "Aegis Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/AEGIS/aegis_alt_sheet.webp",
+      "isAlt": false
+    },
+    {
       "name": "Aegis Newalt Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/Aegis_newalt_sheet.webp",
       "isAlt": false

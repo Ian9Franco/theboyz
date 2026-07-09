@@ -119,16 +119,6 @@ export function CharacterModal({ char, onClose }: { char: any; onClose: () => vo
     }
   }
 
-  // Concept Sheets
-  const sheets = conceptArts[char.id] || [];
-  sheets.forEach((sheet, idx) => {
-    standardImages.push({
-      id: `sheet_${idx}`,
-      label: sheet.name,
-      src: sheet.path
-    });
-  });
-
   const [selectedImageId, setSelectedImageId] = useState<string>(() => {
     return standardImages.length > 0 ? standardImages[0].id : "default";
   });
