@@ -33,10 +33,8 @@ interface ReaderTopBarProps {
   setSpeedMultiplier: (value: number) => void;
   resetPage: (idx: number) => void;
   onOpenHelp: () => void;
-  focusDialogue?: boolean;
-  setFocusDialogue?: (value: boolean) => void;
-  focusPanel?: boolean;
-  setFocusPanel?: (value: boolean) => void;
+  focusEnabled?: boolean;
+  setFocusEnabled?: (value: boolean) => void;
   zoomScale?: number;
   setZoomScale?: React.Dispatch<React.SetStateAction<number>>;
   panOffset?: { x: number; y: number };
@@ -66,10 +64,8 @@ export function ReaderTopBar({
   setSpeedMultiplier,
   resetPage,
   onOpenHelp,
-  focusDialogue = true,
-  setFocusDialogue,
-  focusPanel = true,
-  setFocusPanel,
+  focusEnabled = true,
+  setFocusEnabled,
   zoomScale,
   setZoomScale,
   panOffset,
@@ -116,6 +112,9 @@ export function ReaderTopBar({
   const dropdownBg = isReadMode
     ? "bg-[#111118] border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.7)]"
     : "bg-white border-2 border-[#0a0a0f] shadow-[4px_4px_0_#0a0a0f]";
+  const mobileZoomMin = 0.75;
+  const mobileZoomMax = 2.75;
+  const mobileZoomStep = 0.25;
 
   return (
     <>
@@ -176,8 +175,8 @@ export function ReaderTopBar({
             {mode === "read" && setZoomScale && zoomScale !== undefined && (
               <div className="flex md:hidden items-center gap-1 bg-black/40 border border-white/20 px-1 py-0.5 rounded-sm shrink-0">
                 <button
-                  onClick={() => setZoomScale((prev) => Math.max(0.5, prev - 0.5))}
-                  disabled={zoomScale <= 0.5}
+                  onClick={() => setZoomScale((prev) => Math.max(mobileZoomMin, prev - mobileZoomStep))}
+                  disabled={zoomScale <= mobileZoomMin}
                   className="w-7 h-7 flex items-center justify-center font-bold text-white bg-white/10 hover:bg-white/20 disabled:opacity-30 disabled:pointer-events-none rounded-sm text-sm"
                 >
                   －
@@ -186,8 +185,8 @@ export function ReaderTopBar({
                   {zoomScale.toFixed(1)}x
                 </span>
                 <button
-                  onClick={() => setZoomScale((prev) => Math.min(4, prev + 0.5))}
-                  disabled={zoomScale >= 4}
+                  onClick={() => setZoomScale((prev) => Math.min(mobileZoomMax, prev + mobileZoomStep))}
+                  disabled={zoomScale >= mobileZoomMax}
                   className="w-7 h-7 flex items-center justify-center font-bold text-white bg-white/10 hover:bg-white/20 disabled:opacity-30 disabled:pointer-events-none rounded-sm text-sm"
                 >
                   ＋
@@ -289,7 +288,7 @@ export function ReaderTopBar({
                         {/* Autoplay */}
                         <div className={`flex items-center justify-between pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
                           <span className={`font-[var(--font-bangers)] text-[10px] uppercase tracking-wider ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
-                            Auto-Avance:
+                            Auto avance:
                           </span>
                           <button
                             onClick={() => setAutoplay(!autoplay)}
@@ -299,44 +298,25 @@ export function ReaderTopBar({
                                 : "bg-rose-500 border-rose-400 text-white"
                             }`}
                           >
-                            {autoplay ? "✓ Sí" : "✗ No"}
+                              {autoplay ? "ON" : "OFF"}
                           </button>
                         </div>
 
-                        {/* Focus Panel */}
-                        {setFocusPanel && (
+                        {/* Focus */}
+                        {setFocusEnabled && (
                           <div className={`flex items-center justify-between pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
                             <span className={`font-[var(--font-bangers)] text-[10px] uppercase tracking-wider ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
-                              Enfoque Viñeta:
+                              Enfoque:
                             </span>
                             <button
-                              onClick={() => setFocusPanel(!focusPanel)}
+                              onClick={() => setFocusEnabled(!focusEnabled)}
                               className={`font-[var(--font-bangers)] text-xs px-2.5 py-1 border transition-all rounded-sm ${
-                                focusPanel
+                                focusEnabled
                                   ? "bg-emerald-500 border-emerald-400 text-white"
                                   : "bg-rose-500 border-rose-400 text-white"
                               }`}
                             >
-                              {focusPanel ? "✓ Sí" : "✗ No"}
-                            </button>
-                          </div>
-                        )}
-
-                        {/* Focus Dialogue */}
-                        {setFocusDialogue && (
-                          <div className={`flex items-center justify-between pt-2 ${isReadMode ? "border-t border-white/10" : "border-t border-zinc-100"}`}>
-                            <span className={`font-[var(--font-bangers)] text-[10px] uppercase tracking-wider ${isReadMode ? "text-zinc-400" : "text-zinc-500"}`}>
-                              Foco Diálogos:
-                            </span>
-                            <button
-                              onClick={() => setFocusDialogue(!focusDialogue)}
-                              className={`font-[var(--font-bangers)] text-xs px-2.5 py-1 border transition-all rounded-sm ${
-                                focusDialogue
-                                  ? "bg-emerald-500 border-emerald-400 text-white"
-                                  : "bg-rose-500 border-rose-400 text-white"
-                              }`}
-                            >
-                              {focusDialogue ? "✓ Sí" : "✗ No"}
+                              {focusEnabled ? "ON" : "OFF"}
                             </button>
                           </div>
                         )}

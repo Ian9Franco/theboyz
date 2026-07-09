@@ -376,13 +376,13 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "severine": {
-    "portada": "/personajes/PORTADAS/Severine/Severine.png",
+    "portada": "/personajes/PORTADAS/Severine/Severine.webp",
     "portadas": [
-      "/personajes/PORTADAS/Severine/Severine.png",
+      "/personajes/PORTADAS/Severine/Severine.webp",
     ],
-    "ficha": "/personajes/Fichas/Secundarios/Severine/severine_ficha.png",
+    "ficha": "/personajes/Fichas/Secundarios/Severine/severine_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/Secundarios/Severine/severine_ficha.png",
+      "/personajes/Fichas/Secundarios/Severine/severine_ficha.webp",
     ]
   },
   "shinjuro": {

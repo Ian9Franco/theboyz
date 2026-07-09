@@ -7,6 +7,12 @@ interface UseReaderZoomProps {
   containerRef: React.RefObject<HTMLDivElement | null>;
 }
 
+const TOUCH_ZOOM_MIN = 0.75;
+const TOUCH_ZOOM_MAX = 2.75;
+const TOUCH_ZOOM_RESPONSE = 0.65;
+const WHEEL_ZOOM_MIN = 0.5;
+const WHEEL_ZOOM_MAX = 4;
+
 /**
  * useReaderZoom Hook
  * Encapsulates pan, zoom, wheel zoom, double-tap zoom, pinch-to-zoom,
@@ -81,12 +87,11 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
     handlePanEnd();
   };
 
-  const toggleZoomAtPoint = (clientX: number, clientY: number) => {
+  const toggleZoomAtPoint = (clientX: number, clientY: number, targetScale = 2.5) => {
     if (zoomScale > 1) {
       setZoomScale(1);
       setPanOffset({ x: 0, y: 0 });
     } else {
-      const targetScale = 2.5;
       setZoomScale(targetScale);
 
       if (containerRef.current) {
@@ -131,7 +136,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
 
       if (now - lastTapRef.current < 250) {
         e.preventDefault();
-        toggleZoomAtPoint(touch.clientX, touch.clientY);
+        toggleZoomAtPoint(touch.clientX, touch.clientY, 1.85);
         lastTapRef.current = 0;
         setIsPanning(false);
         return;
@@ -163,7 +168,11 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
         e.touches[0].clientY - e.touches[1].clientY
       );
       const ratio = dist / initialPinchDistRef.current;
-      const newScale = Math.max(0.5, Math.min(4, initialPinchScaleRef.current * ratio));
+      const softenedRatio = Math.pow(ratio, TOUCH_ZOOM_RESPONSE);
+      const newScale = Math.max(
+        TOUCH_ZOOM_MIN,
+        Math.min(TOUCH_ZOOM_MAX, initialPinchScaleRef.current * softenedRatio)
+      );
       setZoomScale(newScale);
       if (newScale <= 1.01) {
         setPanOffset({ x: 0, y: 0 });
@@ -195,7 +204,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
     const zoomFactor = 0.12;
     const delta = -e.deltaY;
     const factor = delta > 0 ? 1 + zoomFactor : 1 - zoomFactor;
-    const newScale = Math.max(0.5, Math.min(4, zoomScale * factor));
+    const newScale = Math.max(WHEEL_ZOOM_MIN, Math.min(WHEEL_ZOOM_MAX, zoomScale * factor));
 
     setZoomScale(newScale);
 
@@ -226,6 +235,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
     setDraggedBubbleKey(key);
     dragBubbleStartRef.current = { x: e.clientX, y: e.clientY };
     dragBubbleOffsetStartRef.current = bubbleOffsets[key] || { x: 0, y: 0 };
+    totalDragDistRef.current = 0;
   };
 
   const handleBubblePointerMove = (e: React.PointerEvent, key: string) => {
@@ -233,6 +243,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
     e.stopPropagation();
     const dx = e.clientX - dragBubbleStartRef.current.x;
     const dy = e.clientY - dragBubbleStartRef.current.y;
+    totalDragDistRef.current = Math.sqrt(dx * dx + dy * dy);
 
     setBubbleOffsets((prev) => ({
       ...prev,

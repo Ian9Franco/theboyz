@@ -26,6 +26,7 @@ interface DialogueLayersProps {
   bubbleOffsets: Record<string, { x: number; y: number }>;
   draggedBubbleKey: string | null;
   textScale: number;
+  autoplay?: boolean;
   speedMultiplier?: number;
   isPageChanging: boolean;
   activePanelIdx: number;
@@ -37,7 +38,6 @@ interface DialogueLayersProps {
   handleBubblePointerUp: (e: React.PointerEvent, key: string) => void;
   handleDragEnd: (info: any, pIdx: number, bIdx: number) => void;
   handleTailTargetDragEnd: (info: any, pIdx: number, bIdx: number) => void;
-  focusDialogue?: boolean;
   bubbleOpacity?: number;
 }
 
@@ -58,6 +58,7 @@ export function DialogueLayers({
   bubbleOffsets,
   draggedBubbleKey,
   textScale,
+  autoplay = false,
   speedMultiplier = 1.0,
   isPageChanging,
   activePanelIdx,
@@ -69,7 +70,6 @@ export function DialogueLayers({
   handleBubblePointerUp,
   handleDragEnd,
   handleTailTargetDragEnd,
-  focusDialogue = true,
   bubbleOpacity = 0.88,
 }: DialogueLayersProps) {
   const settings = localDialogues.settings || {};
@@ -117,11 +117,12 @@ export function DialogueLayers({
             // Use object reference instead of index so this is correct when
             // clearReadDialogues=true (panelsToRender=[activePanel], pIndex always 0).
             const isCurrentPanel = panel === activePanel;
+            const isPastPanel = autoplay && !clearReadDialogues && pIndex < panelIdx;
             const isBubbleActive =
-              !focusDialogue ||
               showAllDialogues ||
               zoomedOut ||
-              (isCurrentPanel && i === activeReadingBubbleIdx);
+              isPastPanel ||
+              (isCurrentPanel && (autoplay ? i <= activeReadingBubbleIdx : i === activeReadingBubbleIdx));
 
             const isTargetOfAny = dialogueList.some((otherLine, otherIdx) => {
               if (otherIdx === i) return false;
