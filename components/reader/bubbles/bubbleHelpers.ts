@@ -192,6 +192,7 @@ export function resolveFontFamily(
     case "electronic": return "ui-monospace, monospace";
     case "whisper":    return "var(--font-marker)";
     case "sfx":        return "var(--font-bangers)";
+    case "cinematic":  return "var(--font-bungee)";
     case "caption":    return "var(--font-inter), sans-serif";
     default:           return "var(--font-marker)";
   }
@@ -219,6 +220,7 @@ export function resolveFontClass(line: DialogueLine, style?: string): string {
     case "scream":     return "font-[var(--font-bangers)]";
     case "electronic": return "font-mono";
     case "sfx":        return "font-[var(--font-bangers)]";
+    case "cinematic":  return "font-[var(--font-bungee)]";
     default:           return "font-[var(--font-marker)]";
   }
 }
@@ -305,6 +307,7 @@ export function computeBubbleDelay(
     thought:    1.20,
     electronic: 0.70,
     sfx:        0.28,
+    cinematic:  0.45,
     normal:     1.00,
   };
   const styleMul = styleMultiplier[line.style ?? "normal"] ?? 1.0;

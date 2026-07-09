@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Zap, ZapOff } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
 import { conceptArts } from "@/lib/characterData/conceptArts";
@@ -56,11 +56,6 @@ export function CharacterInfoPanel({
   handlePowersModeToggle,
 }: CharacterInfoPanelProps) {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
-  const [showAlts, setShowAlts] = useState(true);
-
-  useEffect(() => {
-    setShowAlts(true);
-  }, [char.id]);
 
   const isPibe =
     char.category === "pibes" ||
@@ -365,9 +360,36 @@ export function CharacterInfoPanel({
           {/* ── Concept Arts section (for Pibes and any other characters in both views) ── */}
           {(conceptArts[char.id] || []).length > 0 && (() => {
             const charConcepts = conceptArts[char.id] || [];
-            const hasAlts = charConcepts.some((c) => c.isAlt);
-            const altCount = charConcepts.filter((c) => c.isAlt).length;
-            const visibleConcepts = showAlts ? charConcepts : charConcepts.filter((c) => !c.isAlt);
+            const sectionWeight = (section: string) => {
+              const key = section.toLowerCase();
+              if (key === "base") return 0;
+              if (key === "alt") return 1;
+              if (key === "old") return 99;
+              return 10;
+            };
+            const conceptSections = Object.values(
+              charConcepts.reduce((acc, item) => {
+                const section = item.section || (item.isAlt ? "alt" : "base");
+                const sectionLabel = item.sectionLabel || (item.isAlt ? "Alt" : "Base");
+                if (!acc[section]) {
+                  acc[section] = {
+                    section,
+                    sectionLabel,
+                    items: [] as Array<typeof item>,
+                  };
+                }
+                acc[section].items.push(item);
+                return acc;
+              }, {} as Record<string, {
+                section: string;
+                sectionLabel: string;
+                items: Array<(typeof charConcepts)[number]>;
+              }>)
+            ).sort((a, b) => {
+              const weightDiff = sectionWeight(a.section) - sectionWeight(b.section);
+              if (weightDiff !== 0) return weightDiff;
+              return a.sectionLabel.localeCompare(b.sectionLabel, "es", { sensitivity: "base" });
+            });
 
             return (
               <div
@@ -378,68 +400,70 @@ export function CharacterInfoPanel({
                   <h4 className={`font-[var(--font-bangers)] text-xs tracking-wider ${isPowersMode ? "text-white" : "text-[#001419]"}`}>
                     CONCEPT ARTS & GALERÍA:
                   </h4>
-                  {hasAlts && (
-                    <button
-                      onClick={() => setShowAlts(!showAlts)}
-                      style={{
-                        backgroundColor: showAlts ? (isPowersMode ? vibrantAccent : accent) : (isPowersMode ? "#1f2937" : "#f1f5f9"),
-                        color: showAlts ? getTextColor(isPowersMode ? vibrantAccent : accent) : (isPowersMode ? "#ffffff" : "#0f172a"),
-                        borderColor: showAlts ? (isPowersMode ? vibrantAccent : accent) : "#001419",
-                        boxShadow: "2.5px 2.5px 0 #000",
-                      }}
-                      className="px-2.5 py-0.5 border-2 font-[var(--font-bangers)] text-[10px] tracking-wider uppercase transition-all hover:scale-105 active:scale-95 flex items-center gap-1 active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#000] cursor-pointer"
-                    >
-                      <span>OLD</span>
-                      <span className="text-[8px] opacity-75">({altCount})</span>
-                    </button>
-                  )}
+                  <span className={`font-[var(--font-marker)] text-[10px] uppercase ${isPowersMode ? "text-gray-300" : "text-gray-600"}`}>
+                    {charConcepts.length} sheets
+                  </span>
                 </div>
-                {visibleConcepts.length > 0 ? (
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    {visibleConcepts.map((item, idx) => (
-                      <div
-                        key={idx}
-                        onClick={() => setLightboxImage(item.path)}
-                        style={{
-                          borderColor: item.isAlt ? (isPowersMode ? `${vibrantAccent}55` : `${accent}55`) : (isPowersMode ? "rgba(255,255,255,0.1)" : "rgba(10,10,15,0.1)"),
-                        }}
-                        className="group relative aspect-[3/4] border-2 bg-slate-100 dark:bg-black/40 rounded overflow-hidden cursor-pointer hover:scale-[1.03] transition-all duration-300 animate-fade-in"
-                      >
-                        {/* Image */}
-                        <img
-                          src={item.path}
-                          alt={item.name}
-                          loading="lazy"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                        
-                        {/* Badge */}
-                        {item.isAlt && (
-                          <span
-                            style={{
-                              backgroundColor: vibrantAccent,
-                              color: getTextColor(vibrantAccent),
-                            }}
-                            className="absolute top-1 right-1 text-[7px] sm:text-[8px] font-[var(--font-bangers)] tracking-wide px-1 py-0.5 border border-black shadow-[1px_1px_0_#000]"
-                          >
-                            ALT
-                          </span>
-                        )}
 
-                        {/* Gradient Overlay & Name */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
-                          <span className="font-[var(--font-bangers)] text-[9px] sm:text-[10px] tracking-wider text-white leading-tight uppercase">
-                            {item.name}
-                          </span>
-                        </div>
+                <div className="flex flex-col gap-4">
+                  {conceptSections.map((section) => (
+                    <div key={section.section} className="flex flex-col gap-2">
+                      <div className="flex items-center gap-2">
+                        <span
+                          style={{
+                            backgroundColor: section.section === "base" ? (isPowersMode ? "#111827" : "#f8fafc") : vibrantAccent,
+                            color: section.section === "base" ? (isPowersMode ? "#ffffff" : "#001419") : getTextColor(vibrantAccent),
+                            borderColor: section.section === "base" ? (isPowersMode ? `${vibrantAccent}55` : "#001419") : "#001419",
+                          }}
+                          className="font-[var(--font-bangers)] text-[10px] tracking-wider uppercase px-2 py-0.5 border-2 shadow-[1.5px_1.5px_0_#000]"
+                        >
+                          {section.sectionLabel}
+                        </span>
+                        <span className={`font-mono text-[9px] ${isPowersMode ? "text-gray-400" : "text-gray-500"}`}>
+                          {section.items.length}
+                        </span>
                       </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className={`text-center py-4 border-2 border-dashed rounded ${isPowersMode ? "border-gray-700/50" : "border-gray-300"}`}>
-                    <span className={`font-[var(--font-marker)] text-xs uppercase ${isPowersMode ? "text-gray-400" : "text-gray-500"}`}>Sin diseños base</span>
-                  </div>
-                )}
+
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        {section.items.map((item) => (
+                          <div
+                            key={`${section.section}-${item.path}`}
+                            onClick={() => setLightboxImage(item.path)}
+                            style={{
+                              borderColor: section.section !== "base" ? (isPowersMode ? `${vibrantAccent}66` : `${accent}66`) : (isPowersMode ? "rgba(255,255,255,0.1)" : "rgba(10,10,15,0.1)"),
+                            }}
+                            className="group relative aspect-[3/4] border-2 bg-slate-100 dark:bg-black/40 rounded overflow-hidden cursor-pointer hover:scale-[1.03] transition-all duration-300 animate-fade-in"
+                          >
+                            <img
+                              src={item.path}
+                              alt={item.name}
+                              loading="lazy"
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+
+                            {section.section !== "base" && (
+                              <span
+                                style={{
+                                  backgroundColor: vibrantAccent,
+                                  color: getTextColor(vibrantAccent),
+                                }}
+                                className="absolute top-1 right-1 text-[7px] sm:text-[8px] font-[var(--font-bangers)] tracking-wide px-1 py-0.5 border border-black shadow-[1px_1px_0_#000] uppercase"
+                              >
+                                {section.sectionLabel}
+                              </span>
+                            )}
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
+                              <span className="font-[var(--font-bangers)] text-[9px] sm:text-[10px] tracking-wider text-white leading-tight uppercase">
+                                {item.name}
+                              </span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             );
           })()}

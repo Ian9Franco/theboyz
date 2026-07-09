@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/assets/generate-character-images.js && node scripts/assets/generate-concept-arts.js",
     "dev": "next dev --webpack",
+    "prebuild": "node scripts/assets/generate-character-images.js && node scripts/assets/generate-concept-arts.js",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",

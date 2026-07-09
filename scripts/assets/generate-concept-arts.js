@@ -86,12 +86,12 @@ charactersList.forEach((char) => {
 
 const IMAGE_EXTENSIONS = new Set(['.webp', '.png', '.jpg', '.jpeg', '.gif']);
 
-function cleanName(fileName, index, isAlt) {
+function cleanName(fileName, index, sectionLabel) {
   const ext = path.extname(fileName);
   const base = path.basename(fileName, ext);
   
   if (base.toLowerCase().includes('chatgpt') || base.toLowerCase().includes('gemini') || /^\d+$/.test(base)) {
-    return `${isAlt ? 'Alt Concept' : 'Concept Art'} ${index + 1}`;
+    return `${sectionLabel === 'Base' ? 'Concept Art' : sectionLabel} ${index + 1}`;
   }
   
   return base
@@ -102,7 +102,24 @@ function cleanName(fileName, index, isAlt) {
     .join(' ');
 }
 
-function getImagesInDir(dirPath, urlPrefix, isAlt) {
+function formatSectionLabel(sectionName) {
+  if (!sectionName || sectionName === 'base') return 'Base';
+  if (sectionName.toLowerCase() === 'old') return 'Old';
+  if (sectionName.toLowerCase() === 'alt') return 'Alt';
+
+  return sectionName
+    .replace(/[-_]+/g, ' ')
+    .trim()
+    .split(' ')
+    .map(word => {
+      const lower = word.toLowerCase();
+      if (/^mk\d+$/i.test(word) || lower === 'mkl') return word.toUpperCase();
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(' ');
+}
+
+function getImagesInDir(dirPath, urlPrefix, section, sectionLabel) {
   if (!fs.existsSync(dirPath)) return [];
   
   const entries = fs.readdirSync(dirPath, { withFileTypes: true });
@@ -114,13 +131,15 @@ function getImagesInDir(dirPath, urlPrefix, isAlt) {
       const ext = path.extname(entry.name).toLowerCase();
       if (IMAGE_EXTENSIONS.has(ext)) {
         const lowerName = entry.name.toLowerCase();
-        // Only include files whose filename contains 'sheet' (case-insensitive)
-        if (lowerName.includes('sheet')) {
-          const name = cleanName(entry.name, genericIndex++, isAlt);
+        // Only include files whose filename contains '_sheet' (case-insensitive)
+        if (lowerName.includes('_sheet')) {
+          const name = cleanName(entry.name, genericIndex++, sectionLabel);
           images.push({
             name,
             path: `${urlPrefix}/${entry.name}`,
-            isAlt
+            section,
+            sectionLabel,
+            isAlt: section !== 'base'
           });
         }
       }
@@ -157,11 +176,38 @@ function generate() {
         const charDir = path.join(categoryDir, folder.name);
         const urlPrefix = `/personajes/GUIAS/${category}/${folder.name}`;
         
-        const mainImages = getImagesInDir(charDir, urlPrefix, false);
-        const altDir = path.join(charDir, 'alt');
-        const altImages = getImagesInDir(altDir, `${urlPrefix}/alt`, true);
+        const sections = [
+          {
+            dirPath: charDir,
+            urlPrefix,
+            section: 'base',
+            sectionLabel: 'Base'
+          }
+        ];
+
+        const subFolders = fs.readdirSync(charDir, { withFileTypes: true })
+          .filter(entry => entry.isDirectory())
+          .map(entry => entry.name)
+          .sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' }));
+
+        for (const subFolder of subFolders) {
+          sections.push({
+            dirPath: path.join(charDir, subFolder),
+            urlPrefix: `${urlPrefix}/${subFolder}`,
+            section: subFolder,
+            sectionLabel: formatSectionLabel(subFolder)
+          });
+        }
         
-        const allImages = [...mainImages, ...altImages];
+        const allImages = sections.flatMap((sectionConfig) =>
+          getImagesInDir(
+            sectionConfig.dirPath,
+            sectionConfig.urlPrefix,
+            sectionConfig.section,
+            sectionConfig.sectionLabel
+          )
+        );
+
         if (allImages.length > 0) {
           mapping[charId] = allImages;
         }
@@ -174,6 +220,8 @@ function generate() {
 export interface ConceptArtItem {
   name: string;
   path: string;
+  section: string;
+  sectionLabel: string;
   isAlt: boolean;
 }
 

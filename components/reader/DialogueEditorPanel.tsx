@@ -65,7 +65,7 @@ export interface DialogueEditorPanelProps {
   setActiveBubbleIdx: (idx: number | null) => void;
   handleRemovePanel: (idx: number) => void;
   handleUpdatePanelParams: (pIdx: number, updates: Partial<PanelConfig>) => void;
-  handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle?: "normal" | "caption") => void;
+  handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle?: "normal" | "caption" | "cinematic") => void;
   handleRemoveBubble: (pIdx: number, bIdx: number) => void;
   handleUpdateBubble: (pIdx: number, bIdx: number, updates: Partial<DialogueLine>) => void;
   handleUpdateSettings: (updates: Partial<ChapterSettings>) => void;

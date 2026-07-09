@@ -108,7 +108,7 @@ export default function NavBar() {
   return (
     <>
       <header
-        className="sticky top-0 z-50 brand-grain-light transition-shadow duration-300"
+        className="site-header sticky top-0 z-50 brand-grain-light transition-shadow duration-300"
         style={{
           borderBottom: "3px solid #880D16",
           boxShadow: scrolled

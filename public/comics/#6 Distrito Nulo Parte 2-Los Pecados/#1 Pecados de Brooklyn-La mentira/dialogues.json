@@ -6,7 +6,8 @@
           "focusY": 0.3,
           "dialogue": [
             { "text": "Prologo", "style": "caption", "size": "small", "posX": 6, "posY": 4, "tailX": 50, "tailY": 5, "tailWidth": 6, "tailCurvature": -22, "width": 155, "fontSize": 12, "borderRadius": 0, "customBg": "#f5e642", "customColor": "#000000", "fontFamily": "sans" },
-            { "text": "Laboratorio científico V.O.P.S", "style": "caption", "size": "small", "posX": 50, "posY": 0, "tailX": 50, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 9, "borderRadius": 4 }
+            { "text": "Laboratorio científico V.O.P.S", "style": "caption", "size": "small", "posX": 50, "posY": 0, "tailX": 50, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 9, "borderRadius": 4 },
+            { "text": "Nuevo diálogo", "style": "cinematic", "size": "small", "posX": 40, "posY": 120, "tailX": 70, "tailY": 120, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "rgba(255, 255, 255, 0.88)", "textColor": "#0a0a0f" }
           ]
         }
       ]
@@ -23,7 +24,7 @@
         {
           "focusY": 0.46,
           "dialogue": [
-            { "text": "tiki tiki tiki", "style": "sfx", "size": "small", "posX": 20, "posY": 36, "tailX": 48, "tailY": 52, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "tiki tiki tiki", "style": "sfx", "size": "small", "posX": 20, "posY": 36, "tailX": 48, "tailY": 52, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 14, "borderRadius": 18 },
             { "text": "Tengo que borrar el historial y apagar esta máquina. Si el Comandante o Don Vanguard se enteran de que soy un mutante... no voy a salir de este edificio.", "size": "small", "posX": 4, "posY": 52, "tailX": 48, "tailY": 44, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "versiones de mati", "style": "caption", "size": "small", "posX": 102, "posY": 56, "tailX": 50, "tailY": 61, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
             { "text": "estas personas.. sera que..", "size": "small", "posX": 106, "posY": 62, "tailX": 76, "tailY": 62, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
@@ -43,7 +44,7 @@
         {
           "focusY": 0.14,
           "dialogue": [
-            { "text": "CLANG", "style": "sfx", "size": "small", "posX": 82, "posY": 28, "tailX": 50, "tailY": 29, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+            { "text": "CLANG", "style": "sfx", "size": "small", "posX": 82, "posY": 28, "tailX": 50, "tailY": 29, "tailWidth": 10, "tailCurvature": -22, "width": 160, "fontSize": 15, "borderRadius": 18 }
           ]
         },
         {

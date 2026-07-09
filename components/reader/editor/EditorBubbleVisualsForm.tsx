@@ -62,8 +62,153 @@ export function EditorBubbleVisualsForm({
           <option value="whisper">Susurro (Discontinuo/Itálico)</option>
           <option value="electronic">Electrónico (Futurista/Monospace)</option>
           <option value="sfx">💥 Efecto de Sonido (SFX/Onomatopeya)</option>
+          <option value="cinematic">Cinemático (Texto Épico Grande)</option>
         </select>
       </div>
+
+      {/* Cinematic Text Presets */}
+      {bubble.style === "cinematic" && (
+        <div className="flex flex-col gap-2 p-2.5 bg-cyan-950/20 border border-cyan-800/40 rounded shadow-[1px_1px_0_rgba(0,240,255,0.1)]">
+          <label className="text-[10px] font-bold text-cyan-300 uppercase tracking-wider">
+            Texto grande cinematográfico:
+          </label>
+          <div className="grid grid-cols-2 gap-1.5">
+            <button
+              type="button"
+              onClick={() => {
+                handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                  cinematicVariant: "translucent",
+                  cinematic3d: true,
+                  customBg: "transparent",
+                  customColor: "#0a0a0f",
+                  textColor: "#0a0a0f",
+                  fontFamily: "bungee",
+                  fontSize: 76,
+                  width: 900,
+                  tail: "none",
+                  tailX: undefined,
+                  tailY: undefined,
+                });
+              }}
+              className="p-1.5 bg-zinc-900/80 hover:bg-zinc-800 border border-zinc-700 text-zinc-100 text-[10px] font-bold rounded transition-colors cursor-pointer"
+            >
+              Translúcido oscuro
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                  cinematicVariant: "solid",
+                  cinematic3d: true,
+                  customBg: "transparent",
+                  customColor: "#0a0a0f",
+                  textColor: "#ffffff",
+                  fontFamily: "bungee",
+                  fontSize: 70,
+                  width: 820,
+                  tail: "none",
+                  tailX: undefined,
+                  tailY: undefined,
+                });
+              }}
+              className="p-1.5 bg-white hover:bg-zinc-100 border border-zinc-300 text-[#0a0a0f] text-[10px] font-bold rounded transition-colors cursor-pointer"
+            >
+              Sólido blanco
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                  cinematicVariant: "outline",
+                  cinematic3d: false,
+                  customBg: "transparent",
+                  customColor: "#0a0a0f",
+                  textColor: "#ffffff",
+                  fontFamily: "bungee",
+                  fontSize: 74,
+                  width: 860,
+                  tail: "none",
+                  tailX: undefined,
+                  tailY: undefined,
+                });
+              }}
+              className="p-1.5 bg-[#0a0a0f] hover:bg-[#161622] border border-white/30 text-white text-[10px] font-bold rounded transition-colors cursor-pointer"
+            >
+              Solo borde
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                  cinematicVariant: "solid",
+                  cinematic3d: true,
+                  customBg: "transparent",
+                  customColor: "#0a0a0f",
+                  textColor: "#e81818",
+                  fontFamily: "bungee",
+                  fontSize: 82,
+                  width: 900,
+                  tail: "none",
+                  tailX: undefined,
+                  tailY: undefined,
+                });
+              }}
+              className="p-1.5 bg-red-950/60 hover:bg-red-900/60 border border-red-800 text-red-300 text-[10px] font-bold rounded transition-colors cursor-pointer"
+            >
+              Rojo impacto
+            </button>
+          </div>
+
+          <div className="grid grid-cols-2 gap-2">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] font-bold text-zinc-400">Modo:</label>
+              <select
+                value={bubble.cinematicVariant || "translucent"}
+                onChange={(e) =>
+                  handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                    cinematicVariant: e.target.value as DialogueLine["cinematicVariant"],
+                  })
+                }
+                className="w-full border border-white/10 p-1.5 text-xs font-mono rounded bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a] cursor-pointer"
+              >
+                <option value="translucent">Translúcido</option>
+                <option value="solid">Sólido</option>
+                <option value="outline">Solo borde</option>
+              </select>
+            </div>
+            <label className="flex items-center justify-between gap-2 text-[10px] font-bold text-zinc-300 bg-[#0a0a0f] border border-white/10 rounded px-2 py-1.5 mt-4">
+              Profundidad 3D
+              <input
+                type="checkbox"
+                checked={bubble.cinematic3d ?? true}
+                onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { cinematic3d: e.target.checked })}
+                className="accent-[#00f0ff] cursor-pointer"
+              />
+            </label>
+          </div>
+
+          <div className="grid grid-cols-2 gap-2">
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] font-bold text-zinc-400">Color texto:</label>
+              <input
+                type="color"
+                value={bubble.textColor || "#ffffff"}
+                onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { textColor: e.target.value })}
+                className="w-full h-8 p-0 border border-white/10 rounded cursor-pointer bg-transparent"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] font-bold text-zinc-400">Sombra/3D:</label>
+              <input
+                type="color"
+                value={bubble.customColor || "#0a0a0f"}
+                onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { customColor: e.target.value })}
+                className="w-full h-8 p-0 border border-white/10 rounded cursor-pointer bg-transparent"
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Sound SFX Presets */}
       {bubble.style === "sfx" && (

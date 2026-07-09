@@ -127,7 +127,7 @@ interface EditorTabPanelsProps {
   setActiveBubbleIdx: (idx: number | null) => void;
   handleRemovePanel: (idx: number) => void;
   handleUpdatePanelParams: (pIdx: number, updates: Partial<PanelConfig>) => void;
-  handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle?: "normal" | "caption") => void;
+  handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle?: "normal" | "caption" | "cinematic") => void;
   presetMode?: "standard" | "custom";
   handleReorderPanels: (startIndex: number, endIndex: number) => void;
 }
@@ -437,7 +437,7 @@ export function EditorTabPanels({
                               }`}
                             >
                               <span className="text-[9px] bg-white/5 px-1 rounded mr-1">
-                                {bub.style === "caption" ? "Narr." : "Diál."}
+                                {bub.style === "caption" ? "Narr." : bub.style === "cinematic" ? "Cine." : "Diál."}
                               </span>
                               {bub.speaker ? `${bub.speaker}: ` : ""}
                               {bub.text || "(vacío)"}
@@ -469,6 +469,16 @@ export function EditorTabPanels({
                           className="flex-1 text-[10px] bg-[#f5e642] hover:bg-yellow-500 text-black font-bold py-1.5 px-2 rounded border border-yellow-600/20 text-center transition-colors cursor-pointer"
                         >
                           📜 + Narración
+                        </button>
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleAddBubble(pIdx, undefined, "cinematic");
+                          }}
+                          className="flex-1 text-[10px] bg-cyan-900 hover:bg-cyan-800 text-cyan-100 font-bold py-1.5 px-2 rounded border border-cyan-700/40 text-center transition-colors cursor-pointer"
+                        >
+                          🎬 + Épico
                         </button>
                       </div>
                     </div>
@@ -1120,16 +1130,28 @@ export function EditorTabPanels({
                       <div className="p-2 border-t border-white/5 flex flex-col gap-2 bg-[#0a0a0f]/40">
                         <div className="flex justify-between items-center mb-1">
                           <span className="text-[10px] font-bold text-zinc-500">Globos:</span>
-                          <button
-                            type="button"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleAddBubble(pIdx);
-                            }}
-                            className="text-xs text-[#e8185a] hover:text-rose-400 hover:underline font-bold"
-                          >
-                            + Agregar Globo
-                          </button>
+                          <div className="flex gap-2">
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleAddBubble(pIdx);
+                              }}
+                              className="text-xs text-[#e8185a] hover:text-rose-400 hover:underline font-bold"
+                            >
+                              + Globo
+                            </button>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleAddBubble(pIdx, undefined, "cinematic");
+                              }}
+                              className="text-xs text-cyan-300 hover:text-cyan-200 hover:underline font-bold"
+                            >
+                              + Épico
+                            </button>
+                          </div>
                         </div>
 
                         <div className="flex flex-col gap-1.5">

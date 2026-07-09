@@ -3,6 +3,8 @@
 export interface ConceptArtItem {
   name: string;
   path: string;
+  section: string;
+  sectionLabel: string;
   isAlt: boolean;
 }
 
@@ -11,11 +13,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Apex Alt Sheet",
       "path": "/personajes/GUIAS/antagonistas/Apex/apex_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Apex Sheet",
       "path": "/personajes/GUIAS/antagonistas/Apex/Apex_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -23,6 +29,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Balthazar Vane Sheet",
       "path": "/personajes/GUIAS/antagonistas/Balthazar Vane/Balthazar vane_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -30,11 +38,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "R.e.g.u.l.a.r Sheet",
       "path": "/personajes/GUIAS/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "V.o.p.s Sheet",
       "path": "/personajes/GUIAS/antagonistas/Comandante R.E.G.U.L.A.R/v.o.p.s_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -42,6 +54,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Don Vanguard Sheet",
       "path": "/personajes/GUIAS/antagonistas/Don Vanguard/don vanguard_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -49,11 +63,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Gorgon Ficha Sheet",
       "path": "/personajes/GUIAS/antagonistas/Gorgon/gorgon_ficha_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Gorgon Sheet Altjpeg",
       "path": "/personajes/GUIAS/antagonistas/Gorgon/Gorgon_sheet_altjpeg.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -61,16 +79,22 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Maker Sheet",
       "path": "/personajes/GUIAS/antagonistas/Maker/Maker_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Maker Sheet Alt",
       "path": "/personajes/GUIAS/antagonistas/Maker/Maker_sheet_alt.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Norman Parker Sheet",
       "path": "/personajes/GUIAS/antagonistas/Maker/Norman Parker_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -78,11 +102,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Alt Sheet",
       "path": "/personajes/GUIAS/antagonistas/Phobos/alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Phobos Sheet",
       "path": "/personajes/GUIAS/antagonistas/Phobos/phobos_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -90,6 +118,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Shinjuro Kurogane Sheet",
       "path": "/personajes/GUIAS/antagonistas/Shinjuro Kurogane/Shinjuro Kurogane_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -97,46 +127,64 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Aegis Full Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/aegis full_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Aegis Alt Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/aegis_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Aegis Newalt Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/Aegis_newalt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Aegis New Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/Aegis_new_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Aegis Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/Aegis_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Uandi Combat Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/uandi_combat_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Uandi Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/uandi_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Uandi Sheet Alt",
       "path": "/personajes/GUIAS/boyz/AEGIS/uandi_sheet_alt.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Uandi To Aegis Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/Uandi_to_Aegis_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -144,26 +192,43 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Bandit Sheet",
       "path": "/personajes/GUIAS/boyz/BANDIT/bandit_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Julian Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/julian_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Julian Sheet",
       "path": "/personajes/GUIAS/boyz/BANDIT/julian_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Old Accion Sheet",
-      "path": "/personajes/GUIAS/boyz/BANDIT/alt/old_accion_sheet.webp",
+      "path": "/personajes/GUIAS/boyz/BANDIT/old/old_accion_sheet.webp",
+      "section": "old",
+      "sectionLabel": "Old",
       "isAlt": true
     },
     {
       "name": "Old Alt Sheet",
-      "path": "/personajes/GUIAS/boyz/BANDIT/alt/old_alt_sheet.webp",
+      "path": "/personajes/GUIAS/boyz/BANDIT/old/old_alt_sheet.webp",
+      "section": "old",
+      "sectionLabel": "Old",
       "isAlt": true
     },
     {
       "name": "Old Sheet",
-      "path": "/personajes/GUIAS/boyz/BANDIT/alt/old_sheet.webp",
+      "path": "/personajes/GUIAS/boyz/BANDIT/old/old_sheet.webp",
+      "section": "old",
+      "sectionLabel": "Old",
       "isAlt": true
     }
   ],
@@ -171,16 +236,22 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Dusk Sheet",
       "path": "/personajes/GUIAS/boyz/DUSK/dusk_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Dusk Sheet",
       "path": "/personajes/GUIAS/boyz/DUSK/dusk__sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Sofi Sheet",
       "path": "/personajes/GUIAS/boyz/DUSK/sofi_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -188,26 +259,50 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Farsight Sheet",
       "path": "/personajes/GUIAS/boyz/FARSIGHT/farsight_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Mati Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/mati_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Mati Sheet   Copia",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/mati_sheet - copia.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Mati Sheet",
       "path": "/personajes/GUIAS/boyz/FARSIGHT/mati_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Accion Sheet",
-      "path": "/personajes/GUIAS/boyz/FARSIGHT/alt/accion_sheet.webp",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/old/accion_sheet.webp",
+      "section": "old",
+      "sectionLabel": "Old",
       "isAlt": true
     },
     {
       "name": "Alt Sheet",
-      "path": "/personajes/GUIAS/boyz/FARSIGHT/alt/alt_sheet.webp",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/old/alt_sheet.webp",
+      "section": "old",
+      "sectionLabel": "Old",
       "isAlt": true
     },
     {
       "name": "Use Sheet",
-      "path": "/personajes/GUIAS/boyz/FARSIGHT/alt/use_sheet.webp",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/old/use_sheet.webp",
+      "section": "old",
+      "sectionLabel": "Old",
       "isAlt": true
     }
   ],
@@ -215,11 +310,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Outrider Sheet",
       "path": "/personajes/GUIAS/boyz/OUTRIDER/outrider_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Volvo Sheet",
       "path": "/personajes/GUIAS/boyz/OUTRIDER/volvo_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -227,11 +326,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Jaz Sheet",
       "path": "/personajes/GUIAS/boyz/SIGIL/JAZ_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Sigil Sheet",
       "path": "/personajes/GUIAS/boyz/SIGIL/SIGIL_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -239,41 +342,64 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Ian Sheet",
       "path": "/personajes/GUIAS/boyz/VESPERWING/ian_sheet.webp",
-      "isAlt": false
-    },
-    {
-      "name": "Mk3 Sheet",
-      "path": "/personajes/GUIAS/boyz/VESPERWING/MK3_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Vesperwing Alt Sheet",
       "path": "/personajes/GUIAS/boyz/VESPERWING/vesperwing_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Vesperwing Sheet",
       "path": "/personajes/GUIAS/boyz/VESPERWING/vesperwing_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Ian Siut Sheet",
       "path": "/personajes/GUIAS/boyz/VESPERWING/alt/IAN_SIUT_sheet.webp",
+      "section": "alt",
+      "sectionLabel": "Alt",
       "isAlt": true
     },
     {
       "name": "Mk3 Spider Sheet",
       "path": "/personajes/GUIAS/boyz/VESPERWING/alt/MK3 SPIDER_sheet.webp",
+      "section": "alt",
+      "sectionLabel": "Alt",
       "isAlt": true
     },
     {
       "name": "Suit Capucha Sheet",
       "path": "/personajes/GUIAS/boyz/VESPERWING/alt/SUIT CAPUCHA_sheet.webp",
+      "section": "alt",
+      "sectionLabel": "Alt",
       "isAlt": true
     },
     {
       "name": "Suit Sheet",
       "path": "/personajes/GUIAS/boyz/VESPERWING/alt/SUIT_sheet.webp",
+      "section": "alt",
+      "sectionLabel": "Alt",
+      "isAlt": true
+    },
+    {
+      "name": "Mk3 Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/mk3/MK3_sheet.webp",
+      "section": "mk3",
+      "sectionLabel": "MK3",
+      "isAlt": true
+    },
+    {
+      "name": "Mkl Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/MKL/MKL_sheet.webp",
+      "section": "MKL",
+      "sectionLabel": "MKL",
       "isAlt": true
     }
   ],
@@ -281,6 +407,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Archon Sheet",
       "path": "/personajes/GUIAS/deidades/ARCHON/Archon_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -288,6 +416,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Lucifer Sheet",
       "path": "/personajes/GUIAS/deidades/Lucifer Morningstar/Lucifer_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -295,6 +425,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Mars Sheet",
       "path": "/personajes/GUIAS/deidades/Mars/Mars_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -302,6 +434,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Lion Sheet",
       "path": "/personajes/GUIAS/entidades/Lion/Lion_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -309,6 +443,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Night Stalker Sheet",
       "path": "/personajes/GUIAS/entidades/Night Stalker/Night Stalker_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -316,6 +452,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Terrorblade Sheet",
       "path": "/personajes/GUIAS/entidades/Terrorblade/Terrorblade_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -323,11 +461,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Concept Art 1",
       "path": "/personajes/GUIAS/matis/Mati Astronauta/ChatGPT Image 30 jun 2026, 12_02_33 a.m._sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Mati Astronauta Sheet",
       "path": "/personajes/GUIAS/matis/Mati Astronauta/Mati_Astronauta_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -335,6 +477,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Mati Augusto Sheet",
       "path": "/personajes/GUIAS/matis/Mati Augusto/Mati Augusto_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -342,16 +486,22 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Mati Kratos Alt Sheet",
       "path": "/personajes/GUIAS/matis/Mati Gladiador/Mati_kratos_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Mati Kratos Joven Sheet",
       "path": "/personajes/GUIAS/matis/Mati Gladiador/Mati_Kratos_joven_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Mati Kratos Sheet",
       "path": "/personajes/GUIAS/matis/Mati Gladiador/Mati_kratos_Sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -359,11 +509,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Concept Art 1",
       "path": "/personajes/GUIAS/matis/Mati Prime/ChatGPT Image 30 jun 2026, 12_01_18 a.m._sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Mati Prime Sheet",
       "path": "/personajes/GUIAS/matis/Mati Prime/Mati Prime_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -371,6 +525,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Mati Wardens Sheet",
       "path": "/personajes/GUIAS/matis/Mati Warden/Mati Wardens_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -378,6 +534,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Aurelia Veyr Sheet",
       "path": "/personajes/GUIAS/Secundarios/Aurelia Veyr/Aurelia Veyr_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -385,6 +543,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Bristleback Sheet",
       "path": "/personajes/GUIAS/Secundarios/Bristleback/Bristleback_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -392,6 +552,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Crystal Maiden Sheet",
       "path": "/personajes/GUIAS/Secundarios/Crystal Maiden/Crystal Maiden_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -399,6 +561,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Invoker Sheet",
       "path": "/personajes/GUIAS/Secundarios/Invoker/Invoker_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -406,6 +570,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "John Wick Sheet",
       "path": "/personajes/GUIAS/Secundarios/John Wick/John Wick_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -413,6 +579,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Lucian Graves Sheet",
       "path": "/personajes/GUIAS/Secundarios/Lucian Graves/Lucian Graves_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -420,11 +588,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Mando Alt Sheet",
       "path": "/personajes/GUIAS/Secundarios/Mando/Mando_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Mando Sheet",
       "path": "/personajes/GUIAS/Secundarios/Mando/Mando_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -432,6 +604,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Matapobres Sheet",
       "path": "/personajes/GUIAS/Secundarios/Matapobres/MATAPOBRES_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -439,6 +613,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Supercamionero Sheet",
       "path": "/personajes/GUIAS/Secundarios/Supercamionero/Supercamionero_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -446,6 +622,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Tusk Sheet",
       "path": "/personajes/GUIAS/Secundarios/Tusk/Tusk_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -453,18 +631,52 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Valery Alt Sheet",
       "path": "/personajes/GUIAS/Secundarios/Valery/valery_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Valery Sheet",
       "path": "/personajes/GUIAS/Secundarios/Valery/valery_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
+    },
+    {
+      "name": "Valery Alt Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Valery/old/Valery_alt_sheet.webp",
+      "section": "old",
+      "sectionLabel": "Old",
+      "isAlt": true
+    },
+    {
+      "name": "Valery Old Sheet Alt",
+      "path": "/personajes/GUIAS/Secundarios/Valery/old/Valery_old_sheet_alt.webp",
+      "section": "old",
+      "sectionLabel": "Old",
+      "isAlt": true
+    },
+    {
+      "name": "Valery Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Valery/old/Valery_sheet.webp",
+      "section": "old",
+      "sectionLabel": "Old",
+      "isAlt": true
+    },
+    {
+      "name": "Whatsapp Image 2026 06 29 At 11.42.04 (3) Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Valery/old/WhatsApp Image 2026-06-29 at 11.42.04 (3)_sheet.webp",
+      "section": "old",
+      "sectionLabel": "Old",
+      "isAlt": true
     }
   ],
   "vexa": [
     {
       "name": "Vexa Ruun Sheet",
       "path": "/personajes/GUIAS/Secundarios/Vexa Ruun/Vexa Ruun_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -472,6 +684,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "A Uandi Sheet",
       "path": "/personajes/GUIAS/voughtverse/A-Uandi/A-Uandi_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -479,6 +693,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Julander Sheet",
       "path": "/personajes/GUIAS/voughtverse/Julander/Julander_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ],
@@ -486,6 +702,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Volvo Butcher Sheet",
       "path": "/personajes/GUIAS/voughtverse/Volvo Butcher/Volvo Butcher_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
       "isAlt": false
     }
   ]

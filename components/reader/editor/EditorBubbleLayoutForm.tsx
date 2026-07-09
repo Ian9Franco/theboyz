@@ -22,6 +22,19 @@ export function EditorBubbleLayoutForm({
   handleMoveBubbleToPanel,
 }: EditorBubbleLayoutFormProps) {
   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
+  const isCinematic = bubble.style === "cinematic";
+  const widthMin = isCinematic ? 220 : 50;
+  const widthMax = isCinematic ? 1200 : 600;
+  const widthDefault = isCinematic ? 900 : 250;
+  const widthStep = isCinematic ? 10 : 5;
+  const fontMin = isCinematic ? 24 : 8;
+  const fontMax = isCinematic ? 160 : 36;
+  const fontDefault = isCinematic ? 76 : 14;
+  const stripInlineFormatting = (text: string) =>
+    text
+      .replace(/\*\*/g, "")
+      .replace(/\[color:[^\]]+\]/g, "")
+      .replace(/\[\/color\]/g, "");
 
   const insertFormatting = (tagStart: string, tagEnd: string, textValue: string, onUpdate: (val: string) => void, textareaEl: HTMLTextAreaElement | null) => {
     if (!textareaEl) {
@@ -62,10 +75,10 @@ export function EditorBubbleLayoutForm({
           </div>
           <input
             type="range"
-            min="50"
-            max="600"
-            step="5"
-            value={bubble.width || 250}
+            min={widthMin}
+            max={widthMax}
+            step={widthStep}
+            value={bubble.width || widthDefault}
             onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { width: parseInt(e.target.value) })}
             className="w-full accent-[#e8185a] cursor-pointer"
           />
@@ -87,10 +100,10 @@ export function EditorBubbleLayoutForm({
           </div>
           <input
             type="range"
-            min="8"
-            max="36"
+            min={fontMin}
+            max={fontMax}
             step="1"
-            value={bubble.fontSize || 14}
+            value={bubble.fontSize || fontDefault}
             onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { fontSize: parseInt(e.target.value) })}
             className="w-full accent-[#e8185a] cursor-pointer"
           />
@@ -131,63 +144,88 @@ export function EditorBubbleLayoutForm({
       <div className="flex flex-col gap-1">
         <div className="flex justify-between items-center">
           <label className="text-xs font-bold text-zinc-300">Texto:</label>
-          <button
-            type="button"
-            onClick={async () => {
-              try {
-                const text = await navigator.clipboard.readText();
-                if (text) {
-                  handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text });
+          <div className="flex items-center gap-1.5">
+            {isCinematic && (
+              <button
+                type="button"
+                onClick={() =>
+                  handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                    text: stripInlineFormatting(bubble.text || ""),
+                  })
                 }
-              } catch (err) {
-                console.error("Error al leer el portapapeles:", err);
-              }
-            }}
-            className="font-[var(--font-bangers)] text-[10px] bg-blue-950/40 hover:bg-blue-900/30 text-blue-300 border border-blue-900/40 px-2 py-0.5 rounded transition-all cursor-pointer"
-          >
-            ⚡ Auto (Pegar)
-          </button>
+                className="font-[var(--font-bangers)] text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-white/10 px-2 py-0.5 rounded transition-all cursor-pointer"
+              >
+                Limpiar formato
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={async () => {
+                try {
+                  const text = await navigator.clipboard.readText();
+                  if (text) {
+                    handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                      text: isCinematic ? stripInlineFormatting(text) : text,
+                    });
+                  }
+                } catch (err) {
+                  console.error("Error al leer el portapapeles:", err);
+                }
+              }}
+              className="font-[var(--font-bangers)] text-[10px] bg-blue-950/40 hover:bg-blue-900/30 text-blue-300 border border-blue-900/40 px-2 py-0.5 rounded transition-all cursor-pointer"
+            >
+              ⚡ Auto (Pegar)
+            </button>
+          </div>
         </div>
         {/* Formatting Toolbar */}
-        <div className="flex items-center gap-1 bg-[#0a0a0f] border border-white/10 rounded-t p-1">
-          <button
-            type="button"
-            onClick={() => insertFormatting("**", "**", bubble.text || "", (txt) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: txt }), textareaRef.current)}
-            className="px-2 py-0.5 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded text-xs active:scale-95 transition-all cursor-pointer border border-white/5"
-            title="Negrita"
-          >
-            B
-          </button>
-          
-          <div className="h-4 w-px bg-white/10 mx-1" />
-          
-          <span className="text-[10px] text-zinc-500 font-mono mr-1">Color:</span>
-          {[
-            { hex: "#e8185a", name: "Rosa" },
-            { hex: "#00f0ff", name: "Cian" },
-            { hex: "#10b981", name: "Verde" },
-            { hex: "#f5e642", name: "Amarillo" },
-            { hex: "#8b5cf6", name: "Violeta" },
-            { hex: "#f97316", name: "Naranja" },
-            { hex: "#ffffff", name: "Blanco" },
-            { hex: "#0a0a0f", name: "Negro" },
-          ].map((c) => (
+        {!isCinematic && (
+          <div className="flex items-center gap-1 bg-[#0a0a0f] border border-white/10 rounded-t p-1">
             <button
-              key={c.hex}
               type="button"
-              onClick={() => insertFormatting(`[color:${c.hex}]`, "[/color]", bubble.text || "", (txt) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: txt }), textareaRef.current)}
-              className="w-3.5 h-3.5 rounded-full border border-white/20 hover:scale-110 active:scale-95 transition-all cursor-pointer"
-              style={{ backgroundColor: c.hex }}
-              title={c.name}
-            />
-          ))}
-        </div>
+              onClick={() => insertFormatting("**", "**", bubble.text || "", (txt) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: txt }), textareaRef.current)}
+              className="px-2 py-0.5 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded text-xs active:scale-95 transition-all cursor-pointer border border-white/5"
+              title="Negrita"
+            >
+              B
+            </button>
+
+            <div className="h-4 w-px bg-white/10 mx-1" />
+
+            <span className="text-[10px] text-zinc-500 font-mono mr-1">Color:</span>
+            {[
+              { hex: "#e8185a", name: "Rosa" },
+              { hex: "#00f0ff", name: "Cian" },
+              { hex: "#10b981", name: "Verde" },
+              { hex: "#f5e642", name: "Amarillo" },
+              { hex: "#8b5cf6", name: "Violeta" },
+              { hex: "#f97316", name: "Naranja" },
+              { hex: "#ffffff", name: "Blanco" },
+              { hex: "#0a0a0f", name: "Negro" },
+            ].map((c) => (
+              <button
+                key={c.hex}
+                type="button"
+                onClick={() => insertFormatting(`[color:${c.hex}]`, "[/color]", bubble.text || "", (txt) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: txt }), textareaRef.current)}
+                className="w-3.5 h-3.5 rounded-full border border-white/20 hover:scale-110 active:scale-95 transition-all cursor-pointer"
+                style={{ backgroundColor: c.hex }}
+                title={c.name}
+              />
+            ))}
+          </div>
+        )}
         <textarea
           ref={textareaRef}
-          value={bubble.text}
-          onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: e.target.value })}
-          className="w-full h-20 border border-white/10 border-t-0 p-2 text-xs font-sans rounded-b bg-[#0a0a0f] text-white resize-none focus:outline-none focus:ring-1 focus:ring-[#e8185a]"
-          placeholder="Escribí el diálogo..."
+          value={isCinematic ? stripInlineFormatting(bubble.text) : bubble.text}
+          onChange={(e) =>
+            handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+              text: isCinematic ? stripInlineFormatting(e.target.value) : e.target.value,
+            })
+          }
+          className={`w-full h-20 border border-white/10 p-2 text-xs font-sans bg-[#0a0a0f] text-white resize-none focus:outline-none focus:ring-1 focus:ring-[#e8185a] ${
+            isCinematic ? "rounded" : "border-t-0 rounded-b"
+          }`}
+          placeholder={isCinematic ? "Texto grande para la escena..." : "Escribí el diálogo..."}
         />
       </div>
 

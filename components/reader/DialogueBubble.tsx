@@ -4,16 +4,19 @@ import React from "react";
 import { CaptionBubble } from "./bubbles/CaptionBubble";
 import { ThoughtBubble } from "./bubbles/ThoughtBubble";
 import { StandardBubble } from "./bubbles/StandardBubble";
+import { CinematicTextBubble } from "./bubbles/CinematicTextBubble";
 import { SPEAKER_COLORS, resolveBgColor } from "./bubbles/bubbleHelpers";
 
 export type DialogueLine = {
   text: string;
   speaker?: string | null;
-  style?: "normal" | "caption" | "thought" | "scream" | "whisper" | "electronic" | "sfx";
+  style?: "normal" | "caption" | "thought" | "scream" | "whisper" | "electronic" | "sfx" | "cinematic";
   tail?: "bottom-left" | "bottom-right" | "top-left" | "top-right" | "left" | "right" | "none";
   posX?: number;
   posY?: number;
   size?: "small" | "medium" | "large";
+  cinematicVariant?: "translucent" | "solid" | "outline";
+  cinematic3d?: boolean;
   customColor?: string;
   customBg?: string;
   textColor?: string;    // Custom text/typography color in hex
@@ -54,6 +57,10 @@ export function getBubbleStyles(line: DialogueLine, bubbleOpacity?: number) {
     bgColor     = line.customBg    || "transparent";
     borderColor = line.customColor || "#0a0a0f";
     strokeWidth = 3;
+  } else if (style === "cinematic") {
+    bgColor     = "transparent";
+    borderColor = line.customColor || "#0a0a0f";
+    strokeWidth = 0;
   }
   return { bgColor, borderColor, strokeWidth };
 }
@@ -112,6 +119,21 @@ export function DialogueBubble({
         textScale={textScale}
         speedMultiplier={speedMultiplier}
         bubbleOpacity={bubbleOpacity}
+      />
+    );
+  }
+
+  if (style === "cinematic") {
+    return (
+      <CinematicTextBubble
+        line={line}
+        index={index}
+        instant={instant}
+        appearanceAnimation={appearanceAnimation}
+        fadeOutAnimation={fadeOutAnimation}
+        depth={depth}
+        textScale={textScale}
+        speedMultiplier={speedMultiplier}
       />
     );
   }

@@ -106,7 +106,7 @@ export function useDialogueEditor({
     updateDialoguesState(updatedPages);
   };
 
-  const handleAddBubble = (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle: "normal" | "caption" = "normal") => {
+  const handleAddBubble = (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle: "normal" | "caption" | "cinematic" = "normal") => {
     const updatedPages = { ...localDialogues.pages };
     const pg = { ...currentPageData };
     const panelsCopy = [...(pg.panels || [])];
@@ -117,28 +117,34 @@ export function useDialogueEditor({
     const posY = defaultPosition ? defaultPosition.posY : Math.round(targetPanel.focusY * 100);
 
     const isStandard = presetMode === "standard";
+    const isCaption = defaultStyle === "caption";
+    const isCinematic = defaultStyle === "cinematic";
 
     dialoguesCopy.push({
-      text: defaultStyle === "caption" ? "Texto de la narración..." : "Nuevo diálogo",
+      text: isCinematic ? "HONORARTE" : isCaption ? "Texto de la narración..." : "Nuevo diálogo",
       speaker: "",
       style: defaultStyle,
-      size: defaultStyle === "caption" ? "medium" : "small",
+      size: isCinematic ? "large" : isCaption ? "medium" : "small",
       posX,
       posY,
-      tailX: posX,
-      tailY: posY + 15,
-      tailWidth: 6,
-      tailCurvature: -22,
-      width: defaultStyle === "caption" ? 160 : 120,
-      fontSize: 9,
-      borderRadius: defaultStyle === "caption" ? 4 : 18,
-      tail: defaultStyle === "caption" ? "none" : undefined,
-      fontFamily: isStandard 
-        ? "marker" 
-        : (defaultStyle === "caption" ? "sans" : undefined),
-      customBg: isStandard && defaultStyle === "caption" ? "#f5e642" : undefined,
-      textColor: isStandard && defaultStyle === "caption" ? "#000000" : undefined,
-      customColor: isStandard && defaultStyle === "caption" ? "#0a0a0f" : undefined,
+      tailX: isCinematic ? undefined : posX,
+      tailY: isCinematic ? undefined : posY + 15,
+      tailWidth: isCinematic ? undefined : 6,
+      tailCurvature: isCinematic ? undefined : -22,
+      width: isCinematic ? 900 : isCaption ? 160 : 120,
+      fontSize: isCinematic ? 76 : 9,
+      borderRadius: isCinematic ? 0 : isCaption ? 4 : 18,
+      tail: isCinematic || isCaption ? "none" : undefined,
+      fontFamily: isCinematic
+        ? "bungee"
+        : isStandard
+          ? "marker"
+          : isCaption ? "sans" : undefined,
+      customBg: isCinematic ? "transparent" : isStandard && isCaption ? "#f5e642" : undefined,
+      textColor: isCinematic ? "#0a0a0f" : isStandard && isCaption ? "#000000" : undefined,
+      customColor: isCinematic ? "#0a0a0f" : isStandard && isCaption ? "#0a0a0f" : undefined,
+      cinematicVariant: isCinematic ? "translucent" : undefined,
+      cinematic3d: isCinematic ? true : undefined,
     });
 
     targetPanel.dialogue = dialoguesCopy;
@@ -228,9 +234,18 @@ export function useDialogueEditor({
     const rect = imgRef.current.getBoundingClientRect();
     if (rect.width <= 0 || rect.height <= 0) return;
 
-    // Convert absolute screen coordinate to image relative percentage
-    let relativeX = ((info.point.x - rect.left) / rect.width) * 100;
-    let relativeY = ((info.point.y - rect.top) / rect.height) * 100;
+    const pg = localDialogues.pages?.[pageKey] || { panels: [] };
+    const panel = pg.panels?.[pIdx];
+    const line = panel?.dialogue?.[bIdx];
+    if (!panel || !line) return;
+
+    const startX = line.posX ?? 50;
+    const startY = line.posY ?? Math.round((panel.focusY ?? 0.5) * 100);
+
+    // Use the dragged distance instead of the pointer position. Large cinematic text
+    // can be grabbed from an edge, so treating the pointer as the center makes it jump.
+    let relativeX = startX + (info.offset.x / rect.width) * 100;
+    let relativeY = startY + (info.offset.y / rect.height) * 100;
 
     // Apply grid snapping if enabled
     if (snapToGrid) {
