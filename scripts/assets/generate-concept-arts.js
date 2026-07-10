@@ -73,6 +73,13 @@ const pibeAliases = {
 
 // Map folder names to character IDs
 const folderToCharId = {};
+function registerFolderAlias(folderName, charId) {
+  const key = folderName?.toLowerCase();
+  if (key && !folderToCharId[key]) {
+    folderToCharId[key] = charId;
+  }
+}
+
 charactersList.forEach((char) => {
   const category = char.category.toLowerCase();
   let charFolderName;
@@ -81,7 +88,11 @@ charactersList.forEach((char) => {
   } else {
     charFolderName = char.name.replace(/[\\/:*?"<>|]/g, '');
   }
-  folderToCharId[charFolderName.toLowerCase()] = char.id;
+
+  registerFolderAlias(charFolderName, char.id);
+  registerFolderAlias(char.id.replace(/[_-]+/g, ' '), char.id);
+  registerFolderAlias(char.id.replace(/[_\s]+/g, '-'), char.id);
+  registerFolderAlias(char.id, char.id);
 });
 
 const IMAGE_EXTENSIONS = new Set(['.webp', '.png', '.jpg', '.jpeg', '.gif']);
