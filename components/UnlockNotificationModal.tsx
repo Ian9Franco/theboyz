@@ -72,8 +72,8 @@ export function UnlockNotificationModal({
     if (norm === "la caceria") {
       return {
         title: "EXPEDIENTE DESBLOQUEADO",
-        item: "SEVERINE ALUCARD",
-        desc: "Se ha descifrado y cargado la ficha confidencial de Severine Alucard, matriarca vampírica del Nadir, en el registro de personajes.",
+        item: "SEVERINE ALUCARD & MAKER",
+        desc: "Se han descifrado y cargado las fichas confidenciales de Severine Alucard y Norman Parker, el peligroso villano conocido como Maker, en el registro de personajes.",
         color: "#dc2626", // Crimson
       };
     }

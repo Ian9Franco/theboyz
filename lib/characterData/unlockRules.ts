@@ -38,6 +38,7 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   balthazar: ['never-unlocked'],
   comandante: ['Despertar', 'Pecados de Brooklyn-La mentira'],
   gorgon: ['Pecados de Brooklyn-La mentira'],
+  maker: ['La caceria'],
 
   // Entidades
   krillor: ['never-unlocked'],
