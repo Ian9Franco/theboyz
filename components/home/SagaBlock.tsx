@@ -15,6 +15,56 @@ function getTextColor(hexColor: string) {
   return yiq >= 140 ? "#001419" : "white";
 }
 
+function FeaturedMobileChapters({
+  saga,
+  colorPrimary,
+  readChapters,
+  isClient,
+  unlockAll,
+  onBack,
+}: {
+  saga: any;
+  colorPrimary: string;
+  readChapters: string[];
+  isClient: boolean;
+  unlockAll: boolean;
+  onBack: () => void;
+}) {
+  return (
+    <div className="mobile-chapter-view hidden relative z-10 flex-col gap-5 p-5">
+      <div className="flex items-center justify-between gap-3 border-b-2 border-dashed border-[#001419]/20 pb-4">
+        <div>
+          <p className="font-[var(--font-bangers)] text-[10px] tracking-[0.22em] text-[#D7263D] uppercase">{saga.title}</p>
+          <h4 className="font-[var(--font-bangers)] text-xl tracking-wider text-[#001419]">EPISODIOS</h4>
+        </div>
+        <button
+          onClick={onBack}
+          className="shrink-0 font-[var(--font-bangers)] text-sm tracking-wider px-3 py-2 border-2 border-[#001419] bg-white text-[#001419] shadow-[2px_2px_0_#001419] active:translate-x-0.5 active:translate-y-0.5 cursor-pointer"
+        >
+          ← VOLVER
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1 gap-4">
+        {saga.chapters.map((chapter: any, ci: number) => {
+          const isLocked = isClient && !unlockAll && ci > 0 && !readChapters.includes(saga.chapters[ci - 1].id);
+          return (
+            <ChapterCard
+              key={chapter.id}
+              chapter={chapter}
+              sagaId={saga.id}
+              sagaColor={colorPrimary}
+              index={ci}
+              isLocked={isLocked}
+              sagaCover={saga.cover}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 export function SagaBlock({ 
   saga, 
   index, 
@@ -76,7 +126,7 @@ export function SagaBlock({
         onClick={() => { if (isCollapsed && typeof window !== 'undefined' && window.innerWidth < 768) onToggleCollapse?.(); }}
         className={`reader-page-drop border-4 border-dashed border-[#D7263D]/80 relative overflow-hidden rounded-lg opacity-95 transition-all duration-300 flex flex-row items-stretch min-h-[350px] animate-fadeIn ${
           isCollapsed 
-            ? "w-12 sm:w-14 md:w-full cursor-pointer md:cursor-default select-none md:select-text pl-0 md:pl-12 md:sm:pl-14" 
+            ? "w-full h-16 min-h-16 md:w-full md:h-auto md:min-h-[350px] cursor-pointer md:cursor-default select-none md:select-text pl-0 md:pl-12 md:sm:pl-14" 
             : "w-full pl-12 sm:pl-14"
         }`}
         style={{
@@ -94,7 +144,7 @@ export function SagaBlock({
               onToggleCollapse?.(); 
             }
           }}
-          className={`absolute left-0 top-0 bottom-0 w-12 sm:w-14 bg-[#D7263D] flex items-center justify-center shrink-0 select-none border-r-4 border-black z-20 ${
+          className={`absolute left-0 top-0 bottom-0 w-12 sm:w-14 bg-[#D7263D] flex items-center justify-center shrink-0 select-none border-r-4 border-black z-20 ${isCollapsed ? "mobile-upcoming-banner" : ""} ${
             isCollapsed 
               ? "cursor-pointer" 
               : "cursor-pointer hover:bg-[#ff3b51] transition-colors"
@@ -255,12 +305,20 @@ export function SagaBlock({
     if (isNuevo) {
       return (
         <div 
-          className="reader-page-drop border-4 border-black relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn"
+          className={`reader-page-drop border-4 border-black relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn ${showChapters ? "mobile-chapters-open" : ""}`}
           style={{
             boxShadow: "10px 10px 0 #001419, 14px 14px 0 #D7263D, 0 25px 50px -12px rgba(0, 184, 212, 0.35)",
             background: "#ecf7f8"
           }}
         >
+          <FeaturedMobileChapters
+            saga={saga}
+            colorPrimary={colorPrimary}
+            readChapters={readChapters}
+            isClient={isClient}
+            unlockAll={unlockAll}
+            onBack={() => setShowChapters(false)}
+          />
           {/* Horizontal Banner for nuevo - un poco más grande */}
           <div 
             className="w-full bg-[#D7263D] text-white border-b-4 border-black py-4 px-4 flex items-center justify-center font-[var(--font-bangers)] text-xl sm:text-2xl tracking-widest select-none shadow-md"
@@ -396,12 +454,20 @@ export function SagaBlock({
     } else {
       return (
         <div 
-          className="reader-page-drop border-4 border-[#001419] relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn"
+          className={`reader-page-drop border-4 border-[#001419] relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn ${showChapters ? "mobile-chapters-open" : ""}`}
           style={{
             boxShadow: `8px 8px 0 #001419, 12px 12px 0 ${colorSecondary}, 0 25px 50px -12px ${colorPrimary}35`,
             background: "#ecf7f8"
           }}
         >
+          <FeaturedMobileChapters
+            saga={saga}
+            colorPrimary={colorPrimary}
+            readChapters={readChapters}
+            isClient={isClient}
+            unlockAll={unlockAll}
+            onBack={() => setShowChapters(false)}
+          />
           <div className="p-6 sm:p-8 relative z-10 flex flex-col justify-between">
             {/* Halftone pop-art highly visible background pattern */}
             <div

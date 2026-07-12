@@ -104,15 +104,15 @@ export default function Home() {
                     return (
                       <div className="flex flex-col gap-24">
                         {(nuevoSagas.length > 0 || proximamenteSagas.length > 0 || otherOfficialSagas.length > 0) && (
-                          <div className={`flex flex-row items-start w-full relative transition-all duration-300 ${
-                            isUpcomingExpanded ? "gap-0 md:gap-8" : "gap-4 sm:gap-8"
+                          <div className={`flex flex-col md:flex-row items-stretch w-full relative transition-all duration-300 ${
+                            isUpcomingExpanded ? "gap-0 md:gap-8" : "gap-6 md:gap-8"
                           }`}>
                             {nuevoSagas.length > 0 || otherOfficialSagas.length > 0 ? (
                               <div 
                                 className={`flex flex-col gap-8 transition-all duration-300 ${
                                   isUpcomingExpanded 
-                                    ? "w-0 overflow-hidden opacity-0 shrink-0 pointer-events-none md:w-auto md:opacity-100 md:pointer-events-auto" 
-                                    : "flex-1"
+                                    ? "hidden md:flex md:w-auto md:opacity-100 md:pointer-events-auto" 
+                                    : "w-full md:flex-1"
                                 } md:flex-1`}
                               >
                                 {nuevoSagas.map((saga) => (
@@ -140,7 +140,7 @@ export default function Home() {
                             
                             {/* Column: Proximamente */}
                             {proximamenteSagas.length > 0 ? (
-                              <div className={`flex flex-col gap-8 transition-all duration-300 ${isUpcomingExpanded ? "flex-1 w-full" : "w-auto"} md:flex-1`}>
+                              <div className={`flex flex-col gap-8 transition-all duration-300 ${isUpcomingExpanded ? "flex-1 w-full" : "w-full md:w-auto"} md:flex-1`}>
                                 {proximamenteSagas.map((saga) => (
                                   <SagaBlock
                                     key={saga.id}

@@ -235,5 +235,25 @@ body {
       background-image: none;
       background-blend-mode: normal;
     }
+
+    /* La ficha y su lista son dos vistas, no un acordeón que alarga la página. */
+    .mobile-chapters-open > :not(.mobile-chapter-view) {
+      display: none;
+    }
+
+    .mobile-chapters-open > .mobile-chapter-view {
+      display: flex !important;
+    }
+
+    .mobile-upcoming-banner {
+      width: 100%;
+      border-right: 0;
+      border-bottom: 4px solid #000;
+    }
+
+    .mobile-upcoming-banner span {
+      writing-mode: horizontal-tb !important;
+      transform: none !important;
+    }
   }
 }
