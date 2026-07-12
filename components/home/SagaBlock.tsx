@@ -74,7 +74,7 @@ export function SagaBlock({
     return (
       <div 
         onClick={() => { if (isCollapsed && typeof window !== 'undefined' && window.innerWidth < 768) onToggleCollapse?.(); }}
-        className={`border-4 border-dashed border-[#D7263D]/80 relative overflow-hidden rounded-lg opacity-95 transition-all duration-300 flex flex-row items-stretch min-h-[350px] animate-fadeIn ${
+        className={`reader-page-drop border-4 border-dashed border-[#D7263D]/80 relative overflow-hidden rounded-lg opacity-95 transition-all duration-300 flex flex-row items-stretch min-h-[350px] animate-fadeIn ${
           isCollapsed 
             ? "w-12 sm:w-14 md:w-full cursor-pointer md:cursor-default select-none md:select-text pl-0 md:pl-12 md:sm:pl-14" 
             : "w-full pl-12 sm:pl-14"
@@ -250,7 +250,7 @@ export function SagaBlock({
     if (isNuevo) {
       return (
         <div 
-          className="border-4 border-black relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn"
+          className="reader-page-drop border-4 border-black relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn"
           style={{
             boxShadow: "10px 10px 0 #001419, 14px 14px 0 #D7263D, 0 25px 50px -12px rgba(0, 184, 212, 0.35)",
             background: "#ecf7f8"
@@ -391,7 +391,7 @@ export function SagaBlock({
     } else {
       return (
         <div 
-          className="border-4 border-[#001419] relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn"
+          className="reader-page-drop border-4 border-[#001419] relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn"
           style={{
             boxShadow: `8px 8px 0 #001419, 12px 12px 0 ${colorSecondary}, 0 25px 50px -12px ${colorPrimary}35`,
             background: "#ecf7f8"
@@ -536,10 +536,10 @@ export function SagaBlock({
   }
 
   const containerClass = isNuevo
-    ? "border-4 border-black p-6 sm:p-10 relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.005]"
+    ? "reader-page-drop border-4 border-black p-6 sm:p-10 relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.005]"
     : isProximamente
-      ? "border-4 border-dashed border-[#D7263D] bg-[#021e25] p-6 sm:p-10 relative overflow-hidden rounded-lg opacity-90 transition-opacity hover:opacity-100"
-      : "border-4 border-[#001419] bg-[#ecf7f8] p-6 sm:p-10 relative overflow-hidden rounded-lg";
+      ? "reader-page-drop border-4 border-dashed border-[#D7263D] bg-[#021e25] p-6 sm:p-10 relative overflow-hidden rounded-lg opacity-90 transition-opacity hover:opacity-100"
+      : "reader-page-drop border-4 border-[#001419] bg-[#ecf7f8] p-6 sm:p-10 relative overflow-hidden rounded-lg";
 
   return (
     <div 

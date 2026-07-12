@@ -55,5 +55,22 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   mars: ['never-unlocked'],
 
   // Locaciones
-  dumbo_base: [] // Siempre desbloqueada
+  dumbo_base: [], // Siempre desbloqueada
+  brewmaster: [],
+  enchantress: [],
+  jade: [],
+  lina: [],
+  mutantes: [],
+  tiny: [],
+  treant_protector: [],
+  victor: [],
+  aliens: [],
+  centinelas: [],
+  demonios: [],
+  soldados_espaciales: [],
+  judge: [],
+  zeus: [],
+  doom: [],
+  queen_of_pain: [],
+  mati_dweller: []
 };

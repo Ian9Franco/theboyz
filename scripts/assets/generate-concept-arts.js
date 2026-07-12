@@ -95,6 +95,13 @@ charactersList.forEach((char) => {
   registerFolderAlias(char.id, char.id);
 });
 
+// Register manual extra aliases
+registerFolderAlias('vops', 'comandante');
+registerFolderAlias('vopss', 'comandante');
+registerFolderAlias('sterling', 'sterling');
+registerFolderAlias('arthur sterling', 'sterling');
+registerFolderAlias('arthur stterling', 'sterling');
+
 const IMAGE_EXTENSIONS = new Set(['.webp', '.png', '.jpg', '.jpeg', '.gif']);
 
 function cleanName(fileName, index, sectionLabel) {

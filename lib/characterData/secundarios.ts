@@ -490,6 +490,245 @@ export const secundarios: CharacterDetail[] = [
       crisis: 'Corrupción Primordial: El uso excesivo de su poder desata la sangre de Balanar en ella, envejeciéndola y haciéndola rastreable.',
       stats: { fuerza: 10, inteligencia: 10, carisma: 10, suerte: 7, combate: 10, defensa: 9, especialVal: 10 }
     }
+  },
+  {
+    id: 'brewmaster',
+    name: 'Brewmaster',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/PORTADAS/Brewmaster/Brewmaster.webp',
+    fullBody: '/personajes/PORTADAS/Brewmaster/Brewmaster.webp',
+    color: '#6b7280',
+    role: 'Nuevo Personaje',
+    visualCode: 'Descripción visual base',
+    perfil: [
+      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+    ],
+    crisis: 'Descripción de su momento de crisis o debilidad.',
+    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
+    especialLabel: 'Poder Único',
+    powers: {
+      role: 'Rol de Poder',
+      habilidades: [
+        'Habilidad 1: Descripción de la habilidad.',
+        'Habilidad 2: Descripción de la habilidad.',
+        'Habilidad 3: Descripción de la habilidad.'
+      ],
+      significa: 'Qué significa su poder en combate.',
+      crisis: 'Debilidad o crisis al usar su poder.',
+      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+    }
+  },
+  {
+    id: 'enchantress',
+    name: 'Enchantress',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/PORTADAS/Enchantress/Enchantress.webp',
+    fullBody: '/personajes/PORTADAS/Enchantress/Enchantress.webp',
+    color: '#6b7280',
+    role: 'Nuevo Personaje',
+    visualCode: 'Descripción visual base',
+    perfil: [
+      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+    ],
+    crisis: 'Descripción de su momento de crisis o debilidad.',
+    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
+    especialLabel: 'Poder Único',
+    powers: {
+      role: 'Rol de Poder',
+      habilidades: [
+        'Habilidad 1: Descripción de la habilidad.',
+        'Habilidad 2: Descripción de la habilidad.',
+        'Habilidad 3: Descripción de la habilidad.'
+      ],
+      significa: 'Qué significa su poder en combate.',
+      crisis: 'Debilidad o crisis al usar su poder.',
+      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+    }
+  },
+  {
+    id: 'jade',
+    name: 'Jade',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/PORTADAS/Jade/Jade.webp',
+    fullBody: '/personajes/PORTADAS/Jade/Jade.webp',
+    color: '#6b7280',
+    role: 'Nuevo Personaje',
+    visualCode: 'Descripción visual base',
+    perfil: [
+      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+    ],
+    crisis: 'Descripción de su momento de crisis o debilidad.',
+    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
+    especialLabel: 'Poder Único',
+    powers: {
+      role: 'Rol de Poder',
+      habilidades: [
+        'Habilidad 1: Descripción de la habilidad.',
+        'Habilidad 2: Descripción de la habilidad.',
+        'Habilidad 3: Descripción de la habilidad.'
+      ],
+      significa: 'Qué significa su poder en combate.',
+      crisis: 'Debilidad o crisis al usar su poder.',
+      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+    }
+  },
+  {
+    id: 'lina',
+    name: 'Lina',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/PORTADAS/Lina/Lina.webp',
+    fullBody: '/personajes/PORTADAS/Lina/Lina.webp',
+    color: '#6b7280',
+    role: 'Nuevo Personaje',
+    visualCode: 'Descripción visual base',
+    perfil: [
+      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+    ],
+    crisis: 'Descripción de su momento de crisis o debilidad.',
+    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
+    especialLabel: 'Poder Único',
+    powers: {
+      role: 'Rol de Poder',
+      habilidades: [
+        'Habilidad 1: Descripción de la habilidad.',
+        'Habilidad 2: Descripción de la habilidad.',
+        'Habilidad 3: Descripción de la habilidad.'
+      ],
+      significa: 'Qué significa su poder en combate.',
+      crisis: 'Debilidad o crisis al usar su poder.',
+      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+    }
+  },
+  {
+    id: 'mutantes',
+    name: 'Mutantes',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/PORTADAS/Mutantes/Mutantes.webp',
+    fullBody: '/personajes/PORTADAS/Mutantes/Mutantes.webp',
+    color: '#6b7280',
+    role: 'Nuevo Personaje',
+    visualCode: 'Descripción visual base',
+    perfil: [
+      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+    ],
+    crisis: 'Descripción de su momento de crisis o debilidad.',
+    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
+    especialLabel: 'Poder Único',
+    powers: {
+      role: 'Rol de Poder',
+      habilidades: [
+        'Habilidad 1: Descripción de la habilidad.',
+        'Habilidad 2: Descripción de la habilidad.',
+        'Habilidad 3: Descripción de la habilidad.'
+      ],
+      significa: 'Qué significa su poder en combate.',
+      crisis: 'Debilidad o crisis al usar su poder.',
+      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+    }
+  },
+  {
+    id: 'tiny',
+    name: 'Tiny',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/PORTADAS/Tiny/Tiny.webp',
+    fullBody: '/personajes/PORTADAS/Tiny/Tiny.webp',
+    color: '#6b7280',
+    role: 'Nuevo Personaje',
+    visualCode: 'Descripción visual base',
+    perfil: [
+      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+    ],
+    crisis: 'Descripción de su momento de crisis o debilidad.',
+    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
+    especialLabel: 'Poder Único',
+    powers: {
+      role: 'Rol de Poder',
+      habilidades: [
+        'Habilidad 1: Descripción de la habilidad.',
+        'Habilidad 2: Descripción de la habilidad.',
+        'Habilidad 3: Descripción de la habilidad.'
+      ],
+      significa: 'Qué significa su poder en combate.',
+      crisis: 'Debilidad o crisis al usar su poder.',
+      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+    }
+  },
+  {
+    id: 'treant_protector',
+    name: 'Treant Protector',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/PORTADAS/Treant Protector/Treant Protector.webp',
+    fullBody: '/personajes/PORTADAS/Treant Protector/Treant Protector.webp',
+    color: '#6b7280',
+    role: 'Nuevo Personaje',
+    visualCode: 'Descripción visual base',
+    perfil: [
+      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+    ],
+    crisis: 'Descripción de su momento de crisis o debilidad.',
+    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
+    especialLabel: 'Poder Único',
+    powers: {
+      role: 'Rol de Poder',
+      habilidades: [
+        'Habilidad 1: Descripción de la habilidad.',
+        'Habilidad 2: Descripción de la habilidad.',
+        'Habilidad 3: Descripción de la habilidad.'
+      ],
+      significa: 'Qué significa su poder en combate.',
+      crisis: 'Debilidad o crisis al usar su poder.',
+      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+    }
+  },
+  {
+    id: 'victor',
+    name: 'Victor',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/PORTADAS/Victor/Victor.webp',
+    fullBody: '/personajes/PORTADAS/Victor/Victor.webp',
+    color: '#6b7280',
+    role: 'Nuevo Personaje',
+    visualCode: 'Descripción visual base',
+    perfil: [
+      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+    ],
+    crisis: 'Descripción de su momento de crisis o debilidad.',
+    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
+    especialLabel: 'Poder Único',
+    powers: {
+      role: 'Rol de Poder',
+      habilidades: [
+        'Habilidad 1: Descripción de la habilidad.',
+        'Habilidad 2: Descripción de la habilidad.',
+        'Habilidad 3: Descripción de la habilidad.'
+      ],
+      significa: 'Qué significa su poder en combate.',
+      crisis: 'Debilidad o crisis al usar su poder.',
+      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+    }
   }
 ];
-

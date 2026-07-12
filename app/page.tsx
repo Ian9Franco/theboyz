@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <div className="flex flex-col" style={{ background: "#002a32" }}>
       <HeroSection />
-      <section id="sagas" className="py-16 px-4 sm:px-6 relative" style={{ background: "#002a32" }}>
+      <section id="sagas" className="brand-grain py-16 px-4 sm:px-6 relative">
         {/* Subtle halftone grid */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.025]"
           style={{ backgroundImage: "radial-gradient(circle, #D7263D 1.5px, transparent 1.5px)", backgroundSize: "18px 18px" }} />
@@ -59,7 +59,7 @@ export default function Home() {
               {officialSagas.length > 0 && (
                 <div className="flex flex-col gap-12">
                   {/* Section Header */}
-                  <div className="relative border-4 border-white overflow-hidden shadow-[8px_8px_0_#D7263D]"
+                  <div className="reader-page-drop relative border-4 border-white overflow-hidden shadow-[8px_8px_0_#D7263D]"
                     style={{ background: "linear-gradient(135deg, #0e1a14 0%, #001419 60%, #071510 100%)" }}>
                     {/* Accent bar top */}
                     <div className="h-1 w-full bg-[#D7263D]" />
@@ -86,7 +86,7 @@ export default function Home() {
                             <strong className="text-[#D7263D]">Guerra Mativersal</strong> se aproxima.
                           </p>
                         </div>
-                        <img src="/comic-book.webp" alt="" className="w-10 h-10 object-contain opacity-30 shrink-0 hidden sm:block" />
+                        <img src="/comic-book-white.webp" alt="" className="w-10 h-10 object-contain opacity-30 shrink-0 hidden sm:block" />
                       </div>
                     </div>
                     {/* Bottom accent */}
@@ -166,7 +166,7 @@ export default function Home() {
 
               {/* === ERA CLÁSICA / PILOTO (COLAPSABLE) === */}
               {classicSagas.length > 0 && (
-                <div className="mt-8 border-4 border-dashed border-white/10 p-6 md:p-8 relative overflow-hidden"
+                <div className="reader-page-drop mt-8 border-4 border-dashed border-white/10 p-6 md:p-8 relative overflow-hidden"
                   style={{ background: "#0d0d12" }}>
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div>

@@ -32,6 +32,14 @@ const siblingRoot = getSiblingRoot(projectRoot);
 console.log("🚀 Iniciando servidores de desarrollo para ambos proyectos...\n");
 
 // ── Watch & Auto-generate characterImages.ts ──────────────────────────────
+console.log("⏳ Sincronizando personajes desde GUIAS...");
+try {
+  const { syncCharacters } = require("../assets/sync-missing-characters.js");
+  syncCharacters();
+} catch (e) {
+  console.error("Error al sincronizar personajes iniciales:", e.message);
+}
+
 console.log("⏳ Generando mapping de imágenes inicial...");
 try {
   require("../assets/generate-character-images.js");
@@ -42,6 +50,7 @@ try {
 const watchDirs = [
   path.join(projectRoot, "public", "personajes", "PORTADAS"),
   path.join(projectRoot, "public", "personajes", "Fichas"),
+  path.join(projectRoot, "public", "personajes", "GUIAS"),
 ];
 
 let debounceTimeout;
@@ -52,6 +61,10 @@ const handleWatchChange = (eventType, filename) => {
   debounceTimeout = setTimeout(() => {
     console.log(`\n🔄 Cambio detectado en recursos (${filename || 'archivo'}). Regenerando mapping de imágenes...`);
     try {
+      delete require.cache[require.resolve("../assets/sync-missing-characters.js")];
+      const { syncCharacters } = require("../assets/sync-missing-characters.js");
+      syncCharacters();
+
       delete require.cache[require.resolve("../assets/generate-character-images.js")];
       require("../assets/generate-character-images.js");
     } catch (e) {

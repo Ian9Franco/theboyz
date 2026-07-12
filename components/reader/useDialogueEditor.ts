@@ -264,9 +264,17 @@ export function useDialogueEditor({
     const rect = imgRef.current.getBoundingClientRect();
     if (rect.width <= 0 || rect.height <= 0) return;
 
-    // Convert absolute screen coordinate to image relative percentage
-    let relativeX = ((info.point.x - rect.left) / rect.width) * 100;
-    let relativeY = ((info.point.y - rect.top) / rect.height) * 100;
+    const pg = localDialogues.pages?.[pageKey] || { panels: [] };
+    const panel = pg.panels?.[pIdx];
+    const line = panel?.dialogue?.[bIdx];
+    if (!panel || !line) return;
+
+    const startX = line.tailX ?? 50;
+    const startY = line.tailY ?? (Math.round((panel.focusY ?? 0.5) * 100) + 15);
+
+    // Calculate relative percentage change based on drag offset instead of absolute screen coordinates
+    let relativeX = startX + (info.offset.x / rect.width) * 100;
+    let relativeY = startY + (info.offset.y / rect.height) * 100;
 
     // Apply grid snapping if enabled
     if (snapToGrid) {

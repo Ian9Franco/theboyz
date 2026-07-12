@@ -6,8 +6,7 @@
           "focusY": 0.3,
           "dialogue": [
             { "text": "Prologo", "style": "caption", "size": "small", "posX": 6, "posY": 4, "tailX": 50, "tailY": 5, "tailWidth": 6, "tailCurvature": -22, "width": 155, "fontSize": 12, "borderRadius": 0, "customBg": "#f5e642", "customColor": "#000000", "fontFamily": "sans" },
-            { "text": "Laboratorio científico V.O.P.S", "style": "caption", "size": "small", "posX": 50, "posY": 0, "tailX": 50, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 9, "borderRadius": 4 },
-            { "text": "Nuevo diálogo", "style": "cinematic", "size": "small", "posX": 40, "posY": 120, "tailX": 70, "tailY": 120, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "rgba(255, 255, 255, 0.88)", "textColor": "#0a0a0f" }
+            { "text": "Laboratorio científico V.O.P.S", "style": "caption", "size": "small", "posX": 50, "posY": 0, "tailX": 50, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 9, "borderRadius": 4 }
           ]
         }
       ]

@@ -148,6 +148,12 @@ body {
 
   .neon-edge { border: 1px solid rgba(215, 38, 61, 0.56); box-shadow: 0 0 0 1px rgba(236,247,248,0.06), 0 0 26px rgba(215,38,61,0.2); }
 
+  .reader-page-drop {
+    filter:
+      drop-shadow(0 15px 40px rgba(0, 0, 0, 0.8))
+      drop-shadow(0 8px 16px rgba(0, 0, 0, 0.6));
+  }
+
   .bg-dark-popart, .bg-light-popart {
     background-color: #002a32 !important;
     background-image:

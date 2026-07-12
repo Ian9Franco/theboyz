@@ -12,6 +12,8 @@ interface UseReaderLayoutProps {
   activeReadingBubbleIdx: number;
   focusPanel?: boolean;
   focusDialogue?: boolean;
+  pagesSidebarOpen?: boolean;
+  pagesSidebarWidth?: number;
 }
 
 export function useReaderLayout({
@@ -25,6 +27,8 @@ export function useReaderLayout({
   activeReadingBubbleIdx,
   focusPanel = true,
   focusDialogue = true,
+  pagesSidebarOpen = false,
+  pagesSidebarWidth = 88,
 }: UseReaderLayoutProps) {
   return useMemo(() => {
     let imgWidth = 0;
@@ -34,6 +38,10 @@ export function useReaderLayout({
 
     if (imgSize && containerSize.w > 0 && containerSize.h > 0) {
       const isMobile = containerSize.w < 768;
+      const hasSidebarGutter = mode === "read" && pagesSidebarOpen;
+      const sidebarGutter = hasSidebarGutter ? Math.min(pagesSidebarWidth, containerSize.w * 0.28) : 0;
+      const usableWidth = Math.max(160, containerSize.w - sidebarGutter);
+      const viewportCenterX = sidebarGutter + usableWidth / 2;
 
       if (mode === "edit") {
         const scale = Math.min((containerSize.w * 0.9) / imgSize.w, (containerSize.h * 0.85) / imgSize.h);
@@ -44,7 +52,12 @@ export function useReaderLayout({
       } else {
         // Mode: "read"
         const activeBubble = activePanel?.dialogue?.[activeReadingBubbleIdx];
-        const pageFitScale = Math.min((containerSize.w * 0.95) / imgSize.w, (containerSize.h * 0.95) / imgSize.h);
+        const sidebarScale = hasSidebarGutter ? 0.92 : 0.95;
+        const pageFitScale = Math.min((usableWidth * sidebarScale) / imgSize.w, (containerSize.h * 0.95) / imgSize.h);
+        const finalPageFitScale = Math.min(
+          (usableWidth * (isMobile ? 0.84 : 0.82)) / imgSize.w,
+          (containerSize.h * (isMobile ? 0.78 : 0.72)) / imgSize.h
+        );
 
         if (focusDialogue && activeBubble && !zoomedOut) {
           // Focus camera on the active dialogue bubble
@@ -62,7 +75,7 @@ export function useReaderLayout({
             const rh = activeZoomRect.h / 100;
             const cropW = imgSize.w * rw;
             const cropH = imgSize.h * rh;
-            const scaleX = (containerSize.w * 0.9) / cropW;
+            const scaleX = (usableWidth * 0.86) / cropW;
             const scaleY = (containerSize.h * 0.9) / cropH;
             const panelFocusMultiplier = isMobile ? 0.5 : 0.75;
             const panelFocusMax = isMobile ? pageFitScale * 1.22 : 2.0;
@@ -85,7 +98,7 @@ export function useReaderLayout({
 
           imgWidth = imgSize.w * fitScale;
           imgHeight = imgSize.h * fitScale;
-          imgLeft = containerSize.w / 2 - fx * imgWidth;
+          imgLeft = viewportCenterX - fx * imgWidth;
           imgTop = containerSize.h / 2 - fy * imgHeight;
         } else if (focusPanel && activeZoomRect && !zoomedOut) {
           const rx = activeZoomRect.x / 100;
@@ -96,7 +109,7 @@ export function useReaderLayout({
           const cropW = imgSize.w * rw;
           const cropH = imgSize.h * rh;
 
-          const scaleX = (containerSize.w * 0.9) / cropW;
+          const scaleX = (usableWidth * 0.86) / cropW;
           const scaleY = (containerSize.h * 0.9) / cropH;
           const panelFocusMultiplier = isMobile ? 0.58 : 0.85;
           const panelFocusMax = isMobile ? pageFitScale * 1.32 : 2.2;
@@ -111,13 +124,15 @@ export function useReaderLayout({
           const cropCenterX = imgSize.w * (rx + rw / 2);
           const cropCenterY = imgSize.h * (ry + rh / 2);
 
-          imgLeft = containerSize.w / 2 - cropCenterX * fitScale;
+          imgLeft = viewportCenterX - cropCenterX * fitScale;
           imgTop = containerSize.h / 2 - cropCenterY * fitScale;
         } else {
-          // Always fit the entire page within the viewport to ensure it is never cropped
-          imgWidth = imgSize.w * pageFitScale;
-          imgHeight = imgSize.h * pageFitScale;
-          imgLeft = (containerSize.w - imgWidth) / 2;
+          // At the end of a page, leave visual breathing room for navigation
+          // controls instead of letting them cover the artwork.
+          const fitScale = zoomedOut ? finalPageFitScale : pageFitScale;
+          imgWidth = imgSize.w * fitScale;
+          imgHeight = imgSize.h * fitScale;
+          imgLeft = sidebarGutter + (usableWidth - imgWidth) / 2;
           imgTop = (containerSize.h - imgHeight) / 2;
         }
       }
@@ -136,5 +151,7 @@ export function useReaderLayout({
     activeReadingBubbleIdx,
     focusPanel,
     focusDialogue,
+    pagesSidebarOpen,
+    pagesSidebarWidth,
   ]);
 }

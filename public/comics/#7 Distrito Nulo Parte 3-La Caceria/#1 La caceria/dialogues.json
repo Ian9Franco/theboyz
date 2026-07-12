@@ -1,0 +1,24 @@
+{
+  "pages": {
+    "1": {
+      "panels": [
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "Districto nulo parte 3  La caceria", "style": "caption", "posX": 50, "posY": 5, "tailX": 50, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 320, "fontSize": 8, "borderRadius": 0, "tail": "none", "customBg": "#f5e642" }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/sirena de polcias.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.45,
+                "playbackRate": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

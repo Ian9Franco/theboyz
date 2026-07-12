@@ -14,6 +14,14 @@
 const fs   = require('fs');
 const path = require('path');
 
+// Auto-sync missing characters from GUIAS folders before mapping images
+try {
+  const { syncCharacters } = require('./sync-missing-characters.js');
+  syncCharacters();
+} catch (e) {
+  console.error("Error running auto-sync:", e.message);
+}
+
 // ── Paths ──────────────────────────────────────────────────────────────────
 const projectRoot  = path.join(__dirname, '..', '..');
 const baseDir      = path.join(projectRoot, 'public', 'personajes');
@@ -183,6 +191,12 @@ const extraAliases = {
   matapobres: 'matapobre',
   supercamionero: 'supertrucker',
   'supercamionero.': 'supertrucker',
+  vops: 'comandante',
+  vopss: 'comandante',
+  sterling: 'sterling',
+  arthursterling: 'sterling',
+  arthurstterling: 'sterling',
+  arthurashsterling: 'sterling',
 };
 
 function normalize(s) {

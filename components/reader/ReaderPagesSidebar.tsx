@@ -10,6 +10,7 @@ interface ReaderPagesSidebarProps {
   resetPage: (idx: number) => void;
   saga: { color: string };
   totalPages: number;
+  onOpenChange?: (isOpen: boolean) => void;
 }
 
 /**
@@ -21,7 +22,7 @@ interface ReaderPagesSidebarProps {
  *
  * Design:
  * - Collapsible drawer (starts closed on mobile, open on desktop)
- * - Absolute overlay on mobile (under 768px) to prevent layout squishing
+ * - Absolute overlay on small phones; from sm up it reserves a column
  * - Dark glassmorphism style
  * - Saga-accent highlight for the active page
  * - Smooth scroll-into-view when the active page changes
@@ -32,6 +33,7 @@ export function ReaderPagesSidebar({
   resetPage,
   saga,
   totalPages,
+  onOpenChange,
 }: ReaderPagesSidebarProps) {
   const [isOpen, setIsOpen] = useState(true);
   const listRef = useRef<HTMLDivElement>(null);
@@ -43,6 +45,15 @@ export function ReaderPagesSidebar({
       setIsOpen(window.innerWidth >= 768);
     }
   }, []);
+
+  useEffect(() => {
+    const notify = () => {
+      onOpenChange?.(isOpen && window.innerWidth < 640);
+    };
+    notify();
+    window.addEventListener("resize", notify);
+    return () => window.removeEventListener("resize", notify);
+  }, [isOpen, onOpenChange]);
 
   // Scroll the active thumbnail into view whenever the current page changes
   useEffect(() => {
@@ -79,7 +90,7 @@ export function ReaderPagesSidebar({
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -88, opacity: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="absolute md:relative left-0 top-0 h-full overflow-hidden z-[160] md:z-[10] flex flex-col shrink-0 shadow-2xl md:shadow-none"
+          className="absolute sm:relative left-0 top-0 h-full overflow-hidden z-[160] sm:z-[10] flex flex-col shrink-0 shadow-2xl sm:shadow-none"
           style={{
             width: 88,
             background: "rgba(10, 10, 15, 0.92)",
@@ -205,4 +216,3 @@ export function ReaderPagesSidebar({
     </AnimatePresence>
   );
 }
-

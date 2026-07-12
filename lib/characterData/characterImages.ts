@@ -16,6 +16,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "fichas": [
     ]
   },
+  "aliens": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
   "apex": {
     "portada": null,
     "portadas": [
@@ -89,6 +97,14 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/Fichas/antagonistas/Balthazar Vane/Balthazar vane_ficha.webp",
     ]
   },
+  "brewmaster": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
   "bristleback": {
     "portada": null,
     "portadas": [
@@ -96,6 +112,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "ficha": "/personajes/Fichas/Secundarios/Bristleback/Bristleback_ficha.webp",
     "fichas": [
       "/personajes/Fichas/Secundarios/Bristleback/Bristleback_ficha.webp",
+    ]
+  },
+  "centinelas": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
     ]
   },
   "coleccionista": {
@@ -115,6 +139,15 @@ export const characterImages: Record<string, CharacterImages> = {
     "fichas": [
       "/personajes/Fichas/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_cosmic_ficha.webp",
       "/personajes/Fichas/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_ficha.webp",
+      "/personajes/Fichas/antagonistas/V.O.P.S/V.O.P.S_ficha.webp",
+    ]
+  },
+  "demonios": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
     ]
   },
   "don": {
@@ -126,6 +159,22 @@ export const characterImages: Record<string, CharacterImages> = {
     "fichas": [
       "/personajes/Fichas/antagonistas/Don Vanguard/Don_ficha.webp",
       "/personajes/Fichas/antagonistas/Don Vanguard/Don_ficha_alt.webp",
+    ]
+  },
+  "doom": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
+  "enchantress": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
     ]
   },
   "freezer": {
@@ -183,6 +232,14 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/Fichas/Secundarios/Invoker/Invoker_ficha.webp",
     ]
   },
+  "jade": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
   "jaz": {
     "portada": "/personajes/PORTADAS/Jaz/Sigil.webp",
     "portadas": [
@@ -203,6 +260,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "ficha": "/personajes/Fichas/Secundarios/John Wick/John Wick_ficha.webp",
     "fichas": [
       "/personajes/Fichas/Secundarios/John Wick/John Wick_ficha.webp",
+    ]
+  },
+  "judge": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
     ]
   },
   "judge_null": {
@@ -251,6 +316,14 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/Fichas/entidades/Krillor/Krillor_ficha.webp",
     ]
   },
+  "lina": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
   "lion": {
     "portada": null,
     "portadas": [
@@ -288,12 +361,13 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "maker": {
-    "portada": null,
+    "portada": "/personajes/PORTADAS/Maker/Maker.webp",
     "portadas": [
+      "/personajes/PORTADAS/Maker/Maker.webp",
     ],
-    "ficha": "/personajes/Fichas/antagonistas/Maker/Norman Parker_ficha.webp",
+    "ficha": "/personajes/Fichas/antagonistas/Maker/Maker_ficha.webp",
     "fichas": [
-      "/personajes/Fichas/antagonistas/Maker/Norman Parker_ficha.webp",
+      "/personajes/Fichas/antagonistas/Maker/Maker_ficha.webp",
     ]
   },
   "malakas": {
@@ -346,6 +420,14 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/Fichas/matis/Matisvariantes.webp",
     ]
   },
+  "mati_dweller": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
   "mati_prime": {
     "portada": null,
     "portadas": [
@@ -353,6 +435,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "ficha": "/personajes/Fichas/matis/Mati Prime/Mativariantes_ficha.webp",
     "fichas": [
       "/personajes/Fichas/matis/Mati Prime/Mativariantes_ficha.webp",
+    ]
+  },
+  "mutantes": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
     ]
   },
   "phobos": {
@@ -364,6 +454,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "ficha": "/personajes/Fichas/antagonistas/Phobos/Phobos_ficha.webp",
     "fichas": [
       "/personajes/Fichas/antagonistas/Phobos/Phobos_ficha.webp",
+    ]
+  },
+  "queen_of_pain": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
     ]
   },
   "rylai": {
@@ -406,6 +504,23 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/Fichas/Boyz/DUSK/Dusk_Ficha.webp",
     ]
   },
+  "soldados_espaciales": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
+  "sterling": {
+    "portada": "/personajes/PORTADAS/Arthur Sterling/Arthur Ash Sterling.webp",
+    "portadas": [
+      "/personajes/PORTADAS/Arthur Sterling/Arthur Ash Sterling.webp",
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
   "supertrucker": {
     "portada": "/personajes/PORTADAS/Supercamionero/Supercamionero.webp",
     "portadas": [
@@ -423,6 +538,22 @@ export const characterImages: Record<string, CharacterImages> = {
     "ficha": "/personajes/Fichas/entidades/Terrorblade/Terrorblade_ficha.webp",
     "fichas": [
       "/personajes/Fichas/entidades/Terrorblade/Terrorblade_ficha.webp",
+    ]
+  },
+  "tiny": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
+  "treant_protector": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
     ]
   },
   "uandi": {
@@ -453,6 +584,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "ficha": "/personajes/Fichas/Secundarios/Vexa Ruun/Vexa Ruun_ficha.webp",
     "fichas": [
       "/personajes/Fichas/Secundarios/Vexa Ruun/Vexa Ruun_ficha.webp",
+    ]
+  },
+  "victor": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
     ]
   },
   "volvo": {
@@ -488,6 +627,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "ficha": "/personajes/Fichas/Secundarios/Tusk/Tusk_ficha.webp",
     "fichas": [
       "/personajes/Fichas/Secundarios/Tusk/Tusk_ficha.webp",
+    ]
+  },
+  "zeus": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
     ]
   },
 };

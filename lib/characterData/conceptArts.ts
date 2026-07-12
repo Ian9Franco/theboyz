@@ -9,6 +9,15 @@ export interface ConceptArtItem {
 }
 
 export const conceptArts: Record<string, ConceptArtItem[]> = {
+  "aliens": [
+    {
+      "name": "Whatsapp Image 2026 06 29 At 11.42.03 (1) Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Aliens/WhatsApp Image 2026-06-29 at 11.42.03 (1)_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
   "apex": [
     {
       "name": "Apex Alt Sheet",
@@ -34,6 +43,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
+  "centinelas": [
+    {
+      "name": "Centinelas Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Centinelas/Centinelas_Sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
   "comandante": [
     {
       "name": "R.e.g.u.l.a.r Sheet",
@@ -45,6 +63,22 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "V.o.p.s Sheet",
       "path": "/personajes/GUIAS/antagonistas/Comandante R.E.G.U.L.A.R/v.o.p.s_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "demonios": [
+    {
+      "name": "Demonios Alt Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Demonios/Demonios_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Demonios Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Demonios/Demonios_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -123,6 +157,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
+  "soldados_espaciales": [
+    {
+      "name": "Whatsapp Image 2026 06 29 At 11.42.02 (1) Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Soldados espaciales/WhatsApp Image 2026-06-29 at 11.42.02 (1)_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
   "uandi": [
     {
       "name": "Aegis Full Sheet",
@@ -155,6 +198,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Aegis Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/Aegis_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Uandi Alt2 Sheet",
+      "path": "/personajes/GUIAS/boyz/AEGIS/uandi_alt2_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -412,6 +462,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
+  "judge": [
+    {
+      "name": "Judge Sheet",
+      "path": "/personajes/GUIAS/deidades/Judge/Judge_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
   "lucifer": [
     {
       "name": "Lucifer Sheet",
@@ -430,6 +489,75 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
+  "zeus": [
+    {
+      "name": "Zeus Sheet",
+      "path": "/personajes/GUIAS/deidades/Zeus/Zeus_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "doom": [
+    {
+      "name": "Doom Sheet",
+      "path": "/personajes/GUIAS/entidades/Doom/Doom_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "freezer": [
+    {
+      "name": "Freezer Alt Sheet",
+      "path": "/personajes/GUIAS/entidades/Freezer/Freezer_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Freezer Chill Sheet",
+      "path": "/personajes/GUIAS/entidades/Freezer/Freezer_chill_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Freezer Golden&black Sheet",
+      "path": "/personajes/GUIAS/entidades/Freezer/Freezer_Golden&Black_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Freezer Golden Alt2 Sheet",
+      "path": "/personajes/GUIAS/entidades/Freezer/Freezer_golden_alt2_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Freezer Golden Alt Sheet",
+      "path": "/personajes/GUIAS/entidades/Freezer/Freezer_golden_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Freezer Normal&golden Sheet",
+      "path": "/personajes/GUIAS/entidades/Freezer/Freezer_Normal&Golden_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Freezer Sheet",
+      "path": "/personajes/GUIAS/entidades/Freezer/Freezer_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
   "lion": [
     {
       "name": "Lion Sheet",
@@ -443,6 +571,22 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Night Stalker Sheet",
       "path": "/personajes/GUIAS/entidades/Night Stalker/Night Stalker_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "queen_of_pain": [
+    {
+      "name": "Queen Of Pain Alt Sheet",
+      "path": "/personajes/GUIAS/entidades/Queen of Pain/Queen of pain_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Queen Of Pain Sheet",
+      "path": "/personajes/GUIAS/entidades/Queen of Pain/Queen of pain_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -477,6 +621,22 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Mati Augusto Sheet",
       "path": "/personajes/GUIAS/matis/Mati Augusto/Mati Augusto_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "mati_dweller": [
+    {
+      "name": "Mati Dweller Alt Sheet",
+      "path": "/personajes/GUIAS/matis/Mati Dweller/Mati Dweller_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Mati Dweller Sheet",
+      "path": "/personajes/GUIAS/matis/Mati Dweller/Mati Dweller_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -539,6 +699,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
+  "brewmaster": [
+    {
+      "name": "Brewmaster Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Brewmaster/Brewmaster_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
   "bristleback": [
     {
       "name": "Bristleback Sheet",
@@ -557,6 +726,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
+  "enchantress": [
+    {
+      "name": "Enchantress Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Enchantress/Enchantress_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
   "invoker": [
     {
       "name": "Invoker Sheet",
@@ -570,6 +748,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "John Wick Sheet",
       "path": "/personajes/GUIAS/Secundarios/John Wick/John Wick_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "lina": [
+    {
+      "name": "Lina Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Lina/Lina_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -609,10 +796,104 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
+  "mutantes": [
+    {
+      "name": "Mutantes Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Mutantes/Mutantes_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "severine": [
+    {
+      "name": "Severine Alt2 Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Severine/severine_alt2_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Severine Alt4 Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Severine/severine_alt4_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Severine Alt Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Severine/severine_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Severine Old Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Severine/severine_old_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Severine Sheet   Copia",
+      "path": "/personajes/GUIAS/Secundarios/Severine/severine_sheet - copia.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Severine Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Severine/severine_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Severine Young Alt Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Severine/severine_young_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Severine Young Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Severine/severine_young_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "sterling": [
+    {
+      "name": "Sterling Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Sterling/Sterling_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
   "supertrucker": [
     {
       "name": "Supercamionero Sheet",
       "path": "/personajes/GUIAS/Secundarios/Supercamionero/Supercamionero_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "tiny": [
+    {
+      "name": "Tiny Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Tiny/Tiny_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "treant_protector": [
+    {
+      "name": "Treant Protector Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Treant Protector/Treant protector_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -675,6 +956,43 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Vexa Ruun Sheet",
       "path": "/personajes/GUIAS/Secundarios/Vexa Ruun/Vexa Ruun_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "victor": [
+    {
+      "name": "Victor1 Alt Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Victor/Victor1_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Victor1 Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Victor/Victor1_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Victor Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Victor/Victor_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Victor Sheet Alt",
+      "path": "/personajes/GUIAS/Secundarios/Victor/Victor_sheet_alt.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Victor Sheet Alt2",
+      "path": "/personajes/GUIAS/Secundarios/Victor/Victor_sheet_alt2.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false

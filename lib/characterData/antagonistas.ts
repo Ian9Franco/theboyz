@@ -246,5 +246,125 @@ export const antagonistas: CharacterDetail[] = [
     crisis: 'Temperatura Extrema: El calor intenso licúa su estructura celular perdiendo cohesión, mientras que el frío extremo cristaliza sus tejidos elásticos.',
     stats: { fuerza: 7, inteligencia: 11, carisma: 7, suerte: 5, combate: 9, defensa: 10, especialVal: 10 }
   }
-}
+},
+  {
+    id: 'aliens',
+    name: 'Aliens',
+    category: 'antagonistas',
+    isSecondary: true,
+    image: '/personajes/PORTADAS/Aliens/Aliens.webp',
+    fullBody: '/personajes/PORTADAS/Aliens/Aliens.webp',
+    color: '#6b7280',
+    role: 'Nuevo Personaje',
+    visualCode: 'Descripción visual base',
+    perfil: [
+      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+    ],
+    crisis: 'Descripción de su momento de crisis o debilidad.',
+    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
+    especialLabel: 'Poder Único',
+    powers: {
+      role: 'Rol de Poder',
+      habilidades: [
+        'Habilidad 1: Descripción de la habilidad.',
+        'Habilidad 2: Descripción de la habilidad.',
+        'Habilidad 3: Descripción de la habilidad.'
+      ],
+      significa: 'Qué significa su poder en combate.',
+      crisis: 'Debilidad o crisis al usar su poder.',
+      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+    }
+  },
+  {
+    id: 'centinelas',
+    name: 'Centinelas',
+    category: 'antagonistas',
+    isSecondary: true,
+    image: '/personajes/PORTADAS/Centinelas/Centinelas.webp',
+    fullBody: '/personajes/PORTADAS/Centinelas/Centinelas.webp',
+    color: '#6b7280',
+    role: 'Nuevo Personaje',
+    visualCode: 'Descripción visual base',
+    perfil: [
+      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+    ],
+    crisis: 'Descripción de su momento de crisis o debilidad.',
+    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
+    especialLabel: 'Poder Único',
+    powers: {
+      role: 'Rol de Poder',
+      habilidades: [
+        'Habilidad 1: Descripción de la habilidad.',
+        'Habilidad 2: Descripción de la habilidad.',
+        'Habilidad 3: Descripción de la habilidad.'
+      ],
+      significa: 'Qué significa su poder en combate.',
+      crisis: 'Debilidad o crisis al usar su poder.',
+      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+    }
+  },
+  {
+    id: 'demonios',
+    name: 'Demonios',
+    category: 'antagonistas',
+    isSecondary: true,
+    image: '/personajes/PORTADAS/Demonios/Demonios.webp',
+    fullBody: '/personajes/PORTADAS/Demonios/Demonios.webp',
+    color: '#6b7280',
+    role: 'Nuevo Personaje',
+    visualCode: 'Descripción visual base',
+    perfil: [
+      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+    ],
+    crisis: 'Descripción de su momento de crisis o debilidad.',
+    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
+    especialLabel: 'Poder Único',
+    powers: {
+      role: 'Rol de Poder',
+      habilidades: [
+        'Habilidad 1: Descripción de la habilidad.',
+        'Habilidad 2: Descripción de la habilidad.',
+        'Habilidad 3: Descripción de la habilidad.'
+      ],
+      significa: 'Qué significa su poder en combate.',
+      crisis: 'Debilidad o crisis al usar su poder.',
+      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+    }
+  },
+  {
+    id: 'soldados_espaciales',
+    name: 'Soldados espaciales',
+    category: 'antagonistas',
+    isSecondary: true,
+    image: '/personajes/PORTADAS/Soldados espaciales/Soldados espaciales.webp',
+    fullBody: '/personajes/PORTADAS/Soldados espaciales/Soldados espaciales.webp',
+    color: '#6b7280',
+    role: 'Nuevo Personaje',
+    visualCode: 'Descripción visual base',
+    perfil: [
+      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
+      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+    ],
+    crisis: 'Descripción de su momento de crisis o debilidad.',
+    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
+    especialLabel: 'Poder Único',
+    powers: {
+      role: 'Rol de Poder',
+      habilidades: [
+        'Habilidad 1: Descripción de la habilidad.',
+        'Habilidad 2: Descripción de la habilidad.',
+        'Habilidad 3: Descripción de la habilidad.'
+      ],
+      significa: 'Qué significa su poder en combate.',
+      crisis: 'Debilidad o crisis al usar su poder.',
+      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+    }
+  }
 ];

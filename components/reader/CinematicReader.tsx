@@ -47,6 +47,7 @@ export function CinematicReader({
   const [zoomIdx, setZoomIdx] = useState(0);
   const [zoomedOut, setZoomedOut] = useState(false);
   const [showUnlockModal, setShowUnlockModal] = useState(false);
+  const [isPagesSidebarOpen, setIsPagesSidebarOpen] = useState(false);
 
   useEffect(() => {
     if (zoomedOut && pageIdx === pages.length - 1) {
@@ -507,6 +508,8 @@ export function CinematicReader({
     activeReadingBubbleIdx,
     focusPanel: focusEnabled,
     focusDialogue: focusEnabled,
+    pagesSidebarOpen: isPagesSidebarOpen,
+    pagesSidebarWidth: 88,
   });
 
   const handleReaderTap = (e: React.MouseEvent) => {
@@ -704,7 +707,7 @@ export function CinematicReader({
         setBubbleOpacity={handleSetBubbleOpacity}
       />
 
-      <div className="flex-1 flex flex-col md:flex-row overflow-hidden w-full h-full relative">
+      <div className={`flex-1 flex ${mode === "read" ? "flex-row" : "flex-col md:flex-row"} overflow-hidden w-full h-full relative`}>
         {/* Read mode: page thumbnail sidebar (PDF-reader style) */}
         <AnimatePresence>
           {mode === "read" && (
@@ -714,6 +717,7 @@ export function CinematicReader({
               resetPage={resetPage}
               saga={saga}
               totalPages={pages.length}
+              onOpenChange={setIsPagesSidebarOpen}
             />
           )}
         </AnimatePresence>
