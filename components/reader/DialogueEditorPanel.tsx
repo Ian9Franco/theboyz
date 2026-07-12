@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import type { DialogueLine } from "./DialogueBubble";
 import type { AudioTrack, Dialogues, PanelSound } from "./audioPlayer";
 import { EditorTabSettings } from "./EditorTabSettings";
@@ -118,16 +118,74 @@ export function DialogueEditorPanel({
   handleReorderPanels,
   handleReorderBubbles,
 }: DialogueEditorPanelProps) {
+  const [isOpen, setIsOpen] = useState(true);
+
+  // A phone in landscape does not have enough width for both sidebars and the
+  // canvas. Keep the editor available as a drawer instead of squeezing the
+  // comic into the remaining space.
+  useEffect(() => {
+    const syncDrawerForViewport = () => {
+      setIsOpen(window.innerWidth >= 1200);
+    };
+    syncDrawerForViewport();
+    window.addEventListener("resize", syncDrawerForViewport);
+    return () => window.removeEventListener("resize", syncDrawerForViewport);
+  }, []);
+
   if (mode !== "edit") return null;
 
   const isLastPage = pageIdx >= pagesLength - 1;
 
   return (
-    <div
-      className="w-full md:w-[680px] shrink-0 bg-[#0e0e14] border-t md:border-t-0 md:border-l border-white/10 flex flex-col overflow-y-auto z-40 text-zinc-200 editor-dark-theme"
-      style={{ maxHeight: "calc(100vh - 64px)" }}
-    >
+    <>
+      {!isOpen && (
+        <button
+          type="button"
+          onClick={() => setIsOpen(true)}
+          className="editor-dialogue-toggle fixed right-3 bottom-3 z-[170] bg-[#e8185a] text-white border-2 border-[#0a0a0f] shadow-[3px_3px_0_#0a0a0f] rounded px-3 py-2 font-[var(--font-bangers)] text-sm tracking-wide"
+          aria-label="Abrir editor de diálogos"
+        >
+          💬 Diálogos
+        </button>
+      )}
+      <div
+        className={`editor-dialogue-drawer w-full md:w-[680px] shrink-0 bg-[#0e0e14] border-t md:border-t-0 md:border-l border-white/10 flex flex-col overflow-y-auto z-40 text-zinc-200 editor-dark-theme ${isOpen ? "editor-dialogue-drawer-open" : "editor-dialogue-drawer-closed"}`}
+        style={{ maxHeight: "calc(100vh - 64px)", touchAction: "pan-y" }}
+      >
       <style>{`
+        @media (max-width: 1199px) {
+          .editor-dialogue-drawer {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: min(520px, 52vw) !important;
+            max-height: none !important;
+            border-top: 0;
+            box-shadow: -12px 0 30px rgba(0, 0, 0, 0.45);
+            transition: transform 180ms ease, visibility 180ms ease;
+          }
+          .editor-dialogue-drawer-closed {
+            transform: translateX(105%);
+            visibility: hidden;
+            pointer-events: none;
+          }
+          .editor-dialogue-toggle { display: block; }
+        }
+        @media (min-width: 1200px) {
+          .editor-dialogue-toggle, .editor-dialogue-close { display: none; }
+        }
+        @media (max-width: 767px) and (orientation: portrait) {
+          .editor-dialogue-drawer {
+            top: auto;
+            width: 100% !important;
+            height: min(68vh, 620px);
+            border-left: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.45);
+          }
+          .editor-dialogue-drawer-closed { transform: translateY(105%); }
+        }
         /* Scoped editor dark theme overrides */
         .editor-dark-theme::-webkit-scrollbar {
           width: 6px;
@@ -201,23 +259,33 @@ export function DialogueEditorPanel({
       `}</style>
 
       {/* Header / Save Block */}
-      <div className="p-4 border-b border-white/10 bg-[#161622] flex items-center justify-between">
-        <span className="font-[var(--font-bangers)] text-xl tracking-wider text-white">
+      <div className="p-4 border-b border-white/10 bg-[#161622] flex items-center justify-between gap-2">
+        <span className="font-[var(--font-bangers)] text-xl tracking-wider text-white whitespace-nowrap">
           Editor de Diálogos
         </span>
-        <button
-          onClick={handleSaveChanges}
-          disabled={isSaving}
-          className={`font-[var(--font-bangers)] text-sm px-4 py-2 border border-white/20 shadow-[2px_2px_0_rgba(0,0,0,0.3)] transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_rgba(0,0,0,0.3)] rounded cursor-pointer ${
-            saveStatus === "success"
-              ? "bg-green-600 text-white"
-              : saveStatus === "error"
-              ? "bg-red-600 text-white"
-              : "bg-[#e8185a] text-white hover:bg-rose-700"
-          }`}
-        >
-          {isSaving ? "Guardando..." : saveStatus === "success" ? "Guardado ✓" : "Guardar JSON"}
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={handleSaveChanges}
+            disabled={isSaving}
+            className={`font-[var(--font-bangers)] text-sm px-4 py-2 border border-white/20 shadow-[2px_2px_0_rgba(0,0,0,0.3)] transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_rgba(0,0,0,0.3)] rounded cursor-pointer ${
+              saveStatus === "success"
+                ? "bg-green-600 text-white"
+                : saveStatus === "error"
+                ? "bg-red-600 text-white"
+                : "bg-[#e8185a] text-white hover:bg-rose-700"
+            }`}
+          >
+            {isSaving ? "Guardando..." : saveStatus === "success" ? "Guardado ✓" : "Guardar JSON"}
+          </button>
+          <button
+            type="button"
+            onClick={() => setIsOpen(false)}
+            className="editor-dialogue-close w-9 h-9 border border-white/15 bg-zinc-800 hover:bg-zinc-700 text-white rounded font-bold"
+            aria-label="Cerrar editor de diálogos"
+          >
+            ×
+          </button>
+        </div>
       </div>
 
       {/* Page Navigation */}
@@ -357,6 +425,7 @@ export function DialogueEditorPanel({
           handleReorderBubbles={handleReorderBubbles}
         />
       </div>
-    </div>
+      </div>
+    </>
   );
 }

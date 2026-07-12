@@ -92,9 +92,10 @@ export function EditorLeftSidebar({
   const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setIsOpen(window.innerWidth >= 768);
-    }
+    const syncSidebarForViewport = () => setIsOpen(window.innerWidth >= 1200);
+    syncSidebarForViewport();
+    window.addEventListener("resize", syncSidebarForViewport);
+    return () => window.removeEventListener("resize", syncSidebarForViewport);
   }, []);
 
   // Fetch Sagas
@@ -462,8 +463,18 @@ export function EditorLeftSidebar({
 
   return (
     <>
-      <div className="absolute md:relative left-0 top-0 md:left-auto md:top-auto w-[290px] sm:w-[320px] md:w-[350px] shrink-0 bg-[#0e0e14] border-r border-white/10 flex flex-col overflow-hidden z-[160] md:z-40 shadow-2xl md:shadow-none editor-dark-theme" style={{ maxHeight: "calc(100vh - 64px)", height: "100%" }}>
+      <div className="editor-left-sidebar absolute md:relative left-0 top-0 md:left-auto md:top-auto w-[290px] sm:w-[320px] md:w-[350px] shrink-0 bg-[#0e0e14] border-r border-white/10 flex flex-col overflow-hidden z-[160] md:z-40 shadow-2xl md:shadow-none editor-dark-theme" style={{ maxHeight: "calc(100vh - 64px)", height: "100%", touchAction: "pan-y" }}>
         <style>{`
+          @media (max-width: 1199px) {
+            .editor-left-sidebar {
+              position: absolute !important;
+              left: 0 !important;
+              top: 0 !important;
+              width: min(350px, 48vw) !important;
+              max-height: none !important;
+              height: 100% !important;
+            }
+          }
           /* Scoped editor dark theme overrides */
           .editor-dark-theme {
             background-color: #0e0e14 !important;
