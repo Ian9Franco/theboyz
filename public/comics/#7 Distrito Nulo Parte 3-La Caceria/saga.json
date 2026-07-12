@@ -8,5 +8,7 @@
   "password": "caceria",
   "cinematic": true,
   "nuevo": false,
-  "proximamente": true
+  "proximamente": true,
+  "date": "23/06/2026",
+  "estimatedTime": "19 días"
 }

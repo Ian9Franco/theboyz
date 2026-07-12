@@ -9,5 +9,7 @@
   "password": "vuelo",
   "cinematic": true,
   "nuevo": false,
-  "proximamente": true
+  "proximamente": true,
+  "date": "15/06/2026",
+  "estimatedTime": "27 días"
 }

@@ -163,6 +163,11 @@ export function SagaBlock({
                   style={{ textShadow: "2px 2px 0 #D7263D" }}>
                   {saga.title}
                 </h2>
+                {saga.date && (
+                  <p className="font-sans text-[10px] text-gray-400 justify-center flex items-center gap-1.5 mt-2">
+                    <span>📅</span> Inicio: {saga.date} | <span>⏱️</span> Lleva {saga.estimatedTime} en desarrollo
+                  </p>
+                )}
                 <div 
                   className={`font-sans text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl transition-all duration-300 mt-2 ${
                     showDescription ? "block" : "hidden lg:block"
@@ -800,6 +805,11 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
             <p className={`font-[var(--font-bangers)] text-xs tracking-[0.2em] uppercase mb-1 ${isDraftChapter ? "text-[#D7263D]/60" : "text-gray-400"}`}>
               {saga_label(index)}
             </p>
+            {chapter.date && (
+              <p className={`font-sans text-[10px] mb-1.5 flex items-center gap-1.5 ${isDraftChapter ? "text-gray-400" : "text-gray-500"}`}>
+                <span>📅</span> {chapter.date} {chapter.estimatedTime ? `| ⏱️ ${chapter.estimatedTime}` : ""}
+              </p>
+            )}
             <h3 className={`font-[var(--font-bangers)] text-2xl sm:text-3xl leading-tight uppercase tracking-wide ${isDraftChapter ? "text-white/70" : "text-gray-400"}`}>
               {chapter.title}
             </h3>
@@ -925,6 +935,11 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
             >
               {saga_label(index)}
             </p>
+            {chapter.date && (
+              <p className="font-sans text-[10px] text-gray-500 mb-1.5 flex items-center gap-1.5">
+                <span>📅</span> {chapter.date} {chapter.estimatedTime ? `| ⏱️ ${chapter.estimatedTime}` : ""}
+              </p>
+            )}
             <h3 className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-tight uppercase tracking-wide text-[#001419]">
               {chapter.title}
             </h3>

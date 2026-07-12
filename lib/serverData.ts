@@ -11,6 +11,8 @@ export type Chapter = {
   draft?: boolean;
   cinematic?: boolean;
   cover?: string | null;
+  date?: string;
+  estimatedTime?: string;
 };
 
 export type Saga = {
@@ -28,6 +30,8 @@ export type Saga = {
   cover?: string | null;
   nuevo?: boolean;
   proximamente?: boolean;
+  date?: string;
+  estimatedTime?: string;
 };
 
 const POP_ART_COLORS = ["#1b4332", "#00b8d4", "#f5e642", "#6d28d9", "#f97316", "#16a34a"];
@@ -87,6 +91,8 @@ export function getDynamicSagas(): Saga[] {
     let sagaCover: string | null = null;
     let sagaNuevo = false;
     let sagaProximamente = false;
+    let sagaDate: string | undefined = undefined;
+    let sagaEstimatedTime: string | undefined = undefined;
 
     // Load saga.json if exists
     const jsonPath = path.join(sagaPath, "saga.json");
@@ -103,6 +109,8 @@ export function getDynamicSagas(): Saga[] {
         if (meta.cinematic) sagaCinematic = true;
         if (meta.nuevo !== undefined) sagaNuevo = !!meta.nuevo;
         if (meta.proximamente !== undefined) sagaProximamente = !!meta.proximamente;
+        if (meta.date) sagaDate = meta.date;
+        if (meta.estimatedTime) sagaEstimatedTime = meta.estimatedTime;
       } catch (err) {
         console.error(`Error parsing saga.json in ${folder}:`, err);
       }
@@ -137,6 +145,8 @@ export function getDynamicSagas(): Saga[] {
       let chNumber = chOrder !== null ? chOrder : chIdx + 1;
       let chStatus = "published";
       let chCinematic = false;
+      let chDate: string | undefined = undefined;
+      let chEstimatedTime: string | undefined = undefined;
 
       // Load chapter.json if exists
       const chJsonPath = path.join(chPath, "chapter.json");
@@ -147,6 +157,8 @@ export function getDynamicSagas(): Saga[] {
           if (chMeta.number !== undefined) chNumber = chMeta.number;
           if (chMeta.status) chStatus = chMeta.status;
           if (chMeta.cinematic) chCinematic = true;
+          if (chMeta.date) chDate = chMeta.date;
+          if (chMeta.estimatedTime) chEstimatedTime = chMeta.estimatedTime;
         } catch (err) {
           console.error(`Error parsing chapter.json in ${folder}/${chFolder}:`, err);
         }
@@ -176,6 +188,8 @@ export function getDynamicSagas(): Saga[] {
         draft: chStatus === "draft" || sagaStatus === "draft",
         cinematic: chCinematic || sagaCinematic,
         cover: chCover,
+        date: chDate,
+        estimatedTime: chEstimatedTime,
       });
     });
 
@@ -197,6 +211,8 @@ export function getDynamicSagas(): Saga[] {
       cover: sagaCover,
       nuevo: sagaNuevo,
       proximamente: sagaProximamente,
+      date: sagaDate,
+      estimatedTime: sagaEstimatedTime,
     });
   });
 
