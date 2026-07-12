@@ -12,7 +12,7 @@
               "sound": "/sounds/sfx/sirena de polcias.mp3",
               "soundStartTime": 0,
               "soundConfig": {
-                "volume": 0.45,
+                "volume": 0.3,
                 "playbackRate": 1
               }
             }
