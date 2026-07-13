@@ -152,14 +152,14 @@ export function getEffectiveIndexes(
 
 /**
  * Devuelve la URL absoluta de una imagen del cómic.
- * Si NEXT_PUBLIC_ASSETS_BASE_URL está configurado, la cargará del CDN externo.
+ * Si NEXT_PUBLIC_ASSETS_BASE_URL está configurado, la cargará del CDN/servidor de assets externo.
+ * Esto aplica tanto a páginas del cómic como a portadas (covers).
  * De lo contrario, usará la ruta local relativa en /public.
  */
 export function getComicPageUrl(relativePath: string | null | undefined): string {
   if (!relativePath) return "";
-  const isCover = relativePath.toLowerCase().includes("portada");
   const baseUrl = process.env.NEXT_PUBLIC_ASSETS_BASE_URL || "";
-  if (baseUrl && !isCover) {
+  if (baseUrl) {
     if (relativePath.startsWith("http://") || relativePath.startsWith("https://")) {
       return relativePath;
     }

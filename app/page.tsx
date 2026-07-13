@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { HeroSection } from "@/components/home/HeroSection";
 import { SagaBlock } from "@/components/home/SagaBlock";
 import { CharacterRoster } from "@/components/home/CharacterRoster";
@@ -96,67 +96,116 @@ export default function Home() {
                   {/* featured split grid */}
                   {(() => {
                     const nuevoSagas = officialSagas.filter((s) => s.nuevo === true);
-                    const proximamenteSagas = officialSagas.filter((s) => s.proximamente === true);
+                    const rawProximamenteSagas = officialSagas.filter((s) => s.proximamente === true);
+                    const proximamenteSagas: any[] = [];
+                    rawProximamenteSagas.forEach((saga) => {
+                      if (saga.chapters && saga.chapters.length > 0) {
+                        const upcoming = saga.chapters.filter((c: any) => c.status !== "published");
+                        if (upcoming.length > 0) {
+                          upcoming.forEach((ch: any) => {
+                            proximamenteSagas.push({
+                              ...saga,
+                              id: `${saga.id}-${ch.id}`,
+                              title: `${saga.title} Parte ${ch.number}: ${ch.title}`,
+                              cover: ch.cover || saga.cover,
+                              chapters: [ch],
+                              date: ch.date || saga.date,
+                              estimatedTime: ch.estimatedTime || saga.estimatedTime,
+                            });
+                          });
+                        } else {
+                          proximamenteSagas.push(saga);
+                        }
+                      } else {
+                        proximamenteSagas.push(saga);
+                      }
+                    });
                     const otherOfficialSagas = officialSagas.filter(
-                      (s) => !nuevoSagas.find(n => n.id === s.id) && !proximamenteSagas.find(p => p.id === s.id)
+                      (s) => !s.proximamente && !s.nuevo
+                    );
+
+                    const publishedSagas = [...nuevoSagas, ...[...otherOfficialSagas].reverse()];
+
+                    const renderSagaGrid = (sagas: any[], isDrawerItem = false) => (
+                      <div className={`grid grid-cols-1 items-start gap-5 ${isDrawerItem ? "" : "sm:grid-cols-2 sm:gap-8"}`}>
+                        {sagas.map((saga) => (
+                          <SagaBlock
+                            key={saga.id}
+                            saga={saga}
+                            index={sagasList.findIndex((s) => s.id === saga.id || s.id === saga.id.split('-')[0])}
+                            onCoverClick={(url) => setLightboxSaga({ url, title: saga.title })}
+                            isFeatured={true}
+                            isDrawerItem={isDrawerItem}
+                          />
+                        ))}
+                      </div>
                     );
 
                     return (
-                      <div className="flex flex-col gap-24">
-                        {(nuevoSagas.length > 0 || proximamenteSagas.length > 0 || otherOfficialSagas.length > 0) && (
-                          <div className={`flex flex-col md:flex-row items-stretch w-full relative transition-all duration-300 ${
-                            isUpcomingExpanded ? "gap-0 md:gap-8" : "gap-6 md:gap-8"
-                          }`}>
-                            {nuevoSagas.length > 0 || otherOfficialSagas.length > 0 ? (
-                              <div 
-                                className={`flex flex-col gap-8 transition-all duration-300 ${
-                                  isUpcomingExpanded 
-                                    ? "hidden md:flex md:w-auto md:opacity-100 md:pointer-events-auto" 
-                                    : "w-full md:flex-1"
-                                } md:flex-1`}
+                      <div className="relative">
+                        <div className="pr-10 sm:pr-12">
+                          {renderSagaGrid(publishedSagas)}
+                        </div>
+
+                        <AnimatePresence>
+                          {isUpcomingExpanded && (
+                            <motion.div
+                              key="upcoming-backdrop"
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              transition={{ duration: 0.24 }}
+                              className="fixed inset-0 z-40 bg-black/45 backdrop-blur-md"
+                              onClick={() => setIsUpcomingExpanded(false)}
+                            />
+                          )}
+                        </AnimatePresence>
+
+                        {proximamenteSagas.length > 0 && (
+                          <motion.aside
+                            key="upcoming-drawer"
+                            initial={{ x: "100%" }}
+                            animate={{ x: isUpcomingExpanded ? "0%" : "100%" }}
+                            transition={{ type: "spring", stiffness: 260, damping: 28, mass: 0.85 }}
+                            className="fixed right-0 top-0 z-50 h-screen w-[calc(100%-3.5rem)] sm:w-[78%] max-w-3xl border-l-4 border-[#D7263D] bg-[#021e25]/95 p-5 sm:p-7 shadow-[-12px_0_35px_rgba(0,0,0,0.5)] backdrop-blur-xl flex flex-col"
+                          >
+                            {/* Blueprint grid for drawer background */}
+                            <div
+                              className="absolute inset-0 pointer-events-none opacity-[0.03] z-0"
+                              style={{
+                                backgroundImage: "radial-gradient(circle, #D7263D 1.5px, transparent 1.5px)",
+                                backgroundSize: "14px 14px",
+                              }}
+                            />
+                            <button
+                              type="button"
+                              onClick={() => setIsUpcomingExpanded((isOpen) => !isOpen)}
+                              aria-label={isUpcomingExpanded ? "Cerrar" : "Ver en producción"}
+                              className="absolute left-0 top-32 sm:top-40 -translate-x-full z-50 h-56 sm:h-64 w-8 sm:w-11 border-4 border-r-0 border-[#D7263D] bg-gradient-to-b from-[#ab1b2c] via-[#D7263D] to-[#ab1b2c] text-white shadow-[-6px_6px_0_#000] hover:text-[#f5e642] hover:from-[#D7263D] hover:to-[#ff3b51] rounded-l-2xl transition-all duration-300 cursor-pointer flex flex-col items-center justify-start pt-6 gap-6 group"
+                            >
+                              <span className="font-sans text-[10px] font-black animate-pulse transition-transform duration-300 group-hover:-translate-y-1">
+                                {isUpcomingExpanded ? "▶" : "◀"}
+                              </span>
+                              <span
+                                className="font-[var(--font-bangers)] text-xs sm:text-sm tracking-[0.2em] whitespace-nowrap"
+                                style={{ writingMode: "vertical-rl" }}
                               >
-                                {nuevoSagas.map((saga) => (
-                                  <SagaBlock
-                                    key={saga.id}
-                                    saga={saga}
-                                    index={sagasList.findIndex((s) => s.id === saga.id)}
-                                    onCoverClick={(url) => setLightboxSaga({ url, title: saga.title })}
-                                    isFeatured={true}
-                                  />
-                                ))}
-                                {[...otherOfficialSagas].reverse().map((saga) => (
-                                  <SagaBlock
-                                    key={saga.id}
-                                    saga={saga}
-                                    index={sagasList.findIndex((s) => s.id === saga.id)}
-                                    onCoverClick={(url) => setLightboxSaga({ url, title: saga.title })}
-                                    isFeatured={true}
-                                  />
-                                ))}
+                                EN PRODUCCIÓN
+                              </span>
+                            </button>
+
+                            <div className="relative z-10 flex flex-col h-full overflow-hidden">
+                              <div className="mb-5 flex items-center justify-between gap-3 border-b-2 border-dashed border-white/20 pb-4 shrink-0">
+                                <div>
+                                  <p className="font-[var(--font-bangers)] text-[10px] tracking-[0.25em] text-[#D7263D]">ARCHIVO DE AVANCES</p>
+                                  <h3 className="font-[var(--font-bangers)] text-2xl tracking-wider text-white">PRÓXIMAMENTE</h3>
+                                </div>
                               </div>
-                            ) : (
-                              <div />
-                            )}
-                            
-                            {/* Column: Proximamente */}
-                            {proximamenteSagas.length > 0 ? (
-                              <div className={`flex flex-col gap-8 transition-all duration-300 ${isUpcomingExpanded ? "flex-1 w-full" : "w-full md:w-auto"} md:flex-1`}>
-                                {proximamenteSagas.map((saga) => (
-                                  <SagaBlock
-                                    key={saga.id}
-                                    saga={saga}
-                                    index={sagasList.findIndex((s) => s.id === saga.id)}
-                                    onCoverClick={(url) => setLightboxSaga({ url, title: saga.title })}
-                                    isFeatured={true}
-                                    isCollapsed={!isUpcomingExpanded}
-                                    onToggleCollapse={() => setIsUpcomingExpanded(!isUpcomingExpanded)}
-                                  />
-                                ))}
+                              <div className="flex-1 overflow-y-auto pr-1 pb-8 scrollbar-thin scrollbar-thumb-[#D7263D]/40 scrollbar-track-transparent">
+                                {renderSagaGrid(proximamenteSagas, true)}
                               </div>
-                            ) : (
-                              <div />
-                            )}
-                          </div>
+                            </div>
+                          </motion.aside>
                         )}
                       </div>
                     );

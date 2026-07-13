@@ -151,7 +151,7 @@ export function CinematicReader({
 
   const [textScale, setTextScale] = useState<number>(1.0);
   const [showInstructions, setShowInstructions] = useState(false);
-  const [autoplay, setAutoplay] = useState<boolean>(true);
+  const [autoplay, setAutoplay] = useState<boolean>(false);
   // Dialogue speed: 0.5 = slow, 1.0 = normal, 1.5 = fast
   const [speedMultiplier, setSpeedMultiplierState] = useState<number>(1.0);
   const [focusEnabled, setFocusEnabled] = useState<boolean>(true);
@@ -165,12 +165,16 @@ export function CinematicReader({
       } else {
         const isMobile = window.innerWidth < 768;
         if (isMobile) {
-          setTextScale(1.2);
+          setTextScale(0.85); // A- Chico
+        } else {
+          setTextScale(1.4);  // A++ X-Grande
         }
       }
       const savedAutoplay = localStorage.getItem("reader_autoplay");
       if (savedAutoplay !== null) {
         setAutoplay(savedAutoplay === "true");
+      } else {
+        setAutoplay(false);
       }
       const savedSpeed = localStorage.getItem("reader_dialogue_speed");
       if (savedSpeed !== null) {

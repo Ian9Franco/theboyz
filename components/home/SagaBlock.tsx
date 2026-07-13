@@ -45,21 +45,54 @@ function FeaturedMobileChapters({
         </button>
       </div>
 
-      <div className="grid grid-cols-1 gap-4">
-        {saga.chapters.map((chapter: any, ci: number) => {
-          const isLocked = isClient && !unlockAll && ci > 0 && !readChapters.includes(saga.chapters[ci - 1].id);
-          return (
-            <ChapterCard
-              key={chapter.id}
-              chapter={chapter}
-              sagaId={saga.id}
-              sagaColor={colorPrimary}
-              index={ci}
-              isLocked={isLocked}
-              sagaCover={saga.cover}
-            />
-          );
-        })}
+      <div className="grid grid-cols-2 gap-3">
+        {saga.chapters
+          .filter((c: any) => c.status === "published" || !saga.chapters.some((x: any) => x.status === "published"))
+          .map((chapter: any, ci: number, arr: any[]) => {
+            const isLocked = isClient && !unlockAll && ci > 0 && !readChapters.includes(arr[ci - 1].id);
+            return (
+              <ChapterCard
+                key={chapter.id}
+                chapter={chapter}
+                sagaId={saga.id}
+                sagaColor={colorPrimary}
+                index={ci}
+                isLocked={isLocked}
+                sagaCover={saga.cover}
+                compact
+              />
+            );
+          })}
+        {/* Mobile special draft block */}
+        {saga.chapters.some((c: any) => c.status === "published") && 
+         saga.chapters.filter((c: any) => c.status !== "published").slice(0, 1).map((chapter: any) => (
+          <div
+            key={chapter.id}
+            className="flex flex-col h-full overflow-hidden border-2 border-[#001419] bg-gradient-to-br from-[#002229] to-[#001217] shadow-[3px_3px_0_#D7263D] relative rounded p-3 justify-between min-h-[140px]"
+          >
+            <div className="relative z-10 flex flex-col justify-between h-full flex-1">
+              <div>
+                <span className="tag text-[8px] font-[var(--font-bangers)] tracking-widest px-1.5 py-0.5 border border-black bg-gradient-to-r from-[#ab1b2c] to-[#D7263D] text-white">
+                  EN PRODUCCIÓN
+                </span>
+                <h3 className="font-[var(--font-bangers)] text-sm leading-tight uppercase tracking-wide text-white/80 mt-1">
+                  PARTE {chapter.number}: {chapter.title}
+                </h3>
+              </div>
+              <div className="flex items-center gap-1.5 mt-2 pt-2 border-t border-dashed border-[#D7263D]/20">
+                <div className="w-4 h-4 rounded-full flex items-center justify-center bg-[#D7263D]/10 text-[#D7263D] border border-[#D7263D]/25">
+                  <svg width="8" height="8" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2.5" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                  </svg>
+                </div>
+                <span className="font-[var(--font-bangers)] text-[8px] tracking-wider text-[#D7263D] uppercase">
+                  PRÓXIMAMENTE
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -72,7 +105,8 @@ export function SagaBlock({
   onCoverClick,
   isFeatured = false,
   isCollapsed = false,
-  onToggleCollapse
+  onToggleCollapse,
+  isDrawerItem = false,
 }: { 
   saga: any; 
   index: number; 
@@ -81,6 +115,7 @@ export function SagaBlock({
   isFeatured?: boolean;
   isCollapsed?: boolean;
   onToggleCollapse?: () => void;
+  isDrawerItem?: boolean;
 }) {
   const isEven = index % 2 === 0;
   const [readChapters, setReadChapters] = useState<string[]>([]);
@@ -111,7 +146,7 @@ export function SagaBlock({
   }, []);
 
   const isNuevo = saga.nuevo === true;
-  const isProximamente = saga.proximamente === true;
+  const isProximamente = saga.proximamente === true && (isDrawerItem || !saga.chapters.some((c: any) => c.status === "published"));
 
   const colorPrimary = "#D7263D";
   const colorSecondary = "#D7263D";
@@ -124,16 +159,16 @@ export function SagaBlock({
     return (
       <div 
         onClick={() => { if (isCollapsed && typeof window !== 'undefined' && window.innerWidth < 768) onToggleCollapse?.(); }}
-        className={`reader-page-drop border-4 border-dashed border-[#D7263D]/80 relative overflow-hidden rounded-lg opacity-95 transition-all duration-300 flex flex-row items-stretch min-h-[350px] animate-fadeIn ${
+        className={`reader-page-drop border-4 border-dashed border-[#D7263D]/80 relative overflow-hidden rounded-lg opacity-95 transition-all duration-300 flex flex-row items-stretch min-h-[350px] animate-fadeIn ${showChapters ? "z-50" : ""} ${
           isCollapsed 
-            ? "w-full h-16 min-h-16 md:w-full md:h-auto md:min-h-[350px] cursor-pointer md:cursor-default select-none md:select-text pl-0 md:pl-12 md:sm:pl-14" 
+            ? "w-12 sm:w-14 h-full min-h-[350px] md:w-full md:h-auto cursor-pointer md:cursor-default select-none md:select-text pl-0 md:pl-12 md:sm:pl-14"
             : "w-full pl-12 sm:pl-14"
         }`}
         style={{
           boxShadow: isCollapsed 
             ? "6px 6px 0 #000, 9px 9px 0 rgba(215, 38, 61, 0.15), 0 10px 20px rgba(0,0,0,0.5)" 
             : "10px 10px 0 #000, 14px 14px 0 rgba(215, 38, 61, 0.25), 0 20px 40px -10px rgba(215, 38, 61, 0.2)",
-          background: "#021e25"
+          background: "linear-gradient(135deg, #011c22 0%, #000c0f 100%)"
         }}
       >
         {/* Absolute Docked Left Banner for perfect full-height alignment */}
@@ -144,15 +179,15 @@ export function SagaBlock({
               onToggleCollapse?.(); 
             }
           }}
-          className={`absolute left-0 top-0 bottom-0 w-12 sm:w-14 bg-[#D7263D] flex items-center justify-center shrink-0 select-none border-r-4 border-black z-20 ${isCollapsed ? "mobile-upcoming-banner" : ""} ${
+          className={`absolute left-0 top-0 bottom-0 w-12 sm:w-14 bg-gradient-to-b from-[#ab1b2c] via-[#D7263D] to-[#ab1b2c] flex items-center justify-center shrink-0 select-none border-r-4 border-black z-20 ${isCollapsed ? "mobile-upcoming-banner" : ""} ${
             isCollapsed 
               ? "cursor-pointer" 
-              : "cursor-pointer hover:bg-[#ff3b51] transition-colors"
+              : "cursor-pointer hover:from-[#D7263D] hover:to-[#ff3b51] transition-all"
           }`}
         >
           <span 
-            className="font-[var(--font-bangers)] text-lg sm:text-xl text-black uppercase tracking-widest whitespace-nowrap"
-            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", display: "block" }}
+            className="font-[var(--font-bangers)] text-lg sm:text-xl text-white uppercase tracking-widest whitespace-nowrap"
+            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", display: "block", textShadow: "1px 1px 2px #000" }}
           >
             PRÓXIMAMENTE
           </span>
@@ -178,7 +213,7 @@ export function SagaBlock({
             <div className="flex flex-col items-center text-center w-full">
               {saga.cover && (
                 <div 
-                  className="relative shrink-0 w-36 sm:w-40 aspect-[3/4] border-4 border-white overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_#D7263D] group cursor-zoom-in"
+                  className="relative shrink-0 w-28 sm:w-40 aspect-[3/4] border-4 border-white overflow-hidden rounded bg-zinc-900 shadow-[4px_4px_0_#000,6px_6px_0_#D7263D] group cursor-zoom-in"
                   onClick={(e) => {
                     e.stopPropagation();
                     onCoverClick?.(getComicPageUrl(saga.cover));
@@ -190,6 +225,9 @@ export function SagaBlock({
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-102" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#D7263D] text-white font-[var(--font-bangers)] text-[9px] sm:text-[11px] tracking-widest px-2.5 py-1 uppercase border-2 border-white shadow-[2px_2px_0_#000] rotate-[-12deg] pointer-events-none select-none z-10 whitespace-nowrap">
+                    EN DESARROLLO
+                  </div>
                 </div>
               )}
               <div className="mt-4">
@@ -214,8 +252,8 @@ export function SagaBlock({
                   {saga.title}
                 </h2>
                 {saga.date && (
-                  <p className="font-sans text-[10px] text-gray-400 justify-center flex items-center gap-1.5 mt-2">
-                    <span>📅</span> Inicio: {saga.date} | <span>⏱️</span> Lleva {saga.estimatedTime} en desarrollo
+                  <p className="font-mono text-[9px] sm:text-[10px] text-emerald-400 bg-black/60 border border-emerald-500/25 px-3 py-1 rounded inline-flex items-center justify-center gap-1.5 mt-3 tracking-wide">
+                    <span>📅</span> INICIO: {saga.date} &nbsp;|&nbsp; <span>⏱️</span> DEV: {saga.estimatedTime}
                   </p>
                 )}
                 <div 
@@ -305,10 +343,10 @@ export function SagaBlock({
     if (isNuevo) {
       return (
         <div 
-          className={`reader-page-drop border-4 border-black relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn ${showChapters ? "mobile-chapters-open" : ""}`}
+          className={`reader-page-drop border-4 border-black relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-[1.008] hover:-translate-y-0.5 flex flex-col animate-fadeIn ${showChapters ? "mobile-chapters-open z-50" : ""}`}
           style={{
-            boxShadow: "10px 10px 0 #001419, 14px 14px 0 #D7263D, 0 25px 50px -12px rgba(0, 184, 212, 0.35)",
-            background: "#ecf7f8"
+            boxShadow: "12px 12px 0 #001419, 16px 16px 0 #D7263D, 0 30px 60px -15px rgba(215, 38, 61, 0.3)",
+            background: "linear-gradient(135deg, #ecf7f8 0%, #dbeeed 100%)"
           }}
         >
           <FeaturedMobileChapters
@@ -321,9 +359,10 @@ export function SagaBlock({
           />
           {/* Horizontal Banner for nuevo - un poco más grande */}
           <div 
-            className="w-full bg-[#D7263D] text-white border-b-4 border-black py-4 px-4 flex items-center justify-center font-[var(--font-bangers)] text-xl sm:text-2xl tracking-widest select-none shadow-md"
+            className="w-full bg-gradient-to-r from-[#ab1b2c] via-[#D7263D] to-[#ab1b2c] text-white border-b-4 border-black py-4 px-4 flex items-center justify-center font-[var(--font-bangers)] text-xl sm:text-2xl tracking-[0.22em] select-none shadow-[inset_0_-4px_0_rgba(0,0,0,0.15)] relative overflow-hidden"
           >
-            ¡ÚLTIMO LANZAMIENTO!
+            <div className="absolute inset-0 opacity-10 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#000_10px,#000_20px)] pointer-events-none" />
+            <span style={{ textShadow: "2px 2px 0px #000" }}>¡ÚLTIMO LANZAMIENTO!</span>
           </div>
 
           <div className="p-6 sm:p-8 relative z-10 flex flex-col justify-between">
@@ -340,7 +379,7 @@ export function SagaBlock({
             <div className="flex flex-col lg:flex-row gap-6 items-center lg:items-stretch w-full relative z-10">
               {saga.cover && (
                 <div 
-                  className="relative shrink-0 w-40 sm:w-44 aspect-[3/4] border-4 border-[#001419] overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_rgba(10,10,15,1)] group cursor-zoom-in self-center"
+                  className="relative shrink-0 w-28 sm:w-44 aspect-[3/4] border-4 border-[#001419] overflow-hidden rounded bg-zinc-900 shadow-[6px_6px_0_rgba(10,10,15,1)] group cursor-zoom-in self-center"
                   onClick={() => onCoverClick?.(getComicPageUrl(saga.cover))}
                 >
                   <img 
@@ -365,7 +404,7 @@ export function SagaBlock({
                     >
                       SAGA
                     </span>
-                    <span className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border-2 border-black bg-[#D7263D] text-white shadow-[1px_1px_0_#D7263D] animate-bounce">
+                    <span className="tag text-[10px] font-[var(--font-bangers)] tracking-widest px-3 py-1 border-2 border-black bg-[#f5e642] text-black shadow-[2px_2px_0_#000] rotate-[-4deg] inline-block animate-bounce">
                       ¡NUEVA!
                     </span>
                   </div>
@@ -422,27 +461,76 @@ export function SagaBlock({
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
-                      {saga.chapters.map((chapter: any, ci: number) => {
-                        let isLocked = false;
-                        if (isClient && !unlockAll) {
-                          if (ci === 0) {
-                            isLocked = false;
-                          } else {
-                            isLocked = !readChapters.includes(saga.chapters[ci - 1].id);
+                      {saga.chapters
+                        .filter((c: any) => c.status === "published" || !saga.chapters.some((x: any) => x.status === "published"))
+                        .map((chapter: any, ci: number, arr: any[]) => {
+                          let isLocked = false;
+                          if (isClient && !unlockAll) {
+                            if (ci === 0) {
+                              isLocked = false;
+                            } else {
+                              isLocked = !readChapters.includes(arr[ci - 1].id);
+                            }
                           }
-                        }
-                        return (
-                          <ChapterCard
+                          return (
+                            <ChapterCard
+                              key={chapter.id}
+                              chapter={chapter}
+                              sagaId={saga.id}
+                              sagaColor={colorPrimary}
+                              index={ci}
+                              isLocked={isLocked}
+                              sagaCover={saga.cover}
+                            />
+                          );
+                        })}
+                      {/* Special draft/upcoming block */}
+                      {saga.chapters.some((c: any) => c.status === "published") &&
+                        saga.chapters.filter((c: any) => c.status !== "published").slice(0, 1).map((chapter: any) => (
+                          <div
                             key={chapter.id}
-                            chapter={chapter}
-                            sagaId={saga.id}
-                            sagaColor={colorPrimary}
-                            index={ci}
-                            isLocked={isLocked}
-                            sagaCover={saga.cover}
-                          />
-                        );
-                      })}
+                            className="flex flex-col h-full overflow-hidden border-[3px] border-[#001419] bg-gradient-to-br from-[#002229] to-[#001217] shadow-[5px_5px_0_#D7263D] relative rounded-md min-h-[160px] justify-between p-4"
+                          >
+                            <div
+                              className="absolute inset-0 pointer-events-none opacity-[0.06] z-0"
+                              style={{
+                                backgroundImage: "radial-gradient(circle, #D7263D 1.5px, transparent 1.5px)",
+                                backgroundSize: "10px 10px",
+                              }}
+                            />
+                            <div className="relative z-10 flex flex-col justify-between h-full flex-1">
+                              <div>
+                                <div className="flex items-center gap-1.5 mb-1">
+                                  <span className="tag text-[9px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border border-black bg-gradient-to-r from-[#ab1b2c] to-[#D7263D] text-white">
+                                    EN PRODUCCIÓN
+                                  </span>
+                                  {chapter.date && (
+                                    <span className="font-mono text-[9px] text-emerald-400">
+                                      📅 {chapter.date}
+                                    </span>
+                                  )}
+                                </div>
+                                <h3 className="font-[var(--font-bangers)] text-2xl leading-tight uppercase tracking-wide text-white/80 mt-1">
+                                  PARTE {chapter.number}: {chapter.title}
+                                </h3>
+                                <p className="font-sans text-[11px] text-white/40 mt-1">
+                                  Este episodio está en desarrollo y se publicará próximamente.
+                                </p>
+                              </div>
+                              <div className="flex items-center gap-2 mt-4 pt-3 border-t border-dashed border-[#D7263D]/20">
+                                <div className="w-5 h-5 rounded-full flex items-center justify-center bg-[#D7263D]/10 text-[#D7263D] border border-[#D7263D]/25">
+                                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2.5" />
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                                  </svg>
+                                </div>
+                                <span className="font-[var(--font-bangers)] text-[10px] tracking-wider text-[#D7263D] uppercase">
+                                  ACCESO RESTRINGIDO
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
                     </div>
                   </div>
                 </motion.div>
@@ -454,7 +542,7 @@ export function SagaBlock({
     } else {
       return (
         <div 
-          className={`reader-page-drop border-4 border-[#001419] relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn ${showChapters ? "mobile-chapters-open" : ""}`}
+          className={`reader-page-drop border-4 border-[#001419] relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.002] flex flex-col animate-fadeIn ${showChapters ? "mobile-chapters-open z-50" : ""}`}
           style={{
             boxShadow: `8px 8px 0 #001419, 12px 12px 0 ${colorSecondary}, 0 25px 50px -12px ${colorPrimary}35`,
             background: "#ecf7f8"
@@ -574,27 +662,76 @@ export function SagaBlock({
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
-                      {saga.chapters.map((chapter: any, ci: number) => {
-                        let isLocked = false;
-                        if (isClient && !unlockAll) {
-                          if (ci === 0) {
-                            isLocked = false;
-                          } else {
-                            isLocked = !readChapters.includes(saga.chapters[ci - 1].id);
+                      {saga.chapters
+                        .filter((c: any) => c.status === "published" || !saga.chapters.some((x: any) => x.status === "published"))
+                        .map((chapter: any, ci: number, arr: any[]) => {
+                          let isLocked = false;
+                          if (isClient && !unlockAll) {
+                            if (ci === 0) {
+                              isLocked = false;
+                            } else {
+                              isLocked = !readChapters.includes(arr[ci - 1].id);
+                            }
                           }
-                        }
-                        return (
-                          <ChapterCard
+                          return (
+                            <ChapterCard
+                              key={chapter.id}
+                              chapter={chapter}
+                              sagaId={saga.id}
+                              sagaColor={colorPrimary}
+                              index={ci}
+                              isLocked={isLocked}
+                              sagaCover={saga.cover}
+                            />
+                          );
+                        })}
+                      {/* Special draft/upcoming block */}
+                      {saga.chapters.some((c: any) => c.status === "published") &&
+                        saga.chapters.filter((c: any) => c.status !== "published").slice(0, 1).map((chapter: any) => (
+                          <div
                             key={chapter.id}
-                            chapter={chapter}
-                            sagaId={saga.id}
-                            sagaColor={colorPrimary}
-                            index={ci}
-                            isLocked={isLocked}
-                            sagaCover={saga.cover}
-                          />
-                        );
-                      })}
+                            className="flex flex-col h-full overflow-hidden border-[3px] border-[#001419] bg-gradient-to-br from-[#002229] to-[#001217] shadow-[5px_5px_0_#D7263D] relative rounded-md min-h-[160px] justify-between p-4"
+                          >
+                            <div
+                              className="absolute inset-0 pointer-events-none opacity-[0.06] z-0"
+                              style={{
+                                backgroundImage: "radial-gradient(circle, #D7263D 1.5px, transparent 1.5px)",
+                                backgroundSize: "10px 10px",
+                              }}
+                            />
+                            <div className="relative z-10 flex flex-col justify-between h-full flex-1">
+                              <div>
+                                <div className="flex items-center gap-1.5 mb-1">
+                                  <span className="tag text-[9px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border border-black bg-gradient-to-r from-[#ab1b2c] to-[#D7263D] text-white">
+                                    EN PRODUCCIÓN
+                                  </span>
+                                  {chapter.date && (
+                                    <span className="font-mono text-[9px] text-emerald-400">
+                                      📅 {chapter.date}
+                                    </span>
+                                  )}
+                                </div>
+                                <h3 className="font-[var(--font-bangers)] text-2xl leading-tight uppercase tracking-wide text-white/80 mt-1">
+                                  PARTE {chapter.number}: {chapter.title}
+                                </h3>
+                                <p className="font-sans text-[11px] text-white/40 mt-1">
+                                  Este episodio está en desarrollo y se publicará próximamente.
+                                </p>
+                              </div>
+                              <div className="flex items-center gap-2 mt-4 pt-3 border-t border-dashed border-[#D7263D]/20">
+                                <div className="w-5 h-5 rounded-full flex items-center justify-center bg-[#D7263D]/10 text-[#D7263D] border border-[#D7263D]/25">
+                                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2.5" />
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                                  </svg>
+                                </div>
+                                <span className="font-[var(--font-bangers)] text-[10px] tracking-wider text-[#D7263D] uppercase">
+                                  ACCESO RESTRINGIDO
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
                     </div>
                   </div>
                 </motion.div>
@@ -607,23 +744,25 @@ export function SagaBlock({
   }
 
   const containerClass = isNuevo
-    ? "reader-page-drop border-4 border-black p-6 sm:p-10 relative overflow-hidden rounded-lg transition-transform duration-300 hover:scale-[1.005]"
+    ? "reader-page-drop border-4 border-black p-6 sm:p-10 relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-[1.008] hover:-translate-y-0.5"
     : isProximamente
       ? "reader-page-drop border-4 border-dashed border-[#D7263D] bg-[#021e25] p-6 sm:p-10 relative overflow-hidden rounded-lg opacity-90 transition-opacity hover:opacity-100"
       : "reader-page-drop border-4 border-[#001419] bg-[#ecf7f8] p-6 sm:p-10 relative overflow-hidden rounded-lg";
 
   return (
     <div 
-      className={containerClass}
+      className={`${containerClass} ${showChapters ? "z-50" : ""}`}
       style={{
         boxShadow: isNuevo 
-          ? "10px 10px 0 #001419, 14px 14px 0 #D7263D, 0 25px 50px -12px rgba(0, 184, 212, 0.35)" 
+          ? "12px 12px 0 #001419, 16px 16px 0 #D7263D, 0 30px 60px -15px rgba(215, 38, 61, 0.30)" 
           : isProximamente 
             ? "10px 10px 0 #000, 14px 14px 0 rgba(215, 38, 61, 0.25), 0 20px 40px -10px rgba(215, 38, 61, 0.2)"
             : `8px 8px 0 #001419, 12px 12px 0 ${colorSecondary}, 0 25px 50px -12px ${colorPrimary}35`,
         background: isProximamente
-          ? "#021e25"
-          : "#ecf7f8"
+          ? "linear-gradient(135deg, #011c22 0%, #000c0f 100%)"
+          : isNuevo
+            ? "linear-gradient(135deg, #ecf7f8 0%, #dbeeed 100%)"
+            : "#ecf7f8"
       }}
     >
       {/* Halftone pop-art highly visible background pattern */}
@@ -639,8 +778,8 @@ export function SagaBlock({
 
       {/* Retro sticker/banner highlights */}
       {isNuevo && (
-        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-[#D7263D] text-white font-[var(--font-bangers)] text-xs sm:text-sm px-3.5 py-1.5 uppercase tracking-widest border-2 border-black shadow-[3px_3px_0_#D7263D] z-20 rotate-[3deg] select-none animate-pulse">
-          ¡ÚLTIMO LANZAMIENTO!
+        <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-gradient-to-r from-[#ab1b2c] via-[#D7263D] to-[#ab1b2c] text-white font-[var(--font-bangers)] text-xs sm:text-sm px-4 py-2 uppercase tracking-[0.15em] border-2 border-black shadow-[3px_3px_0_#000] z-20 rotate-[3deg] select-none">
+          <span style={{ textShadow: "1px 1px 0px #000" }}>¡ÚLTIMO LANZAMIENTO!</span>
         </div>
       )}
 
@@ -760,30 +899,79 @@ export function SagaBlock({
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-                {saga.chapters.map((chapter: any, ci: number) => {
-                  let isLocked = false;
-                  if (isClient && !unlockAll) {
-                    if (isProximamente) {
-                      isLocked = true;
-                    } else if (ci === 0) {
-                      isLocked = false; // El capítulo #1 de cada saga siempre está desbloqueado
-                    } else {
-                      isLocked = !readChapters.includes(saga.chapters[ci - 1].id);
+                {saga.chapters
+                  .filter((c: any) => isProximamente || c.status === "published" || !saga.chapters.some((x: any) => x.status === "published"))
+                  .map((chapter: any, ci: number, arr: any[]) => {
+                    let isLocked = false;
+                    if (isClient && !unlockAll) {
+                      if (isProximamente) {
+                        isLocked = true;
+                      } else if (ci === 0) {
+                        isLocked = false; // El capítulo #1 de cada saga siempre está desbloqueado
+                      } else {
+                        isLocked = !readChapters.includes(arr[ci - 1].id);
+                      }
                     }
-                  }
-                  return (
-                    <ChapterCard
+                    return (
+                      <ChapterCard
+                        key={chapter.id}
+                        chapter={chapter}
+                        sagaId={saga.id}
+                        sagaColor={colorPrimary}
+                        index={ci}
+                        isLocked={isLocked}
+                        sagaCover={saga.cover}
+                        isSagaProximamente={isProximamente}
+                      />
+                    );
+                  })}
+                {/* Special draft/upcoming block */}
+                {!isProximamente && saga.chapters.some((c: any) => c.status === "published") &&
+                  saga.chapters.filter((c: any) => c.status !== "published").slice(0, 1).map((chapter: any) => (
+                    <div
                       key={chapter.id}
-                      chapter={chapter}
-                      sagaId={saga.id}
-                      sagaColor={colorPrimary}
-                      index={ci}
-                      isLocked={isLocked}
-                      sagaCover={saga.cover}
-                      isSagaProximamente={isProximamente}
-                    />
-                  );
-                })}
+                      className="flex flex-col h-full overflow-hidden border-[3px] border-[#001419] bg-gradient-to-br from-[#002229] to-[#001217] shadow-[5px_5px_0_#D7263D] relative rounded-md min-h-[160px] justify-between p-4"
+                    >
+                      <div
+                        className="absolute inset-0 pointer-events-none opacity-[0.06] z-0"
+                        style={{
+                          backgroundImage: "radial-gradient(circle, #D7263D 1.5px, transparent 1.5px)",
+                          backgroundSize: "10px 10px",
+                        }}
+                      />
+                      <div className="relative z-10 flex flex-col justify-between h-full flex-1">
+                        <div>
+                          <div className="flex items-center gap-1.5 mb-1">
+                            <span className="tag text-[9px] font-[var(--font-bangers)] tracking-widest px-2 py-0.5 border border-black bg-gradient-to-r from-[#ab1b2c] to-[#D7263D] text-white">
+                              EN PRODUCCIÓN
+                            </span>
+                            {chapter.date && (
+                              <span className="font-mono text-[9px] text-emerald-400">
+                                📅 {chapter.date}
+                              </span>
+                            )}
+                          </div>
+                          <h3 className="font-[var(--font-bangers)] text-2xl leading-tight uppercase tracking-wide text-white/80 mt-1">
+                            PARTE {chapter.number}: {chapter.title}
+                          </h3>
+                          <p className="font-sans text-[11px] text-white/40 mt-1">
+                            Este episodio está en desarrollo y se publicará próximamente.
+                          </p>
+                        </div>
+                        <div className="flex items-center gap-2 mt-4 pt-3 border-t border-dashed border-[#D7263D]/20">
+                          <div className="w-5 h-5 rounded-full flex items-center justify-center bg-[#D7263D]/10 text-[#D7263D] border border-[#D7263D]/25">
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                              <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2.5" />
+                              <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                            </svg>
+                          </div>
+                          <span className="font-[var(--font-bangers)] text-[10px] tracking-wider text-[#D7263D] uppercase">
+                            ACCESO RESTRINGIDO
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
               </div>
             </div>
           </motion.div>
@@ -798,7 +986,7 @@ export function SagaBlock({
 /* ── CHAPTER CARD ── */
 const ACCENTS = ["#D7263D", "#D7263D", "#D7263D", "#D7263D", "#D7263D"];
 
-function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, isSagaProximamente }: {
+function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, isSagaProximamente, compact = false }: {
   chapter: any;
   sagaId: string;
   sagaColor: string;
@@ -806,6 +994,7 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
   isLocked: boolean;
   sagaCover?: string | null;
   isSagaProximamente?: boolean;
+  compact?: boolean;
 }) {
   const accent = ACCENTS[index % ACCENTS.length];
   const [cover, setCover] = useState<string | null>(null);
@@ -827,20 +1016,23 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
   if (isLocked) {
     // Si el capítulo es draft, permitimos navegar para que aparezca el DraftLockScreen
     const isDraftChapter = chapter.draft;
+    const isBlueprintTheme = isDraftChapter || isSagaProximamente;
     const cardContent = (
       <div
         className={`flex flex-col h-full overflow-hidden border-[3px] border-[#001419] ${isDraftChapter ? "cursor-pointer hover:scale-[1.01] transition-transform" : ""}`}
         style={{
-          background: isDraftChapter ? "#003842" : "#e5e5eb",
-          boxShadow: isDraftChapter ? "5px 5px 0 #D7263D" : "5px 5px 0 #001419",
+          background: isBlueprintTheme ? "linear-gradient(135deg, #002229, #001217)" : "#e5e5eb",
+          boxShadow: isBlueprintTheme ? "5px 5px 0 #D7263D" : "5px 5px 0 #001419",
         }}
       >
         {/* Cover image area locked */}
         <div
           className="relative w-full overflow-hidden shrink-0 flex items-center justify-center"
           style={{
-            aspectRatio: "3/4",
-            background: `repeating-linear-gradient(45deg, #003842, #003842 10px, #063f49 10px, #063f49 20px)`,
+            aspectRatio: compact ? "4/3" : "3/4",
+            background: isBlueprintTheme 
+              ? `repeating-linear-gradient(45deg, #002229, #002229 10px, #003640 10px, #003640 20px)`
+              : `repeating-linear-gradient(45deg, #dfdfe5, #dfdfe5 10px, #e8e8ef 10px, #e8e8ef 20px)`,
           }}
         >
           {(chapter.cover || sagaCover) && (
@@ -853,33 +1045,33 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
           <div className="absolute inset-0 speed-lines opacity-20" />
           
           <div className="absolute inset-0 flex flex-col items-center justify-center z-20 gap-3">
-            <div className={`w-12 h-12 rounded-full flex items-center justify-center border ${isDraftChapter ? "bg-[#D7263D]/20 border-[#D7263D]/50 text-[#D7263D]" : "bg-white/10 border-white/20 text-white/80"}`}>
+            <div className={`w-12 h-12 rounded-full flex items-center justify-center border ${isBlueprintTheme ? "bg-[#D7263D]/20 border-[#D7263D]/50 text-[#D7263D]" : "bg-white/10 border-white/20 text-white/80"}`}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2.5" />
                 <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
               </svg>
             </div>
-            <span className={`font-[var(--font-bangers)] text-lg tracking-widest uppercase ${isDraftChapter ? "text-[#D7263D]" : "text-white/60"}`}>
-              {isDraftChapter ? "DRAFT" : "Bloqueado"}
+            <span className={`font-[var(--font-bangers)] text-lg tracking-widest uppercase ${isBlueprintTheme ? "text-[#D7263D]" : "text-white/60"}`}>
+              {isDraftChapter ? "DRAFT" : isSagaProximamente ? "PLANEADO" : "Bloqueado"}
             </span>
           </div>
         </div>
 
         {/* Info strip */}
-        <div className={`flex-1 p-4 flex flex-col justify-between gap-3 ${isDraftChapter ? "bg-[#021e25]" : "bg-[#eef0f4]"}`}>
+        <div className={`flex-1 p-4 flex flex-col justify-between gap-3 ${isBlueprintTheme ? "bg-[#021e25]" : "bg-[#eef0f4]"}`}>
           <div>
-            <p className={`font-[var(--font-bangers)] text-xs tracking-[0.2em] uppercase mb-1 ${isDraftChapter ? "text-[#D7263D]/60" : "text-gray-400"}`}>
+            <p className={`font-[var(--font-bangers)] text-xs tracking-[0.2em] uppercase mb-1 ${isBlueprintTheme ? "text-[#D7263D]/60" : "text-gray-400"}`}>
               {saga_label(index)}
             </p>
             {chapter.date && (
-              <p className={`font-sans text-[10px] mb-1.5 flex items-center gap-1.5 ${isDraftChapter ? "text-gray-400" : "text-gray-500"}`}>
+              <p className={`font-sans text-[10px] mb-1.5 flex items-center gap-1.5 ${isBlueprintTheme ? "text-emerald-400/90 font-mono" : "text-gray-500"}`}>
                 <span>📅</span> {chapter.date} {chapter.estimatedTime ? `| ⏱️ ${chapter.estimatedTime}` : ""}
               </p>
             )}
-            <h3 className={`font-[var(--font-bangers)] text-2xl sm:text-3xl leading-tight uppercase tracking-wide ${isDraftChapter ? "text-white/70" : "text-gray-400"}`}>
+            <h3 className={`font-[var(--font-bangers)] ${compact ? "text-base" : "text-2xl sm:text-3xl"} leading-tight uppercase tracking-wide ${isBlueprintTheme ? "text-white/80" : "text-gray-400"}`}>
               {chapter.title}
             </h3>
-            <p className={`font-[var(--font-sans)] text-xs mt-1 ${isDraftChapter ? "text-[#D7263D]/70" : "text-gray-500"}`}>
+            <p className={`font-[var(--font-sans)] text-xs mt-1 ${isBlueprintTheme ? "text-white/50" : "text-gray-500"}`}>
               {isDraftChapter
                 ? "Borrador — ingresá la contraseña para previsualizar."
                 : isSagaProximamente
@@ -892,7 +1084,10 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
               <span>🔑</span> Acceso con contraseña →
             </div>
           )}
-          {!isDraftChapter && <div className="h-1 w-12 bg-gray-300" />}
+          {isBlueprintTheme && !isDraftChapter && (
+            <div className="h-[2px] w-full border-t border-dashed border-[#D7263D]/30" />
+          )}
+          {!isBlueprintTheme && <div className="h-1 w-12 bg-gray-300" />}
         </div>
       </div>
     );
@@ -933,7 +1128,7 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
         <div
           className="relative w-full overflow-hidden shrink-0"
           style={{
-            aspectRatio: "3/4",
+            aspectRatio: compact ? "4/3" : "3/4",
             background: (cover || chapter.cover || sagaCover)
               ? "#001419"
               : `linear-gradient(145deg, #001419 0%, ${accent}33 100%)`,
@@ -1006,7 +1201,7 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
                 <span>📅</span> {chapter.date} {chapter.estimatedTime ? `| ⏱️ ${chapter.estimatedTime}` : ""}
               </p>
             )}
-            <h3 className="font-[var(--font-bangers)] text-2xl sm:text-3xl leading-tight uppercase tracking-wide text-[#001419]">
+            <h3 className={`font-[var(--font-bangers)] ${compact ? "text-base" : "text-2xl sm:text-3xl"} leading-tight uppercase tracking-wide text-[#001419]`}>
               {chapter.title}
             </h3>
           </div>

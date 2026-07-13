@@ -48,8 +48,10 @@ function colorWithAlpha(color: string, alpha: number): string {
 function stripTextTokens(text: string): string {
   return text
     .replace(/\*\*/g, "")
+    .replace(/\*/g, "")
     .replace(/\[color:[^\]]+\]/g, "")
-    .replace(/\[\/color\]/g, "");
+    .replace(/\[\/color\]/g, "")
+    .replace(/<[^>]+>/g, "");
 }
 
 export function CinematicTextBubble({

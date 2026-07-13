@@ -39,6 +39,7 @@ body {
   background-size: 42px 42px, 42px 42px, 100% 100%;
 }
 
+
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes float-slow { 0%, 100% { transform: translateY(0) rotate(var(--rot,0deg)); } 50% { transform: translateY(-10px) rotate(var(--rot,0deg)); } }
 @keyframes pop-in { 0% { transform: scale(0.4) rotate(-8deg); opacity: 0; } 70% { transform: scale(1.06) rotate(2deg); opacity: 1; } 100% { transform: scale(1) rotate(0deg); opacity: 1; } }
@@ -245,15 +246,5 @@ body {
       display: flex !important;
     }
 
-    .mobile-upcoming-banner {
-      width: 100%;
-      border-right: 0;
-      border-bottom: 4px solid #000;
-    }
-
-    .mobile-upcoming-banner span {
-      writing-mode: horizontal-tb !important;
-      transform: none !important;
-    }
   }
 }

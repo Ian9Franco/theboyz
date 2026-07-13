@@ -132,7 +132,7 @@ export function useDialogueEditor({
       tailWidth: isCinematic ? undefined : 6,
       tailCurvature: isCinematic ? undefined : -22,
       width: isCinematic ? 900 : isCaption ? 160 : 120,
-      fontSize: isCinematic ? 76 : 9,
+      fontSize: isCinematic ? 76 : 8,
       borderRadius: isCinematic ? 0 : isCaption ? 4 : 18,
       tail: isCinematic || isCaption ? "none" : undefined,
       fontFamily: isCinematic

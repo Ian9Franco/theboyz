@@ -1,0 +1,1385 @@
+{
+  "pages": {
+    "1": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "Districto nulo parte 3  La caceria", "style": "caption", "posX": 50, "posY": 5, "tailX": 50, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 320, "fontSize": 8, "borderRadius": 0, "tail": "none", "customBg": "#f5e642" }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/sirena de polcias.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.3,
+                "playbackRate": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "Los ultimos guardianes del refugio.", "style": "caption", "posX": 50, "posY": 5, "tailX": 50, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 4, "tail": "none", "customBg": "#f5e642" }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "snipers listos, drones en posicion..", "size": "small", "posX": 35, "posY": 0, "tailX": 25, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "#0d0d0d", "customColor": "#ececee", "textColor": "#f7f3f3" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 30 }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "preparen el detonador, a mi orden", "size": "small", "posX": 65, "posY": 30, "tailX": 50, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customBg": "#050505", "customColor": "#ededed", "textColor": "#f1efef" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 30, "w": 100, "h": 38 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "Brecha lista, comandante", "size": "small", "posX": 70, "posY": 70, "tailX": 60, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 70, "w": 100, "h": 31 }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "¡CLANK-ZAP!", "style": "scream", "size": "small", "posX": 15, "posY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "tail": "none", "fontFamily": "luckiest", "customBg": "rgba(255, 255, 255, 0.5)" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 30 }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "cortaron la luz de toda la cuadra!", "size": "small", "posX": 90, "posY": 35, "tailX": 85, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "me chupa un huevo; tecnicos solucionen esto", "size": "small", "posX": 35, "posY": 30, "tailX": 30, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "customColor": "#f0f0f4", "customBg": "#050505", "textColor": "#e8e3e3" },
+            { "text": "el resto, vamos a entrar!", "size": "small", "posX": 55, "posY": 30, "tailX": 30, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 30, "w": 100, "h": 35 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "HUMO!", "size": "small", "posX": 35, "posY": 65, "tailX": 15, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18, "textColor": "#fefbfb", "customColor": "#e4e4ec", "customBg": "#000000" },
+            { "text": "la concha de su madre nos estan tirando granadas de humo!! ", "size": "small", "posX": 90, "posY": 70, "tailX": 80, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 65, "w": 100, "h": 36 }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "panels": [
+        {
+          "focusY": 0.25,
+          "dialogue": [
+            { "text": "cual es el plan?", "size": "small", "posX": 90, "posY": 5, "tailX": 75, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "que plan?", "size": "small", "posX": 65, "posY": 0, "tailX": 60, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "hay un ducto de cables que uso para no pagar el wifi, podemos usar eso para salir, nos deja directo en el subte", "size": "small", "posX": 15, "posY": 10, "tailX": 30, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "van a entrar en cualquier momento", "size": "small", "posX": 80, "posY": 35, "tailX": 70, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 56 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "estan desoldando las visagras", "size": "small", "posX": 85, "posY": 75, "tailX": 65, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 235, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 55, "w": 100, "h": 45 }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "hay que movernos despacio, o nos van a escuchar", "size": "small", "posX": 70, "posY": 5, "tailX": 85, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 155, "fontSize": 8, "borderRadius": 18 },
+            { "text": "bueno dale que llueve..", "size": "small", "posX": 40, "posY": 0, "tailX": 25, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "eu..  cierren el orto un segundo", "size": "small", "posX": 65, "posY": 20, "tailX": 45, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 95, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 22 }
+          ]
+        },
+        {
+          "focusY": 0.35,
+          "dialogue": [
+            { "text": "la puerta es de fierro, no?", "size": "small", "posX": 45, "posY": 20, "tailX": 40, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "no boludo, es de papel", "size": "small", "posX": -5, "posY": 25, "tailX": 5, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 },
+            { "text": "e?", "size": "small", "posX": 55, "posY": 40, "tailX": 60, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 50, "fontSize": 8, "borderRadius": 18 },
+            { "text": "creo que tengo una idea", "size": "small", "posX": 100, "posY": 25, "tailX": 90, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 175, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 20, "w": 100, "h": 20 }
+          ]
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            { "text": "a ver si pasan con esto-", "size": "small", "posX": 50, "posY": 40, "tailX": 40, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 40, "w": 100, "h": 22 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "amigo que estas haciendo?", "size": "small", "posX": 95, "posY": 60, "tailX": 90, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "que haces!? veni aca hay que salir!", "size": "small", "posX": 40, "posY": 65, "tailX": 25, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "pero les voy a hacer LA BOLUDA", "size": "small", "posX": 70, "posY": 60, "tailX": 65, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "que te pensas que no tienen PEM?", "size": "small", "posX": 35, "posY": 95, "tailX": 25, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "e?", "size": "small", "posX": 75, "posY": 95, "tailX": 85, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 9, "borderRadius": 18 },
+            { "text": "entendí la referencia", "size": "small", "posX": 15, "posY": 100, "tailX": 10, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 65, "w": 100, "h": 36 }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "panels": [
+        {
+          "focusY": 0.25,
+          "dialogue": [
+            { "text": "en serio te vas a poner con el tiki tiki ahora?", "size": "small", "posX": 55, "posY": 40, "tailX": 60, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "me salio una notificacion-", "size": "small", "posX": 10, "posY": 10, "tailX": 30, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "los sensores estan detectando aumentos de energia gamma, los puse por lo que hicieron ustedes dos", "size": "small", "posX": 10, "posY": 25, "tailX": 25, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "no sabemos si hay mas como ustedes", "size": "small", "posX": 5, "posY": 40, "tailX": 30, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": [
+            { "text": "la ultima vez que subieron a este punto fue la otra semana", "size": "small", "posX": 30, "posY": 95, "tailX": 30, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "cuando el uandi..", "size": "small", "posX": 40, "posY": 100, "tailX": 30, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "no puedo respirar con este humo!", "size": "small", "posX": 45, "posY": 10, "tailX": 45, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "no es toxico, tranqui", "size": "small", "posX": 30, "posY": 10, "tailX": 25, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "vamos a movernos, es por atras", "size": "small", "posX": 40, "posY": 60, "tailX": 40, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "por atras??", "size": "small", "posX": 50, "posY": 50, "tailX": 60, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "te cojo?", "size": "small", "posX": 90, "posY": 40, "tailX": 90, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "9": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "dale uandiiii", "size": "small", "posX": 55, "posY": 5, "tailX": 40, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "la entrada a los tuneles es por atras del taller, si salimos justo cuando entren no se van a dar cuenta", "size": "small", "posX": 30, "posY": 0, "tailX": 20, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 250, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            { "text": "CAGAMOS", "size": "small", "posX": 30, "posY": 25, "tailX": 20, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "hoy te toca a vos eh..", "size": "small", "posX": 50, "posY": 30, "tailX": 40, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 },
+            { "text": "uandi?", "size": "small", "posX": 70, "posY": 45, "tailX": 55, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 25, "w": 100, "h": 49 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "uandi.. estas bien?", "size": "small", "posX": 65, "posY": 95, "tailX": 50, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "no lo mires a los ojos-JAJ", "size": "small", "posX": 45, "posY": 75, "tailX": 40, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 75, "w": 100, "h": 25 }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "*no puedo controlarlo!*", "size": "small", "posX": 80, "posY": 5, "tailX": 70, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 26 }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 25, "w": 100, "h": 42 }
+          ],
+          "sounds": []
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 65, "w": 100, "h": 33 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/hulk growl.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.25,
+                "playbackRate": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "11": {
+      "panels": [
+        {
+          "focusY": 0.35,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 61 }
+          ],
+          "sounds": []
+        },
+        {
+          "focusY": 0.75,
+          "dialogue": [
+            { "text": "registren todo, encuentrenlos-", "size": "small", "posX": 85, "posY": 65, "tailX": 75, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "si se resisten ya saben que hacer", "size": "small", "posX": 90, "posY": 80, "tailX": 75, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 60, "w": 100, "h": 40 }
+          ]
+        }
+      ]
+    },
+    "12": {
+      "panels": [
+        {
+          "focusY": 0.3,
+          "dialogue": [
+            { "text": "estan armados para matar", "size": "small", "posX": 100, "posY": 35, "tailX": 90, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "y no traen camara", "size": "small", "posX": 110, "posY": 45, "tailX": 95, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "no es un simple allanamiento-", "size": "small", "posX": 105, "posY": 60, "tailX": 95, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "¡Aseguren el perímetro! ¡Anomalías identificadas en el sector B!", "size": "small", "posX": 55, "posY": 5, "tailX": 65, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 57 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "pss, ian\nque hacemos?", "size": "small", "posX": 55, "posY": 95, "tailX": 60, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 95, "fontSize": 8, "borderRadius": 18 },
+            { "text": "quedate agachado", "size": "small", "posX": 20, "posY": 95, "tailX": 35, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 55, "w": 100, "h": 42 }
+          ]
+        }
+      ]
+    },
+    "13": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "vas a teener que crear un par de copias para distraer ", "size": "small", "posX": 45, "posY": 10, "tailX": 30, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "no creo..", "size": "small", "posX": 60, "posY": 10, "tailX": 70, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "no va a hacer falta con el otro asi..", "size": "small", "posX": 75, "posY": 0, "tailX": 70, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 8, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "14": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "general, no parece haber movimiento", "size": "small", "posX": 55, "posY": 5, "tailX": 55, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "sigan buscando, estan aca", "size": "small", "posX": 20, "posY": 10, "tailX": 30, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "sounds": []
+        }
+      ]
+    },
+    "15": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "Y ESE?!", "size": "small", "posX": 95, "posY": 30, "tailX": 85, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "encontrmaos uno, procedemos con la extraccion", "size": "small", "posX": 30, "posY": 20, "tailX": 25, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "16": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/hulk growl3.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.5,
+                "playbackRate": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "17": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "perdimos comunicacion con los que entraron..", "size": "small", "posX": 90, "posY": 10, "tailX": 80, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 155, "fontSize": 8, "borderRadius": 18 },
+            { "text": "que mierda pasa ahi adentro?", "size": "small", "posX": 50, "posY": 10, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#000000", "customColor": "#f0f0f4", "textColor": "#f6f4f4" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 33 }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "aaahg", "size": "small", "posX": 50, "posY": 35, "tailX": 35, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 35, "w": 100, "h": 33 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/Grito de Hombre Efectos de sonido-Trimmed by FlexClip.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.3,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "que mierda hay ahi adentro", "size": "small", "posX": 85, "posY": 70, "tailX": 65, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 195, "fontSize": 8, "borderRadius": 18 },
+            { "text": "tengo que hacer todo yo", "size": "small", "posX": 60, "posY": 65, "tailX": 35, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18, "customBg": "#000000", "customColor": "#e5e5eb", "textColor": "#f0efef" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 65, "w": 100, "h": 34 }
+          ]
+        }
+      ]
+    },
+    "18": {
+      "panels": [
+        {
+          "focusY": 0.1,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 18 }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "FUEGOO!!", "size": "small", "posX": 70, "posY": 20, "tailX": 85, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "NO LE HACEMOS NADA!", "size": "small", "posX": 25, "posY": 35, "tailX": 15, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 15, "w": 100, "h": 38 }
+          ]
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 55, "w": 100, "h": 45 }
+          ]
+        }
+      ]
+    },
+    "19": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": []
+        }
+      ]
+    },
+    "20": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "La caceria..", "style": "caption", "posX": 50, "posY": 5, "tailX": 50, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 4, "tail": "none", "fontFamily": "sans" }
+          ]
+        }
+      ]
+    },
+    "21": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "esta mucho peor que la ultima vez..", "size": "small", "posX": 35, "posY": 5, "tailX": 20, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 },
+            { "text": "que carajos hacemos?", "size": "small", "posX": -5, "posY": 30, "tailX": 10, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "aprovechar", "size": "small", "posX": 35, "posY": 55, "tailX": 20, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "22": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/contracosas.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.4,
+                "playbackRate": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "23": {
+      "panels": [
+        {
+          "focusY": 0.25,
+          "dialogue": [
+            { "text": "uandi necesita que lo ayudemos", "size": "small", "posX": 45, "posY": 0, "tailX": 30, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "na creo que puede solo", "size": "small", "posX": 50, "posY": 25, "tailX": 45, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "AYUDA POR FAVOR", "size": "small", "posX": 95, "posY": 25, "tailX": 85, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 48 }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            { "text": "ustedes quedense", "size": "small", "posX": 50, "posY": 70, "tailX": 30, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "pero esto empezo por mi culpa, y no voy a quedarme viendo", "size": "small", "posX": 75, "posY": 45, "tailX": 60, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 195, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 50, "w": 100, "h": 22 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 70, "w": 100, "h": 31 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/laser_1.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 1,
+                "playbackRate": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "24": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 35 }
+          ],
+          "sounds": []
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 35, "w": 100, "h": 32 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 65, "w": 100, "h": 35 }
+          ],
+          "sounds": []
+        }
+      ]
+    },
+    "25": {
+      "panels": [
+        {
+          "focusY": 0.1,
+          "dialogue": [
+            { "text": "ademas...", "size": "small", "posX": 85, "posY": 5, "tailX": 65, "tailY": 5, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#ad03fc" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 17 }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "esta me la debian", "size": "small", "posX": 10, "posY": 20, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#7d0bef" },
+            { "text": "con este visor puedocontrolarlo mejor", "size": "small", "posX": 100, "posY": 50, "tailX": 90, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 245, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 15, "w": 100, "h": 58 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/laser_1.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.45,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "correte!", "size": "small", "posX": 80, "posY": 100, "tailX": 90, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "este tira laser por los ojos!", "size": "small", "posX": 0, "posY": 95, "tailX": 10, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 75, "w": 100, "h": 26 }
+          ]
+        }
+      ]
+    },
+    "26": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "che te falta mucho para encontrarnos una salida?", "size": "small", "posX": 60, "posY": -5, "tailX": 40, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 },
+            { "text": "no hagas boludeces ya te conozco", "size": "small", "posX": 30, "posY": 0, "tailX": 25, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 },
+            { "text": "boludeces? nah", "size": "small", "posX": 65, "posY": 0, "tailX": 35, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "no sabes que dia es hoy?", "size": "small", "posX": 50, "posY": 20, "tailX": 40, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 },
+            { "text": "eh? domingo?", "size": "small", "posX": -5, "posY": 15, "tailX": 10, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 26 }
+          ]
+        },
+        {
+          "focusY": 0.35,
+          "dialogue": [
+            { "text": "hoy es mi dia de suerte wachin", "size": "small", "posX": 85, "posY": 20, "tailX": 60, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 305, "fontSize": 8, "borderRadius": 18, "customBg": "#0f29f0", "textColor": "#ff0019" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 25, "w": 100, "h": 15 }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            { "text": "ahi voy mati!", "size": "small", "posX": 15, "posY": 65, "tailX": -10, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#030bfc", "textColor": "#f50505" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 40, "w": 100, "h": 42 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/laser_1.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.6,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [
+            { "text": "bueno esto se complico mas de lo debido", "size": "small", "posX": 50, "posY": 85, "tailX": 30, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 165, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 80, "w": 100, "h": 20 }
+          ]
+        }
+      ]
+    },
+    "27": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "esos son.. copias?", "size": "small", "posX": 45, "posY": 25, "tailX": 20, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "te perdiste de un par de cosas wachin", "size": "small", "posX": 60, "posY": 0, "tailX": 45, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 255, "fontSize": 8, "borderRadius": 18 },
+            { "text": "aunque lo tuyo no esta mal", "size": "small", "posX": 0, "posY": 5, "tailX": 35, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "aggh!", "size": "small", "posX": 95, "posY": 0, "tailX": 75, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#080808", "textColor": "#f9f5f5" }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "toma.. corta vos", "size": "small", "posX": 105, "posY": 40, "tailX": 80, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#110de7", "textColor": "#e40707" },
+            { "text": "te escucho quejarte, duele?", "size": "small", "posX": 35, "posY": 50, "tailX": 45, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "un poco", "size": "small", "posX": 5, "posY": 45, "tailX": 10, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "te cojo?", "size": "small", "posX": 35, "posY": 70, "tailX": 50, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "cubrime, esto se calienta mucho", "size": "small", "posX": -5, "posY": 90, "tailX": 25, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 70, "w": 100, "h": 30 }
+          ]
+        }
+      ]
+    },
+    "28": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "todos ustedes contra mi?", "size": "small", "posX": 80, "posY": 0, "tailX": 55, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 170, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 28 }
+          ]
+        },
+        {
+          "focusY": 0.45,
+          "dialogue": [
+            { "text": "te canto los tantos?", "size": "small", "posX": 25, "posY": 25, "tailX": 35, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "vengan de a uno!", "size": "small", "posX": 110, "posY": 30, "tailX": 85, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "o vengan todos", "size": "small", "posX": 110, "posY": 40, "tailX": 90, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "la verdad es que da igual", "size": "small", "posX": 110, "posY": 50, "tailX": 90, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 30, "w": 100, "h": 37 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "las cartas estan siempre a mi favor", "size": "small", "posX": 65, "posY": 60, "tailX": 50, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 155, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 65, "w": 100, "h": 35 }
+          ]
+        }
+      ]
+    },
+    "29": {
+      "panels": [
+        {
+          "focusY": 0.25,
+          "dialogue": [
+            { "text": "bueno a ver que esta pasando aca afuera", "size": "small", "posX": 45, "posY": 5, "tailX": 30, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "esos drones van a complicarnos para escapar", "size": "small", "posX": 105, "posY": 30, "tailX": 65, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 270, "fontSize": 8, "borderRadius": 18 },
+            { "text": "ah.. usan un recorrido predefinido, es facil de interferir", "size": "small", "posX": 30, "posY": 50, "tailX": 50, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "vibe code..", "size": "small", "posX": 0, "posY": 90, "tailX": 20, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 50, "w": 100, "h": 49 }
+          ]
+        }
+      ]
+    },
+    "30": {
+      "panels": [
+        {
+          "focusY": 0.25,
+          "dialogue": [
+            { "text": "por que te pegas solo?", "size": "small", "posX": -10, "posY": 10, "tailX": 10, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 95, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.65,
+          "dialogue": [
+            { "text": "estan usando esa antena para comunicarse", "size": "small", "posX": -5, "posY": 50, "tailX": 15, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 165, "fontSize": 8, "borderRadius": 18 },
+            { "text": "ya no", "size": "small", "posX": 105, "posY": 50, "tailX": 85, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/ironblast1.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.2,
+                "playbackRate": 1
+              }
+            }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 40, "w": 100, "h": 41 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "R.E.G.U.L.A.R!! DONDE ESTAS? TE NECESITO EN CENTRAL PARK!", "style": "electronic", "size": "small", "posX": 0, "posY": 95, "tailX": 15, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "estamos por terminar no se preoucpe", "size": "small", "posX": 75, "posY": 100, "tailX": 60, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 155, "fontSize": 8, "borderRadius": 18, "textColor": "#fcfcfc", "customBg": "#0d0d0d", "customColor": "#f2f2f2" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 80, "w": 100, "h": 20 }
+          ]
+        }
+      ]
+    },
+    "31": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 34 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/ironblast2.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.4,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "pateticos", "size": "small", "posX": 100, "posY": 35, "tailX": 85, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 35, "w": 100, "h": 32 }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [
+            { "text": "asi que vos sos el que me esta rompiendo los drones y las antenas, pareces ser el mas vivo de estos raritos", "size": "small", "posX": 80, "posY": 65, "tailX": 55, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 195, "fontSize": 8, "borderRadius": 18, "customBg": "#050505", "textColor": "#f2eeee", "customColor": "#f3f3f7" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 65, "w": 100, "h": 36 }
+          ]
+        }
+      ]
+    },
+    "32": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "este dejenmelo a mi", "size": "small", "posX": 55, "posY": 20, "tailX": 30, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18, "customBg": "#000000", "textColor": "#f4f0f0", "customColor": "#f5f5f5" },
+            { "text": "--ese parece ser el capitan", "size": "small", "posX": 95, "posY": 5, "tailX": 70, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "textColor": "#030303", "customColor": "#0f0f0f" }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "esto lo voy a disfrutar", "size": "small", "posX": 105, "posY": 35, "tailX": 95, "tailY": 60, "tailWidth": 4, "tailCurvature": -22, "width": 165, "fontSize": 8, "borderRadius": 18, "customBg": "#000000", "textColor": "#ffffff", "customColor": "#ffffff" },
+            { "text": "estos eran tus juguetes? perdona", "size": "small", "posX": 0, "posY": 45, "tailX": 35, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "sounds": []
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [
+            { "text": "Eu, grandote", "style": "scream", "size": "small", "posX": 90, "posY": 95, "tailX": 30, "tailY": 95, "tailWidth": 16, "tailCurvature": -22, "width": 180, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker", "customBg": "#2d04fb", "textColor": "#ff0000" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 80, "w": 100, "h": 20 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/silvido.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.25,
+                "playbackRate": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "33": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "vos sabes que la gorra a mi no me cae para nada bien?", "size": "small", "posX": 55, "posY": 0, "tailX": 50, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 210, "fontSize": 8, "borderRadius": 18 },
+            { "text": "HUH", "size": "small", "posX": 25, "posY": 0, "tailX": 20, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.75,
+          "dialogue": [
+            { "text": "ayer, se llevaron a un amigo, y me dijo que lo golpearon", "size": "small", "posX": 55, "posY": 55, "tailX": 50, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "sabes algo de eso?", "size": "small", "posX": 60, "posY": 60, "tailX": 45, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [
+            { "text": "movete, estoy ocupado", "size": "small", "posX": 95, "posY": 80, "tailX": 75, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#0d0d0d", "textColor": "#f7eeee", "customColor": "#ececf4" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 80, "w": 100, "h": 20 }
+          ]
+        }
+      ]
+    },
+    "34": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "a donde vas??", "size": "small", "posX": 60, "posY": 0, "tailX": 45, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 26 }
+          ]
+        },
+        {
+          "focusY": 0.35,
+          "dialogue": [
+            { "text": "mutante de copias..", "size": "small", "posX": 80, "posY": 25, "tailX": 75, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18, "customBg": "#151414", "textColor": "#f7f2f2", "customColor": "#f7f7f7" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 25, "w": 100, "h": 22 }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            { "text": "que murmuras? si me vas a decir algo decimelo a la cara", "size": "small", "posX": 60, "posY": 45, "tailX": 50, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 410, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 50, "w": 100, "h": 20 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "a este dejamelo a mi, anda con mati", "size": "small", "posX": 15, "posY": 90, "tailX": 40, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 250, "fontSize": 8, "borderRadius": 19 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 65, "w": 100, "h": 35 }
+          ]
+        }
+      ]
+    },
+    "35": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "truco!", "size": "small", "posX": -5, "posY": 50, "tailX": 10, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#2c03fc", "textColor": "#f60404", "customColor": "#0a0a0a" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 30, "w": 100, "h": 25 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "a ver que tanto aguanta esa armadura ", "size": "small", "posX": 25, "posY": 95, "tailX": 30, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 300, "fontSize": 8, "borderRadius": 18 },
+            { "text": "ugh", "size": "small", "posX": 80, "posY": 70, "tailX": 70, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#080808", "textColor": "#eceaea", "customColor": "#eeeef6" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 55, "w": 100, "h": 45 }
+          ]
+        }
+      ]
+    },
+    "36": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "estas aguantando como un campeon!", "size": "small", "posX": 65, "posY": 0, "tailX": 50, "tailY": 5, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 25 }
+          ]
+        },
+        {
+          "focusY": 0.35,
+          "dialogue": [
+            { "text": "choque los cinco!", "size": "small", "posX": 50, "posY": 20, "tailX": 45, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "aaagh!", "size": "small", "posX": 85, "posY": 45, "tailX": 65, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#0f0f0f", "textColor": "#f0f0f0", "customColor": "#f4f4f5" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 25, "w": 100, "h": 20 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/explosion2.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.55,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 45, "w": 100, "h": 25 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/explosion.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.35,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "redondeamos numero caballero?", "size": "small", "posX": 5, "posY": 100, "tailX": 20, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 },
+            { "text": "esa arrogancia-", "size": "small", "posX": 70, "posY": 100, "tailX": 60, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#121111", "textColor": "#eeeded", "customColor": "#f4f4f6" },
+            { "text": "-te va a salir cara", "size": "small", "posX": 95, "posY": 95, "tailX": 65, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 145, "fontSize": 8, "borderRadius": 18, "customBg": "#0d0d0d", "textColor": "#fcf7f7", "customColor": "#efeff1" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 70, "w": 100, "h": 31 }
+          ]
+        }
+      ]
+    },
+    "37": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "cara? nah que rompimos?", "size": "small", "posX": 90, "posY": 10, "tailX": 70, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 180, "fontSize": 8, "borderRadius": 18 },
+            { "text": "dale levantate que tenes sueño?¡ dormiste mal?", "size": "small", "posX": 100, "posY": 35, "tailX": 70, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            { "text": "-uh..", "size": "small", "posX": 100, "posY": 50, "tailX": 85, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 40, "w": 100, "h": 35 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "hablas mucho, te dijeron?", "size": "small", "posX": 95, "posY": 95, "tailX": 80, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 185, "fontSize": 8, "borderRadius": 18, "customBg": "#0d0d0d", "textColor": "#f9f1f1", "customColor": "#e9e9f1" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 75, "w": 100, "h": 25 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/spashagua.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.4,
+                "playbackRate": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "38": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "y vos sos re wachin, te dijeron?", "size": "small", "posX": 105, "posY": 30, "tailX": 85, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18, "customBg": "#0810f7", "textColor": "#f90101" },
+            { "text": "que--caraj.", "size": "small", "posX": 105, "posY": 50, "tailX": 75, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#0d0c0c", "textColor": "#f5ebeb", "customColor": "#fafaff" }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "aaaaghh", "size": "small", "posX": 70, "posY": 70, "tailX": 35, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#121212", "textColor": "#f2e9e9", "customColor": "#efeff1" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 65, "w": 100, "h": 36 }
+          ]
+        }
+      ]
+    },
+    "39": {
+      "panels": [
+        {
+          "focusY": 0.35,
+          "dialogue": [
+            { "text": "no te levantes", "size": "small", "posX": 25, "posY": 40, "tailX": 55, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "me tiene harto", "size": "small", "posX": 85, "posY": 5, "tailX": 85, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 165, "fontSize": 8, "borderRadius": 18, "customBg": "#080808", "textColor": "#f2f2f2", "customColor": "#efeff5" }
+          ]
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 50, "w": 100, "h": 48 }
+          ]
+        }
+      ]
+    },
+    "40": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "sus movimientos son totalmente erraticos", "size": "small", "posX": 95, "posY": 25, "tailX": 80, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 110, "fontSize": 8, "borderRadius": 18, "customBg": "#000000", "textColor": "#f4f0f0", "customColor": "#f2f2f2" },
+            { "text": "su unica guardia es ese baston", "size": "small", "posX": 5, "posY": 30, "tailX": 40, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#141414", "textColor": "#ece4e4", "customColor": "#e9e9f1" }
+          ]
+        }
+      ]
+    },
+    "41": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "uhg, ", "size": "small", "posX": 35, "posY": 10, "tailX": 15, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "*cogh!*", "style": "scream", "size": "small", "posX": 100, "posY": 30, "tailX": 85, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#ffffff", "customColor": "#1c1c1c" }
+          ]
+        }
+      ]
+    },
+    "42": {
+      "panels": [
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "uh?", "size": "small", "posX": 45, "posY": 45, "tailX": 30, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/multiple punches - sound effect.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.45,
+                "playbackRate": 2
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [
+            { "text": "cerramos numero?.. caballero", "size": "small", "posX": 95, "posY": 75, "tailX": 65, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 210, "fontSize": 8, "borderRadius": 18, "customBg": "#1a1919", "textColor": "#fff5f5", "customColor": "#eeeef2" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 75, "w": 100, "h": 25 }
+          ]
+        }
+      ]
+    },
+    "43": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "el visor va bien??", "size": "small", "posX": 50, "posY": 0, "tailX": 40, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "sisi, solo se calienta un poco", "size": "small", "posX": 100, "posY": 5, "tailX": 75, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "alto! ", "size": "small", "posX": 65, "posY": 30, "tailX": 90, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            { "text": "aaagh", "size": "small", "posX": 100, "posY": 45, "tailX": 75, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "trata de no matar a nadie con eso", "size": "small", "posX": 65, "posY": 50, "tailX": 55, "tailY": 65, "tailWidth": 6, "tailCurvature": -20, "width": 265, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 30, "w": 100, "h": 48 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/laser_1.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.4,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "lo viste a julian?", "size": "small", "posX": 70, "posY": 105, "tailX": 45, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "la ultima vez que lo vi estaba con vos", "size": "small", "posX": 90, "posY": 70, "tailX": 75, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 80, "w": 100, "h": 23 }
+          ]
+        }
+      ]
+    },
+    "44": {
+      "panels": [
+        {
+          "focusY": 0.25,
+          "dialogue": [
+            { "text": "son demasiados mati", "size": "small", "posX": 60, "posY": 5, "tailX": 50, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "y este visor en cualquier momento me rebienta la cabeza", "size": "small", "posX": -5, "posY": 50, "tailX": 25, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "escuchame tengo un plan", "size": "small", "posX": 60, "posY": 70, "tailX": 30, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 8, "borderRadius": 18 },
+            { "text": "soy todo ojos", "size": "small", "posX": 85, "posY": 95, "tailX": 55, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "oidos, soy todo oidos", "size": "small", "posX": 75, "posY": 100, "tailX": 55, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "se hackear esos drones, necesito llegar a uno, y hacer que se choquen para causar una distraccion", "size": "small", "posX": 25, "posY": 105, "tailX": 30, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 195, "fontSize": 8, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "45": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "es un plan..", "size": "small", "posX": 85, "posY": 10, "tailX": 70, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "tengo uno", "size": "small", "posX": 45, "posY": 40, "tailX": 30, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "y yo que hago? ", "size": "small", "posX": 65, "posY": 60, "tailX": 75, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 35, "w": 100, "h": 25 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "CORRER!", "size": "small", "posX": 80, "posY": 70, "tailX": 70, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 60, "w": 100, "h": 40 }
+          ]
+        }
+      ]
+    },
+    "46": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "quedate agachado boludo", "size": "small", "posX": 40, "posY": 110, "tailX": 30, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/crash2.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.45,
+                "playbackRate": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "47": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "que pasa barbita? ya no hablas?", "size": "small", "posX": 60, "posY": 5, "tailX": 40, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#050505", "textColor": "#f6efef", "customColor": "#f2f2fc" },
+            { "text": "kgg- a tu señora le hablo", "size": "small", "posX": 80, "posY": 30, "tailX": 65, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            { "text": "bien jefe, agarro a uno ", "size": "small", "posX": 80, "posY": 35, "tailX": 65, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 155, "fontSize": 8, "borderRadius": 18 },
+            { "text": "quedan 3", "size": "small", "posX": 100, "posY": 40, "tailX": 95, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            { "text": "asi que vos sos el que le gusta boquear? ", "size": "small", "posX": 75, "posY": 70, "tailX": 65, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "nos vamos a entretener con este", "size": "small", "posX": 20, "posY": 70, "tailX": 35, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 115, "fontSize": 8, "borderRadius": 18 }
+          ]
+        }
+      ]
+    }
+  },
+  "audioTracks": [
+    {
+      "id": "track-1783892881372-mwu7j",
+      "layer": "music",
+      "src": "/sounds/sfx/FBI Breaks Into Home Sound Effect-Trimmed by FlexClip.mp3",
+      "startPageKey": "11",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "11"
+      },
+      "soundConfig": {
+        "volume": 0.65,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1783893002451-pgir0",
+      "layer": "music",
+      "src": "/sounds/sfx/radio militares.mp3",
+      "startPageKey": "14",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "15"
+      },
+      "soundConfig": {
+        "volume": 0.3,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1783893946750-un0cy",
+      "layer": "music",
+      "src": "/sounds/sfx/Hulk Smash - Smile Scene - The Avengers (2012) Movie Clip HD-Trimmed by FlexClip.mp3",
+      "startPageKey": "18",
+      "startPanelIdx": 2,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "21"
+      },
+      "soundConfig": {
+        "volume": 0.55,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1783894673867-uuwaw",
+      "layer": "music",
+      "src": "/sounds/sfx/laser_2.mp3",
+      "startPageKey": "24",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "panelEnd",
+        "pageKey": "24",
+        "panelIdx": 1
+      },
+      "soundConfig": {
+        "volume": 0.5,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1783894878825-e5l57",
+      "layer": "music",
+      "src": "/sounds/sfx/viento veloz.mp3",
+      "startPageKey": "24",
+      "startPanelIdx": 2,
+      "stopTrigger": {
+        "type": "panelEnd",
+        "pageKey": "25",
+        "panelIdx": 0
+      },
+      "soundConfig": {
+        "volume": 0.55,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    }
+  ]
+}

@@ -33,8 +33,10 @@ export function EditorBubbleLayoutForm({
   const stripInlineFormatting = (text: string) =>
     text
       .replace(/\*\*/g, "")
+      .replace(/\*/g, "")
       .replace(/\[color:[^\]]+\]/g, "")
-      .replace(/\[\/color\]/g, "");
+      .replace(/\[\/color\]/g, "")
+      .replace(/<[^>]+>/g, "");  // also strip any raw HTML tags
 
   const insertFormatting = (tagStart: string, tagEnd: string, textValue: string, onUpdate: (val: string) => void, textareaEl: HTMLTextAreaElement | null) => {
     if (!textareaEl) {

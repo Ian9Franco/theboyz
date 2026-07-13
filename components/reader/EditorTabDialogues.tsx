@@ -62,8 +62,10 @@ export function EditorTabDialogues({
   const stripInlineFormatting = (text: string) =>
     text
       .replace(/\*\*/g, "")
+      .replace(/\*/g, "")
       .replace(/\[color:[^\]]+\]/g, "")
-      .replace(/\[\/color\]/g, "");
+      .replace(/\[\/color\]/g, "")
+      .replace(/<[^>]+>/g, "");  // also strip any raw HTML tags
 
   if (!activePanel) {
     return (

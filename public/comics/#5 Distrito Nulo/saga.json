@@ -7,6 +7,8 @@
   "order": 5,
   "password": "nulo",
   "cinematic": true,
-  "nuevo": false,
-  "proximamente": false
+  "nuevo": true,
+  "proximamente": true,
+  "date": "23/06/2026",
+  "estimatedTime": "19 días"
 }

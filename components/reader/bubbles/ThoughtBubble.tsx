@@ -41,6 +41,14 @@ export function ThoughtBubble({
   speedMultiplier = 1.0,
   bubbleOpacity,
 }: ThoughtBubbleProps) {
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const tailDir    = line.tail ?? "bottom-left";
   const paragraphs = parseParagraphs(line.text);
   const size       = line.size ?? "medium";
@@ -115,7 +123,9 @@ export function ThoughtBubble({
   if (!baseFontSize) {
     baseFontSize = size === "small" ? 12 : size === "large" ? 18 : 14;
   }
-  thoughtStyles.fontSize = `${baseFontSize * textScale}px`;
+  const minFont = isMobile ? 8 : 10;
+  const finalFontSize = Math.max(minFont, baseFontSize * textScale);
+  thoughtStyles.fontSize = `${finalFontSize}px`;
   if (line.width)         thoughtStyles.maxWidth  = `${line.width}px`;
   if (line.textColor)     thoughtStyles.color     = line.textColor;
   if (customFontFamily)   thoughtStyles.fontFamily = customFontFamily;

@@ -179,6 +179,14 @@ export function StandardBubble({
   const paragraphs = parseParagraphs(line.text);
   const size    = line.size  ?? "medium";
 
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // ── Dynamic shadow based on depth ──
   const depthVal       = depth ?? 2;
   const shadowOffsetY  = 2 + depthVal * 1.5;
@@ -276,7 +284,9 @@ export function StandardBubble({
       ? (size === "small" ? 18 : size === "large" ? 48 : 32)
       : (size === "small" ? 12 : size === "large" ? 18 : 14);
   }
-  bubbleStyles.fontSize = `${baseFontSize * textScale}px`;
+  const minFont = style === "sfx" ? 10 : (isMobile ? 8 : 10);
+  const finalFontSize = Math.max(minFont, baseFontSize * textScale);
+  bubbleStyles.fontSize = `${finalFontSize}px`;
   if (line.width)     bubbleStyles.maxWidth  = `${line.width}px`;
   if (line.textColor) bubbleStyles.color     = line.textColor;
   if (customFontFamily) bubbleStyles.fontFamily = customFontFamily;

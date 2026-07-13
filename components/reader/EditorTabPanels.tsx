@@ -625,8 +625,11 @@ export function EditorTabPanels({
                         onClick={(e) => {
                           e.stopPropagation();
                           const lastRect = rects[rects.length - 1];
-                          const newY = lastRect ? Math.min(100, Math.max(0, lastRect.y + 10)) : 0;
-                          const newRects = [...rects, { x: 0, y: newY, w: 100, h: 20 }];
+                          const targetY = Math.round((panel.focusY ?? 0.5) * 100);
+                          const rectHeight = 20;
+                          const defaultY = Math.max(0, Math.min(100 - rectHeight, targetY - rectHeight / 2));
+                          const newY = lastRect ? Math.max(0, Math.min(100 - rectHeight, lastRect.y + 10)) : defaultY;
+                          const newRects = [...rects, { x: 0, y: newY, w: 100, h: rectHeight }];
                           handleUpdatePanelParams(pIdx, { zoomRects: newRects, zoomRect: undefined });
                         }}
                         className="font-[var(--font-bangers)] text-[10px] bg-emerald-600 hover:bg-emerald-700 text-white py-1.5 px-3 rounded transition-all mt-1 w-full text-center tracking-wider cursor-pointer border border-emerald-700"

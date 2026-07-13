@@ -1,10 +1,24 @@
 import React from "react";
 import type { DialogueLine } from "../DialogueBubble";
 
+/**
+ * Renders bubble text with inline markup support:
+ *  - `*text*` or `**text**`  → bold
+ *  - `[color:#hex]text[/color]` → colored span (overrides bubble-level textColor)
+ *
+ * Raw HTML tags (e.g. from older editor versions) are stripped before parsing
+ * so they never show up as literal text in the reader.
+ */
 export function renderStyledText(text: string): React.ReactNode {
   if (!text) return "";
-  const tokenRegex = /(\*\*|\[color:[^\]]+\]|\[\/color\])/g;
-  const parts = text.split(tokenRegex);
+
+  // Strip any raw HTML that may have been stored by older editor versions
+  const cleaned = text.replace(/<[^>]+>/g, "");
+
+  // Tokenize: **bold**, *bold* (single), [color:#hex], [/color]
+  // The `(?!\*)` negative lookahead ensures single `*` doesn't match inside `**`
+  const tokenRegex = /(\*\*|\*(?!\*)|\[color:[^\]]+\]|\[\/color\])/g;
+  const parts = cleaned.split(tokenRegex);
   let isBold = false;
   const colorStack: string[] = [];
 
@@ -12,7 +26,7 @@ export function renderStyledText(text: string): React.ReactNode {
     React.Fragment,
     null,
     parts.map((part, index) => {
-      if (part === "**") {
+      if (part === "**" || part === "*") {
         isBold = !isBold;
         return null;
       } else if (part.startsWith("[color:") && part.endsWith("]")) {
@@ -30,6 +44,9 @@ export function renderStyledText(text: string): React.ReactNode {
         style.fontWeight = "bold";
       }
       if (colorStack.length > 0) {
+        // Inline `color` on a child span always overrides an inherited `color`
+        // from the parent element — this is standard CSS cascade behavior.
+        // So `[color:...]` will override the bubble-level `line.textColor`.
         style.color = colorStack[colorStack.length - 1];
       }
 

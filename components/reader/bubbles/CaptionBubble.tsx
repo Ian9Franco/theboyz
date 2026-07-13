@@ -39,6 +39,14 @@ export function CaptionBubble({
   speedMultiplier = 1.0,
   bubbleOpacity,
 }: CaptionBubbleProps) {
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const paragraphs = parseParagraphs(line.text);
   const size = line.size ?? "medium";
 
@@ -87,7 +95,9 @@ export function CaptionBubble({
   if (!baseFontSize) {
     baseFontSize = size === "small" ? 12 : size === "large" ? 18 : 14;
   }
-  captionStyles.fontSize = `${baseFontSize * textScale}px`;
+  const minFont = isMobile ? 8 : 10;
+  const finalFontSize = Math.max(minFont, baseFontSize * textScale);
+  captionStyles.fontSize = `${finalFontSize}px`;
   if (line.width)     captionStyles.maxWidth = `${line.width}px`;
   if (line.textColor) captionStyles.color    = line.textColor;
 
