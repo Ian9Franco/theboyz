@@ -128,11 +128,41 @@ export function playAudioWithGain(
 
   const audio = new Audio(src);
   audio.crossOrigin = "anonymous";
-  audio.playbackRate = playbackRate;
   audio.loop = loop;
-  
-  // Set native volume to 1.0 (iOS will allow this, and we attenuate via GainNode)
-  audio.volume = 1.0;
+
+  let gainNode: GainNode | null = null;
+  let sourceNode: MediaElementAudioSourceNode | null = null;
+  let usingGainNode = false;
+
+  if (ctx) {
+    try {
+      sourceNode = ctx.createMediaElementSource(audio);
+      gainNode = ctx.createGain();
+      gainNode.gain.setValueAtTime(fadeIn > 0 ? 0 : targetVolume, ctx.currentTime);
+      sourceNode.connect(gainNode);
+      gainNode.connect(ctx.destination);
+      // When using GainNode, native volume must be 1.0 (GainNode controls the actual level)
+      audio.volume = 1.0;
+      usingGainNode = true;
+    } catch (e) {
+      console.error("Error creating MediaElementSource, falling back to native volume:", e);
+      // Fallback: use native audio.volume
+      audio.volume = fadeIn > 0 ? 0 : targetVolume;
+    }
+  } else {
+    // No Web Audio API: use native audio.volume
+    audio.volume = fadeIn > 0 ? 0 : targetVolume;
+  }
+
+  // Apply playbackRate after metadata is available to avoid browsers ignoring/resetting it
+  const applyPlaybackRate = () => {
+    audio.playbackRate = playbackRate;
+  };
+  if (audio.readyState >= 1) {
+    applyPlaybackRate();
+  } else {
+    audio.addEventListener("loadedmetadata", applyPlaybackRate, { once: true });
+  }
 
   if (startTime > 0) {
     if (audio.readyState >= 1) {
@@ -142,25 +172,6 @@ export function playAudioWithGain(
         audio.currentTime = startTime;
       }, { once: true });
     }
-  }
-
-  let gainNode: GainNode | null = null;
-  let sourceNode: MediaElementAudioSourceNode | null = null;
-
-  if (ctx) {
-    gainNode = ctx.createGain();
-    gainNode.gain.setValueAtTime(fadeIn > 0 ? 0 : targetVolume, ctx.currentTime);
-    gainNode.connect(ctx.destination);
-
-    try {
-      sourceNode = ctx.createMediaElementSource(audio);
-      sourceNode.connect(gainNode);
-    } catch (e) {
-      console.error("Error creating MediaElementSource:", e);
-      audio.volume = fadeIn > 0 ? 0 : targetVolume;
-    }
-  } else {
-    audio.volume = fadeIn > 0 ? 0 : targetVolume;
   }
 
   if (onEnded) {
@@ -179,16 +190,19 @@ export function playAudioWithGain(
   }
 
   audio.addEventListener("playing", () => {
+    // Reinforce playbackRate when playback actually starts (some browsers reset it)
     audio.playbackRate = playbackRate;
 
-    if (ctx && gainNode) {
+    if (usingGainNode && gainNode && ctx) {
+      // GainNode controls volume — apply fade or target gain
       if (fadeIn > 0) {
         gainNode.gain.setValueAtTime(0, ctx.currentTime);
         gainNode.gain.linearRampToValueAtTime(targetVolume, ctx.currentTime + fadeIn / 1000);
       } else {
         gainNode.gain.setValueAtTime(targetVolume, ctx.currentTime);
       }
-    } else {
+    } else if (!usingGainNode) {
+      // Native volume fallback with optional fade-in
       if (fadeIn > 0) {
         audio.volume = 0;
         const fadeInSteps = 50;

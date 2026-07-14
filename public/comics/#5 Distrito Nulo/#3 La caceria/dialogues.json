@@ -1419,21 +1419,29 @@
       "panels": [
         {
           "focusY": 0.15,
-          "dialogue": [],
+          "dialogue": [
+            { "text": "es mi ultimo recurso..", "size": "small", "posX": 50, "posY": 0, "tailX": 35, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 },
+            { "text": "JEFE Y CON ESTE QUE??", "size": "small", "posX": 100, "posY": 5, "tailX": 85, "tailY": 15, "tailWidth": 4, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#878787" }
+          ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 24 }
           ]
         },
         {
-          "focusY": 0.5,
-          "dialogue": [],
+          "focusY": 0.45,
+          "dialogue": [
+            { "text": "distraiganlo un minuto", "size": "small", "posX": 5, "posY": 40, "tailX": 20, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#121212", "textColor": "#fcf8f8", "customColor": "#f1f1f9" }
+          ],
           "zoomRects": [
             { "x": 0, "y": 25, "w": 100, "h": 42 }
           ]
         },
         {
           "focusY": 0.7,
-          "dialogue": [],
+          "dialogue": [
+            { "text": "jefe no podemos!", "size": "small", "posX": 110, "posY": 95, "tailX": 90, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "trabajo con nenitas", "size": "small", "posX": 5, "posY": 75, "tailX": 25, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#0d0d0d", "textColor": "#f5f5f5", "customColor": "#f5f5f9" }
+          ],
           "zoomRects": [
             { "x": 0, "y": 65, "w": 100, "h": 36 }
           ]
@@ -1507,10 +1515,10 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "creo que tenemos a julian arriba nuestro", "size": "small", "posX": 45, "posY": 25, "tailX": 40, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "creo que tenemos a julian arriba nuestro", "size": "small", "posX": 10, "posY": 25, "tailX": 40, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "y uandi?", "size": "small", "posX": 60, "posY": 45, "tailX": 45, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "no tengo idea", "size": "small", "posX": 15, "posY": 40, "tailX": 30, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "son inhibidoras posta", "size": "small", "posX": 80, "posY": 30, "tailX": 80, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 165, "fontSize": 8, "borderRadius": 18 }
+            { "text": "la puta madre", "size": "small", "posX": 80, "posY": 30, "tailX": 80, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 165, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
@@ -1601,6 +1609,9 @@
             { "text": "ugh", "style": "sfx", "size": "small", "posX": 55, "posY": 45, "tailX": 50, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "textColor": "#fa0000" },
             { "text": "wawi?", "size": "small", "posX": 90, "posY": 40, "tailX": 75, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "arriba vamos", "size": "small", "posX": 50, "posY": 70, "tailX": 65, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#8a0000", "textColor": "#fafafa" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 20, "w": 100, "h": 80 }
           ]
         },
         {
@@ -1739,6 +1750,16 @@
           "dialogue": [],
           "zoomRects": [
             { "x": 0, "y": 70, "w": 100, "h": 28 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/violin.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.3,
+                "playbackRate": 1
+              }
+            }
           ]
         }
       ]
@@ -3521,6 +3542,24 @@
         "type": "panelEnd",
         "pageKey": "94",
         "panelIdx": 0
+      },
+      "soundConfig": {
+        "volume": 0.2,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1784047702492-kxa7h",
+      "layer": "music",
+      "src": "/sounds/sfx/moridida vampiro.mp3",
+      "startPageKey": "62",
+      "startPanelIdx": 1,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "62"
       },
       "soundConfig": {
         "volume": 0.2,

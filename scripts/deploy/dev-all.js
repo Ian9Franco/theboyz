@@ -89,9 +89,41 @@ watchDirs.forEach(dir => {
 console.log("");
 
 
-function runProcess(name, command, args, cwd) {
+function killPortSync(port) {
   const isWindows = process.platform === "win32";
-  
+  try {
+    if (isWindows) {
+      const { execSync } = require("child_process");
+      // Find PIDs listening on port and kill them
+      const result = execSync(
+        `netstat -ano | findstr :${port}`,
+        { encoding: "utf8", stdio: ["pipe", "pipe", "ignore"] }
+      );
+      const pids = new Set();
+      result.split("\n").forEach(line => {
+        const parts = line.trim().split(/\s+/);
+        // netstat line: Proto  LocalAddr  ForeignAddr  State  PID
+        if (parts.length >= 5 && parts[3] === "LISTENING") {
+          const pid = parseInt(parts[4], 10);
+          if (!isNaN(pid)) pids.add(pid);
+        }
+      });
+      pids.forEach(pid => {
+        try {
+          execSync(`taskkill /PID ${pid} /F`, { stdio: "ignore" });
+          console.log(`🔫 Liberado puerto ${port} (PID ${pid})`);
+        } catch (e) {}
+      });
+    } else {
+      const { execSync } = require("child_process");
+      execSync(`lsof -ti tcp:${port} | xargs kill -9`, { stdio: "ignore" });
+    }
+  } catch (e) {
+    // No process on that port, that's fine
+  }
+}
+
+function runProcess(name, command, args, cwd) {
   const child = spawn(command, args, {
     cwd,
     stdio: "pipe",
@@ -118,6 +150,10 @@ function runProcess(name, command, args, cwd) {
 
   return child;
 }
+
+// Free port 8080 in case a previous dev:all left a zombie serve process
+console.log("🔍 Verificando puerto 8080...");
+killPortSync(8080);
 
 const p1 = runProcess("Next.js App", "npm", ["run", "dev"], projectRoot);
 const p2 = runProcess("Comic Assets", "npm", ["run", "dev"], siblingRoot);
