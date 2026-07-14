@@ -494,6 +494,10 @@
             { "text": "que carajos hacemos?", "size": "small", "posX": -5, "posY": 30, "tailX": 10, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "aprovechar", "size": "small", "posX": 35, "posY": 55, "tailX": 20, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": []
         }
       ]
     },
@@ -549,7 +553,7 @@
               "sound": "/sounds/sfx/laser_1.mp3",
               "soundStartTime": 0,
               "soundConfig": {
-                "volume": 1,
+                "volume": 0.6,
                 "playbackRate": 1
               }
             }
@@ -728,8 +732,8 @@
           "focusY": 0.45,
           "dialogue": [
             { "text": "te canto los tantos?", "size": "small", "posX": 25, "posY": 25, "tailX": 35, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "—El problema es que todos están mirando al mismo Julián.", "size": "small", "posX": 0, "posY": 55, "tailX": 20, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "—Y yo traje varios.", "size": "small", "posX": 105, "posY": 35, "tailX": 85, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+            { "text": "—El problema es que todos están mirando", "size": "small", "posX": 0, "posY": 55, "tailX": 20, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "—Y yo traje a mis multiples personalidades", "size": "small", "posX": 105, "posY": 35, "tailX": 85, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 30, "w": 100, "h": 37 }
@@ -739,7 +743,7 @@
           "focusY": 0.8,
           "dialogue": [
             { "text": "las cartas estan siempre a mi favor", "size": "small", "posX": 60, "posY": 65, "tailX": 50, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 155, "fontSize": 8, "borderRadius": 18 },
-            { "text": "—La noche recién empieza.", "size": "small", "posX": 25, "posY": 65, "tailX": 45, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+            { "text": "—y la noche recién empieza", "size": "small", "posX": 25, "posY": 65, "tailX": 45, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 65, "w": 100, "h": 35 }
@@ -3451,11 +3455,11 @@
         "pageKey": "41"
       },
       "soundConfig": {
-        "volume": 0.3,
+        "volume": 0.25,
         "playbackRate": 1,
         "loop": true,
-        "fadeIn": 1600,
-        "fadeOut": 1700
+        "fadeIn": 3400,
+        "fadeOut": 2200
       }
     },
     {
@@ -3469,11 +3473,11 @@
         "pageKey": "22"
       },
       "soundConfig": {
-        "volume": 0.25,
+        "volume": 0.2,
         "playbackRate": 1,
         "loop": true,
-        "fadeIn": 1900,
-        "fadeOut": 2400
+        "fadeIn": 4200,
+        "fadeOut": 4800
       }
     },
     {
