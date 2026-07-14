@@ -134,7 +134,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
       const touch = e.touches[0];
       const now = Date.now();
 
-      if (now - lastTapRef.current < 250) {
+      if (false && now - lastTapRef.current < 250) {
         e.preventDefault();
         toggleZoomAtPoint(touch.clientX, touch.clientY, 1.85);
         lastTapRef.current = 0;
@@ -222,7 +222,7 @@ export function useReaderZoom({ containerSize, containerRef }: UseReaderZoomProp
       return;
     }
     e.stopPropagation();
-    toggleZoomAtPoint(e.clientX, e.clientY);
+    // toggleZoomAtPoint(e.clientX, e.clientY);
   };
 
   const handleBubblePointerDown = (e: React.PointerEvent, key: string) => {

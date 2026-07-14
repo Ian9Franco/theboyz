@@ -44,8 +44,8 @@ export const CHARACTER_DETAILS: CharacterDetail[] = rawCharacters
         return null;
       }
 
-      const mainPortada = images.portada || generatedPortadas[0] || char.image;
-      const mainFicha   = images.ficha || generatedFichas[0] || char.image || "";
+      const mainPortada = images.portada || generatedPortadas[0] || null;
+      const mainFicha   = images.ficha || generatedFichas[0] || null;
 
       return {
         ...char,
@@ -67,9 +67,12 @@ export function getComputedCharacters(readChapters: string[], isClient: boolean,
     normalizedRead.includes(chapterId.toLowerCase().trim());
 
   return CHARACTER_DETAILS.map((char) => {
+    // Solo se consideran borradores reales aquellos que tienen rol de borrador o valery.
+    const isDraft = char.role === 'Nuevo Personaje' || char.id === 'valery';
+
     // Before hydration, show all locked (avoids flash of unlocked content)
     if (!isClient) {
-      const alwaysUnlocked = ['ian', 'jaz'].includes(char.id) || (UNLOCK_RULES[char.id] !== undefined && UNLOCK_RULES[char.id].length === 0);
+      const alwaysUnlocked = !isDraft && (['ian', 'jaz'].includes(char.id) || (UNLOCK_RULES[char.id] !== undefined && UNLOCK_RULES[char.id].length === 0));
       return {
         ...char,
         incognito: !alwaysUnlocked,
@@ -81,7 +84,7 @@ export function getComputedCharacters(readChapters: string[], isClient: boolean,
     const rules = UNLOCK_RULES[char.id];
     const alwaysUnlocked = rules !== undefined && rules.length === 0;
     let unlocked = unlockAll || alwaysUnlocked || (rules?.some(hasRead) ?? false);
-    if (char.id === 'valery') {
+    if (isDraft) {
       unlocked = false;
     }
 

@@ -32,10 +32,41 @@ const ALIAS_ORIGINS = [
   { id: "ian",    name: "Ian → Vesperwing",   text: "Es el único que elige su propio alias. Cree firmemente que la identidad heroica debe ser diseñada con la misma frialdad analítica que un exochasis o un algoritmo de soporte.", extra: "Se comunica con jerga táctica y consume dosis peligrosas de café negro para su hiperenfoque." },
 ];
 
+const LOCATIONS = [
+  {
+    id: "parker",
+    name: "EDIFICIO PARKER (PARKER TOWER)",
+    subtitle: "Sede Corporativa de Parker Industries",
+    color: "#3b82f6",
+    borderColor: "border-[#3b82f6]",
+    badgeBg: "bg-[#3b82f6]",
+    control: "Norman Parker (The Maker)",
+    status: "Operativo / Bajo Monitoreo",
+    desc: "Un colosal rascacielos corporativo futurista de grafito negro y cristales azules que se alza sobre Manhattan. Detrás de sus fachadas de lujo, alberga laboratorios de última generación, hangares robóticos subterráneos para mechas de combate y sistemas de escaneo biométrico avanzados de espectro arcano.",
+    lore: "Tras la destrucción de la base de Los Pibes en Dumbo, Ian se vio obligado a pactar con su manipulador exmentor Norman Parker para refugiarse allí junto a Mati, Uandi y Julián. Aunque el edificio funciona como un santuario blindado contra las fuerzas tácticas de V.O.P.S., Norman Parker ya utiliza los sensores del lobby para recolectar en secreto sus firmas biométricas multiversales a cambio del soporte técnico."
+  },
+  {
+    id: "nadir",
+    name: "EL NADIR",
+    subtitle: "El Reino Subterráneo de Manhattan",
+    color: "#ef4444",
+    borderColor: "border-[#ef4444]",
+    badgeBg: "bg-[#ef4444]",
+    control: "Severine Alucard (La Reina del Nadir)",
+    status: "Clandestino / Aislado",
+    desc: "Una antigua y oculta civilización subterránea construida en los cimientos olvidados de la ciudad: criptas coloniales, catedrales sepultadas y redes de metro clausuradas. Iluminada por neones y un resplandor rojo-negro, sirve de hogar para miles de vampiros organizados bajo el Pacto de las Venas.",
+    lore: "El Nadir opera con sistemas y bases de datos completamente cerrados e impenetrables desde el exterior. Tras el asedio del Comandante R.E.G.U.L.A.R., Los Pibes usaron sus túneles como ruta de escape. Allí, Severine Alucard rescató y marcó el cuello de Julián para saldar la deuda de su rescate, sembrando una futura tensión para el grupo."
+  }
+];
+
 import { GLOSARIO_CHARS } from "./GlosarioLink";
 
 export function DossierTab({ unlockAll, readChapters }: DossierTabProps) {
   const [activeCategory, setActiveCategory] = useState<string>("pibes");
+  const [expandedLocation, setExpandedLocation] = useState<string | null>(null);
+
+  const normalizedRead = readChapters.map((c) => c.toLowerCase().trim());
+  const hasReadLaCaceria = unlockAll || normalizedRead.includes("la caceria");
 
   const computedChars = getComputedCharacters(readChapters, true, unlockAll);
 
@@ -144,13 +175,126 @@ export function DossierTab({ unlockAll, readChapters }: DossierTabProps) {
         </div>
       </section>
 
-      {/* SECTION 4 — CATEGORÍAS Y EXPEDIENTES */}
-      <section className="bg-[#0e0e16] border-2 border-white/10 p-6 sm:p-8 rounded relative shadow-[6px_6px_0_rgba(255,255,255,0.03)] border-l-4 border-l-[#3b82f6]">
-        <div className="absolute top-[-10px] left-6 bg-[#3b82f6] px-3 py-0.5 text-[10px] font-[var(--font-bangers)] tracking-widest shadow-[2px_2px_0_#000]">
-          SECCIÓN IV — EXPEDIENTES DE LA BASE DE DATOS
+      {/* SECTION 4 — Archivos Geográficos (Locaciones) */}
+      <section className="bg-[#0e0e16] border-2 border-white/10 p-6 sm:p-8 rounded relative shadow-[6px_6px_0_rgba(255,255,255,0.03)] border-l-4 border-l-[#a855f7]">
+        <div className="absolute top-[-10px] left-6 bg-[#a855f7] px-3 py-0.5 text-[10px] font-[var(--font-bangers)] tracking-widest shadow-[2px_2px_0_#000]">
+          SECCIÓN IV — ARCHIVOS GEOGRÁFICOS (LOCACIONES)
         </div>
         <h3 className="font-[var(--font-bangers)] text-2xl text-[#f5e642] mt-2 mb-6 tracking-widest">
-          DIRECTORIO DE EXPEDIENTES MULTIVERSALES
+          PUNTOS DE INTERÉS MULTIVERSAL
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {LOCATIONS.map((loc) => {
+            const isExpanded = expandedLocation === loc.id;
+            
+            if (!hasReadLaCaceria) {
+              return (
+                <div
+                  key={loc.id}
+                  className="border-2 p-5 bg-black/40 rounded-sm relative overflow-hidden flex flex-col justify-between border-white/5 opacity-70"
+                >
+                  <div>
+                    <span className="text-[9px] font-[var(--font-bangers)] tracking-widest text-red-500 uppercase flex items-center gap-1.5 mb-2">
+                      <Lock className="w-3 h-3" /> UBICACIÓN CLASIFICADA // ENCRIPTADO
+                    </span>
+                    <h4 className="font-[var(--font-bangers)] text-xl text-zinc-500 tracking-wide mt-1 mb-2">
+                      ████████████████
+                    </h4>
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-zinc-600 font-mono mb-4 border-b border-white/5 pb-2">
+                      <div>
+                        <span className="text-zinc-700">CONTROL:</span> ██████████
+                      </div>
+                      <div>
+                        <span className="text-zinc-700">ESTADO:</span> RESTRINGIDO
+                      </div>
+                    </div>
+                    <p className="text-xs text-zinc-500 leading-relaxed mb-4">
+                      El acceso a las coordenadas físicas y al informe táctico de esta locación se encuentra bloqueado por la directiva de seguridad de V.O.P.S.
+                    </p>
+                  </div>
+                  
+                  <div className="mt-4 p-3 bg-red-950/20 border border-red-900/30 rounded text-[10px] text-red-400 font-mono leading-tight">
+                    ⚠ Requiere completar la lectura de <strong>"Distrito Nulo #3: La Cacería"</strong> para iniciar el descifrado.
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <div
+                key={loc.id}
+                className={`border-2 p-5 bg-black/30 rounded-sm transition-all duration-300 relative overflow-hidden flex flex-col justify-between ${
+                  isExpanded ? "border-white" : "border-white/10 hover:border-white/20"
+                }`}
+                style={{
+                  boxShadow: isExpanded ? `6px 6px 0 ${loc.color}25` : "4px 4px 0 rgba(0,0,0,0.4)"
+                }}
+              >
+                <div
+                  className="absolute top-0 right-0 w-24 h-24 opacity-10 pointer-events-none filter blur-xl rounded-full"
+                  style={{ backgroundColor: loc.color }}
+                />
+                
+                <div>
+                  <span className="text-[10px] font-[var(--font-bangers)] tracking-widest uppercase" style={{ color: loc.color }}>
+                    {loc.subtitle}
+                  </span>
+                  <h4 className="font-[var(--font-bangers)] text-xl text-white tracking-wide mt-1 mb-2">
+                    {loc.name}
+                  </h4>
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-gray-400 font-mono mb-4 border-b border-white/5 pb-2">
+                    <div>
+                      <span className="text-zinc-600">CONTROL:</span> {loc.control}
+                    </div>
+                    <div>
+                      <span className="text-zinc-600">ESTADO:</span> {loc.status}
+                    </div>
+                  </div>
+                  <p className="text-xs text-gray-300 leading-relaxed mb-4">
+                    {loc.desc}
+                  </p>
+                  
+                  <AnimatePresence>
+                    {isExpanded && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25 }}
+                        className="overflow-hidden border-t border-white/5 pt-3 mt-3"
+                      >
+                        <span className="text-[9px] font-[var(--font-bangers)] tracking-widest text-[#f5e642] block mb-1">
+                          REGISTRO DE CAMPO / TRASFONDO
+                        </span>
+                        <p className="text-xs text-gray-400 leading-relaxed italic">
+                          {loc.lore}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+                
+                <button
+                  onClick={() => setExpandedLocation(isExpanded ? null : loc.id)}
+                  className="mt-4 w-full py-1.5 border border-white/10 hover:border-white/30 text-[10px] font-[var(--font-bangers)] tracking-widest uppercase transition-all bg-black/40 hover:bg-black/60 cursor-pointer flex items-center justify-center gap-1.5"
+                  style={{ color: loc.color }}
+                >
+                  <span>{isExpanded ? "OCULTAR REGISTROS" : "REVELAR EXPEDIENTE"}</span>
+                  <span>{isExpanded ? "▲" : "▼"}</span>
+                </button>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* SECTION 5 — CATEGORÍAS Y EXPEDIENTES */}
+      <section className="bg-[#0e0e16] border-2 border-white/10 p-6 sm:p-8 rounded relative shadow-[6px_6px_0_rgba(255,255,255,0.03)] border-l-4 border-l-[#3b82f6]">
+        <div className="absolute top-[-10px] left-6 bg-[#3b82f6] px-3 py-0.5 text-[10px] font-[var(--font-bangers)] tracking-widest shadow-[2px_2px_0_#000]">
+          SECCIÓN V — EXPEDIENTES DE LA BASE DE DATOS
+        </div>
+        <h3 className="font-[var(--font-bangers)] text-2xl text-[#f5e642] mt-2 mb-6 tracking-widest">
+          DIRECTORIO DE EXPEDIENTES
         </h3>
         
         {/* Category tabs */}
@@ -196,18 +340,48 @@ export function DossierTab({ unlockAll, readChapters }: DossierTabProps) {
               >
                 {/* Character portrait/locked box */}
                 <div className="w-full aspect-square overflow-hidden bg-zinc-900 rounded mb-2 relative flex items-center justify-center border border-white/5">
-                  {isUnlocked ? (
+                  {isUnlocked && cardImg ? (
                     <img
                       src={cardImg}
                       alt={char.displayName}
                       className="w-full h-full object-cover object-top transition-transform duration-300"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        const parent = e.currentTarget.parentElement;
+                        if (parent) {
+                          // Prevent duplicate fallbacks
+                          if (parent.querySelector('.image-fallback-container')) return;
+                          const fallback = document.createElement('div');
+                          fallback.className = "image-fallback-container flex flex-col items-center justify-center p-3 text-center w-full h-full bg-zinc-950/80 absolute inset-0";
+                          fallback.innerHTML = `
+                            <svg class="w-8 h-8 text-zinc-600 mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                              <circle cx="12" cy="7" r="4" />
+                            </svg>
+                            <span class="text-[9px] text-zinc-500 font-mono">SIN PORTADA</span>
+                          `;
+                          parent.appendChild(fallback);
+                        }
+                      }}
                     />
                   ) : (
-                    <div className="flex flex-col items-center justify-center p-3 text-center">
-                      <Lock className="w-6 h-6 text-gray-600 mb-1" />
-                      <span className="text-[9px] text-gray-600 font-[var(--font-bangers)] uppercase tracking-wider">
-                        ENCRIPTADO
-                      </span>
+                    <div className="flex flex-col items-center justify-center p-3 text-center w-full h-full bg-zinc-950/80 absolute inset-0">
+                      {!isUnlocked ? (
+                        <>
+                          <Lock className="w-6 h-6 text-gray-600 mb-1" />
+                          <span className="text-[9px] text-gray-600 font-[var(--font-bangers)] uppercase tracking-wider">
+                            ENCRIPTADO
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <svg className="w-8 h-8 text-zinc-600 mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                          </svg>
+                          <span className="text-[9px] text-zinc-500 font-mono">SIN PORTADA</span>
+                        </>
+                      )}
                     </div>
                   )}
                 </div>

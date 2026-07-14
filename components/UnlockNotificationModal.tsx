@@ -20,7 +20,7 @@ export function UnlockNotificationModal({
   useEffect(() => {
     if (isOpen) {
       try {
-        const audio = new Audio("/sounds/sfx/portal1.mp3");
+        const audio = new Audio("/sounds/sfx/enderman.mp3");
         audio.volume = 0.5;
         audio.play().catch(() => {});
       } catch (e) {}
@@ -71,9 +71,9 @@ export function UnlockNotificationModal({
     }
     if (norm === "la caceria") {
       return {
-        title: "EXPEDIENTE DESBLOQUEADO",
-        item: "SEVERINE ALUCARD & MAKER",
-        desc: "Se han descifrado y cargado las fichas confidenciales de Severine Alucard y Norman Parker, el peligroso villano conocido como Maker, en el registro de personajes.",
+        title: "EXPEDIENTES Y REGISTROS DESBLOQUEADOS",
+        item: "SEVERINE, MAKER, EDIFICIO PARKER & EL NADIR",
+        desc: "Se han descifrado los expedientes confidenciales de Severine Alucard y Norman Parker (Maker), y se ha autorizado el acceso a los registros geográficos detallados del Edificio Parker y El Nadir en la base de datos.",
         color: "#dc2626", // Crimson
       };
     }

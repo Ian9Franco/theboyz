@@ -484,8 +484,9 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "shinjuro": {
-    "portada": null,
+    "portada": "/personajes/PORTADAS/Shinjuro Kurogane/shinjuro kurpogane.png",
     "portadas": [
+      "/personajes/PORTADAS/Shinjuro Kurogane/shinjuro kurpogane.png",
     ],
     "ficha": "/personajes/Fichas/antagonistas/Shinjuro Kurogane/Clan Kurogane_ficha.webp",
     "fichas": [
