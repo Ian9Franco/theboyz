@@ -8,7 +8,7 @@
   "password": "nulo",
   "cinematic": true,
   "nuevo": true,
-  "proximamente": true,
+  "proximamente": false,
   "date": "23/06/2026",
   "estimatedTime": "19 días"
 }

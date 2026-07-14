@@ -89,7 +89,8 @@ export default function ChapterPage() {
           try {
             const read = localStorage.getItem("read-chapters");
             const readList = read ? JSON.parse(read) : [];
-            if (!readList.includes(data.prevChapter.id)) {
+            const isPrevRead = readList.map((r: string) => r.toLowerCase().trim()).includes(data.prevChapter.id.toLowerCase().trim());
+            if (!isPrevRead) {
               setIsLocked(true);
               return; // Keep locked, do not mark current as read
             }

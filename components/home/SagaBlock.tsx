@@ -30,6 +30,21 @@ function FeaturedMobileChapters({
   unlockAll: boolean;
   onBack: () => void;
 }) {
+  const publishedChapters = saga.chapters
+    .filter((c: any) => c.status === "published" || !saga.chapters.some((x: any) => x.status === "published"))
+    .sort((a: any, b: any) => a.number - b.number);
+
+  const getChapterLockStatus = (chapter: any) => {
+    if (!isClient || unlockAll) return false;
+    const readIdx = publishedChapters.findIndex((c: any) => c.id === chapter.id);
+    if (readIdx <= 0) return false;
+    const prevChapter = publishedChapters[readIdx - 1];
+    const normalizedRead = readChapters.map(r => decodeURIComponent(r).toLowerCase().trim());
+    return !normalizedRead.includes(decodeURIComponent(prevChapter.id).toLowerCase().trim());
+  };
+
+  const displayChapters = [...publishedChapters].sort((a: any, b: any) => b.number - a.number);
+
   return (
     <div className="mobile-chapter-view hidden relative z-10 flex-col gap-5 p-5">
       <div className="flex items-center justify-between gap-3 border-b-2 border-dashed border-[#001419]/20 pb-4">
@@ -46,23 +61,21 @@ function FeaturedMobileChapters({
       </div>
 
       <div className="grid grid-cols-2 gap-3">
-        {saga.chapters
-          .filter((c: any) => c.status === "published" || !saga.chapters.some((x: any) => x.status === "published"))
-          .map((chapter: any, ci: number, arr: any[]) => {
-            const isLocked = isClient && !unlockAll && ci > 0 && !readChapters.includes(arr[ci - 1].id);
-            return (
-              <ChapterCard
-                key={chapter.id}
-                chapter={chapter}
-                sagaId={saga.id}
-                sagaColor={colorPrimary}
-                index={ci}
-                isLocked={isLocked}
-                sagaCover={saga.cover}
-                compact
-              />
-            );
-          })}
+        {displayChapters.map((chapter: any) => {
+          const isLocked = getChapterLockStatus(chapter);
+          return (
+            <ChapterCard
+              key={chapter.id}
+              chapter={chapter}
+              sagaId={saga.id}
+              sagaColor={colorPrimary}
+              index={chapter.number - 1}
+              isLocked={isLocked}
+              sagaCover={saga.cover}
+              compact
+            />
+          );
+        })}
         {/* Mobile special draft block */}
         {saga.chapters.some((c: any) => c.status === "published") && 
          saga.chapters.filter((c: any) => c.status !== "published").slice(0, 1).map((chapter: any) => (
@@ -461,29 +474,37 @@ export function SagaBlock({
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
-                      {saga.chapters
-                        .filter((c: any) => c.status === "published" || !saga.chapters.some((x: any) => x.status === "published"))
-                        .map((chapter: any, ci: number, arr: any[]) => {
-                          let isLocked = false;
-                          if (isClient && !unlockAll) {
-                            if (ci === 0) {
-                              isLocked = false;
-                            } else {
-                              isLocked = !readChapters.includes(arr[ci - 1].id);
-                            }
-                          }
+                      {(() => {
+                        const publishedChapters = saga.chapters
+                          .filter((c: any) => c.status === "published" || !saga.chapters.some((x: any) => x.status === "published"))
+                          .sort((a: any, b: any) => a.number - b.number);
+
+                        const getChapterLockStatus = (chapter: any) => {
+                          if (!isClient || unlockAll) return false;
+                          const readIdx = publishedChapters.findIndex((c: any) => c.id === chapter.id);
+                          if (readIdx <= 0) return false;
+                          const prevChapter = publishedChapters[readIdx - 1];
+                          const normalizedRead = readChapters.map(r => decodeURIComponent(r).toLowerCase().trim());
+                          return !normalizedRead.includes(decodeURIComponent(prevChapter.id).toLowerCase().trim());
+                        };
+
+                        const displayChapters = [...publishedChapters].sort((a: any, b: any) => b.number - a.number);
+
+                        return displayChapters.map((chapter: any) => {
+                          const isLocked = getChapterLockStatus(chapter);
                           return (
                             <ChapterCard
                               key={chapter.id}
                               chapter={chapter}
                               sagaId={saga.id}
                               sagaColor={colorPrimary}
-                              index={ci}
+                              index={chapter.number - 1}
                               isLocked={isLocked}
                               sagaCover={saga.cover}
                             />
                           );
-                        })}
+                        });
+                      })()}
                       {/* Special draft/upcoming block */}
                       {saga.chapters.some((c: any) => c.status === "published") &&
                         saga.chapters.filter((c: any) => c.status !== "published").slice(0, 1).map((chapter: any) => (
@@ -662,29 +683,37 @@ export function SagaBlock({
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
-                      {saga.chapters
-                        .filter((c: any) => c.status === "published" || !saga.chapters.some((x: any) => x.status === "published"))
-                        .map((chapter: any, ci: number, arr: any[]) => {
-                          let isLocked = false;
-                          if (isClient && !unlockAll) {
-                            if (ci === 0) {
-                              isLocked = false;
-                            } else {
-                              isLocked = !readChapters.includes(arr[ci - 1].id);
-                            }
-                          }
+                      {(() => {
+                        const publishedChapters = saga.chapters
+                          .filter((c: any) => c.status === "published" || !saga.chapters.some((x: any) => x.status === "published"))
+                          .sort((a: any, b: any) => a.number - b.number);
+
+                        const getChapterLockStatus = (chapter: any) => {
+                          if (!isClient || unlockAll) return false;
+                          const readIdx = publishedChapters.findIndex((c: any) => c.id === chapter.id);
+                          if (readIdx <= 0) return false;
+                          const prevChapter = publishedChapters[readIdx - 1];
+                          const normalizedRead = readChapters.map(r => decodeURIComponent(r).toLowerCase().trim());
+                          return !normalizedRead.includes(decodeURIComponent(prevChapter.id).toLowerCase().trim());
+                        };
+
+                        const displayChapters = [...publishedChapters].sort((a: any, b: any) => b.number - a.number);
+
+                        return displayChapters.map((chapter: any) => {
+                          const isLocked = getChapterLockStatus(chapter);
                           return (
                             <ChapterCard
                               key={chapter.id}
                               chapter={chapter}
                               sagaId={saga.id}
                               sagaColor={colorPrimary}
-                              index={ci}
+                              index={chapter.number - 1}
                               isLocked={isLocked}
                               sagaCover={saga.cover}
                             />
                           );
-                        })}
+                        });
+                      })()}
                       {/* Special draft/upcoming block */}
                       {saga.chapters.some((c: any) => c.status === "published") &&
                         saga.chapters.filter((c: any) => c.status !== "published").slice(0, 1).map((chapter: any) => (
@@ -899,32 +928,39 @@ export function SagaBlock({
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-                {saga.chapters
-                  .filter((c: any) => isProximamente || c.status === "published" || !saga.chapters.some((x: any) => x.status === "published"))
-                  .map((chapter: any, ci: number, arr: any[]) => {
-                    let isLocked = false;
-                    if (isClient && !unlockAll) {
-                      if (isProximamente) {
-                        isLocked = true;
-                      } else if (ci === 0) {
-                        isLocked = false; // El capítulo #1 de cada saga siempre está desbloqueado
-                      } else {
-                        isLocked = !readChapters.includes(arr[ci - 1].id);
-                      }
-                    }
+                {(() => {
+                  const filteredChapters = saga.chapters
+                    .filter((c: any) => isProximamente || c.status === "published" || !saga.chapters.some((x: any) => x.status === "published"))
+                    .sort((a: any, b: any) => a.number - b.number);
+
+                  const getChapterLockStatus = (chapter: any) => {
+                    if (isProximamente) return true;
+                    if (!isClient || unlockAll) return false;
+                    const readIdx = filteredChapters.findIndex((c: any) => c.id === chapter.id);
+                    if (readIdx <= 0) return false;
+                    const prevChapter = filteredChapters[readIdx - 1];
+                    const normalizedRead = readChapters.map(r => decodeURIComponent(r).toLowerCase().trim());
+                    return !normalizedRead.includes(decodeURIComponent(prevChapter.id).toLowerCase().trim());
+                  };
+
+                  const displayChapters = [...filteredChapters].sort((a: any, b: any) => b.number - a.number);
+
+                  return displayChapters.map((chapter: any) => {
+                    const isLocked = getChapterLockStatus(chapter);
                     return (
                       <ChapterCard
                         key={chapter.id}
                         chapter={chapter}
                         sagaId={saga.id}
                         sagaColor={colorPrimary}
-                        index={ci}
+                        index={chapter.number - 1}
                         isLocked={isLocked}
                         sagaCover={saga.cover}
                         isSagaProximamente={isProximamente}
                       />
                     );
-                  })}
+                  });
+                })()}
                 {/* Special draft/upcoming block */}
                 {!isProximamente && saga.chapters.some((c: any) => c.status === "published") &&
                   saga.chapters.filter((c: any) => c.status !== "published").slice(0, 1).map((chapter: any) => (
@@ -1000,7 +1036,6 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
   const [cover, setCover] = useState<string | null>(null);
 
   useEffect(() => {
-    if (isLocked) return;
     if (chapter.cover) {
       setCover(chapter.cover);
       return;
@@ -1011,7 +1046,7 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
         if (d.cover) setCover(d.cover);
       })
       .catch(() => {});
-  }, [sagaId, chapter.id, isLocked, chapter.cover]);
+  }, [sagaId, chapter.id, chapter.cover]);
 
   if (isLocked) {
     // Si el capítulo es draft, permitimos navegar para que aparezca el DraftLockScreen
@@ -1035,9 +1070,9 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
               : `repeating-linear-gradient(45deg, #dfdfe5, #dfdfe5 10px, #e8e8ef 10px, #e8e8ef 20px)`,
           }}
         >
-          {(chapter.cover || sagaCover) && (
+          {(cover || chapter.cover || sagaCover) && (
             <img
-              src={getComicPageUrl(chapter.cover || sagaCover)}
+              src={getComicPageUrl(cover || chapter.cover || sagaCover)}
               alt={`Portada de ${chapter.title}`}
               className="absolute inset-0 w-full h-full object-cover object-top opacity-30 grayscale filter blur-[1px] brightness-[0.25]"
             />
