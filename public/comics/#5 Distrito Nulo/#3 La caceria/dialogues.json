@@ -3358,7 +3358,7 @@
         "pageKey": "21"
       },
       "soundConfig": {
-        "volume": 0.55,
+        "volume": 0.7,
         "playbackRate": 1,
         "loop": true,
         "fadeIn": 1000,
@@ -3451,7 +3451,7 @@
         "pageKey": "41"
       },
       "soundConfig": {
-        "volume": 0.35,
+        "volume": 0.3,
         "playbackRate": 1,
         "loop": true,
         "fadeIn": 1600,
@@ -3469,7 +3469,7 @@
         "pageKey": "22"
       },
       "soundConfig": {
-        "volume": 0.55,
+        "volume": 0.25,
         "playbackRate": 1,
         "loop": true,
         "fadeIn": 1900,
