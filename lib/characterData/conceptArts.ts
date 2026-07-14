@@ -864,7 +864,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     },
     {
       "name": "Vampiros De Nadir Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Severine/vampiros de Nadir_sheet.jpeg",
+      "path": "/personajes/GUIAS/Secundarios/Severine/vampiros de Nadir_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
