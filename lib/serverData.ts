@@ -11,7 +11,8 @@ export type Chapter = {
   draft?: boolean;
   cinematic?: boolean;
   cover?: string | null;
-  date?: string;
+  date?: string;         // development start date
+  releaseDate?: string;  // actual launch/publish date
   estimatedTime?: string;
 };
 
@@ -146,6 +147,7 @@ export function getDynamicSagas(): Saga[] {
       let chStatus = "published";
       let chCinematic = false;
       let chDate: string | undefined = undefined;
+      let chReleaseDate: string | undefined = undefined;
       let chEstimatedTime: string | undefined = undefined;
 
       // Load chapter.json if exists
@@ -158,6 +160,7 @@ export function getDynamicSagas(): Saga[] {
           if (chMeta.status) chStatus = chMeta.status;
           if (chMeta.cinematic) chCinematic = true;
           if (chMeta.date) chDate = chMeta.date;
+          if (chMeta.releaseDate) chReleaseDate = chMeta.releaseDate;
           if (chMeta.estimatedTime) chEstimatedTime = chMeta.estimatedTime;
         } catch (err) {
           console.error(`Error parsing chapter.json in ${folder}/${chFolder}:`, err);
@@ -189,6 +192,7 @@ export function getDynamicSagas(): Saga[] {
         cinematic: chCinematic || sagaCinematic,
         cover: chCover,
         date: chDate,
+        releaseDate: chReleaseDate,
         estimatedTime: chEstimatedTime,
       });
     });

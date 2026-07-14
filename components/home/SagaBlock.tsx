@@ -1098,9 +1098,19 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
             <p className={`font-[var(--font-bangers)] text-xs tracking-[0.2em] uppercase mb-1 ${isBlueprintTheme ? "text-[#D7263D]/60" : "text-gray-400"}`}>
               {saga_label(index)}
             </p>
-            {chapter.date && (
+            {(chapter.releaseDate || chapter.date) && (
               <p className={`font-sans text-[10px] mb-1.5 flex items-center gap-1.5 ${isBlueprintTheme ? "text-emerald-400/90 font-mono" : "text-gray-500"}`}>
-                <span>📅</span> {chapter.date} {chapter.estimatedTime ? `| ⏱️ ${chapter.estimatedTime}` : ""}
+                {chapter.releaseDate ? (
+                  <>
+                    <span>🚀</span> Lanzado: {chapter.releaseDate}
+                    {chapter.estimatedTime && <> | <span>⏱️</span> {chapter.estimatedTime} de dev</>}
+                  </>
+                ) : (
+                  <>
+                    <span>📅</span> {chapter.date}
+                    {chapter.estimatedTime && ` | ⏱️ ${chapter.estimatedTime}`}
+                  </>
+                )}
               </p>
             )}
             <h3 className={`font-[var(--font-bangers)] ${compact ? "text-base" : "text-2xl sm:text-3xl"} leading-tight uppercase tracking-wide ${isBlueprintTheme ? "text-white/80" : "text-gray-400"}`}>
@@ -1231,9 +1241,19 @@ function ChapterCard({ chapter, sagaId, sagaColor, index, isLocked, sagaCover, i
             >
               {saga_label(index)}
             </p>
-            {chapter.date && (
+            {(chapter.releaseDate || chapter.date) && (
               <p className="font-sans text-[10px] text-gray-500 mb-1.5 flex items-center gap-1.5">
-                <span>📅</span> {chapter.date} {chapter.estimatedTime ? `| ⏱️ ${chapter.estimatedTime}` : ""}
+                {chapter.releaseDate ? (
+                  <>
+                    <span>🚀</span> Lanzado: {chapter.releaseDate}
+                    {chapter.estimatedTime && <> | <span>⏱️</span> {chapter.estimatedTime} de dev</>}
+                  </>
+                ) : (
+                  <>
+                    <span>📅</span> {chapter.date}
+                    {chapter.estimatedTime && ` | ⏱️ ${chapter.estimatedTime}`}
+                  </>
+                )}
               </p>
             )}
             <h3 className={`font-[var(--font-bangers)] ${compact ? "text-base" : "text-2xl sm:text-3xl"} leading-tight uppercase tracking-wide text-[#001419]`}>
