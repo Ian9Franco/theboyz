@@ -329,5 +329,7 @@ export function computeBubbleDelay(
   };
   const styleMul = styleMultiplier[line.style ?? "normal"] ?? 1.0;
 
-  return (index * baseMs * styleMul * speedMultiplier) / 1000;
+  // Divide by speedMultiplier so that slow (0.5) → double the delay (more time to read)
+  // and fast (1.5) → two-thirds of the delay. This matches the autoplay timer logic in CinematicReader.
+  return (index * baseMs * styleMul) / (speedMultiplier * 1000);
 }
