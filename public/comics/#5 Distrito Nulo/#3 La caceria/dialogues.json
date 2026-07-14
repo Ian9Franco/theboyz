@@ -71,6 +71,16 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 30 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/beam.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.2,
+                "playbackRate": 1
+              }
+            }
           ]
         },
         {
