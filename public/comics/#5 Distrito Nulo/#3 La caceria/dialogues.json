@@ -1150,6 +1150,16 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 65, "w": 100, "h": 35 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/crash.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.3,
+                "playbackRate": 1
+              }
+            }
           ]
         }
       ]
@@ -1505,16 +1515,7 @@
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 59 }
           ],
-          "sounds": [
-            {
-              "sound": "/sounds/sfx/Charge up cannon.mp3",
-              "soundStartTime": 0,
-              "soundConfig": {
-                "volume": 0.6,
-                "playbackRate": 1
-              }
-            }
-          ]
+          "sounds": []
         },
         {
           "focusY": 0.75,
@@ -1585,7 +1586,7 @@
               "soundStartTime": 0,
               "soundConfig": {
                 "volume": 0.4,
-                "playbackRate": 0.6
+                "playbackRate": 1
               }
             }
           ]
@@ -2340,16 +2341,7 @@
         {
           "focusY": 0.6,
           "dialogue": [],
-          "sounds": [
-            {
-              "sound": "/sounds/sfx/cañondeep.mp3",
-              "soundStartTime": 0,
-              "soundConfig": {
-                "volume": 0.4,
-                "playbackRate": 1
-              }
-            }
-          ]
+          "sounds": []
         },
         {
           "focusY": 0.9,
@@ -2806,16 +2798,7 @@
           "dialogue": [
             { "text": "—Espero que no me hagas perder el tiempo.", "size": "small", "posX": 35, "posY": 0, "tailX": 25, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
-          "sounds": [
-            {
-              "sound": "/sounds/sfx/campana.mp3",
-              "soundStartTime": 0,
-              "soundConfig": {
-                "volume": 0.4,
-                "playbackRate": 1
-              }
-            }
-          ]
+          "sounds": []
         },
         {
           "focusY": 0.55,
@@ -3582,6 +3565,60 @@
         "volume": 0.2,
         "playbackRate": 1,
         "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1784051193647-6tvit",
+      "layer": "music",
+      "src": "/sounds/sfx/Charge up cannon.mp3",
+      "startPageKey": "54",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "54"
+      },
+      "soundConfig": {
+        "volume": 0.5,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1784051387021-sdeea",
+      "layer": "music",
+      "src": "/sounds/sfx/cañondeep.mp3",
+      "startPageKey": "79",
+      "startPanelIdx": 1,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "79"
+      },
+      "soundConfig": {
+        "volume": 0.8,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1784051471573-ornlc",
+      "layer": "music",
+      "src": "/sounds/sfx/campana.mp3",
+      "startPageKey": "94",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "94"
+      },
+      "soundConfig": {
+        "volume": 0.45,
+        "playbackRate": 1,
+        "loop": false,
         "fadeIn": 1000,
         "fadeOut": 1000
       }
