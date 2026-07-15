@@ -111,8 +111,8 @@ export function TimelineTab({ unlockAll = false, readChapters = [] }: TimelineTa
     if (isDecrypted || unlockAll) return false;
     if (currentEvent.isAlwaysLocked) return true;
     if (currentEvent.unlockChapter) {
-      const normalizedRead = readChapters.map(id => id.toLowerCase().trim());
-      return !normalizedRead.includes(currentEvent.unlockChapter.toLowerCase());
+      const normalizedRead = readChapters.map(id => decodeURIComponent(id).toLowerCase().trim());
+      return !normalizedRead.includes(decodeURIComponent(currentEvent.unlockChapter).toLowerCase().trim());
     }
     return false;
   })();
@@ -147,8 +147,8 @@ export function TimelineTab({ unlockAll = false, readChapters = [] }: TimelineTa
               if (isDecrypted || unlockAll) return false;
               if (event.isAlwaysLocked) return true;
               if (event.unlockChapter) {
-                const normalizedRead = readChapters.map(id => id.toLowerCase().trim());
-                return !normalizedRead.includes(event.unlockChapter.toLowerCase());
+                const normalizedRead = readChapters.map(id => decodeURIComponent(id).toLowerCase().trim());
+                return !normalizedRead.includes(decodeURIComponent(event.unlockChapter).toLowerCase().trim());
               }
               return false;
             })();

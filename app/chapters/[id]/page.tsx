@@ -89,7 +89,7 @@ export default function ChapterPage() {
           try {
             const read = localStorage.getItem("read-chapters");
             const readList = read ? JSON.parse(read) : [];
-            const isPrevRead = readList.map((r: string) => r.toLowerCase().trim()).includes(data.prevChapter.id.toLowerCase().trim());
+            const isPrevRead = readList.map((r: string) => decodeURIComponent(r).toLowerCase().trim()).includes(decodeURIComponent(data.prevChapter.id).toLowerCase().trim());
             if (!isPrevRead) {
               setIsLocked(true);
               return; // Keep locked, do not mark current as read
@@ -102,9 +102,11 @@ export default function ChapterPage() {
         // Mark as read if not locked
         try {
           const read = localStorage.getItem("read-chapters");
-          const readList = read ? JSON.parse(read) : [];
-          if (!readList.includes(id)) {
-            readList.push(id);
+          const readList: string[] = read ? JSON.parse(read) : [];
+          const decodedId = decodeURIComponent(id);
+          const decodedReadList = readList.map((r: string) => decodeURIComponent(r));
+          if (!decodedReadList.includes(decodedId)) {
+            readList.push(decodedId);
             localStorage.setItem("read-chapters", JSON.stringify(readList));
           }
         } catch (e) {
@@ -194,12 +196,15 @@ export default function ChapterPage() {
     const handleUnlockThis = () => {
       try {
         const read = localStorage.getItem("read-chapters");
-        const readList = read ? JSON.parse(read) : [];
-        if (prevChapter && !readList.includes(prevChapter.id)) {
-          readList.push(prevChapter.id);
+        const readList: string[] = read ? JSON.parse(read) : [];
+        const decodedPrevId = prevChapter ? decodeURIComponent(prevChapter.id) : null;
+        const decodedId = decodeURIComponent(id);
+        const decodedReadList = readList.map((r: string) => decodeURIComponent(r));
+        if (decodedPrevId && !decodedReadList.includes(decodedPrevId)) {
+          readList.push(decodedPrevId);
         }
-        if (!readList.includes(id)) {
-          readList.push(id);
+        if (!decodedReadList.includes(decodedId)) {
+          readList.push(decodedId);
         }
         localStorage.setItem("read-chapters", JSON.stringify(readList));
       } catch (e) {
@@ -211,12 +216,15 @@ export default function ChapterPage() {
     const handleUnlockAndNext = () => {
       try {
         const read = localStorage.getItem("read-chapters");
-        const readList = read ? JSON.parse(read) : [];
-        if (prevChapter && !readList.includes(prevChapter.id)) {
-          readList.push(prevChapter.id);
+        const readList: string[] = read ? JSON.parse(read) : [];
+        const decodedPrevId = prevChapter ? decodeURIComponent(prevChapter.id) : null;
+        const decodedId = decodeURIComponent(id);
+        const decodedReadList = readList.map((r: string) => decodeURIComponent(r));
+        if (decodedPrevId && !decodedReadList.includes(decodedPrevId)) {
+          readList.push(decodedPrevId);
         }
-        if (!readList.includes(id)) {
-          readList.push(id);
+        if (!decodedReadList.includes(decodedId)) {
+          readList.push(decodedId);
         }
         localStorage.setItem("read-chapters", JSON.stringify(readList));
       } catch (e) {

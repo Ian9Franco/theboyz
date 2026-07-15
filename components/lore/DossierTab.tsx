@@ -65,7 +65,7 @@ export function DossierTab({ unlockAll, readChapters }: DossierTabProps) {
   const [activeCategory, setActiveCategory] = useState<string>("pibes");
   const [expandedLocation, setExpandedLocation] = useState<string | null>(null);
 
-  const normalizedRead = readChapters.map((c) => c.toLowerCase().trim());
+  const normalizedRead = readChapters.map((c) => decodeURIComponent(c).toLowerCase().trim());
   const hasReadLaCaceria = unlockAll || normalizedRead.includes("la caceria");
 
   const computedChars = getComputedCharacters(readChapters, true, unlockAll);

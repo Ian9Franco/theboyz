@@ -522,7 +522,7 @@ export function BlueprintsTab({ unlockAll = false, readChapters = [] }: Blueprin
   const [activeId, setActiveId] = useState<string>("vesperwing");
   const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
 
-  const normalizedChapters = readChapters.map((id) => id.toLowerCase().trim());
+  const normalizedChapters = readChapters.map((id) => decodeURIComponent(id).toLowerCase().trim());
   const hasReadDistritoNulo =
     unlockAll || normalizedChapters.includes("despertar") || normalizedChapters.includes("pecados de brooklyn-la mentira") || normalizedChapters.includes("la caceria");
   const hasReadDistritoNulo2 =

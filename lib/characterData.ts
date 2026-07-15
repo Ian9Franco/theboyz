@@ -61,10 +61,10 @@ export const CHARACTER_DETAILS: CharacterDetail[] = rawCharacters
   .filter((c): c is CharacterDetail => c !== null);
 
 export function getComputedCharacters(readChapters: string[], isClient: boolean, unlockAll: boolean = false) {
-  const normalizedRead = readChapters.map(id => id.toLowerCase().trim());
+  const normalizedRead = readChapters.map(id => decodeURIComponent(id).toLowerCase().trim());
 
   const hasRead = (chapterId: string) =>
-    normalizedRead.includes(chapterId.toLowerCase().trim());
+    normalizedRead.includes(decodeURIComponent(chapterId).toLowerCase().trim());
 
   return CHARACTER_DETAILS.map((char) => {
     // Solo se consideran borradores reales aquellos que tienen rol de borrador o valery.

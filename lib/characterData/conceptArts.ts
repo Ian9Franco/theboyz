@@ -391,7 +391,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   "ian": [
     {
       "name": "Ian Lab Sheet",
-      "path": "/personajes/GUIAS/boyz/VESPERWING/ian_lab_sheet.png",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/ian_lab_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
