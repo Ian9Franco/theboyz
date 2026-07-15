@@ -4,7 +4,18 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { EyeOff, Lock } from "lucide-react";
 
-const TIMELINE_EVENTS = [
+interface TimelineEvent {
+  phase: string;
+  title: string;
+  saga: string;
+  desc: string;
+  details: string;
+  icon: string;
+  unlockChapter: string | null;
+  isAlwaysLocked?: boolean;
+}
+
+const TIMELINE_EVENTS: TimelineEvent[] = [
   {
     phase: "Fase 1",
     title: "EL SILENCIO DEL DRAGÓN",
@@ -39,7 +50,7 @@ const TIMELINE_EVENTS = [
     desc: "La caída de la base de Los Pibes en Dumbo desata el caos. Bajo un asalto militar implacable del Comandante R.E.G.U.L.A.R., el grupo se fragmenta y Julián es capturado, siendo posteriormente rescatado por la enigmática matriarca vampírica Severine Alucard. Uandi (Aegis) enfrenta a Gorgon en un crudo duelo físico en Central Park antes de refugiarse con Jaz. Con el visor arcano de Mati a punto de colapsar, Ian se ve obligado a recurrir a su manipulador ex-mentor, Norman Parker (The Maker), buscando asilo en la Parker Tower sin saber que este ya planea adueñarse de sus datos biométricos.",
     details: "INFORME DE CAUSALIDAD: Los Pibes se convierten en fugitivos oficiales, sin base operativa y expuestos al juego corporativo de Parker, quien empieza a trazar los planos para controlar la energía arcana multiversal.",
     icon: "🦇",
-    isAlwaysLocked: true,
+    unlockChapter: "la caceria",
   }
 ];
 

@@ -197,7 +197,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     },
     {
       "name": "Aegis Sheet",
-      "path": "/personajes/GUIAS/boyz/AEGIS/aegis_sheet.webp",
+      "path": "/personajes/GUIAS/boyz/AEGIS/Aegis_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -389,6 +389,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     }
   ],
   "ian": [
+    {
+      "name": "Ian Lab Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/ian_lab_sheet.png",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
     {
       "name": "Ian Sheet",
       "path": "/personajes/GUIAS/boyz/VESPERWING/ian_sheet.webp",
@@ -808,7 +815,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   "severine": [
     {
       "name": "Severine Alt2 Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Severine/Severine_alt2_sheet.webp",
+      "path": "/personajes/GUIAS/Secundarios/Severine/severine_alt2_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -822,7 +829,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     },
     {
       "name": "Severine Alt Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Severine/Severine_alt_sheet.webp",
+      "path": "/personajes/GUIAS/Secundarios/Severine/severine_alt_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -843,7 +850,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     },
     {
       "name": "Severine Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Severine/Severine_sheet.webp",
+      "path": "/personajes/GUIAS/Secundarios/Severine/severine_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -918,14 +925,14 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   "valery": [
     {
       "name": "Valery Alt Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Valery/Valery_alt_sheet.webp",
+      "path": "/personajes/GUIAS/Secundarios/Valery/valery_alt_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
     },
     {
       "name": "Valery Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Valery/Valery_sheet.webp",
+      "path": "/personajes/GUIAS/Secundarios/Valery/valery_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false

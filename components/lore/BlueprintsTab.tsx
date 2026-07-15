@@ -524,9 +524,9 @@ export function BlueprintsTab({ unlockAll = false, readChapters = [] }: Blueprin
 
   const normalizedChapters = readChapters.map((id) => id.toLowerCase().trim());
   const hasReadDistritoNulo =
-    unlockAll || normalizedChapters.includes("despertar") || normalizedChapters.includes("pecados de brooklyn-la mentira");
+    unlockAll || normalizedChapters.includes("despertar") || normalizedChapters.includes("pecados de brooklyn-la mentira") || normalizedChapters.includes("la caceria");
   const hasReadDistritoNulo2 =
-    unlockAll || normalizedChapters.includes("pecados de brooklyn-la mentira");
+    unlockAll || normalizedChapters.includes("pecados de brooklyn-la mentira") || normalizedChapters.includes("la caceria");
 
   const availableBlueprints = [
     ...BLUEPRINTS,
