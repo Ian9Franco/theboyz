@@ -114,6 +114,22 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/Fichas/Secundarios/Bristleback/Bristleback_ficha.webp",
     ]
   },
+  "brooke": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
+  "byte": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
   "centinelas": {
     "portada": null,
     "portadas": [
@@ -140,6 +156,14 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/Fichas/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_cosmic_ficha.webp",
       "/personajes/Fichas/antagonistas/Comandante R.E.G.U.L.A.R/R.E.G.U.L.A.R_ficha.webp",
       "/personajes/Fichas/antagonistas/V.O.P.S/V.O.P.S_ficha.webp",
+    ]
+  },
+  "daichi": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
     ]
   },
   "demonios": {
@@ -445,6 +469,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "fichas": [
     ]
   },
+  "oni": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
   "phobos": {
     "portada": "/personajes/PORTADAS/Phobos/Phobos_alt.webp",
     "portadas": [
@@ -457,6 +489,14 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "queen_of_pain": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
+  "ren": {
     "portada": null,
     "portadas": [
     ],

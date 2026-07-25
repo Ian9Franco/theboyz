@@ -72,5 +72,10 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   zeus: [],
   doom: [],
   queen_of_pain: [],
-  mati_dweller: []
+  mati_dweller: [],
+  brooke: [],
+  byte: [],
+  daichi: [],
+  ren: [],
+  oni: []
 };

@@ -132,6 +132,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
+  "oni": [
+    {
+      "name": "Oni Sheet",
+      "path": "/personajes/GUIAS/antagonistas/ONI/Oni_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
   "phobos": [
     {
       "name": "Alt Sheet",
@@ -150,8 +159,29 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "shinjuro": [
     {
+      "name": "Kurogane Ninjas Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Shinjuro Kurogane/Kurogane_ninjas_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
       "name": "Shinjuro Kurogane Sheet",
       "path": "/personajes/GUIAS/antagonistas/Shinjuro Kurogane/Shinjuro Kurogane_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Shinjuro Samurai Alt Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Shinjuro Kurogane/Shinjuro_samurai_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Shinjuro Samurai Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Shinjuro Kurogane/Shinjuro_samurai_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -196,6 +226,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     },
     {
+      "name": "Aegis New Sheet Alt",
+      "path": "/personajes/GUIAS/boyz/AEGIS/aegis_new_sheet_alt.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
       "name": "Aegis Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/Aegis_sheet.webp",
       "section": "base",
@@ -212,6 +249,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Uandi Combat Sheet",
       "path": "/personajes/GUIAS/boyz/AEGIS/uandi_combat_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Uandi New Sheet",
+      "path": "/personajes/GUIAS/boyz/AEGIS/uandi_new_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -249,6 +293,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Julian Alt Sheet",
       "path": "/personajes/GUIAS/boyz/BANDIT/julian_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Julian New Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/julian_new_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -374,8 +425,22 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "jaz": [
     {
+      "name": "Jaz Home Sheet",
+      "path": "/personajes/GUIAS/boyz/SIGIL/jaz_home_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
       "name": "Jaz Sheet",
       "path": "/personajes/GUIAS/boyz/SIGIL/JAZ_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Jaz Work Sheet",
+      "path": "/personajes/GUIAS/boyz/SIGIL/jaz_work_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -397,8 +462,29 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     },
     {
+      "name": "Ian New Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/ian_new_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
       "name": "Ian Sheet",
       "path": "/personajes/GUIAS/boyz/VESPERWING/ian_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Ian Tokyo Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/ian_tokyo_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Ian Tokyo Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/ian_tokyo_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -724,10 +810,51 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
+  "brooke": [
+    {
+      "name": "Brooke Alt Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Brooke/BROOKE_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Brooke Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Brooke/BROOKE_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Brooke Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Brooke/BROOKE__sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "byte": [
+    {
+      "name": "Byte Sheet",
+      "path": "/personajes/GUIAS/Secundarios/BYTE/Byte_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
   "rylai": [
     {
       "name": "Crystal Maiden Sheet",
       "path": "/personajes/GUIAS/Secundarios/Crystal Maiden/Crystal Maiden_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "daichi": [
+    {
+      "name": "Daichi Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Daichi/Daichi_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -807,6 +934,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Mutantes Sheet",
       "path": "/personajes/GUIAS/Secundarios/Mutantes/Mutantes_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "ren": [
+    {
+      "name": "Ren Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Ren/Ren_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -924,8 +1060,22 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "valery": [
     {
+      "name": "Valery Alt Lab Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Valery/valery_alt_lab_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
       "name": "Valery Alt Sheet",
       "path": "/personajes/GUIAS/Secundarios/Valery/valery_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Valery Lab Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Valery/valery_lab_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
