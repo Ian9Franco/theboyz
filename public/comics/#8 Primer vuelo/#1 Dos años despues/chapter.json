@@ -1,5 +1,8 @@
 {
   "title": "Dos Años Despues",
   "number": 1,
-  "status": "draft"
+  "status": "published",
+  "date": "26/07/2026",
+  "estimatedTime": "27 días",
+  "portada": "portada.webp"
 }

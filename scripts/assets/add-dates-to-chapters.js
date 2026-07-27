@@ -28,12 +28,15 @@ const mapping = {
   },
   "distrito-nulo-parte-3-la-caceria": {
     "la-caceria": { date: "23/06/2026", estimatedTime: "19 días" }
+  },
+  "primer-vuelo": {
+    "dos-anos-despues": { date: "26/07/2026", estimatedTime: "27 días" }
   }
 };
 
 const sagaMapping = {
   "distrito-nulo-parte-3-la-caceria": { date: "23/06/2026", estimatedTime: "19 días" },
-  "primer-vuelo": { date: "15/06/2026", estimatedTime: "27 días" }
+  "primer-vuelo": { date: "26/07/2026", estimatedTime: "27 días" }
 };
 
 function cleanName(name) {
