@@ -159,7 +159,7 @@ export function SagaBlock({
   }, []);
 
   const isNuevo = saga.nuevo === true;
-  const isProximamente = saga.proximamente === true && (isDrawerItem || !saga.chapters.some((c: any) => c.status === "published"));
+  const isProximamente = isDrawerItem || saga.proximamente === true || !saga.chapters.some((c: any) => c.status === "published");
 
   const colorPrimary = "#D7263D";
   const colorSecondary = "#D7263D";
@@ -508,9 +508,10 @@ export function SagaBlock({
                       {/* Special draft/upcoming block */}
                       {saga.chapters.some((c: any) => c.status === "published") &&
                         saga.chapters.filter((c: any) => c.status !== "published").slice(0, 1).map((chapter: any) => (
-                          <div
+                          <Link
                             key={chapter.id}
-                            className="flex flex-col h-full overflow-hidden border-[3px] border-[#001419] bg-gradient-to-br from-[#002229] to-[#001217] shadow-[5px_5px_0_#D7263D] relative rounded-md min-h-[160px] justify-between p-4"
+                            href={`/chapters/${chapter.id}`}
+                            className="flex flex-col h-full overflow-hidden border-[3px] border-[#001419] bg-gradient-to-br from-[#002229] to-[#001217] shadow-[5px_5px_0_#D7263D] relative rounded-md min-h-[160px] justify-between p-4 hover:border-[#D7263D] hover:scale-[1.01] transition-all cursor-pointer group"
                           >
                             <div
                               className="absolute inset-0 pointer-events-none opacity-[0.06] z-0"
@@ -531,26 +532,31 @@ export function SagaBlock({
                                     </span>
                                   )}
                                 </div>
-                                <h3 className="font-[var(--font-bangers)] text-2xl leading-tight uppercase tracking-wide text-white/80 mt-1">
+                                <h3 className="font-[var(--font-bangers)] text-2xl leading-tight uppercase tracking-wide text-white/80 group-hover:text-white mt-1 transition-colors">
                                   PARTE {chapter.number}: {chapter.title}
                                 </h3>
                                 <p className="font-sans text-[11px] text-white/40 mt-1">
-                                  Este episodio está en desarrollo y se publicará próximamente.
+                                  Este episodio está en desarrollo y se publicará próximamente. Ingresá para editar o previsualizar.
                                 </p>
                               </div>
-                              <div className="flex items-center gap-2 mt-4 pt-3 border-t border-dashed border-[#D7263D]/20">
-                                <div className="w-5 h-5 rounded-full flex items-center justify-center bg-[#D7263D]/10 text-[#D7263D] border border-[#D7263D]/25">
-                                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2.5" />
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-                                  </svg>
+                              <div className="flex items-center justify-between mt-4 pt-3 border-t border-dashed border-[#D7263D]/20">
+                                <div className="flex items-center gap-2">
+                                  <div className="w-5 h-5 rounded-full flex items-center justify-center bg-[#D7263D]/10 text-[#D7263D] border border-[#D7263D]/25">
+                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
+                                      <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2.5" />
+                                      <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                                    </svg>
+                                  </div>
+                                  <span className="font-[var(--font-bangers)] text-[10px] tracking-wider text-[#D7263D] uppercase">
+                                    ACCESO CON CONTRASEÑA
+                                  </span>
                                 </div>
-                                <span className="font-[var(--font-bangers)] text-[10px] tracking-wider text-[#D7263D] uppercase">
-                                  ACCESO RESTRINGIDO
+                                <span className="font-[var(--font-bangers)] text-xs text-[#D7263D] group-hover:translate-x-1 transition-transform">
+                                  INGRESAR →
                                 </span>
                               </div>
                             </div>
-                          </div>
+                          </Link>
                         ))}
                     </div>
                   </div>

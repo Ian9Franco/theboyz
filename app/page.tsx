@@ -34,7 +34,9 @@ export default function Home() {
 
   // Pre-calculate published and upcoming sagas
   const nuevoSagas = officialSagas.filter((s) => s.nuevo === true);
-  const rawProximamenteSagas = officialSagas.filter((s) => s.proximamente === true);
+  const rawProximamenteSagas = officialSagas.filter(
+    (s) => s.proximamente === true || s.chapters.some((c: any) => c.status !== "published")
+  );
   const proximamenteSagas: any[] = [];
   
   rawProximamenteSagas.forEach((saga) => {
@@ -44,18 +46,19 @@ export default function Home() {
         upcoming.forEach((ch: any) => {
           proximamenteSagas.push({
             ...saga,
-            id: `${saga.id}-${ch.id}`,
+            id: ch.id,
             title: `${saga.title} Parte ${ch.number}: ${ch.title}`,
             cover: ch.cover || saga.cover,
             chapters: [ch],
             date: ch.date || saga.date,
             estimatedTime: ch.estimatedTime || saga.estimatedTime,
+            proximamente: true,
           });
         });
-      } else {
+      } else if (saga.proximamente) {
         proximamenteSagas.push(saga);
       }
-    } else {
+    } else if (saga.proximamente) {
       proximamenteSagas.push(saga);
     }
   });
