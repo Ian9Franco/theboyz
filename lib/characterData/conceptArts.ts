@@ -159,6 +159,27 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "shinjuro": [
     {
+      "name": "1 Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Shinjuro Kurogane/1_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "2 Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Shinjuro Kurogane/2_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "3 Sheet",
+      "path": "/personajes/GUIAS/antagonistas/Shinjuro Kurogane/3_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
       "name": "Kurogane Ninjas Sheet",
       "path": "/personajes/GUIAS/antagonistas/Shinjuro Kurogane/Kurogane_ninjas_sheet.webp",
       "section": "base",
@@ -455,6 +476,27 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "ian": [
     {
+      "name": "Ian 2gym Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/ian_2gym_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Ian Gym Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/ian_gym_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Ian Gym Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/ian_gym_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
       "name": "Ian Lab Sheet",
       "path": "/personajes/GUIAS/boyz/VESPERWING/ian_lab_sheet.webp",
       "section": "base",
@@ -527,6 +569,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Suit Sheet",
       "path": "/personajes/GUIAS/boyz/VESPERWING/alt/SUIT_sheet.webp",
+      "section": "alt",
+      "sectionLabel": "Alt",
+      "isAlt": true
+    },
+    {
+      "name": "Vesperwing Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/VESPERWING/alt/vesperwing_alt_sheet.webp",
       "section": "alt",
       "sectionLabel": "Alt",
       "isAlt": true
