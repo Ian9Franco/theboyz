@@ -14,7 +14,6 @@
         {
           "focusY": 0.35,
           "dialogue": [
-            { "text": "Sí.", "size": "small", "posX": 50, "posY": 20, "tailX": 60, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "Encontré dónde termina.", "size": "small", "posX": 45, "posY": 15, "tailX": 65, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "¿Quién la está comprando?", "size": "small", "posX": 95, "posY": 20, "tailX": 85, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "Todavía no lo sé.\nPero sé quién la recibe.", "size": "small", "posX": 20, "posY": 40, "tailX": 60, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
