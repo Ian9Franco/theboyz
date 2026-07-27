@@ -1,7 +1,15 @@
 {
-  "title": "9# La Patria De Los Heroes",
-  "tagline": "Una saga de cómics original.",
-  "description": "Una historia picante donde los pibes se mandan una tras otra.",
-  "color": "#1b4332",
-  "status": "draft"
+  "title": "La Patria de los Héroes",
+  "tagline": "Un error en el salto dimensional puede arrojarte al peor de los mundos.",
+  "description": "Tras escapar desesperadamente de Mati, Völvo activa un portal que lo arrastra a través de realidades cada vez más extrañas. Con su dispositivo averiado y víctima de un engaño en una ciudad desolada, termina varado en una realidad desconocida donde su país vive bajo el dominio de una élite de superhéroes venerados por la multitud.",
+  "color": "#1e3a8a",
+  "color_secondary": "#eab308",
+  "status": "draft",
+  "order": 9,
+  "password": "patria",
+  "cinematic": true,
+  "nuevo": false,
+  "proximamente": true,
+  "date": "27/07/2026",
+  "estimatedTime": "30 días"
 }
