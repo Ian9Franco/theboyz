@@ -132,6 +132,7 @@ export function CinematicReader({
     handleRemovePanel,
     handleUpdatePanelParams,
     handleAddBubble,
+    handleDuplicateBubble,
     handleUpdateBubble,
     handleRemoveBubble,
     handleUpdateSettings,
@@ -776,6 +777,7 @@ export function CinematicReader({
           handleUndo={handleUndo}
           handleAddPanel={handleAddPanel}
           handleAddBubble={handleAddBubble}
+          handleDuplicateBubble={handleDuplicateBubble}
           handleRemoveBubble={handleRemoveBubble}
           setActivePanelIdx={setActivePanelIdx}
           handlePanelRectDragEnd={handlePanelRectDragEnd}
@@ -813,6 +815,7 @@ export function CinematicReader({
           handleRemovePanel={handleRemovePanel}
           handleUpdatePanelParams={handleUpdatePanelParams}
           handleAddBubble={handleAddBubble}
+          handleDuplicateBubble={handleDuplicateBubble}
           handleRemoveBubble={handleRemoveBubble}
           handleUpdateBubble={handleUpdateBubble}
           handleUpdateSettings={handleUpdateSettings}

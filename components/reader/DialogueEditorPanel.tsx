@@ -66,6 +66,7 @@ export interface DialogueEditorPanelProps {
   handleRemovePanel: (idx: number) => void;
   handleUpdatePanelParams: (pIdx: number, updates: Partial<PanelConfig>) => void;
   handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle?: "normal" | "caption" | "cinematic") => void;
+  handleDuplicateBubble: (pIdx: number, bIdx: number) => void;
   handleRemoveBubble: (pIdx: number, bIdx: number) => void;
   handleUpdateBubble: (pIdx: number, bIdx: number, updates: Partial<DialogueLine>) => void;
   handleUpdateSettings: (updates: Partial<ChapterSettings>) => void;
@@ -107,6 +108,7 @@ export function DialogueEditorPanel({
   setActiveBubbleIdx,
   handleRemovePanel,
   handleUpdatePanelParams,
+  handleDuplicateBubble,
   handleAddBubble,
   handleRemoveBubble,
   handleUpdateBubble,
@@ -418,6 +420,7 @@ export function DialogueEditorPanel({
           activeBubbleIdx={activeBubbleIdx}
           setActiveBubbleIdx={setActiveBubbleIdx}
           handleAddBubble={handleAddBubble}
+          handleDuplicateBubble={handleDuplicateBubble}
           handleRemoveBubble={handleRemoveBubble}
           handleUpdateBubble={handleUpdateBubble}
           presetMode={presetMode}

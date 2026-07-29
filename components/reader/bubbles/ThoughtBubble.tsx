@@ -73,7 +73,7 @@ export function ThoughtBubble({
   // ── Colours ──
   const thoughtBg          = resolveBgColor(line.customBg, "#ffffff", bubbleOpacity);
   const thoughtBorderColor = line.customColor || "#0a0a0f";
-  const thoughtSpeakerColor = getSpeakerColor(line.speaker, "#e8185a");
+  const thoughtSpeakerColor = getSpeakerColor(line.speaker, "#000000");
 
   // Determine solid background color and opacity to prevent overlap seams when translucent
   let solidBg = thoughtBg;
@@ -214,7 +214,11 @@ export function ThoughtBubble({
         <div className="flex flex-col gap-2">
           {paragraphs.map((p, i) => (
             <div key={i}>
-              {p.speaker && <strong style={{ color: thoughtBorderColor }}>{p.speaker}: </strong>}
+              {p.speaker && (
+                <strong className="font-[var(--font-bangers)] font-bold mr-1 tracking-wide" style={{ color: getSpeakerColor(p.speaker, "#000000"), fontWeight: "bold" }}>
+                  {p.speaker}:{" "}
+                </strong>
+              )}
               <span>{renderStyledText(p.text)}</span>
             </div>
           ))}

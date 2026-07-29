@@ -46,6 +46,7 @@ interface ReaderCanvasProps {
   handleUndo: () => void;
   handleAddPanel?: () => void;
   handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }) => void;
+  handleDuplicateBubble?: (pIdx: number, bIdx: number) => void;
   handleRemoveBubble: (pIdx: number, bIdx: number) => void;
   setActivePanelIdx?: (idx: number) => void;
   handlePanelRectDragEnd?: (info: any, pIdx: number, rIdx: number) => void;
@@ -96,6 +97,7 @@ export function ReaderCanvas({
   handleUndo,
   handleAddPanel,
   handleAddBubble,
+  handleDuplicateBubble,
   handleRemoveBubble,
   setActivePanelIdx,
   handlePanelRectDragEnd,
@@ -510,6 +512,24 @@ export function ReaderCanvas({
             title="Añadir globo a la viñeta seleccionada"
           >
             +
+          </button>
+          <button
+            type="button"
+            disabled={activeBubbleIdx === null}
+            onClick={(e) => {
+              e.stopPropagation();
+              if (activeBubbleIdx !== null && handleDuplicateBubble) {
+                handleDuplicateBubble(activePanelIdx, activeBubbleIdx);
+              }
+            }}
+            className={`w-12 h-12 rounded-full text-xl flex items-center justify-center border-3 border-[#0a0a0f] transition-all ${
+              activeBubbleIdx !== null
+                ? "bg-indigo-600 hover:bg-indigo-700 text-white shadow-[3px_3px_0_#0a0a0f] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0_#0a0a0f] cursor-pointer"
+                : "bg-zinc-600 text-zinc-400 border-zinc-700 cursor-not-allowed opacity-50 shadow-none"
+            }`}
+            title="Duplicar globo seleccionado"
+          >
+            📋
           </button>
           <button
             type="button"

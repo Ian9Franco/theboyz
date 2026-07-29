@@ -13,6 +13,7 @@ interface EditorTabDialoguesProps {
   activeBubbleIdx: number | null;
   setActiveBubbleIdx: (idx: number | null) => void;
   handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle?: "normal" | "caption" | "cinematic") => void;
+  handleDuplicateBubble: (pIdx: number, bIdx: number) => void;
   handleRemoveBubble: (pIdx: number, bIdx: number) => void;
   handleUpdateBubble: (pIdx: number, bIdx: number, updates: Partial<DialogueLine>) => void;
   presetMode?: "standard" | "custom";
@@ -30,6 +31,7 @@ export function EditorTabDialogues({
   activeBubbleIdx,
   setActiveBubbleIdx,
   handleAddBubble,
+  handleDuplicateBubble,
   handleRemoveBubble,
   handleUpdateBubble,
   presetMode = "standard",
@@ -189,13 +191,23 @@ export function EditorTabDialogues({
               </span>
             </span>
           </div>
-          <button
-            type="button"
-            onClick={() => handleRemoveBubble(activePanelIdx, activeBubbleIdx)}
-            className="text-xs text-red-500 hover:text-red-400 hover:underline cursor-pointer font-bold"
-          >
-            Eliminar
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => handleDuplicateBubble(activePanelIdx, activeBubbleIdx)}
+              className="text-xs bg-indigo-900/60 hover:bg-indigo-800 text-indigo-200 border border-indigo-500/30 px-2 py-1 rounded transition-colors cursor-pointer font-bold flex items-center gap-1"
+              title="Duplicar esta burbuja manteniendo sus estilos pero sin texto"
+            >
+              📋 Duplicar
+            </button>
+            <button
+              type="button"
+              onClick={() => handleRemoveBubble(activePanelIdx, activeBubbleIdx)}
+              className="text-xs text-red-500 hover:text-red-400 hover:underline cursor-pointer font-bold"
+            >
+              Eliminar
+            </button>
+          </div>
         </div>
 
         {!isCinematicBubble && (
@@ -209,7 +221,7 @@ export function EditorTabDialogues({
               placeholder="Ej: Ian, Mati, Uandi..."
             />
             <div className="flex flex-wrap gap-1 mt-1">
-              {["Ian", "Mati", "Uandi", "Sofi", "Jaz", "Julián", "Volvo"].map((name) => (
+              {["Ian", "Mati", "Uandi", "Sofi", "Jaz", "Julián", "Volvo", "Valery", "Brooke", "Daichi", "Ren", "Byte", "Oni", "Shinjuro"].map((name) => (
                 <button
                   key={name}
                   type="button"
@@ -521,6 +533,14 @@ export function EditorTabDialogues({
           </span>
         </div>
         <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => handleDuplicateBubble(activePanelIdx, activeBubbleIdx)}
+            className="font-[var(--font-bangers)] text-xs bg-indigo-700 hover:bg-indigo-800 text-white border border-white/10 px-2.5 py-1 rounded transition-colors cursor-pointer"
+            title="Duplicar burbuja seleccionada"
+          >
+            📋 Duplicar
+          </button>
           <button
             type="button"
             onClick={() => handleAddBubble(activePanelIdx, undefined, "normal")}

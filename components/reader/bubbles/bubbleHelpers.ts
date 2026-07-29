@@ -62,13 +62,21 @@ export function renderStyledText(text: string): React.ReactNode {
 // Maps a lowercase speaker name to their canonical accent color.
 
 export const SPEAKER_COLORS: Record<string, string> = {
-  uandi:  "#ef4444",
-  sofi:   "#06b6d4",
-  ian:    "#10b981",
-  jaz:    "#eab308",
-  julian: "#3b82f6",
-  mati:   "#a855f7",
-  volvo:  "#f97316",
+  uandi:    "#ef4444",
+  sofi:     "#06b6d4",
+  ian:      "#10b981",
+  jaz:      "#eab308",
+  julian:   "#3b82f6",
+  julián:   "#3b82f6",
+  mati:     "#a855f7",
+  volvo:    "#f97316",
+  valery:   "#ec4899",
+  brooke:   "#3b82f6",
+  daichi:   "#854d0e",
+  ren:      "#f97316",
+  byte:     "#38bdf8",
+  oni:      "#ef4444",
+  shinjuro: "#6b7280",
 };
 
 /**
@@ -76,11 +84,12 @@ export const SPEAKER_COLORS: Record<string, string> = {
  */
 export function getSpeakerColor(
   speaker: string | null | undefined,
-  defaultColor: string
+  defaultColor: string = "#000000"
 ): string {
   if (!speaker) return defaultColor;
-  const key = speaker.toLowerCase().trim();
-  return SPEAKER_COLORS[key] || defaultColor;
+  const key = speaker.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const rawKey = speaker.toLowerCase().trim();
+  return SPEAKER_COLORS[key] || SPEAKER_COLORS[rawKey] || defaultColor;
 }
 
 /**

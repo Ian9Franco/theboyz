@@ -209,7 +209,7 @@ export function StandardBubble({
   let borderColor  = line.customColor || "#0a0a0f";
   let borderStyle  = `1.75px solid ${borderColor}`; // slightly thicker for better contrast when transparent
   let shadowStyle  = "none";
-  let speakerColor = getSpeakerColor(line.speaker, "#e8185a");
+  let speakerColor = getSpeakerColor(line.speaker, "#000000");
 
   let bubbleClass  = `${fontClass} text-[#0a0a0f]`;
 
@@ -486,7 +486,7 @@ export function StandardBubble({
             {paragraphs.map((p, i) => (
               <div key={i}>
                 {p.speaker && (
-                  <strong className="font-[var(--font-bangers)] mr-1 tracking-wide" style={{ color: speakerColor }}>
+                  <strong className="font-[var(--font-bangers)] font-bold mr-1 tracking-wide" style={{ color: getSpeakerColor(p.speaker, "#000000"), fontWeight: "bold" }}>
                     {p.speaker}:{" "}
                   </strong>
                 )}

@@ -70,7 +70,7 @@ export function CaptionBubble({
   // ── Colours ──
   const captionBg           = resolveBgColor(line.customBg, "#f5e642", bubbleOpacity);
   const captionBorderColor  = line.customColor || "#0a0a0f";
-  const captionSpeakerColor = getSpeakerColor(line.speaker, "#e8185a");
+  const captionSpeakerColor = getSpeakerColor(line.speaker, "#000000");
 
   // ── Size classes ──
   let captionSizeClass = "text-sm sm:text-base px-3.5 py-2";
@@ -137,7 +137,11 @@ export function CaptionBubble({
               ...(line.textColor ? { color: line.textColor } : {}),
             }}
           >
-            {p.speaker && <strong style={{ color: captionBorderColor }}>{p.speaker}: </strong>}
+            {p.speaker && (
+              <strong className="font-[var(--font-bangers)] font-bold mr-1 tracking-wide" style={{ color: getSpeakerColor(p.speaker, "#000000"), fontWeight: "bold" }}>
+                {p.speaker}:{" "}
+              </strong>
+            )}
             {renderStyledText(p.text)}
           </div>
         ))}

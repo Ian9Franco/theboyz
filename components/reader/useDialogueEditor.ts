@@ -206,6 +206,43 @@ export function useDialogueEditor({
     setActiveBubbleIdx(null);
   };
 
+  const handleDuplicateBubble = (pIdx: number, bIdx: number) => {
+    const updatedPages = { ...localDialogues.pages };
+    const pg = { ...currentPageData };
+    const panelsCopy = [...(pg.panels || [])];
+    const targetPanel = { ...panelsCopy[pIdx] };
+    const dialoguesCopy = targetPanel.dialogue ? [...targetPanel.dialogue] : [];
+
+    const sourceBubble = dialoguesCopy[bIdx];
+    if (!sourceBubble) return;
+
+    // Create duplicate with identical properties, tails, and layout but empty inner text
+    const duplicatedBubble: DialogueLine = {
+      ...JSON.parse(JSON.stringify(sourceBubble)),
+      text: "",
+      posX: sourceBubble.posX !== undefined ? Math.min(100, Math.max(0, sourceBubble.posX + 3)) : 53,
+      posY: sourceBubble.posY !== undefined ? Math.min(100, Math.max(0, sourceBubble.posY + 3)) : 53,
+    };
+
+    if (sourceBubble.tailX !== undefined) {
+      duplicatedBubble.tailX = Math.min(100, Math.max(0, sourceBubble.tailX + 3));
+    }
+    if (sourceBubble.tailY !== undefined) {
+      duplicatedBubble.tailY = Math.min(100, Math.max(0, sourceBubble.tailY + 3));
+    }
+
+    dialoguesCopy.splice(bIdx + 1, 0, duplicatedBubble);
+
+    targetPanel.dialogue = dialoguesCopy;
+    panelsCopy[pIdx] = targetPanel;
+    pg.panels = panelsCopy;
+    updatedPages[pgKey] = pg;
+    updateDialoguesState(updatedPages);
+
+    setActivePanelIdx(pIdx);
+    setActiveBubbleIdx(bIdx + 1);
+  };
+
   const handleUpdateSettings = (updates: Partial<ChapterSettings>) => {
     setUndoStack((prev) => [...prev.slice(-49), JSON.parse(JSON.stringify(localDialogues))]);
     setLocalDialogues((prev) => ({
@@ -588,6 +625,7 @@ export function useDialogueEditor({
     handleRemovePanel,
     handleUpdatePanelParams,
     handleAddBubble,
+    handleDuplicateBubble,
     handleUpdateBubble,
     handleRemoveBubble,
     handleUpdateSettings,
