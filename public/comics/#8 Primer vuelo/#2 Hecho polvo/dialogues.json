@@ -316,28 +316,119 @@
       "panels": [
         {
           "focusY": 0.2,
-          "dialogue": []
+          "dialogue": [
+            { "text": "esta mas complicado de lo que pense", "size": "small", "posX": 60, "posY": 0, "tailX": 50, "tailY": 5, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
         },
         {
           "focusY": 0.45,
-          "dialogue": []
+          "dialogue": [
+            { "text": "los circuitosno estan regulados, nunca voy a saber cuando y donde corren", "size": "small", "posX": 30, "posY": 25, "tailX": 15, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "la unica forma de estar adentro y saber como traen la tenologia robada, es participando", "size": "small", "posX": 50, "posY": 30, "tailX": 20, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "los kurogane.. que mierda es?", "size": "small", "posX": 95, "posY": 30, "tailX": 95, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
         },
         {
           "focusY": 0.65,
-          "dialogue": []
+          "dialogue": [
+            { "text": "voy a tener que salir de nuevo, no puedo terminar el dia asi", "size": "small", "posX": 90, "posY": 50, "tailX": 75, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
         },
         {
           "focusY": 0.8,
-          "dialogue": [],
+          "dialogue": [
+            { "text": "tengo que conseguir un taller", "size": "small", "posX": 80, "posY": 75, "tailX": 50, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
           "zoomRects": [
             { "x": 0, "y": 70, "w": 100, "h": 20 }
           ]
         },
         {
           "focusY": 0.95,
-          "dialogue": [],
+          "dialogue": [
+            { "text": "en que me meti", "size": "small", "posX": 75, "posY": 90, "tailX": 55, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
           "zoomRects": [
             { "x": 0, "y": 88, "w": 100, "h": 12 }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            { "text": "seran todos kurogane?", "size": "small", "posX": 40, "posY": 5, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 0, "tail": "none" },
+            { "text": "yo podre ser kurogane?", "size": "small", "posX": 5, "posY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 0, "tail": "none" }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            { "text": "estos ya me re ficharon", "size": "small", "posX": 95, "posY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 75, "fontSize": 8, "borderRadius": 0, "tail": "none" }
+          ]
+        },
+        {
+          "focusY": 0.65,
+          "dialogue": [
+            { "text": "si, vivi lo suficiente en La Matanza para saber cuando me tienen fichado", "size": "small", "posX": 65, "posY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 275, "fontSize": 8, "borderRadius": 0, "tail": "none" }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "mejor me alejo un poco de esto", "size": "small", "posX": 55, "posY": 75, "tailX": 45, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "11": {
+      "panels": [
+        {
+          "dialogue": [
+            { "text": "estp se parece mas a casa", "size": "small", "posX": 65, "posY": 25, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "focusY": 0.2
+        },
+        {
+          "focusY": 0.45,
+          "dialogue": [
+            { "text": "chatarra?", "size": "small", "posX": 30, "posY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 0, "tail": "none" },
+            { "text": "estos tipos no saben ni lo que tienen", "size": "small", "posX": 50, "posY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 0, "tail": "none" }
+          ]
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": [
+            { "text": "por favor, tomatela", "size": "small", "posX": 40, "posY": 55, "tailX": 30, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "we", "size": "small", "posX": 70, "posY": 50, "tailX": 60, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            { "text": "no me imagino si necesitar a realmente el trabajo..", "size": "small", "posX": 55, "posY": 75, "tailX": 30, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 315, "fontSize": 8, "borderRadius": 18 }
+          ]
+        }
+      ]
+    },
+    "12": {
+      "panels": [
+        {
+          "focusY": 0.1,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            { "text": "tiene cara de tipazo", "size": "small", "posX": 5, "posY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 0, "tail": "none" }
+          ]
+        },
+        {
+          "focusY": 0.95,
+          "dialogue": [
+            { "text": "oiga, disculpe..", "size": "small", "posX": 65, "posY": 80, "tailX": 50, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
