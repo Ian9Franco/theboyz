@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import type { DialogueLine } from "./DialogueBubble";
 import type { PanelStop as PanelConfig } from "./audioPlayer";
 import { EditorBubbleVisualsForm } from "./editor/EditorBubbleVisualsForm";
@@ -12,7 +12,11 @@ interface EditorTabDialoguesProps {
   activePanelIdx: number;
   activeBubbleIdx: number | null;
   setActiveBubbleIdx: (idx: number | null) => void;
-  handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle?: "normal" | "caption" | "cinematic") => void;
+  handleAddBubble: (
+    pIdx: number,
+    defaultPosition?: { posX: number; posY: number },
+    defaultStyle?: "normal" | "caption" | "cinematic"
+  ) => void;
   handleDuplicateBubble: (pIdx: number, bIdx: number) => void;
   handleRemoveBubble: (pIdx: number, bIdx: number) => void;
   handleUpdateBubble: (pIdx: number, bIdx: number, updates: Partial<DialogueLine>) => void;
@@ -23,7 +27,8 @@ interface EditorTabDialoguesProps {
 
 /**
  * EditorTabDialogues Component
- * Renders the bubble detail editor with modular sub-forms.
+ * Optimized, intuitive dialogue editor. Auto-focuses text area on selection,
+ * removes clutter, and prioritizes instant text entry and character controls.
  */
 export function EditorTabDialogues({
   currentPanels,
@@ -39,9 +44,38 @@ export function EditorTabDialogues({
   handleReorderBubbles,
 }: EditorTabDialoguesProps) {
   const activePanel = currentPanels[activePanelIdx];
-  const textareaRef = React.useRef<HTMLTextAreaElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const insertFormatting = (tagStart: string, tagEnd: string, textValue: string, onUpdate: (val: string) => void, textareaEl: HTMLTextAreaElement | null) => {
+  // Auto-focus the text input ONLY if user is not interacting with other input/form controls
+  useEffect(() => {
+    if (activeBubbleIdx !== null && activePanel?.dialogue?.[activeBubbleIdx]) {
+      const activeEl = document.activeElement;
+      const isInputFocused = activeEl && (
+        activeEl.tagName === "INPUT" ||
+        activeEl.tagName === "SELECT" ||
+        activeEl.tagName === "TEXTAREA"
+      );
+
+      if (!isInputFocused) {
+        const timer = setTimeout(() => {
+          if (textareaRef.current && (!document.activeElement || document.activeElement === document.body)) {
+            textareaRef.current.focus();
+            const length = textareaRef.current.value.length;
+            textareaRef.current.setSelectionRange(length, length);
+          }
+        }, 100);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [activeBubbleIdx, activePanelIdx]);
+
+  const insertFormatting = (
+    tagStart: string,
+    tagEnd: string,
+    textValue: string,
+    onUpdate: (val: string) => void,
+    textareaEl: HTMLTextAreaElement | null
+  ) => {
     if (!textareaEl) {
       onUpdate(textValue + tagStart + tagEnd);
       return;
@@ -67,78 +101,126 @@ export function EditorTabDialogues({
       .replace(/\*/g, "")
       .replace(/\[color:[^\]]+\]/g, "")
       .replace(/\[\/color\]/g, "")
-      .replace(/<[^>]+>/g, "");  // also strip any raw HTML tags
+      .replace(/<[^>]+>/g, "");
 
   if (!activePanel) {
     return (
-      <div className="bg-[#161622] border border-white/10 rounded p-6 flex flex-col items-center justify-center text-center">
-        <span className="text-sm text-zinc-400 italic">Selecciona una viñeta para comenzar a editar diálogos.</span>
+      <div className="bg-[#161622] border border-white/10 rounded-lg p-6 flex flex-col items-center justify-center text-center shadow-lg">
+        <span className="text-sm text-zinc-400 italic">Seleccioná una viñeta para comenzar a editar diálogos.</span>
       </div>
     );
   }
 
-  // Fallback / Creation Hub when no bubble is selected
+  // Creation Hub when no bubble is selected
   if (activeBubbleIdx === null || !activePanel.dialogue?.[activeBubbleIdx]) {
     return (
-      <div className="bg-[#161622] border border-white/10 rounded p-4 flex flex-col gap-4">
-        <div className="font-[var(--font-bangers)] text-lg text-zinc-300 tracking-wider">
-          💬 Globos y Narraciones (Viñeta {activePanelIdx + 1})
+      <div className="bg-[#161622] border border-white/10 rounded-lg p-4 flex flex-col gap-4 shadow-md">
+        <div className="flex items-center justify-between border-b border-white/10 pb-2">
+          <div className="font-[var(--font-bangers)] text-lg text-zinc-200 tracking-wider flex items-center gap-2">
+            <span>💬 Globos y Narraciones</span>
+            <span className="text-xs font-mono bg-[#0a0a0f] border border-white/10 px-2 py-0.5 rounded text-zinc-400">
+              Viñeta {activePanelIdx + 1}
+            </span>
+          </div>
         </div>
-        
-        <p className="text-xs text-zinc-400">
-          No hay ningún globo seleccionado en esta viñeta. Creá uno nuevo o seleccioná uno existente de la lista:
+
+        <p className="text-xs text-zinc-400 leading-relaxed">
+          Seleccioná un globo de la viñeta actual o creá uno nuevo de forma rápida:
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
           <button
             type="button"
             onClick={() => handleAddBubble(activePanelIdx, undefined, "normal")}
-            className="flex flex-col items-center justify-center gap-2 p-4 bg-[#0a0a0f] hover:bg-[#13131d] border border-white/10 hover:border-[#e8185a] rounded transition-all cursor-pointer group"
+            className="flex flex-col items-center justify-center gap-1.5 p-3.5 bg-[#0a0a0f] hover:bg-[#13131d] border border-white/10 hover:border-[#e8185a] rounded-md transition-all cursor-pointer group active:scale-[0.98]"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform">💬</span>
             <span className="text-xs font-bold text-white font-[var(--font-bangers)] tracking-wide">Crear Diálogo</span>
-            <span className="text-[9px] text-zinc-500">Globo clásico con colita</span>
+            <span className="text-[9px] text-zinc-500">Globo clásico</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleAddBubble(activePanelIdx, undefined, "caption")}
-            className="flex flex-col items-center justify-center gap-2 p-4 bg-[#0a0a0f] hover:bg-[#13131d] border border-white/10 hover:border-blue-500 rounded transition-all cursor-pointer group"
+            className="flex flex-col items-center justify-center gap-1.5 p-3.5 bg-[#0a0a0f] hover:bg-[#13131d] border border-white/10 hover:border-yellow-500 rounded-md transition-all cursor-pointer group active:scale-[0.98]"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform">📜</span>
             <span className="text-xs font-bold text-white font-[var(--font-bangers)] tracking-wide">Crear Narración</span>
-            <span className="text-[9px] text-zinc-500">Caja de texto rectangular</span>
+            <span className="text-[9px] text-zinc-500">Caja de texto</span>
           </button>
 
           <button
             type="button"
             onClick={() => handleAddBubble(activePanelIdx, undefined, "cinematic")}
-            className="flex flex-col items-center justify-center gap-2 p-4 bg-[#0a0a0f] hover:bg-[#13131d] border border-white/10 hover:border-cyan-400 rounded transition-all cursor-pointer group"
+            className="flex flex-col items-center justify-center gap-1.5 p-3.5 bg-[#0a0a0f] hover:bg-[#13131d] border border-white/10 hover:border-cyan-400 rounded-md transition-all cursor-pointer group active:scale-[0.98]"
           >
             <span className="text-2xl group-hover:scale-110 transition-transform">🎬</span>
             <span className="text-xs font-bold text-white font-[var(--font-bangers)] tracking-wide">Texto Épico</span>
-            <span className="text-[9px] text-zinc-500">Overlay grande tipo edit</span>
+            <span className="text-[9px] text-zinc-500">Overlay grande</span>
           </button>
         </div>
 
         {activePanel.dialogue && activePanel.dialogue.length > 0 && (
-          <div className="flex flex-col gap-2 mt-2 pt-2 border-t border-white/5">
+          <div className="flex flex-col gap-2 mt-2 pt-3 border-t border-white/10">
             <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">
-              Seleccionar globo existente:
+              Diálogos en esta viñeta ({activePanel.dialogue.length}):
             </span>
-            <div className="grid grid-cols-2 gap-2 max-h-[140px] overflow-y-auto pr-1">
-              {activePanel.dialogue.map((bub, bIdx) => (
-                <button
-                  key={bIdx}
-                  type="button"
-                  onClick={() => setActiveBubbleIdx(bIdx)}
-                  className="text-left text-[11px] p-2 border border-white/10 bg-[#0a0a0f] hover:bg-[#13131d] rounded text-zinc-300 font-mono truncate transition-all cursor-pointer"
-                >
-                  <span className="font-bold text-zinc-500 mr-1">#{bIdx + 1}</span>
-                  {bub.speaker ? `${bub.speaker}: ` : ""}
-                  {bub.text || "(vacío)"}
-                </button>
-              ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[220px] overflow-y-auto pr-1">
+              {activePanel.dialogue.map((bub, bIdx) => {
+                const isSelected = activeBubbleIdx === bIdx;
+                return (
+                  <div
+                    key={bIdx}
+                    onClick={() => setActiveBubbleIdx(bIdx)}
+                    className={`text-left text-xs p-2.5 border rounded-md transition-all cursor-pointer flex flex-col gap-1.5 ${
+                      isSelected
+                        ? "border-[#e8185a] bg-rose-950/20 shadow-[0_0_10px_rgba(232,24,90,0.15)]"
+                        : "border-white/10 bg-[#0a0a0f] hover:bg-[#13131d] hover:border-zinc-500"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between text-[10px]">
+                      <div className="flex items-center gap-1">
+                        <span className="font-extrabold font-mono text-[#e8185a] bg-[#e8185a]/15 px-1.5 py-0.5 rounded border border-[#e8185a]/30">
+                          V{activePanelIdx + 1} • #{bIdx + 1}
+                        </span>
+                        {handleReorderBubbles && activePanel.dialogue!.length > 1 && (
+                          <div className="flex items-center gap-0.5" onClick={(e) => e.stopPropagation()}>
+                            {bIdx > 0 && (
+                              <button
+                                type="button"
+                                onClick={() => handleReorderBubbles(activePanelIdx, bIdx, bIdx - 1)}
+                                className="text-[9px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-4 h-4 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
+                                title="Mover diálogo antes (#1 va primero)"
+                              >
+                                ▲
+                              </button>
+                            )}
+                            {bIdx < activePanel.dialogue!.length - 1 && (
+                              <button
+                                type="button"
+                                onClick={() => handleReorderBubbles(activePanelIdx, bIdx, bIdx + 1)}
+                                className="text-[9px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-4 h-4 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
+                                title="Mover diálogo después"
+                              >
+                                ▼
+                              </button>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                      <span className="text-[9px] bg-white/5 border border-white/10 px-1.5 py-0.2 rounded text-zinc-400 font-mono">
+                        {bub.style === "caption" ? "Narración 📜" : bub.style === "cinematic" ? "Épico 🎬" : "Diálogo 💬"}
+                      </span>
+                    </div>
+                    <div className="truncate text-xs font-sans">
+                      {bub.speaker ? <strong className="text-white mr-1">{bub.speaker}:</strong> : null}
+                      <span className={bub.text ? "text-zinc-300" : "text-zinc-500 italic"}>
+                        {bub.text || "(sin texto)"}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}
@@ -147,373 +229,35 @@ export function EditorTabDialogues({
   }
 
   const bubble = activePanel.dialogue[activeBubbleIdx];
-  const bubbleLabel =
+  const isCinematicBubble = bubble.style === "cinematic";
+  const bubbleBadge =
     bubble.style === "caption" ? "Narración 📜" :
     bubble.style === "cinematic" ? "Texto Épico 🎬" :
+    bubble.style === "sfx" ? "SFX 💥" :
     "Diálogo 💬";
-  const isCinematicBubble = bubble.style === "cinematic";
-
-  if (presetMode === "standard") {
-    return (
-      <div className="bg-[#161622] border border-white/10 rounded p-4 flex flex-col gap-4">
-        <div className="flex justify-between items-center border-b border-white/10 pb-2.5">
-          <div className="flex items-center gap-3">
-            <button
-              type="button"
-              onClick={() => setActiveBubbleIdx(null)}
-              className="text-xs text-zinc-400 hover:text-white transition-colors cursor-pointer"
-            >
-              ← Volver
-            </button>
-            <span className="font-[var(--font-bangers)] text-base text-zinc-300 tracking-wider flex items-center gap-1.5">
-              {bubbleLabel} #{activeBubbleIdx + 1}
-              <span className="flex items-center gap-1 ml-2">
-                {activeBubbleIdx > 0 && (
-                  <button
-                    type="button"
-                    onClick={() => handleReorderBubbles(activePanelIdx, activeBubbleIdx, activeBubbleIdx - 1)}
-                    className="text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-5 h-5 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
-                    title="Mover diálogo antes/arriba"
-                  >
-                    ▲
-                  </button>
-                )}
-                {activeBubbleIdx < (activePanel.dialogue?.length || 0) - 1 && (
-                  <button
-                    type="button"
-                    onClick={() => handleReorderBubbles(activePanelIdx, activeBubbleIdx, activeBubbleIdx + 1)}
-                    className="text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-5 h-5 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
-                    title="Mover diálogo después/abajo"
-                  >
-                    ▼
-                  </button>
-                )}
-              </span>
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => handleDuplicateBubble(activePanelIdx, activeBubbleIdx)}
-              className="text-xs bg-indigo-900/60 hover:bg-indigo-800 text-indigo-200 border border-indigo-500/30 px-2 py-1 rounded transition-colors cursor-pointer font-bold flex items-center gap-1"
-              title="Duplicar esta burbuja manteniendo sus estilos pero sin texto"
-            >
-              📋 Duplicar
-            </button>
-            <button
-              type="button"
-              onClick={() => handleRemoveBubble(activePanelIdx, activeBubbleIdx)}
-              className="text-xs text-red-500 hover:text-red-400 hover:underline cursor-pointer font-bold"
-            >
-              Eliminar
-            </button>
-          </div>
-        </div>
-
-        {!isCinematicBubble && (
-          <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-bold text-zinc-300">Hablante / Personaje:</label>
-            <input
-              type="text"
-              value={bubble.speaker || ""}
-              onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { speaker: e.target.value })}
-              className="border border-white/10 p-2 text-xs font-sans rounded bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a]"
-              placeholder="Ej: Ian, Mati, Uandi..."
-            />
-            <div className="flex flex-wrap gap-1 mt-1">
-              {["Ian", "Mati", "Uandi", "Sofi", "Jaz", "Julián", "Volvo", "Valery", "Brooke", "Daichi", "Ren", "Byte", "Oni", "Shinjuro"].map((name) => (
-                <button
-                  key={name}
-                  type="button"
-                  onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { speaker: name })}
-                  className={`text-[10px] font-bold px-2 py-1 rounded transition-colors cursor-pointer ${
-                    bubble.speaker === name
-                      ? "bg-[#e8185a] text-white font-bold"
-                      : "bg-[#0a0a0f] text-zinc-400 hover:text-white border border-white/5"
-                  }`}
-                >
-                  {name}
-                </button>
-              ))}
-              {bubble.speaker && (
-                <button
-                  type="button"
-                  onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { speaker: "" })}
-                  className="text-[10px] font-bold px-2 py-1 rounded bg-[#0a0a0f] text-red-400 hover:text-red-300 border border-white/5 cursor-pointer"
-                >
-                  Quitar
-                </button>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Text Area for Dialogue content */}
-        <div className="flex flex-col gap-1.5 mt-1">
-          <div className="flex justify-between items-center">
-            <label className="text-xs font-bold text-zinc-300">Texto:</label>
-            <div className="flex items-center gap-1.5">
-              {isCinematicBubble && (
-                <button
-                  type="button"
-                  onClick={() =>
-                    handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
-                      text: stripInlineFormatting(bubble.text || ""),
-                    })
-                  }
-                  className="font-[var(--font-bangers)] text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-white/10 px-2 py-0.5 rounded transition-all cursor-pointer"
-                >
-                  Limpiar formato
-                </button>
-              )}
-              <button
-                type="button"
-                onClick={async () => {
-                  try {
-                    const text = await navigator.clipboard.readText();
-                    if (text) {
-                      handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
-                        text: isCinematicBubble ? stripInlineFormatting(text) : text,
-                      });
-                    }
-                  } catch (err) {
-                    console.error("Error al leer el portapapeles:", err);
-                  }
-                }}
-                className="font-[var(--font-bangers)] text-[10px] bg-blue-950/40 hover:bg-blue-900/30 text-blue-300 border border-blue-900/40 px-2 py-0.5 rounded transition-all cursor-pointer"
-              >
-                ⚡ Pegar
-              </button>
-            </div>
-          </div>
-          {!isCinematicBubble && (
-            <div className="flex items-center gap-1 bg-[#0a0a0f] border border-white/10 rounded-t p-1">
-              <button
-                type="button"
-                onClick={() => insertFormatting("**", "**", bubble.text || "", (txt) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: txt }), textareaRef.current)}
-                className="px-2 py-0.5 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded text-xs active:scale-95 transition-all cursor-pointer border border-white/5"
-                title="Negrita"
-              >
-                B
-              </button>
-
-              <div className="h-4 w-px bg-white/10 mx-1" />
-
-              <span className="text-[10px] text-zinc-500 font-mono mr-1">Color:</span>
-              {[
-                { hex: "#e8185a", name: "Rosa" },
-                { hex: "#00f0ff", name: "Cian" },
-                { hex: "#10b981", name: "Verde" },
-                { hex: "#f5e642", name: "Amarillo" },
-                { hex: "#8b5cf6", name: "Violeta" },
-                { hex: "#f97316", name: "Naranja" },
-                { hex: "#ffffff", name: "Blanco" },
-                { hex: "#0a0a0f", name: "Negro" },
-              ].map((c) => (
-                <button
-                  key={c.hex}
-                  type="button"
-                  onClick={() => insertFormatting(`[color:${c.hex}]`, "[/color]", bubble.text || "", (txt) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: txt }), textareaRef.current)}
-                  className="w-3.5 h-3.5 rounded-full border border-white/20 hover:scale-110 active:scale-95 transition-all cursor-pointer"
-                  style={{ backgroundColor: c.hex }}
-                  title={c.name}
-                />
-              ))}
-            </div>
-          )}
-          <textarea
-            ref={textareaRef}
-            value={isCinematicBubble ? stripInlineFormatting(bubble.text) : bubble.text}
-            onChange={(e) =>
-              handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
-                text: isCinematicBubble ? stripInlineFormatting(e.target.value) : e.target.value,
-              })
-            }
-            className={`w-full border border-white/10 p-2 text-xs font-sans bg-[#0a0a0f] text-white resize-none focus:outline-none focus:ring-1 focus:ring-[#e8185a] ${
-              isCinematicBubble ? "h-16 rounded" : "h-24 border-t-0 rounded-b"
-            }`}
-            placeholder={isCinematicBubble ? "Texto grande para la escena..." : "Escribí el diálogo..."}
-          />
-        </div>
-
-        {isCinematicBubble && (
-          <div className="flex flex-col gap-3 p-3 bg-cyan-950/20 border border-cyan-800/40 rounded">
-            <div className="grid grid-cols-2 gap-1.5">
-              {[
-                { label: "Translúcido", variant: "translucent", color: "#0a0a0f", shadow: "#0a0a0f", size: 76 },
-                { label: "Blanco sólido", variant: "solid", color: "#ffffff", shadow: "#0a0a0f", size: 72 },
-                { label: "Solo borde", variant: "outline", color: "#ffffff", shadow: "#0a0a0f", size: 78 },
-                { label: "Rojo impacto", variant: "solid", color: "#e81818", shadow: "#0a0a0f", size: 82 },
-              ].map((preset) => (
-                <button
-                  key={preset.label}
-                  type="button"
-                  onClick={() =>
-                    handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
-                      cinematicVariant: preset.variant as DialogueLine["cinematicVariant"],
-                      cinematic3d: preset.variant !== "outline",
-                      textColor: preset.color,
-                      customColor: preset.shadow,
-                      customBg: "transparent",
-                      fontFamily: "bungee",
-                      fontSize: preset.size,
-                      width: 900,
-                      tail: "none",
-                      tailX: undefined,
-                      tailY: undefined,
-                    })
-                  }
-                  className="p-1.5 bg-[#0a0a0f] hover:bg-[#161622] border border-white/10 hover:border-cyan-400 text-cyan-100 text-[10px] font-bold rounded transition-colors cursor-pointer"
-                >
-                  {preset.label}
-                </button>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-2 gap-2">
-              <div className="flex flex-col gap-1">
-                <label className="text-[10px] font-bold text-zinc-400">Modo visual:</label>
-                <select
-                  value={bubble.cinematicVariant || "translucent"}
-                  onChange={(e) =>
-                    handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
-                      cinematicVariant: e.target.value as DialogueLine["cinematicVariant"],
-                    })
-                  }
-                  className="w-full border border-white/10 p-1.5 text-xs font-mono rounded bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a] cursor-pointer"
-                >
-                  <option value="translucent">Translúcido</option>
-                  <option value="solid">Sólido</option>
-                  <option value="outline">Solo borde</option>
-                </select>
-              </div>
-              <label className="flex items-center justify-between gap-2 text-[10px] font-bold text-zinc-300 bg-[#0a0a0f] border border-white/10 rounded px-2 py-1.5 mt-4">
-                Profundidad 3D
-                <input
-                  type="checkbox"
-                  checked={bubble.cinematic3d ?? true}
-                  onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { cinematic3d: e.target.checked })}
-                  className="accent-[#00f0ff] cursor-pointer"
-                />
-              </label>
-            </div>
-
-            <div className="grid grid-cols-3 gap-2">
-              <div className="flex flex-col gap-1">
-                <label className="text-[10px] font-bold text-zinc-400">Texto:</label>
-                <input
-                  type="color"
-                  value={bubble.textColor || "#ffffff"}
-                  onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { textColor: e.target.value })}
-                  className="w-full h-8 p-0 border border-white/10 rounded cursor-pointer bg-transparent"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <label className="text-[10px] font-bold text-zinc-400">Sombra:</label>
-                <input
-                  type="color"
-                  value={bubble.customColor || "#0a0a0f"}
-                  onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { customColor: e.target.value })}
-                  className="w-full h-8 p-0 border border-white/10 rounded cursor-pointer bg-transparent"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <label className="text-[10px] font-bold text-zinc-400">Fuente:</label>
-                <select
-                  value={bubble.fontFamily || "bungee"}
-                  onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { fontFamily: e.target.value as DialogueLine["fontFamily"] })}
-                  className="w-full border border-white/10 p-1.5 text-xs font-mono rounded bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a] cursor-pointer"
-                >
-                  <option value="bungee">Bungee</option>
-                  <option value="bangers">Bangers</option>
-                  <option value="luckiest">Luckiest</option>
-                  <option value="sans">Sans</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-1">
-              <div className="flex justify-between items-center text-xs font-bold text-zinc-300">
-                <span>Tamaño Letra:</span>
-                <span className="font-mono text-zinc-400">{bubble.fontSize ? `${bubble.fontSize}px` : "Defecto"}</span>
-              </div>
-              <input
-                type="range"
-                min="24"
-                max="160"
-                step="1"
-                value={bubble.fontSize || 76}
-                onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { fontSize: parseInt(e.target.value) })}
-                className="w-full accent-[#00f0ff] cursor-pointer"
-              />
-            </div>
-          </div>
-        )}
-
-        {/* Move Bubble to Another Panel */}
-        <div className="flex flex-col gap-1.5 mt-1">
-          <label className="text-xs font-bold text-zinc-300">Mover a Viñeta:</label>
-          <select
-            value={activePanelIdx}
-            onChange={(e) => {
-              const targetIdx = parseInt(e.target.value);
-              if (targetIdx !== activePanelIdx) {
-                handleMoveBubbleToPanel(activePanelIdx, activeBubbleIdx, targetIdx);
-              }
-            }}
-            className="w-full border border-white/10 p-2 text-xs font-mono rounded bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a] cursor-pointer"
-          >
-            {currentPanels.map((_, idx) => (
-              <option key={idx} value={idx}>
-                Mover a Viñeta {idx + 1} {idx === activePanelIdx ? "(Actual)" : ""}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {/* Max Width Slider */}
-        <div className="flex flex-col gap-1 mt-1">
-          <div className="flex justify-between items-center text-xs font-bold text-zinc-300">
-            <span>Ancho Máximo:</span>
-            <span className="font-mono text-zinc-400">{bubble.width ? `${bubble.width}px` : "Defecto"}</span>
-          </div>
-          <input
-            type="range"
-            min={isCinematicBubble ? "220" : "100"}
-            max={isCinematicBubble ? "1200" : "600"}
-            step="10"
-            value={bubble.width || (isCinematicBubble ? 900 : 250)}
-            onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { width: parseInt(e.target.value) })}
-            className="w-full accent-[#e8185a] cursor-pointer"
-          />
-        </div>
-
-        <span className="text-[10px] text-zinc-500 italic text-center border-t border-white/5 pt-2 mt-1">
-          💡 ¡También podés arrastrar la burbuja directamente en el lienzo del cómic para posicionarla!
-        </span>
-      </div>
-    );
-  }
 
   return (
-    <div className="bg-[#161622] border border-white/10 rounded p-4 flex flex-col gap-4">
-      <div className="flex justify-between items-center border-b border-white/10 pb-2.5">
+    <div className="bg-[#161622] border border-white/10 rounded-lg p-4 flex flex-col gap-4 shadow-lg">
+      {/* Header bar with navigation, badge, reordering and actions */}
+      <div className="flex justify-between items-center border-b border-white/10 pb-3">
         <div className="flex items-center gap-3">
           <button
             type="button"
             onClick={() => setActiveBubbleIdx(null)}
-            className="text-xs text-zinc-400 hover:text-white transition-colors cursor-pointer"
+            className="text-xs bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 px-2.5 py-1 rounded transition-colors cursor-pointer border border-white/5 font-medium flex items-center gap-1"
           >
             ← Volver
           </button>
-          <span className="font-[var(--font-bangers)] text-base text-zinc-300 tracking-wider flex items-center gap-1.5">
-            Editando Globo #{activeBubbleIdx + 1}
-            <span className="flex items-center gap-1 ml-2">
+          <div className="flex items-center gap-2">
+            <span className="font-[var(--font-bangers)] text-base text-white tracking-wider">
+              {bubbleBadge} #{activeBubbleIdx + 1}
+            </span>
+            <span className="flex items-center gap-1">
               {activeBubbleIdx > 0 && (
                 <button
                   type="button"
                   onClick={() => handleReorderBubbles(activePanelIdx, activeBubbleIdx, activeBubbleIdx - 1)}
-                  className="text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-5 h-5 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
+                  className="text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-5 h-5 rounded flex items-center justify-center border border-white/10 active:scale-95 transition-all cursor-pointer font-bold"
                   title="Mover diálogo antes/arriba"
                 >
                   ▲
@@ -523,75 +267,240 @@ export function EditorTabDialogues({
                 <button
                   type="button"
                   onClick={() => handleReorderBubbles(activePanelIdx, activeBubbleIdx, activeBubbleIdx + 1)}
-                  className="text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-5 h-5 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
+                  className="text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-5 h-5 rounded flex items-center justify-center border border-white/10 active:scale-95 transition-all cursor-pointer font-bold"
                   title="Mover diálogo después/abajo"
                 >
                   ▼
                 </button>
               )}
             </span>
-          </span>
+          </div>
         </div>
-        <div className="flex gap-2">
+
+        <div className="flex items-center gap-2">
           <button
             type="button"
             onClick={() => handleDuplicateBubble(activePanelIdx, activeBubbleIdx)}
-            className="font-[var(--font-bangers)] text-xs bg-indigo-700 hover:bg-indigo-800 text-white border border-white/10 px-2.5 py-1 rounded transition-colors cursor-pointer"
-            title="Duplicar burbuja seleccionada"
+            className="text-xs bg-indigo-950/60 hover:bg-indigo-900/60 text-indigo-200 border border-indigo-500/30 px-2.5 py-1 rounded transition-all cursor-pointer font-bold flex items-center gap-1 active:scale-95"
+            title="Duplicar este globo manteniendo estilos"
           >
             📋 Duplicar
           </button>
           <button
             type="button"
-            onClick={() => handleAddBubble(activePanelIdx, undefined, "normal")}
-            className="font-[var(--font-bangers)] text-xs bg-emerald-600 hover:bg-emerald-700 text-white border border-white/10 px-2.5 py-1 rounded transition-colors cursor-pointer"
-          >
-            + Nuevo
-          </button>
-          <button
-            type="button"
-            onClick={() => handleAddBubble(activePanelIdx, undefined, "cinematic")}
-            className="font-[var(--font-bangers)] text-xs bg-cyan-700 hover:bg-cyan-800 text-white border border-white/10 px-2.5 py-1 rounded transition-colors cursor-pointer"
-          >
-            + Épico
-          </button>
-          <button
-            type="button"
             onClick={() => handleRemoveBubble(activePanelIdx, activeBubbleIdx)}
-            className="text-xs text-red-500 hover:text-red-400 hover:underline cursor-pointer"
+            className="text-xs text-red-400 hover:text-red-300 hover:underline cursor-pointer font-bold px-1"
           >
             Eliminar
           </button>
         </div>
       </div>
 
-      <EditorBubbleVisualsForm
-        bubble={bubble}
-        activePanelIdx={activePanelIdx}
-        activeBubbleIdx={activeBubbleIdx}
-        handleUpdateBubble={handleUpdateBubble}
-      />
+      {/* PRIORITY SECTION 1: Text Area (positioned top for immediate writing) */}
+      <div className="flex flex-col gap-1.5 bg-[#0a0a0f] p-3 border border-white/10 rounded-md">
+        <div className="flex justify-between items-center">
+          <label className="text-xs font-bold text-zinc-200 flex items-center gap-1.5">
+            ✍️ Texto del Diálogo:
+          </label>
+          <div className="flex items-center gap-1.5">
+            {!isCinematicBubble && (
+              <button
+                type="button"
+                onClick={() =>
+                  insertFormatting(
+                    "**",
+                    "**",
+                    bubble.text || "",
+                    (txt) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { text: txt }),
+                    textareaRef.current
+                  )
+                }
+                className="px-2.5 py-0.5 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded text-xs active:scale-95 transition-all cursor-pointer border border-white/10"
+                title="Agregar negrita al texto seleccionado"
+              >
+                B (Negrita)
+              </button>
+            )}
+            {isCinematicBubble && (
+              <button
+                type="button"
+                onClick={() =>
+                  handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                    text: stripInlineFormatting(bubble.text || ""),
+                  })
+                }
+                className="font-[var(--font-bangers)] text-[10px] bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-white/10 px-2 py-0.5 rounded transition-all cursor-pointer"
+              >
+                Limpiar formato
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={async () => {
+                try {
+                  const text = await navigator.clipboard.readText();
+                  if (text) {
+                    handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                      text: isCinematicBubble ? stripInlineFormatting(text) : text,
+                    });
+                  }
+                } catch (err) {
+                  console.error("Error al leer el portapapeles:", err);
+                }
+              }}
+              className="font-[var(--font-bangers)] text-[10px] bg-blue-950/40 hover:bg-blue-900/40 text-blue-300 border border-blue-800/40 px-2 py-0.5 rounded transition-all cursor-pointer flex items-center gap-1 active:scale-95"
+            >
+              ⚡ Auto (Pegar)
+            </button>
+          </div>
+        </div>
 
-      {!isCinematicBubble && (
-        <EditorBubbleTailForm
-          bubble={bubble}
-          activePanelIdx={activePanelIdx}
-          activeBubbleIdx={activeBubbleIdx}
-          handleUpdateBubble={handleUpdateBubble}
+        <textarea
+          ref={textareaRef}
+          value={isCinematicBubble ? stripInlineFormatting(bubble.text) : bubble.text}
+          onChange={(e) =>
+            handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+              text: isCinematicBubble ? stripInlineFormatting(e.target.value) : e.target.value,
+            })
+          }
+          className={`w-full border border-white/15 p-2.5 text-xs font-sans bg-[#13131d] text-white resize-none focus:outline-none focus:ring-2 focus:ring-[#e8185a] transition-all rounded ${
+            isCinematicBubble ? "h-20" : "h-24"
+          }`}
+          placeholder={isCinematicBubble ? "Texto grande para la escena..." : "Escribí el diálogo..."}
         />
+      </div>
+
+      {/* PRIORITY SECTION 2: Speaker / Character Controls */}
+      {!isCinematicBubble && (
+        <div className="flex flex-col gap-2 bg-[#0a0a0f] p-3 border border-white/10 rounded-md">
+          <div className="flex justify-between items-center">
+            <label className="text-xs font-bold text-zinc-200">🗣️ Hablante / Personaje:</label>
+            {bubble.speaker && (
+              <button
+                type="button"
+                onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { speaker: "" })}
+                className="text-[10px] font-bold text-red-400 hover:text-red-300 cursor-pointer"
+              >
+                Quitar nombre
+              </button>
+            )}
+          </div>
+          <input
+            type="text"
+            value={bubble.speaker || ""}
+            onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { speaker: e.target.value })}
+            className="w-full border border-white/15 p-2 text-xs font-mono rounded bg-[#13131d] text-white focus:outline-none focus:ring-2 focus:ring-[#e8185a] transition-all"
+            placeholder="Ej: Ian, Sofi, Mati..."
+          />
+          <div className="flex flex-wrap gap-1 mt-0.5">
+            {["Ian", "Mati", "Uandi", "Sofi", "Jaz", "Julián", "Volvo", "Valery", "Brooke", "Daichi", "Ren", "Byte", "Oni", "Shinjuro"].map((name) => (
+              <button
+                key={name}
+                type="button"
+                onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { speaker: name })}
+                className={`text-[10px] font-bold px-2 py-1 rounded transition-all cursor-pointer ${
+                  bubble.speaker === name
+                    ? "bg-[#e8185a] text-white font-bold shadow-sm"
+                    : "bg-[#161622] text-zinc-400 hover:text-white border border-white/5 hover:border-zinc-500"
+                }`}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
 
-      <EditorBubbleLayoutForm
-        bubble={bubble}
-        activePanelIdx={activePanelIdx}
-        activeBubbleIdx={activeBubbleIdx}
-        currentPanels={currentPanels}
-        handleUpdateBubble={handleUpdateBubble}
-        handleMoveBubbleToPanel={handleMoveBubbleToPanel}
-      />
+      {/* SECTION 3: Visual & Form Customization */}
+      {presetMode === "custom" ? (
+        <>
+          <EditorBubbleVisualsForm
+            bubble={bubble}
+            activePanelIdx={activePanelIdx}
+            activeBubbleIdx={activeBubbleIdx}
+            handleUpdateBubble={handleUpdateBubble}
+          />
 
-      <span className="text-[10px] text-zinc-500 italic text-center">
-        💡 ¡También podés arrastrar la burbuja o su cola directamente en el lienzo del cómic!
+          {!isCinematicBubble && (
+            <EditorBubbleTailForm
+              bubble={bubble}
+              activePanelIdx={activePanelIdx}
+              activeBubbleIdx={activeBubbleIdx}
+              handleUpdateBubble={handleUpdateBubble}
+            />
+          )}
+
+          <EditorBubbleLayoutForm
+            bubble={bubble}
+            activePanelIdx={activePanelIdx}
+            activeBubbleIdx={activeBubbleIdx}
+            currentPanels={currentPanels}
+            handleUpdateBubble={handleUpdateBubble}
+            handleMoveBubbleToPanel={handleMoveBubbleToPanel}
+          />
+        </>
+      ) : (
+        /* Standard Mode: Compact design & tail settings */
+        <div className="flex flex-col gap-3">
+          <EditorBubbleVisualsForm
+            bubble={bubble}
+            activePanelIdx={activePanelIdx}
+            activeBubbleIdx={activeBubbleIdx}
+            handleUpdateBubble={handleUpdateBubble}
+          />
+
+          {!isCinematicBubble && (
+            <EditorBubbleTailForm
+              bubble={bubble}
+              activePanelIdx={activePanelIdx}
+              activeBubbleIdx={activeBubbleIdx}
+              handleUpdateBubble={handleUpdateBubble}
+            />
+          )}
+
+          {/* Move to another panel & layout quick controls */}
+          <div className="flex flex-col gap-3 p-3 bg-[#0a0a0f] border border-white/10 rounded-md">
+            <div className="flex flex-col gap-1.5">
+              <label className="text-xs font-bold text-zinc-300">📦 Mover a Viñeta:</label>
+              <select
+                value={activePanelIdx}
+                onChange={(e) => {
+                  const targetIdx = parseInt(e.target.value);
+                  if (targetIdx !== activePanelIdx) {
+                    handleMoveBubbleToPanel(activePanelIdx, activeBubbleIdx, targetIdx);
+                  }
+                }}
+                className="w-full border border-white/15 p-2 text-xs font-mono rounded bg-[#13131d] text-white focus:outline-none focus:ring-2 focus:ring-[#e8185a] cursor-pointer"
+              >
+                {currentPanels.map((_, idx) => (
+                  <option key={idx} value={idx}>
+                    Mover a Viñeta {idx + 1} {idx === activePanelIdx ? "(Actual)" : ""}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <div className="flex justify-between items-center text-xs font-bold text-zinc-300">
+                <span>Ancho Máximo:</span>
+                <span className="font-mono text-zinc-400">{bubble.width ? `${bubble.width}px` : "Defecto"}</span>
+              </div>
+              <input
+                type="range"
+                min={isCinematicBubble ? "220" : "100"}
+                max={isCinematicBubble ? "1200" : "600"}
+                step="10"
+                value={bubble.width || (isCinematicBubble ? 900 : 250)}
+                onChange={(e) => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { width: parseInt(e.target.value) })}
+                className="w-full accent-[#e8185a] cursor-pointer"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      <span className="text-[10px] text-zinc-500 italic text-center border-t border-white/5 pt-2">
+        💡 Podés mover o posicionar el globo y su cola arrastrándolos directamente en el lienzo.
       </span>
     </div>
   );

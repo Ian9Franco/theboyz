@@ -130,6 +130,7 @@ interface EditorTabPanelsProps {
   handleAddBubble: (pIdx: number, defaultPosition?: { posX: number; posY: number }, defaultStyle?: "normal" | "caption" | "cinematic") => void;
   presetMode?: "standard" | "custom";
   handleReorderPanels: (startIndex: number, endIndex: number) => void;
+  handleReorderBubbles?: (pIdx: number, startIndex: number, endIndex: number) => void;
 }
 
 /**
@@ -150,6 +151,7 @@ export function EditorTabPanels({
   handleAddBubble,
   presetMode = "standard",
   handleReorderPanels,
+  handleReorderBubbles,
 }: EditorTabPanelsProps) {
   const [availableSounds, setAvailableSounds] = useState<Array<{ name: string; path: string }>>([]);
   const [previewingSound, setPreviewingSound] = useState<string | null>(null);
@@ -422,26 +424,57 @@ export function EditorTabPanels({
                         {panel.dialogue?.map((bub, bIdx) => {
                           const isBubActive = isSelected && activeBubbleIdx === bIdx;
                           return (
-                            <button
+                            <div
                               key={bIdx}
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setActivePanelIdx(pIdx);
-                                setActiveBubbleIdx(bIdx);
-                              }}
-                              className={`text-left text-xs p-2 border rounded font-mono truncate transition-all cursor-pointer ${
+                              className={`flex items-center gap-1.5 p-1.5 border rounded transition-all ${
                                 isBubActive
                                   ? "border-[#e8185a] bg-rose-950/20 text-rose-200 font-bold"
                                   : "border-white/10 bg-[#161622] hover:bg-[#1a1a29] text-zinc-300"
                               }`}
                             >
-                              <span className="text-[9px] bg-white/5 px-1 rounded mr-1">
-                                {bub.style === "caption" ? "Narr." : bub.style === "cinematic" ? "Cine." : "Diál."}
+                              <span className="text-[10px] font-mono font-extrabold bg-[#e8185a]/20 text-[#e8185a] px-1.5 py-0.5 rounded border border-[#e8185a]/30">
+                                V{pIdx + 1} • #{bIdx + 1}
                               </span>
-                              {bub.speaker ? `${bub.speaker}: ` : ""}
-                              {bub.text || "(vacío)"}
-                            </button>
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setActivePanelIdx(pIdx);
+                                  setActiveBubbleIdx(bIdx);
+                                }}
+                                className="flex-1 text-left text-xs font-mono truncate cursor-pointer bg-transparent border-0 text-inherit"
+                              >
+                                <span className="text-[9px] bg-white/5 px-1 rounded mr-1">
+                                  {bub.style === "caption" ? "Narr." : bub.style === "cinematic" ? "Cine." : "Diál."}
+                                </span>
+                                {bub.speaker ? `${bub.speaker}: ` : ""}
+                                {bub.text || "(vacío)"}
+                              </button>
+                              {handleReorderBubbles && (panel.dialogue?.length || 0) > 1 && (
+                                <div className="flex items-center gap-0.5" onClick={(e) => e.stopPropagation()}>
+                                  {bIdx > 0 && (
+                                    <button
+                                      type="button"
+                                      onClick={() => handleReorderBubbles(pIdx, bIdx, bIdx - 1)}
+                                      className="text-[9px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-4 h-4 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
+                                      title="Mover diálogo antes (#1 va primero)"
+                                    >
+                                      ▲
+                                    </button>
+                                  )}
+                                  {bIdx < (panel.dialogue?.length || 0) - 1 && (
+                                    <button
+                                      type="button"
+                                      onClick={() => handleReorderBubbles(pIdx, bIdx, bIdx + 1)}
+                                      className="text-[9px] bg-zinc-800 hover:bg-zinc-700 text-zinc-300 w-4 h-4 rounded flex items-center justify-center border border-white/5 active:scale-95 transition-all cursor-pointer font-bold"
+                                      title="Mover diálogo después"
+                                    >
+                                      ▼
+                                    </button>
+                                  )}
+                                </div>
+                              )}
+                            </div>
                           );
                         })}
                         {(panel.dialogue?.length || 0) === 0 && (

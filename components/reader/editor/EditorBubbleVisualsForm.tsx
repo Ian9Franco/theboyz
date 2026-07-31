@@ -30,6 +30,26 @@ export function EditorBubbleVisualsForm({
         />
       </div>
 
+      {/* Speaker Toggle for Off-screen / Radio */}
+      {bubble.speaker && (
+        <label className="flex items-center gap-2 text-xs text-zinc-300 cursor-pointer select-none bg-[#0a0a0f] p-2 border border-white/10 rounded hover:border-zinc-500 transition-colors">
+          <input
+            type="checkbox"
+            checked={!!bubble.showSpeakerName || !!bubble.offscreen}
+            onChange={(e) =>
+              handleUpdateBubble(activePanelIdx, activeBubbleIdx, {
+                showSpeakerName: e.target.checked,
+                offscreen: e.target.checked,
+              })
+            }
+            className="rounded border-white/20 bg-zinc-900 text-[#e8185a] focus:ring-0 cursor-pointer"
+          />
+          <span className="text-[11px] font-medium text-zinc-300">
+            Mostrar nombre encima del globo (Fuera de escena / Radio / Telemetría)
+          </span>
+        </label>
+      )}
+
       {/* Speaker Presets */}
       <div className="flex flex-col gap-1">
         <label className="text-[10px] font-bold text-zinc-400">Hablantes rápidos:</label>

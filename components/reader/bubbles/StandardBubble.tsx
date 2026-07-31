@@ -370,7 +370,7 @@ export function StandardBubble({
         className={`${bubbleClass} ${sizeClass} relative z-10`}
         style={{ ...bubbleStyles, ...backdropBlurStyles }}
       >
-        {line.speaker && style !== "sfx" && (
+        {line.speaker && (line.showSpeakerName || line.offscreen) && style !== "sfx" && (
           <span
             className="font-[var(--font-bangers)] text-xs tracking-wider block mb-1 uppercase"
             style={{ color: speakerColor }}
@@ -485,7 +485,7 @@ export function StandardBubble({
           <div className="flex flex-col gap-1.5">
             {paragraphs.map((p, i) => (
               <div key={i}>
-                {p.speaker && (
+                {p.speaker && (!line.speaker || p.speaker.toUpperCase().trim() !== line.speaker.toUpperCase().trim()) && (
                   <strong className="font-[var(--font-bangers)] font-bold mr-1 tracking-wide" style={{ color: getSpeakerColor(p.speaker, "#000000"), fontWeight: "bold" }}>
                     {p.speaker}:{" "}
                   </strong>

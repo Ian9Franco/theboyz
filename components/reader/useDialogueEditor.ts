@@ -81,7 +81,15 @@ export function useDialogueEditor({
   const handleAddPanel = () => {
     const updatedPages = { ...localDialogues.pages };
     const pg = { ...currentPageData };
-    pg.panels = [...(pg.panels || []), { focusY: 0.5, dialogue: [] }];
+    const count = (pg.panels || []).length;
+
+    let defaultFocusY = 0.5;
+    if (count === 0) defaultFocusY = 0.2;
+    else if (count === 1) defaultFocusY = 0.5;
+    else if (count === 2) defaultFocusY = 0.8;
+    else defaultFocusY = Math.min(0.95, 0.8 + (count - 2) * 0.08);
+
+    pg.panels = [...(pg.panels || []), { focusY: defaultFocusY, dialogue: [] }];
     updatedPages[pgKey] = pg;
     updateDialoguesState(updatedPages);
     setActivePanelIdx(pg.panels.length - 1);

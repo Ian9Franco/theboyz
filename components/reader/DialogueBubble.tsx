@@ -10,6 +10,8 @@ import { SPEAKER_COLORS, resolveBgColor } from "./bubbles/bubbleHelpers";
 export type DialogueLine = {
   text: string;
   speaker?: string | null;
+  showSpeakerName?: boolean; // If true, forces rendering speaker name header (e.g. Off-screen/Radio)
+  offscreen?: boolean;       // Indicates character speaks off-screen
   style?: "normal" | "caption" | "thought" | "scream" | "whisper" | "electronic" | "sfx" | "cinematic";
   tail?: "bottom-left" | "bottom-right" | "top-left" | "top-right" | "left" | "right" | "none";
   posX?: number;
@@ -51,8 +53,8 @@ export function getBubbleStyles(line: DialogueLine, bubbleOpacity?: number) {
     bgColor     = resolveBgColor(line.customBg, "#f5e642", bubbleOpacity);
     borderColor = line.customColor || "#0a0a0f";
   } else if (style === "thought") {
-    bgColor     = resolveBgColor(line.customBg, "#ffffff", bubbleOpacity);
-    borderColor = line.customColor || "#0a0a0f";
+    bgColor     = resolveBgColor(line.customBg, "#000000", bubbleOpacity);
+    borderColor = line.customColor || "#ffffff";
   } else if (style === "sfx") {
     bgColor     = line.customBg    || "transparent";
     borderColor = line.customColor || "#0a0a0f";

@@ -402,6 +402,7 @@ export function DialogueEditorPanel({
         handleAddBubble={handleAddBubble}
         presetMode={presetMode}
         handleReorderPanels={handleReorderPanels}
+        handleReorderBubbles={handleReorderBubbles}
       />
 
       {/* Accordion: Chapter-level Audio Tracks */}

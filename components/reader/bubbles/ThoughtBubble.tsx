@@ -32,7 +32,6 @@ interface ThoughtBubbleProps {
 export function ThoughtBubble({
   line,
   index,
-  elasticTailNode,
   instant,
   appearanceAnimation,
   fadeOutAnimation,
@@ -49,15 +48,14 @@ export function ThoughtBubble({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const tailDir    = line.tail ?? "bottom-left";
   const paragraphs = parseParagraphs(line.text);
   const size       = line.size ?? "medium";
 
-  // ── Dynamic shadow based on depth ──
+  // ── Dynamic shadow ──
   const depthVal      = depth ?? 2;
   const shadowOffsetY = 2 + depthVal * 1.5;
   const shadowBlur    = 4 + depthVal * 2.5;
-  const shadowAlpha   = 0.12 + depthVal * 0.04;
+  const shadowAlpha   = 0.15 + depthVal * 0.05;
   const customDropShadow = `drop-shadow(0px ${shadowOffsetY}px ${shadowBlur}px rgba(0, 0, 0, ${shadowAlpha}))`;
 
   // ── Animation ──
@@ -70,65 +68,33 @@ export function ThoughtBubble({
   const customFontFamily   = resolveFontFamily(line, "thought");
   const fontClass          = resolveFontClass(line);
 
-  // ── Colours ──
-  const thoughtBg          = resolveBgColor(line.customBg, "#ffffff", bubbleOpacity);
-  const thoughtBorderColor = line.customColor || "#0a0a0f";
-  const thoughtSpeakerColor = getSpeakerColor(line.speaker, "#000000");
+  // ── Colours (Black Background, White Text, Sharp Box, No Tail) ──
+  const thoughtBg          = line.customBg || "#000000";
+  const thoughtTextColor   = line.textColor || "#ffffff";
+  const thoughtBorderColor = line.customColor || "#ffffff";
+  const thoughtSpeakerColor = getSpeakerColor(line.speaker, "#ffffff");
 
-  // Determine solid background color and opacity to prevent overlap seams when translucent
-  let solidBg = thoughtBg;
-  let bgOpacity = 1;
-  if (thoughtBg.startsWith("rgba")) {
-    const rgbaMatch = thoughtBg.match(/rgba\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*([\d.]+)\s*\)/);
-    if (rgbaMatch) {
-      solidBg = `rgb(${rgbaMatch[1]}, ${rgbaMatch[2]}, ${rgbaMatch[3]})`;
-      bgOpacity = parseFloat(rgbaMatch[4]);
-    }
-  }
+  let thoughtSizeClass = "px-3 py-2 text-sm sm:text-base leading-snug";
+  if (size === "small") thoughtSizeClass = "px-2.5 py-1.5 text-xs leading-tight";
+  if (size === "large") thoughtSizeClass = "px-5 py-3 text-base sm:text-lg leading-normal";
 
-  const bubbleClass    = `${fontClass} text-[#0a0a0f]`;
-  const hasElasticTail = line.tail !== "none" && line.tailX !== undefined && line.tailY !== undefined;
-
-  // ── Thought dots (cloud tail) ──
-  const renderThoughtDots = () => {
-    if (tailDir === "none" || hasElasticTail) return null;
-
-    let positionClass = "-bottom-3 left-6";
-    let scaleClass    = "flex gap-1";
-    if (tailDir === "bottom-right") positionClass = "-bottom-3 right-6";
-    if (tailDir === "top-left")     positionClass = "-top-3 left-6 flex-row-reverse";
-    if (tailDir === "top-right")    positionClass = "-top-3 right-6 flex-row-reverse";
-    if (tailDir === "left")         positionClass = "-left-3 top-1/2 -translate-y-1/2 flex-col";
-    if (tailDir === "right")        positionClass = "-right-3 top-1/2 -translate-y-1/2 flex-col";
-
-    return (
-      <div className={`absolute ${positionClass} ${scaleClass} z-10`} style={{ opacity: bgOpacity }}>
-        <div className="w-2.5 h-2.5 rounded-full" style={{ border: `1.5px solid ${thoughtBorderColor}`, background: solidBg }} />
-        <div className="w-1.5 h-1.5 rounded-full self-center" style={{ border: `1.5px solid ${thoughtBorderColor}`, background: solidBg }} />
-      </div>
-    );
-  };
-
-  // ── Size classes ──
-  let thoughtSizeClass = "px-2.5 py-1.5 rounded-[35%] text-sm sm:text-base leading-snug";
-  if (size === "small") thoughtSizeClass = "px-1.5 py-0.5 rounded-[30%] text-xs leading-tight";
-  if (size === "large") thoughtSizeClass = "px-4.5 py-2.5 rounded-[40%] text-base sm:text-lg leading-normal";
-
-  const thoughtStyles: React.CSSProperties = {
-    background: "transparent",
-    border: "none",
-    boxShadow: "none",
-  };
   let baseFontSize = line.fontSize;
   if (!baseFontSize) {
     baseFontSize = size === "small" ? 12 : size === "large" ? 18 : 14;
   }
   const minFont = isMobile ? 8 : 10;
   const finalFontSize = Math.max(minFont, baseFontSize * textScale);
-  thoughtStyles.fontSize = `${finalFontSize}px`;
-  if (line.width)         thoughtStyles.maxWidth  = `${line.width}px`;
-  if (line.textColor)     thoughtStyles.color     = line.textColor;
-  if (customFontFamily)   thoughtStyles.fontFamily = customFontFamily;
+
+  const thoughtStyles: React.CSSProperties = {
+    backgroundColor: resolveBgColor(thoughtBg, "#000000", bubbleOpacity),
+    color: thoughtTextColor,
+    border: `2px solid ${thoughtBorderColor}`,
+    borderRadius: line.borderRadius !== undefined ? `${line.borderRadius}px` : "0px",
+    fontSize: `${finalFontSize}px`,
+  };
+
+  if (line.width)       thoughtStyles.maxWidth   = `${line.width}px`;
+  if (customFontFamily) thoughtStyles.fontFamily = customFontFamily;
 
   const wrapperStyles: React.CSSProperties = { pointerEvents: "none" };
   if (line.width) wrapperStyles.maxWidth = `${line.width}px`;
@@ -148,64 +114,14 @@ export function ThoughtBubble({
         filter: customDropShadow,
       }}
     >
-      {renderThoughtDots()}
-
-      {/* Backdrop blur layer for glassmorphism */}
-      {bgOpacity < 1 && (
-        <div
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            backdropFilter: "blur(8px)",
-            WebkitBackdropFilter: "blur(8px)",
-            borderRadius: line.borderRadius !== undefined ? `${line.borderRadius}px` : "2rem",
-          }}
-        />
-      )}
-
-      {/* Cloud background with continuous border outline using drop-shadow */}
+      {/* Rectangular Box Container (Fondo Negro, Letras Blancas, Bordes Rectos) */}
       <div
-        className="absolute inset-0 z-0 pointer-events-none"
-        style={{
-          filter: `drop-shadow(1.5px 0 0 ${thoughtBorderColor}) drop-shadow(-1.5px 0 0 ${thoughtBorderColor}) drop-shadow(0 1.5px 0 ${thoughtBorderColor}) drop-shadow(0 -1.5px 0 ${thoughtBorderColor})`,
-        }}
-      >
-        {/* Transparent container to hold solid overlapping shapes so they don't intersect opacity */}
-        <div className="w-full h-full relative" style={{ opacity: bgOpacity }}>
-          {/* Main Bubble Background Shape */}
-          <div
-            className="w-full h-full"
-            style={{
-              backgroundColor: solidBg,
-              borderRadius: line.borderRadius !== undefined ? `${line.borderRadius}px` : "2rem",
-            }}
-          />
-          {/* Cloud Bumps — top */}
-          <div className="absolute rounded-full -top-3 left-[15%] -translate-x-1/2 w-7 h-7" style={{ backgroundColor: solidBg }} />
-          <div className="absolute rounded-full -top-4 left-[40%] -translate-x-1/2 w-9 h-9" style={{ backgroundColor: solidBg }} />
-          <div className="absolute rounded-full -top-4 left-[60%] -translate-x-1/2 w-9 h-9" style={{ backgroundColor: solidBg }} />
-          <div className="absolute rounded-full -top-3 left-[85%] -translate-x-1/2 w-7 h-7" style={{ backgroundColor: solidBg }} />
-          {/* Cloud Bumps — bottom */}
-          <div className="absolute rounded-full -bottom-2.5 left-[20%] -translate-x-1/2 w-6 h-6" style={{ backgroundColor: solidBg }} />
-          <div className="absolute rounded-full -bottom-3.5 left-[50%] -translate-x-1/2 w-8 h-8" style={{ backgroundColor: solidBg }} />
-          <div className="absolute rounded-full -bottom-2.5 left-[80%] -translate-x-1/2 w-6 h-6" style={{ backgroundColor: solidBg }} />
-          {/* Cloud Bumps — sides */}
-          <div className="absolute rounded-full -left-2.5 top-[25%] -translate-y-1/2 w-7 h-7" style={{ backgroundColor: solidBg }} />
-          <div className="absolute rounded-full -left-2 top-[75%] -translate-y-1/2 w-6 h-6"   style={{ backgroundColor: solidBg }} />
-          <div className="absolute rounded-full -right-2.5 top-[25%] -translate-y-1/2 w-7 h-7" style={{ backgroundColor: solidBg }} />
-          <div className="absolute rounded-full -right-2 top-[75%] -translate-y-1/2 w-6 h-6"   style={{ backgroundColor: solidBg }} />
-        </div>
-
-        {hasElasticTail && elasticTailNode}
-      </div>
-
-      {/* Text Container */}
-      <div
-        className={`${bubbleClass} ${thoughtSizeClass} relative z-10`}
+        className={`${fontClass} ${thoughtSizeClass} relative z-10 shadow-lg`}
         style={thoughtStyles}
       >
-        {line.speaker && (
+        {line.speaker && (line.showSpeakerName || line.offscreen) && (
           <span
-            className="font-[var(--font-bangers)] text-xs tracking-wider block mb-1 uppercase"
+            className="font-[var(--font-bangers)] text-xs tracking-wider block mb-1 uppercase font-bold"
             style={{ color: thoughtSpeakerColor }}
           >
             {line.speaker}
@@ -214,8 +130,8 @@ export function ThoughtBubble({
         <div className="flex flex-col gap-2">
           {paragraphs.map((p, i) => (
             <div key={i}>
-              {p.speaker && (
-                <strong className="font-[var(--font-bangers)] font-bold mr-1 tracking-wide" style={{ color: getSpeakerColor(p.speaker, "#000000"), fontWeight: "bold" }}>
+              {p.speaker && (!line.speaker || p.speaker.toUpperCase().trim() !== line.speaker.toUpperCase().trim()) && (
+                <strong className="font-[var(--font-bangers)] font-bold mr-1 tracking-wide" style={{ color: getSpeakerColor(p.speaker, "#ffffff"), fontWeight: "bold" }}>
                   {p.speaker}:{" "}
                 </strong>
               )}

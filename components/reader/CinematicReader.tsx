@@ -647,6 +647,7 @@ export function CinematicReader({
         handleBubblePointerUp={handleBubblePointerUp}
         handleDragEnd={handleDragEnd}
         handleTailTargetDragEnd={handleTailTargetDragEnd}
+        handleReorderBubbles={handleReorderBubbles}
         bubbleOpacity={bubbleOpacity}
       />
     );
@@ -679,6 +680,7 @@ export function CinematicReader({
     handleBubblePointerUp,
     handleDragEnd,
     handleTailTargetDragEnd,
+    handleReorderBubbles,
     bubbleOpacity,
   ]);
 

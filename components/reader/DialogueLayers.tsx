@@ -38,6 +38,7 @@ interface DialogueLayersProps {
   handleBubblePointerUp: (e: React.PointerEvent, key: string) => void;
   handleDragEnd: (info: any, pIdx: number, bIdx: number) => void;
   handleTailTargetDragEnd: (info: any, pIdx: number, bIdx: number) => void;
+  handleReorderBubbles?: (pIdx: number, fromIdx: number, toIdx: number) => void;
   bubbleOpacity?: number;
 }
 
@@ -70,6 +71,7 @@ export function DialogueLayers({
   handleBubblePointerUp,
   handleDragEnd,
   handleTailTargetDragEnd,
+  handleReorderBubbles,
   bubbleOpacity = 0.88,
 }: DialogueLayersProps) {
   const settings = localDialogues.settings || {};
@@ -357,17 +359,58 @@ export function DialogueLayers({
                 }}
               >
                 <div
-                  className={`transition-all ${
+                  className={`relative transition-all ${
                     isActive
                       ? "outline-dashed outline-2 outline-[#e8185a] outline-offset-3 drop-shadow-lg"
                       : "opacity-95 hover:opacity-100"
                   }`}
                 >
-                  {isActive && (
-                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#e8185a] text-white font-mono text-[10px] px-1.5 py-0.5 rounded shadow whitespace-nowrap">
-                      X:{posX}% Y:{posY}%
-                    </div>
-                  )}
+                  {/* Sequence badge & reorder controls in Edit Mode */}
+                  <div
+                    onClick={(e) => e.stopPropagation()}
+                    className={`absolute bottom-full mb-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-1.5 px-2.5 py-0.5 rounded-full shadow-md border text-[10px] font-mono font-bold transition-all z-40 select-none ${
+                      isActive
+                        ? "bg-[#e8185a] text-white border-white/40 shadow-rose-950/40"
+                        : "bg-[#0c0c14]/90 hover:bg-[#161622] text-zinc-200 border-white/20"
+                    }`}
+                  >
+                    <span className="font-black tracking-wider">V{pIdx + 1}·#{bIdx + 1}</span>
+                    {isActive && (
+                      <span className="text-[9px] opacity-90 border-l border-white/30 pl-1 font-mono">
+                        {posX}% {posY}%
+                      </span>
+                    )}
+                    {handleReorderBubbles && dialogueList.length > 1 && (
+                      <div className="flex items-center gap-0.5 border-l border-white/30 pl-1">
+                        {bIdx > 0 && (
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleReorderBubbles(pIdx, bIdx, bIdx - 1);
+                            }}
+                            className="w-3.5 h-3.5 rounded-full bg-white/20 hover:bg-white/40 text-white flex items-center justify-center text-[8px] font-bold transition-all active:scale-90 cursor-pointer"
+                            title="Mover diálogo antes"
+                          >
+                            ▲
+                          </button>
+                        )}
+                        {bIdx < dialogueList.length - 1 && (
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleReorderBubbles(pIdx, bIdx, bIdx + 1);
+                            }}
+                            className="w-3.5 h-3.5 rounded-full bg-white/20 hover:bg-white/40 text-white flex items-center justify-center text-[8px] font-bold transition-all active:scale-90 cursor-pointer"
+                            title="Mover diálogo después"
+                          >
+                            ▼
+                          </button>
+                        )}
+                      </div>
+                    )}
+                  </div>
                   <DialogueBubble
                     line={line}
                     index={0}
