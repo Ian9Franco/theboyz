@@ -869,7 +869,11 @@ export function EditorTabPanels({
                                           const val = e.target.value || "";
                                           updateSoundItem(sIdx, { sound: val });
                                           if (val) {
-                                            playPreview(val, soundItem.soundStartTime, soundItem.soundEndTime, soundItem.soundConfig, previewKey);
+                                            playPreview(val, {
+                                              startTime: soundItem.soundStartTime,
+                                              endTime: soundItem.soundEndTime,
+                                              ...soundItem.soundConfig,
+                                            });
                                           } else {
                                             stopPreview();
                                           }
@@ -907,7 +911,11 @@ export function EditorTabPanels({
                                             if (isPreviewing) {
                                               stopPreview();
                                             } else {
-                                              playPreview(soundItem.sound, soundItem.soundStartTime, soundItem.soundEndTime, soundItem.soundConfig, previewKey);
+                                              playPreview(soundItem.sound, {
+                                                startTime: soundItem.soundStartTime,
+                                                endTime: soundItem.soundEndTime,
+                                                ...soundItem.soundConfig,
+                                              });
                                             }
                                           }}
                                           className={`text-xs px-2.5 py-1.5 rounded font-bold transition-all cursor-pointer shrink-0 flex items-center gap-1 ${
