@@ -450,6 +450,8 @@ export function DialogueEditorPanel({
               pages={pages}
               localDialogues={localDialogues}
               onUpdate={handleUpdateAudioTracks}
+              currentPageIdx={pageIdx}
+              activePanelIdx={activePanelIdx}
             />
           </div>
         </div>
@@ -472,6 +474,7 @@ export function DialogueEditorPanel({
           <EditorTabDialogues
             currentPanels={currentPanels}
             activePanelIdx={activePanelIdx}
+            setActivePanelIdx={setActivePanelIdx}
             activeBubbleIdx={activeBubbleIdx}
             setActiveBubbleIdx={setActiveBubbleIdx}
             handleAddBubble={handleAddBubble}

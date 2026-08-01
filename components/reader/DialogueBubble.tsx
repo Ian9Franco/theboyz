@@ -47,7 +47,7 @@ export function getBubbleStyles(line: DialogueLine, bubbleOpacity?: number) {
     bgColor     = resolveBgColor(line.customBg, "#ffffff", bubbleOpacity);
     borderColor = line.customColor || "#a1a1aa";
   } else if (style === "electronic") {
-    bgColor     = line.customBg    || "rgba(0, 240, 255, 0.07)";
+    bgColor     = line.customBg    || "rgba(10, 20, 32, 0.82)";
     borderColor = line.customColor || "#00f0ff";
   } else if (style === "caption") {
     bgColor     = resolveBgColor(line.customBg, "#f5e642", bubbleOpacity);

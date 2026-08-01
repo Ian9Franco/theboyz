@@ -241,10 +241,10 @@ export function StandardBubble({
 
   } else if (style === "electronic") {
     // ── Premium glassmorphism for electronic bubbles ──
-    bgColor      = line.customBg    || "rgba(0, 240, 255, 0.07)";
+    bgColor      = line.customBg    || "rgba(10, 20, 32, 0.82)";
     borderColor  = line.customColor || "#00f0ff";
-    borderStyle  = `1px solid rgba(0, 240, 255, 0.45)`;
-    shadowStyle  = `0 0 18px rgba(0, 240, 255, 0.18), inset 0 0 18px rgba(0, 240, 255, 0.04)`;
+    borderStyle  = `1px solid rgba(0, 240, 255, 0.55)`;
+    shadowStyle  = `0 0 18px rgba(0, 240, 255, 0.25), inset 0 0 12px rgba(0, 240, 255, 0.08)`;
     bubbleClass  = `${line.fontFamily ? fontClass : "font-mono"} text-[#00f0ff]`;
     speakerColor = getSpeakerColor(line.speaker, borderColor);
     sizeClass    = size === "small" ? "px-2.5 py-1.5 rounded-none text-[10px] sm:text-xs leading-tight" :

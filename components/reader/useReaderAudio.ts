@@ -1,4 +1,4 @@
-import { useEffect, useRef, useMemo, useCallback } from "react";
+import { useEffect, useRef, useMemo, useCallback, useState } from "react";
 import {
   PanelSound,
   PanelStop,
@@ -6,7 +6,7 @@ import {
   Dialogues,
   playAudioWithGain,
 } from "./audioPlayer";
-import { getPageKeyFromUrl } from "./readerUtils";
+import { getPageKeyFromUrl, getComicAssetUrl } from "./readerUtils";
 
 interface UseReaderAudioProps {
   mode: "read" | "edit";
@@ -25,8 +25,11 @@ export function useReaderAudio({
   localDialogues,
   activePanel,
 }: UseReaderAudioProps) {
-  const activePanelAudiosRef = useRef<Array<{ audio: HTMLAudioElement; stop: (fade: number) => void }>>([]);
+  const activePanelAudiosRef = useRef<Set<{ audio: HTMLAudioElement; stop: (fade: number) => void }>>(new Set());
+  const activePanelTimersRef = useRef<Set<NodeJS.Timeout>>(new Set());
+  const prevPageIdxRef = useRef<number>(pageIdx);
   const activeTracksRef = useRef<Map<string, { audio: HTMLAudioElement; stop: (fade: number) => void }>>(new Map());
+  const [activeMusicTrack, setActiveMusicTrack] = useState<AudioTrack | null>(null);
 
   // Gather and memoize all sounds config for this panel with stable dependencies
   const soundsToPlay = useMemo((): PanelSound[] => {
@@ -51,20 +54,25 @@ export function useReaderAudio({
     JSON.stringify(activePanel?.sounds),
   ]);
 
-  // Play sound effect(s) when panel changes
+  // Stop panel SFX only when changing pages or changing mode
   useEffect(() => {
-    // 1. Stop all currently playing panel audios
-    activePanelAudiosRef.current.forEach((soundObj) => {
-      soundObj.stop(0);
-    });
-    activePanelAudiosRef.current = [];
+    if (mode !== "read" || prevPageIdxRef.current !== pageIdx) {
+      activePanelAudiosRef.current.forEach((soundObj) => {
+        soundObj.stop(0);
+      });
+      activePanelAudiosRef.current.clear();
 
+      activePanelTimersRef.current.forEach((t) => clearTimeout(t));
+      activePanelTimersRef.current.clear();
+
+      prevPageIdxRef.current = pageIdx;
+    }
+  }, [pageIdx, mode]);
+
+  // Play sound effect(s) when panel changes without cutting off previous panel SFX on the same page
+  useEffect(() => {
     if (mode !== "read" || soundsToPlay.length === 0) return;
 
-    const activeObjects: Array<{ audio: HTMLAudioElement; stop: (fade: number) => void }> = [];
-    const timersToClear: NodeJS.Timeout[] = [];
-
-    // 2. Start each sound
     soundsToPlay.forEach((soundItem) => {
       if (!soundItem.sound) return;
 
@@ -80,10 +88,12 @@ export function useReaderAudio({
       const soundStartTime = soundItem.soundStartTime || 0;
       const soundEndTime = soundItem.soundEndTime || undefined;
 
+      let soundObj: { audio: HTMLAudioElement; stop: (fade: number) => void } | null = null;
+
       const playWithDelay = () => {
         try {
-          const soundObj = playAudioWithGain(
-            soundItem.sound,
+          soundObj = playAudioWithGain(
+            getComicAssetUrl(soundItem.sound),
             {
               volume,
               playbackRate,
@@ -91,31 +101,33 @@ export function useReaderAudio({
               fadeIn,
               fadeOut,
               startTime: soundStartTime,
-              endTime: soundEndTime
+              endTime: soundEndTime,
+            },
+            () => {
+              if (soundObj) {
+                activePanelAudiosRef.current.delete(soundObj);
+              }
             }
           );
-          activeObjects.push(soundObj);
+          if (soundObj) {
+            activePanelAudiosRef.current.add(soundObj);
+          }
         } catch (error) {
           console.error("Error playing audio item (sync):", error);
         }
       };
 
       if (delay > 0) {
-        const delayTimeout = setTimeout(playWithDelay, delay);
-        timersToClear.push(delayTimeout);
+        let delayTimeout: NodeJS.Timeout;
+        delayTimeout = setTimeout(() => {
+          activePanelTimersRef.current.delete(delayTimeout);
+          playWithDelay();
+        }, delay);
+        activePanelTimersRef.current.add(delayTimeout);
       } else {
         playWithDelay();
       }
     });
-
-    activePanelAudiosRef.current = activeObjects;
-
-    return () => {
-      activeObjects.forEach((soundObj) => {
-        soundObj.stop(0);
-      });
-      timersToClear.forEach((t) => clearTimeout(t));
-    };
   }, [panelIdx, pageIdx, mode, soundsToPlay]);
 
   // ─── Multi-span Audio Track Engine ───────────────────────────────────────
@@ -170,7 +182,10 @@ export function useReaderAudio({
   const tracksListString = JSON.stringify(localDialogues.audioTracks || []);
 
   useEffect(() => {
-    if (mode !== "read") return;
+    if (mode !== "read") {
+      setActiveMusicTrack(null);
+      return;
+    }
     const tracks = localDialogues.audioTracks || [];
     const activeTracks = activeTracksRef.current;
     const currentPageKey = getPageKeyFromUrl(pages[pageIdx]) || "";
@@ -194,7 +209,7 @@ export function useReaderAudio({
         const playTrack = () => {
           try {
             const soundObj = playAudioWithGain(
-              track.src,
+              getComicAssetUrl(track.src),
               {
                 volume,
                 playbackRate,
@@ -234,6 +249,12 @@ export function useReaderAudio({
         activeTracks.delete(trackId);
       }
     });
+
+    // Determine current active music track for HUD/mini-player display
+    const currentPlayingMusic = tracks.find(
+      (t) => t.layer === "music" && isPositionInTrackRange(t, currentPageKey, panelIdx)
+    );
+    setActiveMusicTrack(currentPlayingMusic || null);
   }, [panelIdx, pageIdx, mode, tracksListString, isPositionInTrackRange, pages]);
 
   useEffect(() => {
@@ -242,6 +263,7 @@ export function useReaderAudio({
       soundObj.stop(0);
     });
     activeTracksRef.current.clear();
+    setActiveMusicTrack(null);
   }, [mode]);
 
   useEffect(() => {
@@ -254,7 +276,14 @@ export function useReaderAudio({
       activePanelAudiosRef.current.forEach((soundObj) => {
         soundObj.stop(0);
       });
-      activePanelAudiosRef.current = [];
+      activePanelAudiosRef.current.clear();
+
+      activePanelTimersRef.current.forEach((t) => clearTimeout(t));
+      activePanelTimersRef.current.clear();
+
+      setActiveMusicTrack(null);
     };
   }, []);
+
+  return { activeMusicTrack };
 }

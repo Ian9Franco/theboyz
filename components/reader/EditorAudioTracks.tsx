@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import type { AudioTrack, AudioTrackStopTrigger, Dialogues } from "./audioPlayer";
-import { getPageKeyFromUrl } from "./readerUtils";
+import { getPageKeyFromUrl, getComicAssetUrl } from "./readerUtils";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -15,6 +15,10 @@ interface EditorAudioTracksProps {
   localDialogues: Dialogues;
   /** Callback to persist the updated tracks array */
   onUpdate: (tracks: AudioTrack[]) => void;
+  /** Current active page index */
+  currentPageIdx?: number;
+  /** Current active panel index */
+  activePanelIdx?: number;
 }
 
 type StopTriggerType = "panelEnd" | "panelStart" | "pageStart" | "pageEnd" | "none";
@@ -23,6 +27,8 @@ type StopTriggerType = "panelEnd" | "panelStart" | "pageStart" | "pageEnd" | "no
 interface TrackFormState {
   layer: "music" | "sfx";
   src: string;
+  title: string;
+  artist: string;
   startPageKey: string;
   startPanelIdx: number;
   stopType: StopTriggerType;
@@ -40,6 +46,8 @@ interface TrackFormState {
 const DEFAULT_FORM: TrackFormState = {
   layer: "music",
   src: "",
+  title: "",
+  artist: "",
   startPageKey: "",
   startPanelIdx: 0,
   stopType: "none",
@@ -93,6 +101,8 @@ export function EditorAudioTracks({
   pages,
   localDialogues,
   onUpdate,
+  currentPageIdx,
+  activePanelIdx,
 }: EditorAudioTracksProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
@@ -130,7 +140,7 @@ export function EditorAudioTracks({
   const playPreview = (track: AudioTrack) => {
     stopPreview();
     const config = track.soundConfig || {};
-    const audio = new Audio(track.src);
+    const audio = new Audio(getComicAssetUrl(track.src));
     const volume = config.volume ?? 1;
     const targetVolume = volume * volume;
     const playbackRate = config.playbackRate ?? 1;
@@ -163,10 +173,18 @@ export function EditorAudioTracks({
   // ─── Form helpers ──────────────────────────────────────────────────────────
 
   const openNewForm = () => {
+    const currentKey =
+      currentPageIdx !== undefined && pageKeys[currentPageIdx]
+        ? pageKeys[currentPageIdx]
+        : pageKeys[0] ?? "";
+    const currentPanel = activePanelIdx !== undefined ? activePanelIdx : 0;
+
     setForm({
       ...DEFAULT_FORM,
-      startPageKey: pageKeys[0] ?? "",
-      stopPageKey: pageKeys[0] ?? "",
+      startPageKey: currentKey,
+      startPanelIdx: currentPanel,
+      stopPageKey: currentKey,
+      stopPanelIdx: currentPanel,
     });
     setEditingId(null);
     setShowForm(true);
@@ -185,6 +203,8 @@ export function EditorAudioTracks({
     setForm({
       layer: track.layer,
       src: track.src,
+      title: track.title || "",
+      artist: track.artist || "",
       startPageKey: track.startPageKey,
       startPanelIdx: track.startPanelIdx,
       stopType,
@@ -203,7 +223,24 @@ export function EditorAudioTracks({
   };
 
   const handleFormChange = <K extends keyof TrackFormState>(key: K, val: TrackFormState[K]) => {
-    setForm((prev) => ({ ...prev, [key]: val }));
+    setForm((prev) => {
+      const updated = { ...prev, [key]: val };
+
+      // Auto-extract title & artist when user picks a sound src if title is empty
+      if (key === "src" && typeof val === "string" && val) {
+        const rawFileName = val.split("/").pop() || "";
+        const cleanName = decodeURIComponent(rawFileName.split("?")[0]).replace(/\.[^/.]+$/, "");
+        if (cleanName.includes(" - ")) {
+          const parts = cleanName.split(" - ");
+          if (!prev.artist) updated.artist = parts[0].trim();
+          if (!prev.title) updated.title = parts[1].trim();
+        } else if (!prev.title) {
+          updated.title = cleanName;
+        }
+      }
+
+      return updated;
+    });
 
     // Dynamically update active form preview settings if playing
     if (previewingId === "__form_preview__" && previewAudioRef.current) {
@@ -222,6 +259,8 @@ export function EditorAudioTracks({
       id: "__form_preview__",
       layer: form.layer,
       src: form.src,
+      title: form.title || undefined,
+      artist: form.artist || undefined,
       startPageKey: form.startPageKey,
       startPanelIdx: form.startPanelIdx,
       soundConfig: {
@@ -254,6 +293,8 @@ export function EditorAudioTracks({
       id: editingId ?? genId(),
       layer: form.layer,
       src: form.src,
+      title: form.title.trim() || undefined,
+      artist: form.artist.trim() || undefined,
       startPageKey: form.startPageKey,
       startPanelIdx: form.startPanelIdx,
       stopTrigger: buildStopTrigger(form),
@@ -430,11 +471,25 @@ export function EditorAudioTracks({
               {/* Sound selector */}
               <div className="flex flex-col gap-1">
                 <label className="text-[9px] font-bold text-zinc-400 uppercase tracking-wider">Sonido</label>
-                <div className="flex gap-2">
+                <div className="flex gap-2 w-full min-w-0">
                   <select
                     value={form.src}
-                    onChange={(e) => handleFormChange("src", e.target.value)}
-                    className="flex-1 text-[8px] px-1.5 py-1 border border-white/10 rounded font-mono bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      handleFormChange("src", val);
+                      if (val) {
+                        const tempTrack: AudioTrack = {
+                          id: "__form_preview__",
+                          layer: form.layer,
+                          src: val,
+                          soundConfig: { volume: form.volume, playbackRate: form.playbackRate, loop: form.loop }
+                        };
+                        playPreview(tempTrack);
+                      } else {
+                        stopPreview();
+                      }
+                    }}
+                    className="flex-1 min-w-0 max-w-full truncate text-[8px] px-1.5 py-1 border border-white/10 rounded font-mono bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer"
                   >
                     <option value="">-- Seleccioná un archivo --</option>
                     {availableSounds.map((s) => (
@@ -445,17 +500,43 @@ export function EditorAudioTracks({
                     <button
                       type="button"
                       onClick={handlePreviewFormTrack}
-                      className={`text-[8px] font-bold px-2.5 py-1 rounded border transition-all cursor-pointer ${
+                      className={`text-[8px] font-bold px-2.5 py-1 rounded border transition-all cursor-pointer shrink-0 flex items-center gap-1 ${
                         previewingId === "__form_preview__"
-                          ? "bg-green-600 text-white border-green-700 shadow-inner"
-                          : "bg-green-700 hover:bg-green-600 text-white border-green-800"
+                          ? "bg-rose-600 hover:bg-rose-500 text-white border-rose-700 shadow-inner"
+                          : "bg-emerald-600 hover:bg-emerald-500 text-white border-emerald-700"
                       }`}
                     >
-                      {previewingId === "__form_preview__" ? "⏸ Detener" : "▶ Preview"}
+                      {previewingId === "__form_preview__" ? "⏸ Pausa" : "▶ Preview"}
                     </button>
                   )}
                 </div>
               </div>
+
+              {/* Title & Artist fields (for music tracks) */}
+              {form.layer === "music" && (
+                <div className="grid grid-cols-2 gap-2 p-2 bg-[#0a0a0f] border border-white/5 rounded">
+                  <div className="flex flex-col gap-0.5">
+                    <label className="text-[8px] font-bold text-purple-300 uppercase tracking-wider">Nombre Canción</label>
+                    <input
+                      type="text"
+                      placeholder="Ej. Get Low"
+                      value={form.title}
+                      onChange={(e) => handleFormChange("title", e.target.value)}
+                      className="text-[8px] px-1.5 py-1 border border-white/10 rounded font-sans bg-[#13131d] text-white focus:outline-none focus:ring-1 focus:ring-purple-500"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-0.5">
+                    <label className="text-[8px] font-bold text-purple-300 uppercase tracking-wider">Artista / Banda</label>
+                    <input
+                      type="text"
+                      placeholder="Ej. Lil Jon"
+                      value={form.artist}
+                      onChange={(e) => handleFormChange("artist", e.target.value)}
+                      className="text-[8px] px-1.5 py-1 border border-white/10 rounded font-sans bg-[#13131d] text-white focus:outline-none focus:ring-1 focus:ring-purple-500"
+                    />
+                  </div>
+                </div>
+              )}
 
               {/* Start position */}
               <div className="border border-white/5 rounded p-2 bg-[#0a0a0f] flex flex-col gap-2">

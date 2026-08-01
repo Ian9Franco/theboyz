@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import type { PanelConfig } from "./DialogueEditorPanel";
 import type { PanelSound } from "./audioPlayer";
+import { getComicAssetUrl } from "./readerUtils";
 
 interface EditorTabStopsProps {
   currentPanels: PanelConfig[];
@@ -57,7 +58,7 @@ export function EditorTabStops({
 
   const playPreview = (soundPath: string) => {
     stopPreview();
-    const audio = new Audio(soundPath);
+    const audio = new Audio(getComicAssetUrl(soundPath));
     previewAudioRef.current = audio;
     setPreviewingSound(soundPath);
     audio.play().catch(() => setPreviewingSound(null));
@@ -213,13 +214,19 @@ export function EditorTabStops({
                   )}
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 w-full min-w-0">
                   <select
                     value={activePanel.sound || ""}
-                    onChange={(e) =>
-                      handleUpdatePanelParams(activePanelIdx, { sound: e.target.value || undefined })
-                    }
-                    className="flex-1 border border-white/15 p-2 text-xs font-mono rounded bg-[#13131d] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a] cursor-pointer"
+                    onChange={(e) => {
+                      const val = e.target.value || undefined;
+                      handleUpdatePanelParams(activePanelIdx, { sound: val });
+                      if (val) {
+                        playPreview(val);
+                      } else {
+                        stopPreview();
+                      }
+                    }}
+                    className="flex-1 min-w-0 max-w-full truncate border border-white/15 p-2 text-xs font-mono rounded bg-[#13131d] text-white focus:outline-none focus:ring-1 focus:ring-[#e8185a] cursor-pointer"
                   >
                     <option value="">(Sin sonido de viñeta)</option>
                     {availableSounds.map((snd) => (
@@ -237,9 +244,13 @@ export function EditorTabStops({
                           ? stopPreview()
                           : playPreview(activePanel.sound!)
                       }
-                      className="text-xs bg-indigo-900/60 hover:bg-indigo-800 text-indigo-200 border border-indigo-500/30 px-3 py-2 rounded font-bold cursor-pointer transition-all"
+                      className={`text-xs px-3 py-2 rounded font-bold cursor-pointer transition-all shrink-0 flex items-center gap-1 ${
+                        previewingSound === activePanel.sound
+                          ? "bg-rose-600 hover:bg-rose-500 text-white border border-rose-400 shadow-md"
+                          : "bg-emerald-600 hover:bg-emerald-500 text-white border border-emerald-400"
+                      }`}
                     >
-                      {previewingSound === activePanel.sound ? "⏹ Detener" : "▶ Probar"}
+                      {previewingSound === activePanel.sound ? "⏸ Pausa" : "▶ Escuchar"}
                     </button>
                   )}
                 </div>

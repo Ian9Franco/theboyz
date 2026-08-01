@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import type { PanelConfig } from "./DialogueEditorPanel";
 import type { PanelSound } from "./audioPlayer";
+import { getComicAssetUrl } from "./readerUtils";
 
 /**
  * WaveformVisualizer Component
@@ -23,7 +24,7 @@ function WaveformVisualizer({ soundPath, startTime = 0, endTime, height = 60 }: 
   useEffect(() => {
     const analyzeAudio = async () => {
       try {
-        const response = await fetch(soundPath);
+        const response = await fetch(getComicAssetUrl(soundPath));
         const arrayBuffer = await response.arrayBuffer();
         const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
         const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
@@ -190,7 +191,7 @@ export function EditorTabPanels({
 
     paths.forEach((path) => {
       const audio = new Audio();
-      audio.src = path;
+      audio.src = getComicAssetUrl(path);
       audio.onloadedmetadata = () => {
         setSoundMetadata((prev) => {
           if (prev[path] === audio.duration) return prev;
@@ -240,7 +241,7 @@ export function EditorTabPanels({
     const targetVolume = volume * volume;
 
     const audio = new Audio();
-    audio.src = soundPath;
+    audio.src = getComicAssetUrl(soundPath);
     audio.currentTime = startTime;
     audio.playbackRate = playbackRate;
     audio.volume = fadeIn > 0 ? 0 : targetVolume;
@@ -856,41 +857,69 @@ export function EditorTabPanels({
                                     </button>
                                   </div>
 
-                                  {/* Sound Selector Dropdown */}
+                                  {/* Sound Selector Dropdown & Player */}
                                   <div className="flex flex-col gap-1.5">
                                     <label className="text-xs font-bold text-zinc-400">
                                       Seleccionar archivo:
                                     </label>
-                                    <select
-                                      value={soundItem.sound || ""}
-                                      onChange={(e) => {
-                                        updateSoundItem(sIdx, { sound: e.target.value || "" });
-                                      }}
-                                      onClick={(e) => e.stopPropagation()}
-                                      className="text-xs px-2 py-1.5 border border-white/10 rounded font-mono bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-rose-500 w-full cursor-pointer"
-                                    >
-                                      <option value="">-- Selecciona un sonido --</option>
-                                      {(() => {
-                                        // Group sounds by folder/category dynamically
-                                        const groups = availableSounds.reduce<Record<string, Array<{ name: string; path: string }>>>((acc, sound) => {
-                                          const parts = sound.path.split("/");
-                                          const category = (parts.length >= 3 && parts[1] === "sounds") ? parts[2] : "otros";
-                                          if (!acc[category]) acc[category] = [];
-                                          acc[category].push(sound);
-                                          return acc;
-                                        }, {});
+                                    <div className="flex items-center gap-2 w-full min-w-0">
+                                      <select
+                                        value={soundItem.sound || ""}
+                                        onChange={(e) => {
+                                          const val = e.target.value || "";
+                                          updateSoundItem(sIdx, { sound: val });
+                                          if (val) {
+                                            playPreview(val, soundItem.soundStartTime, soundItem.soundEndTime, soundItem.soundConfig, previewKey);
+                                          } else {
+                                            stopPreview();
+                                          }
+                                        }}
+                                        onClick={(e) => e.stopPropagation()}
+                                        className="flex-1 min-w-0 max-w-full truncate text-xs px-2 py-1.5 border border-white/10 rounded font-mono bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-rose-500 cursor-pointer"
+                                      >
+                                        <option value="">-- Selecciona un sonido --</option>
+                                        {(() => {
+                                          // Group sounds by folder/category dynamically
+                                          const groups = availableSounds.reduce<Record<string, Array<{ name: string; path: string }>>>((acc, sound) => {
+                                            const parts = sound.path.split("/");
+                                            const category = (parts.length >= 3 && parts[1] === "sounds") ? parts[2] : "otros";
+                                            if (!acc[category]) acc[category] = [];
+                                            acc[category].push(sound);
+                                            return acc;
+                                          }, {});
 
-                                        return Object.entries(groups).map(([category, items]) => (
-                                          <optgroup key={category} label={category.toUpperCase()} className="bg-[#0a0a0f] text-zinc-500 font-bold">
-                                            {items.map((sound) => (
-                                              <option key={sound.path} value={sound.path} className="text-white bg-[#0a0a0f]">
-                                                {sound.name}
-                                              </option>
-                                            ))}
-                                          </optgroup>
-                                        ));
-                                      })()}
-                                    </select>
+                                          return Object.entries(groups).map(([category, items]) => (
+                                            <optgroup key={category} label={category.toUpperCase()} className="bg-[#0a0a0f] text-zinc-500 font-bold">
+                                              {items.map((sound) => (
+                                                <option key={sound.path} value={sound.path} className="text-white bg-[#0a0a0f]">
+                                                  {sound.name}
+                                                </option>
+                                              ))}
+                                            </optgroup>
+                                          ));
+                                        })()}
+                                      </select>
+                                      {soundItem.sound && (
+                                        <button
+                                          type="button"
+                                          onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (isPreviewing) {
+                                              stopPreview();
+                                            } else {
+                                              playPreview(soundItem.sound, soundItem.soundStartTime, soundItem.soundEndTime, soundItem.soundConfig, previewKey);
+                                            }
+                                          }}
+                                          className={`text-xs px-2.5 py-1.5 rounded font-bold transition-all cursor-pointer shrink-0 flex items-center gap-1 ${
+                                            isPreviewing
+                                              ? "bg-rose-600 hover:bg-rose-500 text-white border border-rose-400 shadow-md"
+                                              : "bg-emerald-600 hover:bg-emerald-500 text-white border border-emerald-400"
+                                          }`}
+                                        >
+                                          {isPreviewing ? "⏸ Pausa" : "▶ Probar"}
+                                        </button>
+                                      )}
+                                    </div>
                                   </div>
 
                                   {/* Duration Display */}

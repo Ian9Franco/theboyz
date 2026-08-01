@@ -14,6 +14,7 @@ import { ReaderPagesSidebar } from "./ReaderPagesSidebar";
 import { DialogueLayers } from "./DialogueLayers";
 import { useReaderLayout } from "./useReaderLayout";
 import { useReaderAudio } from "./useReaderAudio";
+import { MiniMusicPlayer } from "./MiniMusicPlayer";
 import { getComicPageUrl, getPageKeyFromUrl } from "./readerUtils";
 import { Dialogues, PanelStop } from "./audioPlayer";
 import { UnlockNotificationModal } from "@/components/UnlockNotificationModal";
@@ -494,7 +495,7 @@ export function CinematicReader({
   }, [panelIdx, pageIdx, mode]);
 
   // Audio Context custom hook
-  useReaderAudio({
+  const { activeMusicTrack } = useReaderAudio({
     mode,
     panelIdx,
     pageIdx,
@@ -717,6 +718,9 @@ export function CinematicReader({
         bubbleOpacity={bubbleOpacity}
         setBubbleOpacity={handleSetBubbleOpacity}
       />
+
+      {/* Floating Mini Music Player (appears when a music track plays) */}
+      <MiniMusicPlayer track={activeMusicTrack} />
 
       <div className={`flex-1 flex ${mode === "read" ? "flex-row" : "flex-col md:flex-row"} overflow-hidden w-full h-full relative`}>
         {/* Read mode: page thumbnail sidebar (PDF-reader style) */}

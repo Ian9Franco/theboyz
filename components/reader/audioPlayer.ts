@@ -45,6 +45,8 @@ export type AudioTrack = {
   id: string;
   layer: "music" | "sfx";
   src: string;
+  title?: string;
+  artist?: string;
   startPageKey: string;
   startPanelIdx: number;
   stopTrigger?: AudioTrackStopTrigger;
