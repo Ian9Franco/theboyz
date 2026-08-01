@@ -2477,15 +2477,17 @@
       "panels": [
         {
           "focusY": 0.2,
-          "dialogue": []
+          "dialogue": [
+            { "text": "vamos ", "size": "small", "posX": 35, "posY": 5, "tailX": 30, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "uy", "style": "electronic", "size": "small", "posX": 70, "posY": 0, "tailX": 85, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" }
+          ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
-        },
-        {
-          "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [
+            { "text": "elias escuchas? la carrera empezo", "size": "small", "posX": 15, "posY": 55, "tailX": 10, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "sisi lo estoy viendo", "size": "small", "posX": 40, "posY": 80, "tailX": 30, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
         }
       ]
     },
@@ -2494,16 +2496,15 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "Una mano inmóvil sobre el volante confirma que Brooke sigue consciente.", "size": "small", "posX": 20, "posY": 15, "width": 260, "fontSize": 8, "borderRadius": 0, "tail": "none" }
+            { "text": "esta vez van a tener que mirar desde atras", "size": "small", "posX": 55, "posY": 40, "tailX": 40, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
-        },
-        {
-          "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [
+            { "text": "bien asi se hace", "size": "small", "posX": 45, "posY": 65, "tailX": 30, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "donde carajo se metio", "style": "thought", "size": "small", "posX": 95, "posY": 70, "tailX": 50, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
         }
       ]
     },
@@ -2511,17 +2512,29 @@
       "panels": [
         {
           "focusY": 0.2,
-          "dialogue": [
-            { "text": "Una mano inmóvil sobre el volante confirma que Brooke sigue consciente.", "size": "small", "posX": 20, "posY": 15, "width": 260, "fontSize": 8, "borderRadius": 0, "tail": "none" }
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 39 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [
+            { "text": "lo sabia, es mi tecnologia", "size": "small", "posX": 40, "posY": 40, "tailX": 30, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 38, "w": 50, "h": 28 },
+            { "x": 50, "y": 38, "w": 50, "h": 28 }
+          ]
         },
         {
           "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [
+            { "text": "me voy a hacer el boludo, quiero sacar una foto", "style": "thought", "size": "small", "posX": 30, "posY": 70, "tailX": 20, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 67.5, "w": 100, "h": 32.5 }
+          ]
         }
       ]
     },
