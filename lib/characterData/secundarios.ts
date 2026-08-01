@@ -736,29 +736,30 @@ export const secundarios: CharacterDetail[] = [
     name: 'Brooke',
     category: 'secundarios',
     isSecondary: true,
-    image: '/personajes/PORTADAS/Brooke/Brooke.webp',
-    fullBody: '/personajes/PORTADAS/Brooke/Brooke.webp',
-    color: '#6b7280',
-    role: 'Nuevo Personaje',
-    visualCode: 'Descripción visual base',
+    image: '/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.png',
+    fullBody: '/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.png',
+    color: '#00ff66',
+    role: 'Piloto Underground de Tokio',
+    visualCode: 'Rubia, atlética, ropa práctica de taller tuner y actitud contenida',
     perfil: [
-      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
-      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
-      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+      'El Corazón de Tokio: Piloto underground experta que traduce la telemetría técnica en decisiones extremas a alta velocidad.',
+      'Instinto al límite: Capaz de percibir inestabilidades, pérdidas de adherencia y retrasos antes que cualquier sensor.',
+      'Lealtad inquebrantable: Directa y reservada. Expresa su afecto confiando su auto, defendiendo al equipo y sosteniendo la calma bajo presión.'
     ],
-    crisis: 'Descripción de su momento de crisis o debilidad.',
-    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
-    especialLabel: 'Poder Único',
+    crisis: 'Carga Emocional post-accidente: Tras el choque del GT-R, debe superar el trauma físico y mecánico para recuperar la confianza en el Skyline final.',
+    stats: { fuerza: 6, inteligencia: 8, carisma: 8, suerte: 6, combate: 8, defensa: 7, especialVal: 10 },
+    especialLabel: 'Pilotaje Intuitivo',
+    hint: 'Terminá #4 (#8 Primer Vuelo) para desbloquear.',
     powers: {
-      role: 'Rol de Poder',
+      role: 'Piloto de Élite',
       habilidades: [
-        'Habilidad 1: Descripción de la habilidad.',
-        'Habilidad 2: Descripción de la habilidad.',
-        'Habilidad 3: Descripción de la habilidad.'
+        'Corrección de Inestabilidad: Mantiene control absoluto sobre vehículos imperfectos o descompensados en maniobras límite.',
+        'Derrape Técnico: Ejecuta cambios de dirección inmediatos aprovechando la masa y el peso sin perder velocidad.',
+        'Conservación Mecánica: Capaz de llevar un vehículo dañado hasta la meta protegiendo el cockpit e identificando riesgos.'
       ],
-      significa: 'Qué significa su poder en combate.',
-      crisis: 'Debilidad o crisis al usar su poder.',
-      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+      significa: 'Pared de velocidad. Convierte cualquier vehículo en una extensión orgánica de su reflejo y templanza.',
+      crisis: 'Falla Mecánica Catastrófica: Si el sistema del vehículo colapsa por completo, debe recurrir a maniobras de impacto controlado para sobrevivir.',
+      stats: { fuerza: 7, inteligencia: 8, carisma: 8, suerte: 6, combate: 9, defensa: 8, especialVal: 10 }
     }
   },
   {
@@ -766,29 +767,30 @@ export const secundarios: CharacterDetail[] = [
     name: 'BYTE',
     category: 'secundarios',
     isSecondary: true,
-    image: '/personajes/PORTADAS/BYTE/BYTE.webp',
-    fullBody: '/personajes/PORTADAS/BYTE/BYTE.webp',
-    color: '#6b7280',
-    role: 'Nuevo Personaje',
-    visualCode: 'Descripción visual base',
+    image: '/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.png',
+    fullBody: '/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.png',
+    color: '#3b82f6',
+    role: 'Asistente Robótico / Copiloto de Cabina',
+    visualCode: 'Chasis compacto de aleación, pantalla facial expresiva y gastado por el uso de taller',
     perfil: [
-      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
-      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
-      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+      'Compañero Físico: Robot compacto tecnológicamente avanzado instalado en el asiento de copiloto del Skyline.',
+      'Vínculo de Cabina: Ancla emocional de Brooke que lee telemetría en tiempo real y detecta anomalías térmicas y de presión.',
+      'Navegante de Datos: Sirve de puente entre la electrónica avanzada de Ian y la experiencia mecánica tradicional de Daichi.'
     ],
-    crisis: 'Descripción de su momento de crisis o debilidad.',
-    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
-    especialLabel: 'Poder Único',
+    crisis: 'Sobrecarga de Datos: La interferencia de radio de Kurogane o temperaturas extremas pueden saturar sus sensores temporariamente.',
+    stats: { fuerza: 4, inteligencia: 10, carisma: 9, suerte: 7, combate: 4, defensa: 6, especialVal: 9 },
+    especialLabel: 'Telemetría Viva',
+    hint: 'Terminá #4 (#8 Primer Vuelo) para desbloquear.',
     powers: {
-      role: 'Rol de Poder',
+      role: 'Copiloto de Procesamiento',
       habilidades: [
-        'Habilidad 1: Descripción de la habilidad.',
-        'Habilidad 2: Descripción de la habilidad.',
-        'Habilidad 3: Descripción de la habilidad.'
+        'Escaneo en Tiempo Real: Detecta fallas electrónicas, fuga de fluidos y variaciones térmicas al instante.',
+        'Asistencia Emocional: Emite señales de calibración y guía al piloto para mantener la calma bajo presión extrema.',
+        'Análisis de Telemetría Rival: Decodifica patrones de conducción de competidores para sugerir trayectorias de sobrepaso.'
       ],
-      significa: 'Qué significa su poder en combate.',
-      crisis: 'Debilidad o crisis al usar su poder.',
-      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+      significa: 'El ojo técnico. Conecta la información de sensores con el estado biológico del piloto.',
+      crisis: 'Dependencia de Batería y Chasis: Si su módulo principal sufre daños físicos directos, pierde capacidad de procesamiento.',
+      stats: { fuerza: 5, inteligencia: 10, carisma: 9, suerte: 7, combate: 5, defensa: 7, especialVal: 9 }
     }
   },
   {
@@ -798,27 +800,28 @@ export const secundarios: CharacterDetail[] = [
     isSecondary: true,
     image: '/personajes/PORTADAS/Daichi/Daichi.webp',
     fullBody: '/personajes/PORTADAS/Daichi/Daichi.webp',
-    color: '#6b7280',
-    role: 'Nuevo Personaje',
-    visualCode: 'Descripción visual base',
+    color: '#d97706',
+    role: 'Maestro Mecánico de Tokio',
+    visualCode: 'Mecánico veterano de cabello gris, ropa de trabajo gastada y presencia paternal',
     perfil: [
-      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
-      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
-      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+      'La Experiencia del Taller: Pilar práctico del equipo con décadas reconstruyendo motores y chasis en Tokio.',
+      'Sabiduría Empírica: Detecta fallas por sonido, olor y vibración antes de que las computadoras puedan procesarlas.',
+      'Guardián del Taller: Mentor protector de Brooke y ancla de resistencia moral frente a los abusos corporativos.'
     ],
-    crisis: 'Descripción de su momento de crisis o debilidad.',
-    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
-    especialLabel: 'Poder Único',
+    crisis: 'Desgaste Físico: Su resistencia tiene un límite frente a jornadas interminables y la pérdida de aliados clave.',
+    stats: { fuerza: 7, inteligencia: 9, carisma: 8, suerte: 5, combate: 5, defensa: 8, especialVal: 8 },
+    especialLabel: 'Maestría de Foso',
+    hint: 'Terminá #4 (#8 Primer Vuelo) para desbloquear.',
     powers: {
-      role: 'Rol de Poder',
+      role: 'Maestro de la Mecánica',
       habilidades: [
-        'Habilidad 1: Descripción de la habilidad.',
-        'Habilidad 2: Descripción de la habilidad.',
-        'Habilidad 3: Descripción de la habilidad.'
+        'Diagnóstico Acústico: Identifica descompensaciones en válvulas, suspensión o frenos tan solo escuchando el motor.',
+        'Reconstrucción Imposible: Capaz de devolverle la vida a vehículos destrozados con repuestos adaptados e ingenio.',
+        'Blindaje de Seguridad: Insiste en márgenes de tolerancia estructurales para garantizar que el piloto regrese vivo.'
       ],
-      significa: 'Qué significa su poder en combate.',
-      crisis: 'Debilidad o crisis al usar su poder.',
-      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+      significa: 'El ancla de tierra. Garantiza la integridad mecánica y el espíritu humano dentro del garage.',
+      crisis: 'Falta de Repuestos Críticos: Si la cadena de suministro se corta por completo, no puede evitar la fatiga de materiales.',
+      stats: { fuerza: 7, inteligencia: 9, carisma: 8, suerte: 6, combate: 6, defensa: 9, especialVal: 8 }
     }
   },
   {
@@ -828,27 +831,28 @@ export const secundarios: CharacterDetail[] = [
     isSecondary: true,
     image: '/personajes/PORTADAS/Ren/Ren.webp',
     fullBody: '/personajes/PORTADAS/Ren/Ren.webp',
-    color: '#6b7280',
-    role: 'Nuevo Personaje',
-    visualCode: 'Descripción visual base',
+    color: '#10b981',
+    role: 'Intermediario del Mercado Gris',
+    visualCode: 'Joven ágil, mirada atenta, vestimenta urbana ligera y red de contactos clandestinos',
     perfil: [
-      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
-      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
-      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+      'Puente de las Sombras: El contacto que consigue piezas, vehículos retenidos y accesos a zonas prohibidas de Tokio.',
+      'Recuperador del Eclipse: Consigue el Mitsubishi Eclipse GT verde en el mercado gris para la carrera relay del equipo.',
+      'Lealtad Peligrosa: Se arriesga navegando entre depósitos ilegales y la vigilancia implacable del Clan Kurogane.'
     ],
-    crisis: 'Descripción de su momento de crisis o debilidad.',
-    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
-    especialLabel: 'Poder Único',
+    crisis: 'Blanco de Kurogane: Su cercanía con las filtraciones lo convierte en objetivo prioritario de las operaciones de ONI.',
+    stats: { fuerza: 5, inteligencia: 8, carisma: 9, suerte: 6, combate: 6, defensa: 5, especialVal: 7 },
+    especialLabel: 'Red Subterránea',
+    hint: 'Terminá #4 (#8 Primer Vuelo) para desbloquear.',
     powers: {
-      role: 'Rol de Poder',
+      role: 'Informante y Conector',
       habilidades: [
-        'Habilidad 1: Descripción de la habilidad.',
-        'Habilidad 2: Descripción de la habilidad.',
-        'Habilidad 3: Descripción de la habilidad.'
+        'Localización de Repuestos: Encuentra componentes descontinuados o incautados en depósitos fuera de registro.',
+        'Evasión de Vigilancia: Se mueve con soltura por los callejones y contactos grises evitando patrullas corporativas.',
+        'Negociación de Emergencia: Consigue oportunidades y favores clave cuando el equipo se queda sin opciones.'
       ],
-      significa: 'Qué significa su poder en combate.',
-      crisis: 'Debilidad o crisis al usar su poder.',
-      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+      significa: 'El proveedor de lo imposible. Abre las puertas clandestinas de la ciudad a expensas de su propia seguridad.',
+      crisis: 'Vulnerabilidad Extrema: Carece de protección corporativa, quedando expuesto si Kurogane decide cortar el nexo.',
+      stats: { fuerza: 5, inteligencia: 8, carisma: 9, suerte: 6, combate: 6, defensa: 6, especialVal: 7 }
     }
   },
   {

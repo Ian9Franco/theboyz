@@ -1,5 +1,8 @@
 {
   "title": "Hecho Polvo",
   "number": 2,
-  "status": "draft"
+  "status": "published",
+  "nuevo": true,
+  "date": "01/08/2026",
+  "portada": "Portada.webp"
 }

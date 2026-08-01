@@ -77,6 +77,19 @@ export function UnlockNotificationModal({
         color: "#dc2626", // Crimson
       };
     }
+    if (
+      norm.includes("el mecanico") ||
+      norm.includes("el-mecanico") ||
+      norm === "ch4" ||
+      norm === "capitulo-4"
+    ) {
+      return {
+        title: "EQUIPO DE TOKIO DESBLOQUEADO",
+        item: "BROOKE, BYTE, DAICHI & REN",
+        desc: "Se ha autorizado el acceso a los perfiles tácticos y fichas personales del equipo del taller de Tokio (Brooke, BYTE, Daichi y Ren) en la base de datos.",
+        color: "#00ff66", // Turbo Green
+      };
+    }
     return null;
   };
 

@@ -325,6 +325,82 @@ export function EditorBubbleVisualsForm({
             <span className="text-[10px]">Grande</span>
           </button>
         </div>
+
+        {/* Border Radius / Curvatura de Esquinas Slider & Presets */}
+        <div className="flex flex-col gap-2 pt-2.5 border-t border-emerald-500/20">
+          <div className="flex justify-between items-center text-xs font-bold text-emerald-200">
+            <span>🔲 Redondeado de Esquinas (Curvatura):</span>
+            <span className="font-mono text-emerald-400 font-bold">
+              {bubble.borderRadius !== undefined ? `${bubble.borderRadius}px` : "Defecto"}
+            </span>
+            {bubble.borderRadius !== undefined && (
+              <button
+                type="button"
+                onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { borderRadius: undefined })}
+                className="text-[10px] text-red-400 hover:underline font-bold cursor-pointer"
+              >
+                Reset
+              </button>
+            )}
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="40"
+            step="1"
+            value={bubble.borderRadius ?? 18}
+            onChange={(e) =>
+              handleUpdateBubble(activePanelIdx, activeBubbleIdx, { borderRadius: parseInt(e.target.value) })
+            }
+            className="w-full accent-emerald-500 cursor-pointer h-1.5"
+          />
+          <div className="grid grid-cols-4 gap-1">
+            <button
+              type="button"
+              onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { borderRadius: 0 })}
+              className={`px-1 py-1 border text-[10px] font-bold rounded transition-all cursor-pointer ${
+                bubble.borderRadius === 0
+                  ? "bg-emerald-600 border-emerald-300 text-white shadow-sm"
+                  : "bg-emerald-950/40 border-emerald-500/20 text-emerald-300 hover:bg-emerald-900/40"
+              }`}
+            >
+              0px (Recto ⬛)
+            </button>
+            <button
+              type="button"
+              onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { borderRadius: 8 })}
+              className={`px-1 py-1 border text-[10px] font-bold rounded transition-all cursor-pointer ${
+                bubble.borderRadius === 8
+                  ? "bg-emerald-600 border-emerald-300 text-white shadow-sm"
+                  : "bg-emerald-950/40 border-emerald-500/20 text-emerald-300 hover:bg-emerald-900/40"
+              }`}
+            >
+              8px (Suave)
+            </button>
+            <button
+              type="button"
+              onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { borderRadius: 18 })}
+              className={`px-1 py-1 border text-[10px] font-bold rounded transition-all cursor-pointer ${
+                bubble.borderRadius === 18
+                  ? "bg-emerald-600 border-emerald-300 text-white shadow-sm"
+                  : "bg-emerald-950/40 border-emerald-500/20 text-emerald-300 hover:bg-emerald-900/40"
+              }`}
+            >
+              18px (Norm)
+            </button>
+            <button
+              type="button"
+              onClick={() => handleUpdateBubble(activePanelIdx, activeBubbleIdx, { borderRadius: 32 })}
+              className={`px-1 py-1 border text-[10px] font-bold rounded transition-all cursor-pointer ${
+                bubble.borderRadius === 32
+                  ? "bg-emerald-600 border-emerald-300 text-white shadow-sm"
+                  : "bg-emerald-950/40 border-emerald-500/20 text-emerald-300 hover:bg-emerald-900/40"
+              }`}
+            >
+              32px (Píldora)
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* CARD 4: 🔤 TIPOGRAFÍA, COLORES Y DISEÑO (Sky/Blue Theme) */}

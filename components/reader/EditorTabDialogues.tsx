@@ -505,6 +505,26 @@ export function EditorTabDialogues({
                   className="w-full accent-[#e8185a] cursor-pointer"
                 />
               </div>
+
+              <div className="flex flex-col gap-1">
+                <div className="flex justify-between items-center text-xs font-bold text-zinc-300">
+                  <span>Curvatura Esquinas (Redondeado):</span>
+                  <span className="font-mono text-[#e8185a] font-bold">
+                    {bubble.borderRadius !== undefined ? `${bubble.borderRadius}px` : "Defecto"}
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="40"
+                  step="1"
+                  value={bubble.borderRadius ?? 18}
+                  onChange={(e) =>
+                    handleUpdateBubble(activePanelIdx, activeBubbleIdx, { borderRadius: parseInt(e.target.value) })
+                  }
+                  className="w-full accent-[#e8185a] cursor-pointer"
+                />
+              </div>
             </div>
           </div>
         )}

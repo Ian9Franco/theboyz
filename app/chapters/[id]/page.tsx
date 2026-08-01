@@ -32,7 +32,10 @@ export default function ChapterPage() {
       "kenji",
       "mativerse-chapter-one",
       "pecados de brooklyn-la mentira",
-      "la caceria"
+      "la caceria",
+      "el mecanico. la piloto, el contrabandista y el robot",
+      "el-mecanico-la-piloto-el-contrabandista-y-el-robot",
+      "el mecanico"
     ];
     if (triggerChapters.includes(id.toLowerCase().trim())) {
       try {
