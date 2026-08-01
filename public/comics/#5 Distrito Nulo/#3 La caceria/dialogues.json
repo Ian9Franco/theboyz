@@ -3443,7 +3443,7 @@
     {
       "id": "track-1784006664676-6uwxy",
       "layer": "music",
-      "src": "/sounds/tracks/NF - The Search-Trimmed by FlexClip.mp3",
+      "src": "/sounds/tracks/NF - The Search.mp3",
       "startPageKey": "32",
       "startPanelIdx": 2,
       "stopTrigger": {
@@ -3461,7 +3461,7 @@
     {
       "id": "track-1784007532015-thj69",
       "layer": "music",
-      "src": "/sounds/tracks/Three Days Grace - Animal I Have Become (Lyrics).mp3",
+      "src": "/sounds/tracks/Three Days Grace - Animal I Have Become.mp3",
       "startPageKey": "16",
       "startPanelIdx": 0,
       "stopTrigger": {
@@ -3517,7 +3517,7 @@
     {
       "id": "track-1784036065518-rbmw7",
       "layer": "music",
-      "src": "/sounds/tracks/New Order - Confusion (Pump Panel Reconstruction Mix)-Trimmed by FlexClip.mp3",
+      "src": "/sounds/tracks/New Order - Confusion (Pump Panel Mix).mp3",
       "startPageKey": "66",
       "startPanelIdx": 1,
       "stopTrigger": {

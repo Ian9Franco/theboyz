@@ -1189,6 +1189,14 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 60, "w": 100, "h": 40 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/autos/auto arancando.mp3",
+              "soundConfig": {
+                "volume": 0.7
+              }
+            }
           ]
         }
       ]
@@ -1198,31 +1206,35 @@
         {
           "focusY": 0.18,
           "dialogue": [
-            { "text": "Verificación de chasis y componentes. Taller Mori aprobado para grilla.", "speaker": "TECNICO KUROGANE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 20, "posY": 10, "tailX": 40, "tailY": 18, "tailWidth": 6, "tailCurvature": -22, "width": 280, "fontSize": 8, "borderRadius": 18 }
+            { "text": "van a venir a examinar", "speaker": "TECNICO KUROGANE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 5, "posY": 25, "tailX": 15, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 280, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.43,
           "dialogue": [
-            { "text": "Nos tienen en la mira... No les gusta que hayamos llegado hasta acá.", "speaker": "REN", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 25, "posY": 38, "tailX": 45, "tailY": 44, "tailWidth": 6, "tailCurvature": -22, "width": 270, "fontSize": 8, "borderRadius": 18 }
+            { "text": "necesitamos la llave", "speaker": "REN", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 65, "posY": 40, "tailX": 35, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 270, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.61,
           "dialogue": [
-            { "text": "Alineación en puesto cuatro. No bloqueen el carril de inspección.", "speaker": "TECNICO KUROGANE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 20, "posY": 56, "tailX": 40, "tailY": 62, "tailWidth": 6, "tailCurvature": -22, "width": 270, "fontSize": 8, "borderRadius": 18 }
+            { "text": "sin presion ", "speaker": "TECNICO KUROGANE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 0, "posY": 65, "tailX": 15, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 270, "fontSize": 8, "borderRadius": 18 },
+            { "text": "yo? si algo falla te mato", "size": "small", "posX": 45, "posY": 50, "tailX": 40, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.77,
           "dialogue": [
-            { "text": "BYTE, cerrá escotilla. Nos acomodamos en la grilla.", "speaker": "BROOKE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 25, "posY": 72, "tailX": 45, "tailY": 78, "tailWidth": 6, "tailCurvature": -22, "width": 260, "fontSize": 8, "borderRadius": 18 }
+            { "text": "acordate, la ultima curva no aceleres", "speaker": "BROOKE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 0, "posY": 80, "tailX": 20, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 260, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.92,
           "dialogue": [
-            { "text": "Cero distracciones ahora.", "speaker": "BROOKE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 30, "posY": 88, "tailX": 50, "tailY": 94, "tailWidth": 6, "tailCurvature": -22, "width": 200, "fontSize": 8, "borderRadius": 18 }
+            { "text": "a mi no me vas a decir como correr", "speaker": "BROOKE", "showSpeakerName": true, "offscreen": true, "size": "small", "posX": 90, "posY": 95, "tailX": 105, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 200, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 85, "w": 100, "h": 15 }
           ]
         }
       ]
@@ -1231,21 +1243,32 @@
       "panels": [
         {
           "focusY": 0.25,
-          "dialogue": [
-            { "text": "¿El viejo Mori sigue corriendo con esa chatarra? Hoy pierden el taller.", "speaker": "RIVAL", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 20, "posY": 10, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 270, "fontSize": 8, "borderRadius": 18 }
-          ]
-        },
-        {
-          "focusY": 0.6,
-          "dialogue": [
-            { "text": "Hablan mucho antes de que se apague el semáforo...", "speaker": "BROOKE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 25, "posY": 45, "tailX": 45, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 260, "fontSize": 8, "borderRadius": 18 }
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 51, "h": 27 },
+            { "x": 0, "y": 27, "w": 51, "h": 26 },
+            { "x": 51, "y": 0, "w": 49, "h": 27 },
+            { "x": 51, "y": 27, "w": 49, "h": 26 }
           ]
         },
         {
           "focusY": 0.88,
           "dialogue": [
-            { "text": "¡Modo carrera activado! ¡Ajuste de visera listo!", "speaker": "BYTE", "style": "electronic", "showSpeakerName": true, "offscreen": true, "size": "small", "posX": 20, "posY": 78, "tailX": 35, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 250, "fontSize": 8, "borderRadius": 4 },
-            { "text": "Vengan de a uno.", "speaker": "BROOKE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 65, "posY": 80, "tailX": 80, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 180, "fontSize": 8, "borderRadius": 18 }
+            { "text": "¡Modo carrera activado!", "speaker": "BYTE", "style": "electronic", "showSpeakerName": true, "offscreen": true, "size": "small", "posX": 20, "posY": 78, "tailX": 35, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 250, "fontSize": 8, "borderRadius": 4 },
+            { "text": "ponete el cinturon enano", "speaker": "BROOKE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 84, "posY": 78, "tailX": 62, "tailY": 74, "tailWidth": 6, "tailCurvature": -22, "width": 180, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 54, "w": 100, "h": 46 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/autos/calentando motor.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.7,
+                "playbackRate": 1
+              }
+            }
           ]
         }
       ]
@@ -1253,27 +1276,39 @@
     "43": {
       "panels": [
         {
-          "focusY": 0.18,
+          "focusY": 0.16,
           "dialogue": [
             { "text": "Toda la grilla lista... La tensión es absoluta.", "speaker": "IAN", "style": "thought", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 20, "posY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 250, "fontSize": 8, "borderRadius": 0, "tail": "none" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 28.5 }
           ]
         },
         {
           "focusY": 0.42,
           "dialogue": [
-            { "text": "Atenta al verde, Brooke. Dalos vuelta.", "speaker": "DAICHI", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 25, "posY": 38, "tailX": 45, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 8, "borderRadius": 18 }
+            { "text": "el naranja parece rapido", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 98, "posY": 34, "tailX": 80, "tailY": 44, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 8, "borderRadius": 18, "style": "electronic" },
+            { "text": "ya lo vi", "size": "small", "posX": 58, "posY": 32, "tailX": 46, "tailY": 38, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "oh", "style": "electronic", "size": "small", "posX": 60, "posY": 50, "tailX": 54, "tailY": 58, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 29.5, "w": 100, "h": 36 }
           ]
         },
         {
           "focusY": 0.68,
           "dialogue": [
-            { "text": "Sostenete, BYTE...", "speaker": "BROOKE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 25, "posY": 62, "tailX": 45, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 200, "fontSize": 8, "borderRadius": 18 }
+            { "text": "espero que no se pase de rosca", "speaker": "BROOKE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 25, "posY": 62, "tailX": 45, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 200, "fontSize": 8, "borderRadius": 18 },
+            { "text": "ya esta pasada de rosca", "size": "small", "posX": 94, "posY": 66, "tailX": 78, "tailY": 72, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.9,
           "dialogue": [
             { "text": "¡Acá vamos!", "speaker": "BROOKE", "showSpeakerName": false, "offscreen": false, "size": "small", "posX": 30, "posY": 85, "tailX": 50, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 180, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 80, "w": 100, "h": 20 }
           ]
         }
       ]
@@ -1283,16 +1318,32 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "BROOKE:\nEl R35 responde bien en rectas, pero la dirección pide atención.", "speaker": "BROOKE", "size": "small", "posX": 25, "posY": 15, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 8, "borderRadius": 18 }
+            { "text": "AHORA!", "speaker": "BROOKE", "size": "small", "posX": 84, "posY": 10, "tailX": 80, "tailY": 18, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 8, "borderRadius": 18, "style": "electronic" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 22 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 20, "w": 100, "h": 80 }
+          ]
         },
         {
           "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [],
+          "sounds": [
+            {
+              "sound": "/sounds/autos/auto pasando.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.4,
+                "playbackRate": 1
+              }
+            }
+          ]
         }
       ]
     },
@@ -1300,17 +1351,24 @@
       "panels": [
         {
           "focusY": 0.2,
-          "dialogue": [
-            { "text": "BROOKE:\nEl R35 responde bien en rectas, pero la dirección pide atención.", "speaker": "BROOKE", "size": "small", "posX": 25, "posY": 15, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 8, "borderRadius": 18 }
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 54 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 54, "w": 100, "h": 18 }
+          ]
         },
         {
           "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 70, "w": 100, "h": 30 }
+          ]
         }
       ]
     },
@@ -1318,20 +1376,28 @@
       "panels": [
         {
           "focusY": 0.2,
-          "dialogue": [
-            { "text": "IAN:\nHay un pico anómalo en la temperatura del agua. +15° en tres segundos.", "speaker": "IAN", "size": "small", "posX": 25, "posY": 15, "tailX": 45, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 8, "borderRadius": 18 }
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 42 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "DAICHI:\nImposible, el radiador es nuevo.", "speaker": "DAICHI", "size": "small", "posX": 65, "posY": 45, "tailX": 75, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 8, "borderRadius": 18 }
+            { "text": "velocidad!", "size": "small", "posX": 94, "posY": 48, "tailX": 78, "tailY": 54, "tailWidth": 6, "tailCurvature": -22, "width": 190, "fontSize": 8, "borderRadius": 18, "style": "electronic" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 42, "w": 100, "h": 35 }
           ]
         },
         {
           "focusY": 0.8,
           "dialogue": [
-            { "text": "IAN:\nAlguien alteró la frecuencia del termostato electrónico en boxes.", "speaker": "IAN", "size": "small", "posX": 30, "posY": 75, "tailX": 50, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 8, "borderRadius": 18 }
+            { "text": "como la ves?", "size": "small", "posX": 40, "posY": 76, "tailX": 38, "tailY": 84, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "El R35 responde bien en rectas, pero la dirección esta floja", "size": "small", "posX": 88, "posY": 80, "tailX": 58, "tailY": 82, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 76, "w": 100, "h": 24 }
           ]
         }
       ]
@@ -1341,16 +1407,29 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "IAN:\nTelemetría por radio: presiones al límite, manteniendo margen.", "speaker": "IAN", "size": "small", "posX": 25, "posY": 15, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
+            { "text": "me escuchan?", "speaker": "IAN", "size": "small", "posX": 10, "posY": 12, "tailX": 40, "tailY": 8, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 30 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 30, "w": 100, "h": 49 }
+          ]
         },
         {
           "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [
+            { "text": "si, aca estoy", "size": "small", "posX": 50, "posY": 80, "tailX": 36, "tailY": 88, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Siento el volante flojo", "speaker": "Brooke", "style": "thought", "size": "small", "posX": 96, "posY": 80, "tailX": 80, "tailY": 86, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "vas a tener qeu tener cuidado en las curvas entonces", "size": "small", "posX": 36, "posY": 68, "tailX": 30, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 78, "w": 100, "h": 22 }
+          ]
         }
       ]
     },
@@ -1359,16 +1438,38 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "IAN:\nTelemetría por radio: presiones al límite, manteniendo margen.", "speaker": "IAN", "size": "small", "posX": 25, "posY": 15, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
+            { "text": "no me digas!", "speaker": "IAN", "size": "small", "posX": 76, "posY": 8, "tailX": 62, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 35 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [
+            { "text": "PRIMERA VUELTA!", "style": "electronic", "size": "small", "posX": 74, "posY": 40, "tailX": 54, "tailY": 46, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" },
+            { "text": "SI SI YA SE", "size": "small", "posX": 6, "posY": 42, "tailX": 26, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 34, "w": 100, "h": 21 }
+          ]
         },
         {
-          "focusY": 0.8,
-          "dialogue": []
+          "focusY": 0.68,
+          "dialogue": [
+            { "text": "ESO PODRIA SER UN PROBLEMA", "size": "small", "posX": 82, "posY": 58, "tailX": 66, "tailY": 64, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "ya paso las curvas dificiles, no lo creo", "size": "small", "posX": 8, "posY": 62, "tailX": 28, "tailY": 62, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 55.5, "w": 100, "h": 21 }
+          ]
+        },
+        {
+          "focusY": 0.92,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 75, "w": 100, "h": 25 }
+          ]
         }
       ]
     },
@@ -1377,16 +1478,32 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "IAN:\nTelemetría por radio: presiones al límite, manteniendo margen.", "speaker": "IAN", "size": "small", "posX": 25, "posY": 15, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
+            { "text": "byte, lo puedo pasar? adelante hay mas autos?", "speaker": "IAN", "size": "small", "posX": 52, "posY": 4, "tailX": 36, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 },
+            { "text": "si, esta es la ultima curva! no hay autoas delante!", "style": "electronic", "size": "small", "posX": 4, "posY": 16, "tailX": 22, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 27 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [
+            { "text": "es la recta que dijo elias!", "style": "electronic", "size": "small", "posX": 24, "posY": 32, "tailX": 38, "tailY": 42, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" },
+            { "text": "entonces es ahora", "size": "small", "posX": 86, "posY": 42, "tailX": 64, "tailY": 42, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 28, "w": 100, "h": 38 }
+          ]
         },
         {
           "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [
+            { "text": "AHORA!", "style": "scream", "size": "small", "posX": -4, "posY": 78, "tailX": 18, "tailY": 74, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" },
+            { "text": "VAMOS!", "style": "electronic", "size": "small", "posX": 72, "posY": 72, "tailX": 70, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 66, "w": 100, "h": 34 }
+          ]
         }
       ]
     },
@@ -1395,19 +1512,46 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "BROOKE:\nEl auto de Kurogane está tapando todas las salidas.", "speaker": "BROOKE", "size": "small", "posX": 25, "posY": 15, "tailX": 45, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 220, "fontSize": 8, "borderRadius": 18 }
+            { "text": "AGARRENSE LAS TANGAS TWINKS", "style": "scream", "size": "small", "posX": 0, "posY": 18, "tailX": 20, "tailY": 12, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 22 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": [
-            { "text": "IAN:\nEn la curva 5 podés usar el mapa de sobrepresión por cuatro segundos.", "speaker": "IAN", "size": "small", "posX": 65, "posY": 45, "tailX": 75, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 8, "borderRadius": 18 }
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 22, "w": 100, "h": 49 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/autos/auto arancando.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 1,
+                "playbackRate": 1.3
+              }
+            }
           ]
         },
         {
           "focusY": 0.8,
           "dialogue": [
-            { "text": "DAICHI:\nEso va a liquidar la junta de tapa, Ian.", "speaker": "DAICHI", "size": "small", "posX": 30, "posY": 75, "tailX": 50, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 210, "fontSize": 8, "borderRadius": 18 }
+            { "text": "NOS VIMOS EN DISNEY", "size": "small", "posX": 76, "posY": 74, "tailX": 58, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 210, "fontSize": 8, "borderRadius": 18, "style": "scream" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 74, "w": 100, "h": 26 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/autos/auto pasando.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 1,
+                "playbackRate": 1
+              }
+            }
           ]
         }
       ]
@@ -1415,18 +1559,18 @@
     "51": {
       "panels": [
         {
-          "focusY": 0.2,
-          "dialogue": [
-            { "text": "IAN:\nTelemetría por radio: presiones al límite, manteniendo margen.", "speaker": "IAN", "size": "small", "posX": 25, "posY": 15, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
+          "focusY": 0.16,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 51 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
-        },
-        {
-          "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 52, "w": 100, "h": 48 }
+          ]
         }
       ]
     },
@@ -1434,17 +1578,39 @@
       "panels": [
         {
           "focusY": 0.2,
-          "dialogue": [
-            { "text": "IAN:\nTelemetría por radio: presiones al límite, manteniendo margen.", "speaker": "IAN", "size": "small", "posX": 25, "posY": 15, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 49 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [
+            { "text": "aggh no puede estar pisandome los talones una mina", "size": "small", "posX": 94, "posY": 54, "tailX": 80, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 50, "w": 100, "h": 25 }
+          ]
         },
         {
           "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [
+            { "text": "lo puede pasar", "size": "small", "posX": 68, "posY": 76, "tailX": 52, "tailY": 82, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "si, es ahora o nunca", "size": "small", "posX": 2, "posY": 74, "tailX": 28, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 74, "w": 100, "h": 26 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/autos/auto pasa.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.8,
+                "playbackRate": 1
+              }
+            }
+          ]
         }
       ]
     },
@@ -1453,16 +1619,35 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "IAN:\nTelemetría por radio: presiones al límite, manteniendo margen.", "speaker": "IAN", "size": "small", "posX": 25, "posY": 15, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
+            { "text": "MAXIMA VELOCIDAD!", "size": "small", "posX": 10, "posY": 14, "tailX": 24, "tailY": 8, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18, "style": "electronic" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 29 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 28, "w": 100, "h": 49 }
+          ]
         },
         {
           "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 76, "w": 100, "h": 24 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/autos/gtr2.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 1,
+                "playbackRate": 1
+              }
+            }
+          ]
         }
       ]
     },
@@ -1471,16 +1656,29 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "IAN:\nTelemetría por radio: presiones al límite, manteniendo margen.", "speaker": "IAN", "size": "small", "posX": 25, "posY": 15, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
+            { "text": "me sale humo!", "size": "small", "posX": 86, "posY": 10, "tailX": 62, "tailY": 22, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 43 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [
+            { "text": "esa porqueria va a explotar", "size": "small", "posX": 98, "posY": 40, "tailX": 92, "tailY": 54, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 44, "w": 100, "h": 25 }
+          ]
         },
         {
           "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [
+            { "text": "es una fuga de presion!", "size": "small", "posX": 32, "posY": 66, "tailX": 26, "tailY": 74, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 66, "w": 100, "h": 34 }
+          ]
         }
       ]
     },
@@ -1489,16 +1687,28 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "IAN:\nTelemetría por radio: presiones al límite, manteniendo margen.", "speaker": "IAN", "size": "small", "posX": 25, "posY": 15, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
+            { "text": "oh no", "style": "electronic", "size": "small", "posX": 10, "posY": 8, "tailX": 22, "tailY": 12, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 35 }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 34, "w": 100, "h": 33 }
+          ]
         },
         {
           "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [
+            { "text": "Byte, escuchame, girate, y solda el caño numero 4", "size": "small", "posX": 44, "posY": 66, "tailX": 28, "tailY": 76, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "entendido!", "style": "electronic", "size": "small", "posX": 96, "posY": 66, "tailX": 96, "tailY": 74, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 67.5, "w": 100, "h": 32.5 }
+          ]
         }
       ]
     },
@@ -1506,17 +1716,27 @@
       "panels": [
         {
           "focusY": 0.2,
-          "dialogue": [
-            { "text": "IAN:\nTelemetría por radio: presiones al límite, manteniendo margen.", "speaker": "IAN", "size": "small", "posX": 25, "posY": 15, "tailX": 40, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
-          ]
+          "dialogue": []
         },
         {
           "focusY": 0.5,
-          "dialogue": []
+          "dialogue": [
+            { "text": "apurate enano", "size": "small", "posX": 56, "posY": 26, "tailX": 40, "tailY": 38, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "ya casi", "style": "electronic", "size": "small", "posX": 84, "posY": 32, "tailX": 76, "tailY": 42, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" },
+            { "text": "ya casiii", "style": "electronic", "size": "small", "posX": 50, "posY": 50, "tailX": 18, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 30, "w": 100, "h": 45 }
+          ]
         },
         {
           "focusY": 0.8,
-          "dialogue": []
+          "dialogue": [
+            { "text": "LISTO!", "style": "electronic", "size": "small", "posX": 30, "posY": 78, "tailX": 40, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 74, "w": 100, "h": 26 }
+          ]
         }
       ]
     },
@@ -1524,20 +1744,26 @@
       "panels": [
         {
           "focusY": 0.2,
-          "dialogue": [
-            { "text": "El GT-R cruza la línea de meta por escasos centímetros.", "size": "small", "posX": 20, "posY": 15, "width": 250, "fontSize": 8, "borderRadius": 0, "tail": "none" }
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 30 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "BYTE:\n¡Victoria confirmada! P1 para el equipo.", "speaker": "BYTE", "size": "small", "posX": 60, "posY": 45, "tailX": 75, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 210, "fontSize": 8, "borderRadius": 18, "showSpeakerName": true, "offscreen": true }
+            { "text": "LE PISAMOS LOS TALONES BYTE", "size": "small", "posX": 90, "posY": 30, "tailX": 76, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 210, "fontSize": 8, "borderRadius": 18, "showSpeakerName": false, "offscreen": false },
+            { "text": "SII", "style": "electronic", "size": "small", "posX": 10, "posY": 42, "tailX": 26, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 30, "w": 100, "h": 41 }
           ]
         },
         {
           "focusY": 0.8,
-          "dialogue": [
-            { "text": "REN:\n¡Lo logramos!", "speaker": "REN", "size": "small", "posX": 25, "posY": 75, "tailX": 45, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 72, "w": 100, "h": 28 }
           ]
         }
       ]
@@ -1547,19 +1773,19 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "BROOKE:\n¡No tengo frenos! ¡La dirección no responde!", "speaker": "BROOKE", "size": "small", "posX": 25, "posY": 15, "tailX": 45, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
+            { "text": "YA LOS TENES BROOKE, NO PISES A FONDO, CONTROLA LAS SALIDAS", "speaker": "BROOKE", "size": "small", "posX": 68, "posY": 30, "tailX": 62, "tailY": 38, "tailWidth": 6, "tailCurvature": -22, "width": 230, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 59 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "IAN:\n¡La presión hidráulica colapsó a cero!", "speaker": "IAN", "size": "small", "posX": 65, "posY": 45, "tailX": 75, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 210, "fontSize": 8, "borderRadius": 18 }
-          ]
-        },
-        {
-          "focusY": 0.8,
-          "dialogue": [
-            { "text": "DAICHI:\n¡Brooke, el freno de mano no!", "speaker": "DAICHI", "size": "small", "posX": 30, "posY": 75, "tailX": 50, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 200, "fontSize": 8, "borderRadius": 18 }
+            { "text": "no me vas a decir cuando pisar", "size": "small", "posX": 68, "posY": 66, "tailX": 52, "tailY": 72, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 58, "w": 100, "h": 42 }
           ]
         }
       ]
@@ -1569,19 +1795,28 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "BROOKE:\nBuscando ángulo de impacto...", "speaker": "BROOKE", "size": "small", "posX": 25, "posY": 15, "tailX": 45, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 200, "fontSize": 8, "borderRadius": 18 }
+            { "text": "lo logro?!", "speaker": "BROOKE", "size": "small", "posX": 22, "posY": -2, "tailX": 32, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 200, "fontSize": 8, "borderRadius": 18 },
+            { "text": "no la veo frenar", "size": "small", "posX": 66, "posY": 0, "tailX": 58, "tailY": 14, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 27 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "IAN:\n¡Apuntá a las protecciones de neumáticos a la izquierda!", "speaker": "IAN", "size": "small", "posX": 65, "posY": 45, "tailX": 75, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 8, "borderRadius": 18 }
+            { "text": "NO HAY FRENOS!", "speaker": "IAN", "size": "small", "posX": 100, "posY": 46, "tailX": 80, "tailY": 42, "tailWidth": 6, "tailCurvature": -22, "width": 240, "fontSize": 8, "borderRadius": 18, "style": "electronic" },
+            { "text": "YA ME DI CUENTA ENANO!", "size": "small", "posX": 0, "posY": 42, "tailX": 30, "tailY": 32, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 28, "w": 100, "h": 49 }
           ]
         },
         {
           "focusY": 0.8,
-          "dialogue": [
-            { "text": "Brooke fuerza el volante resistiendo la falla mecánica total.", "size": "small", "posX": 20, "posY": 75, "width": 250, "fontSize": 8, "borderRadius": 0, "tail": "none" }
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 76, "w": 100, "h": 24 }
           ]
         }
       ]
@@ -1590,9 +1825,7 @@
       "panels": [
         {
           "focusY": 0.2,
-          "dialogue": [
-            { "text": "El coche se cruza de costado dirigiéndose inevitablemente hacia la barrera.", "size": "small", "posX": 20, "posY": 15, "width": 270, "fontSize": 8, "borderRadius": 0, "tail": "none" }
-          ]
+          "dialogue": []
         },
         {
           "focusY": 0.5,
@@ -2342,6 +2575,26 @@
       },
       "soundConfig": {
         "volume": 0.35,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1785613010303-ru27s",
+      "layer": "music",
+      "src": "/sounds/tracks/Usher - Yeah! (Zusebi Remix) ft. Lil Jon, Ludacris.mp3",
+      "title": "Yeah! (Zusebi Remix) ft. Lil Jon, Ludacris",
+      "artist": "Usher",
+      "startPageKey": "42",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "60"
+      },
+      "soundConfig": {
+        "volume": 0.45,
         "playbackRate": 1,
         "loop": true,
         "fadeIn": 1000,

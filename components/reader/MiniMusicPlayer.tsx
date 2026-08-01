@@ -15,12 +15,19 @@ export function parseTrackMeta(track: AudioTrack) {
   if (!title || !artist) {
     const rawFileName = track.src.split("/").pop() || "";
     // Clean extension and URL parameters
-    const cleanName = decodeURIComponent(rawFileName.split("?")[0]).replace(/\.[^/.]+$/, "");
+    let cleanName = decodeURIComponent(rawFileName.split("?")[0]).replace(/\.[^/.]+$/, "");
+
+    // Strip common clutter (e.g. (Lyrics), (Official Audio), -Trimmed by FlexClip, etc.)
+    cleanName = cleanName
+      .replace(/-Trimmed by FlexClip/gi, "")
+      .replace(/\s*[\(\[](Official Audio|Official Video|OFFICIAL INSTRUMENTAL|Instrumental|Lyrics|Audio|FULL|Kendrick Diss|saturado|BassBoosted)[\)\]]/gi, "")
+      .replace(/\s+/g, " ")
+      .trim();
 
     if (cleanName.includes(" - ")) {
       const parts = cleanName.split(" - ");
       if (!artist) artist = parts[0].trim();
-      if (!title) title = parts[1].trim();
+      if (!title) title = parts.slice(1).join(" - ").trim();
     } else {
       if (!title) title = cleanName;
       if (!artist) artist = "Música";
