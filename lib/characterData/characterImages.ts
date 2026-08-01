@@ -32,6 +32,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "fichas": [
     ]
   },
+  "ar_cnido_mutante": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
   "archon": {
     "portada": null,
     "portadas": [
@@ -581,6 +589,14 @@ export const characterImages: Record<string, CharacterImages> = {
       "/personajes/Fichas/entidades/Terrorblade/Terrorblade_ficha.webp",
     ]
   },
+  "tinker": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
   "tiny": {
     "portada": null,
     "portadas": [
@@ -640,8 +656,9 @@ export const characterImages: Record<string, CharacterImages> = {
     "portadas": [
       "/personajes/PORTADAS/Volvo/Outrider.webp",
     ],
-    "ficha": "/personajes/Fichas/Boyz/OUTRIDER/OUTRIDER_ficha.webp",
+    "ficha": "/personajes/Fichas/Boyz/OUTRIDER/OUTRIDER_Old_ficha.webp",
     "fichas": [
+      "/personajes/Fichas/Boyz/OUTRIDER/OUTRIDER_Old_ficha.webp",
       "/personajes/Fichas/Boyz/OUTRIDER/OUTRIDER_ficha.webp",
     ]
   },

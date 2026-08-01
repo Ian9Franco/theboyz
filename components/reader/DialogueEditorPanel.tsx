@@ -5,6 +5,8 @@ import type { DialogueLine } from "./DialogueBubble";
 import type { AudioTrack, Dialogues, PanelSound } from "./audioPlayer";
 import { EditorTabSettings } from "./EditorTabSettings";
 import { EditorTabPanels } from "./EditorTabPanels";
+import { EditorTabStops } from "./EditorTabStops";
+import { EditorTabMasks } from "./EditorTabMasks";
 import { EditorTabDialogues } from "./EditorTabDialogues";
 import { EditorAudioTracks } from "./EditorAudioTracks";
 
@@ -39,6 +41,8 @@ export interface ChapterSettings {
 export interface DialogueEditorPanelProps {
   mode: "read" | "edit";
   currentPanels: PanelConfig[];
+  activeLayer?: "paradas" | "mascaras" | "dialogos";
+  setActiveLayer?: (layer: "paradas" | "mascaras" | "dialogos") => void;
   activePanelIdx: number;
   activeBubbleIdx: number | null;
   pageIdx: number;
@@ -81,11 +85,13 @@ export interface DialogueEditorPanelProps {
 /**
  * DialogueEditorPanel Component
  * Main sidebar controller for editing panels, dialogues, and chapter settings.
- * Relies on EditorTabSettings, EditorTabPanels, and EditorTabDialogues subcomponents.
+ * Relies on EditorTabSettings, EditorTabStops, EditorTabMasks, and EditorTabDialogues subcomponents.
  */
 export function DialogueEditorPanel({
   mode,
   currentPanels,
+  activeLayer = "dialogos",
+  setActiveLayer,
   activePanelIdx,
   activeBubbleIdx,
   pageIdx,
@@ -313,122 +319,171 @@ export function DialogueEditorPanel({
         </button>
       </div>
 
-      {/* Preset Mode Selector */}
-      <div className="p-4 border-b border-white/10 bg-[#12121c] flex items-center justify-between gap-2">
-        <span className="text-xs text-zinc-400 font-bold uppercase tracking-wider">
-          Modo de Edición:
-        </span>
-        <div className="flex bg-[#0a0a0f] p-0.5 rounded border border-white/10">
-          <button
-            type="button"
-            onClick={() => setPresetMode("standard")}
-            className={`px-3 py-1 text-xs font-bold rounded transition-all cursor-pointer ${
-              presetMode === "standard"
-                ? "bg-[#e8185a] text-white"
-                : "text-zinc-400 hover:text-white"
-            }`}
-          >
-            Estándar
-          </button>
-          <button
-            type="button"
-            onClick={() => setPresetMode("custom")}
-            className={`px-3 py-1 text-xs font-bold rounded transition-all cursor-pointer ${
-              presetMode === "custom"
-                ? "bg-[#e8185a] text-white"
-                : "text-zinc-400 hover:text-white"
-            }`}
-          >
-            Personalizado
-          </button>
-        </div>
+      {/* 3-Layer Navigation Switcher */}
+      <div className="p-3 border-b border-white/10 bg-[#12121c] flex items-center justify-between gap-1.5 sticky top-0 z-20 shadow-md">
+        <button
+          type="button"
+          onClick={() => setActiveLayer?.("paradas")}
+          className={`flex-1 py-2 px-1.5 text-xs font-bold font-[var(--font-bangers)] tracking-wide rounded transition-all cursor-pointer flex items-center justify-center gap-1 ${
+            activeLayer === "paradas"
+              ? "bg-[#e8185a] text-white shadow-md border border-rose-400/40"
+              : "bg-[#0a0a0f] text-zinc-400 hover:text-white border border-white/10"
+          }`}
+        >
+          <span>📍 1. Paradas y SFX</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveLayer?.("mascaras")}
+          className={`flex-1 py-2 px-1.5 text-xs font-bold font-[var(--font-bangers)] tracking-wide rounded transition-all cursor-pointer flex items-center justify-center gap-1 ${
+            activeLayer === "mascaras"
+              ? "bg-[#e8185a] text-white shadow-md border border-rose-400/40"
+              : "bg-[#0a0a0f] text-zinc-400 hover:text-white border border-white/10"
+          }`}
+        >
+          <span>🎭 2. Máscaras</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveLayer?.("dialogos")}
+          className={`flex-1 py-2 px-1.5 text-xs font-bold font-[var(--font-bangers)] tracking-wide rounded transition-all cursor-pointer flex items-center justify-center gap-1 ${
+            activeLayer === "dialogos"
+              ? "bg-[#e8185a] text-white shadow-md border border-rose-400/40"
+              : "bg-[#0a0a0f] text-zinc-400 hover:text-white border border-white/10"
+          }`}
+        >
+          <span>💬 3. Diálogos</span>
+        </button>
       </div>
 
-      {/* Grid & Snapping Controls */}
-      <div className="p-4 border-b border-white/10 bg-[#161622] flex flex-col gap-2.5">
-        <span className="font-[var(--font-bangers)] text-sm text-zinc-300 tracking-wide">
-          📏 Cuadrícula y Alineación
-        </span>
-        <div className="flex items-center justify-between">
-          <label className="text-xs text-zinc-400 font-bold">Mostrar Grid:</label>
-          <input
-            type="checkbox"
-            checked={showGrid}
-            onChange={(e) => setShowGrid(e.target.checked)}
-            className="w-4 h-4 accent-[#e8185a] cursor-pointer"
-          />
-        </div>
-        <div className="flex items-center justify-between">
-          <label className="text-xs text-zinc-400 font-bold">Ajustar al Grid (Snap):</label>
-          <input
-            type="checkbox"
-            checked={snapToGrid}
-            onChange={(e) => setSnapToGrid(e.target.checked)}
-            className="w-4 h-4 accent-[#e8185a] cursor-pointer"
-          />
-        </div>
-        <div className="flex items-center justify-between gap-2">
-          <label className="text-xs text-zinc-400 font-bold">Paso del Grid (%):</label>
-          <select
-            value={gridSize}
-            onChange={(e) => setGridSize(parseInt(e.target.value))}
-            className="border border-white/10 px-2 py-1.5 text-xs font-mono rounded bg-[#0a0a0f] text-white focus:outline-none focus:ring-1 focus:ring-rose-500 cursor-pointer"
-          >
-            <option value="2">2%</option>
-            <option value="5">5% (Estándar)</option>
-            <option value="10">10%</option>
-          </select>
-        </div>
-      </div>
+      {/* Preset Mode & Grid Controls (Collapsible/compact header) */}
+      <details className="group border-b border-white/10 bg-[#14141e]">
+        <summary className="p-3 text-xs font-bold text-zinc-400 uppercase tracking-wider flex items-center justify-between cursor-pointer select-none hover:bg-white/5">
+          <span>📏 Opciones de Edición y Grid</span>
+          <span className="text-[10px] font-mono group-open:rotate-180 transition-transform">▼</span>
+        </summary>
+        <div className="p-3 border-t border-white/5 flex flex-col gap-3 bg-[#0a0a0f]/40">
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-xs text-zinc-400 font-bold">Modo de Edición:</span>
+            <div className="flex bg-[#0a0a0f] p-0.5 rounded border border-white/10">
+              <button
+                type="button"
+                onClick={() => setPresetMode("standard")}
+                className={`px-2.5 py-0.5 text-xs font-bold rounded transition-all cursor-pointer ${
+                  presetMode === "standard" ? "bg-[#e8185a] text-white" : "text-zinc-400 hover:text-white"
+                }`}
+              >
+                Estándar
+              </button>
+              <button
+                type="button"
+                onClick={() => setPresetMode("custom")}
+                className={`px-2.5 py-0.5 text-xs font-bold rounded transition-all cursor-pointer ${
+                  presetMode === "custom" ? "bg-[#e8185a] text-white" : "text-zinc-400 hover:text-white"
+                }`}
+              >
+                Personalizado
+              </button>
+            </div>
+          </div>
 
-      {/* Accordion: Global Settings Tab */}
-      {presetMode === "custom" && (
-        <EditorTabSettings
-          settings={settings}
-          handleUpdateSettings={handleUpdateSettings}
+          <div className="flex items-center justify-between">
+            <label className="text-xs text-zinc-400 font-bold">Mostrar Grid:</label>
+            <input
+              type="checkbox"
+              checked={showGrid}
+              onChange={(e) => setShowGrid(e.target.checked)}
+              className="w-4 h-4 accent-[#e8185a] cursor-pointer"
+            />
+          </div>
+
+          <div className="flex items-center justify-between">
+            <label className="text-xs text-zinc-400 font-bold">Ajustar al Grid (Snap):</label>
+            <input
+              type="checkbox"
+              checked={snapToGrid}
+              onChange={(e) => setSnapToGrid(e.target.checked)}
+              className="w-4 h-4 accent-[#e8185a] cursor-pointer"
+            />
+          </div>
+
+          <div className="flex items-center justify-between gap-2">
+            <label className="text-xs text-zinc-400 font-bold">Paso del Grid (%):</label>
+            <select
+              value={gridSize}
+              onChange={(e) => setGridSize(parseInt(e.target.value))}
+              className="border border-white/10 px-2 py-1 text-xs font-mono rounded bg-[#0a0a0f] text-white cursor-pointer"
+            >
+              <option value="2">2%</option>
+              <option value="5">5% (Estándar)</option>
+              <option value="10">10%</option>
+            </select>
+          </div>
+
+          {presetMode === "custom" && (
+            <EditorTabSettings
+              settings={settings}
+              handleUpdateSettings={handleUpdateSettings}
+            />
+          )}
+        </div>
+      </details>
+
+      {/* LAYER 1: PARADAS & AUDIO SFX */}
+      {activeLayer === "paradas" && (
+        <div className="flex flex-col gap-4">
+          <EditorTabStops
+            currentPanels={currentPanels}
+            activePanelIdx={activePanelIdx}
+            handleAddPanel={handleAddPanel}
+            setActivePanelIdx={setActivePanelIdx}
+            setActiveBubbleIdx={setActiveBubbleIdx}
+            handleRemovePanel={handleRemovePanel}
+            handleUpdatePanelParams={handleUpdatePanelParams}
+            handleReorderPanels={handleReorderPanels}
+          />
+          <div className="px-4 pb-4">
+            <EditorAudioTracks
+              audioTracks={localDialogues.audioTracks ?? []}
+              pages={pages}
+              localDialogues={localDialogues}
+              onUpdate={handleUpdateAudioTracks}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* LAYER 2: MÁSCARAS & ZOOM RECTS */}
+      {activeLayer === "mascaras" && (
+        <EditorTabMasks
+          currentPanels={currentPanels}
+          activePanelIdx={activePanelIdx}
+          setActivePanelIdx={setActivePanelIdx}
+          setActiveBubbleIdx={setActiveBubbleIdx}
+          handleUpdatePanelParams={handleUpdatePanelParams}
         />
       )}
 
-      {/* Accordion: Panels Stops Tab */}
-      <EditorTabPanels
-        currentPanels={currentPanels}
-        activePanelIdx={activePanelIdx}
-        activeBubbleIdx={activeBubbleIdx}
-        handleAddPanel={handleAddPanel}
-        setActivePanelIdx={setActivePanelIdx}
-        setActiveBubbleIdx={setActiveBubbleIdx}
-        handleRemovePanel={handleRemovePanel}
-        handleUpdatePanelParams={handleUpdatePanelParams}
-        handleAddBubble={handleAddBubble}
-        presetMode={presetMode}
-        handleReorderPanels={handleReorderPanels}
-        handleReorderBubbles={handleReorderBubbles}
-      />
-
-      {/* Accordion: Chapter-level Audio Tracks */}
-      <EditorAudioTracks
-        audioTracks={localDialogues.audioTracks ?? []}
-        pages={pages}
-        localDialogues={localDialogues}
-        onUpdate={handleUpdateAudioTracks}
-      />
-
-      {/* Active Dialogue Bubble Settings Panel */}
-      <div className="p-4 flex-1">
-        <EditorTabDialogues
-          currentPanels={currentPanels}
-          activePanelIdx={activePanelIdx}
-          activeBubbleIdx={activeBubbleIdx}
-          setActiveBubbleIdx={setActiveBubbleIdx}
-          handleAddBubble={handleAddBubble}
-          handleDuplicateBubble={handleDuplicateBubble}
-          handleRemoveBubble={handleRemoveBubble}
-          handleUpdateBubble={handleUpdateBubble}
-          presetMode={presetMode}
-          handleMoveBubbleToPanel={handleMoveBubbleToPanel}
-          handleReorderBubbles={handleReorderBubbles}
-        />
-      </div>
+      {/* LAYER 3: DIÁLOGOS & BUBBLES */}
+      {activeLayer === "dialogos" && (
+        <div className="p-4 flex-1">
+          <EditorTabDialogues
+            currentPanels={currentPanels}
+            activePanelIdx={activePanelIdx}
+            activeBubbleIdx={activeBubbleIdx}
+            setActiveBubbleIdx={setActiveBubbleIdx}
+            handleAddBubble={handleAddBubble}
+            handleDuplicateBubble={handleDuplicateBubble}
+            handleRemoveBubble={handleRemoveBubble}
+            handleUpdateBubble={handleUpdateBubble}
+            presetMode={presetMode}
+            handleMoveBubbleToPanel={handleMoveBubbleToPanel}
+            handleReorderBubbles={handleReorderBubbles}
+          />
+        </div>
+      )}
       </div>
     </>
   );

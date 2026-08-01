@@ -179,3 +179,54 @@ export function getPageKeyFromUrl(url: string | undefined): string {
   const basename = filename.split('.')[0];  // "12"
   return basename;
 }
+
+/**
+ * Magnetic snapping for zoom rects / masks.
+ * Snaps edges of `rect` to other rects or container bounds if within threshold percentage (default 10%).
+ */
+export function snapMaskRect(
+  rect: { x: number; y: number; w: number; h: number },
+  otherRects: { x: number; y: number; w: number; h: number }[],
+  threshold = 10
+): { x: number; y: number; w: number; h: number } {
+  let top = rect.y;
+  let bottom = rect.y + rect.h;
+  let left = rect.x;
+  let right = rect.x + rect.w;
+
+  // 1. Snap to container bounds
+  if (Math.abs(top - 0) <= threshold) top = 0;
+  if (Math.abs(bottom - 100) <= threshold) bottom = 100;
+  if (Math.abs(left - 0) <= threshold) left = 0;
+  if (Math.abs(right - 100) <= threshold) right = 100;
+
+  // 2. Snap to all other masks
+  for (const other of otherRects) {
+    const oTop = other.y;
+    const oBottom = other.y + other.h;
+    const oLeft = other.x;
+    const oRight = other.x + other.w;
+
+    // Vertical snapping
+    if (Math.abs(top - oBottom) <= threshold) top = oBottom;
+    else if (Math.abs(top - oTop) <= threshold) top = oTop;
+
+    if (Math.abs(bottom - oTop) <= threshold) bottom = oTop;
+    else if (Math.abs(bottom - oBottom) <= threshold) bottom = oBottom;
+
+    // Horizontal snapping
+    if (Math.abs(left - oRight) <= threshold) left = oRight;
+    else if (Math.abs(left - oLeft) <= threshold) left = oLeft;
+
+    if (Math.abs(right - oLeft) <= threshold) right = oLeft;
+    else if (Math.abs(right - oRight) <= threshold) right = oRight;
+  }
+
+  // Recalculate dimensions
+  const newY = top;
+  const newH = Math.max(2, bottom - top);
+  const newX = left;
+  const newW = Math.max(2, right - left);
+
+  return { x: newX, y: newY, w: newW, h: newH };
+}

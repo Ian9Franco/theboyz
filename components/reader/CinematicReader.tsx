@@ -114,6 +114,8 @@ export function CinematicReader({
 
   const {
     localDialogues,
+    activeLayer,
+    setActiveLayer,
     activePanelIdx,
     setActivePanelIdx,
     activeBubbleIdx,
@@ -620,6 +622,7 @@ export function CinematicReader({
     return (
       <DialogueLayers
         mode={mode}
+        activeLayer={activeLayer}
         localDialogues={localDialogues}
         showAllDialogues={showAllDialogues}
         zoomedOut={zoomedOut}
@@ -653,6 +656,7 @@ export function CinematicReader({
     );
   }, [
     mode,
+    activeLayer,
     localDialogues,
     showAllDialogues,
     zoomedOut,
@@ -742,6 +746,7 @@ export function CinematicReader({
         )}
         <ReaderCanvas
           mode={mode}
+          activeLayer={activeLayer}
           containerRef={containerRef}
           imgRef={imgRef}
           pages={pages}
@@ -793,6 +798,8 @@ export function CinematicReader({
 
         <DialogueEditorPanel
           mode={mode}
+          activeLayer={activeLayer}
+          setActiveLayer={setActiveLayer}
           currentPanels={currentPanels}
           activePanelIdx={activePanelIdx}
           activeBubbleIdx={activeBubbleIdx}

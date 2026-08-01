@@ -11,6 +11,7 @@ import {
 
 interface DialogueLayersProps {
   mode: "read" | "edit";
+  activeLayer?: "paradas" | "mascaras" | "dialogos";
   localDialogues: Dialogues;
   showAllDialogues: boolean;
   zoomedOut: boolean;
@@ -44,6 +45,7 @@ interface DialogueLayersProps {
 
 export function DialogueLayers({
   mode,
+  activeLayer = "dialogos",
   localDialogues,
   showAllDialogues,
   zoomedOut,
@@ -255,8 +257,10 @@ export function DialogueLayers({
     <>
       {currentPanels.flatMap((panel: PanelStop, pIdx: number) => {
         const dialogueList = panel.dialogue || [];
+        const isCurrentPanel = activePanelIdx === pIdx;
+
         return dialogueList.map((line, bIdx) => {
-          const isActive = activePanelIdx === pIdx && activeBubbleIdx === bIdx;
+          const isActive = isCurrentPanel && activeBubbleIdx === bIdx;
           const posX = line.posX ?? 50;
           const posY = line.posY ?? panel.focusY * 100;
           const bubbleLeft = imgLeft + (posX / 100) * imgWidth;
@@ -346,7 +350,13 @@ export function DialogueLayers({
                   setActivePanelIdx(pIdx);
                   setActiveBubbleIdx(bIdx);
                 }}
-                className="absolute pointer-events-auto cursor-move"
+                className={`absolute transition-opacity duration-300 ${
+                  activeLayer !== "dialogos"
+                    ? "opacity-15 pointer-events-none"
+                    : isCurrentPanel
+                    ? "opacity-100 pointer-events-auto cursor-move"
+                    : "opacity-30 hover:opacity-90 pointer-events-auto cursor-move"
+                }`}
                 style={{
                   left: bubbleLeft,
                   top: bubbleTop,
@@ -355,14 +365,16 @@ export function DialogueLayers({
                   translateX: "-50%",
                   translateY: "-50%",
                   width: "max-content",
-                  zIndex: isActive ? 48 : isTargetOfAny ? 39 : 40,
+                  zIndex: isActive ? 48 : isCurrentPanel ? (isTargetOfAny ? 39 : 40) : (isTargetOfAny ? 29 : 30),
                 }}
               >
                 <div
                   className={`relative transition-all ${
                     isActive
                       ? "outline-dashed outline-2 outline-[#e8185a] outline-offset-3 drop-shadow-lg"
-                      : "opacity-95 hover:opacity-100"
+                      : isCurrentPanel
+                      ? "opacity-95 hover:opacity-100"
+                      : "opacity-100"
                   }`}
                 >
                   {/* Sequence badge & reorder controls in Edit Mode */}
@@ -371,7 +383,9 @@ export function DialogueLayers({
                     className={`absolute bottom-full mb-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-1.5 px-2.5 py-0.5 rounded-full shadow-md border text-[10px] font-mono font-bold transition-all z-40 select-none ${
                       isActive
                         ? "bg-[#e8185a] text-white border-white/40 shadow-rose-950/40"
-                        : "bg-[#0c0c14]/90 hover:bg-[#161622] text-zinc-200 border-white/20"
+                        : isCurrentPanel
+                        ? "bg-[#0c0c14]/90 hover:bg-[#161622] text-zinc-200 border-white/20"
+                        : "bg-[#0c0c14]/60 hover:bg-[#161622] text-zinc-400 border-white/10"
                     }`}
                   >
                     <span className="font-black tracking-wider">V{pIdx + 1}·#{bIdx + 1}</span>

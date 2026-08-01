@@ -9,6 +9,7 @@ import { getComicPageUrl } from "./readerUtils";
 
 interface ReaderCanvasProps {
   mode: "read" | "edit";
+  activeLayer?: "paradas" | "mascaras" | "dialogos";
   containerRef: React.RefObject<HTMLDivElement | null>;
   imgRef: React.RefObject<HTMLImageElement | null>;
   pages: string[];
@@ -60,6 +61,7 @@ interface ReaderCanvasProps {
 
 export function ReaderCanvas({
   mode,
+  activeLayer = "dialogos",
   containerRef,
   imgRef,
   pages,
@@ -255,7 +257,7 @@ export function ReaderCanvas({
               return (
                 <motion.div
                   key={`edit-zoom-overlay-${pIdx}-${rIdx}-${zoom.x}-${zoom.y}`}
-                  drag={isActivePanel}
+                  drag={activeLayer === "mascaras" && isActivePanel}
                   dragMomentum={false}
                   dragElastic={0}
                   onDragEnd={(_, info) => handlePanelRectDragEnd?.(info, pIdx, rIdx)}
@@ -263,7 +265,13 @@ export function ReaderCanvas({
                     e.stopPropagation();
                     setActivePanelIdx?.(pIdx);
                   }}
-                  className={`absolute pointer-events-auto ${isActivePanel ? 'cursor-move' : 'cursor-pointer'}`}
+                  className={`absolute transition-opacity duration-300 ${
+                    activeLayer !== "mascaras"
+                      ? "opacity-20 pointer-events-none"
+                      : isActivePanel
+                      ? "opacity-100 pointer-events-auto cursor-move"
+                      : "opacity-60 hover:opacity-90 pointer-events-auto cursor-pointer"
+                  }`}
                   style={{
                     left: maskLeft,
                     top: maskTop,
@@ -329,48 +337,92 @@ export function ReaderCanvas({
 
         {/* Spoiler Masks for future panels & sequences */}
         <AnimatePresence>
-          {mode === "read" && !zoomedOut && imgSize && imgWidth > 0 && imgHeight > 0 && (
-            currentPanels.flatMap((panel: PanelStop, pIdx: number) => {
+          {mode === "read" && !zoomedOut && imgSize && imgWidth > 0 && imgHeight > 0 && (() => {
+            // 1. Gather all active spoiler masks on the page
+            const rawActiveMasks: { key: string; x: number; y: number; w: number; h: number; pIdx: number; rIdx: number }[] = [];
+            
+            currentPanels.forEach((panel: PanelStop, pIdx: number) => {
               const rects = panel.zoomRects || (panel.zoomRect ? [panel.zoomRect] : []);
-              return rects.map((zoom: any, rIdx: number) => {
+              rects.forEach((zoom: any, rIdx: number) => {
                 let shouldMask = false;
                 if (pIdx > panelIdx) {
                   shouldMask = panel.hideUntilReached !== false;
                 } else if (pIdx === panelIdx) {
                   shouldMask = rIdx > zoomIdx && panel.hideUntilReached !== false;
                 }
-
-                if (!shouldMask) return null;
-
-                const maskLeft = imgLeft + (zoom.x / 100) * imgWidth;
-                const maskTop = imgTop + (zoom.y / 100) * imgHeight;
-                const maskWidth = (zoom.w / 100) * imgWidth;
-                const maskHeight = (zoom.h / 100) * imgHeight;
-
-                return (
-                  <motion.div
-                    key={`spoiler-mask-${pIdx}-${rIdx}`}
-                    initial={{ opacity: 1 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.25, ease: "easeOut" }}
-                    className="absolute brand-grain select-none overflow-hidden"
-                    style={{
-                      left: maskLeft - 1,
-                      top: maskTop - 1,
-                      width: maskWidth + 2,
-                      height: maskHeight + 2,
-                      zIndex: 20,
-                      transition:
-                        mode === "read" && !isPageChanging
-                          ? "left 400ms cubic-bezier(0.25, 1, 0.5, 1), top 400ms cubic-bezier(0.25, 1, 0.5, 1), width 400ms cubic-bezier(0.25, 1, 0.5, 1), height 400ms cubic-bezier(0.25, 1, 0.5, 1)"
-                          : "none",
-                    }}
-                  />
-                );
+                if (shouldMask) {
+                  rawActiveMasks.push({
+                    key: `spoiler-mask-${pIdx}-${rIdx}`,
+                    x: zoom.x ?? 0,
+                    y: zoom.y ?? 0,
+                    w: zoom.w ?? 100,
+                    h: zoom.h ?? 25,
+                    pIdx,
+                    rIdx,
+                  });
+                }
               });
-            })
-          )}
+            });
+
+            if (rawActiveMasks.length === 0) return null;
+
+            // 2. Sort active masks by Y coordinate
+            const sortedMasks = [...rawActiveMasks].sort((a, b) => a.y - b.y);
+
+            // 3. Bridge/merge vertical gaps between consecutive active masks
+            const processedMasks = sortedMasks.map((mask, idx) => {
+              let { x, y, w, h } = mask;
+              
+              // If there's a next active mask, check if there's a vertical gap to bridge
+              const nextMask = sortedMasks[idx + 1];
+              if (nextMask) {
+                const maskBottom = y + h;
+                const nextTop = nextMask.y;
+                // If nextMask starts below current mask and the gap is up to 15%
+                if (nextTop > maskBottom && nextTop - maskBottom <= 15) {
+                  // Extend current mask height to meet the top of nextMask
+                  h = nextTop - y + 0.5;
+                }
+              } else {
+                // If it's the last mask on the page and it ends near the bottom (>= 75%), extend all the way to 100%
+                if (y + h >= 75) {
+                  h = Math.max(h, 100 - y);
+                }
+              }
+
+              return { ...mask, x, y, w, h };
+            });
+
+            // 4. Render processed masks
+            return processedMasks.map((zoom) => {
+              const maskLeft = imgLeft + (zoom.x / 100) * imgWidth;
+              const maskTop = imgTop + (zoom.y / 100) * imgHeight;
+              const maskWidth = (zoom.w / 100) * imgWidth;
+              const maskHeight = (zoom.h / 100) * imgHeight;
+
+              return (
+                <motion.div
+                  key={zoom.key}
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="absolute brand-grain select-none overflow-hidden"
+                  style={{
+                    left: maskLeft - 2,
+                    top: maskTop - 2,
+                    width: maskWidth + 4,
+                    height: maskHeight + 4,
+                    zIndex: 20,
+                    transition:
+                      mode === "read" && !isPageChanging
+                        ? "left 400ms cubic-bezier(0.25, 1, 0.5, 1), top 400ms cubic-bezier(0.25, 1, 0.5, 1), width 400ms cubic-bezier(0.25, 1, 0.5, 1), height 400ms cubic-bezier(0.25, 1, 0.5, 1)"
+                        : "none",
+                  }}
+                />
+              );
+            });
+          })()}
         </AnimatePresence>
 
         {renderedDialogues}
@@ -378,15 +430,20 @@ export function ReaderCanvas({
         {/* ── FocusY Indicator line in Editor Mode ── */}
         {mode === "edit" && currentPanels.map((panel, pIdx) => {
           const isActivePanel = pIdx === activePanelIdx;
+          const isParadasLayer = activeLayer === "paradas";
           return (
             <motion.div
               key={`focusy-${pIdx}-${panel.focusY}`}
-              drag={isActivePanel ? "y" : false}
+              drag={isParadasLayer && isActivePanel ? "y" : false}
               dragMomentum={false}
               dragElastic={0}
               onDragEnd={(_, info) => handleFocusYDragEnd?.(info, pIdx)}
-              className={`absolute left-0 right-0 h-0.5 border-t-2 border-dashed z-20 pointer-events-auto ${
-                isActivePanel ? "border-red-400 cursor-row-resize" : "border-red-400/40"
+              className={`absolute left-0 right-0 h-0.5 border-t-2 border-dashed z-20 transition-opacity duration-300 ${
+                !isParadasLayer
+                  ? "border-red-400/20 opacity-25 pointer-events-none"
+                  : isActivePanel
+                  ? "border-red-400 opacity-100 cursor-row-resize pointer-events-auto"
+                  : "border-red-400/60 opacity-60 hover:opacity-100 pointer-events-auto cursor-pointer"
               }`}
               style={{
                 top: imgTop + (panel.focusY ?? 0.5) * imgHeight,
@@ -394,8 +451,12 @@ export function ReaderCanvas({
               }}
             >
               <div
-                className={`absolute right-4 -top-6 text-[#0a0a0f] font-mono text-xs px-2 py-0.5 rounded flex items-center gap-2 pointer-events-auto select-none shadow cursor-pointer transition-colors ${
-                  isActivePanel ? "bg-red-400" : "bg-red-400/60 hover:bg-red-400/90"
+                className={`absolute right-4 -top-6 text-[#0a0a0f] font-mono text-xs px-2 py-0.5 rounded flex items-center gap-2 select-none shadow transition-colors ${
+                  !isParadasLayer
+                    ? "bg-red-400/30 text-white/50 pointer-events-none"
+                    : isActivePanel
+                    ? "bg-red-400 cursor-pointer pointer-events-auto"
+                    : "bg-red-400/60 hover:bg-red-400/90 cursor-pointer pointer-events-auto"
                 }`}
                 onPointerDown={(e) => {
                   e.stopPropagation();

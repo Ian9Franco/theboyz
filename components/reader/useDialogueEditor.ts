@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import type { DialogueLine } from "./DialogueBubble";
 import type { Dialogues, PageData, PanelStop as PanelConfig, ChapterSettings, AudioTrack } from "./audioPlayer";
+import { snapMaskRect } from "./readerUtils";
 
 interface UseDialogueEditorProps {
   dialogues: Dialogues | null;
@@ -27,6 +28,7 @@ export function useDialogueEditor({
   const [localDialogues, setLocalDialogues] = useState<Dialogues>({ pages: {} });
 
   // Editor States
+  const [activeLayer, setActiveLayer] = useState<"paradas" | "mascaras" | "dialogos">("dialogos");
   const [activePanelIdx, setActivePanelIdx] = useState(0);
   const [activeBubbleIdx, setActiveBubbleIdx] = useState<number | null>(null);
   const [undoStack, setUndoStack] = useState<Dialogues[]>([]);
@@ -358,7 +360,9 @@ export function useDialogueEditor({
         newY = Math.round(newY);
       }
 
-      rects[rIdx] = { ...rects[rIdx], x: newX, y: newY };
+      const otherRects = rects.filter((_, idx) => idx !== rIdx);
+      const snapped = snapMaskRect({ ...rects[rIdx], x: newX, y: newY }, otherRects);
+      rects[rIdx] = snapped;
       handleUpdatePanelParams(pIdx, { zoomRects: rects, zoomRect: undefined });
     }
   };
@@ -496,7 +500,9 @@ export function useDialogueEditor({
       newW = Math.max(minSize, Math.min(100 - newX, newW));
       newH = Math.max(minSize, Math.min(100 - newY, newH));
 
-      rects[rIdx] = { x: newX, y: newY, w: newW, h: newH };
+      const otherRects = rects.filter((_, idx) => idx !== rIdx);
+      const snapped = snapMaskRect({ x: newX, y: newY, w: newW, h: newH }, otherRects);
+      rects[rIdx] = snapped;
       
       const updatedPages = { ...localDialogues.pages };
       const pgUpdate = { ...pg, panels: panelsCopy };
@@ -615,6 +621,8 @@ export function useDialogueEditor({
   return {
     localDialogues,
     setLocalDialogues,
+    activeLayer,
+    setActiveLayer,
     activePanelIdx,
     setActivePanelIdx,
     activeBubbleIdx,

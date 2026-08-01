@@ -77,5 +77,7 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   byte: [],
   daichi: [],
   ren: [],
-  oni: []
+  oni: [],
+  ar_cnido_mutante: [],
+  tinker: []
 };

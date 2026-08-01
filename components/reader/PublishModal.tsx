@@ -68,7 +68,7 @@ export function PublishModal({ isOpen, onClose }: PublishModalProps) {
                 type="text"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="border-2 border-[#0a0a0f] p-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#e8185a]"
+                className="border-2 border-[#0a0a0f] bg-white text-[#0a0a0f] font-medium p-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#e8185a]"
               />
               <span className="text-[10px] text-zinc-500 italic mt-0.5">
                 * Se agregará automáticamente la fecha, la hora y el detalle de los cambios detectados en el repositorio.
