@@ -482,6 +482,8 @@ export function EditorAudioTracks({
                           id: "__form_preview__",
                           layer: form.layer,
                           src: val,
+                          startPageKey: form.startPageKey || "1",
+                          startPanelIdx: form.startPanelIdx || 0,
                           soundConfig: { volume: form.volume, playbackRate: form.playbackRate, loop: form.loop }
                         };
                         playPreview(tempTrack);
