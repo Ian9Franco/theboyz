@@ -5,61 +5,19 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            {
-              "text": "Otro día entero en el taller... hora de cerrar todo por hoy.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 40,
-              "posY": 15,
-              "tailX": 40,
-              "tailY": 25,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Otro día entero en el taller... hora de cerrar todo por hoy.", "speaker": "Ian", "size": "small", "posX": 40, "posY": 15, "tailX": 40, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            {
-              "text": "Luces fuera. Mañana va a ser un día agitado.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 70,
-              "posY": 48,
-              "tailX": 70,
-              "tailY": 58,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Luces fuera. Mañana va a ser un día agitado.", "speaker": "Ian", "size": "small", "posX": 70, "posY": 48, "tailX": 70, "tailY": 58, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.8,
           "dialogue": [
-            {
-              "text": "Por fin... a descansar.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 60,
-              "posY": 78,
-              "tailX": 60,
-              "tailY": 88,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 120,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Por fin... a descansar.", "speaker": "Ian", "size": "small", "posX": 60, "posY": 78, "tailX": 60, "tailY": 88, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -69,56 +27,14 @@
         {
           "focusY": 0.25,
           "dialogue": [
-            {
-              "text": "Uff... las seis de la mañana ya. No se descansa en Tokio.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 50,
-              "posY": 20,
-              "tailX": 50,
-              "tailY": 30,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Uff... las seis de la mañana ya. No se descansa en Tokio.", "speaker": "Ian", "size": "small", "posX": 50, "posY": 20, "tailX": 50, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.65,
           "dialogue": [
-            {
-              "text": "Aaah... necesito recargar energías urgentemente.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 25,
-              "posY": 55,
-              "tailX": 25,
-              "tailY": 65,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Nada que un buen café cargado no pueda solucionar.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 70,
-              "posY": 55,
-              "tailX": 70,
-              "tailY": 65,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Aaah... necesito recargar energías urgentemente.", "speaker": "Ian", "size": "small", "posX": 25, "posY": 55, "tailX": 25, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Nada que un buen café cargado no pueda solucionar.", "speaker": "Ian", "size": "small", "posX": 70, "posY": 55, "tailX": 70, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -128,61 +44,19 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            {
-              "text": "Bien... cuerpo listo, mente despejada.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 50,
-              "posY": 15,
-              "tailX": 50,
-              "tailY": 25,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Bien... cuerpo listo, mente despejada.", "speaker": "Ian", "size": "small", "posX": 50, "posY": 15, "tailX": 50, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            {
-              "text": "Bolso con herramientas, la laptop... todo en su lugar.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 25,
-              "posY": 48,
-              "tailX": 25,
-              "tailY": 58,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Bolso con herramientas, la laptop... todo en su lugar.", "speaker": "Ian", "size": "small", "posX": 25, "posY": 48, "tailX": 25, "tailY": 58, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.8,
           "dialogue": [
-            {
-              "text": "Listo. A ver qué sorpresas nos esperan hoy en el taller.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 65,
-              "posY": 78,
-              "tailX": 65,
-              "tailY": 88,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Listo. A ver qué sorpresas nos esperan hoy en el taller.", "speaker": "Ian", "size": "small", "posX": 65, "posY": 78, "tailX": 65, "tailY": 88, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -192,106 +66,22 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            {
-              "text": "Llegué al taller... ahí están todos.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 30,
-              "posY": 15,
-              "tailX": 30,
-              "tailY": 25,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 130,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Llegué al taller... ahí están todos.", "speaker": "Ian", "size": "small", "posX": 30, "posY": 15, "tailX": 30, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 130, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            {
-              "text": "¡Buenas! ¿Cómo arrancó la mañana por acá?",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 18,
-              "posY": 40,
-              "tailX": 18,
-              "tailY": 50,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 130,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Llegas justo a tiempo, guapo... Te extrañábamos por acá.",
-              "speaker": "Brooke",
-              "style": "normal",
-              "size": "small",
-              "posX": 45,
-              "posY": 38,
-              "tailX": 45,
-              "tailY": 48,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Revisando la telemetría. Ren dice que escucha un ruido raro en el motor.",
-              "speaker": "Daichi",
-              "style": "normal",
-              "size": "small",
-              "posX": 70,
-              "posY": 35,
-              "tailX": 70,
-              "tailY": 45,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "El único ruido raro es el que hace Daichi cuando intenta sonreír.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 85,
-              "posY": 48,
-              "tailX": 85,
-              "tailY": 58,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "¡Buenas! ¿Cómo arrancó la mañana por acá?", "speaker": "Ian", "size": "small", "posX": 18, "posY": 40, "tailX": 18, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 130, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Llegas justo a tiempo, guapo... Te extrañábamos por acá.", "speaker": "Brooke", "size": "small", "posX": 45, "posY": 38, "tailX": 45, "tailY": 48, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Revisando la telemetría. Ren dice que escucha un ruido raro en el motor.", "speaker": "Daichi", "size": "small", "posX": 70, "posY": 35, "tailX": 70, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 },
+            { "text": "El único ruido raro es el que hace Daichi cuando intenta sonreír.", "speaker": "Ren", "size": "small", "posX": 85, "posY": 48, "tailX": 85, "tailY": 58, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.8,
           "dialogue": [
-            {
-              "text": "Menos chistes y miren esto. Abrí los registros de la última prueba.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 25,
-              "posY": 75,
-              "tailX": 25,
-              "tailY": 85,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Menos chistes y miren esto. Abrí los registros de la última prueba.", "speaker": "Ian", "size": "small", "posX": 25, "posY": 75, "tailX": 25, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -301,111 +91,27 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            {
-              "text": "La presión del turbo está perfecta. El Skyline responde de maravilla.",
-              "speaker": "Daichi",
-              "style": "normal",
-              "size": "small",
-              "posX": 40,
-              "posY": 15,
-              "tailX": 40,
-              "tailY": 25,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Perfecto. Solo nos falta encontrar competencia que esté a nuestra altura.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 80,
-              "posY": 15,
-              "tailX": 80,
-              "tailY": 25,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "La presión del turbo está perfecta. El Skyline responde de maravilla.", "speaker": "Daichi", "size": "small", "posX": 40, "posY": 15, "tailX": 40, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Perfecto. Solo nos falta encontrar competencia que esté a nuestra altura.", "speaker": "Ren", "size": "small", "posX": 80, "posY": 15, "tailX": 80, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.4,
           "dialogue": [
-            {
-              "text": "ALERTA: Emisor de señales activo. Transmisión encriptada entrante.",
-              "speaker": "BYTE",
-              "style": "normal",
-              "size": "small",
-              "posX": 50,
-              "posY": 38,
-              "tailX": 50,
-              "tailY": 48,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "ALERTA: Emisor de señales activo. Transmisión encriptada entrante.", "speaker": "BYTE", "size": "small", "posX": 50, "posY": 38, "tailX": 50, "tailY": 48, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.65,
           "dialogue": [
-            {
-              "text": "¿Una señal codificada al taller? A ver qué es lo que nos enviaron...",
-              "speaker": "Brooke",
-              "style": "normal",
-              "size": "small",
-              "posX": 75,
-              "posY": 60,
-              "tailX": 75,
-              "tailY": 70,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "¿Una señal codificada al taller? A ver qué es lo que nos enviaron...", "speaker": "Brooke", "size": "small", "posX": 75, "posY": 60, "tailX": 75, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.88,
           "dialogue": [
-            {
-              "text": "Es una ruta holográfica... con el código de invitación a la Gran Carrera del Distrito.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 20,
-              "posY": 85,
-              "tailX": 20,
-              "tailY": 95,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Solo invitan a los pilotos más rápidos del circuito clandestino...",
-              "speaker": "Brooke",
-              "style": "normal",
-              "size": "small",
-              "posX": 85,
-              "posY": 85,
-              "tailX": 85,
-              "tailY": 95,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Es una ruta holográfica... con el código de invitación a la Gran Carrera del Distrito.", "speaker": "Ian", "size": "small", "posX": 20, "posY": 85, "tailX": 20, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Solo invitan a los pilotos más rápidos del circuito clandestino...", "speaker": "Brooke", "size": "small", "posX": 85, "posY": 85, "tailX": 85, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -415,91 +121,21 @@
         {
           "focusY": 0.25,
           "dialogue": [
-            {
-              "text": "Exigen competir en dos categorías distintas... ahí está el desafío.",
-              "speaker": "Daichi",
-              "style": "normal",
-              "size": "small",
-              "posX": 50,
-              "posY": 18,
-              "tailX": 50,
-              "tailY": 28,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Con el Skyline cubrimos la principal, pero necesitamos otro auto para la segunda.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 80,
-              "posY": 18,
-              "tailX": 80,
-              "tailY": 28,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Exigen competir en dos categorías distintas... ahí está el desafío.", "speaker": "Daichi", "size": "small", "posX": 50, "posY": 18, "tailX": 50, "tailY": 28, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Con el Skyline cubrimos la principal, pero necesitamos otro auto para la segunda.", "speaker": "Ren", "size": "small", "posX": 80, "posY": 18, "tailX": 80, "tailY": 28, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.6,
           "dialogue": [
-            {
-              "text": "No tenemos presupuesto para un auto de carrera nuevo...",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 30,
-              "posY": 55,
-              "tailX": 30,
-              "tailY": 65,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Tiene que ser algo con potencial que podamos reconstruir acá.",
-              "speaker": "Brooke",
-              "style": "normal",
-              "size": "small",
-              "posX": 75,
-              "posY": 55,
-              "tailX": 75,
-              "tailY": 65,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "No tenemos presupuesto para un auto de carrera nuevo...", "speaker": "Ian", "size": "small", "posX": 30, "posY": 55, "tailX": 30, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Tiene que ser algo con potencial que podamos reconstruir acá.", "speaker": "Brooke", "size": "small", "posX": 75, "posY": 55, "tailX": 75, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.85,
           "dialogue": [
-            {
-              "text": "Déjenme revisar mis contactos... Conozco un clásico en un desarmadero del oeste.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 40,
-              "posY": 85,
-              "tailX": 40,
-              "tailY": 95,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Déjenme revisar mis contactos... Conozco un clásico en un desarmadero del oeste.", "speaker": "Ren", "size": "small", "posX": 40, "posY": 85, "tailX": 40, "tailY": 95, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -509,96 +145,26 @@
         {
           "focusY": 0.25,
           "dialogue": [
-            {
-              "text": "¡Miren esto! Es un viejo Mitsubishi Eclipse GT. Lo tienen guardado bajo una lona.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 50,
-              "posY": 18,
-              "tailX": 50,
-              "tailY": 28,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 160,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "¡Miren esto! Es un viejo Mitsubishi Eclipse GT. Lo tienen guardado bajo una lona.", "speaker": "Ren", "size": "small", "posX": 50, "posY": 18, "tailX": 50, "tailY": 28, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            {
-              "text": "Está algo descuidado... pero las líneas del chasís están impecables.",
-              "speaker": "Brooke",
-              "style": "normal",
-              "size": "small",
-              "posX": 40,
-              "posY": 48,
-              "tailX": 40,
-              "tailY": 58,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Está algo descuidado... pero las líneas del chasís están impecables.", "speaker": "Brooke", "size": "small", "posX": 40, "posY": 48, "tailX": 40, "tailY": 58, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.75,
           "dialogue": [
-            {
-              "text": "El motor turbo de ese Eclipse GT es legendario. Con una buena puesta a punto va a volar.",
-              "speaker": "Daichi",
-              "style": "normal",
-              "size": "small",
-              "posX": 30,
-              "posY": 75,
-              "tailX": 30,
-              "tailY": 85,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 160,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Si el block está sano, podemos adaptarle nuestro sistema de inyección.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 70,
-              "posY": 75,
-              "tailX": 70,
-              "tailY": 85,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "El motor turbo de ese Eclipse GT es legendario. Con una buena puesta a punto va a volar.", "speaker": "Daichi", "size": "small", "posX": 30, "posY": 75, "tailX": 30, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Si el block está sano, podemos adaptarle nuestro sistema de inyección.", "speaker": "Ian", "size": "small", "posX": 70, "posY": 75, "tailX": 70, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.9,
           "dialogue": [
-            {
-              "text": "Voy a ir al desarmadero a buscarlo antes de que alguien más le ponga el ojo.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 40,
-              "posY": 88,
-              "tailX": 40,
-              "tailY": 98,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 160,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Voy a ir al desarmadero a buscarlo antes de que alguien más le ponga el ojo.", "speaker": "Ren", "size": "small", "posX": 40, "posY": 88, "tailX": 40, "tailY": 98, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -608,111 +174,27 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            {
-              "text": "Tengo la ubicación exacta. Voy a negociar el precio y me lo traigo.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 50,
-              "posY": 15,
-              "tailX": 50,
-              "tailY": 25,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Tengo la ubicación exacta. Voy a negociar el precio y me lo traigo.", "speaker": "Ren", "size": "small", "posX": 60, "posY": 5, "tailX": 55, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            {
-              "text": "BYTE y yo iremos preparando el mapa de inyección en la laptop mientras lo remolcás.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 65,
-              "posY": 52,
-              "tailX": 65,
-              "tailY": 62,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 160,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Planos de reconstrucción del Eclipse GT cargados.",
-              "speaker": "BYTE",
-              "style": "normal",
-              "size": "small",
-              "posX": 85,
-              "posY": 60,
-              "tailX": 85,
-              "tailY": 70,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 130,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "BYTE y yo iremos preparando el mapa de inyección en la laptop mientras lo remolcás.", "speaker": "Ian", "size": "small", "posX": 45, "posY": 40, "tailX": 60, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Planos de reconstrucción del Eclipse GT cargados.", "speaker": "BYTE", "style": "electronic", "size": "small", "posX": 105, "posY": 45, "tailX": 90, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 130, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.75,
           "dialogue": [
-            {
-              "text": "Confíen en mí. En un par de horas tenemos ese Mitsubishi Eclipse GT en el taller.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 30,
-              "posY": 75,
-              "tailX": 30,
-              "tailY": 85,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 160,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Confíen en mí. En un par de horas tenemos ese Mitsubishi Eclipse GT en el taller.", "speaker": "Ren", "size": "small", "posX": 10, "posY": 60, "tailX": 30, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.9,
           "dialogue": [
-            {
-              "text": "¡Manejá con cuidado, Ren! Te esperamos acá.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 55,
-              "posY": 88,
-              "tailX": 55,
-              "tailY": 98,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 130,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "¡No traigas más chatarra de la cuenta!",
-              "speaker": "Brooke",
-              "style": "normal",
-              "size": "small",
-              "posX": 80,
-              "posY": 88,
-              "tailX": 80,
-              "tailY": 98,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 130,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Los veo en unas horas", "speaker": "Ian", "size": "small", "posX": 35, "posY": 80, "tailX": 30, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 130, "fontSize": 8, "borderRadius": 18 },
+            { "text": "¡No traigas más chatarra de la cuenta!", "speaker": "Brooke", "size": "small", "posX": 90, "posY": 75, "tailX": 80, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 130, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -722,96 +204,26 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            {
-              "text": "Acá está... el viejo Eclipse GT tal como dijo el contacto.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 40,
-              "posY": 15,
-              "tailX": 40,
-              "tailY": 25,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Acá está... el viejo Eclipse GT tal como dijo el contacto.", "speaker": "Ren", "size": "small", "posX": 45, "posY": 5, "tailX": 30, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.4,
           "dialogue": [
-            {
-              "text": "Acá tenés el dinero pactado en efectivo. El título queda a mi nombre.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 25,
-              "posY": 38,
-              "tailX": 25,
-              "tailY": 48,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Todo tuyo, pibe. Llevátelo antes de que me arrepienta.",
-              "speaker": "Dueño",
-              "style": "normal",
-              "size": "small",
-              "posX": 65,
-              "posY": 38,
-              "tailX": 65,
-              "tailY": 48,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Acá tenés el dinero pactado en efectivo. El título queda a mi nombre.", "speaker": "Ren", "size": "small", "posX": 30, "posY": 30, "tailX": 15, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Todo tuyo, pibe. Llevátelo antes de que me arrepienta.", "speaker": "Dueño", "size": "small", "posX": 65, "posY": 30, "tailX": 60, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.65,
           "dialogue": [
-            {
-              "text": "Un poco de polvo no le hace nada... este bicho va a renacer en nuestras manos.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 35,
-              "posY": 60,
-              "tailX": 35,
-              "tailY": 70,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 160,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Un poco de polvo no le hace nada... este bicho va a renacer en nuestras manos.", "speaker": "Ren", "size": "small", "posX": 35, "posY": 50, "tailX": 25, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.85,
           "dialogue": [
-            {
-              "text": "Listo el transporte. Nos vamos directo al taller.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 70,
-              "posY": 82,
-              "tailX": 70,
-              "tailY": 92,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Listo el transporte. Nos vamos directo al taller.", "speaker": "Ren", "size": "small", "posX": 60, "posY": 80, "tailX": 70, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -821,111 +233,27 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            {
-              "text": "¡Mirá lo que trajiste, Ren! Parece recién salido de una película de culto.",
-              "speaker": "Brooke",
-              "style": "normal",
-              "size": "small",
-              "posX": 70,
-              "posY": 15,
-              "tailX": 70,
-              "tailY": 25,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 160,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Les dije que no los iba a defraudar.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 18,
-              "posY": 15,
-              "tailX": 18,
-              "tailY": 25,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 130,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "¡Mirá lo que trajiste, Ren! Parece recién salido de una película de culto.", "speaker": "Brooke", "size": "small", "posX": 50, "posY": 5, "tailX": 65, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Les dije que no los iba a defraudar.", "speaker": "Ren", "size": "small", "posX": 25, "posY": 5, "tailX": 20, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 130, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.45,
           "dialogue": [
-            {
-              "text": "El block motor está entero, pero hay que rehacer el cableado de inyección completo.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 30,
-              "posY": 42,
-              "tailX": 30,
-              "tailY": 52,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 160,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "El block motor está entero, pero hay que rehacer el cableado de inyección completo.", "speaker": "Ian", "size": "small", "posX": 50, "posY": 30, "tailX": 30, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.7,
           "dialogue": [
-            {
-              "text": "Los espirales y discos necesitan refuerzo para soportar la potencia.",
-              "speaker": "Daichi",
-              "style": "normal",
-              "size": "small",
-              "posX": 25,
-              "posY": 68,
-              "tailX": 25,
-              "tailY": 78,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Sostén de chasis soldándose al 100%.",
-              "speaker": "BYTE",
-              "style": "normal",
-              "size": "small",
-              "posX": 75,
-              "posY": 68,
-              "tailX": 75,
-              "tailY": 78,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 130,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Los espirales y discos necesitan refuerzo para soportar la potencia.", "speaker": "Daichi", "size": "small", "posX": 40, "posY": 55, "tailX": 25, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Sostén de chasis soldándose al 100%.", "speaker": "BYTE", "style": "electronic", "size": "small", "posX": 65, "posY": 55, "tailX": 70, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 130, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.9,
           "dialogue": [
-            {
-              "text": "Esta noche no se duerme. Mañana tenemos dos bestias listas para la pista.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 50,
-              "posY": 85,
-              "tailX": 50,
-              "tailY": 95,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 160,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Esta noche no se duerme. Mañana tenemos dos bestias listas para la pista.", "speaker": "Ian", "size": "small", "posX": 60, "posY": 70, "tailX": 55, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 160, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -935,116 +263,33 @@
         {
           "focusY": 0.15,
           "dialogue": [
-            {
-              "text": "¡Ese es el ritmo! La carrera es dentro de poco y no hay margen de error.",
-              "speaker": "Ren",
-              "style": "normal",
-              "size": "small",
-              "posX": 80,
-              "posY": 10,
-              "tailX": 80,
-              "tailY": 20,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "¡Ese es el ritmo! La carrera es dentro de poco y no hay margen de error.", "speaker": "Ren", "size": "small", "posX": 55, "posY": 0, "tailX": 70, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.4,
           "dialogue": [
-            {
-              "text": "Cableado listo. Inyectores calibrados.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 25,
-              "posY": 35,
-              "tailX": 25,
-              "tailY": 45,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 130,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Frenos de competición ajustados al milímetro.",
-              "speaker": "Daichi",
-              "style": "normal",
-              "size": "small",
-              "posX": 70,
-              "posY": 35,
-              "tailX": 70,
-              "tailY": 45,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Cableado listo. Inyectores calibrados.", "speaker": "Ian", "size": "small", "posX": 40, "posY": 30, "tailX": 15, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 130, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Frenos de competición ajustados al milímetro.", "speaker": "Daichi", "size": "small", "posX": 100, "posY": 25, "tailX": 95, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.65,
           "dialogue": [
-            {
-              "text": "Sincronizando sensores del Skyline con el mapa central.",
-              "speaker": "Brooke",
-              "style": "normal",
-              "size": "small",
-              "posX": 35,
-              "posY": 60,
-              "tailX": 35,
-              "tailY": 70,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "que tenes ahi?", "speaker": "Brooke", "size": "small", "posX": 55, "posY": 45, "tailX": 45, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 },
+            { "text": "es para sincronizar ambos autos, en video llamada", "style": "electronic", "size": "small", "posX": 80, "posY": 50, "tailX": 70, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "fontFamily": "marker" }
           ]
         },
         {
           "focusY": 0.8,
           "dialogue": [
-            {
-              "text": "Voy a dar la primera vuelta de prueba al Eclipse GT.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 40,
-              "posY": 75,
-              "tailX": 40,
-              "tailY": 85,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Voy a dar la primera vuelta de prueba al Eclipse GT.", "speaker": "Ian", "size": "small", "posX": 70, "posY": 65, "tailX": 50, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.95,
           "dialogue": [
-            {
-              "text": "¡Quedó impresionante! Miren cómo lucen esas dos máquinas juntas.",
-              "speaker": "Brooke",
-              "style": "normal",
-              "size": "small",
-              "posX": 20,
-              "posY": 90,
-              "tailX": 20,
-              "tailY": 98,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "Miren cómo lucen esas dos máquinas juntas.", "speaker": "Brooke", "size": "small", "posX": 70, "posY": 75, "tailX": 75, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -1054,114 +299,233 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            {
-              "text": "¡La aceleración de este turbo es brutal!",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 50,
-              "posY": 15,
-              "tailX": 50,
-              "tailY": 25,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 140,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "¡La aceleración de este turbo es brutal!", "speaker": "Ian", "size": "small", "posX": 50, "posY": 30, "tailX": 35, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.45,
           "dialogue": [
-            {
-              "text": "La suspensión responde perfecto en la transferencia de peso.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 25,
-              "posY": 40,
-              "tailX": 25,
-              "tailY": 50,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "La suspensión responde perfecto en la transferencia de peso.", "speaker": "Ian", "size": "small", "posX": 70, "posY": 35, "tailX": 25, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.7,
-          "dialogue": [
-            {
-              "text": "TELEMETRÍA: Presión de turbo estable. Temperatura óptima.",
-              "speaker": "BYTE",
-              "style": "normal",
-              "size": "small",
-              "posX": 45,
-              "posY": 65,
-              "tailX": 45,
-              "tailY": 75,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "¡Acelerá un poco más en la recta, Ian!",
-              "speaker": "Brooke",
-              "style": "normal",
-              "size": "small",
-              "posX": 20,
-              "posY": 65,
-              "tailX": 20,
-              "tailY": 75,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 130,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
-          ]
+          "dialogue": []
         },
         {
           "focusY": 0.9,
           "dialogue": [
-            {
-              "text": "El coche quedó perfecto. Estamos 100% listos para la Gran Carrera.",
-              "speaker": "Ian",
-              "style": "normal",
-              "size": "small",
-              "posX": 30,
-              "posY": 85,
-              "tailX": 30,
-              "tailY": 95,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 160,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "¡Excelente trabajo a todos! Mañana esa copa es nuestra.",
-              "speaker": "Brooke",
-              "style": "normal",
-              "size": "small",
-              "posX": 60,
-              "posY": 85,
-              "tailX": 60,
-              "tailY": 95,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 150,
-              "fontSize": 8,
-              "borderRadius": 18
-            }
+            { "text": "parece que lo hubieses manejado antes ", "speaker": "Brooke", "size": "small", "posX": 35, "posY": 75, "tailX": 55, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
+    },
+    "13": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": []
+        }
+      ]
+    },
+    "14": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": []
+        }
+      ]
+    },
+    "15": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": []
+        }
+      ]
+    },
+    "16": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": []
+        }
+      ]
+    },
+    "17": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.45,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 30, "w": 100, "h": 50 }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 75, "w": 100, "h": 25 }
+          ]
+        }
+      ]
+    },
+    "18": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": []
+        }
+      ]
+    },
+    "19": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": []
+        }
+      ]
+    },
+    "20": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 40 }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 40, "w": 100, "h": 36 }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 75, "w": 100, "h": 25 }
+          ]
+        }
+      ]
+    },
+    "36": {
+      "panels": [
+        {
+          "focusY": 0.4,
+          "dialogue": []
+        }
+      ]
+    },
+    "44": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": []
+        }
+      ]
     }
-  }
+  },
+  "audioTracks": [
+    {
+      "id": "track-1785654261766-sqd3e",
+      "layer": "music",
+      "src": "/sounds/tracks/50 Cent - In Da Club (Trias Remix).mp3",
+      "title": "In Da Club (Trias Remix)",
+      "artist": "50 Cent",
+      "startPageKey": "20",
+      "startPanelIdx": 2,
+      "stopTrigger": {
+        "type": "panelStart",
+        "pageKey": "36",
+        "panelIdx": 0
+      },
+      "soundConfig": {
+        "volume": 0.45,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 4100,
+        "fadeOut": 4100
+      }
+    },
+    {
+      "id": "track-1785654486868-bbw5a",
+      "layer": "music",
+      "src": "/sounds/tracks/Lil Jon ft. Three 6 Mafia - Act a Fool (Anbroski Remix).mp3",
+      "title": "Act a Fool (Anbroski Remix)",
+      "artist": "Lil Jon ft. Three 6 Mafia",
+      "startPageKey": "36",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "panelEnd",
+        "pageKey": "43",
+        "panelIdx": 0
+      },
+      "soundConfig": {
+        "volume": 0.3,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 5000,
+        "fadeOut": 1500
+      }
+    }
+  ]
 }
