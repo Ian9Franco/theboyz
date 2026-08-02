@@ -1,5 +1,7 @@
 {
   "title": "Primer Vuelo",
   "number": 5,
-  "status": "draft"
+  "status": "draft",
+  "date": "26/08/2026",
+  "estimatedTime": "12 días"
 }

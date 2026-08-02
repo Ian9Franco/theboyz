@@ -2,7 +2,8 @@
   "title": "Hecho Polvo",
   "number": 2,
   "status": "published",
-  "nuevo": true,
-  "date": "01/08/2026",
+  "date": "31/07/2026",
+  "releaseDate": "31/07/2026",
+  "estimatedTime": "13 días",
   "portada": "Portada.webp"
 }

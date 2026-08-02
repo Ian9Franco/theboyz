@@ -1,5 +1,10 @@
 {
   "title": "Tokio Drift",
   "number": 3,
-  "status": "draft"
+  "status": "published",
+  "nuevo": true,
+  "date": "02/08/2026",
+  "releaseDate": "02/08/2026",
+  "estimatedTime": "11 días",
+  "portada": "Portada.webp"
 }
