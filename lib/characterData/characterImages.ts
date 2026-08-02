@@ -126,8 +126,9 @@ export const characterImages: Record<string, CharacterImages> = {
     "portada": null,
     "portadas": [
     ],
-    "ficha": null,
+    "ficha": "/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.webp",
     "fichas": [
+      "/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.webp",
     ]
   },
   "byte": {
@@ -170,8 +171,9 @@ export const characterImages: Record<string, CharacterImages> = {
     "portada": null,
     "portadas": [
     ],
-    "ficha": null,
+    "ficha": "/personajes/Fichas/Secundarios/Daichi&Ren/Daichi&Ren_ficha.webp",
     "fichas": [
+      "/personajes/Fichas/Secundarios/Daichi&Ren/Daichi&Ren_ficha.webp",
     ]
   },
   "demonios": {

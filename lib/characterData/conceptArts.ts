@@ -133,7 +133,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     },
     {
       "name": "Norman Parker Sheet  2",
-      "path": "/personajes/GUIAS/antagonistas/Maker/Norman Parker_sheet -2.jpg",
+      "path": "/personajes/GUIAS/antagonistas/Maker/Norman Parker_sheet -2.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -334,7 +334,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     },
     {
       "name": "Julian Chef Sheet",
-      "path": "/personajes/GUIAS/boyz/BANDIT/Julian_chef_sheet.png",
+      "path": "/personajes/GUIAS/boyz/BANDIT/Julian_chef_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -452,7 +452,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   "volvo": [
     {
       "name": "Outrider Alt Sheet",
-      "path": "/personajes/GUIAS/boyz/OUTRIDER/Outrider_alt_sheet.png",
+      "path": "/personajes/GUIAS/boyz/OUTRIDER/Outrider_alt_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -466,7 +466,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     },
     {
       "name": "Outrider Sheet",
-      "path": "/personajes/GUIAS/boyz/OUTRIDER/Outrider_sheet.png",
+      "path": "/personajes/GUIAS/boyz/OUTRIDER/Outrider_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -746,6 +746,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "balanar": [
     {
+      "name": "Night Stalker Alt Sheet",
+      "path": "/personajes/GUIAS/entidades/Night Stalker/Night Stalker_alt_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
       "name": "Night Stalker Old Sheet",
       "path": "/personajes/GUIAS/entidades/Night Stalker/Night Stalker_old_sheet.webp",
       "section": "base",
@@ -754,7 +761,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     },
     {
       "name": "Night Stalker Sheet",
-      "path": "/personajes/GUIAS/entidades/Night Stalker/Night Stalker_sheet.png",
+      "path": "/personajes/GUIAS/entidades/Night Stalker/Night Stalker_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -1125,7 +1132,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   "tinker": [
     {
       "name": "Tinker Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Tinker/Tinker_sheet.png",
+      "path": "/personajes/GUIAS/Secundarios/Tinker/Tinker_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -1265,7 +1272,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   "a_uandi": [
     {
       "name": "A Uandi Sheet",
-      "path": "/personajes/GUIAS/voughtverse/A-Uandi/A-Uandi_sheet.png",
+      "path": "/personajes/GUIAS/voughtverse/A-Uandi/A-Uandi_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -1281,7 +1288,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     },
     {
       "name": "Julander Sheet",
-      "path": "/personajes/GUIAS/voughtverse/Julander/Julander_sheet.png",
+      "path": "/personajes/GUIAS/voughtverse/Julander/Julander_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false

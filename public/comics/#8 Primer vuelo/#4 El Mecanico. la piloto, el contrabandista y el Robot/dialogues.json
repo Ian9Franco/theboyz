@@ -1,0 +1,438 @@
+{
+  "pages": {
+    "1": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Tengo la red de distribución rastreada... los cargamentos clandestinos coinciden con los registros corporativos.",
+              "speaker": "Analista",
+              "style": "caption",
+              "size": "medium",
+              "posX": 50,
+              "posY": 10,
+              "width": 200,
+              "fontSize": 9,
+              "borderRadius": 6,
+              "tail": "none"
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "panels": [
+        {
+          "focusY": 0.25,
+          "dialogue": [
+            {
+              "text": "¿Encontraste algo sospechoso en los archivos del sistema?",
+              "speaker": "Ian",
+              "style": "normal",
+              "size": "small",
+              "posX": 35,
+              "posY": 15,
+              "tailX": 35,
+              "tailY": 25,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            {
+              "text": "No la robaron. Parker la vendió por su cuenta.",
+              "speaker": "Ian",
+              "style": "normal",
+              "size": "small",
+              "posX": 50,
+              "posY": 52,
+              "tailX": 50,
+              "tailY": 62,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            {
+              "text": "Tengo que interceptar el próximo despacho antes de que salga del distrito.",
+              "speaker": "Ian",
+              "style": "normal",
+              "size": "small",
+              "posX": 60,
+              "posY": 80,
+              "tailX": 60,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Parker usó la corporación como fachada. El GT-R azul es la clave de todo.",
+              "speaker": "Ian",
+              "style": "normal",
+              "size": "small",
+              "posX": 50,
+              "posY": 15,
+              "tailX": 50,
+              "tailY": 25,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Voy a investigar el sector industrial por mi cuenta.",
+              "speaker": "Ian",
+              "style": "normal",
+              "size": "small",
+              "posX": 40,
+              "posY": 55,
+              "tailX": 40,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Si me descubren allá, no habrá vuelta atrás. Mantén el canal abierto.",
+              "speaker": "Ian",
+              "style": "normal",
+              "size": "small",
+              "posX": 50,
+              "posY": 80,
+              "tailX": 50,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "panels": [
+        {
+          "focusY": 0.3,
+          "dialogue": [
+            {
+              "text": "El complejo de carga está en la zona baja de la ciudad. Casi llego.",
+              "speaker": "Ian",
+              "style": "normal",
+              "size": "small",
+              "posX": 50,
+              "posY": 25,
+              "tailX": 50,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.75,
+          "dialogue": [
+            {
+              "text": "BYTE, envíame la ubicación exacta del acceso secundario.",
+              "speaker": "Ian",
+              "style": "normal",
+              "size": "small",
+              "posX": 40,
+              "posY": 75,
+              "tailX": 40,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "panels": [
+        {
+          "focusY": 0.3,
+          "dialogue": [
+            {
+              "text": "Ahí están... transfiriendo los contenedores reforzados.",
+              "speaker": "Ian",
+              "style": "normal",
+              "size": "small",
+              "posX": 40,
+              "posY": 25,
+              "tailX": 40,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.75,
+          "dialogue": [
+            {
+              "text": "Fotografías capturadas. Componentes mecánicos de prototipos... Parker está vendiendo todo.",
+              "speaker": "Ian",
+              "style": "normal",
+              "size": "small",
+              "posX": 45,
+              "posY": 75,
+              "tailX": 45,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "¿Ian todavía no volvió al taller? Dijo que iba a hacer un trámite corto.",
+              "speaker": "Ren",
+              "style": "normal",
+              "size": "small",
+              "posX": 70,
+              "posY": 12,
+              "tailX": 70,
+              "tailY": 22,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Cuando se pone reservado es porque anda investigando algo peligroso.",
+              "speaker": "Daichi",
+              "style": "normal",
+              "size": "small",
+              "posX": 60,
+              "posY": 28,
+              "tailX": 60,
+              "tailY": 38,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "ALERTA: Transmisor de Ian activo en Zona Logística restringida.",
+              "speaker": "BYTE",
+              "style": "normal",
+              "size": "small",
+              "posX": 40,
+              "posY": 48,
+              "tailX": 40,
+              "tailY": 58,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿En los depósitos corporativos? Ese tonto se metió solo en territorio enemigo.",
+              "speaker": "Brooke",
+              "style": "normal",
+              "size": "small",
+              "posX": 75,
+              "posY": 48,
+              "tailX": 75,
+              "tailY": 58,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "BYTE, al auto. Vamos a respaldar a nuestro mecánico antes de que se arme lío.",
+              "speaker": "Brooke",
+              "style": "normal",
+              "size": "small",
+              "posX": 35,
+              "posY": 78,
+              "tailX": 35,
+              "tailY": 88,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "panels": [
+        {
+          "focusY": 0.3,
+          "dialogue": [
+            {
+              "text": "Tienen un mapa completo de contrabando montado en este depósito...",
+              "speaker": "Ian",
+              "style": "normal",
+              "size": "small",
+              "posX": 40,
+              "posY": 25,
+              "tailX": 40,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.75,
+          "dialogue": [
+            {
+              "text": "Planos técnicos de turbinas y piezas de alta gama... Están desmantelando los prototipos.",
+              "speaker": "Ian",
+              "style": "normal",
+              "size": "small",
+              "posX": 30,
+              "posY": 75,
+              "tailX": 30,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "panels": [
+        {
+          "focusY": 0.3,
+          "dialogue": [
+            {
+              "text": "BYTE, ¿distancia al objetivo?",
+              "speaker": "Brooke",
+              "style": "normal",
+              "size": "small",
+              "posX": 65,
+              "posY": 22,
+              "tailX": 65,
+              "tailY": 32,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "300 metros. Señal de Ian detectada en el acceso al depósito.",
+              "speaker": "BYTE",
+              "style": "normal",
+              "size": "small",
+              "posX": 30,
+              "posY": 22,
+              "tailX": 30,
+              "tailY": 32,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.75,
+          "dialogue": [
+            {
+              "text": "Justo a tiempo. Hora de hacer una entrada triunfal.",
+              "speaker": "Brooke",
+              "style": "normal",
+              "size": "small",
+              "posX": 40,
+              "posY": 75,
+              "tailX": 40,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

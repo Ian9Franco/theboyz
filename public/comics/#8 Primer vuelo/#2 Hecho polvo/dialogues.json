@@ -2792,7 +2792,7 @@
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "no puedo creer qeu sea ella", "size": "small", "posX": 50, "posY": 40, "tailX": 30, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 0 }
+            { "text": "no puedo creer que sea ella", "size": "small", "posX": 50, "posY": 40, "tailX": 30, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 0 }
           ]
         },
         {

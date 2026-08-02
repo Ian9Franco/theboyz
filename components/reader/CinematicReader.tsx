@@ -151,6 +151,11 @@ export function CinematicReader({
     handleMoveBubbleToPanel,
     handleReorderPanels,
     handleReorderBubbles,
+    hasUnsavedChanges,
+    hasLocalBackup,
+    backupTimestamp,
+    restoreLocalBackup,
+    discardLocalBackup,
   } = useDialogueEditor({ dialogues, chapterId: chapter.id, pageKey: getPageKeyFromUrl(pages[pageIdx]), imgRef });
 
   const [textScale, setTextScale] = useState<number>(1.0);
@@ -838,6 +843,11 @@ export function CinematicReader({
           handleMoveBubbleToPanel={handleMoveBubbleToPanel}
           handleReorderPanels={handleReorderPanels}
           handleReorderBubbles={handleReorderBubbles}
+          hasUnsavedChanges={hasUnsavedChanges}
+          hasLocalBackup={hasLocalBackup}
+          backupTimestamp={backupTimestamp}
+          restoreLocalBackup={restoreLocalBackup}
+          discardLocalBackup={discardLocalBackup}
         />
       </div>
 

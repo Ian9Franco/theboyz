@@ -43,14 +43,125 @@ export function useDialogueEditor({
   // Preset Mode (standard vs custom)
   const [presetMode, setPresetMode] = useState<"standard" | "custom">("standard");
 
-  // Initialize dialogues copy
+  // Local Storage Backup & Unsaved Changes States
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+  const [hasLocalBackup, setHasLocalBackup] = useState(false);
+  const [backupTimestamp, setBackupTimestamp] = useState<number | null>(null);
+
+  const isInitialLoadRef = React.useRef(true);
+
+  // Initialize dialogues copy & check for existing localStorage backup
   useEffect(() => {
     if (dialogues) {
       setLocalDialogues(dialogues);
     } else {
       setLocalDialogues({ pages: {} });
     }
-  }, [dialogues]);
+    isInitialLoadRef.current = true;
+    setHasUnsavedChanges(false);
+
+    // Check if a backup exists for this chapter
+    if (typeof window !== "undefined" && chapterId) {
+      const backupKey = `dialogues_backup_${chapterId}`;
+      try {
+        const savedBackupStr = localStorage.getItem(backupKey);
+        if (savedBackupStr) {
+          const parsed = JSON.parse(savedBackupStr);
+          if (parsed && parsed.data && parsed.timestamp) {
+            setHasLocalBackup(true);
+            setBackupTimestamp(parsed.timestamp);
+          }
+        } else {
+          setHasLocalBackup(false);
+          setBackupTimestamp(null);
+        }
+      } catch (e) {
+        console.error("Error reading dialogues backup from localStorage", e);
+      }
+    }
+  }, [dialogues, chapterId]);
+
+  // Auto-save to localStorage whenever localDialogues changes
+  useEffect(() => {
+    if (isInitialLoadRef.current) {
+      isInitialLoadRef.current = false;
+      return;
+    }
+
+    if (typeof window === "undefined" || !chapterId) return;
+
+    setHasUnsavedChanges(true);
+
+    const backupKey = `dialogues_backup_${chapterId}`;
+    const timer = setTimeout(() => {
+      try {
+        const now = Date.now();
+        localStorage.setItem(
+          backupKey,
+          JSON.stringify({
+            data: localDialogues,
+            timestamp: now,
+          })
+        );
+        setHasLocalBackup(true);
+        setBackupTimestamp(now);
+      } catch (e) {
+        console.error("Error saving dialogues backup to localStorage:", e);
+      }
+    }, 400);
+
+    return () => clearTimeout(timer);
+  }, [localDialogues, chapterId]);
+
+  // Prevent accidental page refresh / navigation when unsaved changes exist
+  useEffect(() => {
+    if (!hasUnsavedChanges) return;
+
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = "Tienes cambios sin guardar en los diálogos. ¿Seguro que deseas salir o refrescar?";
+      return e.returnValue;
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, [hasUnsavedChanges]);
+
+  // Restore backup from localStorage
+  const restoreLocalBackup = useCallback(() => {
+    if (typeof window === "undefined" || !chapterId) return;
+    const backupKey = `dialogues_backup_${chapterId}`;
+    try {
+      const savedBackupStr = localStorage.getItem(backupKey);
+      if (savedBackupStr) {
+        const parsed = JSON.parse(savedBackupStr);
+        if (parsed && parsed.data) {
+          setLocalDialogues(parsed.data);
+          setHasUnsavedChanges(true);
+          setSaveStatus("idle");
+        }
+      }
+    } catch (e) {
+      console.error("Error restoring local backup:", e);
+    }
+  }, [chapterId]);
+
+  // Discard backup from localStorage
+  const discardLocalBackup = useCallback(() => {
+    if (typeof window === "undefined" || !chapterId) return;
+    const backupKey = `dialogues_backup_${chapterId}`;
+    try {
+      localStorage.removeItem(backupKey);
+      setHasLocalBackup(false);
+      setBackupTimestamp(null);
+      setHasUnsavedChanges(false);
+      if (dialogues) {
+        setLocalDialogues(dialogues);
+      }
+    } catch (e) {
+      console.error("Error discarding local backup:", e);
+    }
+  }, [chapterId, dialogues]);
 
   // History stack handlers
   const handleUndo = useCallback(() => {
@@ -407,6 +518,12 @@ export function useDialogueEditor({
       });
       if (res.ok) {
         setSaveStatus("success");
+        setHasUnsavedChanges(false);
+        setHasLocalBackup(false);
+        setBackupTimestamp(null);
+        if (typeof window !== "undefined") {
+          localStorage.removeItem(`dialogues_backup_${chapterId}`);
+        }
       } else {
         setSaveStatus("error");
       }
@@ -657,5 +774,10 @@ export function useDialogueEditor({
     handleMoveBubbleToPanel,
     handleReorderPanels,
     handleReorderBubbles,
+    hasUnsavedChanges,
+    hasLocalBackup,
+    backupTimestamp,
+    restoreLocalBackup,
+    discardLocalBackup,
   };
 }

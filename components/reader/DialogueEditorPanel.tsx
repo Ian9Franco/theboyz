@@ -80,6 +80,11 @@ export interface DialogueEditorPanelProps {
   handleMoveBubbleToPanel: (fromPanelIdx: number, bubbleIdx: number, toPanelIdx: number) => void;
   handleReorderPanels: (startIndex: number, endIndex: number) => void;
   handleReorderBubbles: (pIdx: number, startIndex: number, endIndex: number) => void;
+  hasUnsavedChanges?: boolean;
+  hasLocalBackup?: boolean;
+  backupTimestamp?: number | null;
+  restoreLocalBackup?: () => void;
+  discardLocalBackup?: () => void;
 }
 
 /**
@@ -125,6 +130,11 @@ export function DialogueEditorPanel({
   handleMoveBubbleToPanel,
   handleReorderPanels,
   handleReorderBubbles,
+  hasUnsavedChanges,
+  hasLocalBackup,
+  backupTimestamp,
+  restoreLocalBackup,
+  discardLocalBackup,
 }: DialogueEditorPanelProps) {
   const [isOpen, setIsOpen] = useState(true);
 
@@ -268,9 +278,16 @@ export function DialogueEditorPanel({
 
       {/* Header / Save Block */}
       <div className="p-4 border-b border-white/10 bg-[#161622] flex items-center justify-between gap-2">
-        <span className="font-[var(--font-bangers)] text-xl tracking-wider text-white whitespace-nowrap">
-          Editor de Diálogos
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="font-[var(--font-bangers)] text-xl tracking-wider text-white whitespace-nowrap">
+            Editor de Diálogos
+          </span>
+          {hasUnsavedChanges && (
+            <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono font-bold bg-amber-500/20 border border-amber-500/40 text-amber-300 rounded-full animate-pulse">
+              ⚡ Respaldado en Local
+            </span>
+          )}
+        </div>
         <div className="flex items-center gap-2">
           <button
             onClick={handleSaveChanges}
@@ -295,6 +312,45 @@ export function DialogueEditorPanel({
           </button>
         </div>
       </div>
+
+      {/* Local Backup Notification & Recovery Banner */}
+      {hasLocalBackup && (
+        <div className="p-3 border-b border-amber-500/30 bg-amber-950/40 text-amber-200 text-xs flex flex-col gap-2 shadow-inner">
+          <div className="flex items-center justify-between">
+            <span className="font-bold flex items-center gap-1.5 text-amber-300 font-[var(--font-marker)]">
+              ⚡ Respaldo Automático Guardado en Local
+            </span>
+            {backupTimestamp && (
+              <span className="text-[10px] font-mono text-amber-400/80">
+                {new Date(backupTimestamp).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })}
+              </span>
+            )}
+          </div>
+          <p className="text-[11px] text-amber-200/90 leading-tight">
+            Tus cambios se guardan solos en tiempo real en tu navegador. Si refrescas por accidente, puedes recuperar todo con un clic.
+          </p>
+          <div className="flex items-center gap-2 pt-0.5">
+            {restoreLocalBackup && (
+              <button
+                type="button"
+                onClick={restoreLocalBackup}
+                className="bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold px-3 py-1 rounded text-xs transition-colors cursor-pointer"
+              >
+                🔄 Cargar Backup Local
+              </button>
+            )}
+            {discardLocalBackup && (
+              <button
+                type="button"
+                onClick={discardLocalBackup}
+                className="bg-zinc-800 hover:bg-zinc-700 text-zinc-300 border border-white/10 px-2.5 py-1 rounded text-xs transition-colors cursor-pointer"
+              >
+                Descartar Backup
+              </button>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Page Navigation */}
       <div className="p-4 border-b border-white/10 bg-[#14141e] flex items-center justify-between gap-2">
