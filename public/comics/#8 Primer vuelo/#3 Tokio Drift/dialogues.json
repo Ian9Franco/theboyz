@@ -5,19 +5,36 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "Otro día entero en el taller... hora de cerrar todo por hoy.", "speaker": "Ian", "size": "small", "posX": 40, "posY": 15, "tailX": 40, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
+            { "text": "Otro día entero en el taller..", "speaker": "Ian", "size": "small", "posX": 50, "posY": 5, "tailX": 35, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18, "style": "thought" }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 40 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "Luces fuera. Mañana va a ser un día agitado.", "speaker": "Ian", "size": "small", "posX": 70, "posY": 48, "tailX": 70, "tailY": 58, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
+            { "text": "Luces fuera. Mañana va a ser un día agitado.", "speaker": "Ian", "size": "small", "posX": 50, "posY": 45, "tailX": 35, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18, "style": "thought" }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/garaje.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.65,
+                "playbackRate": 1
+              }
+            }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 40, "w": 100, "h": 29 }
           ]
         },
         {
           "focusY": 0.8,
-          "dialogue": [
-            { "text": "Por fin... a descansar.", "speaker": "Ian", "size": "small", "posX": 60, "posY": 78, "tailX": 60, "tailY": 88, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 70, "w": 100, "h": 30 }
           ]
         }
       ]
@@ -27,14 +44,24 @@
         {
           "focusY": 0.25,
           "dialogue": [
-            { "text": "Uff... las seis de la mañana ya. No se descansa en Tokio.", "speaker": "Ian", "size": "small", "posX": 50, "posY": 20, "tailX": 50, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
+            { "text": "la puta madre", "speaker": "Ian", "size": "small", "posX": 35, "posY": 5, "tailX": 30, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/alarma.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.35,
+                "playbackRate": 1
+              }
+            }
           ]
         },
         {
           "focusY": 0.65,
           "dialogue": [
-            { "text": "Aaah... necesito recargar energías urgentemente.", "speaker": "Ian", "size": "small", "posX": 25, "posY": 55, "tailX": 25, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 },
-            { "text": "Nada que un buen café cargado no pueda solucionar.", "speaker": "Ian", "size": "small", "posX": 70, "posY": 55, "tailX": 70, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
+            { "text": "Aaah... ", "speaker": "Ian", "size": "small", "posX": 50, "posY": 45, "tailX": 35, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Nada que un buen café cargado no pueda solucionar.", "speaker": "Ian", "size": "small", "posX": 90, "posY": 40, "tailX": 75, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -44,7 +71,7 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "Bien... cuerpo listo, mente despejada.", "speaker": "Ian", "size": "small", "posX": 50, "posY": 15, "tailX": 50, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
+            { "text": "Bien... cuerpo listo, mente despejada.", "speaker": "Ian", "size": "small", "posX": 85, "posY": 5, "tailX": 50, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
