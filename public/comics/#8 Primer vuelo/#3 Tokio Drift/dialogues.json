@@ -71,19 +71,13 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "Bien... cuerpo listo, mente despejada.", "speaker": "Ian", "size": "small", "posX": 85, "posY": 5, "tailX": 50, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
+            { "text": "esa torre parece una eiffel berreta ", "speaker": "Ian", "size": "small", "posX": 80, "posY": 5, "tailX": 75, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 170, "fontSize": 8, "borderRadius": 13, "style": "thought" }
           ]
         },
         {
-          "focusY": 0.5,
+          "focusY": 0.7,
           "dialogue": [
-            { "text": "Bolso con herramientas, la laptop... todo en su lugar.", "speaker": "Ian", "size": "small", "posX": 25, "posY": 48, "tailX": 25, "tailY": 58, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
-          ]
-        },
-        {
-          "focusY": 0.8,
-          "dialogue": [
-            { "text": "Listo. A ver qué sorpresas nos esperan hoy en el taller.", "speaker": "Ian", "size": "small", "posX": 65, "posY": 78, "tailX": 65, "tailY": 88, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
+            { "text": "Bolso con herramientas, la compu... todo en su lugar.", "speaker": "Ian", "size": "small", "posX": 50, "posY": 50, "tailX": 35, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18, "style": "thought" }
           ]
         }
       ]
@@ -93,22 +87,22 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "Llegué al taller... ahí están todos.", "speaker": "Ian", "size": "small", "posX": 30, "posY": 15, "tailX": 30, "tailY": 25, "tailWidth": 6, "tailCurvature": -22, "width": 130, "fontSize": 8, "borderRadius": 18 }
+            { "text": ".. ahí están todos.", "speaker": "Ian", "size": "small", "posX": 45, "posY": 10, "tailX": 35, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 130, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "¡Buenas! ¿Cómo arrancó la mañana por acá?", "speaker": "Ian", "size": "small", "posX": 18, "posY": 40, "tailX": 18, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 130, "fontSize": 8, "borderRadius": 18 },
-            { "text": "Llegas justo a tiempo, guapo... Te extrañábamos por acá.", "speaker": "Brooke", "size": "small", "posX": 45, "posY": 38, "tailX": 45, "tailY": 48, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 },
-            { "text": "Revisando la telemetría. Ren dice que escucha un ruido raro en el motor.", "speaker": "Daichi", "size": "small", "posX": 70, "posY": 35, "tailX": 70, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 },
-            { "text": "El único ruido raro es el que hace Daichi cuando intenta sonreír.", "speaker": "Ren", "size": "small", "posX": 85, "posY": 48, "tailX": 85, "tailY": 58, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
+            { "text": "¡Buenas! ¿Cómo arrancó la mañana por acá?", "speaker": "Ian", "size": "small", "posX": 35, "posY": 35, "tailX": 25, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 130, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Llegas justo a tiempo", "speaker": "Brooke", "size": "small", "posX": 55, "posY": 30, "tailX": 55, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 },
+            { "text": "Revisando la telemetría. Ren dice que escucha un ruido raro en el motor.", "speaker": "Daichi", "size": "small", "posX": 75, "posY": 25, "tailX": 75, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 },
+            { "text": "El único raro es el viejo verde de Daichi ", "speaker": "Ren", "size": "small", "posX": 95, "posY": 25, "tailX": 95, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 140, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
           "focusY": 0.8,
           "dialogue": [
-            { "text": "Menos chistes y miren esto. Abrí los registros de la última prueba.", "speaker": "Ian", "size": "small", "posX": 25, "posY": 75, "tailX": 25, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
+            { "text": "Menos chistes y miren esto. Abrí los registros de la última prueba.", "speaker": "Ian", "size": "small", "posX": 35, "posY": 70, "tailX": 25, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 150, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
