@@ -1,7 +1,10 @@
 {
   "title": "El Mecanico. La Piloto, El Contrabandista Y El Robot",
   "number": 4,
-  "status": "draft",
-  "date": "14/08/2026",
-  "estimatedTime": "12 días"
+  "status": "published",
+  "date": "03/08/2026",
+  "estimatedTime": "12 días",
+  "nuevo": true,
+  "releaseDate": "03/08/2026",
+  "portada": "portada.webp"
 }

@@ -6,12 +6,10 @@
           "focusY": 0.5,
           "dialogue": [
             {
-              "text": "Tengo la red de distribución rastreada... los cargamentos clandestinos coinciden con los registros corporativos.",
-              "speaker": "Analista",
+              "text": "no.. no puede ser",
               "style": "caption",
-              "size": "medium",
-              "posX": 50,
-              "posY": 10,
+              "posX": 75,
+              "posY": 20,
               "width": 200,
               "fontSize": 9,
               "borderRadius": 6,
@@ -29,15 +27,53 @@
             {
               "text": "¿Encontraste algo sospechoso en los archivos del sistema?",
               "speaker": "Ian",
-              "style": "normal",
               "size": "small",
               "posX": 35,
-              "posY": 15,
-              "tailX": 35,
-              "tailY": 25,
+              "posY": 0,
+              "tailX": 25,
+              "tailY": 15,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "tenemos que hablar",
+              "size": "small",
+              "posX": 90,
+              "posY": 15,
+              "tailX": 90,
+              "tailY": 25,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "sentate",
+              "size": "small",
+              "posX": 95,
+              "posY": 20,
+              "tailX": 95,
+              "tailY": 30,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "estoy sentado",
+              "size": "small",
+              "posX": 80,
+              "posY": 5,
+              "tailX": 75,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
               "fontSize": 8,
               "borderRadius": 18
             }
@@ -49,15 +85,27 @@
             {
               "text": "No la robaron. Parker la vendió por su cuenta.",
               "speaker": "Ian",
-              "style": "normal",
               "size": "small",
-              "posX": 50,
-              "posY": 52,
-              "tailX": 50,
-              "tailY": 62,
+              "posX": 25,
+              "posY": 60,
+              "tailX": 0,
+              "tailY": 70,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "te envio la ubicacion que usan para despachar y distribuir todo",
+              "size": "small",
+              "posX": 50,
+              "posY": 60,
+              "tailX": 0,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
               "fontSize": 8,
               "borderRadius": 18
             }
@@ -67,19 +115,26 @@
           "focusY": 0.85,
           "dialogue": [
             {
-              "text": "Tengo que interceptar el próximo despacho antes de que salga del distrito.",
+              "text": "que?!",
               "speaker": "Ian",
-              "style": "normal",
               "size": "small",
-              "posX": 60,
-              "posY": 80,
-              "tailX": 60,
-              "tailY": 90,
+              "posX": 100,
+              "posY": 70,
+              "tailX": 85,
+              "tailY": 75,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 150,
               "fontSize": 8,
               "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 50,
+              "w": 100,
+              "h": 50
             }
           ]
         }
@@ -91,19 +146,20 @@
           "focusY": 0.2,
           "dialogue": [
             {
-              "text": "Parker usó la corporación como fachada. El GT-R azul es la clave de todo.",
-              "speaker": "Ian",
-              "style": "normal",
+              "text": "Parker usó la corporación como fachada.",
+              "speaker": "Jaz",
               "size": "small",
-              "posX": 50,
+              "posX": 75,
               "posY": 15,
-              "tailX": 50,
-              "tailY": 25,
+              "tailX": 10,
+              "tailY": 30,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 160,
               "fontSize": 8,
-              "borderRadius": 18
+              "borderRadius": 18,
+              "showSpeakerName": true,
+              "offscreen": true
             }
           ]
         },
@@ -111,17 +167,68 @@
           "focusY": 0.5,
           "dialogue": [
             {
-              "text": "Voy a investigar el sector industrial por mi cuenta.",
+              "text": "y por que carajos me mando a investigar algo que el mismo esta haciendo?",
               "speaker": "Ian",
-              "style": "normal",
               "size": "small",
-              "posX": 40,
-              "posY": 55,
-              "tailX": 40,
-              "tailY": 65,
+              "posX": 20,
+              "posY": 30,
+              "tailX": 15,
+              "tailY": 45,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "yo creo que esta manipulando",
+              "size": "small",
+              "posX": 75,
+              "posY": 30,
+              "tailX": 90,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "y no creyo que pudieras descubrir esto",
+              "size": "small",
+              "posX": 95,
+              "posY": 25,
+              "tailX": 100,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "de hecho, nolo hiciste, fui yo",
+              "size": "small",
+              "posX": 95,
+              "posY": 35,
+              "tailX": 95,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "las cosas estan raras por aca ian, Norman llamo a los chicos al eificio",
+              "size": "small",
+              "posX": 50,
+              "posY": 60,
+              "tailX": 90,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
               "fontSize": 8,
               "borderRadius": 18
             }
@@ -131,19 +238,34 @@
           "focusY": 0.8,
           "dialogue": [
             {
-              "text": "Si me descubren allá, no habrá vuelta atrás. Mantén el canal abierto.",
+              "text": "que? para que?!",
               "speaker": "Ian",
-              "style": "normal",
               "size": "small",
-              "posX": 50,
-              "posY": 80,
-              "tailX": 50,
-              "tailY": 90,
+              "posX": 40,
+              "posY": 65,
+              "tailX": 30,
+              "tailY": 75,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 150,
               "fontSize": 8,
               "borderRadius": 18
+            },
+            {
+              "text": "No me dijeron, ahora estan ahi con el",
+              "speaker": "Jaz",
+              "size": "small",
+              "posX": 95,
+              "posY": 70,
+              "tailX": 70,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "showSpeakerName": true,
+              "offscreen": true
             }
           ]
         }
@@ -155,39 +277,142 @@
           "focusY": 0.3,
           "dialogue": [
             {
-              "text": "El complejo de carga está en la zona baja de la ciudad. Casi llego.",
+              "text": "y por que no vas a ver para que los quiere?",
               "speaker": "Ian",
-              "style": "normal",
               "size": "small",
-              "posX": 50,
-              "posY": 25,
-              "tailX": 50,
-              "tailY": 35,
+              "posX": 60,
+              "posY": 5,
+              "tailX": 55,
+              "tailY": 15,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 150,
               "fontSize": 8,
               "borderRadius": 18
+            },
+            {
+              "text": "y que sea mas sospechoso todavia?",
+              "speaker": "Jaz",
+              "size": "small",
+              "posX": 20,
+              "posY": 10,
+              "tailX": 45,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "showSpeakerName": true,
+              "offscreen": true
             }
           ]
         },
         {
-          "focusY": 0.75,
+          "focusY": 0.5,
           "dialogue": [
             {
-              "text": "BYTE, envíame la ubicación exacta del acceso secundario.",
-              "speaker": "Ian",
-              "style": "normal",
+              "text": "bueno pero podrias intentarlo!",
               "size": "small",
-              "posX": 40,
-              "posY": 75,
-              "tailX": 40,
-              "tailY": 85,
+              "posX": 30,
+              "posY": 40,
+              "tailX": 35,
+              "tailY": 50,
               "tailWidth": 6,
               "tailCurvature": -22,
-              "width": 140,
+              "width": 120,
               "fontSize": 8,
               "borderRadius": 18
+            },
+            {
+              "text": "no te la agarres conmigo solo por que estas a 20mil km!",
+              "speaker": "Jaz",
+              "size": "small",
+              "posX": 5,
+              "posY": 40,
+              "tailX": 35,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "showSpeakerName": true,
+              "offscreen": true
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 38,
+              "w": 51,
+              "h": 32
+            }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            {
+              "text": "tiene razon",
+              "style": "thought",
+              "size": "small",
+              "posX": 85,
+              "posY": 60,
+              "tailX": 50,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 50,
+              "y": 35,
+              "w": 50,
+              "h": 34
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [
+            {
+              "text": "podrian estar rastreando la llamada ",
+              "size": "small",
+              "posX": 5,
+              "posY": 65,
+              "tailX": 15,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "tengo que cambiar el chip, no me llames, te llamo yo",
+              "size": "small",
+              "posX": 35,
+              "posY": 70,
+              "tailX": 25,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 70,
+              "w": 100,
+              "h": 30
             }
           ]
         }
@@ -199,19 +424,19 @@
           "focusY": 0.3,
           "dialogue": [
             {
-              "text": "Ahí están... transfiriendo los contenedores reforzados.",
+              "text": "si no me equivoco es aca..",
               "speaker": "Ian",
-              "style": "normal",
               "size": "small",
-              "posX": 40,
-              "posY": 25,
+              "posX": 70,
+              "posY": 10,
               "tailX": 40,
               "tailY": 35,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 140,
               "fontSize": 8,
-              "borderRadius": 18
+              "borderRadius": 18,
+              "style": "thought"
             }
           ]
         },
@@ -219,17 +444,29 @@
           "focusY": 0.75,
           "dialogue": [
             {
-              "text": "Fotografías capturadas. Componentes mecánicos de prototipos... Parker está vendiendo todo.",
+              "text": "sel o voy a mandar a jaz",
               "speaker": "Ian",
-              "style": "normal",
               "size": "small",
               "posX": 45,
-              "posY": 75,
-              "tailX": 45,
-              "tailY": 85,
+              "posY": 70,
+              "tailX": 20,
+              "tailY": 80,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "todo tiene descaradamente la marca de paker",
+              "size": "small",
+              "posX": 45,
+              "posY": 45,
+              "tailX": 20,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
               "fontSize": 8,
               "borderRadius": 18
             }
@@ -243,14 +480,13 @@
           "focusY": 0.2,
           "dialogue": [
             {
-              "text": "¿Ian todavía no volvió al taller? Dijo que iba a hacer un trámite corto.",
+              "text": "¿elias todavía no volvió al taller? Dijo que iba a hacer un trámite corto.",
               "speaker": "Ren",
-              "style": "normal",
               "size": "small",
-              "posX": 70,
-              "posY": 12,
-              "tailX": 70,
-              "tailY": 22,
+              "posX": 75,
+              "posY": 5,
+              "tailX": 80,
+              "tailY": 15,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 140,
@@ -260,12 +496,11 @@
             {
               "text": "Cuando se pone reservado es porque anda investigando algo peligroso.",
               "speaker": "Daichi",
-              "style": "normal",
               "size": "small",
-              "posX": 60,
-              "posY": 28,
+              "posX": 40,
+              "posY": 5,
               "tailX": 60,
-              "tailY": 38,
+              "tailY": 15,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 140,
@@ -280,7 +515,6 @@
             {
               "text": "ALERTA: Transmisor de Ian activo en Zona Logística restringida.",
               "speaker": "BYTE",
-              "style": "normal",
               "size": "small",
               "posX": 40,
               "posY": 48,
@@ -290,15 +524,15 @@
               "tailCurvature": -22,
               "width": 140,
               "fontSize": 8,
-              "borderRadius": 18
+              "borderRadius": 18,
+              "style": "electronic"
             },
             {
-              "text": "¿En los depósitos corporativos? Ese tonto se metió solo en territorio enemigo.",
+              "text": "¿En los depósitos corporativos? Ese tonto se metió solo en territorio kurogane.",
               "speaker": "Brooke",
-              "style": "normal",
               "size": "small",
-              "posX": 75,
-              "posY": 48,
+              "posX": 85,
+              "posY": 45,
               "tailX": 75,
               "tailY": 58,
               "tailWidth": 6,
@@ -313,17 +547,42 @@
           "focusY": 0.8,
           "dialogue": [
             {
-              "text": "BYTE, al auto. Vamos a respaldar a nuestro mecánico antes de que se arme lío.",
+              "text": "BYTE, al auto. Voy a ver si esta bien",
               "speaker": "Brooke",
-              "style": "normal",
               "size": "small",
-              "posX": 35,
-              "posY": 78,
-              "tailX": 35,
-              "tailY": 88,
+              "posX": 45,
+              "posY": 70,
+              "tailX": 25,
+              "tailY": 75,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "te acompaño?",
+              "size": "small",
+              "posX": 80,
+              "posY": 70,
+              "tailX": 85,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "no, a vos ya te conocen ren",
+              "size": "small",
+              "posX": 45,
+              "posY": 75,
+              "tailX": 30,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
               "fontSize": 8,
               "borderRadius": 18
             }
@@ -334,42 +593,87 @@
     "7": {
       "panels": [
         {
-          "focusY": 0.3,
+          "focusY": 0.15,
           "dialogue": [
             {
-              "text": "Tienen un mapa completo de contrabando montado en este depósito...",
-              "speaker": "Ian",
-              "style": "normal",
+              "text": "mientras tanto",
               "size": "small",
-              "posX": 40,
-              "posY": 25,
+              "posX": 15,
+              "posY": 5,
               "tailX": 40,
               "tailY": 35,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 150,
               "fontSize": 8,
-              "borderRadius": 18
+              "borderRadius": 18,
+              "style": "caption"
             }
           ]
         },
         {
-          "focusY": 0.75,
+          "focusY": 0.4,
           "dialogue": [
             {
               "text": "Planos técnicos de turbinas y piezas de alta gama... Están desmantelando los prototipos.",
               "speaker": "Ian",
-              "style": "normal",
               "size": "small",
-              "posX": 30,
-              "posY": 75,
-              "tailX": 30,
-              "tailY": 85,
+              "posX": 55,
+              "posY": 25,
+              "tailX": 20,
+              "tailY": 40,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 160,
               "fontSize": 8,
               "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 27.5,
+              "w": 100,
+              "h": 43
+            }
+          ]
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": [
+            {
+              "text": "fotos mias??!",
+              "size": "small",
+              "posX": 50,
+              "posY": 70,
+              "tailX": 45,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "me estan siguiendo desde que llegue",
+              "size": "small",
+              "posX": 45,
+              "posY": 95,
+              "tailX": 15,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 70,
+              "w": 100,
+              "h": 30
             }
           ]
         }
@@ -381,14 +685,13 @@
           "focusY": 0.3,
           "dialogue": [
             {
-              "text": "BYTE, ¿distancia al objetivo?",
+              "text": "BYTE, ¿esta cerca?",
               "speaker": "Brooke",
-              "style": "normal",
               "size": "small",
-              "posX": 65,
-              "posY": 22,
-              "tailX": 65,
-              "tailY": 32,
+              "posX": 85,
+              "posY": 10,
+              "tailX": 75,
+              "tailY": 20,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 120,
@@ -396,19 +699,19 @@
               "borderRadius": 18
             },
             {
-              "text": "300 metros. Señal de Ian detectada en el acceso al depósito.",
+              "text": "analizando..",
               "speaker": "BYTE",
-              "style": "normal",
               "size": "small",
-              "posX": 30,
-              "posY": 22,
+              "posX": 10,
+              "posY": 15,
               "tailX": 30,
-              "tailY": 32,
+              "tailY": 25,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 140,
               "fontSize": 8,
-              "borderRadius": 18
+              "borderRadius": 18,
+              "style": "electronic"
             }
           ]
         },
@@ -416,14 +719,28 @@
           "focusY": 0.75,
           "dialogue": [
             {
-              "text": "Justo a tiempo. Hora de hacer una entrada triunfal.",
-              "speaker": "Brooke",
-              "style": "normal",
+              "text": "300 metros. Señal de Ian detectada en el acceso al depósito.",
+              "style": "electronic",
               "size": "small",
-              "posX": 40,
-              "posY": 75,
+              "posX": 45,
+              "posY": 60,
               "tailX": 40,
-              "tailY": 85,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "fontFamily": "marker"
+            },
+            {
+              "text": "ya veo",
+              "speaker": "Brooke",
+              "size": "small",
+              "posX": 85,
+              "posY": 60,
+              "tailX": 75,
+              "tailY": 70,
               "tailWidth": 6,
               "tailCurvature": -22,
               "width": 140,
@@ -433,6 +750,5956 @@
           ]
         }
       ]
+    },
+    "9": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "es el",
+              "size": "small",
+              "posX": 95,
+              "posY": 5,
+              "tailX": 85,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "aca vive?",
+              "size": "small",
+              "posX": 55,
+              "posY": 5,
+              "tailX": 70,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "decis que lo esperemos?",
+              "size": "small",
+              "posX": 60,
+              "posY": 50,
+              "tailX": 45,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "podriamos esperar que vuelva al taller",
+              "size": "small",
+              "posX": 75,
+              "posY": 55,
+              "tailX": 50,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "pero no sabriamos que carajos hacia en ese lugar",
+              "size": "small",
+              "posX": 70,
+              "posY": 70,
+              "tailX": 75,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "tenes razon, vamos ",
+              "size": "small",
+              "posX": 50,
+              "posY": 75,
+              "tailX": 75,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "pero no dije nada",
+              "style": "electronic",
+              "size": "small",
+              "posX": 45,
+              "posY": 90,
+              "tailX": 65,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "fontFamily": "marker"
+            }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "ahi esta.. parece que esta ocupado",
+              "size": "small",
+              "posX": 55,
+              "posY": 25,
+              "tailX": 20,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "quizas estamos exagerando",
+              "size": "small",
+              "posX": 45,
+              "posY": 5,
+              "tailX": 30,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 42
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "pero aun asi..",
+              "size": "small",
+              "posX": 55,
+              "posY": 50,
+              "tailX": 40,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "byte subime",
+              "size": "small",
+              "posX": 55,
+              "posY": 45,
+              "tailX": 40,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 40,
+              "w": 54,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 50,
+              "y": 40,
+              "w": 50,
+              "h": 60
+            }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/byte_up.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.1,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [
+            {
+              "text": "bien, enano",
+              "size": "small",
+              "posX": 30,
+              "posY": 70,
+              "tailX": 25,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 65,
+              "w": 52,
+              "h": 35
+            }
+          ]
+        }
+      ]
+    },
+    "11": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": []
+        }
+      ]
+    },
+    "12": {
+      "panels": [
+        {
+          "focusY": 0.3,
+          "dialogue": [
+            {
+              "text": "eh?",
+              "size": "small",
+              "posX": 65,
+              "posY": 5,
+              "tailX": 60,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 60
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "que mierda es esto?",
+              "size": "small",
+              "posX": 35,
+              "posY": 55,
+              "tailX": 30,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "espia?",
+              "style": "electronic",
+              "size": "small",
+              "posX": 60,
+              "posY": 60,
+              "tailX": 50,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "fontFamily": "marker"
+            },
+            {
+              "text": "br-brooke - puedo expllicarlo no es lo que pensas",
+              "size": "small",
+              "posX": 95,
+              "posY": 55,
+              "tailX": 90,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 60,
+              "w": 100,
+              "h": 40
+            }
+          ]
+        }
+      ]
+    },
+    "13": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "ESPERA DEJAME EXPLICAR",
+              "size": "small",
+              "posX": 70,
+              "posY": 5,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "no hay nada que explicar",
+              "size": "small",
+              "posX": 65,
+              "posY": 45,
+              "tailX": 55,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "es muy terca la hija de puta",
+              "style": "thought",
+              "size": "small",
+              "posX": 85,
+              "posY": 75,
+              "tailX": 50,
+              "tailY": 95,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "14": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "que pasa. por que tan apurados",
+              "size": "small",
+              "posX": 45,
+              "posY": 5,
+              "tailX": 60,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/autos/drift.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.2,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            {
+              "text": "que pasa? pasa que es un mentiroso!",
+              "size": "small",
+              "posX": 10,
+              "posY": 50,
+              "tailX": 20,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "es un espia, o un agente de kurogane",
+              "size": "small",
+              "posX": 50,
+              "posY": 60,
+              "tailX": 35,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "no, no es asi dejenme explicar",
+              "size": "small",
+              "posX": 95,
+              "posY": 55,
+              "tailX": 90,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/puerta de auto.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.5,
+                "playbackRate": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "15": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "explicar que? que esta pasando?",
+              "size": "small",
+              "posX": 75,
+              "posY": 0,
+              "tailX": 70,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "mira todo esto",
+              "size": "small",
+              "posX": 10,
+              "posY": 5,
+              "tailX": 35,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "no entiendo, que hacen fotos nuestras y de los coches",
+              "size": "small",
+              "posX": 55,
+              "posY": 30,
+              "tailX": 65,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "todo esto estaba en su departamento",
+              "size": "small",
+              "posX": 20,
+              "posY": 40,
+              "tailX": 35,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "perverso",
+              "size": "small",
+              "posX": 100,
+              "posY": 35,
+              "tailX": 90,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Déjeme explicar.",
+              "size": "small",
+              "posX": 45,
+              "posY": 65,
+              "tailX": 35,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Explicanos entonces, Elías.",
+              "size": "small",
+              "posX": 25,
+              "posY": 65,
+              "tailX": 20,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "16": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "No trabajo para Kurogane.",
+              "size": "small",
+              "posX": 40,
+              "posY": 5,
+              "tailX": 20,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Trabajo para Parker Industries.",
+              "size": "small",
+              "posX": 45,
+              "posY": 15,
+              "tailX": 20,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Básicamente lo mismo.",
+              "size": "small",
+              "posX": 80,
+              "posY": 0,
+              "tailX": 85,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Yo vine a Japón para rastrear la tecnología que hacemos allá...",
+              "size": "small",
+              "posX": 65,
+              "posY": 60,
+              "tailX": 120,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Y necesitaba conseguir entrar sin levantar sospechas.",
+              "size": "small",
+              "posX": 60,
+              "posY": 45,
+              "tailX": 110,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Pero resulta que no es tecnología robada.",
+              "size": "small",
+              "posX": 100,
+              "posY": 75,
+              "tailX": 85,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Norman Parker la estuvo vendiendo todo este tiempo.",
+              "size": "small",
+              "posX": 90,
+              "posY": 65,
+              "tailX": 90,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sabiendo que es utilizada por estas mafias que tienen a este país de rehén.",
+              "size": "small",
+              "posX": 60,
+              "posY": 65,
+              "tailX": 80,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Nos usaste.",
+              "size": "small",
+              "posX": 25,
+              "posY": 80,
+              "tailX": 20,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "17": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "No quiero escuchar más nada.",
+              "size": "small",
+              "posX": 40,
+              "posY": 0,
+              "tailX": 25,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Te iba a invitar a drogarnos.",
+              "size": "small",
+              "posX": 45,
+              "posY": 40,
+              "tailX": 30,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Pido disculpas.",
+              "size": "small",
+              "posX": 85,
+              "posY": 40,
+              "tailX": 80,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No quise que esto termine así.",
+              "size": "small",
+              "posX": 105,
+              "posY": 45,
+              "tailX": 80,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Esto terminó.",
+              "size": "small",
+              "posX": 30,
+              "posY": 70,
+              "tailX": 20,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "18": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Miren, mi cruzada con esto cambió desde que llegué y los conocí.",
+              "size": "small",
+              "posX": 30,
+              "posY": 0,
+              "tailX": 20,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Intento llegar al fondo de esto y cortarlo de raíz.",
+              "size": "small",
+              "posX": 55,
+              "posY": 5,
+              "tailX": 20,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Entiendo si no confían en mí.",
+              "size": "small",
+              "posX": 60,
+              "posY": 40,
+              "tailX": 35,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Voy a dejar toda la información que necesiten sobre quién soy y qué hago.",
+              "size": "small",
+              "posX": 95,
+              "posY": 45,
+              "tailX": 30,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Nos vemos, saben dónde encontrarme.",
+              "size": "small",
+              "posX": 45,
+              "posY": 50,
+              "tailX": 30,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "19": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Todo lo que podía salir mal, salió mal.",
+              "style": "thought",
+              "size": "small",
+              "posX": 55,
+              "posY": 5,
+              "tailX": 50,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.35,
+          "dialogue": [
+            {
+              "text": "Tengo que resolver esto a como dé lugar.",
+              "style": "thought",
+              "size": "small",
+              "posX": 45,
+              "posY": 25,
+              "tailX": 30,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            {
+              "text": "Entonces está Oni.",
+              "style": "thought",
+              "size": "small",
+              "posX": 10,
+              "posY": 50,
+              "tailX": 50,
+              "tailY": 95,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Ren dice que es la mano derecha de un tal Shinjuro Kurogane.",
+              "style": "thought",
+              "size": "small",
+              "posX": 30,
+              "posY": 50,
+              "tailX": 53,
+              "tailY": 98,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Por el apellido, entiendo que está atrás de todo esto.",
+              "style": "thought",
+              "size": "small",
+              "posX": 50,
+              "posY": 50,
+              "tailX": 56,
+              "tailY": 100,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No es muy inteligente ponerle tu apellido a una organización criminal.",
+              "style": "thought",
+              "size": "small",
+              "posX": 70,
+              "posY": 45,
+              "tailX": 59,
+              "tailY": 100,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Bueno... Parker hace lo mismo.",
+              "style": "thought",
+              "size": "small",
+              "posX": 90,
+              "posY": 50,
+              "tailX": 62,
+              "tailY": 100,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Qué mierda hago?",
+              "style": "thought",
+              "size": "small",
+              "posX": 100,
+              "posY": 55,
+              "tailX": 65,
+              "tailY": 100,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [
+            {
+              "text": "Tengo que contactarla...",
+              "style": "thought",
+              "size": "small",
+              "posX": 85,
+              "posY": 75,
+              "tailX": 70,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 70,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        }
+      ]
+    },
+    "20": {
+      "panels": [
+        {
+          "focusY": 0.3,
+          "dialogue": [
+            {
+              "text": "Solamente espero que no intente matarme otra vez...",
+              "style": "thought",
+              "size": "small",
+              "posX": 100,
+              "posY": 30,
+              "tailX": 50,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 65
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            {
+              "text": "Dijo que la vea acá.",
+              "style": "thought",
+              "size": "small",
+              "posX": 50,
+              "posY": 70,
+              "tailX": 50,
+              "tailY": 100,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Dónde está...?",
+              "style": "thought",
+              "size": "small",
+              "posX": 55,
+              "posY": 75,
+              "tailX": 53,
+              "tailY": 100,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 65,
+              "w": 100,
+              "h": 35
+            }
+          ]
+        }
+      ]
+    },
+    "21": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "¿Te siguieron?",
+              "size": "small",
+              "posX": 65,
+              "posY": 15,
+              "tailX": 75,
+              "tailY": 25,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No... hice lo que me dijiste.",
+              "size": "small",
+              "posX": 40,
+              "posY": 10,
+              "tailX": 40,
+              "tailY": 30,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Hacé un movimiento en falso y esta espada va a tu garganta.",
+              "size": "small",
+              "posX": 85,
+              "posY": 25,
+              "tailX": 70,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Ahora, hablá.",
+              "size": "small",
+              "posX": 90,
+              "posY": 40,
+              "tailX": 70,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "22": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Te dije que nos viéramos acá pero no para perder el tiempo. ¿Qué querés?",
+              "speaker": "Sofi",
+              "size": "small",
+              "posX": 90,
+              "posY": 0,
+              "tailX": 80,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sofi... los Kurogane tienen el circuito cerrado, pero encontré una forma de entrar.",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 45,
+              "posY": 5,
+              "tailX": 35,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 45
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Tienen prototipos de Parker escondidos en el depósito central.",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 45,
+              "posY": 35,
+              "tailX": -15,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Durante la gran carrera de la cúpula, toda su atención va a estar en la pista.",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 50,
+              "posY": 45,
+              "tailX": -15,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Ahí es cuando podemos atacar y recuperar las piezas.",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 80,
+              "posY": 50,
+              "tailX": 105,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Te dije que no me digas más así. Tenés diez segundos antes de que pruebe este filo.",
+              "size": "small",
+              "posX": 80,
+              "posY": 70,
+              "tailX": 115,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 45,
+              "w": 100,
+              "h": 36
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            {
+              "text": "Hablá rápido. ¿Cómo pretendés burlar su seguridad?",
+              "speaker": "Sofi",
+              "size": "small",
+              "posX": 55,
+              "posY": 85,
+              "tailX": 30,
+              "tailY": 95,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No sé si sos muy valiente o sos un inconsciente...",
+              "speaker": "Sofi",
+              "size": "small",
+              "posX": 50,
+              "posY": 75,
+              "tailX": 30,
+              "tailY": 95,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "23": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Entonces ese es el plan.",
+              "size": "small",
+              "posX": 50,
+              "posY": 0,
+              "tailX": 20,
+              "tailY": 5,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Tu plan es una mierda.",
+              "size": "small",
+              "posX": 60,
+              "posY": 5,
+              "tailX": 40,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Ey.",
+              "size": "small",
+              "posX": 5,
+              "posY": 5,
+              "tailX": 10,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Los Kurogane saben de vos, saben que los investigás.",
+              "size": "small",
+              "posX": 55,
+              "posY": 15,
+              "tailX": 30,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Probablemente ese Parker les dio tu información.",
+              "size": "small",
+              "posX": 50,
+              "posY": 25,
+              "tailX": 50,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Si chocás, el plan se va a la mierda.",
+              "size": "small",
+              "posX": 55,
+              "posY": 30,
+              "tailX": 50,
+              "tailY": 25,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No voy a manejar, Brooke es una hábil conductora.",
+              "size": "small",
+              "posX": 0,
+              "posY": 25,
+              "tailX": 10,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Mientras la carrera transcurre, Shinjuro va a estar expuesto.",
+              "size": "small",
+              "posX": 20,
+              "posY": 35,
+              "tailX": 15,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Toda su atención va a estar en la carrera.",
+              "size": "small",
+              "posX": 40,
+              "posY": 35,
+              "tailX": 15,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Ahí podés infiltrarte. Lo hice yo, vos vas a poder hacerlo mejor.",
+              "size": "small",
+              "posX": 35,
+              "posY": 65,
+              "tailX": 15,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Entonces, mientras vos estás viendo, ¿yo tengo que matar a todos?",
+              "size": "small",
+              "posX": 80,
+              "posY": 35,
+              "tailX": 65,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Exacto.",
+              "size": "small",
+              "posX": 45,
+              "posY": 45,
+              "tailX": 10,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Tu plan es una mierda, pero tiene sentido.",
+              "size": "small",
+              "posX": 100,
+              "posY": 45,
+              "tailX": 65,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No te dejaría esa responsabilidad.",
+              "size": "small",
+              "posX": 100,
+              "posY": 55,
+              "tailX": 65,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 37.5,
+              "w": 100,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Gracias...",
+              "size": "small",
+              "posX": 50,
+              "posY": 80,
+              "tailX": 30,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Te veo en unos días entonces.",
+              "size": "small",
+              "posX": 50,
+              "posY": 75,
+              "tailX": 25,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "-Sí.",
+              "size": "small",
+              "posX": 80,
+              "posY": 75,
+              "tailX": 75,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 70,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        }
+      ]
+    },
+    "24": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Me pregunto qué hizo que cambie de ser tan dulce a tan amargada...",
+              "style": "thought",
+              "size": "small",
+              "posX": 60,
+              "posY": 5,
+              "tailX": 45,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Igual... tiene razón.",
+              "style": "thought",
+              "size": "small",
+              "posX": 55,
+              "posY": 30,
+              "tailX": 50,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Si tuviera que enfrentarme a esta gente, terminaría en el suelo.",
+              "style": "thought",
+              "size": "small",
+              "posX": 85,
+              "posY": 25,
+              "tailX": 53,
+              "tailY": 68,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 250,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Jamás estuve en una pelea física.",
+              "style": "thought",
+              "size": "small",
+              "posX": 90,
+              "posY": 30,
+              "tailX": 56,
+              "tailY": 71,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 250,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Y estos tipos están sumamente entrenados.",
+              "style": "thought",
+              "size": "small",
+              "posX": 50,
+              "posY": 50,
+              "tailX": 59,
+              "tailY": 74,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 250,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 46
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Quizás deba sacar músculo.",
+              "style": "thought",
+              "size": "small",
+              "posX": 50,
+              "posY": 75,
+              "tailX": 50,
+              "tailY": 95,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Hay un gym cerca.",
+              "style": "thought",
+              "size": "small",
+              "posX": 95,
+              "posY": 85,
+              "tailX": 53,
+              "tailY": 98,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 70,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        }
+      ]
+    },
+    "25": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Voy a hacer un poco, hace años no voy a un gimnasio, no me va a venir mal.",
+              "style": "thought",
+              "size": "small",
+              "posX": 80,
+              "posY": 5,
+              "tailX": 65,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "En zona oeste no saldría ni en pedo a esta hora.",
+              "style": "thought",
+              "size": "small",
+              "posX": 70,
+              "posY": 30,
+              "tailX": 50,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 200,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Y acá está... el gimnasio más mugriento del barrio.",
+              "style": "thought",
+              "size": "small",
+              "posX": 50,
+              "posY": 50,
+              "tailX": 50,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 260,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 47
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            {
+              "text": "Lo bueno de venir a esta hora es que no hay nadie.",
+              "style": "thought",
+              "size": "small",
+              "posX": 65,
+              "posY": 95,
+              "tailX": 50,
+              "tailY": 100,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 72.5,
+              "w": 100,
+              "h": 27.5
+            }
+          ]
+        }
+      ]
+    },
+    "26": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Somos vos y yo, bolsa.",
+              "style": "thought",
+              "size": "small",
+              "posX": 65,
+              "posY": 10,
+              "tailX": 50,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No la pongas difícil.",
+              "style": "thought",
+              "size": "small",
+              "posX": 70,
+              "posY": 20,
+              "tailX": 53,
+              "tailY": 38,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No tengo idea cómo se usa esto.",
+              "style": "thought",
+              "size": "small",
+              "posX": 75,
+              "posY": 30,
+              "tailX": 56,
+              "tailY": 41,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            {
+              "text": "Julián... me diría que me vea un video.",
+              "style": "thought",
+              "size": "small",
+              "posX": 85,
+              "posY": 55,
+              "tailX": 50,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 50,
+              "w": 100,
+              "h": 29
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            {
+              "text": "Tiene olor a sangre...",
+              "size": "small",
+              "posX": 65,
+              "posY": 80,
+              "tailX": 45,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "y papas fritas.",
+              "size": "small",
+              "posX": 75,
+              "posY": 90,
+              "tailX": 40,
+              "tailY": 95,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 80,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        }
+      ]
+    },
+    "27": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/entrernamiento.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.3,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "outch!",
+              "size": "small",
+              "posX": 85,
+              "posY": 35,
+              "tailX": 70,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 35,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "1... 2... atrás... adelante, derecha.",
+              "size": "small",
+              "posX": 50,
+              "posY": 65,
+              "tailX": 45,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Debí pagar YouTube Premium.",
+              "style": "thought",
+              "size": "small",
+              "posX": 90,
+              "posY": 70,
+              "tailX": 75,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 60,
+              "w": 100,
+              "h": 40
+            }
+          ]
+        }
+      ]
+    },
+    "28": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "¡Y recuerde... tomar descansos entre sesiones!",
+              "style": "electronic",
+              "size": "small",
+              "posX": 100,
+              "posY": 35,
+              "tailX": 90,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "fontFamily": "marker"
+            },
+            {
+              "text": "Uandi no tomó descansos.",
+              "size": "small",
+              "posX": 95,
+              "posY": 20,
+              "tailX": 80,
+              "tailY": 30,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 51
+            }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/entrernamiento.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.55,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 50,
+              "w": 100,
+              "h": 19
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 70,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        }
+      ]
+    },
+    "29": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "¿Cuánto tiempo entrené?",
+              "size": "small",
+              "posX": 55,
+              "posY": 5,
+              "tailX": 70,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 36
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "A la mierda, ya es de día.",
+              "size": "small",
+              "posX": 70,
+              "posY": 40,
+              "tailX": 65,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Voy a ver si no me odian.",
+              "size": "small",
+              "posX": 90,
+              "posY": 45,
+              "tailX": 70,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 35,
+              "w": 100,
+              "h": 37
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "¿Volviste?",
+              "size": "small",
+              "posX": 55,
+              "posY": 75,
+              "tailX": 50,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Me alegro que vuelvas, muchacho.",
+              "size": "small",
+              "posX": 95,
+              "posY": 90,
+              "tailX": 80,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Yo no.",
+              "size": "small",
+              "posX": 90,
+              "posY": 70,
+              "tailX": 90,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "30": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Miren, entiendo que no me quieran acá.",
+              "size": "small",
+              "posX": 55,
+              "posY": 5,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Gracias por entender.",
+              "size": "small",
+              "posX": 90,
+              "posY": 10,
+              "tailX": 80,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Pero yo quiero ayudarlos.",
+              "size": "small",
+              "posX": 40,
+              "posY": 55,
+              "tailX": 15,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Y además necesito su ayuda.",
+              "size": "small",
+              "posX": 50,
+              "posY": 50,
+              "tailX": 15,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Para qué?",
+              "size": "small",
+              "posX": 80,
+              "posY": 30,
+              "tailX": 75,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "¿Estuviste peleando con alguien?",
+              "size": "small",
+              "posX": 45,
+              "posY": 60,
+              "tailX": 30,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Ah, no... solo estuve entrenando un poco.",
+              "size": "small",
+              "posX": 25,
+              "posY": 55,
+              "tailX": 10,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Para qué?",
+              "size": "small",
+              "posX": 50,
+              "posY": 65,
+              "tailX": 35,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Si las cosas se ponen complicadas debería saber defenderme.",
+              "size": "small",
+              "posX": 75,
+              "posY": 55,
+              "tailX": 60,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "La próxima llevalo a Ren, que anda medio twink.",
+              "size": "small",
+              "posX": 90,
+              "posY": 60,
+              "tailX": 75,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Viejo, la concha tuya.",
+              "size": "small",
+              "posX": 100,
+              "posY": 85,
+              "tailX": 95,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "31": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Entonces, ¿necesitás que corramos una carrera más?",
+              "size": "small",
+              "posX": 65,
+              "posY": 5,
+              "tailX": 55,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí, pero es totalmente clandestina.",
+              "size": "small",
+              "posX": 45,
+              "posY": 0,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Va a correrse por abajo de la autopista.",
+              "size": "small",
+              "posX": 15,
+              "posY": 5,
+              "tailX": 30,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Vamos a tener que hacerle muchas mejoras al Skyline.",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 90,
+              "posY": 55,
+              "tailX": 110,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "showSpeakerName": true,
+              "offscreen": true
+            },
+            {
+              "text": "La suspensión, los frenos, las cubiertas... todo nuevo. Yo les voy a conseguir todo.",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 5,
+              "posY": 60,
+              "tailX": -10,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "showSpeakerName": true,
+              "offscreen": true
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Excepto una cosa: el capacitor termocopado que hace que el motor pueda funcionar óptimamente con nitrógeno.",
+              "size": "small",
+              "posX": 30,
+              "posY": 70,
+              "tailX": 15,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Eso solo se va a conseguir en el mercado Kurogane, porque es importado desde mi laboratorio.",
+              "size": "small",
+              "posX": 55,
+              "posY": 70,
+              "tailX": 15,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No.",
+              "size": "small",
+              "posX": 50,
+              "posY": 80,
+              "tailX": 65,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Estás loco.",
+              "size": "small",
+              "posX": 80,
+              "posY": 75,
+              "tailX": 80,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Nadie se va a volver a meter ahí.",
+              "size": "small",
+              "posX": 45,
+              "posY": 90,
+              "tailX": 60,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Yo puedo.",
+              "size": "small",
+              "posX": 95,
+              "posY": 75,
+              "tailX": 95,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "32": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "A mí ya me conocen ahí.",
+              "size": "small",
+              "posX": 90,
+              "posY": 5,
+              "tailX": 95,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí... por eso mismo no deberías ir.",
+              "size": "small",
+              "posX": 60,
+              "posY": 5,
+              "tailX": 75,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Si conseguimos esa pieza y combinamos piezas del Eclipse, el Skyline va a volar.",
+              "size": "small",
+              "posX": 40,
+              "posY": 65,
+              "tailX": 55,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Seríamos muy superiores al resto de coches.",
+              "size": "small",
+              "posX": 95,
+              "posY": 60,
+              "tailX": 100,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "33": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "La pieza que necesitamos se ve así.",
+              "size": "small",
+              "posX": 75,
+              "posY": 5,
+              "tailX": 65,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Okay... es una gilada.",
+              "size": "small",
+              "posX": 45,
+              "posY": 35,
+              "tailX": 60,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "¿Qué podría salir mal?",
+              "size": "small",
+              "posX": 30,
+              "posY": 65,
+              "tailX": 20,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [
+            {
+              "text": "Buenas tardes.",
+              "size": "small",
+              "posX": 50,
+              "posY": 88,
+              "tailX": 35,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "..",
+              "size": "small",
+              "posX": 75,
+              "posY": 85,
+              "tailX": 90,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "34": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Qué maleducados que son acá.",
+              "size": "small",
+              "posX": 70,
+              "posY": 5,
+              "tailX": 45,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Bueno... esto no es lo que necesito.",
+              "size": "small",
+              "posX": 30,
+              "posY": 20,
+              "tailX": 20,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Busco algo más redondeado.",
+              "size": "small",
+              "posX": 50,
+              "posY": 25,
+              "tailX": 15,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Esto es lo único que tengo.",
+              "size": "small",
+              "posX": 75,
+              "posY": 25,
+              "tailX": 85,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Pero no es una termocópsula para nitrógeno.",
+              "size": "small",
+              "posX": 50,
+              "posY": 50,
+              "tailX": 55,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No le vendemos esos a cualquiera.",
+              "size": "small",
+              "posX": 100,
+              "posY": 25,
+              "tailX": 85,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Estos me quieren cagar a mí.",
+              "size": "small",
+              "posX": 75,
+              "posY": 60,
+              "tailX": 55,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "35": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "¿A este lo conocés?",
+              "size": "small",
+              "posX": 80,
+              "posY": 0,
+              "tailX": 85,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            {
+              "text": "Ejem... negrito.",
+              "size": "small",
+              "posX": 70,
+              "posY": 20,
+              "tailX": 75,
+              "tailY": 30,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Esas cosas no son para tocar.",
+              "size": "small",
+              "posX": 95,
+              "posY": 20,
+              "tailX": 85,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Ah, solo estoy viendo... es una pieza única.",
+              "size": "small",
+              "posX": 35,
+              "posY": 25,
+              "tailX": 45,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí, sí... ya podés salir de ahí.",
+              "size": "small",
+              "posX": 10,
+              "posY": 25,
+              "tailX": 15,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 29
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Intercambio rápido.",
+              "style": "caption",
+              "size": "small",
+              "posX": 95,
+              "posY": 60,
+              "tailX": 50,
+              "tailY": 95,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 190,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 55,
+              "w": 100,
+              "h": 19
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [
+            {
+              "text": "Quiero volver a robarle un gol al ladrón\nComo el Diego y el Narigón ♪♪",
+              "size": "small",
+              "posX": 65,
+              "posY": 70,
+              "tailX": 45,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 290,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "36": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Quiero ganarme cien años de perdón\nY, con Leo, salir campeón ♪ ♪",
+              "size": "small",
+              "posX": 60,
+              "posY": 0,
+              "tailX": 40,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 240,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 42
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Y que brille la cuarta estrella\nEn el cielo glorioso de mi nación ♪ ♪",
+              "size": "small",
+              "posX": 80,
+              "posY": 50,
+              "tailX": 45,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 40,
+              "w": 100,
+              "h": 19
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            {
+              "text": "Volvió Ren.",
+              "size": "small",
+              "posX": 75,
+              "posY": 70,
+              "tailX": 85,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Buscaban... esto?",
+              "size": "small",
+              "posX": 50,
+              "posY": 70,
+              "tailX": 10,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 60,
+              "w": 100,
+              "h": 40
+            }
+          ]
+        }
+      ]
+    },
+    "37": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "No es exactamente... pero es mejor aún.",
+              "size": "small",
+              "posX": 65,
+              "posY": 5,
+              "tailX": 80,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Cómo conseguiste esto?",
+              "size": "small",
+              "posX": 95,
+              "posY": 5,
+              "tailX": 90,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Digamos que tuve... una mano de Dios.",
+              "size": "small",
+              "posX": 100,
+              "posY": 35,
+              "tailX": 95,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Lo voy a conectar al sistema de computadora a bordo.",
+              "size": "small",
+              "posX": 55,
+              "posY": 60,
+              "tailX": 40,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Esto puede tardar.",
+              "size": "small",
+              "posX": 50,
+              "posY": 75,
+              "tailX": 35,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Voy a dar una vuelta...",
+              "size": "small",
+              "posX": 10,
+              "posY": 80,
+              "tailX": 25,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Dale, te avisamos.",
+              "size": "small",
+              "posX": 75,
+              "posY": 75,
+              "tailX": 75,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "38": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Es por acá.",
+              "style": "thought",
+              "size": "small",
+              "posX": 60,
+              "posY": 30,
+              "tailX": 50,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "No... no me siguen.",
+              "style": "thought",
+              "size": "small",
+              "posX": 30,
+              "posY": 35,
+              "tailX": 50,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Adelante.",
+              "size": "small",
+              "posX": 80,
+              "posY": 50,
+              "tailX": 85,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 47
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Sé que es peligroso... pero si Ren puede entrar y salir...",
+              "style": "thought",
+              "size": "small",
+              "posX": 55,
+              "posY": 80,
+              "tailX": 50,
+              "tailY": 95,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "39": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 36
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Entonces... ¿el panel de tecnología nueva es por acá?",
+              "size": "small",
+              "posX": 100,
+              "posY": 55,
+              "tailX": 90,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí... todo derecho y al final a la izquierda.",
+              "size": "small",
+              "posX": 55,
+              "posY": 50,
+              "tailX": 65,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Gracias.",
+              "size": "small",
+              "posX": 100,
+              "posY": 65,
+              "tailX": 85,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 35,
+              "w": 100,
+              "h": 43
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Tengo que contactar a Jaz.",
+              "style": "thought",
+              "size": "small",
+              "posX": 55,
+              "posY": 80,
+              "tailX": 50,
+              "tailY": 95,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "40": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Jaz, ¿estás ahí?",
+              "size": "small",
+              "posX": 40,
+              "posY": 5,
+              "tailX": 20,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Sí, acá estoy.",
+              "size": "small",
+              "posX": 75,
+              "posY": 20,
+              "tailX": 60,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Estás mapeando todo?",
+              "size": "small",
+              "posX": 40,
+              "posY": 25,
+              "tailX": 15,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí, es un complejo enorme. Ya tengo todo el plano del edificio.",
+              "size": "small",
+              "posX": 95,
+              "posY": 50,
+              "tailX": 55,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Hay que mandárselo a Sofi.",
+              "size": "small",
+              "posX": 5,
+              "posY": 40,
+              "tailX": 15,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Te mando el contacto.",
+              "size": "small",
+              "posX": 30,
+              "posY": 35,
+              "tailX": 10,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Ya podés salir de ahí.",
+              "size": "small",
+              "posX": 25,
+              "posY": 50,
+              "tailX": 50,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 64
+            }
+          ]
+        }
+      ]
+    },
+    "41": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Señor... recibimos una señal no autorizada desde afuera del país.",
+              "size": "small",
+              "posX": 60,
+              "posY": 20,
+              "tailX": 60,
+              "tailY": 30,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "New York, señor.",
+              "size": "small",
+              "posX": 80,
+              "posY": 25,
+              "tailX": 65,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Los veo.",
+              "size": "small",
+              "posX": 85,
+              "posY": 45,
+              "tailX": 85,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "customBg": "#fe0606"
+            },
+            {
+              "text": "Te veo, Ian.",
+              "size": "small",
+              "posX": 95,
+              "posY": 50,
+              "tailX": 90,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "customBg": "#f50505"
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 50,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Muy de cerca.",
+              "size": "small",
+              "posX": 90,
+              "posY": 80,
+              "tailX": 75,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "customBg": "#ff0000"
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "42": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Maestro.",
+              "size": "small",
+              "posX": 40,
+              "posY": 5,
+              "tailX": 30,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 31
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "La chica que busca está asesinando a todos nuestros mejores soldados.",
+              "size": "small",
+              "posX": 50,
+              "posY": 35,
+              "tailX": 30,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Quiero a la chica.",
+              "size": "small",
+              "posX": 65,
+              "posY": 60,
+              "tailX": 55,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Solo a la chica.",
+              "size": "small",
+              "posX": 70,
+              "posY": 65,
+              "tailX": 55,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Quizás... podría darle más que solo a la chica.",
+              "size": "small",
+              "posX": 60,
+              "posY": 80,
+              "tailX": 30,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "customBg": "#ff0505"
+            },
+            {
+              "text": "No puede ser tan difícil.",
+              "size": "small",
+              "posX": 20,
+              "posY": 60,
+              "tailX": 45,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 55,
+              "w": 100,
+              "h": 45
+            }
+          ]
+        }
+      ]
+    },
+    "43": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Ya salí.",
+              "size": "small",
+              "posX": 40,
+              "posY": 5,
+              "tailX": 20,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Te llegó, Sofi?",
+              "size": "small",
+              "posX": 45,
+              "posY": 15,
+              "tailX": 20,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "-Te dije que no me digas más así.",
+              "size": "small",
+              "posX": 95,
+              "posY": 5,
+              "tailX": 80,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Prepárense, duerman bien.",
+              "size": "small",
+              "posX": 75,
+              "posY": 35,
+              "tailX": 60,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Es en dos días.",
+              "size": "small",
+              "posX": 25,
+              "posY": 30,
+              "tailX": 40,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Ian... los chicos...",
+              "size": "small",
+              "posX": 50,
+              "posY": 80,
+              "tailX": 50,
+              "tailY": 95,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "44": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Sí, sí... ya sé.",
+              "size": "small",
+              "posX": 50,
+              "posY": 5,
+              "tailX": 25,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Cuando vuelva lo resuelvo.",
+              "size": "small",
+              "posX": 55,
+              "posY": 10,
+              "tailX": 35,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Como digas.",
+              "size": "small",
+              "posX": 100,
+              "posY": 20,
+              "tailX": 75,
+              "tailY": 25,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Cambio y fuera.",
+              "size": "small",
+              "posX": 90,
+              "posY": 10,
+              "tailX": 80,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "No puedo creer que esté haciendo esto.",
+              "style": "thought",
+              "size": "small",
+              "posX": 85,
+              "posY": 35,
+              "tailX": 75,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Solo voy a repasar la pista un poco y me voy a dormir.",
+              "style": "thought",
+              "size": "small",
+              "posX": 90,
+              "posY": 45,
+              "tailX": 78,
+              "tailY": 43,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 35,
+              "w": 100,
+              "h": 42
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Zzz...",
+              "size": "small",
+              "posX": 55,
+              "posY": 80,
+              "tailX": 50,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "45": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "¿No dormiste bien?",
+              "size": "small",
+              "posX": 75,
+              "posY": 0,
+              "tailX": 70,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí... no.",
+              "size": "small",
+              "posX": 45,
+              "posY": 0,
+              "tailX": 40,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Denme un minuto... tengo que hablar con alguien.",
+              "size": "small",
+              "posX": 70,
+              "posY": 30,
+              "tailX": 60,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 41
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Mati, ¿me escuchás bien ahí?",
+              "size": "small",
+              "posX": 60,
+              "posY": 75,
+              "tailX": 35,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "?",
+              "style": "electronic",
+              "size": "small",
+              "posX": 95,
+              "posY": 85,
+              "tailX": 85,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "fontFamily": "marker"
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 70,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        }
+      ]
+    },
+    "46": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Contame, ¿no tuviste ningún problema con los ojos estos días?",
+              "size": "small",
+              "posX": 90,
+              "posY": 5,
+              "tailX": 80,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Para nada.",
+              "size": "small",
+              "posX": 45,
+              "posY": 10,
+              "tailX": 35,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Súper chill todo.",
+              "size": "small",
+              "posX": 50,
+              "posY": 15,
+              "tailX": 35,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Lo que sí te quería contar es sobre una misión.",
+              "size": "small",
+              "posX": 60,
+              "posY": 20,
+              "tailX": 40,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Ian, tengo un problema con el resorte de la termocópsula y no puedo ajustarlo.",
+              "size": "small",
+              "posX": 70,
+              "posY": 30,
+              "tailX": 60,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Dame un segundo, Mati.",
+              "size": "small",
+              "posX": 95,
+              "posY": 35,
+              "tailX": 85,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Dale, tranqui.",
+              "size": "small",
+              "posX": 40,
+              "posY": 35,
+              "tailX": 30,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Hola, chiquitín.",
+              "size": "small",
+              "posX": 45,
+              "posY": 55,
+              "tailX": 35,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Cómo te llamás?",
+              "size": "small",
+              "posX": 0,
+              "posY": 60,
+              "tailX": 20,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Brooke’s Yield & Telemetry Entity",
+              "style": "electronic",
+              "size": "small",
+              "posX": 70,
+              "posY": 60,
+              "tailX": 50,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "fontFamily": "marker"
+            },
+            {
+              "text": "O simplemente BYTE.",
+              "style": "electronic",
+              "size": "small",
+              "posX": 85,
+              "posY": 65,
+              "tailX": 65,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "fontFamily": "marker"
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 35,
+              "w": 100,
+              "h": 44
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Pero qué nombre de mierda... ¿quién te dio ese...?",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 45,
+              "posY": 95,
+              "tailX": -10,
+              "tailY": 100,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "showSpeakerName": true,
+              "offscreen": true
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "47": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Termocopado.",
+              "style": "electronic",
+              "size": "small",
+              "posX": 75,
+              "posY": 10,
+              "tailX": 55,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "fontFamily": "marker"
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "BYTE, no toques eso.",
+              "size": "small",
+              "posX": 65,
+              "posY": 30,
+              "tailX": 55,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¡El termocopadooo!",
+              "style": "electronic",
+              "size": "small",
+              "posX": 85,
+              "posY": 35,
+              "tailX": 70,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "fontFamily": "marker"
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.65,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 55,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "48": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Quedate ahí.",
+              "size": "small",
+              "posX": 85,
+              "posY": 5,
+              "tailX": 75,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Jugá con eso.",
+              "size": "small",
+              "posX": 95,
+              "posY": 10,
+              "tailX": 70,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 34
+            }
+          ]
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": [
+            {
+              "text": "¿Estoy... viendo el cielo?",
+              "size": "small",
+              "posX": 45,
+              "posY": 90,
+              "tailX": 30,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 35,
+              "w": 100,
+              "h": 65
+            }
+          ]
+        }
+      ]
+    },
+    "49": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Perdón, Mati, tuve que arreglar una cosa.",
+              "size": "small",
+              "posX": 45,
+              "posY": 5,
+              "tailX": 40,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Amigo...",
+              "size": "small",
+              "posX": 95,
+              "posY": 10,
+              "tailX": 85,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Qué me estabas diciendo de una misión?",
+              "size": "small",
+              "posX": 55,
+              "posY": 35,
+              "tailX": 40,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Amigo...",
+              "size": "small",
+              "posX": 90,
+              "posY": 35,
+              "tailX": 85,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "¿Uh?",
+              "size": "small",
+              "posX": 35,
+              "posY": 60,
+              "tailX": 30,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Jajaja, qué Mati de mierda.",
+              "size": "small",
+              "posX": 50,
+              "posY": 80,
+              "tailX": 45,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Para, para, ¿¡cómo se llama!?",
+              "size": "small",
+              "posX": 90,
+              "posY": 80,
+              "tailX": 85,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 55,
+              "w": 100,
+              "h": 45
+            }
+          ]
+        }
+      ]
+    },
+    "50": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "¿Ese era tu amigo?",
+              "size": "small",
+              "posX": 70,
+              "posY": 0,
+              "tailX": 65,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí... los extraño.",
+              "size": "small",
+              "posX": 45,
+              "posY": 5,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Tenía cara de boludo.",
+              "size": "small",
+              "posX": 45,
+              "posY": 30,
+              "tailX": 30,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "i just Died in Your Arms Tonight",
+              "style": "electronic",
+              "size": "small",
+              "posX": 95,
+              "posY": 30,
+              "tailX": 80,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "fontFamily": "marker"
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Esta carrocería cada vez está quedando mejor.",
+              "size": "small",
+              "posX": 50,
+              "posY": 55,
+              "tailX": 30,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí... igual en azul me gusta más.",
+              "size": "small",
+              "posX": 50,
+              "posY": 70,
+              "tailX": 45,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Definitivamente no tenés buen gusto.",
+              "size": "small",
+              "posX": 15,
+              "posY": 75,
+              "tailX": 30,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "51": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Entonces, ¿quieren que dé una vuelta y le dé hasta el fondo?",
+              "size": "small",
+              "posX": 80,
+              "posY": 5,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Si lo vas a romper, que sea acá.",
+              "size": "small",
+              "posX": 45,
+              "posY": 10,
+              "tailX": 40,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Solo fijate de no estrolarte contra las paredes.",
+              "size": "small",
+              "posX": 100,
+              "posY": 20,
+              "tailX": 85,
+              "tailY": 25,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Es una simulación de la carrera. Igual va a ser urbana y habrá coches que no son corredores.",
+              "size": "small",
+              "posX": 50,
+              "posY": 30,
+              "tailX": 45,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            {
+              "text": "Bueno, aunque a vos te veo bastante bien.",
+              "size": "small",
+              "posX": 40,
+              "posY": 75,
+              "tailX": 30,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "El auto es tuyo.",
+              "size": "small",
+              "posX": 70,
+              "posY": 80,
+              "tailX": 55,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "52": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "¿Cuánto apostamos que lo estropea?",
+              "size": "small",
+              "posX": 45,
+              "posY": 0,
+              "tailX": 30,
+              "tailY": 5,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Es la idea.",
+              "size": "small",
+              "posX": 0,
+              "posY": 25,
+              "tailX": 5,
+              "tailY": 5,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Responde bien, solo se sobrecalienta.",
+              "size": "small",
+              "posX": 55,
+              "posY": 60,
+              "tailX": 40,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Son los filtros.",
+              "size": "small",
+              "posX": 25,
+              "posY": 60,
+              "tailX": 25,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 48
+            }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/autos/gtr1.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 1,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "53": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Necesitamos cambiar el filtro de aire para que circule mejor y no levante temperatura.",
+              "size": "small",
+              "posX": 25,
+              "posY": -5,
+              "tailX": 20,
+              "tailY": 5,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Yo sé dónde conseguir esos.",
+              "size": "small",
+              "posX": 40,
+              "posY": 40,
+              "tailX": 20,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Los vi cuando traje la otra pieza.",
+              "size": "small",
+              "posX": 50,
+              "posY": 50,
+              "tailX": 25,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Denme unas horas.",
+              "size": "small",
+              "posX": 55,
+              "posY": 65,
+              "tailX": 40,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "54": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Buenas... busco un filtro.",
+              "size": "small",
+              "posX": 40,
+              "posY": 35,
+              "tailX": 20,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Llevátelo y no me vuelvas loco.",
+              "size": "small",
+              "posX": 85,
+              "posY": 35,
+              "tailX": 90,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "¿Qué le pasa hoy a la gente?",
+              "size": "small",
+              "posX": 80,
+              "posY": 70,
+              "tailX": 65,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "55": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Ese auto...",
+              "size": "small",
+              "posX": 55,
+              "posY": 20,
+              "tailX": 25,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Pude conseguirlo, pero la gente estaba muy rara.",
+              "size": "small",
+              "posX": 50,
+              "posY": 45,
+              "tailX": 30,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Nunca fallás vos.",
+              "size": "small",
+              "posX": 95,
+              "posY": 50,
+              "tailX": 70,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí, va a encajar perfecto.",
+              "size": "small",
+              "posX": 85,
+              "posY": 65,
+              "tailX": 80,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 20,
+              "w": 100,
+              "h": 80
+            }
+          ]
+        }
+      ]
+    },
+    "56": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            {
+              "text": "El trabajo en equipo",
+              "style": "caption",
+              "size": "small",
+              "posX": 90,
+              "posY": 60,
+              "tailX": 50,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "rendía frutos.",
+              "style": "caption",
+              "size": "small",
+              "posX": 95,
+              "posY": 65,
+              "tailX": 53,
+              "tailY": 78,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 40,
+              "w": 100,
+              "h": 38
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        }
+      ]
+    },
+    "57": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "¿Estás seguro que esto va así?",
+              "size": "small",
+              "posX": 100,
+              "posY": 15,
+              "tailX": 95,
+              "tailY": 25,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí, sí, ajustalo más, nada más.",
+              "size": "small",
+              "posX": 65,
+              "posY": 15,
+              "tailX": 65,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Esto quedó perfecto.",
+              "size": "small",
+              "posX": 30,
+              "posY": 45,
+              "tailX": 15,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "La verdad está hermoso.",
+              "size": "small",
+              "posX": 90,
+              "posY": 45,
+              "tailX": 90,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 34
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 65,
+              "w": 100,
+              "h": 35
+            }
+          ]
+        }
+      ]
+    },
+    "58": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Señor, tenemos rastreado a todo el grupo.",
+              "size": "small",
+              "posX": 100,
+              "posY": 20,
+              "tailX": 90,
+              "tailY": 30,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Podemos proceder cuando lo ordene.",
+              "size": "small",
+              "posX": 35,
+              "posY": 20,
+              "tailX": 25,
+              "tailY": 30,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "El chico de Parker está en los boxes preparando el auto.",
+              "size": "small",
+              "posX": 75,
+              "posY": 55,
+              "tailX": 120,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "La infiltrada se mantiene en el perímetro del depósito.",
+              "size": "small",
+              "posX": 35,
+              "posY": 55,
+              "tailX": -20,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 40,
+              "w": 100,
+              "h": 32
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Este primero.",
+              "size": "small",
+              "posX": 55,
+              "posY": 75,
+              "tailX": 30,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "customBg": "#ff0000"
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 70,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        }
+      ]
+    },
+    "59": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Mañana es la gran noche.",
+              "style": "thought",
+              "size": "small",
+              "posX": 55,
+              "posY": 5,
+              "tailX": 35,
+              "tailY": 5,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "La última noche.",
+              "style": "thought",
+              "size": "small",
+              "posX": 45,
+              "posY": 30,
+              "tailX": 50,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Podría ser...",
+              "style": "thought",
+              "size": "small",
+              "posX": 48,
+              "posY": 33,
+              "tailX": 53,
+              "tailY": 68,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Tengo que estar tranquilo.",
+              "style": "thought",
+              "size": "small",
+              "posX": 45,
+              "posY": 50,
+              "tailX": 56,
+              "tailY": 71,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 200,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 40
+            }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/ducha.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.6,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Una nueva pilcha más relajada.",
+              "style": "thought",
+              "size": "small",
+              "posX": 60,
+              "posY": 70,
+              "tailX": 50,
+              "tailY": 95,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 65,
+              "w": 100,
+              "h": 35
+            }
+          ]
+        }
+      ]
+    },
+    "60": {
+      "panels": [
+        {
+          "focusY": 0.1,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.25,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 15,
+              "w": 40,
+              "h": 41
+            }
+          ]
+        },
+        {
+          "focusY": 0.3,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 40,
+              "y": 15,
+              "w": 60,
+              "h": 12
+            }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 40,
+              "y": 30,
+              "w": 60,
+              "h": 13
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 40,
+              "y": 45,
+              "w": 60,
+              "h": 14
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Te dije que te iba a gustar.",
+              "size": "small",
+              "posX": 75,
+              "posY": 60,
+              "tailX": 80,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No te agrandés.",
+              "size": "small",
+              "posX": 50,
+              "posY": 60,
+              "tailX": 40,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 55,
+              "w": 100,
+              "h": 45
+            }
+          ]
+        }
+      ]
+    },
+    "61": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Entonces es de este punto a este punto.",
+              "size": "small",
+              "posX": 20,
+              "posY": 5,
+              "tailX": 25,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí, nosotros vamos a estar acá.",
+              "size": "small",
+              "posX": 70,
+              "posY": 5,
+              "tailX": 70,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 37
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "¿Qué carajos...?",
+              "style": "thought",
+              "size": "small",
+              "posX": 40,
+              "posY": 40,
+              "tailX": 5,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Un rastreador.",
+              "style": "thought",
+              "size": "small",
+              "posX": 85,
+              "posY": 45,
+              "tailX": 75,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 35,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.65,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 60,
+              "w": 100,
+              "h": 15
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [
+            {
+              "text": "Esto puede arruinarlo todo...",
+              "style": "thought",
+              "size": "small",
+              "posX": 90,
+              "posY": 75,
+              "tailX": 70,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "62": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "Pero si estamos más acá, tendríamos mejor vista de toda la pista.",
+              "size": "small",
+              "posX": 95,
+              "posY": 0,
+              "tailX": 85,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Bueno... no me di cuenta de eso.",
+              "size": "small",
+              "posX": 50,
+              "posY": 0,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.55,
+          "dialogue": [
+            {
+              "text": "¿A dónde vas, Ren?",
+              "size": "small",
+              "posX": 50,
+              "posY": 45,
+              "tailX": 35,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Vengo en un rato, tengo que comprar algo.",
+              "size": "small",
+              "posX": 75,
+              "posY": 45,
+              "tailX": 60,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            {
+              "text": "Lo tenemos.",
+              "size": "small",
+              "posX": 50,
+              "posY": 85,
+              "tailX": 75,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ]
+        }
+      ]
+    },
+    "63": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "Voy a tirar esto acá.",
+              "size": "small",
+              "posX": 55,
+              "posY": 30,
+              "tailX": 30,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¡Eh! ¿Qué fue eso?",
+              "size": "small",
+              "posX": 75,
+              "posY": 50,
+              "tailX": 60,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 46
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "¿Quién está ahí?",
+              "size": "small",
+              "posX": 85,
+              "posY": 75,
+              "tailX": 60,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 70,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        }
+      ]
+    },
+    "64": {
+      "panels": [
+        {
+          "focusY": 0.1,
+          "dialogue": []
+        },
+        {
+          "focusY": 0.35,
+          "dialogue": [
+            {
+              "text": "Dios me ayude...",
+              "size": "small",
+              "posX": 75,
+              "posY": 25,
+              "tailX": 65,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 22.5,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": [
+            {
+              "text": "Fuiste un poco estúpido en venir solo, ¿no te parece?",
+              "size": "small",
+              "posX": 80,
+              "posY": 45,
+              "tailX": 70,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "customBg": "#ff0000"
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 40,
+              "w": 100,
+              "h": 60
+            }
+          ]
+        }
+      ]
     }
-  }
+  },
+  "audioTracks": [
+    {
+      "id": "track-1785725468696-x6t6a",
+      "layer": "music",
+      "src": "/sounds/tracks/Rocky Balboa - Música de entrenamiento.mp3",
+      "title": "Música de entrenamiento",
+      "artist": "Rocky Balboa",
+      "startPageKey": "26",
+      "startPanelIdx": 2,
+      "stopTrigger": {
+        "type": "panelEnd",
+        "pageKey": "29",
+        "panelIdx": 0
+      },
+      "soundConfig": {
+        "volume": 0.45,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 3300,
+        "fadeOut": 3900
+      }
+    },
+    {
+      "id": "track-1785728510199-m7voa",
+      "layer": "music",
+      "src": "/sounds/tracks/Cutting Crew - I just Died In Your Arms(pre).mp3",
+      "title": "I just Died In Your Arms(pre)",
+      "artist": "Cutting Crew",
+      "startPageKey": "47",
+      "startPanelIdx": 2,
+      "stopTrigger": {
+        "type": "panelEnd",
+        "pageKey": "47",
+        "panelIdx": 3
+      },
+      "soundConfig": {
+        "volume": 0.8,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 3100
+      }
+    },
+    {
+      "id": "track-1785728609170-t7zlt",
+      "layer": "music",
+      "src": "/sounds/tracks/Cutting Crew - I just Died In Your Arms .mp3",
+      "title": "I just Died In Your Arms(pre)",
+      "artist": "Cutting Crew",
+      "startPageKey": "48",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "48"
+      },
+      "soundConfig": {
+        "volume": 0.8,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    },
+    {
+      "id": "track-1785729818533-n64ps",
+      "layer": "music",
+      "src": "/sounds/tracks/Tokyo Drift - Six Days (4K)-1.mp3",
+      "title": "Six Days (4K)-1",
+      "artist": "Tokyo Drift",
+      "startPageKey": "59",
+      "startPanelIdx": 2,
+      "stopTrigger": {
+        "type": "panelEnd",
+        "pageKey": "60",
+        "panelIdx": 0
+      },
+      "soundConfig": {
+        "volume": 0.6,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 4400,
+        "fadeOut": 3300
+      }
+    },
+    {
+      "id": "track-1785729911220-bvf0v",
+      "layer": "music",
+      "src": "/sounds/tracks/Tokyo Drift - Six Days (4K)-2.mp3",
+      "title": "Six Days (4K)-2",
+      "artist": "Tokyo Drift",
+      "startPageKey": "60",
+      "startPanelIdx": 1,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "60"
+      },
+      "soundConfig": {
+        "volume": 0.8,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 4500
+      }
+    }
+  ]
 }
