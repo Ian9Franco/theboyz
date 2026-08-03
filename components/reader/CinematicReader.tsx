@@ -696,7 +696,7 @@ export function CinematicReader({
 
   return (
     <div
-      className="brand-grain fixed inset-0 z-[150] w-screen h-screen flex flex-col overflow-hidden"
+      className="brand-grain fixed inset-0 z-[150] w-screen h-[100dvh] flex flex-col overflow-hidden"
       style={{ touchAction: "none" }}
     >
       <ReaderTopBar

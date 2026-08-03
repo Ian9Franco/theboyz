@@ -502,8 +502,11 @@ export function ReaderCanvas({
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, type: "spring", stiffness: 220, damping: 24 }}
-          className="absolute inset-0 flex flex-col items-center justify-end pb-8 sm:pb-12 gap-3 sm:gap-4 z-40 pointer-events-none"
-          style={{ background: "linear-gradient(to top, rgba(10,10,15,0.85) 0%, transparent 60%)" }}
+          className="absolute inset-0 flex flex-col items-center justify-end gap-3 sm:gap-4 z-40 pointer-events-none"
+          style={{
+            background: "linear-gradient(to top, rgba(10,10,15,0.92) 0%, rgba(10,10,15,0.7) 40%, transparent 75%)",
+            paddingBottom: "max(5.25rem, calc(2rem + env(safe-area-inset-bottom)))",
+          }}
         >
           {/* Review / Control Row */}
           <div className="flex gap-2 sm:gap-3 px-4 mb-1 pointer-events-auto" onClick={(e) => e.stopPropagation()}>

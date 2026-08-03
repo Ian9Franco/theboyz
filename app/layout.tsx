@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Bangers, Permanent_Marker, Bungee, Luckiest_Guy } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
@@ -8,6 +8,13 @@ const bangers  = Bangers({ weight: "400", variable: "--font-bangers", subsets: [
 const marker   = Permanent_Marker({ weight: "400", variable: "--font-marker", subsets: ["latin"] });
 const bungee   = Bungee({ weight: "400", variable: "--font-bungee", subsets: ["latin"] });
 const luckiest = Luckiest_Guy({ weight: "400", variable: "--font-luckiest", subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
+};
 
 const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
