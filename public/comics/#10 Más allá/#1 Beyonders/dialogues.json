@@ -1,0 +1,106 @@
+{
+  "pages": {
+    "1": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "che cuando se va ian?", "size": "small", "posX": 44, "posY": 10, "tailX": 38, "tailY": 18, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "mañana temprano creo", "size": "small", "posX": 64, "posY": 10, "tailX": 56, "tailY": 18, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "lo vamos a despedir?", "size": "small", "posX": 12, "posY": 12, "tailX": 28, "tailY": 22, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "ni en pedo, me levanto temprano", "size": "small", "posX": 86, "posY": 14, "tailX": 72, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "algunos LABURAMOS", "size": "small", "posX": 92, "posY": 20, "tailX": 86, "tailY": 14, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 43 }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [
+            { "text": "si queres vamos, yo tengo la berlingo 0km", "size": "small", "posX": 66, "posY": 44, "tailX": 54, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "dale", "size": "small", "posX": 12, "posY": 44, "tailX": 24, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "me voy a ver a la wawi", "size": "small", "posX": 84, "posY": 64, "tailX": 72, "tailY": 68, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "son re giles", "size": "small", "posX": 88, "posY": 70, "tailX": 84, "tailY": 66, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 42, "w": 100, "h": 38 }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [
+            { "text": "y si le llevo algo?", "style": "thought", "size": "small", "posX": 94, "posY": 82, "tailX": 50, "tailY": 105, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "que carajos le gusta a una monarca de las tinieblas?", "style": "thought", "size": "small", "posX": 94, "posY": 96, "tailX": 50, "tailY": 105, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "q le pasa a julian?", "size": "small", "posX": 40, "posY": 80, "tailX": 28, "tailY": 86, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "que se yo", "size": "small", "posX": 4, "posY": 82, "tailX": 18, "tailY": 88, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 80, "w": 100, "h": 20 }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            { "text": "escuchas eso?", "size": "small", "posX": 8, "posY": 6, "tailX": 22, "tailY": 8, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "eso fue un grito?", "size": "small", "posX": 54, "posY": 2, "tailX": 42, "tailY": 6, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "man ", "size": "small", "posX": 78, "posY": 22, "tailX": 70, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "uandi", "size": "small", "posX": 50, "posY": 20, "tailX": 50, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ],
+          "zoomRects": [
+            { "x": 0, "y": 0, "w": 100, "h": 40 }
+          ]
+        },
+        {
+          "focusY": 0.54,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 40, "w": 100, "h": 33 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/contracosas.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.35,
+                "playbackRate": 1
+              }
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [],
+          "zoomRects": [
+            { "x": 0, "y": 74, "w": 100, "h": 26 }
+          ]
+        }
+      ]
+    }
+  },
+  "audioTracks": [
+    {
+      "id": "track-1785854562837-grz33",
+      "layer": "music",
+      "src": "/sounds/sfx/panico.mp3",
+      "title": "panico",
+      "startPageKey": "2",
+      "startPanelIdx": 1,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "2"
+      },
+      "soundConfig": {
+        "volume": 0.45,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
+    }
+  ]
+}
