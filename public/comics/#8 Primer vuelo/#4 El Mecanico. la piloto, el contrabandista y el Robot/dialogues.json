@@ -1980,6 +1980,25 @@
         "fadeIn": 1000,
         "fadeOut": 4500
       }
+    },
+    {
+      "id": "track-1785810392741-x5yzg",
+      "layer": "music",
+      "src": "/sounds/sfx/discord.mp3",
+      "title": "discord",
+      "startPageKey": "45",
+      "startPanelIdx": 1,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "45"
+      },
+      "soundConfig": {
+        "volume": 0.5,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
     }
   ]
 }

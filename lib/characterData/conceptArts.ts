@@ -400,6 +400,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "mati": [
     {
+      "name": "Farsight Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/farsight_ALT_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
       "name": "Farsight Sheet",
       "path": "/personajes/GUIAS/boyz/FARSIGHT/farsight_sheet.webp",
       "section": "base",
