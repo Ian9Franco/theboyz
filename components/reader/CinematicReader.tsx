@@ -135,6 +135,7 @@ export function CinematicReader({
     handleRemovePanel,
     handleUpdatePanelParams,
     handleAddBubble,
+    handleApplyGeneratedDialogues,
     handleDuplicateBubble,
     handleUpdateBubble,
     handleRemoveBubble,
@@ -807,6 +808,9 @@ export function CinematicReader({
 
         <DialogueEditorPanel
           mode={mode}
+          chapterId={chapter.id}
+          sagaTitle={saga.title}
+          chapterTitle={chapter.title}
           activeLayer={activeLayer}
           setActiveLayer={setActiveLayer}
           currentPanels={currentPanels}
@@ -843,6 +847,7 @@ export function CinematicReader({
           handleMoveBubbleToPanel={handleMoveBubbleToPanel}
           handleReorderPanels={handleReorderPanels}
           handleReorderBubbles={handleReorderBubbles}
+          handleApplyGeneratedDialogues={handleApplyGeneratedDialogues}
           hasUnsavedChanges={hasUnsavedChanges}
           hasLocalBackup={hasLocalBackup}
           backupTimestamp={backupTimestamp}

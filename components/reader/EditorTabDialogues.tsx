@@ -3,11 +3,20 @@
 import React, { useEffect, useRef } from "react";
 import type { DialogueLine } from "./DialogueBubble";
 import type { PanelStop as PanelConfig } from "./audioPlayer";
+import type { Dialogues } from "./audioPlayer";
+import type { AiDialogueProposal } from "./dialogueAi";
+import { EditorDialogueGenerator } from "./EditorDialogueGenerator";
 import { EditorBubbleVisualsForm } from "./editor/EditorBubbleVisualsForm";
 import { EditorBubbleLayoutForm } from "./editor/EditorBubbleLayoutForm";
 import { EditorBubbleTailForm } from "./editor/EditorBubbleTailForm";
 
 interface EditorTabDialoguesProps {
+  chapterId: string;
+  sagaTitle: string;
+  chapterTitle: string;
+  pageIdx: number;
+  pages: string[];
+  localDialogues: Dialogues;
   currentPanels: PanelConfig[];
   activePanelIdx: number;
   setActivePanelIdx: (idx: number) => void;
@@ -24,6 +33,7 @@ interface EditorTabDialoguesProps {
   presetMode?: "standard" | "custom";
   handleMoveBubbleToPanel: (fromPanelIdx: number, bubbleIdx: number, toPanelIdx: number) => void;
   handleReorderBubbles: (pIdx: number, startIndex: number, endIndex: number) => void;
+  handleApplyGeneratedDialogues: (proposals: AiDialogueProposal[]) => void;
 }
 
 /**
@@ -32,6 +42,12 @@ interface EditorTabDialoguesProps {
  * removes clutter, and prioritizes instant text entry and character controls.
  */
 export function EditorTabDialogues({
+  chapterId,
+  sagaTitle,
+  chapterTitle,
+  pageIdx,
+  pages,
+  localDialogues,
   currentPanels,
   activePanelIdx,
   setActivePanelIdx,
@@ -44,6 +60,7 @@ export function EditorTabDialogues({
   presetMode = "standard",
   handleMoveBubbleToPanel,
   handleReorderBubbles,
+  handleApplyGeneratedDialogues,
 }: EditorTabDialoguesProps) {
   const activePanel = currentPanels[activePanelIdx];
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -105,10 +122,26 @@ export function EditorTabDialogues({
       .replace(/\[\/color\]/g, "")
       .replace(/<[^>]+>/g, "");
 
+  const dialogueGenerator = (
+    <EditorDialogueGenerator
+      chapterId={chapterId}
+      sagaTitle={sagaTitle}
+      chapterTitle={chapterTitle}
+      pageIdx={pageIdx}
+      pages={pages}
+      currentPanels={currentPanels}
+      localDialogues={localDialogues}
+      onApply={handleApplyGeneratedDialogues}
+    />
+  );
+
   if (!activePanel) {
     return (
-      <div className="bg-[#161622] border border-white/10 rounded-lg p-6 flex flex-col items-center justify-center text-center shadow-lg">
-        <span className="text-sm text-zinc-400 italic">Seleccioná una viñeta para comenzar a editar diálogos.</span>
+      <div className="flex flex-col gap-4">
+        {dialogueGenerator}
+        <div className="bg-[#161622] border border-white/10 rounded-lg p-6 flex flex-col items-center justify-center text-center shadow-lg">
+          <span className="text-sm text-zinc-400 italic">Seleccioná una viñeta para comenzar a editar diálogos.</span>
+        </div>
       </div>
     );
   }
@@ -154,6 +187,7 @@ export function EditorTabDialogues({
   if (activeBubbleIdx === null || !activePanel.dialogue?.[activeBubbleIdx]) {
     return (
       <div className="flex flex-col gap-4">
+        {dialogueGenerator}
         {/* Active Parada Selector Bar */}
         {renderParadaSelector()}
 
@@ -285,6 +319,7 @@ export function EditorTabDialogues({
 
   return (
     <div className="flex flex-col gap-4">
+      {dialogueGenerator}
       {/* Active Parada Selector Bar */}
       {renderParadaSelector()}
 

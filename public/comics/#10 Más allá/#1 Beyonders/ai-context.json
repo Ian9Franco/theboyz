@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "documents": [
+    {
+      "path": "guiones/10_Beyond Doors/beyond-doors-canon.md",
+      "role": "sagaCanon"
+    },
+    {
+      "path": "guiones/10_Beyond Doors/beyond-doors-personajes.md",
+      "role": "characterSheet"
+    },
+    {
+      "path": "guiones/10_Beyond Doors/beyonders-estado-actual.md",
+      "role": "chapterState"
+    }
+  ],
+  "pages": {
+    "9": {
+      "prompt": "Página nocturna de cuatro viñetas dentro del Nadir. Julián y Severine están sentados en un sillón frente a grandes ventanales con la ciudad al fondo. Julián llegó con una bolsa de papel con medialunas e intenta acercarse sin invadirla: en la primera viñeta le ofrece una; en la segunda Severine ya la sostiene mientras mira hacia otro lado y Julián permanece a su lado; la tercera es un primer plano de Julián leyendo su estado con preocupación contenida; en la última Julián se retira hacia la salida y Severine queda de pie con la medialuna en la mano. La escena debe sostener distancia, cuidado e intimidad contenida. Severine comienza cortante y controlada, pero su aceptación de la medialuna y de la presencia de Julián constituye la concesión emocional. Evitar exposición sobre el Nadir, Balanar o información que ambos conocen.",
+      "characters": [
+        "Julián",
+        "Severine"
+      ],
+      "continuityPages": 3
+    }
+  }
+}

@@ -5,6 +5,11 @@ import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { getComicPageUrl } from "./readerUtils";
 import { EditorPromptModal, ModalField } from "./EditorPromptModal";
+import {
+  createEmptyDialogueContext,
+  type DialogueContextConfig,
+  type DialogueDocumentRole,
+} from "@/lib/dialogueContext";
 
 interface TreeNode {
   name: string;
@@ -68,11 +73,10 @@ export function EditorLeftSidebar({
   const [loadingSagas, setLoadingSagas] = useState(false);
 
   // ─── Docs State ───
-  const [docTree, setDocTree] = useState<{ conceptos: TreeNode | null; guiones: TreeNode | null }>({
-    conceptos: null,
-    guiones: null,
-  });
+  const [docTree, setDocTree] = useState<TreeNode | null>(null);
   const [loadingDocs, setLoadingDocs] = useState(false);
+  const [contextConfig, setContextConfig] = useState<DialogueContextConfig>(createEmptyDialogueContext());
+  const [contextSaveStatus, setContextSaveStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [selectedFilePath, setSelectedFilePath] = useState<string | null>(null);
   const [selectedFileContent, setSelectedFileContent] = useState<string | null>(null);
   const [loadingContent, setLoadingContent] = useState(false);
@@ -126,9 +130,15 @@ export function EditorLeftSidebar({
         return r.json();
       })
       .then((d) => {
-        setDocTree({ conceptos: d.conceptos, guiones: d.guiones });
+        setDocTree(d.tree || {
+          name: "docs",
+          displayName: "Docs",
+          path: "",
+          type: "directory",
+          children: [d.guiones, d.conceptos].filter(Boolean),
+        });
         setLoadingDocs(false);
-        setOpenFolders(prev => ({ ...prev, "conceptos": true, "guiones": true }));
+        setOpenFolders(prev => ({ ...prev, "": true, "conceptos": true, "guiones": true }));
       })
       .catch((err) => {
         console.error(err);
@@ -137,8 +147,41 @@ export function EditorLeftSidebar({
   };
 
   useEffect(() => {
-    if (activeTab === "docs" && !docTree.conceptos && !docTree.guiones) loadDocsTree();
+    if (activeTab === "docs" && !docTree) loadDocsTree();
   }, [activeTab]);
+
+  const loadContextConfig = () => {
+    fetch(`/api/chapters/${encodeURIComponent(chapter.id)}/dialogues/context`, {
+      headers: { "x-editor-password": getPass() },
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error("No se pudo cargar el contexto narrativo");
+        return response.json();
+      })
+      .then((data) => setContextConfig(data.context || createEmptyDialogueContext()))
+      .catch((error) => {
+        console.error(error);
+        setContextSaveStatus("error");
+      });
+  };
+
+  const persistContextConfig = async (nextConfig: DialogueContextConfig) => {
+    setContextConfig(nextConfig);
+    setContextSaveStatus("saving");
+    const response = await fetch(`/api/chapters/${encodeURIComponent(chapter.id)}/dialogues/context`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json", "x-editor-password": getPass() },
+      body: JSON.stringify(nextConfig),
+    });
+    if (!response.ok) throw new Error("No se pudo guardar la asociación");
+    setContextSaveStatus("saved");
+    window.dispatchEvent(new CustomEvent("dialogue-context-updated"));
+    setTimeout(() => setContextSaveStatus("idle"), 1800);
+  };
+
+  useEffect(() => {
+    if (activeTab === "docs") loadContextConfig();
+  }, [activeTab, chapter.id]);
 
   // ─── ACTIONS: Pages ───
   const handleRenamePage = async (idx: number, oldSrc: string) => {
@@ -262,6 +305,23 @@ export function EditorLeftSidebar({
       });
   };
 
+  const handleDocumentRoleChange = async (
+    filePath: string,
+    role: DialogueDocumentRole | ""
+  ) => {
+    const nextDocuments = contextConfig.documents.filter((document) => document.path !== filePath);
+    if (role) nextDocuments.push({ path: filePath, role });
+    const nextConfig = { ...contextConfig, documents: nextDocuments };
+
+    try {
+      await persistContextConfig(nextConfig);
+    } catch (error) {
+      console.error(error);
+      setContextSaveStatus("error");
+      loadContextConfig();
+    }
+  };
+
   const handleSaveDoc = async () => {
     if (!selectedFilePath) return;
     setLoadingContent(true);
@@ -295,11 +355,35 @@ export function EditorLeftSidebar({
     ]);
     if (!values || values.name === oldName) return;
 
-    await fetch("/api/editor/docs", {
+    const response = await fetch("/api/editor/docs", {
       method: "PATCH",
       headers: { "Content-Type": "application/json", "x-editor-password": getPass() },
       body: JSON.stringify({ filePath, newName: values.name })
     });
+    if (!response.ok) return;
+
+    const isMarkdown = filePath.toLowerCase().endsWith(".md");
+    const finalName = isMarkdown && !values.name.toLowerCase().endsWith(".md")
+      ? `${values.name}.md`
+      : values.name;
+    const separatorIndex = filePath.lastIndexOf("/");
+    const parent = separatorIndex >= 0 ? filePath.slice(0, separatorIndex + 1) : "";
+    const renamedPath = `${parent}${finalName}`;
+    const nextDocuments = contextConfig.documents.map((document) => {
+      if (document.path === filePath) return { ...document, path: renamedPath };
+      if (document.path.startsWith(`${filePath}/`)) {
+        return { ...document, path: `${renamedPath}${document.path.slice(filePath.length)}` };
+      }
+      return document;
+    });
+    if (nextDocuments.some((document, index) => document.path !== contextConfig.documents[index]?.path)) {
+      try {
+        await persistContextConfig({ ...contextConfig, documents: nextDocuments });
+      } catch (error) {
+        console.error(error);
+        setContextSaveStatus("error");
+      }
+    }
     loadDocsTree();
     if (selectedFilePath === filePath) setSelectedFilePath(null);
   };
@@ -316,6 +400,17 @@ export function EditorLeftSidebar({
     });
     
     if (res.ok) {
+      const nextDocuments = contextConfig.documents.filter(
+        (document) => document.path !== filePath && !document.path.startsWith(`${filePath}/`)
+      );
+      if (nextDocuments.length !== contextConfig.documents.length) {
+        try {
+          await persistContextConfig({ ...contextConfig, documents: nextDocuments });
+        } catch (error) {
+          console.error(error);
+          setContextSaveStatus("error");
+        }
+      }
       loadDocsTree();
       if (selectedFilePath === filePath) setSelectedFilePath(null);
     } else {
@@ -395,22 +490,36 @@ export function EditorLeftSidebar({
 
       if (!isDir) {
         const isSelected = selectedFilePath === item.path;
+        const association = contextConfig.documents.find((document) => document.path === item.path);
         return (
-          <div key={item.path} className="flex items-center gap-1 my-1">
-            <motion.div
-              whileHover={{ x: 2 }}
-              onClick={() => handleSelectFile(item.path)}
-              className={`flex-1 flex items-center gap-2.5 py-1 px-2 rounded border cursor-pointer text-xs select-none transition-all min-w-0 ${
-                isSelected ? "bg-[#e8185a] text-white font-bold border-transparent shadow-[2px_2px_0_rgba(0,0,0,0.3)]" : "text-zinc-300 bg-[#0a0a0f] border-white/10 hover:border-white/20"
-              }`}
-            >
-              <span className="shrink-0">📄</span>
-              <span className="truncate flex-1 min-w-0">{item.displayName}</span>
-            </motion.div>
-            <div className="flex flex-col gap-0.5 shrink-0">
-              <button onClick={() => handleRenameNode(item.path, item.name)} className="text-[10px] bg-zinc-800 border border-white/10 px-1 hover:bg-zinc-700 text-white" title="Renombrar">✏️</button>
-              <button onClick={() => handleDeleteNode(item.path)} className="text-[10px] bg-red-950 border border-red-800 px-1 hover:bg-red-900 text-red-400" title="Eliminar">🗑</button>
+          <div key={item.path} className="flex flex-col gap-1 my-1.5 p-1 rounded bg-black/10">
+            <div className="flex items-center gap-1">
+              <motion.div
+                whileHover={{ x: 2 }}
+                onClick={() => handleSelectFile(item.path)}
+                className={`flex-1 flex items-center gap-2.5 py-1 px-2 rounded border cursor-pointer text-xs select-none transition-all min-w-0 ${
+                  isSelected ? "bg-[#e8185a] text-white font-bold border-transparent shadow-[2px_2px_0_rgba(0,0,0,0.3)]" : "text-zinc-300 bg-[#0a0a0f] border-white/10 hover:border-white/20"
+                }`}
+              >
+                <span className="shrink-0">📄</span>
+                <span className="truncate flex-1 min-w-0">{item.displayName}</span>
+              </motion.div>
+              <div className="flex flex-col gap-0.5 shrink-0">
+                <button onClick={() => handleRenameNode(item.path, item.name)} className="text-[10px] bg-zinc-800 border border-white/10 px-1 hover:bg-zinc-700 text-white" title="Renombrar">✏️</button>
+                <button onClick={() => handleDeleteNode(item.path)} className="text-[10px] bg-red-950 border border-red-800 px-1 hover:bg-red-900 text-red-400" title="Eliminar">🗑</button>
+              </div>
             </div>
+            <select
+              value={association?.role || ""}
+              onChange={(event) => handleDocumentRoleChange(item.path, event.target.value as DialogueDocumentRole | "")}
+              className="w-full text-[10px]"
+              aria-label={`Uso narrativo de ${item.displayName}`}
+            >
+              <option value="">No usar en IA</option>
+              <option value="sagaCanon">Canon de saga</option>
+              <option value="characterSheet">Ficha de personaje</option>
+              <option value="chapterState">Resumen / estado del capítulo</option>
+            </select>
           </div>
         );
       }
@@ -662,11 +771,18 @@ export function EditorLeftSidebar({
                 <AnimatePresence mode="wait">
                   {selectedFilePath === null ? (
                     <motion.div key="explorer-view" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col gap-3">
-                      <span className="font-[var(--font-bangers)] text-sm text-white tracking-wide mb-1 block">📁 Guiones & Conceptos</span>
+                      <div className="flex items-center justify-between gap-2 mb-1">
+                        <span className="font-[var(--font-bangers)] text-sm text-white tracking-wide">📁 Documentos narrativos</span>
+                        <span className={`text-[9px] font-mono ${contextSaveStatus === "error" ? "text-red-400" : "text-zinc-500"}`}>
+                          {contextSaveStatus === "saving" ? "Guardando…" : contextSaveStatus === "saved" ? "Asociado ✓" : contextSaveStatus === "error" ? "Error" : `${contextConfig.documents.length} asociados`}
+                        </span>
+                      </div>
+                      <p className="text-[10px] text-zinc-500 leading-relaxed">
+                        Elegí el rol de cada Markdown. La asociación se guarda en el capítulo actual y se reutiliza al generar.
+                      </p>
                       {loadingDocs ? <div className="text-center py-8 text-zinc-500 text-xs animate-pulse">Cargando...</div> : (
-                        <div className="flex flex-col gap-3">
-                          {docTree.guiones && <div className="border border-white/10 rounded p-2 bg-[#161622]"><span className="text-[10px] font-black text-zinc-400 block mb-1">Guiones</span>{renderTree(docTree.guiones)}</div>}
-                          {docTree.conceptos && <div className="border border-white/10 rounded p-2 bg-[#161622]"><span className="text-[10px] font-black text-zinc-400 block mb-1">Conceptos</span>{renderTree(docTree.conceptos)}</div>}
+                        <div className="border border-white/10 rounded p-2 bg-[#161622]">
+                          {docTree?.children?.map((node) => renderTree(node))}
                         </div>
                       )}
                     </motion.div>

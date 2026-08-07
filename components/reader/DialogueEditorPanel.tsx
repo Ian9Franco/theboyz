@@ -9,6 +9,7 @@ import { EditorTabStops } from "./EditorTabStops";
 import { EditorTabMasks } from "./EditorTabMasks";
 import { EditorTabDialogues } from "./EditorTabDialogues";
 import { EditorAudioTracks } from "./EditorAudioTracks";
+import type { AiDialogueProposal } from "./dialogueAi";
 
 export interface PanelConfig {
   focusY: number; // 0 to 1
@@ -40,6 +41,9 @@ export interface ChapterSettings {
 
 export interface DialogueEditorPanelProps {
   mode: "read" | "edit";
+  chapterId: string;
+  sagaTitle: string;
+  chapterTitle: string;
   currentPanels: PanelConfig[];
   activeLayer?: "paradas" | "mascaras" | "dialogos";
   setActiveLayer?: (layer: "paradas" | "mascaras" | "dialogos") => void;
@@ -80,6 +84,7 @@ export interface DialogueEditorPanelProps {
   handleMoveBubbleToPanel: (fromPanelIdx: number, bubbleIdx: number, toPanelIdx: number) => void;
   handleReorderPanels: (startIndex: number, endIndex: number) => void;
   handleReorderBubbles: (pIdx: number, startIndex: number, endIndex: number) => void;
+  handleApplyGeneratedDialogues: (proposals: AiDialogueProposal[]) => void;
   hasUnsavedChanges?: boolean;
   hasLocalBackup?: boolean;
   backupTimestamp?: number | null;
@@ -94,6 +99,9 @@ export interface DialogueEditorPanelProps {
  */
 export function DialogueEditorPanel({
   mode,
+  chapterId,
+  sagaTitle,
+  chapterTitle,
   currentPanels,
   activeLayer = "dialogos",
   setActiveLayer,
@@ -130,6 +138,7 @@ export function DialogueEditorPanel({
   handleMoveBubbleToPanel,
   handleReorderPanels,
   handleReorderBubbles,
+  handleApplyGeneratedDialogues,
   hasUnsavedChanges,
   hasLocalBackup,
   backupTimestamp,
@@ -528,6 +537,12 @@ export function DialogueEditorPanel({
       {activeLayer === "dialogos" && (
         <div className="p-4 flex-1">
           <EditorTabDialogues
+            chapterId={chapterId}
+            sagaTitle={sagaTitle}
+            chapterTitle={chapterTitle}
+            pageIdx={pageIdx}
+            pages={pages}
+            localDialogues={localDialogues}
             currentPanels={currentPanels}
             activePanelIdx={activePanelIdx}
             setActivePanelIdx={setActivePanelIdx}
@@ -540,6 +555,7 @@ export function DialogueEditorPanel({
             presetMode={presetMode}
             handleMoveBubbleToPanel={handleMoveBubbleToPanel}
             handleReorderBubbles={handleReorderBubbles}
+            handleApplyGeneratedDialogues={handleApplyGeneratedDialogues}
           />
         </div>
       )}

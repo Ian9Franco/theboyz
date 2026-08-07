@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import type { DialogueLine } from "./DialogueBubble";
 import type { Dialogues, PageData, PanelStop as PanelConfig, ChapterSettings, AudioTrack } from "./audioPlayer";
+import type { AiDialogueProposal } from "./dialogueAi";
+import { createDialogueLine } from "./dialogueDefaults";
 import { snapMaskRect } from "./readerUtils";
 
 interface UseDialogueEditorProps {
@@ -237,36 +239,16 @@ export function useDialogueEditor({
     const posX = defaultPosition ? defaultPosition.posX : 50;
     const posY = defaultPosition ? defaultPosition.posY : Math.round(targetPanel.focusY * 100);
 
-    const isStandard = presetMode === "standard";
     const isCaption = defaultStyle === "caption";
     const isCinematic = defaultStyle === "cinematic";
 
-    dialoguesCopy.push({
+    dialoguesCopy.push(createDialogueLine({
       text: isCinematic ? "HONORARTE" : isCaption ? "Texto de la narración..." : "Nuevo diálogo",
-      speaker: "",
       style: defaultStyle,
-      size: isCinematic ? "large" : isCaption ? "medium" : "small",
       posX,
       posY,
-      tailX: isCinematic ? undefined : posX,
-      tailY: isCinematic ? undefined : posY + 15,
-      tailWidth: isCinematic ? undefined : 6,
-      tailCurvature: isCinematic ? undefined : -22,
-      width: isCinematic ? 900 : isCaption ? 160 : 120,
-      fontSize: isCinematic ? 76 : 8,
-      borderRadius: isCinematic ? 0 : isCaption ? 4 : 18,
       tail: isCinematic || isCaption ? "none" : undefined,
-      fontFamily: isCinematic
-        ? "bungee"
-        : isStandard
-          ? "marker"
-          : isCaption ? "sans" : undefined,
-      customBg: isCinematic ? "transparent" : isStandard && isCaption ? "#f5e642" : undefined,
-      textColor: isCinematic ? "#0a0a0f" : isStandard && isCaption ? "#000000" : undefined,
-      customColor: isCinematic ? "#0a0a0f" : isStandard && isCaption ? "#0a0a0f" : undefined,
-      cinematicVariant: isCinematic ? "translucent" : undefined,
-      cinematic3d: isCinematic ? true : undefined,
-    });
+    }, presetMode));
 
     targetPanel.dialogue = dialoguesCopy;
     panelsCopy[pIdx] = targetPanel;
@@ -276,6 +258,52 @@ export function useDialogueEditor({
 
     setActivePanelIdx(pIdx);
     setActiveBubbleIdx(dialoguesCopy.length - 1);
+  };
+
+  const handleApplyGeneratedDialogues = (proposals: AiDialogueProposal[]) => {
+    if (proposals.length === 0) return;
+
+    const updatedPages = { ...localDialogues.pages };
+    const pg = { ...currentPageData };
+    const panelsCopy = (pg.panels || []).map((panel) => ({
+      ...panel,
+      dialogue: panel.dialogue ? [...panel.dialogue] : [],
+    }));
+
+    let lastApplied: { panelIndex: number; bubbleIndex: number } | null = null;
+    for (const proposal of proposals) {
+      const targetPanel = panelsCopy[proposal.panelIndex];
+      if (!targetPanel) continue;
+
+      const toPercentage = (value: number) => Math.round(Math.max(0, Math.min(1, value)) * 100);
+      const line = createDialogueLine({
+        text: proposal.text,
+        speaker: proposal.speaker,
+        showSpeakerName: proposal.showSpeakerName,
+        offscreen: proposal.offscreen,
+        style: proposal.style,
+        tail: proposal.tail,
+        posX: toPercentage(proposal.posX),
+        posY: toPercentage(proposal.posY),
+        size: proposal.size,
+        tailX: proposal.tailX === null ? undefined : toPercentage(proposal.tailX),
+        tailY: proposal.tailY === null ? undefined : toPercentage(proposal.tailY),
+      }, presetMode);
+
+      const dialogue = targetPanel.dialogue || [];
+      targetPanel.dialogue = [...dialogue, line];
+      lastApplied = {
+        panelIndex: proposal.panelIndex,
+        bubbleIndex: targetPanel.dialogue.length - 1,
+      };
+    }
+
+    if (!lastApplied) return;
+    pg.panels = panelsCopy;
+    updatedPages[pgKey] = pg;
+    updateDialoguesState(updatedPages);
+    setActivePanelIdx(lastApplied.panelIndex);
+    setActiveBubbleIdx(lastApplied.bubbleIndex);
   };
 
   const handleUpdateBubble = (pIdx: number, bIdx: number, fields: Partial<DialogueLine>) => {
@@ -758,6 +786,7 @@ export function useDialogueEditor({
     handleRemovePanel,
     handleUpdatePanelParams,
     handleAddBubble,
+    handleApplyGeneratedDialogues,
     handleDuplicateBubble,
     handleUpdateBubble,
     handleRemoveBubble,

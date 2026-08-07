@@ -173,10 +173,15 @@ export const getComicPageUrl = getComicAssetUrl;
  */
 export function getPageKeyFromUrl(url: string | undefined): string {
   if (!url) return "1";
-  const parts = url.split('/');
-  const filename = parts[parts.length - 1]; // "12.webp"
-  const basename = filename.split('.')[0];  // "12"
-  return basename;
+  const encodedFilename = url.split("/").pop()?.split("?")[0] || "1";
+  let filename = encodedFilename;
+  try {
+    filename = decodeURIComponent(encodedFilename);
+  } catch {
+    // Keep the encoded filename if it contains malformed escape sequences.
+  }
+  const extensionIndex = filename.lastIndexOf(".");
+  return extensionIndex > 0 ? filename.slice(0, extensionIndex) : filename;
 }
 
 /**

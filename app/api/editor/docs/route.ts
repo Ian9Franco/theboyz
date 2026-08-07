@@ -117,8 +117,10 @@ export async function GET(request: NextRequest) {
 
   const conceptosTree = buildTree(conceptosPath, "conceptos");
   const guionesTree = buildTree(guionesPath, "guiones");
+  const tree = buildTree(docsDir, "");
 
   return NextResponse.json({
+    tree,
     conceptos: conceptosTree || { name: "conceptos", displayName: "Conceptos", path: "conceptos", type: "directory", children: [] },
     guiones: guionesTree || { name: "guiones", displayName: "Guiones", path: "guiones", type: "directory", children: [] },
   });
