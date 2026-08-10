@@ -5,38 +5,211 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "che cuando se va ian?", "size": "small", "posX": 44, "posY": 10, "tailX": 38, "tailY": 18, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "mañana temprano creo", "size": "small", "posX": 64, "posY": 10, "tailX": 56, "tailY": 18, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "lo vamos a despedir?", "size": "small", "posX": 12, "posY": 12, "tailX": 28, "tailY": 22, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "ni en pedo, me levanto temprano", "size": "small", "posX": 86, "posY": 14, "tailX": 72, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "algunos LABURAMOS", "size": "small", "posX": 92, "posY": 20, "tailX": 86, "tailY": 14, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+            {
+              "text": "che cuando se va ian?",
+              "size": "small",
+              "posX": 44,
+              "posY": 10,
+              "tailX": 38,
+              "tailY": 18,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "mañana temprano creo",
+              "size": "small",
+              "posX": 64,
+              "posY": 10,
+              "tailX": 56,
+              "tailY": 18,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "lo vamos a despedir?",
+              "size": "small",
+              "posX": 12,
+              "posY": 12,
+              "tailX": 28,
+              "tailY": 22,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "ni en pedo, me levanto temprano",
+              "size": "small",
+              "posX": 86,
+              "posY": 14,
+              "tailX": 72,
+              "tailY": 20,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "algunos LABURAMOS",
+              "size": "small",
+              "posX": 92,
+              "posY": 20,
+              "tailX": 86,
+              "tailY": 14,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 0, "w": 100, "h": 43 }
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 43
+            }
           ]
         },
         {
           "focusY": 0.6,
           "dialogue": [
-            { "text": "si queres vamos, yo tengo la berlingo 0km", "size": "small", "posX": 66, "posY": 44, "tailX": 54, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "dale", "size": "small", "posX": 12, "posY": 44, "tailX": 24, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "me voy a ver a la wawi", "size": "small", "posX": 84, "posY": 64, "tailX": 72, "tailY": 68, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "son re giles", "size": "small", "posX": 88, "posY": 70, "tailX": 84, "tailY": 66, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+            {
+              "text": "si queres vamos, yo tengo la berlingo 0km",
+              "size": "small",
+              "posX": 66,
+              "posY": 44,
+              "tailX": 54,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "dale",
+              "size": "small",
+              "posX": 12,
+              "posY": 44,
+              "tailX": 24,
+              "tailY": 50,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "me voy a ver a la wawi",
+              "size": "small",
+              "posX": 84,
+              "posY": 64,
+              "tailX": 72,
+              "tailY": 68,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "son re giles",
+              "size": "small",
+              "posX": 88,
+              "posY": 70,
+              "tailX": 84,
+              "tailY": 66,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 42, "w": 100, "h": 38 }
+            {
+              "x": 0,
+              "y": 42,
+              "w": 100,
+              "h": 38
+            }
           ]
         },
         {
           "focusY": 0.9,
           "dialogue": [
-            { "text": "y si le llevo algo?", "style": "thought", "size": "small", "posX": 94, "posY": 82, "tailX": 50, "tailY": 105, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "que carajos le gusta a una monarca de las tinieblas?", "style": "thought", "size": "small", "posX": 94, "posY": 96, "tailX": 50, "tailY": 105, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "q le pasa a julian?", "size": "small", "posX": 40, "posY": 80, "tailX": 28, "tailY": 86, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "que se yo", "size": "small", "posX": 4, "posY": 82, "tailX": 18, "tailY": 88, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+            {
+              "text": "y si le llevo algo?",
+              "style": "thought",
+              "size": "small",
+              "posX": 94,
+              "posY": 82,
+              "tailX": 50,
+              "tailY": 105,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "que carajos le gusta a una monarca de las tinieblas?",
+              "style": "thought",
+              "size": "small",
+              "posX": 94,
+              "posY": 96,
+              "tailX": 50,
+              "tailY": 105,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "q le pasa a julian?",
+              "size": "small",
+              "posX": 40,
+              "posY": 80,
+              "tailX": 28,
+              "tailY": 86,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "que se yo",
+              "size": "small",
+              "posX": 4,
+              "posY": 82,
+              "tailX": 18,
+              "tailY": 88,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 80, "w": 100, "h": 20 }
+            {
+              "x": 0,
+              "y": 80,
+              "w": 100,
+              "h": 20
+            }
           ]
         }
       ]
@@ -46,20 +219,78 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "escuchas eso?", "size": "small", "posX": 8, "posY": 6, "tailX": 22, "tailY": 8, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "eso fue un grito?", "size": "small", "posX": 54, "posY": 2, "tailX": 42, "tailY": 6, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "man ", "size": "small", "posX": 78, "posY": 22, "tailX": 70, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "uandi", "size": "small", "posX": 50, "posY": 20, "tailX": 50, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+            {
+              "text": "escuchas eso?",
+              "size": "small",
+              "posX": 8,
+              "posY": 6,
+              "tailX": 22,
+              "tailY": 8,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "eso fue un grito?",
+              "size": "small",
+              "posX": 54,
+              "posY": 2,
+              "tailX": 42,
+              "tailY": 6,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "man ",
+              "size": "small",
+              "posX": 78,
+              "posY": 22,
+              "tailX": 70,
+              "tailY": 30,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "uandi",
+              "size": "small",
+              "posX": 50,
+              "posY": 20,
+              "tailX": 50,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 0, "w": 100, "h": 40 }
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 40
+            }
           ]
         },
         {
           "focusY": 0.54,
           "dialogue": [],
           "zoomRects": [
-            { "x": 0, "y": 40, "w": 100, "h": 33 }
+            {
+              "x": 0,
+              "y": 40,
+              "w": 100,
+              "h": 33
+            }
           ],
           "sounds": [
             {
@@ -76,7 +307,12 @@
           "focusY": 0.8,
           "dialogue": [],
           "zoomRects": [
-            { "x": 0, "y": 74, "w": 100, "h": 26 }
+            {
+              "x": 0,
+              "y": 74,
+              "w": 100,
+              "h": 26
+            }
           ]
         }
       ]
@@ -86,28 +322,110 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "Uandi", "size": "small", "posX": 25, "posY": 0, "tailX": 25, "tailY": 5, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "Mati", "size": "small", "posX": 80, "posY": 0, "tailX": 75, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "Creo que es momento que te enojes", "size": "small", "posX": 5, "posY": 5, "tailX": 20, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "ese es mi secreto mati", "size": "small", "posX": 95, "posY": 5, "tailX": 80, "tailY": 15, "tailWidth": 6, "tailCurvature": -40, "width": 100, "fontSize": 8, "borderRadius": 18 }
+            {
+              "text": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 0,
+              "tailX": 25,
+              "tailY": 5,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Mati",
+              "size": "small",
+              "posX": 80,
+              "posY": 0,
+              "tailX": 75,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Creo que es momento que te enojes",
+              "size": "small",
+              "posX": 5,
+              "posY": 5,
+              "tailX": 20,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "ese es mi secreto mati",
+              "size": "small",
+              "posX": 95,
+              "posY": 5,
+              "tailX": 80,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -40,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "yo siempre estoy enojado", "size": "small", "posX": 95, "posY": 30, "tailX": 85, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 100, "fontSize": 8, "borderRadius": 18 }
+            {
+              "text": "yo siempre estoy enojado",
+              "size": "small",
+              "posX": 95,
+              "posY": 30,
+              "tailX": 85,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 30, "w": 100, "h": 39 }
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 39
+            }
           ]
         },
         {
           "focusY": 0.8,
           "dialogue": [
-            { "text": "y estos?", "size": "small", "posX": 35, "posY": 95, "tailX": 20, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+            {
+              "text": "y estos?",
+              "size": "small",
+              "posX": 35,
+              "posY": 95,
+              "tailX": 20,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 67.5, "w": 100, "h": 32.5 }
+            {
+              "x": 0,
+              "y": 67.5,
+              "w": 100,
+              "h": 32.5
+            }
           ],
           "sounds": []
         }
@@ -119,23 +437,50 @@
           "focusY": 0.2,
           "dialogue": [],
           "zoomRects": [
-            { "x": 0, "y": 0, "w": 100, "h": 30 }
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 30
+            }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [],
           "zoomRects": [
-            { "x": 0, "y": 25, "w": 100, "h": 52 }
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 52
+            }
           ]
         },
         {
           "focusY": 0.85,
           "dialogue": [
-            { "text": "No los conoces? son Los Perdonadores", "size": "small", "posX": 60, "posY": 75, "tailX": 45, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 100, "fontSize": 8, "borderRadius": 18 }
+            {
+              "text": "No los conoces? son Los Perdonadores",
+              "size": "small",
+              "posX": 60,
+              "posY": 75,
+              "tailX": 45,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 75, "w": 100, "h": 25 }
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
           ]
         }
       ]
@@ -145,31 +490,118 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "o los 6 fantasticos, no me acuerdo", "size": "small", "posX": 10, "posY": 0, "tailX": 25, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "pero son famosos amigo", "size": "small", "posX": 50, "posY": 30, "tailX": 25, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+            {
+              "text": "o los 6 fantasticos, no me acuerdo",
+              "size": "small",
+              "posX": 10,
+              "posY": 0,
+              "tailX": 25,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "pero son famosos amigo",
+              "size": "small",
+              "posX": 50,
+              "posY": 30,
+              "tailX": 25,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 0, "w": 100, "h": 35 }
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 35
+            }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "te vi, te estabas preparando", "size": "small", "posX": 50, "posY": 35, "tailX": 40, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "no somos heroes amigo", "size": "small", "posX": 90, "posY": 55, "tailX": 75, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+            {
+              "text": "te vi, te estabas preparando",
+              "size": "small",
+              "posX": 50,
+              "posY": 35,
+              "tailX": 40,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "no somos heroes amigo",
+              "size": "small",
+              "posX": 90,
+              "posY": 55,
+              "tailX": 75,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 35, "w": 100, "h": 40 }
+            {
+              "x": 0,
+              "y": 35,
+              "w": 100,
+              "h": 40
+            }
           ]
         },
         {
           "focusY": 0.8,
           "dialogue": [
-            { "text": "un gran poder", "size": "small", "posX": 15, "posY": 75, "tailX": 25, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "es lo que no tenemos amigo", "size": "small", "posX": 65, "posY": 95, "tailX": 50, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+            {
+              "text": "un gran poder",
+              "size": "small",
+              "posX": 15,
+              "posY": 75,
+              "tailX": 25,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "es lo que no tenemos amigo",
+              "size": "small",
+              "posX": 65,
+              "posY": 95,
+              "tailX": 50,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 70, "w": 100, "h": 30 }
+            {
+              "x": 0,
+              "y": 70,
+              "w": 100,
+              "h": 30
+            }
           ]
         }
       ]
@@ -179,30 +611,120 @@
         {
           "focusY": 0.2,
           "dialogue": [
-            { "text": "miralos, son un equipo", "speaker": "Mati", "size": "small", "posX": 90, "posY": 30, "tailX": 110, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "showSpeakerName": true, "offscreen": true },
-            { "text": "tienen poderes esxtraordinarios", "speaker": "Mati", "size": "small", "posX": 90, "posY": 20, "tailX": 120, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "showSpeakerName": true, "offscreen": true },
-            { "text": "nosotros apenas podemos hacer algo sin matarnos", "speaker": "Mati", "size": "small", "posX": 10, "posY": 25, "tailX": -20, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "showSpeakerName": true, "offscreen": true }
+            {
+              "text": "miralos, son un equipo",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 90,
+              "posY": 30,
+              "tailX": 110,
+              "tailY": 30,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "showSpeakerName": true,
+              "offscreen": true
+            },
+            {
+              "text": "tienen poderes esxtraordinarios",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 90,
+              "posY": 20,
+              "tailX": 120,
+              "tailY": 30,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "showSpeakerName": true,
+              "offscreen": true
+            },
+            {
+              "text": "nosotros apenas podemos hacer algo sin matarnos",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 10,
+              "posY": 25,
+              "tailX": -20,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "showSpeakerName": true,
+              "offscreen": true
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 0, "w": 100, "h": 50 }
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 50
+            }
           ]
         },
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "no asustan a la gente, la gente los quiere", "speaker": "Uandi", "size": "small", "posX": 5, "posY": 65, "tailX": -20, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "showSpeakerName": true, "offscreen": true }
+            {
+              "text": "no asustan a la gente, la gente los quiere",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 5,
+              "posY": 65,
+              "tailX": -20,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "showSpeakerName": true,
+              "offscreen": true
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 50, "w": 100, "h": 18 }
+            {
+              "x": 0,
+              "y": 50,
+              "w": 100,
+              "h": 18
+            }
           ]
         },
         {
           "focusY": 0.8,
           "dialogue": [
-            { "text": "ellos son heroes", "speaker": "Uandi", "size": "small", "posX": 90, "posY": 70, "tailX": 105, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "showSpeakerName": true, "offscreen": true }
+            {
+              "text": "ellos son heroes",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 90,
+              "posY": 70,
+              "tailX": 105,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18,
+              "showSpeakerName": true,
+              "offscreen": true
+            }
           ],
           "zoomRects": [
-            { "x": 0, "y": 67.5, "w": 100, "h": 32.5 }
+            {
+              "x": 0,
+              "y": 67.5,
+              "w": 100,
+              "h": 32.5
+            }
           ]
         }
       ]
@@ -211,23 +733,6154 @@
       "panels": [
         {
           "focusY": 0.2,
-          "dialogue": [],
+          "dialogue": [
+            {
+              "text": "La reina está ocupada.",
+              "speaker": "Guardia",
+              "size": "small",
+              "posX": 78,
+              "posY": 5,
+              "tailX": 88,
+              "tailY": 17,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 60,
+              "posY": 25,
+              "tailX": 64,
+              "tailY": 21,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 80,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
           "zoomRects": [
-            { "x": 0, "y": 0, "w": 100, "h": 34 }
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 34
+            }
           ]
         },
         {
           "focusY": 0.5,
-          "dialogue": [],
+          "dialogue": [
+            {
+              "text": "Por eso vine.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 58,
+              "posY": 38,
+              "tailX": 55,
+              "tailY": 49,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
           "zoomRects": [
-            { "x": 0, "y": 35, "w": 100, "h": 27 }
+            {
+              "x": 0,
+              "y": 35,
+              "w": 100,
+              "h": 27
+            }
           ]
         },
         {
           "focusY": 0.8,
           "dialogue": [],
           "zoomRects": [
-            { "x": 0, "y": 60, "w": 100, "h": 40 }
+            {
+              "x": 0,
+              "y": 60,
+              "w": 100,
+              "h": 40
+            }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [
+            {
+              "text": "Falta revisar esto.",
+              "speaker": "Asistente",
+              "size": "small",
+              "posX": 15,
+              "posY": 4,
+              "tailX": 9,
+              "tailY": 12,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Déjelo.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 67,
+              "posY": 5,
+              "tailX": 53,
+              "tailY": 13,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.38,
+          "dialogue": [
+            {
+              "text": "Traje algo.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 15,
+              "posY": 30,
+              "tailX": 29,
+              "tailY": 36,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 105,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 27,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.61,
+          "dialogue": [
+            {
+              "text": "No pedí nada.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 12,
+              "posY": 51,
+              "tailX": 25,
+              "tailY": 59,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 110,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Por eso es una sorpresa.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 76,
+              "posY": 54,
+              "tailX": 66,
+              "tailY": 62,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 49,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.87,
+          "dialogue": [
+            {
+              "text": "Cinco minutos.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 84,
+              "posY": 77,
+              "tailX": 75,
+              "tailY": 84,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 110,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Con cuatro me alcanza.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 35,
+              "posY": 88,
+              "tailX": 55,
+              "tailY": 84,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 135,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 74,
+              "w": 100,
+              "h": 26
+            }
+          ]
+        }
+      ]
+    },
+    "9": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [
+            {
+              "text": "Comé.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 27,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 13,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 85,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No tengo hambre.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 78,
+              "posY": 6,
+              "tailX": 72,
+              "tailY": 15,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 115,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            {
+              "text": "Claro.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 27,
+              "posY": 31,
+              "tailX": 35,
+              "tailY": 39,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 85,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No te acostumbres.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 77,
+              "posY": 38,
+              "tailX": 72,
+              "tailY": 42,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 125,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 28,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        },
+        {
+          "focusY": 0.63,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 52,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.87,
+          "dialogue": [
+            {
+              "text": "Julián.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 68,
+              "posY": 77,
+              "tailX": 77,
+              "tailY": 86,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Mañana, traé dos.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 78,
+              "posY": 91,
+              "tailX": 78,
+              "tailY": 87,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 74,
+              "w": 100,
+              "h": 26
+            }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 40
+            }
+          ]
+        },
+        {
+          "focusY": 0.535,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 40,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.835,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 67,
+              "w": 100,
+              "h": 33
+            }
+          ]
+        }
+      ]
+    },
+    "11": {
+      "panels": [
+        {
+          "focusY": 0.145,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 29
+            }
+          ]
+        },
+        {
+          "focusY": 0.43,
+          "dialogue": [
+            {
+              "text": "No... no, no.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 32,
+              "tailX": 35,
+              "tailY": 39,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 106,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¡Dale!",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 75,
+              "posY": 32,
+              "tailX": 65,
+              "tailY": 39,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 92,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 29,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.785,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 57,
+              "w": 100,
+              "h": 43
+            }
+          ]
+        }
+      ]
+    },
+    "12": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [
+            {
+              "text": "Llegás justo.",
+              "speaker": "Encargado del restaurante",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 106,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Decime algo nuevo.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 116,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.38,
+          "dialogue": [
+            {
+              "text": "¡Mesa seis!",
+              "speaker": "Personal de cocina",
+              "size": "small",
+              "posX": 25,
+              "posY": 31,
+              "tailX": 35,
+              "tailY": 38,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 102,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Ya sale.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 75,
+              "posY": 31,
+              "tailX": 65,
+              "tailY": 38,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 96,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 28,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.575,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 48,
+              "w": 100,
+              "h": 19
+            }
+          ]
+        },
+        {
+          "focusY": 0.75,
+          "dialogue": [
+            {
+              "text": "¡Servicio!",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 70,
+              "tailX": 35,
+              "tailY": 77,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 67,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        },
+        {
+          "focusY": 0.915,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 83,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        }
+      ]
+    },
+    "13": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [
+            {
+              "text": "¡Julián, se nos cae la doce!",
+              "speaker": "Camarero",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 136,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.39,
+          "dialogue": [
+            {
+              "text": "Ya va.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 31,
+              "tailX": 35,
+              "tailY": 38,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 92,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 28,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.6,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 50,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.77,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 70,
+              "w": 100,
+              "h": 14
+            }
+          ]
+        },
+        {
+          "focusY": 0.92,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 84,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        }
+      ]
+    },
+    "14": {
+      "panels": [
+        {
+          "focusY": 0.12,
+          "dialogue": [
+            {
+              "text": "Vos, la carne. Vos, las verduras.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 146,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        },
+        {
+          "focusY": 0.395,
+          "dialogue": [
+            {
+              "text": "Salsas al pase.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 27,
+              "tailX": 35,
+              "tailY": 34,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 110,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 24,
+              "w": 100,
+              "h": 31
+            }
+          ]
+        },
+        {
+          "focusY": 0.655,
+          "dialogue": [
+            {
+              "text": "¡Salió!",
+              "speaker": "Personal de cocina",
+              "size": "small",
+              "posX": 25,
+              "posY": 58,
+              "tailX": 35,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 94,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 55,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 76,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        }
+      ]
+    },
+    "15": {
+      "panels": [
+        {
+          "focusY": 0.125,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.39,
+          "dialogue": [
+            {
+              "text": "Le falta sal.",
+              "speaker": "Duplicado de Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 28,
+              "tailX": 35,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 106,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Lo sé.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 75,
+              "posY": 28,
+              "tailX": 65,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 92,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.645,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 53,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 76,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        }
+      ]
+    },
+    "16": {
+      "panels": [
+        {
+          "focusY": 0.145,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 29
+            }
+          ]
+        },
+        {
+          "focusY": 0.43,
+          "dialogue": [
+            {
+              "text": "¿Seguro que va a atender?",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 32,
+              "tailX": 35,
+              "tailY": 39,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 130,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Siempre atiende.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 75,
+              "posY": 32,
+              "tailX": 65,
+              "tailY": 39,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 112,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 29,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.68,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 57,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.895,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 79,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        }
+      ]
+    },
+    "17": {
+      "panels": [
+        {
+          "focusY": 0.135,
+          "dialogue": [
+            {
+              "text": "¿Mati?",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 92,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Necesito preguntarte algo.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 132,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.37,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 27,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.555,
+          "dialogue": [
+            {
+              "text": "Te escucho.",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 25,
+              "posY": 50,
+              "tailX": 35,
+              "tailY": 57,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 102,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 47,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        },
+        {
+          "focusY": 0.715,
+          "dialogue": [
+            {
+              "text": "¿Quién es ella?",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 67,
+              "tailX": 35,
+              "tailY": 74,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 110,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 64,
+              "w": 100,
+              "h": 15
+            }
+          ]
+        },
+        {
+          "focusY": 0.895,
+          "dialogue": [
+            {
+              "text": "Ah.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 82,
+              "tailX": 35,
+              "tailY": 89,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 79,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        }
+      ]
+    },
+    "18": {
+      "panels": [
+        {
+          "focusY": 0.135,
+          "dialogue": [
+            {
+              "text": "Esperá acá.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 102,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.34,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 27,
+              "w": 100,
+              "h": 14
+            }
+          ]
+        },
+        {
+          "focusY": 0.505,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 41,
+              "w": 100,
+              "h": 19
+            }
+          ]
+        },
+        {
+          "focusY": 0.69,
+          "dialogue": [
+            {
+              "text": "Tranqui.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 63,
+              "tailX": 35,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 96,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 60,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.89,
+          "dialogue": [
+            {
+              "text": "No voy a hacerte nada.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 81,
+              "tailX": 35,
+              "tailY": 88,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 124,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 78,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        }
+      ]
+    },
+    "19": {
+      "panels": [
+        {
+          "focusY": 0.135,
+          "dialogue": [
+            {
+              "text": "¿Tenés hambre?",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 108,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.36,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 27,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.535,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 45,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        },
+        {
+          "focusY": 0.71,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 62,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 80,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        }
+      ]
+    },
+    "20": {
+      "panels": [
+        {
+          "focusY": 0.145,
+          "dialogue": [
+            {
+              "text": "Antes de que grites...",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 124,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Qué trajiste?",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 108,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 29
+            }
+          ]
+        },
+        {
+          "focusY": 0.405,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 29,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.635,
+          "dialogue": [
+            {
+              "text": "No es agresivo.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 55,
+              "tailX": 35,
+              "tailY": 62,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 110,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 52,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.875,
+          "dialogue": [
+            {
+              "text": "Creo.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 78,
+              "tailX": 35,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "21": {
+      "panels": [
+        {
+          "focusY": 0.145,
+          "dialogue": [
+            {
+              "text": "Probá.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 92,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 29
+            }
+          ]
+        },
+        {
+          "focusY": 0.395,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 29,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        },
+        {
+          "focusY": 0.625,
+          "dialogue": [
+            {
+              "text": "Está haciendo trampa.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 53,
+              "tailX": 35,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 122,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 50,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.875,
+          "dialogue": [
+            {
+              "text": "Tiene seis manos.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 78,
+              "tailX": 35,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 114,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "22": {
+      "panels": [
+        {
+          "focusY": 0.175,
+          "dialogue": [
+            {
+              "text": "No puede salir así.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 118,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Listo.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 92,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 35
+            }
+          ]
+        },
+        {
+          "focusY": 0.505,
+          "dialogue": [
+            {
+              "text": "La propina está incluida.",
+              "speaker": "Repartidor",
+              "size": "small",
+              "posX": 25,
+              "posY": 38,
+              "tailX": 35,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 130,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 35,
+              "w": 100,
+              "h": 31
+            }
+          ]
+        },
+        {
+          "focusY": 0.83,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 66,
+              "w": 100,
+              "h": 34
+            }
+          ]
+        }
+      ]
+    },
+    "23": {
+      "panels": [
+        {
+          "focusY": 0.125,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.34,
+          "dialogue": [
+            {
+              "text": "No podemos seguir diciéndole “eso”.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 28,
+              "tailX": 35,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.53,
+          "dialogue": [
+            {
+              "text": "Parker.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 46,
+              "tailX": 35,
+              "tailY": 53,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 94,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Parker?",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 75,
+              "posY": 46,
+              "tailX": 65,
+              "tailY": 53,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 96,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 43,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.715,
+          "dialogue": [
+            {
+              "text": "Tiene cara de Parker.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 66,
+              "tailX": 35,
+              "tailY": 73,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 122,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 63,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 80,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        }
+      ]
+    },
+    "24": {
+      "panels": [
+        {
+          "focusY": 0.2,
+          "dialogue": [
+            {
+              "text": "El sillón es tuyo.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 116,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 40
+            }
+          ]
+        },
+        {
+          "focusY": 0.53,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 40,
+              "w": 100,
+              "h": 26
+            }
+          ]
+        },
+        {
+          "focusY": 0.83,
+          "dialogue": [
+            {
+              "text": "Y no te comas al repartidor.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 69,
+              "tailX": 35,
+              "tailY": 76,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 136,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 66,
+              "w": 100,
+              "h": 34
+            }
+          ]
+        }
+      ]
+    },
+    "25": {
+      "panels": [
+        {
+          "focusY": 0.1,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.315,
+          "dialogue": [
+            {
+              "text": "Aprende rápido.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 23,
+              "tailX": 35,
+              "tailY": 30,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 110,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Demasiado.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 75,
+              "posY": 23,
+              "tailX": 65,
+              "tailY": 30,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 20,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.525,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 43,
+              "w": 100,
+              "h": 19
+            }
+          ]
+        },
+        {
+          "focusY": 0.705,
+          "dialogue": [
+            {
+              "text": "No. Las llaves no.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 65,
+              "tailX": 35,
+              "tailY": 72,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 116,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 62,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        },
+        {
+          "focusY": 0.895,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 79,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        }
+      ]
+    },
+    "26": {
+      "panels": [
+        {
+          "focusY": 0.155,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 31
+            }
+          ]
+        },
+        {
+          "focusY": 0.43,
+          "dialogue": [
+            {
+              "text": "Perdimos contacto con el equipo del túnel.",
+              "speaker": "Agente del Nadir",
+              "size": "small",
+              "posX": 25,
+              "posY": 34,
+              "tailX": 35,
+              "tailY": 41,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Cierren todos los accesos.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 75,
+              "posY": 34,
+              "tailX": 65,
+              "tailY": 41,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 132,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 31,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        },
+        {
+          "focusY": 0.66,
+          "dialogue": [
+            {
+              "text": "Quiero otra unidad abajo. Ahora.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 25,
+              "posY": 58,
+              "tailX": 35,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 144,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 55,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.885,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 77,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        }
+      ]
+    },
+    "27": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [
+            {
+              "text": "Mantengan formación.",
+              "speaker": "Jefe de escuadra",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.37,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 28,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.52,
+          "dialogue": [
+            {
+              "text": "Hay sangre.",
+              "speaker": "Agente del Nadir",
+              "size": "small",
+              "posX": 25,
+              "posY": 49,
+              "tailX": 35,
+              "tailY": 56,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 102,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 46,
+              "w": 100,
+              "h": 12
+            }
+          ]
+        },
+        {
+          "focusY": 0.68,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 58,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.89,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 78,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        }
+      ]
+    },
+    "28": {
+      "panels": [
+        {
+          "focusY": 0.125,
+          "dialogue": [
+            {
+              "text": "¡Arriba!",
+              "speaker": "Agente del Nadir",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 96,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.35,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.59,
+          "dialogue": [
+            {
+              "text": "¡Retirada!",
+              "speaker": "Jefe de escuadra",
+              "size": "small",
+              "posX": 25,
+              "posY": 48,
+              "tailX": 35,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 45,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.865,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 73,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        }
+      ]
+    },
+    "29": {
+      "panels": [
+        {
+          "focusY": 0.135,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.375,
+          "dialogue": [
+            {
+              "text": "No... estaba solo.",
+              "speaker": "Agente herido",
+              "size": "small",
+              "posX": 25,
+              "posY": 30,
+              "tailX": 35,
+              "tailY": 37,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 116,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 27,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        },
+        {
+          "focusY": 0.58,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 48,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.84,
+          "dialogue": [
+            {
+              "text": "¿Qué había ahí abajo?",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 25,
+              "posY": 71,
+              "tailX": 35,
+              "tailY": 78,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 122,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Alas.",
+              "speaker": "Agente herido",
+              "size": "small",
+              "posX": 75,
+              "posY": 71,
+              "tailX": 65,
+              "tailY": 78,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 68,
+              "w": 100,
+              "h": 32
+            }
+          ]
+        }
+      ]
+    },
+    "30": {
+      "panels": [
+        {
+          "focusY": 0.16,
+          "dialogue": [
+            {
+              "text": "Evacúen los niveles inferiores.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 142,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 32
+            }
+          ]
+        },
+        {
+          "focusY": 0.435,
+          "dialogue": [
+            {
+              "text": "¿Y el personal esencial?",
+              "speaker": "Agente del Nadir",
+              "size": "small",
+              "posX": 25,
+              "posY": 35,
+              "tailX": 35,
+              "tailY": 42,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 128,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Se queda.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 75,
+              "posY": 35,
+              "tailX": 65,
+              "tailY": 42,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 98,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 32,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.635,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 55,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        },
+        {
+          "focusY": 0.86,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 72,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        }
+      ]
+    },
+    "31": {
+      "panels": [
+        {
+          "focusY": 0.165,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "focusY": 0.425,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 33,
+              "w": 100,
+              "h": 19
+            }
+          ]
+        },
+        {
+          "focusY": 0.635,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 52,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.875,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "32": {
+      "panels": [
+        {
+          "focusY": 0.125,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.365,
+          "dialogue": [
+            {
+              "text": "Otra vez.",
+              "speaker": "Científico de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 28,
+              "tailX": 35,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 98,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.58,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 48,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.76,
+          "dialogue": [
+            {
+              "text": "La mezcla es estable.",
+              "speaker": "Científico de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 71,
+              "tailX": 35,
+              "tailY": 78,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 122,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 68,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        },
+        {
+          "focusY": 0.92,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 84,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        }
+      ]
+    },
+    "33": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [
+            {
+              "text": "La sonda perdió telemetría ocho segundos antes del cruce.",
+              "speaker": "Analista de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.435,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 28,
+              "w": 100,
+              "h": 31
+            }
+          ]
+        },
+        {
+          "focusY": 0.68,
+          "dialogue": [
+            {
+              "text": "¿Y volvió?",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 62,
+              "tailX": 35,
+              "tailY": 69,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No la misma.",
+              "speaker": "Analista de P",
+              "size": "small",
+              "posX": 75,
+              "posY": 62,
+              "tailX": 65,
+              "tailY": 69,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 104,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 59,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.885,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 77,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        }
+      ]
+    },
+    "34": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [
+            {
+              "text": "La firma se divide en dos patrones.",
+              "speaker": "Analista de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.375,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 28,
+              "w": 100,
+              "h": 19
+            }
+          ]
+        },
+        {
+          "focusY": 0.555,
+          "dialogue": [
+            {
+              "text": "No son patrones.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 50,
+              "tailX": 35,
+              "tailY": 57,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 112,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 47,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        },
+        {
+          "focusY": 0.71,
+          "dialogue": [
+            {
+              "text": "Son personas.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 67,
+              "tailX": 35,
+              "tailY": 74,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 106,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 64,
+              "w": 100,
+              "h": 14
+            }
+          ]
+        },
+        {
+          "focusY": 0.89,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 78,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        }
+      ]
+    },
+    "35": {
+      "panels": [
+        {
+          "focusY": 0.125,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.365,
+          "dialogue": [
+            {
+              "text": "¿Mati y Uandi?",
+              "speaker": "Mensajero de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 28,
+              "tailX": 35,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 108,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "De parte de P.",
+              "speaker": "Mensajero de P",
+              "size": "small",
+              "posX": 75,
+              "posY": 28,
+              "tailX": 65,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 108,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.57,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 48,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.74,
+          "dialogue": [
+            {
+              "text": "Esto no puede ser bueno.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 69,
+              "tailX": 35,
+              "tailY": 76,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 128,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Tiene membrete.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 75,
+              "posY": 69,
+              "tailX": 65,
+              "tailY": 76,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 110,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 66,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        },
+        {
+          "focusY": 0.91,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 82,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        }
+      ]
+    },
+    "36": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            {
+              "text": "Julián, te buscan.",
+              "speaker": "Personal de cocina",
+              "size": "small",
+              "posX": 25,
+              "posY": 33,
+              "tailX": 35,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 116,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Señor Julián.",
+              "speaker": "Mensajero de P",
+              "size": "small",
+              "posX": 75,
+              "posY": 33,
+              "tailX": 65,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 106,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.595,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 50,
+              "w": 100,
+              "h": 19
+            }
+          ]
+        },
+        {
+          "focusY": 0.765,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 69,
+              "w": 100,
+              "h": 15
+            }
+          ]
+        },
+        {
+          "focusY": 0.92,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 84,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        }
+      ]
+    },
+    "37": {
+      "panels": [
+        {
+          "focusY": 0.13,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 26
+            }
+          ]
+        },
+        {
+          "focusY": 0.37,
+          "dialogue": [
+            {
+              "text": "Gracias por venir.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 29,
+              "tailX": 35,
+              "tailY": 36,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 116,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No sabía que teníamos opción.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 75,
+              "posY": 29,
+              "tailX": 65,
+              "tailY": 36,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 138,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sé exactamente quiénes son.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 36,
+              "tailX": 35,
+              "tailY": 43,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 134,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 26,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.58,
+          "dialogue": [
+            {
+              "text": "Eso no tranquiliza.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 51,
+              "tailX": 35,
+              "tailY": 58,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 118,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Entonces empecemos.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 75,
+              "posY": 51,
+              "tailX": 65,
+              "tailY": 58,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 118,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 48,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.76,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 68,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        },
+        {
+          "focusY": 0.92,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 84,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        }
+      ]
+    },
+    "38": {
+      "panels": [
+        {
+          "focusY": 0.135,
+          "dialogue": [
+            {
+              "text": "Apareció hace treinta y seis horas.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.415,
+          "dialogue": [
+            {
+              "text": "Emite una firma que nuestros instrumentos no pueden clasificar.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 30,
+              "tailX": 35,
+              "tailY": 37,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Ya perdimos una sonda.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 75,
+              "posY": 30,
+              "tailX": 65,
+              "tailY": 37,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 124,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 27,
+              "w": 100,
+              "h": 29
+            }
+          ]
+        },
+        {
+          "focusY": 0.665,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 56,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        },
+        {
+          "focusY": 0.885,
+          "dialogue": [
+            {
+              "text": "Necesito que lleguen hasta él.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 80,
+              "tailX": 35,
+              "tailY": 87,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 140,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 77,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        }
+      ]
+    },
+    "39": {
+      "panels": [
+        {
+          "focusY": 0.115,
+          "dialogue": [
+            {
+              "text": "¿Y nosotros por qué?",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 120,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.325,
+          "dialogue": [
+            {
+              "text": "La nave requiere dos operadores.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 26,
+              "tailX": 35,
+              "tailY": 33,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 144,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 23,
+              "w": 100,
+              "h": 19
+            }
+          ]
+        },
+        {
+          "focusY": 0.505,
+          "dialogue": [
+            {
+              "text": "Julián puede sostenerla. Mati puede encontrar el camino.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 45,
+              "tailX": 35,
+              "tailY": 52,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Y yo?",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 75,
+              "posY": 45,
+              "tailX": 65,
+              "tailY": 52,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 92,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Tu condición te descarta.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 52,
+              "tailX": 35,
+              "tailY": 58,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 130,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 42,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        },
+        {
+          "focusY": 0.68,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 59,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.885,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 77,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        }
+      ]
+    },
+    "40": {
+      "panels": [
+        {
+          "focusY": 0.135,
+          "dialogue": [
+            {
+              "text": "Piénsenlo.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.375,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 27,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        },
+        {
+          "focusY": 0.605,
+          "dialogue": [
+            {
+              "text": "No.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 51,
+              "tailX": 35,
+              "tailY": 58,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Ni salimos del edificio.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 75,
+              "posY": 51,
+              "tailX": 65,
+              "tailY": 58,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 128,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 48,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.8,
+          "dialogue": [
+            {
+              "text": "Sigue siendo no.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 76,
+              "tailX": 35,
+              "tailY": 83,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 112,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 73,
+              "w": 100,
+              "h": 14
+            }
+          ]
+        },
+        {
+          "focusY": 0.935,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 87,
+              "w": 100,
+              "h": 13
+            }
+          ]
+        }
+      ]
+    },
+    "41": {
+      "panels": [
+        {
+          "focusY": 0.165,
+          "dialogue": [
+            {
+              "text": "La reina no recibe visitas.",
+              "speaker": "Guardia del Nadir",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 134,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Esta sí.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 96,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "focusY": 0.485,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 33,
+              "w": 100,
+              "h": 31
+            }
+          ]
+        },
+        {
+          "focusY": 0.73,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 64,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.91,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 82,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        }
+      ]
+    },
+    "42": {
+      "panels": [
+        {
+          "focusY": 0.135,
+          "dialogue": [
+            {
+              "text": "Los ataques ya cruzaron el sector cuatro.",
+              "speaker": "Oficial del Nadir",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.36,
+          "dialogue": [
+            {
+              "text": "No vienen de los túneles.",
+              "speaker": "Agente herido",
+              "size": "small",
+              "posX": 25,
+              "posY": 30,
+              "tailX": 35,
+              "tailY": 37,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 130,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Salen de ellos.",
+              "speaker": "Agente herido",
+              "size": "small",
+              "posX": 75,
+              "posY": 30,
+              "tailX": 65,
+              "tailY": 37,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 110,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 27,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.56,
+          "dialogue": [
+            {
+              "text": "Aíslen los focos.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 25,
+              "posY": 48,
+              "tailX": 35,
+              "tailY": 55,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 114,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 45,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.755,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 67,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        },
+        {
+          "focusY": 0.92,
+          "dialogue": [
+            {
+              "text": "Severine.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 87,
+              "tailX": 35,
+              "tailY": 94,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 98,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 84,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        }
+      ]
+    },
+    "43": {
+      "panels": [
+        {
+          "focusY": 0.145,
+          "dialogue": [
+            {
+              "text": "P puede sacarnos de acá.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 128,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "P no salva a nadie.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 118,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 29
+            }
+          ]
+        },
+        {
+          "focusY": 0.415,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 29,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.655,
+          "dialogue": [
+            {
+              "text": "No te estoy pidiendo que confíes en ellos.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 57,
+              "tailX": 35,
+              "tailY": 64,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 54,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.885,
+          "dialogue": [
+            {
+              "text": "Te estoy pidiendo que no vayas.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 25,
+              "posY": 80,
+              "tailX": 35,
+              "tailY": 87,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 142,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 77,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        }
+      ]
+    },
+    "44": {
+      "panels": [
+        {
+          "focusY": 0.125,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.35,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.535,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 45,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        },
+        {
+          "focusY": 0.71,
+          "dialogue": [
+            {
+              "text": "Mati.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 65,
+              "tailX": 35,
+              "tailY": 72,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Decile a Uandi que es un sí.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 75,
+              "posY": 65,
+              "tailX": 65,
+              "tailY": 72,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 136,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 62,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 80,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        }
+      ]
+    },
+    "45": {
+      "panels": [
+        {
+          "focusY": 0.135,
+          "dialogue": [
+            {
+              "text": "Pasá.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.375,
+          "dialogue": [
+            {
+              "text": "Voy a ir.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 30,
+              "tailX": 35,
+              "tailY": 37,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 98,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Ya sé.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 75,
+              "posY": 30,
+              "tailX": 65,
+              "tailY": 37,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 92,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Necesito que vengas conmigo.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 37,
+              "tailX": 35,
+              "tailY": 44,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 136,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 27,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        },
+        {
+          "focusY": 0.565,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 48,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        },
+        {
+          "focusY": 0.735,
+          "dialogue": [
+            {
+              "text": "¿Cuándo salimos?",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 68,
+              "tailX": 35,
+              "tailY": 75,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 112,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 65,
+              "w": 100,
+              "h": 17
+            }
+          ]
+        },
+        {
+          "focusY": 0.91,
+          "dialogue": [
+            {
+              "text": "Ahí va.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 85,
+              "tailX": 35,
+              "tailY": 92,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 94,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 82,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        }
+      ]
+    },
+    "46": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.38,
+          "dialogue": [
+            {
+              "text": "Parten en cuarenta y ocho horas.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 31,
+              "tailX": 35,
+              "tailY": 38,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 144,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "El entrenamiento empieza mañana.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 75,
+              "posY": 31,
+              "tailX": 65,
+              "tailY": 38,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 144,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 28,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.58,
+          "dialogue": [
+            {
+              "text": "Entendido.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 25,
+              "posY": 51,
+              "tailX": 35,
+              "tailY": 58,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 48,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.76,
+          "dialogue": [
+            {
+              "text": "¿Ellos aceptaron?",
+              "speaker": "Mujer vinculada al grupo",
+              "size": "small",
+              "posX": 25,
+              "posY": 71,
+              "tailX": 35,
+              "tailY": 78,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 114,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Estamos adentro.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 75,
+              "posY": 71,
+              "tailX": 65,
+              "tailY": 78,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 112,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 68,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        },
+        {
+          "focusY": 0.92,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 84,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        }
+      ]
+    },
+    "47": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "Primero necesitamos saber dónde se rompen.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        },
+        {
+          "focusY": 0.455,
+          "dialogue": [
+            {
+              "text": "Siempre tan motivador.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 33,
+              "tailX": 35,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 124,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No te saques los lentes.",
+              "speaker": "Técnica de P",
+              "size": "small",
+              "posX": 75,
+              "posY": 33,
+              "tailX": 65,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 128,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 31
+            }
+          ]
+        },
+        {
+          "focusY": 0.715,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 61,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        },
+        {
+          "focusY": 0.91,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 82,
+              "w": 100,
+              "h": 18
+            }
+          ]
+        }
+      ]
+    },
+    "48": {
+      "panels": [
+        {
+          "focusY": 0.135,
+          "dialogue": [
+            {
+              "text": "Cuando quieras.",
+              "speaker": "Técnica de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 110,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Uno.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Dos.",
+              "speaker": "Duplicado de Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 10,
+              "tailX": 35,
+              "tailY": 17,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.395,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 27,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.64,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 52,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [
+            {
+              "text": "Actividad estable.",
+              "speaker": "Técnica de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 79,
+              "tailX": 35,
+              "tailY": 86,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 116,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 76,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        }
+      ]
+    },
+    "49": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "No busques el patrón.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 122,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Dejá que te encuentre.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 124,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        },
+        {
+          "focusY": 0.45,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        },
+        {
+          "focusY": 0.7,
+          "dialogue": [
+            {
+              "text": "La presión está subiendo.",
+              "speaker": "Técnica de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 63,
+              "tailX": 35,
+              "tailY": 70,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 130,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 60,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.9,
+          "dialogue": [
+            {
+              "text": "Corten.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 83,
+              "tailX": 35,
+              "tailY": 90,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 94,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 80,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        }
+      ]
+    },
+    "50": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [
+            {
+              "text": "¿Estás bien?",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 104,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.42,
+          "dialogue": [
+            {
+              "text": "Bien. Yo tampoco.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 31,
+              "tailX": 35,
+              "tailY": 38,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 114,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 28,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.66,
+          "dialogue": [
+            {
+              "text": "Vengan.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 59,
+              "tailX": 35,
+              "tailY": 66,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 94,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 56,
+              "w": 100,
+              "h": 20
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 76,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        }
+      ]
+    },
+    "51": {
+      "panels": [
+        {
+          "focusY": 0.5,
+          "dialogue": [
+            {
+              "text": "No me jodas.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 104,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No voy a usar eso.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 116,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Sí.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 10,
+              "tailX": 35,
+              "tailY": 17,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 100
+            }
+          ]
+        }
+      ]
+    },
+    "52": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [
+            {
+              "text": "Te queda perfecto.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 116,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.4,
+          "dialogue": [
+            {
+              "text": "Callate.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 31,
+              "tailX": 35,
+              "tailY": 38,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 96,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 28,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        },
+        {
+          "focusY": 0.64,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 52,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [
+            {
+              "text": "No prometo nada.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 79,
+              "tailX": 35,
+              "tailY": 86,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 112,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 76,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        }
+      ]
+    },
+    "53": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "Mañana. Seis en punto.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 124,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        },
+        {
+          "focusY": 0.43,
+          "dialogue": [
+            {
+              "text": "¿Seis de la mañana?",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 33,
+              "tailX": 35,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 118,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Chef, eso existe.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 75,
+              "posY": 33,
+              "tailX": 65,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 114,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 26
+            }
+          ]
+        },
+        {
+          "focusY": 0.67,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 56,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.89,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 78,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        }
+      ]
+    },
+    "54": {
+      "panels": [
+        {
+          "focusY": 0.175,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 35
+            }
+          ]
+        },
+        {
+          "focusY": 0.495,
+          "dialogue": [
+            {
+              "text": "Necesito que busques algo.",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 25,
+              "posY": 38,
+              "tailX": 35,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 132,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 35,
+              "w": 100,
+              "h": 29
+            }
+          ]
+        },
+        {
+          "focusY": 0.82,
+          "dialogue": [
+            {
+              "text": "Es urgente.",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 25,
+              "posY": 67,
+              "tailX": 35,
+              "tailY": 74,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 102,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 64,
+              "w": 100,
+              "h": 36
+            }
+          ]
+        }
+      ]
+    },
+    "55": {
+      "panels": [
+        {
+          "focusY": 0.21,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 42
+            }
+          ]
+        },
+        {
+          "focusY": 0.57,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 42,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        },
+        {
+          "focusY": 0.86,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 72,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        }
+      ]
+    },
+    "56": {
+      "panels": [
+        {
+          "focusY": 0.16,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 32
+            }
+          ]
+        },
+        {
+          "focusY": 0.445,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 32,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.785,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 57,
+              "w": 100,
+              "h": 43
+            }
+          ]
+        }
+      ]
+    },
+    "57": {
+      "panels": [
+        {
+          "focusY": 0.125,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.37,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        },
+        {
+          "focusY": 0.585,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 49,
+              "w": 100,
+              "h": 19
+            }
+          ]
+        },
+        {
+          "focusY": 0.76,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 68,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        },
+        {
+          "focusY": 0.92,
+          "dialogue": [
+            {
+              "text": "Ian.",
+              "speaker": "Mujer del grimorio",
+              "size": "small",
+              "posX": 25,
+              "posY": 87,
+              "tailX": 35,
+              "tailY": 94,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Decime.",
+              "speaker": "Mujer del grimorio",
+              "size": "small",
+              "posX": 75,
+              "posY": 87,
+              "tailX": 65,
+              "tailY": 94,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 94,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 84,
+              "w": 100,
+              "h": 16
+            }
+          ]
+        }
+      ]
+    },
+    "58": {
+      "panels": [
+        {
+          "focusY": 0.125,
+          "dialogue": [
+            {
+              "text": "Una roca cruzó una anomalía cerca de la Tierra.",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.375,
+          "dialogue": [
+            {
+              "text": "Eso no es una roca.",
+              "speaker": "Mujer del grimorio",
+              "size": "small",
+              "posX": 25,
+              "posY": 28,
+              "tailX": 35,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 118,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.625,
+          "dialogue": [
+            {
+              "text": "¿Cómo lo sabés?",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 25,
+              "posY": 53,
+              "tailX": 35,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 110,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Todavía no lo sé.",
+              "speaker": "Mujer del grimorio",
+              "size": "small",
+              "posX": 75,
+              "posY": 53,
+              "tailX": 65,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 114,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 50,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.875,
+          "dialogue": [
+            {
+              "text": "Mandame todo.",
+              "speaker": "Mujer del grimorio",
+              "size": "small",
+              "posX": 25,
+              "posY": 78,
+              "tailX": 35,
+              "tailY": 85,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 106,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "59": {
+      "panels": [
+        {
+          "focusY": 0.14,
+          "dialogue": [
+            {
+              "text": "Ya te lo mandé.",
+              "speaker": "Ian",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 110,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 28
+            }
+          ]
+        },
+        {
+          "focusY": 0.395,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 28,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.615,
+          "dialogue": [
+            {
+              "text": "Dame una hora.",
+              "speaker": "Mujer del grimorio",
+              "size": "small",
+              "posX": 25,
+              "posY": 54,
+              "tailX": 35,
+              "tailY": 61,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 108,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 51,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        },
+        {
+          "focusY": 0.79,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 72,
+              "w": 100,
+              "h": 14
+            }
+          ]
+        },
+        {
+          "focusY": 0.93,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 86,
+              "w": 100,
+              "h": 14
+            }
+          ]
+        }
+      ]
+    },
+    "60": {
+      "panels": [
+        {
+          "focusY": 0.165,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 33
+            }
+          ]
+        },
+        {
+          "focusY": 0.5,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 33,
+              "w": 100,
+              "h": 34
+            }
+          ]
+        },
+        {
+          "focusY": 0.835,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 67,
+              "w": 100,
+              "h": 33
+            }
+          ]
+        }
+      ]
+    },
+    "61": {
+      "panels": [
+        {
+          "focusY": 0.12,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        },
+        {
+          "focusY": 0.37,
+          "dialogue": [
+            {
+              "text": "Cuidalo.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 27,
+              "tailX": 35,
+              "tailY": 34,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 96,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 24,
+              "w": 100,
+              "h": 26
+            }
+          ]
+        },
+        {
+          "focusY": 0.625,
+          "dialogue": [
+            {
+              "text": "Volvé entero.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 53,
+              "tailX": 35,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 106,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No prometas nada.",
+              "speaker": "Severine",
+              "size": "small",
+              "posX": 75,
+              "posY": 53,
+              "tailX": 65,
+              "tailY": 60,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 114,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No iba a hacerlo.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 60,
+              "tailX": 35,
+              "tailY": 67,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 114,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 50,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.875,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "62": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "Nos vemos.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Más te vale.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 104,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        },
+        {
+          "focusY": 0.41,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.635,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 52,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.875,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 75,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        }
+      ]
+    },
+    "63": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "Todo está sincronizado con ustedes.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 150,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        },
+        {
+          "focusY": 0.425,
+          "dialogue": [
+            {
+              "text": "Eso espero.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 33,
+              "tailX": 35,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 102,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.665,
+          "dialogue": [
+            {
+              "text": "¿Esto tiene manual?",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 58,
+              "tailX": 35,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 118,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 75,
+              "posY": 58,
+              "tailX": 65,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 55,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.89,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 78,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        }
+      ]
+    },
+    "64": {
+      "panels": [
+        {
+          "focusY": 0.145,
+          "dialogue": [
+            {
+              "text": "Bueno...",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 96,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Ni se te ocurra.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 112,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 29
+            }
+          ]
+        },
+        {
+          "focusY": 0.42,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 29,
+              "w": 100,
+              "h": 26
+            }
+          ]
+        },
+        {
+          "focusY": 0.775,
+          "dialogue": [
+            {
+              "text": "Estamos facheros.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 58,
+              "tailX": 35,
+              "tailY": 65,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 114,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 55,
+              "w": 100,
+              "h": 45
+            }
+          ]
+        }
+      ]
+    },
+    "65": {
+      "panels": [
+        {
+          "focusY": 0.175,
+          "dialogue": [
+            {
+              "text": "Es más grande de cerca.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 126,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Eso dijo...",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 102,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 10,
+              "tailX": 35,
+              "tailY": 17,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 35
+            }
+          ]
+        },
+        {
+          "focusY": 0.46,
+          "dialogue": [
+            {
+              "text": "Los vemos.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 38,
+              "tailX": 35,
+              "tailY": 45,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 35,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.675,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 57,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        },
+        {
+          "focusY": 0.89,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 78,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        }
+      ]
+    },
+    "66": {
+      "panels": [
+        {
+          "focusY": 0.15,
+          "dialogue": [
+            {
+              "text": "La nave los llevará hasta el umbral.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 152,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Después dependerá de ustedes.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 138,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        },
+        {
+          "focusY": 0.435,
+          "dialogue": [
+            {
+              "text": "Qué tranquilizador.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 33,
+              "tailX": 35,
+              "tailY": 40,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 118,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 30,
+              "w": 100,
+              "h": 27
+            }
+          ]
+        },
+        {
+          "focusY": 0.665,
+          "dialogue": [
+            {
+              "text": "Nos vemos del otro lado.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 60,
+              "tailX": 35,
+              "tailY": 67,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 128,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 57,
+              "w": 100,
+              "h": 19
+            }
+          ]
+        },
+        {
+          "focusY": 0.88,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 76,
+              "w": 100,
+              "h": 24
+            }
+          ]
+        }
+      ]
+    },
+    "67": {
+      "panels": [
+        {
+          "focusY": 0.125,
+          "dialogue": [
+            {
+              "text": "¿Listo?",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 3,
+              "tailX": 35,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 94,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 75,
+              "posY": 3,
+              "tailX": 65,
+              "tailY": 10,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 90,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 25
+            }
+          ]
+        },
+        {
+          "focusY": 0.365,
+          "dialogue": [
+            {
+              "text": "Perfecto.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 28,
+              "tailX": 35,
+              "tailY": 35,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 98,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 25,
+              "w": 100,
+              "h": 23
+            }
+          ]
+        },
+        {
+          "focusY": 0.59,
+          "dialogue": [
+            {
+              "text": "Tengo la ruta.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 51,
+              "tailX": 35,
+              "tailY": 58,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 108,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 48,
+              "w": 100,
+              "h": 22
+            }
+          ]
+        },
+        {
+          "focusY": 0.85,
+          "dialogue": [
+            {
+              "text": "Lancen.",
+              "speaker": "Director de P",
+              "size": "small",
+              "posX": 25,
+              "posY": 73,
+              "tailX": 35,
+              "tailY": 80,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 94,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 70,
+              "w": 100,
+              "h": 30
+            }
+          ]
+        }
+      ]
+    },
+    "68": {
+      "panels": [
+        {
+          "focusY": 0.13,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 100,
+              "h": 26
+            }
+          ]
+        },
+        {
+          "focusY": 0.42,
+          "dialogue": [
+            {
+              "text": "Dale, amigos.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 25,
+              "posY": 29,
+              "tailX": 35,
+              "tailY": 36,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 106,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 26,
+              "w": 100,
+              "h": 32
+            }
+          ]
+        },
+        {
+          "focusY": 0.685,
+          "dialogue": [
+            {
+              "text": "Ya no hay vuelta atrás.",
+              "speaker": "Julián",
+              "size": "small",
+              "posX": 25,
+              "posY": 61,
+              "tailX": 35,
+              "tailY": 68,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 126,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Hace rato.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 75,
+              "posY": 61,
+              "tailX": 65,
+              "tailY": 68,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 100,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 58,
+              "w": 100,
+              "h": 21
+            }
+          ]
+        },
+        {
+          "focusY": 0.895,
+          "dialogue": [],
+          "zoomRects": [
+            {
+              "x": 0,
+              "y": 79,
+              "w": 100,
+              "h": 21
+            }
           ]
         }
       ]
