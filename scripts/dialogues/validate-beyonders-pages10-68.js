@@ -14,7 +14,7 @@ let actual = 0;
 let masks = 0;
 const errors = [];
 
-for (let page = 1; page <= 9; page += 1) {
+for (let page = 1; page <= 6; page += 1) {
   if (JSON.stringify(live.pages[String(page)]) !== JSON.stringify(backup.pages[String(page)])) {
     errors.push(`La página existente ${page} cambió`);
   }
@@ -52,7 +52,24 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Validación correcta: páginas 1–9 intactas; páginas 10–68 completas; ${actual} diálogos; ${masks} máscaras.`);
+for (const page of [7, 8, 9]) {
+  for (const panel of live.pages[String(page)]?.panels || []) {
+    const rect = panel.zoomRects?.[0];
+    if (!rect) errors.push(`Página ${page}: falta una máscara`);
+    for (const line of panel.dialogue || []) {
+      if (rect && (line.posY < rect.y || line.posY > rect.y + rect.h)) {
+        errors.push(`Página ${page}: globo fuera de su máscara: ${line.text}`);
+      }
+    }
+  }
+}
+
+if (errors.length) {
+  console.error(errors.join("\n"));
+  process.exit(1);
+}
+
+console.log(`Validación correcta: páginas 1–6 intactas; revisión 7–9 válida; páginas 10–68 completas; ${actual} diálogos; ${masks} máscaras.`);
 for (const page of [10, 31, 51, 68]) {
   const panels = live.pages[String(page)].panels;
   console.log(`Página ${page}: ${panels.length} máscaras, ${panels.reduce((n, panel) => n + panel.dialogue.length, 0)} diálogos.`);

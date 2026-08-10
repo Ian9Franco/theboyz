@@ -24,18 +24,20 @@ const rows = {
 };
 
 const panelToRow = {
-  11:{2:1,3:1},12:{1:0,2:1,4:3},13:{1:0,2:1},14:{1:0,2:1,3:2},15:{2:1},16:{3:1},
+  10:{1:0,2:0,3:1,4:2},11:{1:0,2:1,3:1,4:2,5:2},12:{1:0,2:1,4:3},13:{1:0,2:1},14:{1:0,2:1,3:2},15:{2:1},16:{3:1},
   17:{1:0,3:2,4:3,5:4},18:{1:0,4:3,5:4},19:{1:0},20:{1:0,3:2,4:3},21:{1:0,3:2,4:3},
-  22:{2:0,4:1},23:{2:1,3:2,4:3},24:{2:0,4:2},25:{2:1,4:3},26:{2:1,3:1,4:2},
-  27:{1:0,3:2},28:{1:0,3:2},29:{2:1,4:3,5:3},30:{1:0,3:1,4:1},32:{2:1,4:3},
-  33:{2:0,4:2},34:{1:0,4:2,5:3},35:{3:1,5:3},36:{2:1,3:1},37:{2:1,3:1,4:2,5:2},
-  38:{1:0,2:1,3:1,5:3},39:{1:0,2:1,3:2},40:{1:0,3:2,4:3},41:{1:0},
-  42:{1:0,3:1,4:2,7:4},43:{1:0,2:0,4:2,5:3},44:{6:3},45:{2:0,3:1,4:1,6:3,7:4},
-  46:{2:1,3:1,4:2,5:3,6:3},47:{2:0,3:1,4:1},48:{1:0,2:0,6:3},49:{2:0,4:2,5:3},
-  50:{1:0,4:1,5:2},51:{1:0},52:{1:0,3:1,5:3},53:{1:0,2:1,3:1},54:{2:1,3:2},
-  57:{5:4},58:{1:0,2:1,3:2,4:3},59:{1:0,3:2},61:{2:1,3:2,4:2},62:{2:0},
-  63:{1:0,2:1,3:2},64:{2:0,4:2},65:{1:0,2:1},66:{1:0,2:1,3:2},
-  67:{1:0,2:1,3:2,4:3},68:{2:1,4:2}
+  22:{2:0,4:1},23:{2:1,3:2,4:3},24:{2:0,3:1,4:2,5:2},25:{2:1,4:3},26:{2:1,3:1,4:2},
+  27:{1:0,3:2},28:{1:0,3:2},29:{2:1,4:3,5:3},30:{1:0,2:0,3:1,4:1,5:2,6:3},32:{1:0,2:1,3:2,4:3,5:4},
+  33:{1:0,2:0,3:1,4:2,5:3},34:{1:0,2:1,3:2,4:2,5:3,6:4},35:{1:0,2:1,3:1,4:2,5:3},36:{1:0,2:1,3:1,4:2,5:3},37:{1:0,2:1,3:1,4:2,5:3,6:4},
+  38:{1:0,2:1,3:1,4:2,5:2,6:3},39:{1:0,2:1,3:2,4:3,5:4},40:{1:0,2:1,3:2,4:3,5:4},41:{1:0,2:1,3:2,4:3},
+  42:{1:0,3:1,4:2,7:4},43:{1:0,2:0,3:1,4:1,5:2,6:3},44:{1:0,2:1,3:2,4:3,5:4,6:4},45:{1:0,2:0,3:1,4:1,5:2,6:3,7:4},
+  46:{1:0,2:1,3:1,4:2,5:3,6:4},47:{1:0,2:0,3:1,4:1,5:3},48:{1:0,2:0,3:1,4:2,5:2,6:3},49:{1:0,2:0,3:1,4:2,5:3,6:3},
+  50:{1:0,2:0,4:1,5:2},51:{1:0},52:{1:0,2:1,3:1,4:2,5:3},53:{1:0,2:1,3:1,4:3,5:3},54:{1:0,2:1,3:1,4:2},
+  55:{1:0,2:0,3:1,4:2,5:2},57:{5:4},58:{1:0,2:1,3:2,4:3},59:{1:0,3:2},
+  61:{1:0,2:1,3:1,4:2,5:2,6:3,7:3,8:3},62:{1:0,2:0,3:1,4:1,5:2,6:2,7:3},
+  63:{1:0,2:1,3:1,4:2,5:3,6:3},64:{1:0,2:0,3:1,4:2},
+  65:{1:0,2:1,3:2,4:3,5:3},66:{1:0,2:1,3:2,4:3},
+  67:{1:0,2:1,3:2,4:3},68:{1:0,2:1,3:1,4:1,5:2,6:3}
 };
 
 function parseProposals(markdown) {
@@ -54,7 +56,14 @@ function parseProposals(markdown) {
     proposals.get(page).push({
       visualPanel: Number(entry[1]),
       speaker: entry[2].split(",")[0].trim(),
-      text: entry[3]
+      text: entry[3],
+      style: entry[2].startsWith("Narración")
+        ? "caption"
+        : entry[2].toLowerCase().includes("pensamiento")
+          ? "thought"
+          : /(mensaje|videollamada|comunicador|por teléfono)/i.test(entry[2])
+            ? "electronic"
+            : undefined
     });
   }
   return proposals;
@@ -84,7 +93,7 @@ for (let page = 10; page <= 68; page += 1) {
   for (const proposal of proposals.get(page) || []) {
     const mapped = panelToRow[page]?.[proposal.visualPanel];
     const rowIndex = mapped ?? Math.min(proposal.visualPanel - 1, panels.length - 1);
-    panels[rowIndex].dialogue.push({ speaker: proposal.speaker, text: proposal.text });
+    panels[rowIndex].dialogue.push({ speaker: proposal.speaker, text: proposal.text, style: proposal.style });
   }
 
   for (const panel of panels) {
@@ -98,6 +107,11 @@ for (let page = 10; page <= 68; page += 1) {
       return {
         text: line.text,
         speaker: line.speaker,
+        ...(line.style ? {
+          style: line.style,
+          tail: "none",
+          ...(line.style === "electronic" ? { offscreen: true, showSpeakerName: true } : {})
+        } : {}),
         size: "small",
         posX,
         posY,
@@ -114,6 +128,67 @@ for (let page = 10; page <= 68; page += 1) {
 
   data.pages[String(page)] = { panels };
 }
+
+function bubble(text, speaker, posX, posY, options = {}) {
+  const thoughtOrCaption = options.style === "thought" || options.style === "caption";
+  return {
+    text,
+    ...(speaker ? { speaker } : {}),
+    ...(options.style ? { style: options.style } : {}),
+    size: "small",
+    posX,
+    posY,
+    ...(thoughtOrCaption ? { tail: options.style === "caption" ? "none" : undefined } : {
+      tailX: posX <= 50 ? posX + 10 : posX - 10,
+      tailY: Math.min(99, posY + 7)
+    }),
+    tailWidth: 6,
+    tailCurvature: posX <= 50 ? -22 : 22,
+    width: options.width ?? clamp(80 + text.length * 2, 100, 180),
+    fontSize: 8,
+    borderRadius: 18
+  };
+}
+
+// Revisión autoral: crisis del Nadir, medialunas y conflicto Julián/Severine.
+data.pages["7"].panels[0].dialogue = [
+  bubble("La reina está ocupada.", "Guardia", 78, 5),
+  bubble("Sí.", "Julián", 60, 25)
+];
+data.pages["7"].panels[1].dialogue = [bubble("Por eso vine.", "Julián", 58, 38)];
+data.pages["7"].panels[2].dialogue = [
+  bubble("El Nadir llevaba horas en alerta.", null, 50, 63, { style: "caption", width: 190 })
+];
+
+data.pages["8"].panels[0].dialogue = [
+  bubble("Perdimos otro puesto en el sector bajo.", "Asistente", 20, 4),
+  bubble("Sellen los accesos. Dupliquen las patrullas.", "Severine", 72, 5)
+];
+data.pages["8"].panels[1].dialogue = [bubble("Traje medialunas.", "Julián", 20, 30)];
+data.pages["8"].panels[2].dialogue = [
+  bubble("No pedí nada.", "Severine", 20, 52),
+  bubble("Ya veo.", "Julián", 75, 54)
+];
+data.pages["8"].panels[3].dialogue = [
+  bubble("Cinco minutos.", "Severine", 78, 77),
+  bubble("Dejá. Ya entendí.", "Julián", 30, 88)
+];
+
+data.pages["9"].panels[0].dialogue = [
+  bubble("Todavía están calientes.", "Julián", 25, 3),
+  bubble("No tengo tiempo para esto.", "Severine", 75, 4)
+];
+data.pages["9"].panels[1].dialogue = [
+  bubble("Claro. Para esto no.", "Julián", 25, 31),
+  bubble("No tenía por qué hablarle así.", "Severine", 75, 37, { style: "thought" })
+];
+data.pages["9"].panels[2].dialogue = [
+  bubble("Siempre hay algo más importante.", "Julián", 50, 56, { style: "thought", width: 170 })
+];
+data.pages["9"].panels[3].dialogue = [
+  bubble("Julián.", "Severine", 25, 77),
+  bubble("Fui una idiota.", "Severine", 75, 84, { style: "thought" })
+];
 
 fs.writeFileSync(dialoguePath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 
