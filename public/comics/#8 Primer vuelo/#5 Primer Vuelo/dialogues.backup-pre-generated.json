@@ -1,0 +1,32 @@
+{
+  "pages": {
+    "78": {
+      "panels": [
+        { "focusY": 0.2, "dialogue": [], "zoomRects": [{ "x": 0, "y": 0, "w": 100, "h": 23 }] },
+        { "focusY": 0.5, "dialogue": [], "zoomRects": [{ "x": 0, "y": 25, "w": 100, "h": 29 }] },
+        { "focusY": 0.65, "dialogue": [], "zoomRects": [{ "x": 0, "y": 50, "w": 100, "h": 31 }] },
+        { "focusY": 0.88, "dialogue": [], "zoomRects": [{ "x": 0, "y": 80, "w": 100, "h": 20 }] }
+      ]
+    },
+    "83": {
+      "panels": [
+        { "focusY": 0.2, "dialogue": [] },
+        { "focusY": 0.5, "dialogue": [] },
+        { "focusY": 0.8, "dialogue": [], "zoomRects": [{ "x": 0, "y": 75, "w": 100, "h": 25 }] }
+      ]
+    }
+  },
+  "audioTracks": [
+    {
+      "id": "track-1785654918199-qalvb",
+      "layer": "music",
+      "src": "/sounds/tracks/Tokyo Drift - Teriyaki Boyz [ MUSIC VIDEO ] HD.mp3",
+      "title": "Teriyaki Boyz [ MUSIC VIDEO ] HD",
+      "artist": "Tokyo Drift",
+      "startPageKey": "78",
+      "startPanelIdx": 2,
+      "stopTrigger": { "type": "pageEnd", "pageKey": "83" },
+      "soundConfig": { "volume": 0.4, "playbackRate": 1, "loop": true, "fadeIn": 3400, "fadeOut": 3400 }
+    }
+  ]
+}
