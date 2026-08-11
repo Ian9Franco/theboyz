@@ -2544,8 +2544,8 @@
           "focusY": 0.145,
           "dialogue": [
             {
-              "text": "Antes de que grites, él entiende todo.",
-              "speaker": "Uandi",
+              "text": "Uandi... corréte.",
+              "speaker": "Mati",
               "size": "small",
               "posX": 25,
               "posY": 3,
@@ -2553,13 +2553,13 @@
               "tailY": 10,
               "tailWidth": 6,
               "tailCurvature": -22,
-              "width": 156,
+              "width": 114,
               "fontSize": 8,
               "borderRadius": 18
             },
             {
-              "text": "¿Qué carajo trajiste a mi casa?",
-              "speaker": "Mati",
+              "text": "Mati, no. Escuchame antes de hacer nada.",
+              "speaker": "Uandi",
               "size": "small",
               "posX": 75,
               "posY": 3,
@@ -2567,12 +2567,12 @@
               "tailY": 10,
               "tailWidth": 6,
               "tailCurvature": 22,
-              "width": 142,
+              "width": 160,
               "fontSize": 8,
               "borderRadius": 18
             },
             {
-              "text": "Peter. Trajo a Peter.",
+              "text": "No quiero pelear.",
               "speaker": "Peter",
               "size": "small",
               "posX": 25,
@@ -2581,7 +2581,7 @@
               "tailY": 17,
               "tailWidth": 6,
               "tailCurvature": -22,
-              "width": 122,
+              "width": 114,
               "fontSize": 8,
               "borderRadius": 18
             }
@@ -2597,7 +2597,50 @@
         },
         {
           "focusY": 0.405,
-          "dialogue": [],
+          "dialogue": [
+            {
+              "text": "Entonces sacalo de mi casa.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 32,
+              "tailX": 35,
+              "tailY": 39,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 134,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Guardá eso. Si entra en pánico, no lo voy a poder calmar.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 75,
+              "posY": 32,
+              "tailX": 65,
+              "tailY": 39,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Él también tiene ojos peligrosos.",
+              "speaker": "Peter",
+              "size": "small",
+              "posX": 25,
+              "posY": 39,
+              "tailX": 35,
+              "tailY": 46,
+              "tailWidth": 6,
+              "tailCurvature": -22,
+              "width": 146,
+              "fontSize": 8,
+              "borderRadius": 18
+            }
+          ],
           "zoomRects": [
             {
               "x": 0,
@@ -2611,7 +2654,7 @@
           "focusY": 0.635,
           "dialogue": [
             {
-              "text": "Está asustado y necesita un lugar para pasar la noche.",
+              "text": "¡Mati, pará! Me siguió porque confió en mí.",
               "speaker": "Uandi",
               "size": "small",
               "posX": 25,
@@ -2625,7 +2668,7 @@
               "borderRadius": 18
             },
             {
-              "text": "Tiene seis brazos y dientes hasta en la frente.",
+              "text": "¿Confió en vos? ¿Eso habla?",
               "speaker": "Mati",
               "size": "small",
               "posX": 75,
@@ -2634,13 +2677,13 @@
               "tailY": 62,
               "tailWidth": 6,
               "tailCurvature": 22,
-              "width": 160,
+              "width": 134,
               "fontSize": 8,
               "borderRadius": 18
             },
             {
-              "text": "Los dientes de la frente son decorativos.",
-              "speaker": "Peter",
+              "text": "Se llama Peter. Entiende cada palabra y está muerto de miedo.",
+              "speaker": "Uandi",
               "size": "small",
               "posX": 25,
               "posY": 62,
@@ -2666,8 +2709,8 @@
           "focusY": 0.875,
           "dialogue": [
             {
-              "text": "No es agresivo.",
-              "speaker": "Uandi",
+              "text": "Tengo hambre y miedo. En ese orden.",
+              "speaker": "Peter",
               "size": "small",
               "posX": 25,
               "posY": 78,
@@ -2675,13 +2718,13 @@
               "tailY": 85,
               "tailWidth": 6,
               "tailCurvature": -22,
-              "width": 110,
+              "width": 150,
               "fontSize": 8,
               "borderRadius": 18
             },
             {
-              "text": "Tengo hambre, no violencia.",
-              "speaker": "Peter",
+              "text": "Tiene seis brazos y dientes hasta en la frente.",
+              "speaker": "Mati",
               "size": "small",
               "posX": 75,
               "posY": 78,
@@ -2689,13 +2732,13 @@
               "tailY": 85,
               "tailWidth": 6,
               "tailCurvature": 22,
-              "width": 134,
+              "width": 160,
               "fontSize": 8,
               "borderRadius": 18
             },
             {
-              "text": "No sé si eso me deja más tranquilo.",
-              "speaker": "Mati",
+              "text": "Los de la frente son decorativos.",
+              "speaker": "Peter",
               "size": "small",
               "posX": 25,
               "posY": 85,
@@ -2703,7 +2746,21 @@
               "tailY": 92,
               "tailWidth": 6,
               "tailCurvature": -22,
-              "width": 150,
+              "width": 146,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "No te pido que confíes. Dame cinco minutos para explicarte.",
+              "speaker": "Uandi",
+              "size": "small",
+              "posX": 75,
+              "posY": 85,
+              "tailX": 65,
+              "tailY": 92,
+              "tailWidth": 6,
+              "tailCurvature": 22,
+              "width": 160,
               "fontSize": 8,
               "borderRadius": 18
             }
@@ -6640,7 +6697,7 @@
           "focusY": 0.375,
           "dialogue": [
             {
-              "text": "¡¿Qué carajo es eso?!",
+              "text": "Mati, corréte.",
               "speaker": "Julián",
               "size": "small",
               "posX": 25,
@@ -6649,12 +6706,12 @@
               "tailY": 37,
               "tailWidth": 6,
               "tailCurvature": -22,
-              "width": 122,
+              "width": 108,
               "fontSize": 8,
               "borderRadius": 18
             },
             {
-              "text": "Me llamo Peter. Y “eso” escucha perfectamente.",
+              "text": "Yo no hice nada.",
               "speaker": "Peter",
               "size": "small",
               "posX": 75,
@@ -6663,27 +6720,27 @@
               "tailY": 37,
               "tailWidth": 6,
               "tailCurvature": 22,
+              "width": 112,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "Julián, bajá la mano. Se llama Peter y está con nosotros.",
+              "speaker": "Mati",
+              "size": "small",
+              "posX": 25,
+              "posY": 37,
+              "tailX": 35,
+              "tailY": 44,
+              "tailWidth": 6,
+              "tailCurvature": -22,
               "width": 160,
               "fontSize": 8,
               "borderRadius": 18
             },
             {
-              "text": "Perdón. Hola, Peter.",
-              "speaker": "Julián",
-              "size": "small",
-              "posX": 25,
-              "posY": 37,
-              "tailX": 35,
-              "tailY": 44,
-              "tailWidth": 6,
-              "tailCurvature": -22,
-              "width": 120,
-              "fontSize": 8,
-              "borderRadius": 18
-            },
-            {
-              "text": "Hola. Gritás menos que Mati.",
-              "speaker": "Peter",
+              "text": "Es pana. Después te explicamos la cantidad de brazos.",
+              "speaker": "Uandi",
               "size": "small",
               "posX": 75,
               "posY": 37,
@@ -6691,7 +6748,7 @@
               "tailY": 44,
               "tailWidth": 6,
               "tailCurvature": 22,
-              "width": 136,
+              "width": 160,
               "fontSize": 8,
               "borderRadius": 18
             }
@@ -6746,6 +6803,20 @@
               "tailY": 64,
               "tailWidth": 6,
               "tailCurvature": -22,
+              "width": 160,
+              "fontSize": 8,
+              "borderRadius": 18
+            },
+            {
+              "text": "¿Ya puedo dejar de tenerle miedo al de las cartas?",
+              "speaker": "Peter",
+              "size": "small",
+              "posX": 75,
+              "posY": 58,
+              "tailX": 65,
+              "tailY": 64,
+              "tailWidth": 6,
+              "tailCurvature": 22,
               "width": 160,
               "fontSize": 8,
               "borderRadius": 18

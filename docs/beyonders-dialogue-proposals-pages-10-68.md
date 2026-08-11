@@ -143,15 +143,19 @@ Convención: `Vn` indica viñeta según orden de lectura. Las viñetas omitidas 
 
 ### Página 20
 
-- V1 — Uandi: «Antes de que grites, él entiende todo.»
-- V1 — Mati: «¿Qué carajo trajiste a mi casa?»
-- V1 — Peter: «Peter. Trajo a Peter.»
-- V3 — Uandi: «Está asustado y necesita un lugar para pasar la noche.»
-- V3 — Mati: «Tiene seis brazos y dientes hasta en la frente.»
-- V3 — Peter: «Los dientes de la frente son decorativos.»
-- V4 — Uandi: «No es agresivo.»
-- V4 — Peter: «Tengo hambre, no violencia.»
-- V4 — Mati: «No sé si eso me deja más tranquilo.»
+- V1 — Mati: «Uandi... corréte.»
+- V1 — Uandi: «Mati, no. Escuchame antes de hacer nada.»
+- V1 — Peter: «No quiero pelear.»
+- V2 — Mati, sacándose los lentes: «Entonces sacalo de mi casa.»
+- V2 — Uandi: «Guardá eso. Si entra en pánico, no lo voy a poder calmar.»
+- V2 — Peter: «Él también tiene ojos peligrosos.»
+- V3 — Uandi: «¡Mati, pará! Me siguió porque confió en mí.»
+- V3 — Mati: «¿Confió en vos? ¿Eso habla?»
+- V3 — Uandi: «Se llama Peter. Entiende cada palabra y está muerto de miedo.»
+- V4 — Peter: «Tengo hambre y miedo. En ese orden.»
+- V4 — Mati: «Tiene seis brazos y dientes hasta en la frente.»
+- V4 — Peter: «Los de la frente son decorativos.»
+- V4 — Uandi: «No te pido que confíes. Dame cinco minutos para explicarte.»
 - Identificación: Mati, Uandi y Peter alta.
 
 ### Página 21
@@ -434,13 +438,14 @@ Convención: `Vn` indica viñeta según orden de lectura. Las viñetas omitidas 
 ### Página 45
 
 - V2 — Mati: «Está abierto. Pasá.»
-- V3 — Julián: «¡¿Qué carajo es eso?!»
-- V3 — Peter: «Me llamo Peter. Y “eso” escucha perfectamente.»
-- V4 — Julián: «Perdón. Hola, Peter.»
-- V4 — Peter: «Hola. Gritás menos que Mati.»
+- V3 — Julián, preparando una carta: «Mati, corréte.»
+- V3 — Peter: «Yo no hice nada.»
+- V4 — Mati: «Julián, bajá la mano. Se llama Peter y está con nosotros.»
+- V4 — Uandi: «Es pana. Después te explicamos la cantidad de brazos.»
 - V5 — Julián: «Voy a aceptar la misión.»
 - V5 — Mati: «Yo también. No porque confíe en Parker.»
 - V5 — Julián: «Yo tampoco. Pero si el meteorito es real, no podemos mirar para otro lado.»
+- V5 — Peter: «¿Ya puedo dejar de tenerle miedo al de las cartas?»
 - V7 — Peter: «¿Podemos salvar el mundo después de esta partida?»
 - V7 — Uandi: «Vos te quedás conmigo.»
 - V7 — Peter: «Excelente. Mati pierde bajo presión.»
