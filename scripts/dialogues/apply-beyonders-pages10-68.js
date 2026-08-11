@@ -6,6 +6,7 @@ const proposalPath = path.join(root, "docs/beyonders-dialogue-proposals-pages-10
 const dialoguePath = path.join(root, "public/comics/#10 Más allá/#1 Beyonders/dialogues.json");
 
 const rows = {
+  7:[0,35,60,100],8:[0,27,49,74,100],9:[0,28,52,74,100],
   10:[0,40,67,100],11:[0,29,57,100],12:[0,28,48,67,83,100],13:[0,28,50,70,84,100],
   14:[0,24,55,76,100],15:[0,25,53,76,100],16:[0,29,57,79,100],17:[0,27,47,64,79,100],
   18:[0,27,41,60,78,100],19:[0,27,45,62,80,100],20:[0,29,52,75,100],21:[0,29,50,75,100],
@@ -24,6 +25,7 @@ const rows = {
 };
 
 const panelToRow = {
+  7:{1:0,2:1,3:2},8:{1:0,2:1,3:2,4:3},9:{1:0,2:1,3:2,4:3},
   10:{1:0,2:0,3:1,4:2},11:{1:0,2:1,3:1,4:2,5:2},12:{1:0,2:1,4:3},13:{1:0,2:1},14:{1:0,2:1,3:2},15:{2:1},16:{3:1},
   17:{1:0,3:2,4:3,5:4},18:{1:0,4:3,5:4},19:{1:0},20:{1:0,3:2,4:3},21:{1:0,3:2,4:3},
   22:{2:0,4:1},23:{2:1,3:2,4:3},24:{2:0,3:1,4:2,5:2},25:{2:1,4:3},26:{2:1,3:1,4:2},
@@ -47,7 +49,7 @@ function parseProposals(markdown) {
     const heading = line.match(/^### Página (\d+)$/);
     if (heading) {
       page = Number(heading[1]);
-      if (page >= 10 && page <= 68) proposals.set(page, []);
+      if (page >= 7 && page <= 68) proposals.set(page, []);
       continue;
     }
     if (!page || !proposals.has(page)) continue;
@@ -77,7 +79,7 @@ const markdown = fs.readFileSync(proposalPath, "utf8");
 const proposals = parseProposals(markdown);
 const data = JSON.parse(fs.readFileSync(dialoguePath, "utf8"));
 
-for (let page = 10; page <= 68; page += 1) {
+for (let page = 7; page <= 68; page += 1) {
   const bounds = rows[page];
   if (!bounds) throw new Error(`Faltan límites para página ${page}`);
 
@@ -129,69 +131,8 @@ for (let page = 10; page <= 68; page += 1) {
   data.pages[String(page)] = { panels };
 }
 
-function bubble(text, speaker, posX, posY, options = {}) {
-  const thoughtOrCaption = options.style === "thought" || options.style === "caption";
-  return {
-    text,
-    ...(speaker ? { speaker } : {}),
-    ...(options.style ? { style: options.style } : {}),
-    size: "small",
-    posX,
-    posY,
-    ...(thoughtOrCaption ? { tail: options.style === "caption" ? "none" : undefined } : {
-      tailX: posX <= 50 ? posX + 10 : posX - 10,
-      tailY: Math.min(99, posY + 7)
-    }),
-    tailWidth: 6,
-    tailCurvature: posX <= 50 ? -22 : 22,
-    width: options.width ?? clamp(80 + text.length * 2, 100, 180),
-    fontSize: 8,
-    borderRadius: 18
-  };
-}
-
-// Revisión autoral: crisis del Nadir, medialunas y conflicto Julián/Severine.
-data.pages["7"].panels[0].dialogue = [
-  bubble("La reina está ocupada.", "Guardia", 78, 5),
-  bubble("Sí.", "Julián", 60, 25)
-];
-data.pages["7"].panels[1].dialogue = [bubble("Por eso vine.", "Julián", 58, 38)];
-data.pages["7"].panels[2].dialogue = [
-  bubble("El Nadir llevaba horas en alerta.", null, 50, 63, { style: "caption", width: 190 })
-];
-
-data.pages["8"].panels[0].dialogue = [
-  bubble("Perdimos otro puesto en el sector bajo.", "Asistente", 20, 4),
-  bubble("Sellen los accesos. Dupliquen las patrullas.", "Severine", 72, 5)
-];
-data.pages["8"].panels[1].dialogue = [bubble("Traje medialunas.", "Julián", 20, 30)];
-data.pages["8"].panels[2].dialogue = [
-  bubble("No pedí nada.", "Severine", 20, 52),
-  bubble("Ya veo.", "Julián", 75, 54)
-];
-data.pages["8"].panels[3].dialogue = [
-  bubble("Cinco minutos.", "Severine", 78, 77),
-  bubble("Dejá. Ya entendí.", "Julián", 30, 88)
-];
-
-data.pages["9"].panels[0].dialogue = [
-  bubble("Todavía están calientes.", "Julián", 25, 3),
-  bubble("No tengo tiempo para esto.", "Severine", 75, 4)
-];
-data.pages["9"].panels[1].dialogue = [
-  bubble("Claro. Para esto no.", "Julián", 25, 31),
-  bubble("No tenía por qué hablarle así.", "Severine", 75, 37, { style: "thought" })
-];
-data.pages["9"].panels[2].dialogue = [
-  bubble("Siempre hay algo más importante.", "Julián", 50, 56, { style: "thought", width: 170 })
-];
-data.pages["9"].panels[3].dialogue = [
-  bubble("Julián.", "Severine", 25, 77),
-  bubble("Fui una idiota.", "Severine", 75, 84, { style: "thought" })
-];
-
 fs.writeFileSync(dialoguePath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 
 const dialogueCount = [...proposals.values()].reduce((sum, entries) => sum + entries.length, 0);
 const panelCount = Object.values(rows).reduce((sum, bounds) => sum + bounds.length - 1, 0);
-console.log(`Aplicadas páginas 10–68: ${dialogueCount} diálogos, ${panelCount} máscaras.`);
+console.log(`Aplicadas páginas 7–68: ${dialogueCount} diálogos, ${panelCount} máscaras.`);
