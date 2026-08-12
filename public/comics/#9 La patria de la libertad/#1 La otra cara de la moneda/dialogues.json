@@ -1475,6 +1475,25 @@
         "fadeIn": 1000,
         "fadeOut": 1000
       }
+    },
+    {
+      "id": "track-1786509038486-hlen8",
+      "layer": "music",
+      "src": "/sounds/sfx/lluvia_truenos.mp3",
+      "title": "lluvia_truenos",
+      "startPageKey": "1",
+      "startPanelIdx": 0,
+      "stopTrigger": {
+        "type": "pageEnd",
+        "pageKey": "5"
+      },
+      "soundConfig": {
+        "volume": 0.45,
+        "playbackRate": 1,
+        "loop": true,
+        "fadeIn": 1000,
+        "fadeOut": 1000
+      }
     }
   ]
 }
