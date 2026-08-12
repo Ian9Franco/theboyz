@@ -448,7 +448,7 @@
           ]
         },
         {
-          "focusY": 0.665,
+          "focusY": 0.8,
           "dialogue": [
             { "text": "bienvenido,  forastero", "speaker": "Völvo", "size": "small", "posX": 95, "posY": 80, "tailX": 70, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 141.8, "fontSize": 8, "borderRadius": 18 },
             { "text": "soy Boush.  El Tinker.", "speaker": "Mecánico alienígena", "size": "small", "posX": 95, "posY": 70, "tailX": 75, "tailY": 75, "tailWidth": 6, "tailCurvature": 22, "width": 133.3, "fontSize": 8, "borderRadius": 18 },
@@ -456,14 +456,7 @@
             { "text": "dejame revisarlo entonces", "speaker": "Völvo", "size": "small", "posX": 45, "posY": 65, "tailX": 60, "tailY": 80, "tailWidth": 6, "tailCurvature": 22, "width": 128.2, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
-            { "x": 0, "y": 57, "w": 100, "h": 19 }
-          ]
-        },
-        {
-          "focusY": 0.88,
-          "dialogue": [],
-          "zoomRects": [
-            { "x": 0, "y": 76, "w": 100, "h": 24 }
+            { "x": 0, "y": 65, "w": 100, "h": 35 }
           ]
         }
       ]
