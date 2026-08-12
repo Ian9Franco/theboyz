@@ -1,5 +1,10 @@
 {
   "title": "La Otra Cara De La Moneda",
   "number": 1,
-  "status": "draft"
+  "status": "published",
+  "date": "12/08/2026",
+  "estimatedTime": "10 días",
+  "nuevo": true,
+  "releaseDate": "12/08/2026",
+  "portada": "Portada.webp"
 }
