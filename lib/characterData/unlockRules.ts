@@ -79,5 +79,7 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   ren: ['el mecanico. la piloto, el contrabandista y el robot', 'el-mecanico-la-piloto-el-contrabandista-y-el-robot', 'el mecanico'],
   oni: [],
   ar_cnido_mutante: [],
-  tinker: []
+  tinker: [],
+  alienigenas_gorrnek: [],
+  piratas_espaciales: []
 };

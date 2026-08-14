@@ -319,8 +319,57 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "julian": [
     {
+      "name": "Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/alt_Sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Bandit Blueclose Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/Bandit_blueclose_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Bandit Closemask Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/Bandit_closemask_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Bandit Close Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/Bandit_close_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Bandit Sheet   Copia",
+      "path": "/personajes/GUIAS/boyz/BANDIT/bandit_sheet - copia.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
       "name": "Bandit Sheet",
       "path": "/personajes/GUIAS/boyz/BANDIT/bandit_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Bandit Suits Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/Bandit_suits_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Bandit Suit Sheet",
+      "path": "/personajes/GUIAS/boyz/BANDIT/Bandit_suit_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -400,8 +449,8 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   ],
   "mati": [
     {
-      "name": "Farsight Alt Sheet",
-      "path": "/personajes/GUIAS/boyz/FARSIGHT/farsight_ALT_sheet.webp",
+      "name": "Farsight Close Sheet",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/farsight_close_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -409,6 +458,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Farsight Sheet",
       "path": "/personajes/GUIAS/boyz/FARSIGHT/farsight_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Farsight Suits Sheet",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/farsight_suits_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -444,6 +500,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Alt Sheet",
       "path": "/personajes/GUIAS/boyz/FARSIGHT/old/alt_sheet.webp",
+      "section": "old",
+      "sectionLabel": "Old",
+      "isAlt": true
+    },
+    {
+      "name": "Farsight Alt Sheet",
+      "path": "/personajes/GUIAS/boyz/FARSIGHT/old/farsight_ALT_sheet.webp",
       "section": "old",
       "sectionLabel": "Old",
       "isAlt": true
@@ -808,6 +871,13 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     },
     {
+      "name": "Mati Astronauta Old Sheet",
+      "path": "/personajes/GUIAS/matis/Mati Astronauta/Mati_Astronauta_old_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
       "name": "Mati Astronauta Sheet",
       "path": "/personajes/GUIAS/matis/Mati Astronauta/Mati_Astronauta_sheet.webp",
       "section": "base",
@@ -883,6 +953,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Mati Wardens Sheet",
       "path": "/personajes/GUIAS/matis/Mati Warden/Mati Wardens_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "alienigenas_gorrnek": [
+    {
+      "name": "Alienigenas Nhalos Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Alienigenas gorrnek/Alienigenas_Nhalos_sheet.jpeg",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -983,6 +1062,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
+  "jade": [
+    {
+      "name": "Whatsapp Image 2026 06 29 At 11.42.04 (4) Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Jade/WhatsApp Image 2026-06-29 at 11.42.04 (4)_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
   "john_wick": [
     {
       "name": "John Wick Sheet",
@@ -1039,6 +1127,15 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Mutantes Sheet",
       "path": "/personajes/GUIAS/Secundarios/Mutantes/Mutantes_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    }
+  ],
+  "piratas_espaciales": [
+    {
+      "name": "Piratas Espaciales Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Piratas espaciales/Piratas espaciales_sheet.jpeg",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false

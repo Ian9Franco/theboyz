@@ -16,6 +16,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "fichas": [
     ]
   },
+  "alienigenas_gorrnek": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
   "aliens": {
     "portada": null,
     "portadas": [
@@ -496,6 +504,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "ficha": "/personajes/Fichas/antagonistas/Phobos/Phobos_ficha.webp",
     "fichas": [
       "/personajes/Fichas/antagonistas/Phobos/Phobos_ficha.webp",
+    ]
+  },
+  "piratas_espaciales": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
     ]
   },
   "queen_of_pain": {
