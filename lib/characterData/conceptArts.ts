@@ -961,7 +961,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   "alienigenas_gorrnek": [
     {
       "name": "Alienigenas Nhalos Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Alienigenas gorrnek/Alienigenas_Nhalos_sheet.jpeg",
+      "path": "/personajes/GUIAS/Secundarios/Alienigenas gorrnek/Alienigenas_Nhalos_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -1135,7 +1135,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
   "piratas_espaciales": [
     {
       "name": "Piratas Espaciales Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Piratas espaciales/Piratas espaciales_sheet.jpeg",
+      "path": "/personajes/GUIAS/Secundarios/Piratas espaciales/Piratas espaciales_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false

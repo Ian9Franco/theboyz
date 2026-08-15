@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "documents": [],
+  "pages": {
+    "1": {
+      "prompt": "aca explican demasiado.\ndeberia ser una conversacion/discucion chistosa sobre la carrera.",
+      "characters": [],
+      "continuityPages": 0
+    },
+    "2": {
+      "prompt": "aca, la conversacion sobre la carrrera produndiza, pero tambien el plan por detras, que es la infiltracion de dusk. Jaz tambien colabora con la planeacion.\nel plan consiste en que la carrera funcione como distraccion, la condutora es brooke. daichi y ian son los tecnicos. dusk va a coordinar para que la carrera pueda efectivamente funcionar como distraccion y poner fin a los kurogane.",
+      "characters": [],
+      "continuityPages": 1
+    },
+    "4": {
+      "prompt": "aca, recien se preguntan donde esta re, que no lo ven desde ayer.\nnotan que la camioneta salio, y hay un rastreo. proceden a ir a buscarlo",
+      "characters": [],
+      "continuityPages": 2
+    },
+    "5": {
+      "prompt": "aca no debemos hacer que oni tenga una copia o documento que envio. \nren robo algo, y hace tiempo es objetivo del clan, oni vene a cobrar. oni no hablam ucho. es una entidad implacable. y viene a matarlo a ren",
+      "characters": [],
+      "continuityPages": 1
+    },
+    "6": {
+      "prompt": "Ren intenta escapar. Oni no lo permite",
+      "characters": [
+        "Ren y Oni"
+      ],
+      "continuityPages": 2
+    },
+    "7": {
+      "prompt": "aca, oni termina d matar a ren. nota el telefono en el suelo. tenia rastreo.",
+      "characters": [],
+      "continuityPages": 2
+    },
+    "8": {
+      "prompt": "aca oni decide irse. ignora el rastreador.\nlos dialogos estan mal por que oni busca un cuerpo qeu acaba de asesinar, no tiene sentido.",
+      "characters": [],
+      "continuityPages": 2
+    },
+    "9": {
+      "prompt": "los muchachos van a buscar a ren al otro dia, encuentran la camioneta abierta. mal presagio",
+      "characters": [],
+      "continuityPages": 2
+    },
+    "10": {
+      "prompt": "revisan la camioneta.\nllaman a ren.\nno contesta nadie.\ntemrinan encontrando el cuerpo fallecido de ren.",
+      "characters": [],
+      "continuityPages": 2
+    },
+    "11": {
+      "prompt": "drama por la muerte de ren. no sabenn quep paso. \nbyte nota algo sospechoso",
+      "characters": [],
+      "continuityPages": 2
+    }
+  }
+}

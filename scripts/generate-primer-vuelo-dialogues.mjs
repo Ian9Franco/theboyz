@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { applyPrimerVueloRevision } from "./primer-vuelo-dialogue-revision.mjs";
 
 const chapterDir = path.join(process.cwd(), "public", "comics", "#8 Primer vuelo", "#5 Primer Vuelo");
 const outputPath = path.join(chapterDir, "dialogues.json");
@@ -474,5 +475,6 @@ const pages = {
   ]}
 };
 
-fs.writeFileSync(outputPath, `${JSON.stringify({ pages, audioTracks: previous.audioTracks ?? [] }, null, 2)}\n`, "utf8");
-console.log(`Generated ${Object.keys(pages).length} pages at ${outputPath}`);
+const revised = applyPrimerVueloRevision({ pages, audioTracks: previous.audioTracks ?? [] });
+fs.writeFileSync(outputPath, `${JSON.stringify(revised, null, 2)}\n`, "utf8");
+console.log(`Generated ${Object.keys(revised.pages).length} pages at ${outputPath}`);
