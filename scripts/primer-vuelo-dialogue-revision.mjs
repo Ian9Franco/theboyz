@@ -84,58 +84,79 @@ const dialogueByPage = {
   ],
   "5": [
     [
-      line("Ren", "Sabía que seguían enojados.", "normal", 24, 10, 30, 18),
-      line("ONI", "Robaste al clan.", "normal", 74, 20, 70, 27),
+      line("Ren", "No debería haber nadie acá.", "thought", 70, 9, 30, 18),
     ],
     [
-      line("Ren", "Hace bastante. Pensé que con el tiempo iba a pasar de traición a anécdota.", "normal", 27, 45, 33, 53),
-      line("ONI", "No.", "normal", 74, 60, 70, 65),
+      line("Ren", "ONI…", "normal", 25, 30, 31, 38),
+      line("ONI", "Ren.", "normal", 72, 41, 68, 47),
     ],
     [
-      line("Ren", "Sí, bueno. Vos nunca fuiste de cerrar ciclos.", "normal", 27, 75, 33, 83),
-      line("ONI", "Estás muerto.", "normal", 74, 88, 70, 94),
-      line("Ren", "Eso es bastante definitivo.", "normal", 28, 96, 34, 99),
+      line("Ren", "Eso fue hace años.", "normal", 23, 56, 29, 64),
+    ],
+    [
+      line("ONI", "Kurogane recuerda.", "normal", 75, 55, 71, 63),
+      line("SFX", "KRAK", "sfx", 74, 69),
+    ],
+    [
+      line("Ren", "No vino a recuperar nada.", "thought", 28, 81, 34, 87),
+      line("Ren", "Vino a cobrar.", "thought", 70, 92, 65, 96),
     ],
   ],
   "6": [
     [
-      line("Ren", "Puerta bloqueada. Escalera. Salida de servicio.", "thought", 27, 10, 33, 18),
-      line("ONI", "Corré.", "normal", 73, 24, 69, 30),
+      line("Ren", "Pasarela norte. Escalera. Calle.", "thought", 72, 10, 31, 19),
     ],
     [
-      line("Ren", "Era el plan.", "normal", 27, 43, 33, 50),
-      line("Ren", "Mierda.", "normal", 27, 61, 33, 66),
+      line("SFX", "CLINK", "sfx", 40, 38),
+      line("Ren", "No mires abajo.", "thought", 23, 49, 29, 53),
     ],
     [
-      line("Ren", "Podríamos fingir que no me viste.", "normal", 28, 77, 34, 84),
-      line("ONI", "No.", "normal", 73, 90, 69, 95),
-      line("Ren", "Tenía que intentarlo.", "normal", 29, 96, 35, 99),
+      line("Ren", "¡Soltame!", "scream", 62, 36, 58, 45),
+      line("ONI", "No.", "normal", 83, 49, 79, 53),
+    ],
+    [
+      line("Ren", "No vas a sacarme nada.", "normal", 25, 61, 31, 69),
+      line("ONI", "No vine a preguntar.", "normal", 73, 72, 69, 78),
+    ],
+    [
+      line("SFX", "THK", "sfx", 24, 85),
+      line("Ren", "No tengo que ganarle.", "thought", 40, 93, 45, 97),
+    ],
+    [
+      line("Ren", "Sólo tengo que llegar a la salida.", "thought", 76, 90, 70, 96),
     ],
   ],
   "7": [
     [
-      line("Ren", "Esperá...", "whisper", 27, 11, 33, 18),
-      line("ONI", "No.", "normal", 73, 25, 69, 31),
+      line("Ren", "La puerta.", "thought", 71, 9, 65, 16),
+      line("Ren", "Llegá a la puerta.", "thought", 70, 20, 64, 25),
     ],
     [
-      line("Teléfono", "RASTREO ACTIVO", "electronic", 50, 52, 50, 58),
-      line("Teléfono", "SEÑAL COMPARTIDA", "electronic", 50, 63, 50, 68),
+      line("Ren", "Cinco metros.", "thought", 24, 36, 30, 42),
+    ],
+    [],
+    [
+      line("SFX", "TCHK", "sfx", 25, 70),
+      line("SFX", "TCHK", "sfx", 50, 73),
+      line("SFX", "TCHK", "sfx", 75, 70),
     ],
     [
-      line("Narrador", "ONI ve el punto rojo.", "caption", 50, 78),
-      line("Narrador", "Entiende que alguien viene.", "caption", 50, 90),
+      line("Ren", "La salida estaba ahí.", "thought", 70, 89, 64, 95),
     ],
   ],
   "8": [
     [
-      line("Narrador", "ONI revisa lo que Ren llevaba.", "caption", 50, 10),
-      line("Dispositivo", "DATOS IRRECUPERABLES", "electronic", 28, 37, 33, 43),
+      line("Ren", "Todavía… puedo…", "whisper", 25, 13, 31, 21),
+      line("ONI", "No.", "normal", 74, 24, 70, 29),
     ],
     [
-      line("Narrador", "El rastreador sigue emitiendo.", "caption", 50, 59),
-      line("Narrador", "ONI decide dejarlo.", "caption", 50, 70),
-      line("ONI", "Que vengan.", "normal", 27, 80, 33, 86),
-      line("Narrador", "Debajo del piso, otra señal espera.", "caption", 50, 94),
+      line("Ren", "Ellos no tienen nada que ver.", "normal", 66, 43, 61, 49),
+    ],
+    [
+      line("ONI", "Ahora sí.", "normal", 71, 62, 67, 69),
+    ],
+    [
+      line("Dispositivo", "RASTREO ACTIVO", "electronic", 79, 94, 84, 97),
     ],
   ],
   "9": [
@@ -204,8 +225,75 @@ const dialogueByPage = {
   ],
 };
 
+const panelLayouts = {
+  "5": [
+    { focusY: 0.125, zoomRects: [{ x: 0, y: 0, w: 100, h: 25 }] },
+    { focusY: 0.37, zoomRects: [{ x: 0, y: 25, w: 100, h: 24 }] },
+    { focusY: 0.625, zoomRects: [{ x: 0, y: 49, w: 53, h: 27 }] },
+    { focusY: 0.625, zoomRects: [{ x: 48, y: 49, w: 52, h: 27 }] },
+    { focusY: 0.88, zoomRects: [{ x: 0, y: 76, w: 100, h: 24 }] },
+  ],
+  "6": [
+    { focusY: 0.145, zoomRects: [{ x: 0, y: 0, w: 100, h: 29 }] },
+    { focusY: 0.415, zoomRects: [{ x: 0, y: 29, w: 50, h: 25 }] },
+    { focusY: 0.415, zoomRects: [{ x: 45, y: 29, w: 55, h: 25 }] },
+    { focusY: 0.67, zoomRects: [{ x: 0, y: 54, w: 100, h: 26 }] },
+    { focusY: 0.9, zoomRects: [{ x: 0, y: 80, w: 55, h: 20 }] },
+    { focusY: 0.9, zoomRects: [{ x: 50, y: 80, w: 50, h: 20 }] },
+  ],
+  "7": [
+    { focusY: 0.13, zoomRects: [{ x: 0, y: 0, w: 100, h: 26 }] },
+    { focusY: 0.36, zoomRects: [{ x: 0, y: 26, w: 100, h: 20 }] },
+    { focusY: 0.54, zoomRects: [{ x: 0, y: 46, w: 100, h: 16 }] },
+    { focusY: 0.7, zoomRects: [{ x: 0, y: 62, w: 100, h: 16 }] },
+    { focusY: 0.89, zoomRects: [{ x: 0, y: 78, w: 100, h: 22 }] },
+  ],
+  "8": [
+    { focusY: 0.145, zoomRects: [{ x: 0, y: 0, w: 100, h: 29 }] },
+    { focusY: 0.39, zoomRects: [{ x: 0, y: 29, w: 100, h: 20 }] },
+    { focusY: 0.6, zoomRects: [{ x: 0, y: 49, w: 100, h: 22 }] },
+    { focusY: 0.855, zoomRects: [{ x: 0, y: 71, w: 100, h: 29 }] },
+  ],
+};
+
+const insertedPageLayouts = {
+  "24": [
+    { focusY: 0.18, zoomRects: [{ x: 0, y: 0, w: 57, h: 36 }] },
+    { focusY: 0.18, zoomRects: [{ x: 52, y: 0, w: 48, h: 36 }] },
+    { focusY: 0.48, zoomRects: [{ x: 0, y: 36, w: 100, h: 24 }] },
+    { focusY: 0.69, zoomRects: [{ x: 0, y: 60, w: 100, h: 18 }] },
+    { focusY: 0.89, zoomRects: [{ x: 0, y: 78, w: 50, h: 22 }] },
+    { focusY: 0.89, zoomRects: [{ x: 48, y: 78, w: 52, h: 22 }] },
+  ],
+  "28": [
+    { focusY: 0.135, zoomRects: [{ x: 0, y: 0, w: 100, h: 27 }] },
+    { focusY: 0.385, zoomRects: [{ x: 0, y: 27, w: 100, h: 23 }] },
+    { focusY: 0.555, zoomRects: [{ x: 0, y: 50, w: 100, h: 11 }] },
+    { focusY: 0.695, zoomRects: [{ x: 0, y: 61, w: 100, h: 17 }] },
+    { focusY: 0.89, zoomRects: [{ x: 0, y: 78, w: 100, h: 22 }] },
+  ],
+};
+
+const duskOniInsertedPageLayouts = {
+  "40": [
+    { focusY: 0.13, zoomRects: [{ x: 0, y: 0, w: 100, h: 26 }] },
+    { focusY: 0.33, zoomRects: [{ x: 0, y: 23, w: 52, h: 22 }] },
+    { focusY: 0.33, zoomRects: [{ x: 48, y: 23, w: 52, h: 22 }] },
+    { focusY: 0.56, zoomRects: [{ x: 0, y: 43, w: 100, h: 25 }] },
+    { focusY: 0.84, zoomRects: [{ x: 0, y: 66, w: 100, h: 34 }] },
+  ],
+  "41": [
+    { focusY: 0.125, zoomRects: [{ x: 0, y: 0, w: 100, h: 25 }] },
+    { focusY: 0.375, zoomRects: [{ x: 0, y: 25, w: 100, h: 25 }] },
+    { focusY: 0.625, zoomRects: [{ x: 0, y: 50, w: 100, h: 25 }] },
+    { focusY: 0.875, zoomRects: [{ x: 0, y: 75, w: 100, h: 25 }] },
+  ],
+};
+
 const renumberPages = (pages) => {
-  if (!pages?.["95"]) return pages;
+  if (!pages?.["95"] || pages?.["5"]?.panels?.length === 5) {
+    return { pages, removed: false };
+  }
 
   const result = {};
   for (const [pageKey, page] of Object.entries(pages)) {
@@ -213,28 +301,174 @@ const renumberPages = (pages) => {
     if (pageNumber === 11 || pageNumber === 12) continue;
     result[String(pageNumber >= 13 ? pageNumber - 2 : pageNumber)] = page;
   }
+  return { pages: result, removed: true };
+};
+
+const insertRacePages = (pages) => {
+  const insertsAlreadyPresent = pages?.["24"]?.panels?.length === 6
+    && pages?.["28"]?.panels?.length === 5;
+  if (insertsAlreadyPresent) return { pages, inserted: false };
+
+  const result = {};
+  for (const [pageKey, page] of Object.entries(pages)) {
+    const pageNumber = Number(pageKey);
+    const shifted = pageNumber >= 27 ? pageNumber + 2 : pageNumber >= 24 ? pageNumber + 1 : pageNumber;
+    result[String(shifted)] = page;
+  }
+
+  for (const [pageKey, layout] of Object.entries(insertedPageLayouts)) {
+    result[pageKey] = {
+      panels: layout.map((panel) => ({ ...panel, dialogue: [] })),
+    };
+  }
+
+  return { pages: result, inserted: true };
+};
+
+const removeRacePage34 = (pages) => {
+  if (!pages?.["95"]) return { pages, removed: false };
+
+  const result = {};
+  for (const [pageKey, page] of Object.entries(pages)) {
+    const pageNumber = Number(pageKey);
+    if (pageNumber === 34) continue;
+    result[String(pageNumber >= 35 ? pageNumber - 1 : pageNumber)] = page;
+  }
+
+  return { pages: result, removed: true };
+};
+
+const removeRacePages34And35 = (pages) => {
+  if (!pages?.["94"]) return { pages, removed: false };
+
+  const result = {};
+  for (const [pageKey, page] of Object.entries(pages)) {
+    const pageNumber = Number(pageKey);
+    if (pageNumber === 34 || pageNumber === 35) continue;
+    result[String(pageNumber >= 36 ? pageNumber - 2 : pageNumber)] = page;
+  }
+
+  return { pages: result, removed: true };
+};
+
+const shiftAudioAfterRemovingPages34And35 = (tracks) => {
+  for (const track of tracks ?? []) {
+    const startPage = Number(track.startPageKey);
+    if (Number.isInteger(startPage) && startPage >= 36) {
+      track.startPageKey = String(startPage - 2);
+    }
+    const stopPage = Number(track.stopTrigger?.pageKey);
+    if (Number.isInteger(stopPage) && stopPage >= 36) {
+      track.stopTrigger.pageKey = String(stopPage - 2);
+    }
+  }
+};
+
+const insertDuskOniPagesAfter39 = (pages) => {
+  const result = {};
+  for (const [pageKey, page] of Object.entries(pages)) {
+    const pageNumber = Number(pageKey);
+    result[String(pageNumber >= 40 ? pageNumber + 2 : pageNumber)] = page;
+  }
+
+  for (const [pageKey, layout] of Object.entries(duskOniInsertedPageLayouts)) {
+    result[pageKey] = {
+      panels: layout.map((panel) => ({ ...panel, dialogue: [] })),
+    };
+  }
+
   return result;
 };
 
-export const applyPrimerVueloRevision = (document) => {
-  const revised = structuredClone(document);
-  revised.pages = renumberPages(revised.pages ?? {});
-
-  for (const [pageKey, panels] of Object.entries(dialogueByPage)) {
-    const page = revised.pages[pageKey];
-    if (!page) throw new Error(`Missing Primer Vuelo page ${pageKey}`);
-    if (page.panels.length !== panels.length) {
-      throw new Error(`Panel mismatch on Primer Vuelo page ${pageKey}: ${page.panels.length} != ${panels.length}`);
+const shiftAudioAfterInsertingPagesAfter39 = (tracks) => {
+  for (const track of tracks ?? []) {
+    const startPage = Number(track.startPageKey);
+    if (Number.isInteger(startPage) && startPage >= 40) {
+      track.startPageKey = String(startPage + 2);
     }
-    page.panels.forEach((panel, index) => {
-      panel.dialogue = panels[index];
-    });
+    const stopPage = Number(track.stopTrigger?.pageKey);
+    if (Number.isInteger(stopPage) && stopPage >= 40) {
+      track.stopTrigger.pageKey = String(stopPage + 2);
+    }
+  }
+};
+
+export const applyPrimerVueloRevision = (document) => {
+  if (document.primerVueloRevision === 6) return structuredClone(document);
+
+  if (document.primerVueloRevision === 5) {
+    const revised = structuredClone(document);
+    revised.pages = insertDuskOniPagesAfter39(revised.pages ?? {});
+    shiftAudioAfterInsertingPagesAfter39(revised.audioTracks);
+    revised.primerVueloRevision = 6;
+    return revised;
+  }
+
+  if (document.primerVueloRevision === 4) {
+    const revised = structuredClone(document);
+    const finalRemoval = removeRacePages34And35(revised.pages ?? {});
+    revised.pages = finalRemoval.pages;
+    if (finalRemoval.removed) shiftAudioAfterRemovingPages34And35(revised.audioTracks);
+    revised.pages = insertDuskOniPagesAfter39(revised.pages);
+    shiftAudioAfterInsertingPagesAfter39(revised.audioTracks);
+    revised.primerVueloRevision = 6;
+    return revised;
+  }
+
+  const revised = structuredClone(document);
+  const renumbered = renumberPages(revised.pages ?? {});
+  const withInserts = insertRacePages(renumbered.pages);
+  const withoutPage34 = removeRacePage34(withInserts.pages);
+  const finalRemoval = removeRacePages34And35(withoutPage34.pages);
+  revised.pages = finalRemoval.pages;
+
+  if (renumbered.removed) {
+    for (const [pageKey, panels] of Object.entries(dialogueByPage)) {
+      const page = revised.pages[pageKey];
+      if (!page) throw new Error(`Missing Primer Vuelo page ${pageKey}`);
+      const layout = panelLayouts[pageKey];
+      if (layout) {
+        if (layout.length !== panels.length) {
+          throw new Error(`Layout mismatch on Primer Vuelo page ${pageKey}: ${layout.length} != ${panels.length}`);
+        }
+        page.panels = layout.map((panel, index) => ({ ...panel, dialogue: panels[index] }));
+        continue;
+      }
+      if (page.panels.length !== panels.length) {
+        throw new Error(`Panel mismatch on Primer Vuelo page ${pageKey}: ${page.panels.length} != ${panels.length}`);
+      }
+      page.panels.forEach((panel, index) => {
+        panel.dialogue = panels[index];
+      });
+    }
   }
 
   for (const track of revised.audioTracks ?? []) {
-    if (track.startPageKey === "78") track.startPageKey = "76";
-    if (track.stopTrigger?.pageKey === "83") track.stopTrigger.pageKey = "81";
+    if (renumbered.removed) {
+      if (track.startPageKey === "78") track.startPageKey = "76";
+      if (track.stopTrigger?.pageKey === "83") track.stopTrigger.pageKey = "81";
+    }
+    if (withInserts.inserted) {
+      if (track.startPageKey === "76") track.startPageKey = "78";
+      if (track.stopTrigger?.pageKey === "81") track.stopTrigger.pageKey = "83";
+    }
+    if (withoutPage34.removed) {
+      const startPage = Number(track.startPageKey);
+      if (Number.isInteger(startPage) && startPage >= 35) {
+        track.startPageKey = String(startPage - 1);
+      }
+      const stopPage = Number(track.stopTrigger?.pageKey);
+      if (Number.isInteger(stopPage) && stopPage >= 35) {
+        track.stopTrigger.pageKey = String(stopPage - 1);
+      }
+    }
   }
+
+  if (finalRemoval.removed) shiftAudioAfterRemovingPages34And35(revised.audioTracks);
+
+  revised.pages = insertDuskOniPagesAfter39(revised.pages);
+  shiftAudioAfterInsertingPagesAfter39(revised.audioTracks);
+  revised.primerVueloRevision = 6;
 
   return revised;
 };
