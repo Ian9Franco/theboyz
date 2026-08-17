@@ -8,7 +8,7 @@
   "order": 9,
   "password": "patria",
   "cinematic": true,
-  "nuevo": true,
+  "nuevo": false,
   "proximamente": false,
   "date": "12/08/2026",
   "estimatedTime": "10 días"
