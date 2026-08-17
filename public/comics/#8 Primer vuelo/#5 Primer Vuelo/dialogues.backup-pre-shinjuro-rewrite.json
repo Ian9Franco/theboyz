@@ -2086,7 +2086,7 @@
         {
           "focusY": 0.3,
           "dialogue": [
-            { "text": "Quería verlo muerto desde hacía años.", "speaker": "Shinjuro", "size": "small", "posX": 98, "posY": 2, "tailX": 88, "tailY": 12, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "hace rato que queria ver a este inutil muerto", "speaker": "Shinjuro", "size": "small", "posX": 98, "posY": 2, "tailX": 88, "tailY": 12, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "premio doble", "speaker": "Dusk", "size": "small", "posX": 92, "posY": 34, "tailX": 72, "tailY": 36, "tailWidth": 6, "tailCurvature": -22, "style": "thought" }
           ],
           "zoomRects": [
@@ -2096,7 +2096,7 @@
         {
           "focusY": 0.52,
           "dialogue": [
-            { "text": "Pero esa muerte me pertenecía.", "speaker": "Shinjuro", "size": "small", "posX": 88, "posY": 44, "tailX": 68, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "pero iba a ser yo quien lo mate", "speaker": "Shinjuro", "size": "small", "posX": 88, "posY": 44, "tailX": 68, "tailY": 50, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
             { "x": 0, "y": 38, "w": 100, "h": 17 }
@@ -2124,7 +2124,7 @@
         {
           "focusY": 0.9,
           "dialogue": [
-            { "text": "ONI era un ejecutor. Yo soy Kurogane.", "size": "small", "posX": 60, "posY": 76, "tailX": 38, "tailY": 84, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "no te confundas, yo soy el juego final", "size": "small", "posX": 60, "posY": 76, "tailX": 38, "tailY": 84, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro" },
             { "text": "su espada es mucho mas pesada, como carajos la puede sostener", "style": "thought", "size": "small", "posX": 98, "posY": 80, "tailX": 84, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
@@ -2177,7 +2177,7 @@
         {
           "focusY": 0.19,
           "dialogue": [
-            { "text": "No puede ganar sola.", "speaker": "Ian", "size": "small", "posX": 70, "posY": 4, "tailX": 90, "tailY": 6, "tailWidth": 6, "tailCurvature": -22, "style": "thought" }
+            { "text": "no.. no puede", "speaker": "Shinjuro", "size": "small", "posX": 70, "posY": 4, "tailX": 90, "tailY": 6, "tailWidth": 6, "tailCurvature": -22, "style": "thought" }
           ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 36 }
@@ -2340,7 +2340,7 @@
         {
           "focusY": 0.1,
           "dialogue": [
-            { "text": "No habrá mártir. Ni cuerpo. Sólo una ausencia más.", "speaker": "Shinjuro", "size": "small", "posX": 36, "posY": 0, "tailX": 40, "tailY": 14, "tailWidth": 6, "tailCurvature": -22, "width": 180, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "no vas a ser un martir, nadie va a saber ni como moriste", "speaker": "Shinjuro", "size": "small", "posX": 36, "posY": 0, "tailX": 40, "tailY": 14, "tailWidth": 6, "tailCurvature": -22, "width": 180 },
             { "text": "ghg", "speaker": "Dusk", "size": "small", "posX": 0, "posY": 16, "tailX": 14, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
@@ -2383,7 +2383,7 @@
         {
           "focusY": 0.74,
           "dialogue": [
-            { "text": "NGH—", "size": "small", "posX": 12, "posY": 64, "tailX": 30, "tailY": 68, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "ugh", "size": "small", "posX": 12, "posY": 64, "tailX": 30, "tailY": 68, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro" }
           ],
           "zoomRects": [
             { "x": 0, "y": 60, "w": 100, "h": 21 }
@@ -2402,7 +2402,7 @@
         {
           "focusY": 0.92,
           "dialogue": [
-            { "text": "¿Qué…?", "size": "small", "posX": 66, "posY": 78, "tailX": 54, "tailY": 86, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "que carajos?!", "size": "small", "posX": 66, "posY": 78, "tailX": 54, "tailY": 86, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro" }
           ],
           "zoomRects": [
             { "x": 0, "y": 79, "w": 100, "h": 21 }
@@ -2493,7 +2493,7 @@
         {
           "focusY": 0.86,
           "dialogue": [
-            { "text": "Otro cadáver.", "size": "small", "posX": 94, "posY": 74, "tailX": 86, "tailY": 82, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "Otro cadáver.", "size": "small", "posX": 94, "posY": 74, "tailX": 86, "tailY": 82, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro" }
           ],
           "zoomRects": [
             { "x": 0, "y": 68, "w": 100, "h": 32 }
@@ -2531,7 +2531,7 @@
         {
           "focusY": 0.19,
           "dialogue": [
-            { "text": "Viniste sin filo.", "speaker": "Shinjuro", "size": "small", "posX": 98, "posY": 8, "tailX": 78, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "ni si quiera tenes espadas", "speaker": "Shinjuro", "size": "small", "posX": 98, "posY": 8, "tailX": 78, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "no lo necesito.", "speaker": "Vesperwing", "size": "small", "posX": 48, "posY": 4, "tailX": 38, "tailY": 8, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
@@ -2550,8 +2550,8 @@
         {
           "focusY": 0.56,
           "dialogue": [
-            { "text": "No son copias…", "size": "small", "posX": 24, "posY": 38, "tailX": 14, "tailY": 42, "tailWidth": 6, "tailCurvature": -22, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
-            { "text": "Son trayectorias.", "size": "small", "posX": 60, "posY": 54, "tailX": 54, "tailY": 62, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "que mierda?!", "size": "small", "posX": 24, "posY": 38, "tailX": 14, "tailY": 42, "tailWidth": 6, "tailCurvature": -22, "speaker": "Shinjuro" },
+            { "text": "vuela?! que caraj-", "size": "small", "posX": 60, "posY": 54, "tailX": 54, "tailY": 62, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro" }
           ],
           "zoomRects": [
             { "x": 0, "y": 36, "w": 100, "h": 34 }
@@ -2689,7 +2689,7 @@
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "Necesitaste refuerzos.", "speaker": "Shinjuro", "size": "small", "posX": 65, "posY": 35, "tailX": 55, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "va a ser asi? dos contra uno?", "speaker": "Shinjuro", "size": "small", "posX": 65, "posY": 35, "tailX": 55, "tailY": 40, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "no me digas que te parece injusto", "speaker": "Dusk", "size": "small", "posX": 5, "posY": 35, "tailX": 15, "tailY": 40, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
@@ -2720,7 +2720,7 @@
         {
           "focusY": 0.19,
           "dialogue": [
-            { "text": "Uno se esconde tras herramientas. La otra, tras una máscara.", "speaker": "Shinjuro", "size": "small", "posX": 65, "posY": 0, "tailX": 45, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "¡Mírense! ustedes dos. son un par de estupidos", "speaker": "Shinjuro", "size": "small", "posX": 65, "posY": 0, "tailX": 45, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "se termino. rendite", "speaker": "Vesperwing", "size": "small", "posX": 20, "posY": 5, "tailX": 15, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
@@ -2730,7 +2730,7 @@
         {
           "focusY": 0.55,
           "dialogue": [
-            { "text": "Soltá el brazo.", "size": "small", "posX": 90, "posY": 35, "tailX": 60, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "soltame!", "size": "small", "posX": 90, "posY": 35, "tailX": 60, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "speaker": "Shinjuro" }
           ],
           "zoomRects": [
             { "x": 0, "y": 30, "w": 100, "h": 42 }
@@ -2739,7 +2739,7 @@
         {
           "focusY": 0.86,
           "dialogue": [
-            { "text": "Rendirme sería admitir que ustedes importan.", "speaker": "Shinjuro", "size": "small", "posX": 90, "posY": 75, "tailX": 45, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "nunca me voy a rendir, es una cuestion de honor. No entenderian", "speaker": "Shinjuro", "size": "small", "posX": 90, "posY": 75, "tailX": 45, "tailY": 80, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "entonces voy a obligarte", "speaker": "Dusk", "size": "small", "posX": 20, "posY": 70, "tailX": 15, "tailY": 80, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
@@ -2755,7 +2755,7 @@
           "dialogue": [
             { "text": "Lo sostengo.", "speaker": "Vesperwing", "size": "small", "posX": 35, "posY": 5, "tailX": 30, "tailY": 20, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "No lo sueltes.", "speaker": "Dusk", "size": "small", "posX": 95, "posY": 25, "tailX": 90, "tailY": 35, "tailWidth": 6, "tailCurvature": -22 },
-            { "text": "¡NO!", "speaker": "Shinjuro", "size": "small", "posX": 80, "posY": 5, "tailX": 60, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "¡MI BRAZO!", "speaker": "Shinjuro", "size": "small", "posX": 80, "posY": 5, "tailX": 60, "tailY": 20, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 100 }
@@ -2768,7 +2768,7 @@
         {
           "focusY": 0.19,
           "dialogue": [
-            { "text": "Protocolo Kuro. Sellen el complejo. Nadie sale.", "speaker": "Shinjuro", "size": "small", "posX": 70, "posY": 0, "tailX": 55, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "Sellen el complejo. Nadie sale.", "speaker": "Shinjuro", "size": "small", "posX": 70, "posY": 0, "tailX": 55, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 38 }
@@ -2822,7 +2822,7 @@
         {
           "focusY": 0.86,
           "dialogue": [
-            { "text": "Kurogane no olvida una deuda.", "speaker": "Shinjuro", "size": "small", "posX": 65, "posY": 80, "tailX": 60, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "Esto no termina acá.", "speaker": "Shinjuro", "size": "small", "posX": 65, "posY": 80, "tailX": 60, "tailY": 85, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "No.", "speaker": "Dusk", "size": "small", "posX": 40, "posY": 80, "tailX": 35, "tailY": 85, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "noo!!", "speaker": "Dusk", "size": "small", "posX": 95, "posY": 75, "tailX": 90, "tailY": 85, "tailWidth": 6, "tailCurvature": -22 }
           ],

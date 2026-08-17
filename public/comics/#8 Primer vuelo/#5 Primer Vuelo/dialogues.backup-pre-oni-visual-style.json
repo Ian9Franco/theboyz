@@ -178,7 +178,7 @@
           ],
           "dialogue": [
             { "text": "ONI…", "speaker": "Ren", "size": "small", "posX": 25, "posY": 30, "tailX": 31, "tailY": 38, "tailWidth": 6, "tailCurvature": -22 },
-            { "text": "Ren.", "speaker": "ONI", "size": "small", "posX": 80, "posY": 30, "tailX": 65, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "customBg": "#e81818", "customColor": "#ffffff" },
+            { "text": "Ren.", "speaker": "ONI", "size": "small", "posX": 80, "posY": 30, "tailX": 65, "tailY": 30, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "Sabes mi nombre?", "size": "small", "posX": 5, "posY": 35, "tailX": 30, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "les dije que los iba a estar vigilando", "size": "small", "posX": 90, "posY": 35, "tailX": 60, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
@@ -241,7 +241,7 @@
           ],
           "dialogue": [
             { "text": "¡Soltame!", "speaker": "Ren", "size": "small", "posX": 65, "posY": 25, "tailX": 60, "tailY": 35, "tailWidth": 6, "tailCurvature": -22 },
-            { "text": "No.", "speaker": "ONI", "size": "small", "posX": 90, "posY": 25, "tailX": 80, "tailY": 30, "tailWidth": 6, "tailCurvature": -22, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "No.", "speaker": "ONI", "size": "small", "posX": 90, "posY": 25, "tailX": 80, "tailY": 30, "tailWidth": 6, "tailCurvature": -22 }
           ]
         },
         {
@@ -251,8 +251,8 @@
           ],
           "dialogue": [
             { "text": "—Pará. Pará. Podemos arreglar esto.", "speaker": "Ren", "size": "small", "posX": 5, "posY": 50, "tailX": 35, "tailY": 55, "tailWidth": 6, "tailCurvature": -22 },
-            { "text": "—No acá.\n-no asi!", "speaker": "ONI", "size": "small", "posX": 10, "posY": 60, "tailX": 35, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "customBg": "#e81818", "customColor": "#ffffff" },
-            { "text": "que pasa? no es digno para un ADICTO LADRON?", "speaker": "ONI", "size": "small", "posX": 85, "posY": 55, "tailX": 65, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "—No acá.\n-no asi!", "speaker": "ONI", "size": "small", "posX": 10, "posY": 60, "tailX": 35, "tailY": 55, "tailWidth": 6, "tailCurvature": -22 },
+            { "text": "que pasa? no es digno para un ADICTO LADRON?", "speaker": "ONI", "size": "small", "posX": 85, "posY": 55, "tailX": 65, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
@@ -332,7 +332,7 @@
             { "x": 0, "y": 75, "w": 100, "h": 25 }
           ],
           "dialogue": [
-            { "text": "esto es mas digno?", "speaker": "ONI", "size": "small", "posX": 95, "posY": 80, "tailX": 75, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "esto es mas digno?", "speaker": "oni", "size": "small", "posX": 95, "posY": 80, "tailX": 75, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -346,7 +346,7 @@
           ],
           "dialogue": [
             { "text": "Todavía… puedo…", "speaker": "Ren", "size": "small", "posX": 20, "posY": 10, "style": "whisper", "tailX": 25, "tailY": 20, "tailWidth": 6, "tailCurvature": -22 },
-            { "text": "No. Se termino", "speaker": "ONI", "size": "small", "posX": 85, "posY": 0, "tailX": 75, "tailY": 5, "tailWidth": 6, "tailCurvature": -22, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "No. Se termino", "speaker": "ONI", "size": "small", "posX": 85, "posY": 0, "tailX": 75, "tailY": 5, "tailWidth": 6, "tailCurvature": -22 }
           ]
         },
         {
@@ -367,7 +367,7 @@
             { "text": "no! no! espera!", "size": "small", "posX": 20, "posY": 45, "tailX": 20, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "te puedo decir todo lo que se, que queres saber?", "size": "small", "posX": 35, "posY": 50, "tailX": 25, "tailY": 65, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "el chico, el chico trabaja para parker, esta investigando la movida", "size": "small", "posX": 5, "posY": 50, "tailX": 20, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "donde esta tu honor? basura", "speaker": "ONI", "size": "small", "posX": 75, "posY": 50, "tailX": 55, "tailY": 55, "tailWidth": 6, "tailCurvature": -22, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "donde esta tu honor? basura", "speaker": "ONI", "size": "small", "posX": 75, "posY": 50, "tailX": 55, "tailY": 55, "tailWidth": 6, "tailCurvature": -22 }
           ]
         },
         {
@@ -1390,7 +1390,7 @@
           "focusY": 0.88,
           "dialogue": [
             { "text": "yo sabia que sentia olor a mierda", "style": "thought", "size": "small", "posX": 35, "posY": 80, "tailX": 50, "tailY": 103, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "ya me estaba preguntando si vendrias", "speaker": "ONI", "size": "small", "posX": 90, "posY": 80, "tailX": 70, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "ya me estaba preguntando si vendrias", "speaker": "Oni", "size": "small", "posX": 90, "posY": 80, "tailX": 70, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 75, "w": 100, "h": 25 }
@@ -1432,9 +1432,9 @@
         {
           "focusY": 0.52,
           "dialogue": [
-            { "text": "llevas años arruiando planes", "speaker": "ONI", "size": "small", "posX": 90, "posY": 30, "tailX": 75, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" },
-            { "text": "todo para que?", "speaker": "ONI", "size": "small", "posX": 100, "posY": 35, "tailX": 80, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" },
-            { "text": "es una especie de venganza? cual es tu motivacion", "speaker": "ONI", "size": "small", "posX": 100, "posY": 45, "tailX": 80, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "llevas años arruiando planes", "speaker": "Oni", "size": "small", "posX": 90, "posY": 30, "tailX": 75, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "todo para que?", "speaker": "Oni", "size": "small", "posX": 100, "posY": 35, "tailX": 80, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "es una especie de venganza? cual es tu motivacion", "speaker": "Oni", "size": "small", "posX": 100, "posY": 45, "tailX": 80, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 50, "y": 34, "w": 50, "h": 30 }
@@ -1444,8 +1444,8 @@
           "focusY": 0.84,
           "dialogue": [
             { "text": "mi motivacion es que un dia no quede ninguno de ustedes", "size": "small", "posX": 50, "posY": 80, "tailX": 55, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "ya veo.", "speaker": "ONI", "size": "small", "posX": 85, "posY": 80, "tailX": 80, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" },
-            { "text": "y como pensas conseguirlo?", "speaker": "ONI", "size": "small", "posX": 95, "posY": 85, "tailX": 85, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "ya veo.", "speaker": "Oni", "size": "small", "posX": 85, "posY": 80, "tailX": 80, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "y como pensas conseguirlo?", "speaker": "Oni", "size": "small", "posX": 95, "posY": 85, "tailX": 85, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 62, "w": 100, "h": 38 }
@@ -1523,8 +1523,8 @@
             { "x": 0, "y": 0, "w": 100, "h": 36 }
           ],
           "dialogue": [
-            { "text": "vos..", "speaker": "ONI", "size": "small", "posX": 90, "posY": 5, "tailX": 80, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" },
-            { "text": "ese pelo", "speaker": "ONI", "size": "small", "posX": 95, "posY": 10, "tailX": 85, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "vos..", "speaker": "Oni", "size": "small", "posX": 90, "posY": 5, "tailX": 80, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "ese pelo", "speaker": "Oni", "size": "small", "posX": 95, "posY": 10, "tailX": 85, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
@@ -1533,7 +1533,7 @@
             { "x": 0, "y": 35, "w": 100, "h": 35 }
           ],
           "dialogue": [
-            { "text": "es ella, lo sabia", "speaker": "ONI", "style": "thought", "size": "small", "posX": 75, "posY": 50, "tailX": 100, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "es ella, lo sabia", "speaker": "Oni", "style": "thought", "size": "small", "posX": 75, "posY": 50, "tailX": 100, "tailY": 45, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "sounds": []
         },
@@ -1543,9 +1543,9 @@
             { "x": 0, "y": 70, "w": 100, "h": 30 }
           ],
           "dialogue": [
-            { "text": "sos la chica que adopto el granjero del restaurante", "speaker": "ONI", "size": "small", "posX": 90, "posY": 70, "tailX": 75, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" },
-            { "text": "esa basura no pagaba sus deudas", "speaker": "ONI", "size": "small", "posX": 55, "posY": 65, "tailX": 65, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" },
-            { "text": "y lo use de ejemplo", "speaker": "ONI", "size": "small", "posX": 100, "posY": 80, "tailX": 80, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "sos la chica que adopto el granjero del restaurante", "speaker": "Oni", "size": "small", "posX": 90, "posY": 70, "tailX": 75, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "esa basura no pagaba sus deudas", "speaker": "Oni", "size": "small", "posX": 55, "posY": 65, "tailX": 65, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "y lo use de ejemplo", "speaker": "Oni", "size": "small", "posX": 100, "posY": 80, "tailX": 80, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
         }
       ]
@@ -1560,8 +1560,8 @@
           "dialogue": [
             { "text": "como sabes eso?", "size": "small", "posX": 50, "posY": 0, "tailX": 40, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "fuiste vos¡?", "size": "small", "posX": 50, "posY": 10, "tailX": 40, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
-            { "text": "esa noche, entre a su casa", "speaker": "ONI", "size": "small", "posX": 95, "posY": 5, "tailX": 75, "tailY": 5, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" },
-            { "text": "ni si quiera se defendio", "speaker": "ONI", "size": "small", "posX": 100, "posY": 10, "tailX": 70, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "esa noche, entre a su casa", "speaker": "Oni", "size": "small", "posX": 95, "posY": 5, "tailX": 75, "tailY": 5, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "ni si quiera se defendio", "speaker": "Oni", "size": "small", "posX": 100, "posY": 10, "tailX": 70, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
         },
         {
@@ -1570,7 +1570,7 @@
             { "x": 0, "y": 25, "w": 100, "h": 25 }
           ],
           "dialogue": [
-            { "text": "lo disfrute, fue de las muertes mas sastifactorias de mi vida", "speaker": "ONI", "size": "small", "posX": 100, "posY": 30, "tailX": 80, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" },
+            { "text": "lo disfrute, fue de las muertes mas sastifactorias de mi vida", "speaker": "Oni", "size": "small", "posX": 100, "posY": 30, "tailX": 80, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "basura", "size": "small", "posX": 45, "posY": 25, "tailX": 45, "tailY": 35, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "voy a hacer que supliques", "size": "small", "posX": 60, "posY": 30, "tailX": 45, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ]
@@ -1581,8 +1581,8 @@
             { "x": 0, "y": 50, "w": 100, "h": 25 }
           ],
           "dialogue": [
-            { "text": "ah si?", "speaker": "ONI", "size": "small", "posX": 85, "posY": 50, "tailX": 75, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" },
-            { "text": "me gustaria ver que lo intentes", "speaker": "ONI", "size": "small", "posX": 95, "posY": 55, "tailX": 75, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "ah si?", "speaker": "Oni", "size": "small", "posX": 85, "posY": 50, "tailX": 75, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "me gustaria ver que lo intentes", "speaker": "Oni", "size": "small", "posX": 95, "posY": 55, "tailX": 75, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "sounds": [
             {
@@ -1601,8 +1601,8 @@
             { "x": 0, "y": 75, "w": 100, "h": 25 }
           ],
           "dialogue": [
-            { "text": "jaja, eso es todo lo que tenes?", "speaker": "ONI", "size": "small", "posX": 90, "posY": 75, "tailX": 70, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" },
-            { "text": "esperaba mas", "speaker": "ONI", "size": "small", "posX": 95, "posY": 80, "tailX": 70, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "jaja, eso es todo lo que tenes?", "speaker": "Oni", "size": "small", "posX": 90, "posY": 75, "tailX": 70, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "esperaba mas", "speaker": "Oni", "size": "small", "posX": 95, "posY": 80, "tailX": 70, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "sounds": [
             {
@@ -1622,8 +1622,8 @@
         {
           "focusY": 0.17,
           "dialogue": [
-            { "text": "Tu hoja tiembla.", "speaker": "ONI", "size": "small", "posX": 80, "posY": 5, "tailX": 65, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "customBg": "#e81818", "customColor": "#ffffff" },
-            { "text": "no te escondas", "speaker": "ONI", "size": "small", "posX": 90, "posY": 10, "tailX": 68, "tailY": 13, "tailWidth": 6, "tailCurvature": -22, "customBg": "#e81818", "customColor": "#ffffff" },
+            { "text": "Tu hoja tiembla.", "speaker": "ONI", "size": "small", "posX": 80, "posY": 5, "tailX": 65, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 },
+            { "text": "no te escondas", "speaker": "ONI", "size": "small", "posX": 90, "posY": 10, "tailX": 68, "tailY": 13, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "el odio que siento, me esta jugando en contra", "speaker": "Dusk", "size": "small", "posX": 45, "posY": 0, "tailX": 30, "tailY": 15, "tailWidth": 6, "tailCurvature": -22, "style": "thought", "width": 190 }
           ],
           "zoomRects": [
@@ -1644,7 +1644,7 @@
         {
           "focusY": 0.4,
           "dialogue": [
-            { "text": "ugh", "speaker": "ONI", "size": "small", "posX": 110, "posY": 30, "tailX": 90, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "customBg": "#e81818", "customColor": "#ffffff" },
+            { "text": "ugh", "speaker": "ONI", "size": "small", "posX": 110, "posY": 30, "tailX": 90, "tailY": 40, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "queres esto?", "speaker": "Dusk", "size": "small", "posX": 75, "posY": 30, "tailX": 65, "tailY": 35, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
@@ -1654,7 +1654,7 @@
         {
           "focusY": 0.65,
           "dialogue": [
-            { "text": "no sirve de nada que hagas tiempo, vas a terminar igual que el granjero", "speaker": "ONI", "size": "small", "posX": 95, "posY": 55, "tailX": 75, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "no sirve de nada que hagas tiempo, vas a terminar igual que el granjero", "speaker": "Oni", "size": "small", "posX": 95, "posY": 55, "tailX": 75, "tailY": 60, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 55, "w": 100, "h": 22 }
@@ -1673,7 +1673,7 @@
         {
           "focusY": 0.95,
           "dialogue": [
-            { "text": "ahg!", "speaker": "ONI", "size": "small", "posX": 50, "posY": 75, "tailX": 40, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" },
+            { "text": "ahg!", "speaker": "Oni", "size": "small", "posX": 50, "posY": 75, "tailX": 40, "tailY": 75, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "su nombre era kenji", "size": "small", "posX": 100, "posY": 75, "tailX": 85, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "lo extrañas? ", "size": "small", "posX": 80, "posY": 75, "tailX": 70, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
@@ -1698,7 +1698,7 @@
         {
           "focusY": 0.19,
           "dialogue": [
-            { "text": "puedo llevarte con el", "speaker": "ONI", "size": "small", "posX": 55, "posY": 0, "tailX": 45, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "customBg": "#e81818", "customColor": "#ffffff" },
+            { "text": "puedo llevarte con el", "speaker": "ONI", "size": "small", "posX": 55, "posY": 0, "tailX": 45, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "no", "speaker": "Dusk", "size": "small", "posX": 80, "posY": 5, "tailX": 75, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "no merezco ir a donde este el, pero espero poder vengarlo", "speaker": "Sofi", "style": "thought", "size": "small", "posX": 90, "posY": 0, "tailX": 50, "tailY": 34, "tailWidth": 6, "tailCurvature": -22, "width": 200, "fontSize": 8, "borderRadius": 18 }
           ],
@@ -1729,7 +1729,7 @@
         {
           "focusY": 0.88,
           "dialogue": [
-            { "text": "ugh, ", "speaker": "ONI", "size": "small", "posX": 75, "posY": 80, "tailX": 65, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "ugh, ", "speaker": "Oni", "size": "small", "posX": 75, "posY": 80, "tailX": 65, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 75, "w": 100, "h": 25 }
@@ -1935,9 +1935,9 @@
         {
           "focusY": 0.19,
           "dialogue": [
-            { "text": "ups", "speaker": "ONI", "size": "small", "posX": 14, "posY": 6, "tailX": 18, "tailY": 14, "tailWidth": 6, "tailCurvature": -22, "customBg": "#e81818", "customColor": "#ffffff" },
+            { "text": "ups", "speaker": "ONI", "size": "small", "posX": 14, "posY": 6, "tailX": 18, "tailY": 14, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "lento", "speaker": "Dusk", "size": "small", "posX": 30, "posY": 14, "tailX": 24, "tailY": 18, "tailWidth": 6, "tailCurvature": -22 },
-            { "text": "aagr", "speaker": "ONI", "size": "small", "posX": 92, "posY": 6, "tailX": 80, "tailY": 8, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "aagr", "speaker": "Oni", "size": "small", "posX": 92, "posY": 6, "tailX": 80, "tailY": 8, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 33 }
@@ -1946,7 +1946,7 @@
         {
           "focusY": 0.4,
           "dialogue": [
-            { "text": "lento yo?", "speaker": "ONI", "size": "small", "posX": 46, "posY": 32, "tailX": 40, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "lento yo?", "speaker": "Oni", "size": "small", "posX": 46, "posY": 32, "tailX": 40, "tailY": 40, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
             { "x": 0, "y": 33, "w": 51, "h": 25 }
@@ -1955,7 +1955,7 @@
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "ultimas palabras?", "speaker": "ONI", "size": "small", "posX": 100, "posY": 35, "tailX": 85, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "ultimas palabras?", "speaker": "Oni", "size": "small", "posX": 100, "posY": 35, "tailX": 85, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 50, "y": 34, "w": 50, "h": 23 }
@@ -1965,8 +1965,8 @@
         {
           "focusY": 0.66,
           "dialogue": [
-            { "text": "cogh", "speaker": "ONI", "size": "small", "posX": 54, "posY": 62, "tailX": 40, "tailY": 66, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" },
-            { "text": "no puede ser", "speaker": "ONI", "size": "small", "posX": 0, "posY": 74, "tailX": 16, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "customBg": "#e81818", "customColor": "#ffffff" }
+            { "text": "cogh", "speaker": "Oni", "size": "small", "posX": 54, "posY": 62, "tailX": 40, "tailY": 66, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
+            { "text": "no puede ser", "speaker": "Oni", "size": "small", "posX": 0, "posY": 74, "tailX": 16, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 56, "w": 51, "h": 44 }
@@ -2086,7 +2086,7 @@
         {
           "focusY": 0.3,
           "dialogue": [
-            { "text": "Quería verlo muerto desde hacía años.", "speaker": "Shinjuro", "size": "small", "posX": 98, "posY": 2, "tailX": 88, "tailY": 12, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "hace rato que queria ver a este inutil muerto", "speaker": "Shinjuro", "size": "small", "posX": 98, "posY": 2, "tailX": 88, "tailY": 12, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "premio doble", "speaker": "Dusk", "size": "small", "posX": 92, "posY": 34, "tailX": 72, "tailY": 36, "tailWidth": 6, "tailCurvature": -22, "style": "thought" }
           ],
           "zoomRects": [
@@ -2096,7 +2096,7 @@
         {
           "focusY": 0.52,
           "dialogue": [
-            { "text": "Pero esa muerte me pertenecía.", "speaker": "Shinjuro", "size": "small", "posX": 88, "posY": 44, "tailX": 68, "tailY": 50, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "pero iba a ser yo quien lo mate", "speaker": "Shinjuro", "size": "small", "posX": 88, "posY": 44, "tailX": 68, "tailY": 50, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
             { "x": 0, "y": 38, "w": 100, "h": 17 }
@@ -2124,7 +2124,7 @@
         {
           "focusY": 0.9,
           "dialogue": [
-            { "text": "ONI era un ejecutor. Yo soy Kurogane.", "size": "small", "posX": 60, "posY": 76, "tailX": 38, "tailY": 84, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "no te confundas, yo soy el juego final", "size": "small", "posX": 60, "posY": 76, "tailX": 38, "tailY": 84, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 },
             { "text": "su espada es mucho mas pesada, como carajos la puede sostener", "style": "thought", "size": "small", "posX": 98, "posY": 80, "tailX": 84, "tailY": 90, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
@@ -2177,7 +2177,7 @@
         {
           "focusY": 0.19,
           "dialogue": [
-            { "text": "No puede ganar sola.", "speaker": "Ian", "size": "small", "posX": 70, "posY": 4, "tailX": 90, "tailY": 6, "tailWidth": 6, "tailCurvature": -22, "style": "thought" }
+            { "text": "no.. no puede", "speaker": "Shinjuro", "size": "small", "posX": 70, "posY": 4, "tailX": 90, "tailY": 6, "tailWidth": 6, "tailCurvature": -22, "style": "thought" }
           ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 36 }
@@ -2340,7 +2340,7 @@
         {
           "focusY": 0.1,
           "dialogue": [
-            { "text": "No habrá mártir. Ni cuerpo. Sólo una ausencia más.", "speaker": "Shinjuro", "size": "small", "posX": 36, "posY": 0, "tailX": 40, "tailY": 14, "tailWidth": 6, "tailCurvature": -22, "width": 180, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "no vas a ser un martir, nadie va a saber ni como moriste", "speaker": "Shinjuro", "size": "small", "posX": 36, "posY": 0, "tailX": 40, "tailY": 14, "tailWidth": 6, "tailCurvature": -22, "width": 180 },
             { "text": "ghg", "speaker": "Dusk", "size": "small", "posX": 0, "posY": 16, "tailX": 14, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
@@ -2383,7 +2383,7 @@
         {
           "focusY": 0.74,
           "dialogue": [
-            { "text": "NGH—", "size": "small", "posX": 12, "posY": 64, "tailX": 30, "tailY": 68, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "ugh", "size": "small", "posX": 12, "posY": 64, "tailX": 30, "tailY": 68, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 60, "w": 100, "h": 21 }
@@ -2402,7 +2402,7 @@
         {
           "focusY": 0.92,
           "dialogue": [
-            { "text": "¿Qué…?", "size": "small", "posX": 66, "posY": 78, "tailX": 54, "tailY": 86, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "que carajos?!", "size": "small", "posX": 66, "posY": 78, "tailX": 54, "tailY": 86, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 79, "w": 100, "h": 21 }
@@ -2493,7 +2493,7 @@
         {
           "focusY": 0.86,
           "dialogue": [
-            { "text": "Otro cadáver.", "size": "small", "posX": 94, "posY": 74, "tailX": 86, "tailY": 82, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "Otro cadáver.", "size": "small", "posX": 94, "posY": 74, "tailX": 86, "tailY": 82, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 68, "w": 100, "h": 32 }
@@ -2531,7 +2531,7 @@
         {
           "focusY": 0.19,
           "dialogue": [
-            { "text": "Viniste sin filo.", "speaker": "Shinjuro", "size": "small", "posX": 98, "posY": 8, "tailX": 78, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "ni si quiera tenes espadas", "speaker": "Shinjuro", "size": "small", "posX": 98, "posY": 8, "tailX": 78, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "no lo necesito.", "speaker": "Vesperwing", "size": "small", "posX": 48, "posY": 4, "tailX": 38, "tailY": 8, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
@@ -2550,8 +2550,8 @@
         {
           "focusY": 0.56,
           "dialogue": [
-            { "text": "No son copias…", "size": "small", "posX": 24, "posY": 38, "tailX": 14, "tailY": 42, "tailWidth": 6, "tailCurvature": -22, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
-            { "text": "Son trayectorias.", "size": "small", "posX": 60, "posY": 54, "tailX": 54, "tailY": 62, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "que mierda", "size": "small", "posX": 24, "posY": 38, "tailX": 14, "tailY": 42, "tailWidth": 6, "tailCurvature": -22 },
+            { "text": "vuela?! que caraj-", "size": "small", "posX": 60, "posY": 54, "tailX": 54, "tailY": 62, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
             { "x": 0, "y": 36, "w": 100, "h": 34 }
@@ -2689,11 +2689,11 @@
         {
           "focusY": 0.5,
           "dialogue": [
-            { "text": "Necesitaste refuerzos.", "speaker": "Shinjuro", "size": "small", "posX": 65, "posY": 35, "tailX": 55, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "va a ser asi? dos contra uno?", "speaker": "Shinjuro", "size": "small", "posX": 65, "posY": 35, "tailX": 55, "tailY": 40, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "no me digas que te parece injusto", "speaker": "Dusk", "size": "small", "posX": 5, "posY": 35, "tailX": 15, "tailY": 40, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
-            { "x": 0, "y": 25, "w": 100, "h": 37 }
+            { "x": 0, "y": 35, "w": 100, "h": 30 }
           ]
         },
         {
@@ -2720,7 +2720,7 @@
         {
           "focusY": 0.19,
           "dialogue": [
-            { "text": "Uno se esconde tras herramientas. La otra, tras una máscara.", "speaker": "Shinjuro", "size": "small", "posX": 65, "posY": 0, "tailX": 45, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "¡Mírense! ustedes dos. son un par de estupidos", "speaker": "Shinjuro", "size": "small", "posX": 65, "posY": 0, "tailX": 45, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "se termino. rendite", "speaker": "Vesperwing", "size": "small", "posX": 20, "posY": 5, "tailX": 15, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
@@ -2730,7 +2730,7 @@
         {
           "focusY": 0.55,
           "dialogue": [
-            { "text": "Soltá el brazo.", "size": "small", "posX": 90, "posY": 35, "tailX": 60, "tailY": 40, "tailWidth": 6, "tailCurvature": -22, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "soltame!", "size": "small", "posX": 90, "posY": 35, "tailX": 60, "tailY": 40, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
             { "x": 0, "y": 30, "w": 100, "h": 42 }
@@ -2739,7 +2739,7 @@
         {
           "focusY": 0.86,
           "dialogue": [
-            { "text": "Rendirme sería admitir que ustedes importan.", "speaker": "Shinjuro", "size": "small", "posX": 90, "posY": 75, "tailX": 45, "tailY": 80, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "nunca me voy a rendir, es una cuestion de honor. No entenderian", "speaker": "Shinjuro", "size": "small", "posX": 90, "posY": 75, "tailX": 45, "tailY": 80, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "entonces voy a obligarte", "speaker": "Dusk", "size": "small", "posX": 20, "posY": 70, "tailX": 15, "tailY": 80, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
@@ -2755,7 +2755,7 @@
           "dialogue": [
             { "text": "Lo sostengo.", "speaker": "Vesperwing", "size": "small", "posX": 35, "posY": 5, "tailX": 30, "tailY": 20, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "No lo sueltes.", "speaker": "Dusk", "size": "small", "posX": 95, "posY": 25, "tailX": 90, "tailY": 35, "tailWidth": 6, "tailCurvature": -22 },
-            { "text": "¡NO!", "speaker": "Shinjuro", "size": "small", "posX": 80, "posY": 5, "tailX": 60, "tailY": 20, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "¡MI BRAZO!", "speaker": "Shinjuro", "size": "small", "posX": 80, "posY": 5, "tailX": 60, "tailY": 20, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 100 }
@@ -2768,7 +2768,7 @@
         {
           "focusY": 0.19,
           "dialogue": [
-            { "text": "Protocolo Kuro. Sellen el complejo. Nadie sale.", "speaker": "Shinjuro", "size": "small", "posX": 70, "posY": 0, "tailX": 55, "tailY": 10, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "Sellen el complejo. Nadie sale.", "speaker": "Shinjuro", "size": "small", "posX": 70, "posY": 0, "tailX": 55, "tailY": 10, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
             { "x": 0, "y": 0, "w": 100, "h": 38 }
@@ -2805,7 +2805,7 @@
             { "text": "Tres.", "speaker": "Dusk", "size": "small", "posX": 65, "posY": 30, "tailX": 40, "tailY": 30, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
-            { "x": 0, "y": 0, "w": 100, "h": 40 }
+            { "x": 0, "y": 0, "w": 100, "h": 38 }
           ]
         },
         {
@@ -2816,18 +2816,18 @@
             { "text": "no dejes que pase!", "size": "small", "posX": 20, "posY": 60, "tailX": 20, "tailY": 70, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
           ],
           "zoomRects": [
-            { "x": 0, "y": 40, "w": 100, "h": 39 }
+            { "x": 0, "y": 38, "w": 100, "h": 34 }
           ]
         },
         {
           "focusY": 0.86,
           "dialogue": [
-            { "text": "Kurogane no olvida una deuda.", "speaker": "Shinjuro", "size": "small", "posX": 65, "posY": 80, "tailX": 60, "tailY": 85, "tailWidth": 6, "tailCurvature": -22, "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "Esto no termina acá.", "speaker": "Shinjuro", "size": "small", "posX": 65, "posY": 80, "tailX": 60, "tailY": 85, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "No.", "speaker": "Dusk", "size": "small", "posX": 40, "posY": 80, "tailX": 35, "tailY": 85, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "noo!!", "speaker": "Dusk", "size": "small", "posX": 95, "posY": 75, "tailX": 90, "tailY": 85, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [
-            { "x": 0, "y": 80, "w": 100, "h": 20 }
+            { "x": 0, "y": 72, "w": 100, "h": 28 }
           ]
         }
       ]

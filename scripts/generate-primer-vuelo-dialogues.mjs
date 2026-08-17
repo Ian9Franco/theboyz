@@ -8,6 +8,18 @@ const previous = JSON.parse(fs.readFileSync(outputPath, "utf8"));
 
 const L = (speaker, text, style = "normal", posX = 50, posY = 50, tailX = posX, tailY = posY + 8) => {
   const line = { text, speaker, style, size: style === "caption" ? "medium" : "small", posX, posY };
+  if (/^oni$/i.test(speaker)) {
+    line.speaker = "ONI";
+    line.customBg = "#e81818";
+    line.customColor = "#ffffff";
+    line.textColor = "#000000";
+  }
+  if (/^shinjuro$/i.test(speaker)) {
+    line.speaker = "Shinjuro";
+    line.customBg = "#0b1f3a";
+    line.customColor = "#000000";
+    line.textColor = "#ffffff";
+  }
   if (style === "caption" || style === "cinematic" || style === "sfx") {
     line.tail = "none";
   } else {
@@ -351,12 +363,12 @@ const pages = {
     P(70, 100, [L("Vesperwing", "Solo necesitamos el mismo objetivo.", "normal", 28, 82, 34, 88), L("Shinjuro", "¡Basta!", "scream", 72, 93, 67, 97)])
   ]},
   "69": { panels: [
-    P(0, 38, [L("Shinjuro", "¡Mírenme!", "scream", 72, 10, 67, 17), L("Vesperwing", "Ese es el problema.", "normal", 27, 24, 33, 30)]),
+    P(0, 38, [L("Shinjuro", "¡Kurogane no se arrodilla!", "scream", 72, 10, 67, 17), L("Vesperwing", "Ese es el problema.", "normal", 27, 24, 33, 30)]),
     P(38, 72, [L("Dusk", "Brazo derecho.", "normal", 27, 47, 33, 54), L("Vesperwing", "Robótico. Articulación expuesta.", "normal", 72, 61, 67, 67)]),
-    P(72, 100, [L("Shinjuro", "¡Protocolo de emergencia!", "scream", 72, 82, 67, 88), L("Dusk", "Tarde.", "normal", 28, 93, 34, 97)])
+    P(72, 100, [L("Shinjuro", "¡Protocolo Kuro!", "scream", 72, 82, 67, 88), L("Dusk", "Tarde.", "normal", 28, 93, 34, 97)])
   ]},
   "70": { panels: [
-    P(0, 100, [L("Vesperwing", "Lo sostengo.", "normal", 27, 20, 33, 28), L("Dusk", "No lo sueltes.", "normal", 72, 31, 67, 38), L("Shinjuro", "¡MI BRAZO!", "scream", 50, 54), L("Dusk", "Ya no.", "normal", 28, 86, 34, 92)])
+    P(0, 100, [L("Vesperwing", "Lo sostengo.", "normal", 27, 20, 33, 28), L("Dusk", "No lo sueltes.", "normal", 72, 31, 67, 38), L("Shinjuro", "¡NO!", "scream", 50, 54), L("Dusk", "Ya no.", "normal", 28, 86, 34, 92)])
   ]},
   "71": { panels: [
     P(0, 38, [L("Shinjuro", "Sellen el complejo. Nadie sale.", "scream", 72, 10, 67, 17), L("Vesperwing", "Está activando los cierres.", "normal", 27, 24, 33, 30)]),
@@ -366,7 +378,7 @@ const pages = {
   "72": { panels: [
     P(0, 38, [L("Vesperwing", "Dos a la izquierda.", "normal", 27, 10, 33, 17), L("Dusk", "Tres.", "normal", 72, 24, 67, 30)]),
     P(38, 72, [L("Vesperwing", "El tercero estaba atrás.", "normal", 27, 47, 33, 54), L("Dusk", "Por eso son tres.", "normal", 72, 61, 67, 67)]),
-    P(72, 100, [L("Shinjuro", "Esto no termina acá.", "normal", 72, 82, 67, 88), L("Dusk", "No.", "normal", 28, 93, 34, 97), L("Dusk", "Pero vos sí terminaste por hoy.", "normal", 28, 97, 34, 99)])
+    P(72, 100, [L("Shinjuro", "Kurogane no olvida una deuda.", "normal", 72, 82, 67, 88), L("Dusk", "No.", "normal", 28, 93, 34, 97), L("Dusk", "Pero vos sí terminaste por hoy.", "normal", 28, 97, 34, 99)])
   ]},
   "73": { panels: [
     P(0, 38, [L("Vesperwing", "Puerta cerrada.", "normal", 27, 10, 33, 17), L("Dusk", "Techo.", "normal", 72, 24, 67, 30)]),

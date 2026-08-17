@@ -3,10 +3,15 @@ import {
   PanelSound,
   PanelStop,
   AudioTrack,
+  AudioPlaybackController,
   Dialogues,
   playAudioWithGain,
 } from "./audioPlayer";
 import { getPageKeyFromUrl, getComicAssetUrl } from "./readerUtils";
+
+const BACKGROUND_DUCK_GAIN = 0.3;
+const DUCK_ATTACK_MS = 300;
+const DUCK_RELEASE_MS = 700;
 
 interface UseReaderAudioProps {
   mode: "read" | "edit";
@@ -25,10 +30,12 @@ export function useReaderAudio({
   localDialogues,
   activePanel,
 }: UseReaderAudioProps) {
-  const activePanelAudiosRef = useRef<Set<{ audio: HTMLAudioElement; stop: (fade: number) => void }>>(new Set());
+  const activePanelAudiosRef = useRef<Set<AudioPlaybackController>>(new Set());
   const activePanelTimersRef = useRef<Set<NodeJS.Timeout>>(new Set());
   const prevPageIdxRef = useRef<number>(pageIdx);
-  const activeTracksRef = useRef<Map<string, { audio: HTMLAudioElement; stop: (fade: number) => void }>>(new Map());
+  const activeTracksRef = useRef<Map<string, AudioPlaybackController>>(new Map());
+  const duckedTrackIdsRef = useRef<Set<string>>(new Set());
+  const updateTrackDuckingRef = useRef<() => void>(() => undefined);
   const [activeMusicTrack, setActiveMusicTrack] = useState<AudioTrack | null>(null);
 
   // Gather and memoize all sounds config for this panel with stable dependencies
@@ -88,7 +95,7 @@ export function useReaderAudio({
       const soundStartTime = soundItem.soundStartTime || 0;
       const soundEndTime = soundItem.soundEndTime || undefined;
 
-      let soundObj: { audio: HTMLAudioElement; stop: (fade: number) => void } | null = null;
+      let soundObj: AudioPlaybackController | null = null;
 
       const playWithDelay = () => {
         try {
@@ -190,6 +197,39 @@ export function useReaderAudio({
     const activeTracks = activeTracksRef.current;
     const currentPageKey = getPageKeyFromUrl(pages[pageIdx]) || "";
 
+    const updateTrackDucking = () => {
+      const playingTracks = tracks.filter(
+        (track) => activeTracks.has(track.id)
+          && isPositionInTrackRange(track, currentPageKey, panelIdx)
+      );
+
+      playingTracks.forEach((track) => {
+        const shouldDuck = track.layer === "music" && playingTracks.some((otherTrack) => (
+          otherTrack.id !== track.id
+          && comparePositions(
+            otherTrack.startPageKey,
+            otherTrack.startPanelIdx,
+            track.startPageKey,
+            track.startPanelIdx
+          ) > 0
+        ));
+        const isDucked = duckedTrackIdsRef.current.has(track.id);
+        if (shouldDuck === isDucked) return;
+
+        activeTracks.get(track.id)?.setGainMultiplier(
+          shouldDuck ? BACKGROUND_DUCK_GAIN : 1,
+          shouldDuck ? DUCK_ATTACK_MS : DUCK_RELEASE_MS
+        );
+        if (shouldDuck) duckedTrackIdsRef.current.add(track.id);
+        else duckedTrackIdsRef.current.delete(track.id);
+      });
+
+      duckedTrackIdsRef.current.forEach((trackId) => {
+        if (!activeTracks.has(trackId)) duckedTrackIdsRef.current.delete(trackId);
+      });
+    };
+    updateTrackDuckingRef.current = updateTrackDucking;
+
     tracks.forEach((track: AudioTrack) => {
       const inRange = isPositionInTrackRange(track, currentPageKey, panelIdx);
       const isPlaying = activeTracks.has(track.id);
@@ -220,9 +260,12 @@ export function useReaderAudio({
               },
               () => {
                 activeTracks.delete(track.id);
+                duckedTrackIdsRef.current.delete(track.id);
+                updateTrackDuckingRef.current();
               }
             );
             activeTracks.set(track.id, soundObj);
+            updateTrackDucking();
           } catch (err) {
             console.error("[AudioTrack] Error playing track:", track.id, err);
           }
@@ -239,6 +282,7 @@ export function useReaderAudio({
         const fadeOut = track.soundConfig?.fadeOut ?? 0;
         soundObj.stop(fadeOut);
         activeTracks.delete(track.id);
+        duckedTrackIdsRef.current.delete(track.id);
       }
     });
 
@@ -247,15 +291,30 @@ export function useReaderAudio({
       if (!exists) {
         soundObj.stop(0);
         activeTracks.delete(trackId);
+        duckedTrackIdsRef.current.delete(trackId);
       }
     });
 
+    updateTrackDucking();
+
     // Determine current active music track for HUD/mini-player display
-    const currentPlayingMusic = tracks.find(
-      (t) => t.layer === "music" && isPositionInTrackRange(t, currentPageKey, panelIdx)
-    );
+    const currentPlayingMusic = tracks
+      .filter((track) => (
+        track.layer === "music"
+        && activeTracks.has(track.id)
+        && isPositionInTrackRange(track, currentPageKey, panelIdx)
+      ))
+      .reduce<AudioTrack | null>((latest, track) => {
+        if (!latest) return track;
+        return comparePositions(
+          track.startPageKey,
+          track.startPanelIdx,
+          latest.startPageKey,
+          latest.startPanelIdx
+        ) > 0 ? track : latest;
+      }, null);
     setActiveMusicTrack(currentPlayingMusic || null);
-  }, [panelIdx, pageIdx, mode, tracksListString, isPositionInTrackRange, pages]);
+  }, [panelIdx, pageIdx, mode, tracksListString, isPositionInTrackRange, comparePositions, pages]);
 
   useEffect(() => {
     if (mode === "read") return;
@@ -263,6 +322,7 @@ export function useReaderAudio({
       soundObj.stop(0);
     });
     activeTracksRef.current.clear();
+    duckedTrackIdsRef.current.clear();
     setActiveMusicTrack(null);
   }, [mode]);
 
@@ -272,6 +332,7 @@ export function useReaderAudio({
         soundObj.stop(0);
       });
       activeTracksRef.current.clear();
+      duckedTrackIdsRef.current.clear();
 
       activePanelAudiosRef.current.forEach((soundObj) => {
         soundObj.stop(0);

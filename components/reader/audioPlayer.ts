@@ -79,6 +79,12 @@ export type Dialogues = {
   pages?: Record<string, PageData>;
 };
 
+export type AudioPlaybackController = {
+  audio: HTMLAudioElement;
+  stop: (fadeOutDuration: number) => void;
+  setGainMultiplier: (multiplier: number, transitionDuration?: number) => void;
+};
+
 // ─── Web Audio API Helpers for Mobile/iOS Compatibility ──────────────────────
 
 let sharedAudioContext: AudioContext | null = null;
@@ -118,7 +124,7 @@ export function playAudioWithGain(
     endTime?: number;
   },
   onEnded?: () => void
-) {
+): AudioPlaybackController {
   const ctx = getAudioContext();
   const volume = options.volume ?? 1;
   const targetVolume = volume * volume; // logarithmic scaling
@@ -135,6 +141,56 @@ export function playAudioWithGain(
   let gainNode: GainNode | null = null;
   let sourceNode: MediaElementAudioSourceNode | null = null;
   let usingGainNode = false;
+  let gainMultiplier = 1;
+  let nativeVolumeInterval: ReturnType<typeof setInterval> | null = null;
+
+  const effectiveTargetVolume = () => Math.max(0, Math.min(1, targetVolume * gainMultiplier));
+
+  const clearNativeVolumeInterval = () => {
+    if (nativeVolumeInterval) {
+      clearInterval(nativeVolumeInterval);
+      nativeVolumeInterval = null;
+    }
+  };
+
+  const rampNativeVolume = (nextVolume: number, duration: number) => {
+    clearNativeVolumeInterval();
+    const safeVolume = Math.max(0, Math.min(1, nextVolume));
+    if (duration <= 0) {
+      audio.volume = safeVolume;
+      return;
+    }
+
+    const initialVolume = audio.volume;
+    const steps = Math.max(1, Math.round(duration / 20));
+    let currentStep = 0;
+    nativeVolumeInterval = setInterval(() => {
+      currentStep += 1;
+      const progress = Math.min(1, currentStep / steps);
+      audio.volume = initialVolume + (safeVolume - initialVolume) * progress;
+      if (progress >= 1) clearNativeVolumeInterval();
+    }, duration / steps);
+  };
+
+  const setGainMultiplier = (multiplier: number, transitionDuration = 0) => {
+    gainMultiplier = Math.max(0, Math.min(1, multiplier));
+    const nextVolume = effectiveTargetVolume();
+
+    if (usingGainNode && gainNode && ctx) {
+      const now = ctx.currentTime;
+      const currentGain = gainNode.gain.value;
+      gainNode.gain.cancelScheduledValues(now);
+      gainNode.gain.setValueAtTime(currentGain, now);
+      if (transitionDuration > 0) {
+        gainNode.gain.linearRampToValueAtTime(nextVolume, now + transitionDuration / 1000);
+      } else {
+        gainNode.gain.setValueAtTime(nextVolume, now);
+      }
+      return;
+    }
+
+    rampNativeVolume(nextVolume, transitionDuration);
+  };
 
   if (ctx) {
     try {
@@ -197,32 +253,21 @@ export function playAudioWithGain(
 
     if (usingGainNode && gainNode && ctx) {
       // GainNode controls volume — apply fade or target gain
+      const nextVolume = effectiveTargetVolume();
+      gainNode.gain.cancelScheduledValues(ctx.currentTime);
       if (fadeIn > 0) {
         gainNode.gain.setValueAtTime(0, ctx.currentTime);
-        gainNode.gain.linearRampToValueAtTime(targetVolume, ctx.currentTime + fadeIn / 1000);
+        gainNode.gain.linearRampToValueAtTime(nextVolume, ctx.currentTime + fadeIn / 1000);
       } else {
-        gainNode.gain.setValueAtTime(targetVolume, ctx.currentTime);
+        gainNode.gain.setValueAtTime(nextVolume, ctx.currentTime);
       }
     } else if (!usingGainNode) {
       // Native volume fallback with optional fade-in
       if (fadeIn > 0) {
         audio.volume = 0;
-        const fadeInSteps = 50;
-        const stepDuration = fadeIn / fadeInSteps;
-        const volumePerStep = targetVolume / fadeInSteps;
-        let currentStep = 0;
-
-        const fadeInInterval = setInterval(() => {
-          if (currentStep < fadeInSteps) {
-            audio.volume = Math.min(targetVolume, audio.volume + volumePerStep);
-            currentStep++;
-          } else {
-            audio.volume = targetVolume;
-            clearInterval(fadeInInterval);
-          }
-        }, stepDuration);
+        rampNativeVolume(effectiveTargetVolume(), fadeIn);
       } else {
-        audio.volume = targetVolume;
+        audio.volume = effectiveTargetVolume();
       }
     }
   }, { once: true });
@@ -236,10 +281,13 @@ export function playAudioWithGain(
 
   return {
     audio,
+    setGainMultiplier,
     stop: (fadeOutDuration: number) => {
       if (checkInterval) clearInterval(checkInterval);
+      clearNativeVolumeInterval();
       if (ctx && gainNode && fadeOutDuration > 0) {
         const currentGain = gainNode.gain.value;
+        gainNode.gain.cancelScheduledValues(ctx.currentTime);
         gainNode.gain.setValueAtTime(currentGain, ctx.currentTime);
         gainNode.gain.linearRampToValueAtTime(0, ctx.currentTime + fadeOutDuration / 1000);
         setTimeout(() => {

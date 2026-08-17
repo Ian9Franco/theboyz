@@ -1,7 +1,10 @@
 {
   "title": "Primer Vuelo",
   "number": 5,
-  "status": "draft",
-  "date": "26/08/2026",
-  "estimatedTime": "12 días"
+  "status": "published",
+  "date": "17/08/2026",
+  "estimatedTime": "12 días",
+  "nuevo": true,
+  "releaseDate": "17/08/2026",
+  "portada": "Portada.webp"
 }

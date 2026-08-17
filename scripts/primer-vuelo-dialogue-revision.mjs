@@ -1,6 +1,19 @@
 const line = (speaker, text, style, posX, posY, tailX = posX, tailY = posY + 8) => {
   const result = { text, speaker, size: style === "caption" ? "medium" : "small", posX, posY };
 
+  if (/^oni$/i.test(speaker)) {
+    result.speaker = "ONI";
+    result.customBg = "#e81818";
+    result.customColor = "#ffffff";
+    result.textColor = "#000000";
+  }
+  if (/^shinjuro$/i.test(speaker)) {
+    result.speaker = "Shinjuro";
+    result.customBg = "#0b1f3a";
+    result.customColor = "#000000";
+    result.textColor = "#ffffff";
+  }
+
   if (style !== "normal") result.style = style;
 
   if (style === "caption" || style === "cinematic" || style === "sfx") {
