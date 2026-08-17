@@ -896,14 +896,18 @@
           "zoomRects": [
             { "x": 0, "y": 35, "w": 100, "h": 24 }
           ],
-          "dialogue": []
+          "dialogue": [
+            { "text": "Seguí derecho, venezolano.", "speaker": "Vigía", "size": "small", "posX": 76, "posY": 38, "tailX": 60, "tailY": 44, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
         },
         {
           "focusY": 0.69,
           "zoomRects": [
             { "x": 0, "y": 60, "w": 100, "h": 18 }
           ],
-          "dialogue": []
+          "dialogue": [
+            { "text": "La calle está ocupada hoy.", "speaker": "Vigía", "size": "small", "posX": 72, "posY": 60, "tailX": 56, "tailY": 66, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18 }
+          ]
         },
         {
           "focusY": 0.89,
