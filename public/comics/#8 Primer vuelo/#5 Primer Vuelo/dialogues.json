@@ -3558,7 +3558,7 @@
         {
           "focusY": 0.86,
           "dialogue": [
-            { "text": "Hola, pequeño.", "speaker": "Sofi", "style": "whisper", "size": "small", "posX": 25, "posY": 75, "tailX": 50, "tailY": 75, "tailWidth": 6, "tailCurvature": -22 },
+            { "text": "Mónaco, ¿me extrañaste?", "speaker": "Sofi", "style": "whisper", "size": "small", "posX": 25, "posY": 75, "tailX": 50, "tailY": 75, "tailWidth": 6, "tailCurvature": -22 },
             { "text": "Vos no necesitás explicaciones.", "speaker": "Sofi", "style": "thought", "size": "small", "posX": 90, "posY": 75, "tailX": 64, "tailY": 97, "tailWidth": 6, "tailCurvature": -22 }
           ],
           "zoomRects": [

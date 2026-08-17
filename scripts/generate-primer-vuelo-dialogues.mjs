@@ -474,7 +474,7 @@ const pages = {
   "93": { panels: [
     P(0, 35, [L("Sofi", "Llegué.", "whisper", 28, 12, 34, 19), L("Sofi", "Kenji... llegué.", "thought", 72, 25, 67, 31)]),
     P(35, 72, [L("Sofi", "No sé si eso cuenta como volver.", "thought", 28, 45, 34, 52), L("Sofi", "Pero estoy acá.", "thought", 72, 61, 67, 67)]),
-    P(72, 100, [L("Sofi", "Hola, pequeño.", "whisper", 28, 82, 34, 88), L("Sofi", "Vos no necesitás explicaciones.", "thought", 70, 93, 64, 97)])
+    P(72, 100, [L("Sofi", "Mónaco, ¿me extrañaste?", "whisper", 28, 82, 34, 88), L("Sofi", "Vos no necesitás explicaciones.", "thought", 70, 93, 64, 97)])
   ]},
   "94": { panels: [
     P(0, 42, [L("Víctima", "¡AYUDA!", "scream", 72, 12, 67, 19), L("Sofi", "No.", "whisper", 27, 25, 33, 31)]),
