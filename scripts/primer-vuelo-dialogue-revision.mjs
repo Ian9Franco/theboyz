@@ -393,14 +393,56 @@ const shiftAudioAfterInsertingPagesAfter39 = (tracks) => {
   }
 };
 
+const removePages55And66 = (pages) => {
+  const result = {};
+  for (const [pageKey, page] of Object.entries(pages)) {
+    const pageNumber = Number(pageKey);
+    if (pageNumber === 55 || pageNumber === 66) continue;
+    const shifted = pageNumber >= 67 ? pageNumber - 2 : pageNumber >= 56 ? pageNumber - 1 : pageNumber;
+    result[String(shifted)] = page;
+  }
+  return result;
+};
+
+const shiftAudioAfterRemovingPages55And66 = (tracks) => {
+  const remap = (pageNumber) => pageNumber >= 67 ? pageNumber - 2 : pageNumber >= 56 ? pageNumber - 1 : pageNumber;
+
+  for (let index = (tracks?.length ?? 0) - 1; index >= 0; index -= 1) {
+    const track = tracks[index];
+    const startPage = Number(track.startPageKey);
+    if (startPage === 55 || startPage === 66) {
+      tracks.splice(index, 1);
+      continue;
+    }
+    if (Number.isInteger(startPage)) track.startPageKey = String(remap(startPage));
+
+    const stopPage = Number(track.stopTrigger?.pageKey);
+    if (Number.isInteger(stopPage)) {
+      if (stopPage === 55) track.stopTrigger.pageKey = "54";
+      else if (stopPage === 66) track.stopTrigger.pageKey = "64";
+      else track.stopTrigger.pageKey = String(remap(stopPage));
+    }
+  }
+};
+
 export const applyPrimerVueloRevision = (document) => {
-  if (document.primerVueloRevision === 6) return structuredClone(document);
+  if (document.primerVueloRevision === 7) return structuredClone(document);
+
+  if (document.primerVueloRevision === 6) {
+    const revised = structuredClone(document);
+    revised.pages = removePages55And66(revised.pages ?? {});
+    shiftAudioAfterRemovingPages55And66(revised.audioTracks);
+    revised.primerVueloRevision = 7;
+    return revised;
+  }
 
   if (document.primerVueloRevision === 5) {
     const revised = structuredClone(document);
     revised.pages = insertDuskOniPagesAfter39(revised.pages ?? {});
     shiftAudioAfterInsertingPagesAfter39(revised.audioTracks);
-    revised.primerVueloRevision = 6;
+    revised.pages = removePages55And66(revised.pages);
+    shiftAudioAfterRemovingPages55And66(revised.audioTracks);
+    revised.primerVueloRevision = 7;
     return revised;
   }
 
@@ -411,7 +453,9 @@ export const applyPrimerVueloRevision = (document) => {
     if (finalRemoval.removed) shiftAudioAfterRemovingPages34And35(revised.audioTracks);
     revised.pages = insertDuskOniPagesAfter39(revised.pages);
     shiftAudioAfterInsertingPagesAfter39(revised.audioTracks);
-    revised.primerVueloRevision = 6;
+    revised.pages = removePages55And66(revised.pages);
+    shiftAudioAfterRemovingPages55And66(revised.audioTracks);
+    revised.primerVueloRevision = 7;
     return revised;
   }
 
@@ -468,7 +512,9 @@ export const applyPrimerVueloRevision = (document) => {
 
   revised.pages = insertDuskOniPagesAfter39(revised.pages);
   shiftAudioAfterInsertingPagesAfter39(revised.audioTracks);
-  revised.primerVueloRevision = 6;
+  revised.pages = removePages55And66(revised.pages);
+  shiftAudioAfterRemovingPages55And66(revised.audioTracks);
+  revised.primerVueloRevision = 7;
 
   return revised;
 };
