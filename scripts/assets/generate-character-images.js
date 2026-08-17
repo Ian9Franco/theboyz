@@ -197,6 +197,12 @@ const extraAliases = {
   arthursterling: 'sterling',
   arthurstterling: 'sterling',
   arthurashsterling: 'sterling',
+  brooke: 'brooke_byte',
+  byte: 'brooke_byte',
+  brookebyte: 'brooke_byte',
+  daichi: 'daichi_ren',
+  ren: 'daichi_ren',
+  daichiren: 'daichi_ren',
 };
 
 function normalize(s) {
@@ -332,19 +338,6 @@ function scanFichas(characters) {
   }
 
   walkFichas(fichasDir);
-
-  // Algunas fichas representan a dos personajes y el nombre de la carpeta
-  // sólo se resuelve al primero. Compartimos esos recursos con ambos perfiles.
-  const sharedFichaGroups = [
-    ['brooke', 'byte'],
-    ['daichi', 'ren'],
-  ];
-
-  for (const group of sharedFichaGroups) {
-    const sharedImages = [...new Set(group.flatMap(id => result[id] || []))];
-    if (sharedImages.length === 0) continue;
-    for (const id of group) result[id] = sharedImages;
-  }
 
   // Sort each character's fichas for stable output
   for (const id of Object.keys(result)) {

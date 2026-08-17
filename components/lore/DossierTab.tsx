@@ -86,7 +86,7 @@ export function DossierTab({ unlockAll, readChapters }: DossierTabProps) {
   const CATEGORIES = [
     { id: "pibes", label: "LOS PIBES" },
     { id: "antagonistas", label: "ANTAGONISTAS" },
-    { id: "secundarios", label: "SECUNDARIOS" },
+    { id: "secundarios", label: "ALIADOS Y SOPORTE" },
     { id: "deidades", label: "DEIDADES" },
     { id: "entidades", label: "ENTIDADES" },
   ];

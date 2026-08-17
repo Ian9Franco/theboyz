@@ -80,8 +80,8 @@ export function UnlockNotificationModal({
     if (norm === "primer vuelo" || norm === "primer-vuelo") {
       return {
         title: "EXPEDIENTES DE TOKIO DESBLOQUEADOS",
-        item: "BROOKE, BYTE, DAICHI, REN, ONI & SHINJURO",
-        desc: "Se ha autorizado el acceso a todas las fichas, perfiles y artes conceptuales disponibles del equipo de Tokio y del Clan Kurogane.",
+        item: "BROOKE & BYTE / DAICHI & REN / ONI / SHINJURO",
+        desc: "Se han autorizado dos expedientes conjuntos en Aliados y soporte, junto con los perfiles y artes disponibles de ONI y Shinjuro en Antagonistas.",
         color: "#00ff66",
       };
     }

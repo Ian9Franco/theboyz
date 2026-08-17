@@ -101,6 +101,10 @@ registerFolderAlias('vopss', 'comandante');
 registerFolderAlias('sterling', 'sterling');
 registerFolderAlias('arthur sterling', 'sterling');
 registerFolderAlias('arthur stterling', 'sterling');
+folderToCharId['brooke'] = 'brooke_byte';
+folderToCharId['byte'] = 'brooke_byte';
+folderToCharId['daichi'] = 'daichi_ren';
+folderToCharId['ren'] = 'daichi_ren';
 
 const IMAGE_EXTENSIONS = new Set(['.webp', '.png', '.jpg', '.jpeg', '.gif']);
 
@@ -227,7 +231,7 @@ function generate() {
         );
 
         if (allImages.length > 0) {
-          mapping[charId] = allImages;
+          mapping[charId] = [...(mapping[charId] || []), ...allImages];
         }
       }
     }

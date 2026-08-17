@@ -994,7 +994,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
-  "brooke": [
+  "brooke_byte": [
     {
       "name": "Brooke Alt Sheet",
       "path": "/personajes/GUIAS/Secundarios/Brooke/BROOKE_alt_sheet.webp",
@@ -1015,9 +1015,7 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
-    }
-  ],
-  "byte": [
+    },
     {
       "name": "Byte Sheet",
       "path": "/personajes/GUIAS/Secundarios/BYTE/Byte_sheet.webp",
@@ -1035,10 +1033,17 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
       "isAlt": false
     }
   ],
-  "daichi": [
+  "daichi_ren": [
     {
       "name": "Daichi Sheet",
       "path": "/personajes/GUIAS/Secundarios/Daichi/Daichi_sheet.webp",
+      "section": "base",
+      "sectionLabel": "Base",
+      "isAlt": false
+    },
+    {
+      "name": "Ren Sheet",
+      "path": "/personajes/GUIAS/Secundarios/Ren/Ren_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false
@@ -1136,15 +1141,6 @@ export const conceptArts: Record<string, ConceptArtItem[]> = {
     {
       "name": "Piratas Espaciales Sheet",
       "path": "/personajes/GUIAS/Secundarios/Piratas espaciales/Piratas espaciales_sheet.webp",
-      "section": "base",
-      "sectionLabel": "Base",
-      "isAlt": false
-    }
-  ],
-  "ren": [
-    {
-      "name": "Ren Sheet",
-      "path": "/personajes/GUIAS/Secundarios/Ren/Ren_sheet.webp",
       "section": "base",
       "sectionLabel": "Base",
       "isAlt": false

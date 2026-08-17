@@ -24,7 +24,7 @@ const rawCharacters: CharacterDetail[] = [
 export const CHARACTER_DETAILS: CharacterDetail[] = rawCharacters
   .map((char) => {
     // Exclude specific IDs that only have guides/fichas and shouldn't be shown yet
-    const excludedIds = ["supertrucker", "aurelia", "john_wick", "lucian", "mando", "vexa"];
+    const excludedIds = ["supertrucker", "aurelia", "john_wick", "lucian", "mando", "vexa", "brooke", "byte", "daichi", "ren"];
     if (excludedIds.includes(char.id)) {
       return null;
     }

@@ -856,6 +856,68 @@ export const secundarios: CharacterDetail[] = [
     }
   },
   {
+    id: 'brooke_byte',
+    name: 'Brooke & BYTE',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.webp',
+    fullBody: '/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.webp',
+    color: '#00ff66',
+    role: 'Piloto y copiloto del equipo de Tokio',
+    visualCode: 'Brooke al volante y BYTE como unidad robótica compacta de telemetría y asistencia',
+    perfil: [
+      'Doble lectura: Brooke interpreta el auto desde el cuerpo; BYTE traduce sensores, rivales y rutas en información inmediata.',
+      'Confianza de cabina: BYTE detecta la tensión de Brooke antes de que ella la admita y la acompaña sin quitarle el control.',
+      'Equipo titular: Juntos convierten el Skyline en una extensión coordinada de instinto humano y precisión técnica.'
+    ],
+    crisis: 'Si la telemetría se satura o el auto deja de responder, ambos deben confiar en el criterio de Brooke sin garantías mecánicas.',
+    stats: { fuerza: 5, inteligencia: 9, carisma: 9, suerte: 7, combate: 8, defensa: 7, especialVal: 10 },
+    especialLabel: 'Sincronía de Cabina',
+    hint: 'Terminá Primer Vuelo para desbloquear.',
+    powers: {
+      role: 'Dupla de carrera',
+      habilidades: [
+        'Telemetría Instintiva: Une las sensaciones de Brooke con el análisis de BYTE para anticipar fallas y movimientos rivales.',
+        'Trayectoria Compartida: Calculan líneas de sobrepaso sin sacrificar el control ni la integridad del vehículo.',
+        'Ancla Emocional: BYTE ayuda a Brooke a recuperar el ritmo cuando el recuerdo del accidente amenaza con paralizarla.'
+      ],
+      significa: 'El vínculo entre piloto y máquina convertido en una sola decisión a máxima velocidad.',
+      crisis: 'Una interferencia severa puede aislar a BYTE y obligar a Brooke a conducir sin su referencia técnica habitual.',
+      stats: { fuerza: 5, inteligencia: 10, carisma: 9, suerte: 7, combate: 9, defensa: 8, especialVal: 10 }
+    }
+  },
+  {
+    id: 'daichi_ren',
+    name: 'Daichi & Ren',
+    category: 'secundarios',
+    isSecondary: true,
+    image: '/personajes/Fichas/Secundarios/Daichi&Ren/Daichi&Ren_ficha.webp',
+    fullBody: '/personajes/Fichas/Secundarios/Daichi&Ren/Daichi&Ren_ficha.webp',
+    color: '#d97706',
+    role: 'Mecánico e intermediario del taller de Tokio',
+    visualCode: 'Daichi como presencia estable del taller y Ren siempre listo para entrar o salir con una pieza imposible',
+    perfil: [
+      'Dos mitades del taller: Daichi mantiene las máquinas con vida; Ren encuentra las piezas y puertas que oficialmente no existen.',
+      'Experiencia y calle: Uno mide desgaste y consecuencias. El otro negocia favores, secretos y rutas clandestinas.',
+      'Lealtad difícil: Su amistad se construyó entre problemas, deudas y soluciones improvisadas que siempre terminaban sosteniendo al equipo.'
+    ],
+    crisis: 'Ren sobrevive ocultando información y Daichi intenta proteger a todos mediante límites; Kurogane convierte ambas virtudes en una pérdida irreversible.',
+    stats: { fuerza: 6, inteligencia: 9, carisma: 8, suerte: 5, combate: 6, defensa: 7, especialVal: 9 },
+    especialLabel: 'Red del Taller',
+    hint: 'Terminá Primer Vuelo para desbloquear.',
+    powers: {
+      role: 'Soporte mecánico y logístico',
+      habilidades: [
+        'Diagnóstico y Reconstrucción: Daichi identifica fallas y devuelve vehículos dañados a condiciones de carrera.',
+        'Mercado Gris: Ren localiza repuestos, accesos y contactos fuera de cualquier registro oficial.',
+        'Solución Imposible: Combinan experiencia mecánica y recursos clandestinos cuando el equipo se queda sin alternativas.'
+      ],
+      significa: 'La infraestructura humana que permite que el resto del equipo llegue a la largada y consiga volver.',
+      crisis: 'Cuando Kurogane corta la red clandestina, Daichi pierde tanto a su proveedor como a uno de sus amigos más antiguos.',
+      stats: { fuerza: 7, inteligencia: 9, carisma: 8, suerte: 5, combate: 6, defensa: 8, especialVal: 9 }
+    }
+  },
+  {
     id: 'ar_cnido_mutante',
     name: 'ARÁCNIDO-MUTANTE',
     category: 'secundarios',

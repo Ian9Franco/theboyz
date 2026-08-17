@@ -134,6 +134,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "portada": null,
     "portadas": [
     ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
+  "brooke_byte": {
+    "portada": null,
+    "portadas": [
+    ],
     "ficha": "/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.webp",
     "fichas": [
       "/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.webp",
@@ -143,9 +151,8 @@ export const characterImages: Record<string, CharacterImages> = {
     "portada": null,
     "portadas": [
     ],
-    "ficha": "/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.webp",
+    "ficha": null,
     "fichas": [
-      "/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.webp",
     ]
   },
   "centinelas": {
@@ -177,6 +184,14 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "daichi": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
+  "daichi_ren": {
     "portada": null,
     "portadas": [
     ],
@@ -528,9 +543,8 @@ export const characterImages: Record<string, CharacterImages> = {
     "portada": null,
     "portadas": [
     ],
-    "ficha": "/personajes/Fichas/Secundarios/Daichi&Ren/Daichi&Ren_ficha.webp",
+    "ficha": null,
     "fichas": [
-      "/personajes/Fichas/Secundarios/Daichi&Ren/Daichi&Ren_ficha.webp",
     ]
   },
   "rylai": {
