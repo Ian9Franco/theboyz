@@ -9,6 +9,7 @@ import { DraftLockScreen } from "@/components/reader/DraftLockScreen";
 import { CinematicReader } from "@/components/reader/CinematicReader";
 import { getComicPageUrl } from "@/components/reader/readerUtils";
 import { UnlockNotificationModal } from "@/components/UnlockNotificationModal";
+import { markChapterCompletionUnlock } from "@/lib/characterData/completionUnlocks";
 
 export default function ChapterPage() {
   const params  = useParams();
@@ -26,6 +27,7 @@ export default function ChapterPage() {
   const [showUnlockModal, setShowUnlockModal] = useState(false);
 
   const triggerUnlockNotification = useCallback(() => {
+    markChapterCompletionUnlock(id);
     const triggerChapters = [
       "un lugar",
       "un-lugar",
@@ -35,7 +37,9 @@ export default function ChapterPage() {
       "la caceria",
       "el mecanico. la piloto, el contrabandista y el robot",
       "el-mecanico-la-piloto-el-contrabandista-y-el-robot",
-      "el mecanico"
+      "el mecanico",
+      "primer vuelo",
+      "primer-vuelo"
     ];
     if (triggerChapters.includes(id.toLowerCase().trim())) {
       try {

@@ -333,6 +333,19 @@ function scanFichas(characters) {
 
   walkFichas(fichasDir);
 
+  // Algunas fichas representan a dos personajes y el nombre de la carpeta
+  // sólo se resuelve al primero. Compartimos esos recursos con ambos perfiles.
+  const sharedFichaGroups = [
+    ['brooke', 'byte'],
+    ['daichi', 'ren'],
+  ];
+
+  for (const group of sharedFichaGroups) {
+    const sharedImages = [...new Set(group.flatMap(id => result[id] || []))];
+    if (sharedImages.length === 0) continue;
+    for (const id of group) result[id] = sharedImages;
+  }
+
   // Sort each character's fichas for stable output
   for (const id of Object.keys(result)) {
     result[id].sort();
@@ -350,6 +363,14 @@ function main() {
 
   console.log('\n📁 Scanning PORTADAS...');
   const portadasMap = scanPortadas(characters);
+  const portadaFallbacks = {
+    oni: path.join(baseDir, 'GUIAS', 'antagonistas', 'ONI', 'Oni_sheet.webp'),
+  };
+  for (const [id, fallbackPath] of Object.entries(portadaFallbacks)) {
+    if ((!portadasMap[id] || portadasMap[id].length === 0) && fs.existsSync(fallbackPath)) {
+      portadasMap[id] = [toPublicUrl(fallbackPath)];
+    }
+  }
   const portadasCount = Object.values(portadasMap).reduce((a, v) => a + v.length, 0);
   console.log(`   Mapped ${Object.keys(portadasMap).length} characters, ${portadasCount} portadas.`);
 

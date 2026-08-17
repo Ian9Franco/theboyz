@@ -372,29 +372,30 @@ export const antagonistas: CharacterDetail[] = [
     name: 'ONI',
     category: 'antagonistas',
     isSecondary: true,
-    image: '/personajes/PORTADAS/ONI/ONI.webp',
-    fullBody: '/personajes/PORTADAS/ONI/ONI.webp',
-    color: '#6b7280',
-    role: 'Nuevo Personaje',
-    visualCode: 'Descripción visual base',
+    image: '/personajes/GUIAS/antagonistas/ONI/Oni_sheet.webp',
+    fullBody: '/personajes/GUIAS/antagonistas/ONI/Oni_sheet.webp',
+    color: '#e81818',
+    role: 'Ejecutor principal del Clan Kurogane',
+    visualCode: 'Armadura táctica oni/samurái roja mate, placas negras, máscara demoníaca y ojos amarillos',
     perfil: [
-      'Detalle de perfil 1: Escribe aquí sobre el personaje.',
-      'Detalle de perfil 2: Escribe aquí sobre el personaje.',
-      'Detalle de perfil 3: Escribe aquí sobre el personaje.'
+      'Disciplina absoluta: ONI convirtió el control en identidad y ejecuta cada orden sin movimientos ni palabras innecesarias.',
+      'Verdugo de Kurogane: Cierra rutas, persigue objetivos marcados y utiliza el miedo como herramienta operativa.',
+      'Autoridad ilegible: La máscara y su economía verbal ocultan cualquier emoción hasta que pierde el dominio de la situación.'
     ],
-    crisis: 'Descripción de su momento de crisis o debilidad.',
-    stats: { fuerza: 5, inteligencia: 5, carisma: 5, suerte: 5, combate: 5, defensa: 5, especialVal: 5 },
-    especialLabel: 'Poder Único',
+    crisis: 'Pérdida de control: cuando su disciplina se rompe, la frustración y la furia vuelven predecible al hombre debajo de la máscara.',
+    stats: { fuerza: 8, inteligencia: 8, carisma: 5, suerte: 4, combate: 9, defensa: 8, especialVal: 8 },
+    especialLabel: 'Disciplina de Ejecución',
+    hint: 'Terminá Primer Vuelo para desbloquear.',
     powers: {
-      role: 'Rol de Poder',
+      role: 'Ejecutor táctico',
       habilidades: [
-        'Habilidad 1: Descripción de la habilidad.',
-        'Habilidad 2: Descripción de la habilidad.',
-        'Habilidad 3: Descripción de la habilidad.'
+        'Control de Espacios: Bloquea salidas y fuerza al objetivo hacia posiciones donde no puede maniobrar.',
+        'Combate Disciplinado: Mantiene presión constante mediante fuerza, precisión y lectura del entorno.',
+        'Armadura Kurogane: Su protección oni/samurái absorbe impactos y sostiene enfrentamientos prolongados.'
       ],
-      significa: 'Qué significa su poder en combate.',
-      crisis: 'Debilidad o crisis al usar su poder.',
-      stats: { fuerza: 6, inteligencia: 6, carisma: 6, suerte: 6, combate: 6, defensa: 6, especialVal: 6 }
+      significa: 'Una presencia diseñada para cerrar todas las opciones hasta que sólo queda obedecer o morir.',
+      crisis: 'Si un rival rompe su ritmo o lo obliga a improvisar emocionalmente, su precisión comienza a degradarse.',
+      stats: { fuerza: 9, inteligencia: 8, carisma: 5, suerte: 4, combate: 10, defensa: 9, especialVal: 8 }
     }
   }
 ];

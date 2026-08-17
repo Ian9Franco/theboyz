@@ -18,6 +18,7 @@ import { MiniMusicPlayer } from "./MiniMusicPlayer";
 import { getComicPageUrl, getPageKeyFromUrl } from "./readerUtils";
 import { Dialogues, PanelStop } from "./audioPlayer";
 import { UnlockNotificationModal } from "@/components/UnlockNotificationModal";
+import { markChapterCompletionUnlock } from "@/lib/characterData/completionUnlocks";
 
 export function CinematicReader({
   pages: rawPages,
@@ -52,13 +53,16 @@ export function CinematicReader({
 
   useEffect(() => {
     if (zoomedOut && pageIdx === pages.length - 1) {
+      markChapterCompletionUnlock(chapter.id);
       const triggerChapters = [
         "un lugar",
         "un-lugar",
         "kenji",
         "mativerse-chapter-one",
         "pecados de brooklyn-la mentira",
-        "la caceria"
+        "la caceria",
+        "primer vuelo",
+        "primer-vuelo"
       ];
       const chapId = chapter.id;
       if (triggerChapters.includes(chapId.toLowerCase().trim())) {

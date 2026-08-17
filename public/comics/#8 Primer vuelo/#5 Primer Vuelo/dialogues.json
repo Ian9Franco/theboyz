@@ -2547,8 +2547,8 @@
         {
           "focusY": 0.56,
           "dialogue": [
-            { "text": "No son copias…", "size": "small", "posX": 24, "posY": 38, "tailX": 14, "tailY": 42, "tailWidth": 6, "tailCurvature": -22, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
-            { "text": "Son trayectorias.", "size": "small", "posX": 60, "posY": 54, "tailX": 54, "tailY": 62, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
+            { "text": "¡¿Qué car@j#s?!", "size": "small", "posX": 24, "posY": 38, "tailX": 14, "tailY": 42, "tailWidth": 6, "tailCurvature": -22, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" },
+            { "text": "¡¿Vuela?!", "size": "small", "posX": 60, "posY": 54, "tailX": 54, "tailY": 62, "tailWidth": 6, "tailCurvature": -22, "width": 120, "fontSize": 8, "borderRadius": 18, "speaker": "Shinjuro", "customBg": "#0b1f3a", "customColor": "#000000", "textColor": "#ffffff" }
           ],
           "zoomRects": [
             { "x": 0, "y": 36, "w": 100, "h": 34 }

@@ -143,8 +143,9 @@ export const characterImages: Record<string, CharacterImages> = {
     "portada": null,
     "portadas": [
     ],
-    "ficha": null,
+    "ficha": "/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.webp",
     "fichas": [
+      "/personajes/Fichas/Secundarios/Brooke&Byte/Brooke&Byte_ficha.webp",
     ]
   },
   "centinelas": {
@@ -488,8 +489,9 @@ export const characterImages: Record<string, CharacterImages> = {
     ]
   },
   "oni": {
-    "portada": null,
+    "portada": "/personajes/GUIAS/antagonistas/ONI/Oni_sheet.webp",
     "portadas": [
+      "/personajes/GUIAS/antagonistas/ONI/Oni_sheet.webp",
     ],
     "ficha": null,
     "fichas": [
@@ -526,8 +528,9 @@ export const characterImages: Record<string, CharacterImages> = {
     "portada": null,
     "portadas": [
     ],
-    "ficha": null,
+    "ficha": "/personajes/Fichas/Secundarios/Daichi&Ren/Daichi&Ren_ficha.webp",
     "fichas": [
+      "/personajes/Fichas/Secundarios/Daichi&Ren/Daichi&Ren_ficha.webp",
     ]
   },
   "rylai": {

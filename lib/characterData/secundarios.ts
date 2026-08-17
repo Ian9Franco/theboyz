@@ -749,7 +749,7 @@ export const secundarios: CharacterDetail[] = [
     crisis: 'Carga Emocional post-accidente: Tras el choque del GT-R, debe superar el trauma físico y mecánico para recuperar la confianza en el Skyline final.',
     stats: { fuerza: 6, inteligencia: 8, carisma: 8, suerte: 6, combate: 8, defensa: 7, especialVal: 10 },
     especialLabel: 'Pilotaje Intuitivo',
-    hint: 'Terminá #4 (#8 Primer Vuelo) para desbloquear.',
+    hint: 'Terminá Primer Vuelo para desbloquear.',
     powers: {
       role: 'Piloto de Élite',
       habilidades: [
@@ -780,7 +780,7 @@ export const secundarios: CharacterDetail[] = [
     crisis: 'Sobrecarga de Datos: La interferencia de radio de Kurogane o temperaturas extremas pueden saturar sus sensores temporariamente.',
     stats: { fuerza: 4, inteligencia: 10, carisma: 9, suerte: 7, combate: 4, defensa: 6, especialVal: 9 },
     especialLabel: 'Telemetría Viva',
-    hint: 'Terminá #4 (#8 Primer Vuelo) para desbloquear.',
+    hint: 'Terminá Primer Vuelo para desbloquear.',
     powers: {
       role: 'Copiloto de Procesamiento',
       habilidades: [
@@ -811,7 +811,7 @@ export const secundarios: CharacterDetail[] = [
     crisis: 'Desgaste Físico: Su resistencia tiene un límite frente a jornadas interminables y la pérdida de aliados clave.',
     stats: { fuerza: 7, inteligencia: 9, carisma: 8, suerte: 5, combate: 5, defensa: 8, especialVal: 8 },
     especialLabel: 'Maestría de Foso',
-    hint: 'Terminá #4 (#8 Primer Vuelo) para desbloquear.',
+    hint: 'Terminá Primer Vuelo para desbloquear.',
     powers: {
       role: 'Maestro de la Mecánica',
       habilidades: [
@@ -842,7 +842,7 @@ export const secundarios: CharacterDetail[] = [
     crisis: 'Blanco de Kurogane: Su cercanía con las filtraciones lo convierte en objetivo prioritario de las operaciones de ONI.',
     stats: { fuerza: 5, inteligencia: 8, carisma: 9, suerte: 6, combate: 6, defensa: 5, especialVal: 7 },
     especialLabel: 'Red Subterránea',
-    hint: 'Terminá #4 (#8 Primer Vuelo) para desbloquear.',
+    hint: 'Terminá Primer Vuelo para desbloquear.',
     powers: {
       role: 'Informante y Conector',
       habilidades: [

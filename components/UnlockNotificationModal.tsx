@@ -77,6 +77,14 @@ export function UnlockNotificationModal({
         color: "#dc2626", // Crimson
       };
     }
+    if (norm === "primer vuelo" || norm === "primer-vuelo") {
+      return {
+        title: "EXPEDIENTES DE TOKIO DESBLOQUEADOS",
+        item: "BROOKE, BYTE, DAICHI, REN, ONI & SHINJURO",
+        desc: "Se ha autorizado el acceso a todas las fichas, perfiles y artes conceptuales disponibles del equipo de Tokio y del Clan Kurogane.",
+        color: "#00ff66",
+      };
+    }
     if (
       norm.includes("el mecanico") ||
       norm.includes("el-mecanico") ||
