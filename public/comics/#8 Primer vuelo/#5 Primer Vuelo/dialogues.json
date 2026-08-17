@@ -2827,6 +2827,16 @@
           ],
           "zoomRects": [
             { "x": 0, "y": 38, "w": 100, "h": 34 }
+          ],
+          "sounds": [
+            {
+              "sound": "/sounds/sfx/grapplin2.mp3",
+              "soundStartTime": 0,
+              "soundConfig": {
+                "volume": 0.6,
+                "playbackRate": 1
+              }
+            }
           ]
         },
         {
@@ -3689,7 +3699,7 @@
     {
       "id": "track-1786939145250-69z74",
       "layer": "music",
-      "src": "/sounds/autos/skyline corre.mp3",
+      "src": "/sounds/autos/skuline corre.mp3",
       "title": "skyline corre",
       "startPageKey": "29",
       "startPanelIdx": 1,
