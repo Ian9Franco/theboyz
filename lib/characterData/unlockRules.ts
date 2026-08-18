@@ -79,5 +79,6 @@ export const UNLOCK_RULES: Record<string, string[]> = {
   ar_cnido_mutante: [],
   tinker: [],
   alienigenas_gorrnek: [],
-  piratas_espaciales: []
+  piratas_espaciales: [],
+  celestial: []
 };

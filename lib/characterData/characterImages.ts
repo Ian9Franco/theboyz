@@ -155,6 +155,14 @@ export const characterImages: Record<string, CharacterImages> = {
     "fichas": [
     ]
   },
+  "celestial": {
+    "portada": null,
+    "portadas": [
+    ],
+    "ficha": null,
+    "fichas": [
+    ]
+  },
   "centinelas": {
     "portada": null,
     "portadas": [
