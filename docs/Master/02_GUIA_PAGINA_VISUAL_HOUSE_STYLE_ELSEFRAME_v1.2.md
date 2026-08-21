@@ -1,8 +1,8 @@
 # 02 — Guía de Página, Prompting y House Style Elseframe
 
-**Versión:** 1.2  
+**Versión:** 2.0  
 **Dependencia:** aplicar siempre junto a `00_GUIA_NUCLEO_ELSEFRAME.md`. Para el chat de prompts, utilizar además `01_GUIA_NARRATIVA_ELSEFRAME.md`.  
-**Uso principal:** diseño de página, viñetas, composición, acción, continuidad visual, prompting, generación de imágenes y depuración gráfica.
+**Uso principal:** diseño de página, viñetas, composición, acción, continuidad visual, prompting, generación de imágenes, depuración gráfica, protocolo de referencia dual y regeneración de sheets.
 
 ---
 
@@ -1133,6 +1133,144 @@ Aplicar este orden:
 
 Si dos referencias canónicas contradicen un rasgo importante y no puede determinarse cuál corresponde, preguntar antes de cerrar el prompt.
 
+## Hallazgo empírico: la imagen pesa más que el texto — v2.0
+
+Los modelos de generación de imagen (GPT Image en particular, pero también otros) presentan un **sesgo de entrenamiento hacia render suave y pictórico**.
+
+### El problema concreto
+
+Cuando se adjunta un sheet con acabado 3D/concept art junto con un prompt textual que indica "no 3D, no painterly, no gradientes", **el modelo tiende a copiar la técnica visual de la imagen adjunta e ignorar parcialmente las negaciones textuales**.
+
+Esto ocurre porque:
+
+1. El conditioning visual de la imagen de referencia pesa más que las instrucciones textuales negativas.
+2. Los modelos no tienen mecanismos de semilla fija ni conditioning persistente entre generaciones — cada imagen es "nueva" salvo el contexto visual directo.
+3. Listas largas de negativos sin acompañamiento de ejemplos visuales positivos tienden a ser descartadas por el prior del modelo.
+
+### Síntomas de la contaminación
+
+Una página contaminada por el render del sheet presenta:
+
+- degradés suaves en lugar de sombras hard-edged;
+- luz atmosférica difusa en lugar de masas planas por bloques;
+- sombreado por gradiente continuo;
+- línea de tinta diluida o ausente;
+- acabado general de "ilustración digital / concept art semirrealista".
+
+Esto es **exactamente lo que la sección 80 define como error** ("página que parece concept art").
+
+### Solución: Protocolo de Referencia Dual
+
+Para corregir este sesgo, cuando la herramienta de generación permite adjuntar imágenes de referencia, deben proporcionarse **dos imágenes con roles estrictamente separados**:
+
+1. **Imagen de Identidad** (el sheet/concept art del personaje, vehículo, locación, etc.) — solo para diseño, proporciones, colores, accesorios.
+2. **Imagen de Estilo** (páginas de cómic que representan el House Style deseado) — solo para técnica de render: línea de tinta, cel-shading, sombras duras, tratamiento de color.
+
+El prompt debe declarar explícitamente qué rol cumple cada imagen. Ver sección 52A para el protocolo completo.
+
+### Solución complementaria: Regeneración de Sheets
+
+Cuando un sheet fue generado con acabado 3D/concept art y se usa repetidamente como referencia, la solución más efectiva a largo plazo es **regenerar el sheet directamente en House Style** usando el Protocolo de Referencia Dual. Una vez regenerado, el sheet en House Style se convierte en la referencia primaria, eliminando permanentemente la fuente de contaminación.
+
+Ver sección 52B para el protocolo de regeneración.
+
+---
+
+# 52A. Protocolo de Referencia Dual — adjuntar identidad y estilo separados
+
+Cuando la herramienta de generación permita adjuntar más de una imagen, utilizar el siguiente protocolo.
+
+## Cuándo aplicar
+
+Siempre que se adjunte un sheet o concept art cuyo acabado visual **no coincida** con el House Style Elseframe y la herramienta permita adjuntar imágenes de referencia.
+
+## Estructura del prompt con referencia dual
+
+El prompt debe incluir un bloque explícito que asigne roles a cada imagen. Este bloque va **antes del contenido narrativo** y **no debe parafrasearse entre generaciones** (copiar literal para evitar deriva).
+
+### Bloque obligatorio de referencia dual
+
+```text
+TWO REFERENCE IMAGES ARE ATTACHED — EACH HAS A DIFFERENT, STRICT PURPOSE:
+
+REFERENCE 1 — CHARACTER SHEET (identity only):
+Use this image strictly for design identity: face shape, hairstyle, mask/helmet design, costume design, proportions, color palette, accessories, weapons, logos, insignia. Copy the design exactly. Do NOT copy its rendering, lighting, shading style, background, or material finish from this image — those must be discarded entirely.
+
+REFERENCE 2 — STYLE PAGES (rendering only):
+Use these images strictly for rendering technique: ink line weight and quality, flat cel-shaded color blocks, hard shadow edges, restrained highlights, comic coloring approach, overall inked illustration finish. Do NOT copy any character design, pose, costume, or content from these pages — only the technique of how ink, color and shadow are built.
+
+The final output must look like Reference 1's character drawn using Reference 2's rendering technique. Nothing else.
+```
+
+### Qué usar como Referencia de Estilo
+
+Las páginas de referencia canónicas para el House Style se encuentran en:
+
+`/public/insp/viñetas2/`
+
+Adjuntar 1-2 de estas páginas (no es necesario adjuntar todas). Estas páginas ejemplifican:
+
+- contornos de tinta negra orgánica de grosor variable;
+- cel-shading clásico de 2-3 niveles tonales;
+- cortes de sombra duros por bloques;
+- colorización de cómic restringida;
+- highlights selectivos y mínimos;
+- ausencia de gradientes suaves, airbrush y render pictórico.
+
+### Regla de no parafraseo
+
+El bloque de referencia dual debe **copiarse textualmente** en cada generación. Reformular el bloque introduce deriva de estilo: cada paráfrasis le da al modelo una oportunidad de suavizar la instrucción hacia su prior pictórico.
+
+## Si la herramienta solo permite una imagen
+
+Cuando la herramienta solo permita una imagen de referencia por generación:
+
+1. **Primer paso:** generar usando el sheet de identidad + bloque House Style textual (76A/76B o 77A/77B según Render Mode).
+2. **Segundo paso:** tomar el resultado y regenerar adjuntando ahora las páginas de estilo como referencia, pidiendo explícitamente que mantenga el diseño del personaje pero reconstruya toda la técnica visual según la referencia de estilo.
+
+## Referencia cruzada con el formato de cabecera (sección 55)
+
+Cuando se usa referencia dual, la cabecera de prompt de la sección 55 debe incluir un campo adicional:
+
+```text
+Reference mode: DUAL — identity sheet attached as Ref 1, style pages attached as Ref 2.
+```
+
+---
+
+# 52B. Protocolo de Regeneración de Sheets al House Style
+
+Cuando un sheet canónico fue generado originalmente con acabado 3D, concept art, render digital o cualquier técnica incompatible con el House Style, puede regenerarse.
+
+## Objetivo
+
+Producir una versión del sheet que **mantenga toda la identidad visual** (diseño, proporciones, colores, accesorios) pero que ya esté **dibujada en House Style Elseframe**, eliminando permanentemente la necesidad de separar identidad y estilo en cada generación posterior.
+
+## Proceso
+
+1. Adjuntar el sheet original como **Referencia 1 (identidad)**.
+2. Adjuntar 1-2 páginas de `/public/insp/viñetas2/` como **Referencia 2 (estilo)**.
+3. Utilizar el bloque de regeneración de sheets (sección 76C o 77C).
+4. Verificar que el resultado conserve **todos los rasgos de identidad** del sheet original.
+5. Verificar que la técnica visual sea indistinguible del House Style de las páginas de referencia.
+
+## Versionado de sheets
+
+- El sheet original se conserva con su nombre existente y se marca internamente como `legacy render`.
+- El sheet regenerado se nombra con sufijo `_hs` (house style): `bandit_sheet_hs.webp`.
+- Una vez validado, el sheet `_hs` se convierte en la **referencia primaria** para todas las generaciones de página.
+- El sheet original sigue siendo utilizable como **referencia secundaria de identidad** cuando el `_hs` no capture algún detalle específico de diseño.
+
+## Cuándo regenerar
+
+- Inmediatamente cuando un personaje va a aparecer en múltiples páginas y su sheet existente tiene acabado incompatible.
+- Antes de iniciar una nueva saga o capítulo, regenerar todos los sheets principales.
+- No es necesario regenerar sheets de personajes menores o de una única aparición si el Protocolo de Referencia Dual (sección 52A) basta.
+
+## Regla de completitud
+
+La regeneración debe producir el **mismo layout del sheet original** (vistas, poses, close-ups) para que funcione como reemplazo directo. No cambiar la estructura del sheet durante la regeneración.
+
 ---
 
 # 53. Protocolo del chat de prompts
@@ -1627,11 +1765,43 @@ Pueden servir para:
 
 Deben igualmente ser reinterpretadas como cómic 2D dentro del House Style.
 
-## Regla de no contaminación estética
+## E. Páginas de estilo activas — v2.0
+
+Son las páginas de cómic publicado que definen operativamente el House Style Elseframe.
+
+Se encuentran en `/public/insp/viñetas2/` y se utilizan como **Referencia 2 (rendering only)** dentro del Protocolo de Referencia Dual (sección 52A).
+
+Estas páginas **no aportan identidad de personaje** ni composición narrativa. Aportan exclusivamente:
+
+- calidad y peso de la línea de tinta;
+- bloques de color plano con cel-shading;
+- bordes de sombra duros;
+- highlights restringidos;
+- acabado general de ilustración entintada de cómic americano.
+
+Cuando se adjuntan junto a un sheet de identidad, el prompt debe declarar explícitamente el rol de cada imagen (ver bloque obligatorio en sección 52A).
+
+### Páginas canónicas disponibles
+
+| Archivo | Contenido principal | Mejor uso como referencia |
+|---------|-------------------|--------------------------|
+| `ejemplo1.webp` | Thanos/Doom — composición épica, masas de sombra, tinta dura | Referencia general de cel-shading, sombras por bloques |
+| `ejemplo2.webp` | Hulk/viejo — splash muscular, detalle anatómico entintado | Anatomía estilizada, tratamiento de piel y masa corporal |
+| `ejemplo3.png` | Spider-Man — layout narrativo, montaje, silueta urbana | Diversidad de paneles, siluetas, composición de página |
+| `ejemplo4.webp` | Superman — acción, destrucción, close-ups emocionales | Impacto, debris, expresión facial en cel-shading |
+| `ejemplo5.webp` | Thor/Gorr — contraluz, masas negras, peso dramático | Sombras extremas, contraluz, escala monumental |
+| `ejemplo6.webp` | Apocalypse/Sinister — armadura, metal, composición dinámica | Materiales duros, highlights sobre metal, inserts |
+| `ejemplo7.webp` | Doom/Thanos/Spider-Man — conversación, planos medios | Diálogo, planos medios, close-up de rostro con máscara |
+
+Adjuntar 1-2 según lo que mejor represente las necesidades de la página a generar.
+
+## Regla de no contaminación estética — reforzada v2.0
 
 Si una imagen se adjunta para identificar un personaje, nave, planeta, casa o traje, **no asumir que su técnica visual debe copiarse**.
 
 El rol de cada referencia debe deducirse por el contexto del prompt. Si existe duda capaz de cambiar fuertemente el resultado, preguntar.
+
+**Regla empírica adicional:** las negaciones textuales ("no 3D", "no painterly", "no glossy") **son insuficientes por sí solas** cuando la imagen de referencia adjunta tiene un acabado incompatible con el House Style. El modelo de generación tiende a reproducir la técnica visual de la imagen adjunta por encima de las instrucciones textuales negativas. Por eso, siempre que sea posible, **adjuntar una imagen positiva de estilo** (tipo E) junto a la imagen de identidad (tipo A), en lugar de confiar exclusivamente en negaciones textuales.
 
 ---
 
@@ -2259,6 +2429,51 @@ La rotulación posterior forma parte del diseño de página aunque no forme part
 
 ---
 
+# 76C. Bloque de Regeneración de Sheet — largo — v2.0
+
+Para usar con el Protocolo de Regeneración de Sheets (sección 52B). Adjuntar el sheet original como Ref 1 y páginas de estilo como Ref 2.
+
+> 2D hand-drawn American comic-book character sheet, entirely hand-inked, organic variable-width black ink contours, expressive stylized anatomy, clear readable silhouettes. Classic cel shading with two to three tonal levels per material, hard-edged flat shadow shapes, bold selective black shadow masses. Restrained comic-book coloring, controlled local color, minimal highlights placed only where structurally necessary. No gradient shading, no soft airbrush transitions, no painterly rendering, no photorealism, no 3D render, no CGI look, no glossy overrendering, no excessive reflections, no bloom, no glow except from a genuinely emissive source explicitly described below, no rim light unless explicitly described, no atmospheric particle effects, no lightning/energy FX, no background texture, no vignette, no text, no logos, no watermark.
+>
+> TWO REFERENCE IMAGES ARE ATTACHED — EACH HAS A DIFFERENT, STRICT PURPOSE:
+>
+> REFERENCE 1 — CHARACTER SHEET (identity only):
+> Use this image strictly for design identity: face shape, hairstyle, mask/helmet design, costume design, proportions, color palette, accessories, weapons, logos, insignia. Copy the design exactly. Do NOT copy its rendering, lighting, shading style, background, or material finish from this image — those must be discarded entirely.
+>
+> REFERENCE 2 — STYLE PAGES (rendering only):
+> Use these images strictly for rendering technique: ink line weight and quality, flat cel-shaded color blocks, hard shadow edges, restrained highlights, comic coloring approach, overall inked illustration finish. Do NOT copy any character design, pose, costume, or content from these pages — only the technique of how ink, color and shadow are built.
+>
+> The final output must look like Reference 1's character drawn using Reference 2's rendering technique. Nothing else.
+>
+> CHARACTER: [NOMBRE]. Optional short identity backup in text: [2-3 rasgos clave].
+>
+> LAYOUT — three isolated panels on a single flat sheet, plain neutral flat-color background (no scenery, no props, no fx) behind each panel, clear gutter separating the three:
+>
+> 1. FULL BODY — front view, neutral standing pose, both arms visible, full costume and equipment visible, clean silhouette.
+> 2. FULL BODY — three-quarter or side view, slight pose variation (weight shift or turned stance), same character, same outfit.
+> 3. FACE / HEAD CLOSE-UP — shoulders-up, neutral or characteristic expression, precise facial cel shading: base skin/mask color + one hard shadow shape + minimal highlight only where necessary. No pores, no skin microtexture, no glossy highlights.
+>
+> FINISH — apply to all three panels equally:
+> Flat color fields, one hard shadow per surface plane, optional single secondary deep shadow only where needed. No texture pass, no noise, no grain, no stippling, no speckle, no scratches. Metal = shape + one hard shadow + one broad highlight maximum. Fabric and leather = flat color with hard shadow break, no sheen. No halftone, or restricted to one small shadow area maximum if used at all.
+
+---
+
+# 76D. Bloque de Referencia Dual para Páginas — largo — v2.0
+
+Para usar en generación de páginas cuando se adjuntan sheet + páginas de estilo. Insertar al principio del prompt, antes de la cabecera de personajes.
+
+> TWO REFERENCE IMAGES ARE ATTACHED — EACH HAS A DIFFERENT, STRICT PURPOSE:
+>
+> REFERENCE 1 — CHARACTER SHEET (identity only):
+> Use this image strictly for design identity: face shape, hairstyle, mask/helmet design, costume design, proportions, color palette, accessories, weapons, logos, insignia. Copy the design exactly. Do NOT copy its rendering, lighting, shading style, background, or material finish from this image — those must be discarded entirely.
+>
+> REFERENCE 2 — STYLE PAGES (rendering only):
+> Use these images strictly for rendering technique: ink line weight and quality, flat cel-shaded color blocks, hard shadow edges, restrained highlights, comic coloring approach, overall inked illustration finish. Do NOT copy any character design, pose, costume, or content from these pages — only the technique of how ink, color and shadow are built.
+>
+> The final output must look like Reference 1's character drawn using Reference 2's rendering technique. Nothing else.
+
+---
+
 # 77. Bloques House Style reutilizables — cortos
 
 ## 77A. Base Render — Classic Cel Shading
@@ -2268,6 +2483,14 @@ La rotulación posterior forma parte del diseño de página aunque no forme part
 ## 77B. Emphasis Render — Cinematic Hard-Edged Cel Shading
 
 > 2D hand-drawn American comic-book artwork, organic variable-width black ink linework, expressive stylized anatomy, clear silhouettes, controlled medium detail, hard-edged cel-shading as the structural base with selective soft transitions only for atmospheric light, skin, glow, reflected color and bloom, cinematic but controlled lighting, selective rim light and reflected color, no 3D render, no CGI, no photorealism, no painterly finish, no gratuitous glow, no speech bubbles, no text, no letters, no watermarks.
+
+## 77C. Regeneración de Sheet — corto — v2.0
+
+> 2D hand-drawn comic-book character sheet, hand-inked, organic variable-width black ink contours, classic cel shading two to three tonal levels, hard-edged flat shadow shapes, restrained comic coloring, no gradient shading, no airbrush, no painterly rendering, no 3D, no CGI, no glossy overrendering, no bloom, no glow unless emissive source described, no text, no watermark. Use Ref 1 for identity only, Ref 2 for rendering technique only. Final output = Ref 1 design in Ref 2 technique.
+
+## 77D. Referencia Dual para Páginas — corto — v2.0
+
+> Ref 1 = identity sheet (design, proportions, colors, accessories only — discard its render). Ref 2 = style pages (ink line, cel-shading, hard shadows, comic coloring only — discard character content). Output = Ref 1 identity drawn in Ref 2 technique.
 
 ---
 
@@ -2364,7 +2587,10 @@ Detectar activamente:
 - poses promocionales en momentos emocionales;
 - exceso de brillo;
 - acabado de render 3D;
-- anatomía o detalle extremo que destruye la lectura.
+- anatomía o detalle extremo que destruye la lectura;
+- **contaminación de render del sheet** — degradés suaves, luz atmosférica difusa, sombreado por gradiente continuo, línea de tinta diluida o ausente (v2.0);
+- **deriva de estilo entre generaciones** — cada página se ve ligeramente distinta porque el bloque House Style fue parafraseado en lugar de copiado literal (v2.0);
+- **ausencia de referencia de estilo visual** — se adjuntó un sheet con acabado 3D/concept art pero no se adjuntó ninguna página de estilo como contrapeso (v2.0).
 
 ---
 
@@ -2383,6 +2609,30 @@ Debe existir:
 - lectura;
 - tiempo;
 - jerarquía.
+
+## Diagnóstico de contaminación concept art — v2.0
+
+Este error se manifiesta específicamente cuando los sheets adjuntos tienen acabado de ilustración digital o concept art y se usa GPT Image u otro modelo con sesgo pictórico.
+
+Síntomas concretos en la página generada:
+
+- los contornos de tinta desaparecen o se diluyen hasta ser imperceptibles;
+- las sombras son gradientes suaves en lugar de bloques hard-edged;
+- la luz es atmosférica y difusa en lugar de gráfica y selectiva;
+- los materiales tienen sheen y microdetalle fotográfico;
+- la paleta cromática se siente como pintura digital en vez de colorización de cómic;
+- la composición puede estar bien resuelta pero la técnica es la opuesta al House Style.
+
+### Cómo corregir
+
+1. Verificar si se adjuntó una **Referencia de Estilo** (tipo E de la sección 57) junto al sheet.
+2. Si no se adjuntó: agregar 1-2 páginas de `/public/insp/viñetas2/` como Referencia 2.
+3. Insertar el bloque de referencia dual (sección 76D o 77D) al principio del prompt.
+4. No parafrasear el bloque House Style: copiar literal de la sección 76A/76B o 77A/77B.
+5. Asegurar explícitamente la negación de render pictórico (soft airbrush, painterly textures) en el prompt de la página.
+6. Regenerar.
+
+Si el problema persiste tras tres intentos con referencia dual, considerar **regenerar el sheet al House Style** (sección 52B) para eliminar la fuente de contaminación.
 
 ---
 
@@ -2418,14 +2668,14 @@ Si el contexto obliga a reducir esta guía a cinco reglas, conservar:
 
 # 83. Checklist antes de aprobar una página
 
+## Narrativa y composición
+
 - [ ] ¿Sé cuál es su función narrativa?
 - [ ] ¿Sé quién es el dueño emocional?
 - [ ] ¿Existe progresión emocional?
 - [ ] ¿Cada panel agrega algo nuevo?
 - [ ] ¿La cantidad de paneles responde al ritmo?
 - [ ] ¿Existe una imagen dominante?
-- [ ] ¿El Render Mode está declarado y corresponde al peso narrativo real de la página?
-- [ ] Si usa Emphasis Render, ¿está realmente ganado o se está usando solo porque “se ve mejor”?
 - [ ] ¿Cada plano tiene función?
 - [ ] ¿Se entiende sin diálogo?
 - [ ] ¿Respeta continuidad visual y emocional?
