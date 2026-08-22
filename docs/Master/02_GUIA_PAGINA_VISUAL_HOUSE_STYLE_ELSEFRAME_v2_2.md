@@ -1,10 +1,18 @@
 # 02 — Guía de Página, Prompting y House Style Elseframe
 
-**Versión:** 2.0  
+**Versión:** 2.2  
 **Dependencia:** aplicar siempre junto a `00_GUIA_NUCLEO_ELSEFRAME.md`. Para el chat de prompts, utilizar además `01_GUIA_NARRATIVA_ELSEFRAME.md`.  
 **Uso principal:** diseño de página, viñetas, composición, acción, continuidad visual, prompting, generación de imágenes, depuración gráfica, protocolo de referencia dual y regeneración de sheets.
 
-**Revisión visual de v2.0:** el perfil de House Style fue contrastado directamente contra `Foto 2.jpg`, `Foto 3.jpg`, `Foto 4.jpg` y `Foto 5.jpg`. Las reglas siguientes describen la intersección visual de esas páginas, no una copia literal de una sola de ellas.
+**Revisión visual de v2.0/v2.1:** el perfil de House Style fue contrastado directamente contra un pequeño conjunto de páginas publicadas usadas como referencia de estilo. Las reglas siguientes describen la intersección visual de esas páginas, no una copia literal de una sola de ellas.
+
+**Nota sobre nombres de archivo en esta guía — v2.1:** los nombres de archivo mencionados en las secciones 57E y en las tablas de auditoría (`ejemplo1.webp`, `Foto 2.jpg`, etc.) son **ilustrativos y específicos de una sesión de trabajo**, no rutas fijas ni convención canónica. La carpeta real y su contenido vigente pueden variar. Lo que importa y debe declararse siempre en el prompt no es el nombre del archivo sino: (a) qué imagen funciona como **Style Anchor**, (b) qué imagen funciona como **Style Complement** y (c) qué rasgo específico aporta cada una. Ver sección 52A.
+
+**Changelog**
+
+- **v2.2** — se nombra explícitamente un patrón de falla recurrente de GPT Image: puntos especulares dispersos ("sparkle") en vez de un highlight gráfico único. Se amplía la sección 66 (Brillos y reflejos), se agrega restricción dura en la sección 74, y se actualizan los cuatro bloques reutilizables (76A, 76B, 77A, 77B) con la frase explícita, en línea con la regla de que las negaciones genéricas no bastan frente a un patrón de falla concreto (sección 57, regla empírica).
+- **v2.1** — revisión de consistencia solicitada por el usuario tras edición manual de v2.0. Se desambiguó la doble nomenclatura de referencias de estilo (`Foto N.jpg` vs `ejemploN.webp`), se agregó nota de no-canonicidad de nombres de archivo, se agregaron referencias cruzadas de sección en la Biblioteca rápida de recursos visuales (sección 78) y se agregó un Índice de decisión rápida (sección 78A) para acelerar la consulta durante la generación de páginas.
+- **v2.0** — incorporación del Protocolo de Referencia Dual (52A), Protocolo de Regeneración de Sheets (52B), bloques reutilizables 76C/76D/77C/77D, auditoría visual de referencias de estilo (57E), y diagnóstico de contaminación concept art (80).
 
 ---
 
@@ -1225,7 +1233,7 @@ Adjuntar **una página como ancla principal**. Puede agregarse una segunda únic
 - highlights controlados y materialmente justificados;
 - gradientes y suavidad reservados para cielo, niebla, energía, resplandor, profundidad o transiciones ambientales, no para modelar toda figura como un render 3D.
 
-Las cuatro muestras no tienen un acabado idéntico. `Foto 5.jpg` es la mejor ancla para el **Base Render** limpio; `Foto 2.jpg` sirve para Base Render atmosférico y conversación con armaduras; `Foto 3.jpg` es una referencia extrema de masas negras, textura y amenaza; `Foto 4.jpg` es una referencia de ciudad, tinta densa, color expresivo y atmósfera de evento. No adjuntar `Foto 3.jpg` como ancla de una escena cotidiana ni `Foto 4.jpg` como ancla de un sheet neutro.
+Las páginas de estilo disponibles no tienen un acabado idéntico entre sí. Antes de elegir ancla, identificar cuál se acerca más al perfil "acción regular / ancla base" (mejor ancla para **Base Render** limpio), cuál al perfil "conversación fría" (Base Render atmosférico y conversación con armaduras), cuál al perfil "villano monumental" (masas negras, textura y amenaza extremas) y cuál al perfil "evento urbano" (ciudad, tinta densa, color expresivo, atmósfera de evento). Ver la tabla de perfiles en la sección 57E. No usar una página de perfil "villano monumental" o "evento urbano" como ancla de una escena cotidiana o de un sheet neutro.
 
 ### Regla ancla + complemento
 
@@ -1804,28 +1812,34 @@ Cuando se adjuntan junto a un sheet de identidad, el prompt debe declarar explí
 
 Una misma página publicada puede analizarse como referencia compositiva de tipo B en una etapa de diseño y como referencia estilística de tipo E en una generación diferente. Su rol debe declararse. Dentro del Protocolo de Referencia Dual, el Grupo B **no autoriza a copiar el layout**: aporta únicamente lenguaje visual.
 
-### Páginas canónicas disponibles
+### Páginas de estilo disponibles — ejemplo de sesión, no ruta fija
 
-| Archivo | Contenido principal | Mejor uso estilístico |
+La tabla siguiente es un ejemplo de cómo documentar el contenido dominante de cada página de estilo disponible en la carpeta activa, para que el chat de prompts pueda elegir ancla y complemento con criterio en vez de adjuntar imágenes al azar. Los nombres de archivo concretos cambian según la sesión y la carpeta vigente; lo que debe mantenerse es este tipo de ficha (contenido principal + mejor uso estilístico) para cada página realmente disponible.
+
+| Archivo (ejemplo) | Contenido principal | Mejor uso estilístico |
 |---------|-------------------|--------------------------|
-| `ejemplo1.webp` | Thanos/Doom — escena épica, masas de sombra, tinta dura | Sombras por bloques, volumen de armadura, tinta estructural |
-| `ejemplo2.webp` | Hulk/viejo — masa muscular, detalle anatómico entintado | Anatomía estilizada, piel, hachurado y masa corporal |
-| `ejemplo3.png` | Spider-Man — ciudad, montaje y silueta urbana | Tinta de arquitectura, siluetas y atmósfera cromática urbana |
-| `ejemplo4.webp` | Superman — acción, destrucción, emoción | Tinta de debris, claridad de impacto y expresión facial |
-| `ejemplo5.webp` | Thor/Gorr — contraluz, masas negras, peso dramático | Negros extremos, textura, contraluz y separación de silueta |
-| `ejemplo6.webp` | Apocalypse/Sinister — armadura y metal | Materiales duros, highlights gráficos y línea sobre metal |
-| `ejemplo7.webp` | Doom/Thanos/Spider-Man — conversación y máscaras | Tinta contenida, planos medios y rostro enmascarado legible |
+| página tipo 1 | Escena épica de villanos, masas de sombra, tinta dura | Sombras por bloques, volumen de armadura, tinta estructural |
+| página tipo 2 | Personaje musculoso — masa corporal, detalle anatómico entintado | Anatomía estilizada, piel, hachurado y masa corporal |
+| página tipo 3 | Ciudad — montaje y silueta urbana | Tinta de arquitectura, siluetas y atmósfera cromática urbana |
+| página tipo 4 | Acción, destrucción, emoción | Tinta de debris, claridad de impacto y expresión facial |
+| página tipo 5 | Contraluz, masas negras, peso dramático | Negros extremos, textura, contraluz y separación de silueta |
+| página tipo 6 | Armadura y metal | Materiales duros, highlights gráficos y línea sobre metal |
+| página tipo 7 | Conversación y máscaras | Tinta contenida, planos medios y rostro enmascarado legible |
 
-Adjuntar una como ancla. Adjuntar una segunda solo cuando aporte un rasgo específico que la primera no cubra y declarar ese rasgo en el prompt.
+Adjuntar una como ancla. Adjuntar una segunda solo cuando aporte un rasgo específico que la primera no cubra y declarar ese rasgo en el prompt. Al redactar el prompt real, reemplazar la etiqueta de la tabla por el nombre de archivo vigente.
 
-### Auditoría visual de las cuatro referencias suministradas — v2.0
+### Auditoría visual de referencias de estilo — v2.1
 
-| Referencia observada | Rasgos dominantes reales | Uso recomendado | No extrapolar |
+Los nombres de archivo en esta tabla son ilustrativos de una sesión de trabajo puntual (ver nota de cabecera del documento). Lo que debe reutilizarse de esta auditoría no es el nombre de archivo sino el **perfil de rasgos** de cada tipo de referencia y su uso recomendado — así, cuando cambie el archivo concreto, la IA puede reconocer a qué perfil se parece una nueva imagen de estilo y aplicarla con el mismo criterio.
+
+| Referencia observada (ejemplo de sesión) | Rasgos dominantes reales | Uso recomendado | No extrapolar |
 |---|---|---|---|
-| `Foto 2.jpg` | Paleta azul fría, tinta visible, sombras gráficas combinadas con niebla y luz suave ambiental, textura moderada, armaduras legibles | Conversación, amenaza contenida, exteriores fríos, metal y máscaras | La dominante azul ni la niebla son obligatorias para toda la serie |
-| `Foto 3.jpg` | Negros muy extensos, figura casi silueteada, hachurado y grano densos, paleta terrosa desaturada, contraste brutal, relámpago como acento | Horror, villano monumental, contraluz, clímax oscuro, Emphasis Render | No usar su oscuridad o densidad como acabado cotidiano |
-| `Foto 4.jpg` | Tinta urbana densa, color expresivo, cielos y energía con transiciones suaves, textura impresa, alternancia de inserts íntimos y gran imagen vertical | Ciudad, catástrofe, energía, montaje, evento cromático, Emphasis Render | No convertir todo fondo en textura densa ni toda página en espectáculo |
-| `Foto 5.jpg` | Separación clara de color local, sombras duras, hachurado controlado, figuras muy legibles, dominante verde ambiental, acabado secuencial limpio | Ancla principal de Base Render, acción regular, diálogo y sheets | La dominante verde pertenece a la escena, no al House Style |
+| Referencia tipo "conversación fría" | Paleta azul fría, tinta visible, sombras gráficas combinadas con niebla y luz suave ambiental, textura moderada, armaduras legibles | Conversación, amenaza contenida, exteriores fríos, metal y máscaras | La dominante azul ni la niebla son obligatorias para toda la serie |
+| Referencia tipo "villano monumental" | Negros muy extensos, figura casi silueteada, hachurado y grano densos, paleta terrosa desaturada, contraste brutal, relámpago como acento | Horror, villano monumental, contraluz, clímax oscuro, Emphasis Render | No usar su oscuridad o densidad como acabado cotidiano |
+| Referencia tipo "evento urbano" | Tinta urbana densa, color expresivo, cielos y energía con transiciones suaves, textura impresa, alternancia de inserts íntimos y gran imagen vertical | Ciudad, catástrofe, energía, montaje, evento cromático, Emphasis Render | No convertir todo fondo en textura densa ni toda página en espectáculo |
+| Referencia tipo "acción regular / ancla base" | Separación clara de color local, sombras duras, hachurado controlado, figuras muy legibles, dominante ambiental propia de la escena, acabado secuencial limpio | Ancla principal de Base Render, acción regular, diálogo y sheets | La dominante cromática pertenece a la escena, no al House Style |
+
+Al momento de generar, el prompt debe nombrar el archivo real vigente en `/public/insp/viñetas2/` (o la carpeta activa) como Style Anchor y/o Style Complement, siguiendo el bloque de la sección 52A — no reutilizar los nombres ilustrativos de esta tabla como si fueran rutas reales.
 
 #### Intersección que sí define el House Style
 
@@ -2229,6 +2243,22 @@ Los highlights pueden ser más ricos y recibir color ambiental, pero deben segui
 
 No convertir superficies mate en plástico brillante.
 
+## Patrón de falla específico — puntos especulares dispersos (v2.2)
+
+GPT Image tiende a resolver "brillo" esparciendo varios puntos blancos pequeños sobre una misma superficie (piel, cuero, metal), simulando un acabado fotográfico glossy. Esto **no** es lo mismo que un highlight gráfico correcto, y una prohibición genérica de "no glossy" no siempre alcanza para evitarlo — hay que nombrarlo explícitamente.
+
+Prohibido:
+
+- puntos especulares múltiples y dispersos sobre una misma superficie;
+- efecto sparkle o starburst;
+- sheen de "mojado" o plástico.
+
+Máximo **un** highlight amplio y deliberado por plano de material, ubicado solo donde la fuente de luz y el material realmente lo justifiquen — nunca decorativo.
+
+## Regla positiva — página "seca"
+
+Esto no significa sombreado plano o sin vida. La sombra sigue haciendo trabajo narrativo real: masas duras que describen volumen, dirección de luz y clima emocional de la escena (ver sección 22, Sombras y masas negras). El objetivo es un acabado **seco**, de calidad de impresión de cómic — tinta y color plano — no un brillo fotográfico. Iluminación y sombra pueden ser tan dramáticas como la escena lo pida; lo que no debe aparecer es brillo cosmético sin función.
+
 ---
 
 # 67. Materiales
@@ -2464,6 +2494,7 @@ Por defecto:
 - **NO CGI look**
 - **NO photorealism**
 - **NO glossy overrendering**
+- **NO scattered specular highlight dots / sparkle across a single surface (v2.2)** — máximo un highlight amplio y deliberado por plano de material
 - **NO painterly airbrush finish**
 - **NO bloom that is not justified by Render Mode and light source**
 - **NO gratuitous glow**
@@ -2497,11 +2528,11 @@ La rotulación posterior forma parte del diseño de página aunque no forme part
 
 ## 76A. Base Render — Classic Cel Shading
 
-> Premium modern American comic-book illustration with an unmistakably hand-drawn and hand-inked 2D appearance. Organic variable-width black ink contours, clear readable silhouettes, expressive stylized anatomy and body language, controlled medium detail, bold selective black shadow masses. Graphic color rendering led by hard-edged shadow shapes and approximately two to three dominant tonal levels per material, with selective hatching, dry-brush or subtle print-like texture where it supports material and depth. Clear local colors may be unified by one restrained environmental color cast. Soft transitions are limited to sky, fog, smoke, distance, energy and localized light; they must never replace the ink-and-shape construction of the figures. Selective material-correct highlights, minimal bloom, glow only from genuinely emissive sources. Strong narrative composition and depth through perspective, overlap and foreshortening. No photorealism, no CGI, no 3D render, no glossy overrendering, no uniform procedural noise, no photographic microtexture, no painterly airbrush modeling on figures, no speech bubbles, no captions, no text, no readable signage, no watermarks.
+> Premium modern American comic-book illustration with an unmistakably hand-drawn and hand-inked 2D appearance. Organic variable-width black ink contours, clear readable silhouettes, expressive stylized anatomy and body language, controlled medium detail, bold selective black shadow masses. Graphic color rendering led by hard-edged shadow shapes and approximately two to three dominant tonal levels per material, with selective hatching, dry-brush or subtle print-like texture where it supports material and depth. Clear local colors may be unified by one restrained environmental color cast. Soft transitions are limited to sky, fog, smoke, distance, energy and localized light; they must never replace the ink-and-shape construction of the figures. Selective material-correct highlights, minimal bloom, glow only from genuinely emissive sources. Maximum one broad, deliberate highlight per material plane — no scattered specular highlight dots, no sparkle or starburst highlights, no wet-look sheen. Shadow does real narrative work through hard-edged shapes describing volume, light direction and mood; the finish should read as dry, matte comic-print ink and flat color, not photographic gloss. Strong narrative composition and depth through perspective, overlap and foreshortening. No photorealism, no CGI, no 3D render, no glossy overrendering, no uniform procedural noise, no photographic microtexture, no painterly airbrush modeling on figures, no speech bubbles, no captions, no text, no readable signage, no watermarks.
 
 ## 76B. Emphasis Render — Cinematic Hard-Edged Cel Shading
 
-> Premium modern American comic-book illustration with an unmistakably hand-drawn and hand-inked 2D appearance. Strong organic variable-width black ink contours, clear readable silhouettes, expressive stylized anatomy, controlled medium detail, bold selective black shadow masses and localized hatching or print-like texture. Hard-edged graphic shading remains the structural base, while selective soft transitions may enrich atmospheric light, skin, fog, smoke, energy, reflected color and bloom. Preserve a limited set of dominant value shapes on each figure even when the scene has richer environmental color. Use selective rim light, motivated reflected color, controlled bloom around genuinely bright sources, stronger atmospheric depth and deliberate color separation. The result must remain graphic and ink-led, never painterly or 3D. No photorealism, no CGI, no glossy overrendering, no uniform noise filter, no photographic microtexture, no gratuitous glow, no speech bubbles, no captions, no text, no readable signage, no watermarks.
+> Premium modern American comic-book illustration with an unmistakably hand-drawn and hand-inked 2D appearance. Strong organic variable-width black ink contours, clear readable silhouettes, expressive stylized anatomy, controlled medium detail, bold selective black shadow masses and localized hatching or print-like texture. Hard-edged graphic shading remains the structural base, while selective soft transitions may enrich atmospheric light, skin, fog, smoke, energy, reflected color and bloom. Preserve a limited set of dominant value shapes on each figure even when the scene has richer environmental color. Use selective rim light, motivated reflected color, controlled bloom around genuinely bright sources, stronger atmospheric depth and deliberate color separation. Even with richer lighting, keep highlights to one broad, deliberate shape per material plane — no scattered specular highlight dots, no sparkle or starburst highlights, no wet-look sheen; the finish must still read as dry ink-and-flat-color, not photographic gloss. The result must remain graphic and ink-led, never painterly or 3D. No photorealism, no CGI, no glossy overrendering, no uniform noise filter, no photographic microtexture, no gratuitous glow, no speech bubbles, no captions, no text, no readable signage, no watermarks.
 
 ---
 
@@ -2560,11 +2591,11 @@ Para usar en generación de páginas cuando se adjuntan sheet + páginas de esti
 
 ## 77A. Base Render — Classic Cel Shading
 
-> 2D American comic-book artwork with a hand-drawn, hand-inked appearance; organic variable-width black linework, expressive stylized anatomy, clear silhouettes, controlled medium detail, hard graphic shadow shapes, two to three dominant tonal levels, selective hatching or subtle print-like texture, restrained environmental color and material-correct highlights. Soft transitions only in atmosphere, distance, energy or localized light. No 3D, CGI, photorealism, glossy overrendering, uniform noise, speech bubbles, text or watermarks.
+> 2D American comic-book artwork with a hand-drawn, hand-inked appearance; organic variable-width black linework, expressive stylized anatomy, clear silhouettes, controlled medium detail, hard graphic shadow shapes, two to three dominant tonal levels, selective hatching or subtle print-like texture, restrained environmental color and material-correct highlights. Maximum one broad highlight per material plane — no scattered specular dots, no sparkle, no wet-look sheen; dry matte comic-print finish. Soft transitions only in atmosphere, distance, energy or localized light. No 3D, CGI, photorealism, glossy overrendering, uniform noise, speech bubbles, text or watermarks.
 
 ## 77B. Emphasis Render — Cinematic Hard-Edged Cel Shading
 
-> 2D American comic-book artwork with a hand-drawn, hand-inked appearance; organic variable-width black linework, expressive anatomy, clear silhouettes, bold black masses and localized hatching or print-like texture. Hard-edged graphic shading remains the structural base; selective soft transitions may enrich atmosphere, skin, fog, smoke, energy, reflected color and bloom. Cinematic but ink-led, with motivated rim light and controlled glow. No 3D, CGI, photorealism, glossy or painterly figure modeling, uniform noise, speech bubbles, text or watermarks.
+> 2D American comic-book artwork with a hand-drawn, hand-inked appearance; organic variable-width black linework, expressive anatomy, clear silhouettes, bold black masses and localized hatching or print-like texture. Hard-edged graphic shading remains the structural base; selective soft transitions may enrich atmosphere, skin, fog, smoke, energy, reflected color and bloom. Even with richer lighting, keep highlights to one broad shape per material plane — no scattered specular dots, no sparkle, no wet-look sheen. Cinematic but ink-led, with motivated rim light and controlled glow. No 3D, CGI, photorealism, glossy or painterly figure modeling, uniform noise, speech bubbles, text or watermarks.
 
 ## 77C. Regeneración de Sheet — corto — v2.0
 
@@ -2578,66 +2609,68 @@ Para usar en generación de páginas cuando se adjuntan sheet + páginas de esti
 
 # 78. Biblioteca rápida de recursos visuales
 
+Cada recurso incluye entre paréntesis la sección donde está desarrollado en detalle.
+
 ## Velocidad
 
-- pocos paneles;
-- diagonales;
-- fondos simplificados;
-- escorzo;
+- pocos paneles (§4);
+- diagonales (§73);
+- fondos simplificados (§71);
+- escorzo (§24, §72);
 - motion lines;
-- ruptura de borde.
+- ruptura de borde (§25).
 
 ## Peso
 
-- panel grande;
+- panel grande (§11, §14);
 - perspectiva baja;
-- pocos cortes;
-- debris pesado;
-- aftermath.
+- pocos cortes (§4);
+- debris pesado (§26);
+- aftermath (§28).
 
 ## Miedo
 
-- espacio negativo;
+- espacio negativo (§23);
 - POV;
-- sombra;
-- silueta;
-- close-up progresivo.
+- sombra (§22);
+- silueta (§21);
+- close-up progresivo (§15, §16, §17).
 
 ## Revelación
 
-- información retenida antes;
-- cambio radical de escala;
-- gran panel.
+- información retenida antes (§2, §12);
+- cambio radical de escala (§18);
+- gran panel (§5, §11).
 
 ## Intimidad
 
-- planos medios;
+- planos medios (§15);
 - manos;
 - objetos;
 - silencios;
-- fondo simple.
+- fondo simple (§71).
 
 ## Confusión
 
 - información parcial;
 - composición fragmentada;
 - POV;
-- cortes abruptos.
+- cortes abruptos (§28).
 
 ## Aislamiento
 
-- figura pequeña;
+- figura pequeña (§18, §23);
 - espacio amplio;
 - ausencia de extras.
 
 ## Violencia humana intensa
 
-- silueta;
-- fondo blanco;
+- silueta (§21);
+- fondo blanco (§19);
 - cropping;
-- sangre gráfica;
+- sangre gráfica (§35);
 - reacción;
-- aftermath.
+- aftermath (§28, §34).
 
 ## Destrucción mecánica
 
@@ -2645,7 +2678,30 @@ Para usar en generación de páginas cuando se adjuntan sheet + páginas de esti
 - cables;
 - placas;
 - chispas;
-- componentes internos.
+- componentes internos (§37, §38).
+
+---
+
+# 78A. Índice de decisión rápida — v2.1
+
+Tabla de consulta directa para el chat de generación cuando necesita resolver rápido "¿qué recurso corresponde acá?" sin releer toda la guía. Cada fila apunta a la sección con el desarrollo completo y el criterio de cuándo NO usarlo.
+
+| Si la página necesita... | Usar | Sección | No usar cuando... |
+|---|---|---|---|
+| Ocupar toda la página en una sola imagen | Splash page | §5 | El momento no se ganó ese espacio; usar como default constante |
+| Mostrar descenso, caída, viaje o cambio de escala progresivo | Paneles verticales apilados | §12 | La acción es lateral u horizontal por naturaleza |
+| Profundidad espacial sin parecer render 3D | Perspectiva, superposición, escala relativa, masas de color | §24, §72 | Se necesita el "look" de un modelo 3D — eso está prohibido siempre, §74 |
+| Aislar un rostro o gesto para leer emoción | Close-up | §15 | La emoción ya es legible en plano medio; usarlo en cada panel banaliza el recurso |
+| Enfatizar un detalle mínimo con carga simbólica (ojo, mano, objeto) | Extreme close-up | §16 | No hay carga emocional o narrativa específica en ese detalle |
+| Sacar la escena de contexto para dar impacto puro | Fondo blanco | §19 | La ubicación o el entorno todavía importan para la lectura |
+| Comunicar vacío, muerte, amenaza o silencio | Fondo negro | §20 | Se usa solo porque "se ve dark", sin función compositiva |
+| Aumentar brutalidad sin depender de detalle anatómico | Silueta | §21 | La identidad del personaje debe ser clara en ese instante |
+| Dirigir la mirada u ocultar información sensible | Sombras / masas negras duras | §22 | Se usa como textura decorativa en vez de función de lectura |
+| Expresar soledad, espera o vulnerabilidad mediante el vacío | Espacio negativo | §23 | Cada centímetro de la página necesita información |
+| Que un personaje u objeto irrumpa hacia el lector | Ruptura del borde | §25 | Se usa en cada página — pierde significado si es constante |
+| Decidir si la página "pesa" más que una página normal | Evaluar Render Mode | §53A | Automáticamente por tener acción, poder o escena nocturna — eso NO basta, §53A regla de economía |
+| Elevar el acabado visual (más riqueza lumínica, no más detalle) | Emphasis Render | §53A, §76B | La escena es diálogo, setup o acción funcional regular — ahí va Base Render |
+| Construir profundidad de campo o volumen tridimensional | Perspectiva 2D dibujada, nunca modelado 3D | §72, §74 | Nunca: el house style prohíbe por defecto cualquier apariencia 3D/CGI, incluso en Emphasis Render |
 
 ---
 
